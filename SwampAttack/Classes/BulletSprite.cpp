@@ -7,3 +7,21 @@
 //
 
 #include "BulletSprite.h"
+
+
+BulletSprite::BulletSprite()
+{
+    
+}
+BulletSprite::~BulletSprite()
+{
+    
+}
+bool BulletSprite::init()
+{
+    if (!Sprite::init()) {
+        return false;
+    }
+    
+    return true;
+}

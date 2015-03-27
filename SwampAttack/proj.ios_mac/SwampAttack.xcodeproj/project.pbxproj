@@ -64,14 +64,13 @@
 		8DC10AB61AC3D6C7004F7DE2 /* Human.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AB41AC3D6C7004F7DE2 /* Human.cpp */; };
 		8DC10AB91AC3D6E2004F7DE2 /* Bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AB71AC3D6E2004F7DE2 /* Bullet.cpp */; };
 		8DC10ABC1AC3D6FD004F7DE2 /* BulletSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10ABA1AC3D6FD004F7DE2 /* BulletSprite.cpp */; };
-		8DC10ABF1AC3D74A004F7DE2 /* EnemyInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10ABD1AC3D74A004F7DE2 /* EnemyInterface.cpp */; };
 		8DC10AC21AC3D75F004F7DE2 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AC01AC3D75F004F7DE2 /* Enemy.cpp */; };
-		8DC10AC51AC3D776004F7DE2 /* BulletInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AC31AC3D776004F7DE2 /* BulletInterface.cpp */; };
 		8DC10AC81AC3D7B1004F7DE2 /* EnemySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AC61AC3D7B1004F7DE2 /* EnemySprite.cpp */; };
 		8DC10ACB1AC40222004F7DE2 /* EnemyManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AC91AC40222004F7DE2 /* EnemyManager.cpp */; };
 		8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10ACC1AC40233004F7DE2 /* BulletManager.cpp */; };
-		8DC10AD61AC406AC004F7DE2 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AD41AC406AC004F7DE2 /* Map.cpp */; };
 		8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2ACD21AC53034004F3C1B /* BaseUtil.cpp */; };
+		8DC2ACD71AC5641B004F3C1B /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2ACD51AC5641B004F3C1B /* GameObject.cpp */; };
+		8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2ACD81AC56A77004F3C1B /* HumanSprite.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -171,23 +170,21 @@
 		8DC10AB81AC3D6E2004F7DE2 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
 		8DC10ABA1AC3D6FD004F7DE2 /* BulletSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BulletSprite.cpp; sourceTree = "<group>"; };
 		8DC10ABB1AC3D6FD004F7DE2 /* BulletSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletSprite.h; sourceTree = "<group>"; };
-		8DC10ABD1AC3D74A004F7DE2 /* EnemyInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyInterface.cpp; sourceTree = "<group>"; };
-		8DC10ABE1AC3D74A004F7DE2 /* EnemyInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyInterface.h; sourceTree = "<group>"; };
 		8DC10AC01AC3D75F004F7DE2 /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
 		8DC10AC11AC3D75F004F7DE2 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
-		8DC10AC31AC3D776004F7DE2 /* BulletInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BulletInterface.cpp; sourceTree = "<group>"; };
-		8DC10AC41AC3D776004F7DE2 /* BulletInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletInterface.h; sourceTree = "<group>"; };
 		8DC10AC61AC3D7B1004F7DE2 /* EnemySprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySprite.cpp; sourceTree = "<group>"; };
 		8DC10AC71AC3D7B1004F7DE2 /* EnemySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemySprite.h; sourceTree = "<group>"; };
 		8DC10AC91AC40222004F7DE2 /* EnemyManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyManager.cpp; sourceTree = "<group>"; };
 		8DC10ACA1AC40222004F7DE2 /* EnemyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyManager.h; sourceTree = "<group>"; };
 		8DC10ACC1AC40233004F7DE2 /* BulletManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BulletManager.cpp; sourceTree = "<group>"; };
 		8DC10ACD1AC40233004F7DE2 /* BulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletManager.h; sourceTree = "<group>"; };
-		8DC10AD41AC406AC004F7DE2 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
-		8DC10AD51AC406AC004F7DE2 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		8DC10AD91AC408C9004F7DE2 /* BaseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCode.h; sourceTree = "<group>"; };
 		8DC2ACD21AC53034004F3C1B /* BaseUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseUtil.cpp; sourceTree = "<group>"; };
 		8DC2ACD31AC53034004F3C1B /* BaseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUtil.h; sourceTree = "<group>"; };
+		8DC2ACD51AC5641B004F3C1B /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		8DC2ACD61AC5641B004F3C1B /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		8DC2ACD81AC56A77004F3C1B /* HumanSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HumanSprite.cpp; sourceTree = "<group>"; };
+		8DC2ACD91AC56A77004F3C1B /* HumanSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanSprite.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -397,24 +394,22 @@
 			children = (
 				8DC10AB41AC3D6C7004F7DE2 /* Human.cpp */,
 				8DC10AB51AC3D6C7004F7DE2 /* Human.h */,
-				8DC10AC31AC3D776004F7DE2 /* BulletInterface.cpp */,
-				8DC10AC41AC3D776004F7DE2 /* BulletInterface.h */,
+				8DC2ACD81AC56A77004F3C1B /* HumanSprite.cpp */,
+				8DC2ACD91AC56A77004F3C1B /* HumanSprite.h */,
 				8DC10AB71AC3D6E2004F7DE2 /* Bullet.cpp */,
 				8DC10AB81AC3D6E2004F7DE2 /* Bullet.h */,
 				8DC10ABA1AC3D6FD004F7DE2 /* BulletSprite.cpp */,
 				8DC10ABB1AC3D6FD004F7DE2 /* BulletSprite.h */,
 				8DC10ACC1AC40233004F7DE2 /* BulletManager.cpp */,
 				8DC10ACD1AC40233004F7DE2 /* BulletManager.h */,
-				8DC10ABD1AC3D74A004F7DE2 /* EnemyInterface.cpp */,
-				8DC10ABE1AC3D74A004F7DE2 /* EnemyInterface.h */,
 				8DC10AC01AC3D75F004F7DE2 /* Enemy.cpp */,
 				8DC10AC11AC3D75F004F7DE2 /* Enemy.h */,
 				8DC10AC61AC3D7B1004F7DE2 /* EnemySprite.cpp */,
 				8DC10AC71AC3D7B1004F7DE2 /* EnemySprite.h */,
 				8DC10AC91AC40222004F7DE2 /* EnemyManager.cpp */,
 				8DC10ACA1AC40222004F7DE2 /* EnemyManager.h */,
-				8DC10AD41AC406AC004F7DE2 /* Map.cpp */,
-				8DC10AD51AC406AC004F7DE2 /* Map.h */,
+				8DC2ACD51AC5641B004F3C1B /* GameObject.cpp */,
+				8DC2ACD61AC5641B004F3C1B /* GameObject.h */,
 			);
 			name = modes;
 			sourceTree = "<group>";
@@ -583,14 +578,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC10ABF1AC3D74A004F7DE2 /* EnemyInterface.cpp in Sources */,
-				8DC10AC51AC3D776004F7DE2 /* BulletInterface.cpp in Sources */,
+				8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */,
 				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				8DC10AB61AC3D6C7004F7DE2 /* Human.cpp in Sources */,
-				8DC10AD61AC406AC004F7DE2 /* Map.cpp in Sources */,
+				8DC2ACD71AC5641B004F3C1B /* GameObject.cpp in Sources */,
 				8DC10AB91AC3D6E2004F7DE2 /* Bullet.cpp in Sources */,
 				8DC10ACB1AC40222004F7DE2 /* EnemyManager.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,

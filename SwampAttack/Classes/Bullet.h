@@ -9,6 +9,23 @@
 #ifndef __SwampAttack__Bullet__
 #define __SwampAttack__Bullet__
 
-#include <stdio.h>
+#include "BaseCode.h"
+#include "GameObject.h"
+#include "BulletSprite.h"
+
+
+class Bullet : public GameObject {
+private:
+    Vec2 m_speed;
+    Vec2 m_point;
+    
+    BulletSprite * m_sprite = NULL;
+    
+public:
+    Bullet();
+    ~Bullet();
+    
+    void gameLoop(float data);
+};
 
 #endif /* defined(__SwampAttack__Bullet__) */

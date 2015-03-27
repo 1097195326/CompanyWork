@@ -25,7 +25,7 @@ bool GameFightScene::init()
                         );
     addChild(sprite);
 //    sprite->autorelease();
-    sprite->walk();
+    sprite->move();
     
     return true;
 }

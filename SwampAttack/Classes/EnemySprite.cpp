@@ -41,7 +41,7 @@ void EnemySprite::createActionsWithFileName(const std::string &name)
     m_walkAction->retain();
 //    m_map.insert(std::pair<std::string, Action*>("name",m_walkAction));
 }
-void EnemySprite::walk()
+void EnemySprite::move()
 {
     if (m_walkAction) {
         // 这 可能有其他操作：停止其他动画

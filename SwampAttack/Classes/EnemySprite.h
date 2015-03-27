@@ -17,20 +17,19 @@ private:
     Action * m_walkAction;
     Action * m_hurtAction;
     
-//    Map<std::string, Action *> m_map;
     std::map<std::string, Action *> m_map;
     
 public:
     CREATE_FUNC(EnemySprite);
     bool init();
     EnemySprite();
-    ~EnemySprite();
+    virtual ~EnemySprite();
     
     void createActionsWithFileName(const std::string &name);
     
 public:
-    void walk();
-    void hurt();
+    virtual void move();
+    virtual void hurt();
     
 };
 
