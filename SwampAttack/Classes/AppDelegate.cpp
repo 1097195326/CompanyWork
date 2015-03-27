@@ -1,7 +1,15 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "GameFightScene.h"
+
 
 USING_NS_CC;
+
+
+Size winSize;
+Size visibleSize;
+Vec2 visibleOrigin;
+
 
 AppDelegate::AppDelegate() {
 
@@ -31,6 +39,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
+    winSize = Director::getInstance()->getWinSize();
+    visibleSize = Director::getInstance()->getVisibleSize();
+    visibleOrigin = Director::getInstance()->getVisibleOrigin();
+    
+    
     // turn on display FPS
     director->setDisplayStats(true);
 
@@ -39,9 +52,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();
-
+    auto gameScene = GameFightScene::scene();
     // run
-    director->runWithScene(scene);
+    director->runWithScene(gameScene);
 
     return true;
 }

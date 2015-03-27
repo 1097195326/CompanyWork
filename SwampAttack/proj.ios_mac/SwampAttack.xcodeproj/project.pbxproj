@@ -71,6 +71,7 @@
 		8DC10ACB1AC40222004F7DE2 /* EnemyManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AC91AC40222004F7DE2 /* EnemyManager.cpp */; };
 		8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10ACC1AC40233004F7DE2 /* BulletManager.cpp */; };
 		8DC10AD61AC406AC004F7DE2 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AD41AC406AC004F7DE2 /* Map.cpp */; };
+		8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2ACD21AC53034004F3C1B /* BaseUtil.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -185,6 +186,8 @@
 		8DC10AD41AC406AC004F7DE2 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
 		8DC10AD51AC406AC004F7DE2 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		8DC10AD91AC408C9004F7DE2 /* BaseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCode.h; sourceTree = "<group>"; };
+		8DC2ACD21AC53034004F3C1B /* BaseUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseUtil.cpp; sourceTree = "<group>"; };
+		8DC2ACD31AC53034004F3C1B /* BaseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUtil.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -427,6 +430,8 @@
 			isa = PBXGroup;
 			children = (
 				8DC10AD91AC408C9004F7DE2 /* BaseCode.h */,
+				8DC2ACD21AC53034004F3C1B /* BaseUtil.cpp */,
+				8DC2ACD31AC53034004F3C1B /* BaseUtil.h */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -580,6 +585,7 @@
 			files = (
 				8DC10ABF1AC3D74A004F7DE2 /* EnemyInterface.cpp in Sources */,
 				8DC10AC51AC3D776004F7DE2 /* BulletInterface.cpp in Sources */,
+				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,

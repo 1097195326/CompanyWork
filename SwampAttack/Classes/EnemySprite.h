@@ -9,6 +9,29 @@
 #ifndef __SwampAttack__EnemySprite__
 #define __SwampAttack__EnemySprite__
 
-#include <stdio.h>
+#include "BaseCode.h"
+
+
+class EnemySprite :public Sprite {
+private:
+    Action * m_walkAction;
+    Action * m_hurtAction;
+    
+//    Map<std::string, Action *> m_map;
+    std::map<std::string, Action *> m_map;
+    
+public:
+    CREATE_FUNC(EnemySprite);
+    bool init();
+    EnemySprite();
+    ~EnemySprite();
+    
+    void createActionsWithFileName(const std::string &name);
+    
+public:
+    void walk();
+    void hurt();
+    
+};
 
 #endif /* defined(__SwampAttack__EnemySprite__) */

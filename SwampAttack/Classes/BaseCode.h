@@ -13,18 +13,16 @@
 
 USING_NS_CC;
 
-
-Size visibleSize = Director::getInstance()->getVisibleSize();
-Vec2 visibleOrigin = Director::getInstance()->getVisibleOrigin();
-
-Size winSize = Director::getInstance()->getWinSize();
-
-
+//-------------
+extern Size winSize;
+extern Size visibleSize;
+extern Vec2 visibleOrigin;
+//-------------
 #define CREATE_SCENE_FUNC(__TYPE__) \
 static cocos2d::Scene * scene() \
 { \
-    cocos2d::Scene * scene = cocos2d::Scene::create(); \
-    cocos2d::Layer * layer = __TYPE__::create(); \
+    Scene * scene = Scene::create(); \
+    Layer * layer = __TYPE__::create(); \
     scene->addChild(layer); \
     return scene; \
 }

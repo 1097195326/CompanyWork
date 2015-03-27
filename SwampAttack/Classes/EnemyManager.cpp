@@ -7,3 +7,12 @@
 //
 
 #include "EnemyManager.h"
+
+EnemyManager::EnemyManager()
+{
+    m_map.insert(std::pair<int,int>(1,2));
+}
+EnemyManager::~EnemyManager()
+{
+    
+}
