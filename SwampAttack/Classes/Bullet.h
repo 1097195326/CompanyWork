@@ -19,7 +19,6 @@ private:
     Vec2 m_speed;
     Vec2 m_point;
     
-    BulletSprite * m_sprite = NULL;
     
 public:
     Bullet();

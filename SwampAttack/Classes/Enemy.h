@@ -11,7 +11,6 @@
 
 #include "BaseCode.h"
 #include "GameObject.h"
-#include "EnemySprite.h"
 
 
 class Enemy :public GameObject {
@@ -23,7 +22,6 @@ private:
     Vec2 m_force;
     float m_mass;
     
-    EnemySprite * m_sprite = NULL;
     
 public:
     Enemy();
