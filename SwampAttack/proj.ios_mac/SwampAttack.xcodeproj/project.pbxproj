@@ -68,6 +68,8 @@
 		8DC10AC81AC3D7B1004F7DE2 /* EnemySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AC61AC3D7B1004F7DE2 /* EnemySprite.cpp */; };
 		8DC10ACB1AC40222004F7DE2 /* EnemyManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AC91AC40222004F7DE2 /* EnemyManager.cpp */; };
 		8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10ACC1AC40233004F7DE2 /* BulletManager.cpp */; };
+		8DC253491ACB970400D10652 /* CCCsvHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC253471ACB970400D10652 /* CCCsvHelper.cpp */; };
+		8DC2534C1ACB9DF800D10652 /* config in Resources */ = {isa = PBXBuildFile; fileRef = 8DC2534B1ACB9DF800D10652 /* config */; };
 		8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2ACD21AC53034004F3C1B /* BaseUtil.cpp */; };
 		8DC2ACD71AC5641B004F3C1B /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2ACD51AC5641B004F3C1B /* GameObject.cpp */; };
 		8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2ACD81AC56A77004F3C1B /* HumanSprite.cpp */; };
@@ -185,6 +187,9 @@
 		8DC10ACC1AC40233004F7DE2 /* BulletManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BulletManager.cpp; sourceTree = "<group>"; };
 		8DC10ACD1AC40233004F7DE2 /* BulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletManager.h; sourceTree = "<group>"; };
 		8DC10AD91AC408C9004F7DE2 /* BaseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCode.h; sourceTree = "<group>"; };
+		8DC253471ACB970400D10652 /* CCCsvHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCCsvHelper.cpp; sourceTree = "<group>"; };
+		8DC253481ACB970400D10652 /* CCCsvHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCsvHelper.h; sourceTree = "<group>"; };
+		8DC2534B1ACB9DF800D10652 /* config */ = {isa = PBXFileReference; lastKnownFileType = folder; path = config; sourceTree = "<group>"; };
 		8DC2ACD21AC53034004F3C1B /* BaseUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseUtil.cpp; sourceTree = "<group>"; };
 		8DC2ACD31AC53034004F3C1B /* BaseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUtil.h; sourceTree = "<group>"; };
 		8DC2ACD51AC5641B004F3C1B /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
@@ -324,6 +329,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8DC2534B1ACB9DF800D10652 /* config */,
 				8DC10AAC1AC3D54B004F7DE2 /* image */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
@@ -454,6 +460,8 @@
 		8DC10AD71AC40821004F7DE2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8DC253471ACB970400D10652 /* CCCsvHelper.cpp */,
+				8DC253481ACB970400D10652 /* CCCsvHelper.h */,
 				8DC10AD91AC408C9004F7DE2 /* BaseCode.h */,
 				8DC2ACD21AC53034004F3C1B /* BaseUtil.cpp */,
 				8DC2ACD31AC53034004F3C1B /* BaseUtil.h */,
@@ -561,6 +569,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC2534C1ACB9DF800D10652 /* config in Resources */,
 				8DC10AAD1AC3D54B004F7DE2 /* image in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
@@ -620,6 +629,7 @@
 				8DC10AB61AC3D6C7004F7DE2 /* Human.cpp in Sources */,
 				8DC2ACD71AC5641B004F3C1B /* GameObject.cpp in Sources */,
 				8DC10AB91AC3D6E2004F7DE2 /* Bullet.cpp in Sources */,
+				8DC253491ACB970400D10652 /* CCCsvHelper.cpp in Sources */,
 				8DC10ACB1AC40222004F7DE2 /* EnemyManager.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				8DC10AB01AC3D629004F7DE2 /* GameFightScene.cpp in Sources */,

@@ -14,22 +14,22 @@
 
 class EnemySprite :public Sprite {
 private:
-    Action * m_walkAction;
-    Action * m_hurtAction;
+    Action  * m_walkAction;
+    Action  * m_hurtAction;
     
-    std::map<std::string, Action *> m_map;
+    std::map<std::string, Action *>     m_map;
     
 public:
     CREATE_FUNC(EnemySprite);
-    bool init();
     EnemySprite();
-    virtual ~EnemySprite();
+    bool        init();
+    virtual     ~EnemySprite();
     
-    void createActionsWithFileName(const std::string &name);
+    void    createActionsWithFileName(const std::string &name);
     
 public:
-    virtual void move();
-    virtual void hurt();
+    virtual void    move();
+    virtual void    hurt();
     
 };
 

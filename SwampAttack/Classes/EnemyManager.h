@@ -15,7 +15,7 @@
 class EnemyManager {
     
 public:
-    std::map<int,int> m_map;
+    std::map<int,int>   m_map;
     
     EnemyManager();
     ~EnemyManager();

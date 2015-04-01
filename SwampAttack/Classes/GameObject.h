@@ -12,7 +12,7 @@
 class GameObject {
     
 public:
-    virtual void gameLoop(float data)=0;
+    virtual void    gameLoop(float data)=0;
 };
 
 #endif /* defined(__SwampAttack__GameObject__) */

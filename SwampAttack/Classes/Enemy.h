@@ -15,19 +15,19 @@
 
 class Enemy :public GameObject {
 private:
-    float m_health;
-    Vec2 m_speed;
-    Vec2 m_maxSpeed;
-    Vec2 m_point;
-    Vec2 m_force;
-    float m_mass;
+    float   m_health;
+    Vec2    m_speed;
+    Vec2    m_maxSpeed;
+    Vec2    m_point;
+    Vec2    m_force;
+    float   m_mass;
     
     
 public:
     Enemy();
     ~Enemy();
     
-    void gameLoop(float data);
+    void    gameLoop(float data);
 };
 
 #endif /* defined(__SwampAttack__Enemy__) */

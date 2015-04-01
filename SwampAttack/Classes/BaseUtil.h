@@ -13,8 +13,8 @@
 
 namespace BaseUtil
 {
-    ActionInterval * makeAnimateWithNameAndIndex(const std::string & name, int count);
-    ActionInterval * makeAnimateWithNameIndexDelay(const std::string & name, int count, float delay);
+    ActionInterval  *    makeAnimateWithNameAndIndex(const std::string & name, int count);
+    ActionInterval  *    makeAnimateWithNameIndexDelay(const std::string & name, int count, float delay);
     
 }
 

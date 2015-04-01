@@ -14,9 +14,9 @@
 USING_NS_CC;
 
 //-------------
-extern Size winSize;
-extern Size visibleSize;
-extern Vec2 visibleOrigin;
+extern  Size    winSize;
+extern  Size    visibleSize;
+extern  Vec2    visibleOrigin;
 //-------------
 #define CREATE_SCENE_FUNC(__TYPE__) \
 static cocos2d::Scene * scene() \

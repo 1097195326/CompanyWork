@@ -20,7 +20,7 @@ public:
     Human();
     ~Human();
     
-    void gameLoop(float data);
+    void    gameLoop(float data);
 };
 
 #endif /* defined(__SwampAttack__Human__) */

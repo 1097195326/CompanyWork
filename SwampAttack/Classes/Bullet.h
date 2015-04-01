@@ -16,15 +16,15 @@
 
 class Bullet : public GameObject {
 private:
-    Vec2 m_speed;
-    Vec2 m_point;
+    Vec2    m_speed;
+    Vec2    m_point;
     
     
 public:
     Bullet();
     ~Bullet();
     
-    void gameLoop(float data);
+    void    gameLoop(float data);
 };
 
 #endif /* defined(__SwampAttack__Bullet__) */

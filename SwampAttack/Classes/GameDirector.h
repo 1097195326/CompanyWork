@@ -24,7 +24,7 @@ public:
     GameDirector();
     ~GameDirector();
     
-    void gameLoop(float data);
+    void    gameLoop(float data);
 };
 
 #endif /* defined(__SwampAttack__GameDirector__) */

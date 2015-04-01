@@ -10,6 +10,9 @@
 #include "EnemySprite.h"
 #include "cocostudio/CocoStudio.h"
 
+#include "CCCsvHelper.h"
+
+
 using namespace cocostudio;
 
 bool GameFightScene::init()
@@ -29,14 +32,16 @@ bool GameFightScene::init()
     
 //    ArmatureDataManager::getInstance()->addArmatureFileInfoAsync("image/skeleton.json", this, CC_SCHEDULE_SELECTOR(TestAsynchronousLoading::dataLoaded));
     
-    ArmatureDataManager::getInstance()->addArmatureFileInfo("image/Cowboy.ExportJson");
-//    ArmatureDataManager::getInstance()->addArmatureFileInfoAsync("image/skeleton.json", this, nullptr);
-    Armature *armature = Armature::create("Cowboy");
-    armature->getAnimation()->playWithIndex(0);
-    armature->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5,
-                                visibleOrigin.y + visibleSize.height * 0.5));
-    addChild(armature);
+//    ArmatureDataManager::getInstance()->addArmatureFileInfo("image/Cowboy.ExportJson");
+////    ArmatureDataManager::getInstance()->addArmatureFileInfoAsync("image/skeleton.json", this, nullptr);
+//    Armature *armature = Armature::create("Cowboy");
+//    armature->getAnimation()->playWithIndex(0);
+//    armature->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5,
+//                                visibleOrigin.y + visibleSize.height * 0.5));
+//    addChild(armature);
     
+    GCCsvHelper * csvHelper = new GCCsvHelper();
+    csvHelper->openAndResolveFile("basezhanli.csv");
     
     return true;
 }

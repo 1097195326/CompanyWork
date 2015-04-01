@@ -18,7 +18,7 @@ private:
 public:
     
     CREATE_FUNC(HumanSprite);
-    bool init();
+    bool    init();
     
 };
 

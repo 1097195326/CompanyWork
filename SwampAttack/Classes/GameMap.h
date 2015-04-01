@@ -20,9 +20,9 @@ private:
 public:
     GameMap();
     
-    static GameMap * getInstance();
-    Vec2 getStartPoint();
-    Vec2 getTargetPoint();
+    static GameMap *    getInstance();
+    Vec2    getStartPoint();
+    Vec2    getTargetPoint();
     
 };
 

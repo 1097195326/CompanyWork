@@ -20,7 +20,8 @@ public:
     ~BulletSprite();
     
     CREATE_FUNC(BulletSprite);
-    bool init();
+    
+    bool    init();
     
 };
 

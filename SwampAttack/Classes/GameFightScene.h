@@ -21,7 +21,7 @@ public:
     CREATE_FUNC(GameFightScene);
     
     
-    virtual bool init();
+    virtual bool    init();
 };
 
 #endif /* defined(__SwampAttack__GameFightScene__) */
