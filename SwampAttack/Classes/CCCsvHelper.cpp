@@ -25,6 +25,7 @@ struct Tile
 
 bool GCCsvHelper::openAndResolveFile(const char *fileName)
 {
+    using namespace std;
     char  configPath[100] = "config/";
     
     std::string pathKey = FileUtils::getInstance()->fullPathForFilename(strcat(configPath, fileName));
@@ -45,12 +46,23 @@ bool GCCsvHelper::openAndResolveFile(const char *fileName)
     std::vector<std::string> testLine;
     testLine = data[1];
     std::vector<std::string>::iterator iter;
+
     int i = 0;
     for (iter = testLine.begin(); iter != testLine.end(); iter++) {
         std::string str = *iter;
-        printf("%d",i);
+//        printf("%d",i);
         ++i;
-        printf("%s\t",str.c_str());
+        if (str != "") {
+//            printf("%s\t",str.c_str());
+            string::size_type index = str.find_first_of('[',0);
+            string::size_type lastIndex = str.find_last_of(']');
+            string  tag = str.substr(0,index);
+            string  type = str.substr((index + 1),lastIndex - index);
+            
+            printf("%s\t",type.c_str());
+            printf("%d\t",(int)(lastIndex - index));
+        }
+        
     }
 
     
