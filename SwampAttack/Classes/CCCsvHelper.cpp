@@ -14,6 +14,15 @@ GCCsvHelper::~GCCsvHelper()
 
 #pragma region reselove the content begin...
 
+//typedef
+template <typename T1,typename T2>
+struct Tile
+{
+    Tile(T1 v1,T2 v2):tag(v1),value(v2){}
+    T1 tag;
+    T2 value;
+};
+
 bool GCCsvHelper::openAndResolveFile(const char *fileName)
 {
     char  configPath[100] = "config/";
@@ -22,8 +31,7 @@ bool GCCsvHelper::openAndResolveFile(const char *fileName)
 //    printf("hong xing file path :%s \n",pathKey.c_str());
     std::string pBuffer = FileUtils::getInstance()->getStringFromFile(pathKey.c_str());
     
-    
-    printf("hong xing csv :\n%s",pBuffer.c_str());
+//    printf("hong xing csv :\n%s",pBuffer.c_str());
     
 	std::vector<std::string> line;
 	rowSplit(line, pBuffer, '\n');
@@ -33,6 +41,26 @@ bool GCCsvHelper::openAndResolveFile(const char *fileName)
 		data.push_back(fieldVector);
 		m_colLength = std::max(m_colLength, (int)fieldVector.size());
 	}
+    //----------
+    std::vector<std::string> testLine;
+    testLine = data[1];
+    std::vector<std::string>::iterator iter;
+    int i = 0;
+    for (iter = testLine.begin(); iter != testLine.end(); iter++) {
+        std::string str = *iter;
+        printf("%d",i);
+        ++i;
+        printf("%s\t",str.c_str());
+    }
+
+    
+    
+//    struct BaseStruct{};
+//    BaseStruct ss[6];
+//    ss[0] = struct dd: public BaseStruct {
+//        int tag = "洪星";
+//    }
+//    ss[0].tag;
 
 	return true;
 }

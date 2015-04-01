@@ -5,6 +5,11 @@
 #include "cocos2d.h"
 #include <vector>
 
+#include "json/document.h"
+#include "json/writer.h"
+#include "json/stringbuffer.h"
+using namespace  rapidjson;
+
 USING_NS_CC;
 
 class GCCsvHelper

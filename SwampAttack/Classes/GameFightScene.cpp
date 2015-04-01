@@ -41,7 +41,7 @@ bool GameFightScene::init()
 //    addChild(armature);
     
     GCCsvHelper * csvHelper = new GCCsvHelper();
-    csvHelper->openAndResolveFile("basezhanli.csv");
+    csvHelper->openAndResolveFile("item.people.csv");
     
     return true;
 }
