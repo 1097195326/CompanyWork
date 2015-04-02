@@ -59,6 +59,13 @@
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
+		8DBB98891ACD520C008C804D /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB987F1ACD520C008C804D /* json_internalarray.inl */; };
+		8DBB988A1ACD520C008C804D /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB98801ACD520C008C804D /* json_internalmap.inl */; };
+		8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB98811ACD520C008C804D /* json_reader.cpp */; };
+		8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB98821ACD520C008C804D /* json_value.cpp */; };
+		8DBB988D1ACD520C008C804D /* json_valueiterator.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB98831ACD520C008C804D /* json_valueiterator.inl */; };
+		8DBB988E1ACD520C008C804D /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB98841ACD520C008C804D /* json_writer.cpp */; };
+		8DBB988F1ACD520C008C804D /* sconscript in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB98851ACD520C008C804D /* sconscript */; };
 		8DC10AAD1AC3D54B004F7DE2 /* image in Resources */ = {isa = PBXBuildFile; fileRef = 8DC10AAC1AC3D54B004F7DE2 /* image */; };
 		8DC10AB01AC3D629004F7DE2 /* GameFightScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AAE1AC3D629004F7DE2 /* GameFightScene.cpp */; };
 		8DC10AB61AC3D6C7004F7DE2 /* Human.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC10AB41AC3D6C7004F7DE2 /* Human.cpp */; };
@@ -169,6 +176,22 @@
 		521A8E6219F0C34300D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		8DBB98781ACD520C008C804D /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
+		8DBB98791ACD520C008C804D /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		8DBB987A1ACD520C008C804D /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
+		8DBB987B1ACD520C008C804D /* forwards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forwards.h; sourceTree = "<group>"; };
+		8DBB987C1ACD520C008C804D /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		8DBB987E1ACD520C008C804D /* json_batchallocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = json_batchallocator.h; path = lib_json/json_batchallocator.h; sourceTree = "<group>"; };
+		8DBB987F1ACD520C008C804D /* json_internalarray.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json_internalarray.inl; path = lib_json/json_internalarray.inl; sourceTree = "<group>"; };
+		8DBB98801ACD520C008C804D /* json_internalmap.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json_internalmap.inl; path = lib_json/json_internalmap.inl; sourceTree = "<group>"; };
+		8DBB98811ACD520C008C804D /* json_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json_reader.cpp; path = lib_json/json_reader.cpp; sourceTree = "<group>"; };
+		8DBB98821ACD520C008C804D /* json_value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json_value.cpp; path = lib_json/json_value.cpp; sourceTree = "<group>"; };
+		8DBB98831ACD520C008C804D /* json_valueiterator.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json_valueiterator.inl; path = lib_json/json_valueiterator.inl; sourceTree = "<group>"; };
+		8DBB98841ACD520C008C804D /* json_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json_writer.cpp; path = lib_json/json_writer.cpp; sourceTree = "<group>"; };
+		8DBB98851ACD520C008C804D /* sconscript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sconscript; path = lib_json/sconscript; sourceTree = "<group>"; };
+		8DBB98861ACD520C008C804D /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		8DBB98871ACD520C008C804D /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
+		8DBB98881ACD520C008C804D /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
 		8DC10AAC1AC3D54B004F7DE2 /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = image; sourceTree = "<group>"; };
 		8DC10AAE1AC3D629004F7DE2 /* GameFightScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameFightScene.cpp; sourceTree = "<group>"; };
 		8DC10AAF1AC3D629004F7DE2 /* GameFightScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameFightScene.h; sourceTree = "<group>"; };
@@ -344,6 +367,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8DBB98771ACD520C008C804D /* json */,
 				8DC10AD71AC40821004F7DE2 /* Base */,
 				8DC10AD21AC4050F004F7DE2 /* UI */,
 				8DC10AD01AC4047B004F7DE2 /* modes */,
@@ -403,6 +427,29 @@
 			name = Icons;
 			path = ios;
 			sourceTree = SOURCE_ROOT;
+		};
+		8DBB98771ACD520C008C804D /* json */ = {
+			isa = PBXGroup;
+			children = (
+				8DBB98781ACD520C008C804D /* autolink.h */,
+				8DBB98791ACD520C008C804D /* config.h */,
+				8DBB987A1ACD520C008C804D /* features.h */,
+				8DBB987B1ACD520C008C804D /* forwards.h */,
+				8DBB987C1ACD520C008C804D /* json.h */,
+				8DBB987E1ACD520C008C804D /* json_batchallocator.h */,
+				8DBB987F1ACD520C008C804D /* json_internalarray.inl */,
+				8DBB98801ACD520C008C804D /* json_internalmap.inl */,
+				8DBB98811ACD520C008C804D /* json_reader.cpp */,
+				8DBB98821ACD520C008C804D /* json_value.cpp */,
+				8DBB98831ACD520C008C804D /* json_valueiterator.inl */,
+				8DBB98841ACD520C008C804D /* json_writer.cpp */,
+				8DBB98851ACD520C008C804D /* sconscript */,
+				8DBB98861ACD520C008C804D /* reader.h */,
+				8DBB98871ACD520C008C804D /* value.h */,
+				8DBB98881ACD520C008C804D /* writer.h */,
+			);
+			path = json;
+			sourceTree = "<group>";
 		};
 		8DC10ACF1AC40463004F7DE2 /* scenes */ = {
 			isa = PBXGroup;
@@ -582,11 +629,15 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
+				8DBB988F1ACD520C008C804D /* sconscript in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				8DBB988D1ACD520C008C804D /* json_valueiterator.inl in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				8DBB98891ACD520C008C804D /* json_internalarray.inl in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				8DBB988A1ACD520C008C804D /* json_internalmap.inl in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
@@ -621,6 +672,7 @@
 				8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */,
 				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */,
 				8DC430A61AC929BE00AB1665 /* GameDirector.cpp in Sources */,
 				8DC430AC1AC92BEF00AB1665 /* GunManager.cpp in Sources */,
 				8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */,
@@ -636,8 +688,10 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				8DC10ABC1AC3D6FD004F7DE2 /* BulletSprite.cpp in Sources */,
 				8DC10AC21AC3D75F004F7DE2 /* Enemy.cpp in Sources */,
+				8DBB988E1ACD520C008C804D /* json_writer.cpp in Sources */,
 				8DC10AC81AC3D7B1004F7DE2 /* EnemySprite.cpp in Sources */,
 				8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */,
+				8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				8DC430A91AC92BD600AB1665 /* Gun.cpp in Sources */,
 			);

@@ -5,10 +5,10 @@
 #include "cocos2d.h"
 #include <vector>
 
-#include "json/document.h"
-#include "json/writer.h"
-#include "json/stringbuffer.h"
-//#include "jsoncpp/json.h"
+//#include "json/document.h"
+//#include "json/writer.h"
+//#include "json/stringbuffer.h"
+#include "json/json.h"
 //using namespace  rapidjson;
 
 USING_NS_CC;
@@ -29,12 +29,13 @@ public:
 private:
 	const   std::string m_seperator;
 	std::vector<std::vector<std::string> >  data;
-    rapidjson::Document readDoc;
-//    Json::Value root;
+//    rapidjson::Document readDoc;
+    Json::Value root;
     
 	//cols length
 	int     m_colLength;
 
+    void    createJsonData();
 	void    rowSplit(std::vector<std::string> &rows, const std::string &content, const char &rowSeperator);
 	void    fieldSplit(std::vector<std::string> &fields, std::string line);
 

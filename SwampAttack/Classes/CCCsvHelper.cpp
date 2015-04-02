@@ -49,13 +49,10 @@ string findType(string & content)
 }
 bool GCCsvHelper::openAndResolveFile(const char *fileName)
 {
-    
     char  configPath[100] = "config/";
     
     std::string pathKey = FileUtils::getInstance()->fullPathForFilename(strcat(configPath, fileName));
-//    printf("hong xing file path :%s \n",pathKey.c_str());
     std::string pBuffer = FileUtils::getInstance()->getStringFromFile(pathKey.c_str());
-//    printf("hong xing csv :\n%s",pBuffer.c_str());
     
 	std::vector<std::string> line;
 	rowSplit(line, pBuffer, '\n');
@@ -66,119 +63,54 @@ bool GCCsvHelper::openAndResolveFile(const char *fileName)
 		data.push_back(fieldVector);
 		m_colLength = std::max(m_colLength, (int)fieldVector.size());
 	}
-    //----------生成 json
-//    rapidjson::Document document;
-//    document.SetObject();
-//    rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
+    createJsonData();
     
-//    Json::FastWriter writer;
-    
-    std::vector<std::string> testLine;
-    std::vector<std::string> testLine1;
-    testLine = data[1];
-    testLine1 = data[2];
-    
-//    Json::Value lineArray;
-//    for (int i = 0; i < testLine1.size(); ++i)
-//    {
-//        string head = testLine[i];
-//        string str = testLine1[i];
-//        if ("" != head)
-//        {
-//            string tag = findTag(head);
-//            string type = findType(head);
-//            
-//            if (string::npos != type.find("vector"))
-//            {
-//                //                rapidjson::Value object(rapidjson::kArrayType);
-//                //                string seperator = ";";
-//                //                std::string::size_type lastIndex = str.find_first_not_of(seperator, 0);
-//                //                std::string::size_type    currentIndex = str.find_first_of(seperator,lastIndex);
-//                //                while (std::string::npos != currentIndex || std::string::npos != lastIndex)
-//                //                {
-//                //                    object.PushBack(str.substr(lastIndex, currentIndex - lastIndex).c_str(), allocator);
-//                //                    lastIndex = str.find_first_not_of(seperator, currentIndex);
-//                //                    currentIndex = str.find_first_of(seperator, lastIndex);
-//                //                }
-//                //                lineArray.PushBack(object, allocator);
-//            }else
-//            {
-//                log("tag:%s",tag.c_str());
-//                log("str:%s",str.c_str());
-//                Json::Value object;
-//                object[tag.c_str()] = str.c_str();
-//                lineArray.append(object);
-//            }
-//        }
-//    }
-//    
-//    std::string json_file = writer.write(lineArray);
-//    log("%s",json_file.c_str());
-    
-    
-//    rapidjson::Value lineArray(rapidjson::kArrayType);
-//    
-//    for (int i = 0; i < testLine1.size(); ++i)
-//    {
-//        string head = testLine[i];
-//        string str = testLine1[i];
-//        if ("" != head)
-//        {
-//            string tag = findTag(head);
-//            string type = findType(head);
-//            
-//            if (string::npos != type.find("vector"))
-//            {
-////                rapidjson::Value object(rapidjson::kArrayType);
-////                string seperator = ";";
-////                std::string::size_type lastIndex = str.find_first_not_of(seperator, 0);
-////                std::string::size_type    currentIndex = str.find_first_of(seperator,lastIndex);
-////                while (std::string::npos != currentIndex || std::string::npos != lastIndex)
-////                {
-////                    object.PushBack(str.substr(lastIndex, currentIndex - lastIndex).c_str(), allocator);
-////                    lastIndex = str.find_first_not_of(seperator, currentIndex);
-////                    currentIndex = str.find_first_of(seperator, lastIndex);
-////                }
-////                lineArray.PushBack(object, allocator);
-//            }else
-//            {
-//                log("tag:%s",tag.c_str());
-//                log("str:%s",str.c_str());
-//                
-//                rapidjson::Value object(rapidjson::kObjectType);
-////                object.AddMember(tag.c_str(), str.c_str(), allocator);
-//                object.AddMember(tag.c_str(),str.c_str(), allocator);
-//                lineArray.PushBack(object, allocator);
-//            }
-//        }
-//    }
-//    document.AddMember("info",lineArray, allocator);
-//    
-//    StringBuffer buffer;
-//    rapidjson::Writer<StringBuffer> writer(buffer);
-//    document.Accept(writer);
-//    printf(":%s\n",buffer.GetString());
-//
-//    
-//    readDoc.Parse<0>(buffer.GetString());
-//    if (readDoc.HasParseError())
-//    {
-//        return 0;
-//    }
-//    rapidjson::Value & __array = readDoc["info"];
-//    if (__array.IsArray())
-//    {
-//        for (int i = 0 ; i <__array.Capacity(); ++i) {
-//            rapidjson::Value & info = __array[i];
-//            if (info.HasMember("Name")) {
-//                printf("\n info : %s \n",info["Name"].GetString());
-//            }
-//        }
-//    }
-
 	return true;
 }
-
+void GCCsvHelper::createJsonData()
+{
+    //----------生成 json
+    Json::FastWriter writer;
+    
+    std::vector<std::string> headLine = data[1];
+    for (int i = 2; i < data.size(); ++i) {
+        std::vector<std::string> line = data[i];
+        Json::Value lineArray;
+        for (int i = 0; i < headLine.size(); ++i)
+        {
+            string head = headLine[i];
+            string str = line[i];
+            if ("" != head)
+            {
+                string tag = findTag(head);
+                string type = findType(head);
+                
+                if (string::npos != type.find("vector"))
+                {
+                    Json::Value object;
+                    string seperator = ";";
+                    std::string::size_type lastIndex = str.find_first_not_of(seperator, 0);
+                    std::string::size_type    currentIndex = str.find_first_of(seperator,lastIndex);
+                    while (std::string::npos != currentIndex || std::string::npos != lastIndex)
+                    {
+                        object.append(str.substr(lastIndex, currentIndex - lastIndex).c_str());
+                        lastIndex = str.find_first_not_of(seperator, currentIndex);
+                        currentIndex = str.find_first_of(seperator, lastIndex);
+                    }
+                    lineArray.append(object);
+                }else
+                {
+                    Json::Value object;
+                    object[tag.c_str()] = str.c_str();
+                    lineArray.append(object);
+                }
+            }
+        }
+        root.append(lineArray);
+    }
+    std::string json_file = writer.write(root);
+    log("%s",json_file.c_str());
+}
 
 void GCCsvHelper::rowSplit(std::vector<std::string> &rows, const std::string &content, const char &rowSeperator)
 {
