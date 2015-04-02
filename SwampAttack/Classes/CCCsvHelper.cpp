@@ -1,5 +1,8 @@
 #include "CCCsvHelper.h"
 
+using namespace std;
+
+
 GCCsvHelper::GCCsvHelper()
 	:m_seperator(",")
 	,m_colLength(0)
@@ -22,57 +25,156 @@ struct Tile
     T1 tag;
     T2 value;
 };
-
+string findTag(string & content)
+{
+    string::size_type index = content.find_first_of('[',0);
+    string tag = content.substr(0,index);
+    if (string::npos != index)
+    {
+        return tag;
+    }
+    return NULL;
+}
+string findType(string & content)
+{
+    string::size_type index = content.find_first_of('[',0);
+    string::size_type lastIndex = content.find_last_of(']');
+    if (string::npos != index && string::npos != lastIndex)
+    {
+        ++index;
+        string type = content.substr(index,lastIndex - index);
+        return type;
+    }
+    return NULL;
+}
 bool GCCsvHelper::openAndResolveFile(const char *fileName)
 {
-    using namespace std;
+    
     char  configPath[100] = "config/";
     
     std::string pathKey = FileUtils::getInstance()->fullPathForFilename(strcat(configPath, fileName));
 //    printf("hong xing file path :%s \n",pathKey.c_str());
     std::string pBuffer = FileUtils::getInstance()->getStringFromFile(pathKey.c_str());
-    
 //    printf("hong xing csv :\n%s",pBuffer.c_str());
     
 	std::vector<std::string> line;
 	rowSplit(line, pBuffer, '\n');
-	for (unsigned int i = 0; i < line.size(); ++i) {
+	for (unsigned int i = 0; i < line.size(); ++i)
+    {
 		std::vector<std::string> fieldVector;
 		fieldSplit(fieldVector, line[i]);
 		data.push_back(fieldVector);
 		m_colLength = std::max(m_colLength, (int)fieldVector.size());
 	}
-    //----------
+    //----------生成 json
+//    rapidjson::Document document;
+//    document.SetObject();
+//    rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
+    
+//    Json::FastWriter writer;
+    
     std::vector<std::string> testLine;
+    std::vector<std::string> testLine1;
     testLine = data[1];
-    std::vector<std::string>::iterator iter;
-
-    int i = 0;
-    for (iter = testLine.begin(); iter != testLine.end(); iter++) {
-        std::string str = *iter;
-//        printf("%d",i);
-        ++i;
-        if (str != "") {
-//            printf("%s\t",str.c_str());
-            string::size_type index = str.find_first_of('[',0);
-            string::size_type lastIndex = str.find_last_of(']');
-            string  tag = str.substr(0,index);
-            string  type = str.substr((index + 1),lastIndex - index);
-            
-            printf("%s\t",type.c_str());
-            printf("%d\t",(int)(lastIndex - index));
-        }
-        
-    }
-
+    testLine1 = data[2];
     
-    
-//    struct BaseStruct{};
-//    BaseStruct ss[6];
-//    ss[0] = struct dd: public BaseStruct {
-//        int tag = "洪星";
+//    Json::Value lineArray;
+//    for (int i = 0; i < testLine1.size(); ++i)
+//    {
+//        string head = testLine[i];
+//        string str = testLine1[i];
+//        if ("" != head)
+//        {
+//            string tag = findTag(head);
+//            string type = findType(head);
+//            
+//            if (string::npos != type.find("vector"))
+//            {
+//                //                rapidjson::Value object(rapidjson::kArrayType);
+//                //                string seperator = ";";
+//                //                std::string::size_type lastIndex = str.find_first_not_of(seperator, 0);
+//                //                std::string::size_type    currentIndex = str.find_first_of(seperator,lastIndex);
+//                //                while (std::string::npos != currentIndex || std::string::npos != lastIndex)
+//                //                {
+//                //                    object.PushBack(str.substr(lastIndex, currentIndex - lastIndex).c_str(), allocator);
+//                //                    lastIndex = str.find_first_not_of(seperator, currentIndex);
+//                //                    currentIndex = str.find_first_of(seperator, lastIndex);
+//                //                }
+//                //                lineArray.PushBack(object, allocator);
+//            }else
+//            {
+//                log("tag:%s",tag.c_str());
+//                log("str:%s",str.c_str());
+//                Json::Value object;
+//                object[tag.c_str()] = str.c_str();
+//                lineArray.append(object);
+//            }
+//        }
 //    }
-//    ss[0].tag;
+//    
+//    std::string json_file = writer.write(lineArray);
+//    log("%s",json_file.c_str());
+    
+    
+//    rapidjson::Value lineArray(rapidjson::kArrayType);
+//    
+//    for (int i = 0; i < testLine1.size(); ++i)
+//    {
+//        string head = testLine[i];
+//        string str = testLine1[i];
+//        if ("" != head)
+//        {
+//            string tag = findTag(head);
+//            string type = findType(head);
+//            
+//            if (string::npos != type.find("vector"))
+//            {
+////                rapidjson::Value object(rapidjson::kArrayType);
+////                string seperator = ";";
+////                std::string::size_type lastIndex = str.find_first_not_of(seperator, 0);
+////                std::string::size_type    currentIndex = str.find_first_of(seperator,lastIndex);
+////                while (std::string::npos != currentIndex || std::string::npos != lastIndex)
+////                {
+////                    object.PushBack(str.substr(lastIndex, currentIndex - lastIndex).c_str(), allocator);
+////                    lastIndex = str.find_first_not_of(seperator, currentIndex);
+////                    currentIndex = str.find_first_of(seperator, lastIndex);
+////                }
+////                lineArray.PushBack(object, allocator);
+//            }else
+//            {
+//                log("tag:%s",tag.c_str());
+//                log("str:%s",str.c_str());
+//                
+//                rapidjson::Value object(rapidjson::kObjectType);
+////                object.AddMember(tag.c_str(), str.c_str(), allocator);
+//                object.AddMember(tag.c_str(),str.c_str(), allocator);
+//                lineArray.PushBack(object, allocator);
+//            }
+//        }
+//    }
+//    document.AddMember("info",lineArray, allocator);
+//    
+//    StringBuffer buffer;
+//    rapidjson::Writer<StringBuffer> writer(buffer);
+//    document.Accept(writer);
+//    printf(":%s\n",buffer.GetString());
+//
+//    
+//    readDoc.Parse<0>(buffer.GetString());
+//    if (readDoc.HasParseError())
+//    {
+//        return 0;
+//    }
+//    rapidjson::Value & __array = readDoc["info"];
+//    if (__array.IsArray())
+//    {
+//        for (int i = 0 ; i <__array.Capacity(); ++i) {
+//            rapidjson::Value & info = __array[i];
+//            if (info.HasMember("Name")) {
+//                printf("\n info : %s \n",info["Name"].GetString());
+//            }
+//        }
+//    }
 
 	return true;
 }

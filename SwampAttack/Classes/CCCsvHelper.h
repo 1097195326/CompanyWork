@@ -8,7 +8,8 @@
 #include "json/document.h"
 #include "json/writer.h"
 #include "json/stringbuffer.h"
-using namespace  rapidjson;
+//#include "jsoncpp/json.h"
+//using namespace  rapidjson;
 
 USING_NS_CC;
 
@@ -28,7 +29,9 @@ public:
 private:
 	const   std::string m_seperator;
 	std::vector<std::vector<std::string> >  data;
-
+    rapidjson::Document readDoc;
+//    Json::Value root;
+    
 	//cols length
 	int     m_colLength;
 
