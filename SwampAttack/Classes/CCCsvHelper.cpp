@@ -1,13 +1,16 @@
 #include "CCCsvHelper.h"
+#include "ConfigManager.h"
+
 
 using namespace std;
 
 
-GCCsvHelper::GCCsvHelper()
+GCCsvHelper::GCCsvHelper(const std::string fileName)
 	:m_seperator(",")
 	,m_colLength(0)
 {
-
+    ConfigManager::getInstance()->addConfigData(fileName, this);
+    openAndResolveFile(fileName);
 }
 
 GCCsvHelper::~GCCsvHelper()
@@ -17,14 +20,6 @@ GCCsvHelper::~GCCsvHelper()
 
 #pragma region reselove the content begin...
 
-//typedef
-template <typename T1,typename T2>
-struct Tile
-{
-    Tile(T1 v1,T2 v2):tag(v1),value(v2){}
-    T1 tag;
-    T2 value;
-};
 string findTag(string & content)
 {
     string::size_type index = content.find_first_of('[',0);
@@ -47,13 +42,14 @@ string findType(string & content)
     }
     return NULL;
 }
-bool GCCsvHelper::openAndResolveFile(const char *fileName)
+bool GCCsvHelper::openAndResolveFile(const std::string fileName)
 {
     char  configPath[100] = "config/";
     
-    std::string pathKey = FileUtils::getInstance()->fullPathForFilename(strcat(configPath, fileName));
+    std::string pathKey = FileUtils::getInstance()->fullPathForFilename(strcat(configPath, fileName.c_str()));
     std::string pBuffer = FileUtils::getInstance()->getStringFromFile(pathKey.c_str());
     
+    std::vector<std::vector<std::string> >  data;
 	std::vector<std::string> line;
 	rowSplit(line, pBuffer, '\n');
 	for (unsigned int i = 0; i < line.size(); ++i)
@@ -63,11 +59,15 @@ bool GCCsvHelper::openAndResolveFile(const char *fileName)
 		data.push_back(fieldVector);
 		m_colLength = std::max(m_colLength, (int)fieldVector.size());
 	}
-    createJsonData();
-    
+    createJsonData(data);
+
 	return true;
 }
-void GCCsvHelper::createJsonData()
+Json::Value GCCsvHelper::getJsonData()
+{
+    return root;
+}
+void GCCsvHelper::createJsonData(std::vector<std::vector<std::string> > & data)
 {
     //----------生成 json
     Json::FastWriter writer;
@@ -106,7 +106,9 @@ void GCCsvHelper::createJsonData()
                 }
             }
         }
-        root.append(lineArray);
+        Json::Value lineObject;
+        lineObject[line[0].c_str()] = lineArray;
+        root.append(lineObject);
     }
     std::string json_file = writer.write(root);
     log("%s",json_file.c_str());
@@ -187,20 +189,4 @@ int GCCsvHelper::getFieldNoQuoted(const std::string &line, std::string &field, i
 	field = std::string(line, index, j - index);
 
 	return j;
-}
-
-#pragma region end.
-
-///////search data
-const char *GCCsvHelper::getData(unsigned int rowIndex, unsigned int colIndex)
-{
-	if (rowIndex >= getRowLength() || colIndex >= getColLength()) {
-		return "";
-	}
-
-	if (colIndex >= data[rowIndex].size()) {
-		return "";
-	}
-
-	return data[rowIndex][colIndex].c_str();
 }

@@ -12,7 +12,8 @@
 #include "BaseCode.h"
 
 
-class GameFightScene : public cocos2d::Layer {
+class GameFightScene : public cocos2d::Layer
+{
 private:
     
     

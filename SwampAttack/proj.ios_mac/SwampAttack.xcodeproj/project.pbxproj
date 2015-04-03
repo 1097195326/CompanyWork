@@ -86,6 +86,7 @@
 		8DC430AC1AC92BEF00AB1665 /* GunManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430AA1AC92BEF00AB1665 /* GunManager.cpp */; };
 		8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430AD1AC930D800AB1665 /* Prop.cpp */; };
 		8DC430B21AC930E400AB1665 /* PropManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430B01AC930E400AB1665 /* PropManager.cpp */; };
+		8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -231,6 +232,8 @@
 		8DC430AE1AC930D800AB1665 /* Prop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prop.h; sourceTree = "<group>"; };
 		8DC430B01AC930E400AB1665 /* PropManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropManager.cpp; sourceTree = "<group>"; };
 		8DC430B11AC930E400AB1665 /* PropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropManager.h; sourceTree = "<group>"; };
+		8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigManager.cpp; sourceTree = "<group>"; };
+		8DD0DE361ACE347000BA61D4 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -507,11 +510,13 @@
 		8DC10AD71AC40821004F7DE2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				8DC253471ACB970400D10652 /* CCCsvHelper.cpp */,
-				8DC253481ACB970400D10652 /* CCCsvHelper.h */,
+				8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */,
+				8DD0DE361ACE347000BA61D4 /* ConfigManager.h */,
 				8DC10AD91AC408C9004F7DE2 /* BaseCode.h */,
 				8DC2ACD21AC53034004F3C1B /* BaseUtil.cpp */,
 				8DC2ACD31AC53034004F3C1B /* BaseUtil.h */,
+				8DC253471ACB970400D10652 /* CCCsvHelper.cpp */,
+				8DC253481ACB970400D10652 /* CCCsvHelper.h */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -676,6 +681,7 @@
 				8DC430A61AC929BE00AB1665 /* GameDirector.cpp in Sources */,
 				8DC430AC1AC92BEF00AB1665 /* GunManager.cpp in Sources */,
 				8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */,
+				8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */,
 				8DC430A31AC8FF2A00AB1665 /* GameMap.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				8DC10AB61AC3D6C7004F7DE2 /* Human.cpp in Sources */,
