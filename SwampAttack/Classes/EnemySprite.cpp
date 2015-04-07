@@ -41,6 +41,10 @@ void EnemySprite::createActionsWithFileName(const std::string &name)
     m_walkAction->retain();
 //    m_map.insert(std::pair<std::string, Action*>("name",m_walkAction));
 }
+void EnemySprite::setMode(Enemy *model)
+{
+    m_model = model;
+}
 void EnemySprite::move()
 {
     if (m_walkAction) {

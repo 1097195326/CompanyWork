@@ -16,3 +16,7 @@ EnemyManager::~EnemyManager()
 {
     
 }
+void EnemyManager::gameLoop(float data)
+{
+    
+}

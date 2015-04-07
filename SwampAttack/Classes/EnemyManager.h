@@ -11,8 +11,10 @@
 
 #include <stdio.h>
 #include <map>
+#include "GameObject.h"
 
-class EnemyManager {
+
+class EnemyManager : public GameObject {
     
 public:
     std::map<int,int>   m_map;
@@ -20,6 +22,7 @@ public:
     EnemyManager();
     ~EnemyManager();
     
+    void gameLoop(float data);
     
 };
 #endif /* defined(__SwampAttack__EnemyManager__) */

@@ -87,6 +87,7 @@
 		8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430AD1AC930D800AB1665 /* Prop.cpp */; };
 		8DC430B21AC930E400AB1665 /* PropManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430B01AC930E400AB1665 /* PropManager.cpp */; };
 		8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */; };
+		8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -234,6 +235,8 @@
 		8DC430B11AC930E400AB1665 /* PropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropManager.h; sourceTree = "<group>"; };
 		8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigManager.cpp; sourceTree = "<group>"; };
 		8DD0DE361ACE347000BA61D4 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
+		8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyGroup.cpp; sourceTree = "<group>"; };
+		8DD7F1F61AD3737B00D86BC5 /* EnemyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyGroup.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -373,7 +376,7 @@
 				8DBB98771ACD520C008C804D /* json */,
 				8DC10AD71AC40821004F7DE2 /* Base */,
 				8DC10AD21AC4050F004F7DE2 /* UI */,
-				8DC10AD01AC4047B004F7DE2 /* modes */,
+				8DC10AD01AC4047B004F7DE2 /* models */,
 				8DC10ACF1AC40463004F7DE2 /* scenes */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
@@ -463,7 +466,7 @@
 			name = scenes;
 			sourceTree = "<group>";
 		};
-		8DC10AD01AC4047B004F7DE2 /* modes */ = {
+		8DC10AD01AC4047B004F7DE2 /* models */ = {
 			isa = PBXGroup;
 			children = (
 				8DC2ACD51AC5641B004F3C1B /* GameObject.cpp */,
@@ -472,26 +475,13 @@
 				8DC430A51AC929BE00AB1665 /* GameDirector.h */,
 				8DC430A11AC8FF2A00AB1665 /* GameMap.cpp */,
 				8DC430A21AC8FF2A00AB1665 /* GameMap.h */,
-				8DC10AB41AC3D6C7004F7DE2 /* Human.cpp */,
-				8DC10AB51AC3D6C7004F7DE2 /* Human.h */,
-				8DC10AB71AC3D6E2004F7DE2 /* Bullet.cpp */,
-				8DC10AB81AC3D6E2004F7DE2 /* Bullet.h */,
-				8DC10ACC1AC40233004F7DE2 /* BulletManager.cpp */,
-				8DC10ACD1AC40233004F7DE2 /* BulletManager.h */,
-				8DC10AC01AC3D75F004F7DE2 /* Enemy.cpp */,
-				8DC10AC11AC3D75F004F7DE2 /* Enemy.h */,
-				8DC10AC91AC40222004F7DE2 /* EnemyManager.cpp */,
-				8DC10ACA1AC40222004F7DE2 /* EnemyManager.h */,
-				8DC430A71AC92BD600AB1665 /* Gun.cpp */,
-				8DC430A81AC92BD600AB1665 /* Gun.h */,
-				8DC430AA1AC92BEF00AB1665 /* GunManager.cpp */,
-				8DC430AB1AC92BEF00AB1665 /* GunManager.h */,
-				8DC430AD1AC930D800AB1665 /* Prop.cpp */,
-				8DC430AE1AC930D800AB1665 /* Prop.h */,
-				8DC430B01AC930E400AB1665 /* PropManager.cpp */,
-				8DC430B11AC930E400AB1665 /* PropManager.h */,
+				8DD7F1FC1AD376C600D86BC5 /* BulletModels */,
+				8DD7F1FB1AD376B200D86BC5 /* HumanModels */,
+				8DD7F1FA1AD3769F00D86BC5 /* PropModels */,
+				8DD7F1F91AD3769500D86BC5 /* GunModels */,
+				8DD7F1F81AD3768000D86BC5 /* EnemyModels */,
 			);
-			name = modes;
+			name = models;
 			sourceTree = "<group>";
 		};
 		8DC10AD21AC4050F004F7DE2 /* UI */ = {
@@ -519,6 +509,61 @@
 				8DC253481ACB970400D10652 /* CCCsvHelper.h */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		8DD7F1F81AD3768000D86BC5 /* EnemyModels */ = {
+			isa = PBXGroup;
+			children = (
+				8DC10AC01AC3D75F004F7DE2 /* Enemy.cpp */,
+				8DC10AC11AC3D75F004F7DE2 /* Enemy.h */,
+				8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */,
+				8DD7F1F61AD3737B00D86BC5 /* EnemyGroup.h */,
+				8DC10AC91AC40222004F7DE2 /* EnemyManager.cpp */,
+				8DC10ACA1AC40222004F7DE2 /* EnemyManager.h */,
+			);
+			name = EnemyModels;
+			sourceTree = "<group>";
+		};
+		8DD7F1F91AD3769500D86BC5 /* GunModels */ = {
+			isa = PBXGroup;
+			children = (
+				8DC430A71AC92BD600AB1665 /* Gun.cpp */,
+				8DC430A81AC92BD600AB1665 /* Gun.h */,
+				8DC430AA1AC92BEF00AB1665 /* GunManager.cpp */,
+				8DC430AB1AC92BEF00AB1665 /* GunManager.h */,
+			);
+			name = GunModels;
+			sourceTree = "<group>";
+		};
+		8DD7F1FA1AD3769F00D86BC5 /* PropModels */ = {
+			isa = PBXGroup;
+			children = (
+				8DC430AD1AC930D800AB1665 /* Prop.cpp */,
+				8DC430AE1AC930D800AB1665 /* Prop.h */,
+				8DC430B01AC930E400AB1665 /* PropManager.cpp */,
+				8DC430B11AC930E400AB1665 /* PropManager.h */,
+			);
+			name = PropModels;
+			sourceTree = "<group>";
+		};
+		8DD7F1FB1AD376B200D86BC5 /* HumanModels */ = {
+			isa = PBXGroup;
+			children = (
+				8DC10AB41AC3D6C7004F7DE2 /* Human.cpp */,
+				8DC10AB51AC3D6C7004F7DE2 /* Human.h */,
+			);
+			name = HumanModels;
+			sourceTree = "<group>";
+		};
+		8DD7F1FC1AD376C600D86BC5 /* BulletModels */ = {
+			isa = PBXGroup;
+			children = (
+				8DC10AB71AC3D6E2004F7DE2 /* Bullet.cpp */,
+				8DC10AB81AC3D6E2004F7DE2 /* Bullet.h */,
+				8DC10ACC1AC40233004F7DE2 /* BulletManager.cpp */,
+				8DC10ACD1AC40233004F7DE2 /* BulletManager.h */,
+			);
+			name = BulletModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -679,6 +724,7 @@
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */,
 				8DC430A61AC929BE00AB1665 /* GameDirector.cpp in Sources */,
+				8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */,
 				8DC430AC1AC92BEF00AB1665 /* GunManager.cpp in Sources */,
 				8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */,
 				8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */,

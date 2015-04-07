@@ -15,6 +15,11 @@ ConfigManager::ConfigManager()
 }
 ConfigManager::~ConfigManager()
 {
+    std::map<std::string, GCCsvHelper * >::iterator itr;
+    for (itr = m_dataMap.begin(); itr != m_dataMap.end(); itr++) {
+        GCCsvHelper * csvHelper = itr->second;
+        delete csvHelper;
+    }
     m_dataMap.clear();
 }
 ConfigManager * ConfigManager::getInstance()
