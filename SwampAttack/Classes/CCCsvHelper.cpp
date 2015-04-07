@@ -70,23 +70,33 @@ Json::Value jsonDataSplit(const std::string & content, char seperator[], char se
     {
         char sep = seperator[i];
         
-        if (i == 0)
+        if (i == 0 && string::npos != content.find(sep))
         {
             rowSplit(data,content,sep);
         }else if(i == 1)
         {
-            for (int j = 0; j < data.size(); ++j)
-            {
-                Json::Value obj;
-                
-                std::vector<std::string> data2;
-                rowSplit(data2,data[j],sep);
-                for (int k = 0; k < data2.size(); ++k)
+            if (data.size() == 0) {
+                rowSplit(data,content,sep);
+                for (int j = 0; j < data.size(); ++j)
                 {
-                    Json::Value o = jsonDataSplit(data2[k],sepe,tags);
-                    obj.append(o);
+                    Json::Value obj = jsonDataSplit(data[j],sepe,tags);
+                    jsonObject.append(obj);
                 }
-                jsonObject.append(obj);
+            }else
+            {
+                for (int j = 0; j < data.size(); ++j)
+                {
+                    Json::Value obj;
+                    
+                    std::vector<std::string> data2;
+                    rowSplit(data2,data[j],sep);
+                    for (int k = 0; k < data2.size(); ++k)
+                    {
+                        Json::Value o = jsonDataSplit(data2[k],sepe,tags);
+                        obj.append(o);
+                    }
+                    jsonObject.append(obj);
+                }
             }
         }
         ++i;
