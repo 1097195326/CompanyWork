@@ -12,17 +12,24 @@
 #include <stdio.h>
 #include <map>
 #include "GameObject.h"
+#include "EnemyGroup.h"
+#include "json/json.h"
 
 
 class EnemyManager : public GameObject {
+private:
+    std::map<int,EnemyGroup *>   m_map;
+    EnemyGroup * currentGroup;
     
 public:
-    std::map<int,int>   m_map;
-    
     EnemyManager();
     ~EnemyManager();
+public:
+    static EnemyManager * getInstance();
+    void    setData(Json::Value data);
+    void    clearData();
     
-    void gameLoop(float data);
+    void    gameLoop(float data);
     
 };
 #endif /* defined(__SwampAttack__EnemyManager__) */

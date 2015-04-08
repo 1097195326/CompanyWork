@@ -10,14 +10,26 @@
 #define __SwampAttack__EnemyGroup__
 
 #include "GameObject.h"
+#include "Enemy.h"
+#include "json/json.h"
 
 
+enum EnemyGroupStatus{
+    isHave,
+    isDie
+};
 class EnemyGroup : public GameObject {
 private:
+    EnemyGroupStatus status;
+    std::map<int,Enemy*> enemyData;
+public:
+    EnemyGroup(Json::Value data);
+    ~EnemyGroup();
     
 public:
+    void    setData(Json::Value data);
     
-    void gameLoop(float data);
+    void    gameLoop(float data);
 };
 
 #endif /* defined(__SwampAttack__EnemyGroup__) */

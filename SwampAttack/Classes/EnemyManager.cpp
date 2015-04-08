@@ -8,11 +8,26 @@
 
 #include "EnemyManager.h"
 
+
 EnemyManager::EnemyManager()
 {
-    m_map.insert(std::pair<int,int>(1,2));
+    
 }
 EnemyManager::~EnemyManager()
+{
+    
+}
+EnemyManager * EnemyManager::getInstance()
+{
+    static EnemyManager manager;
+    
+    return &manager;
+}
+void EnemyManager::setData(Json::Value data)
+{
+    
+}
+void EnemyManager::clearData()
 {
     
 }

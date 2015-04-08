@@ -40,7 +40,6 @@ bool GameFightScene::init()
 //                                visibleOrigin.y + visibleSize.height * 0.5));
 //    addChild(armature);
     
-//    GCCsvHelper * csvHelper = new GCCsvHelper("item.people.csv");
-    GCCsvHelper * csvHelper2 = new GCCsvHelper("item.people2.csv");
+    GCCsvHelper * csvHelper2 = new GCCsvHelper("guanqia.csv");
     return true;
 }

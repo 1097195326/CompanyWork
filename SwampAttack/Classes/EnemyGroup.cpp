@@ -8,6 +8,19 @@
 
 #include "EnemyGroup.h"
 
+
+EnemyGroup::EnemyGroup(Json::Value data):status(isHave)
+{
+    
+}
+EnemyGroup::~EnemyGroup()
+{
+    
+}
+void EnemyGroup::setData(Json::Value data)
+{
+    
+}
 void EnemyGroup::gameLoop(float data)
 {
     
