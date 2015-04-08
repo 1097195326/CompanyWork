@@ -1,0 +1,4 @@
+怪物编号,怪物名称编号,怪物名称,模型编号,行动类型,等级,生命,移动速度,伤害,攻击速度,死亡获得金币,掉落
+Id[string],MonsterName[string],,ModelId[string],ActionType[string],Level[int],Hp[int],Speed[float],Damage[int],AttackSpeed[float],Gold[int],Drop[string]
+100001,tid#monstername1,僵尸,,1,1,120,10,10,0.5,5,
+100002,tid#monstername2,骷髅兵,,1,1,100,15,12,0.5,5,

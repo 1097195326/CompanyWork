@@ -1,0 +1,4 @@
+关卡编号,关卡名称编号,关卡名称,模型编号,关卡类型,前置关卡编号,战斗场景编号,体力消耗,关卡部队,奖励金币
+Id[string],InstanceName[string],,ModelId[string],InstanceType[string],LastInstanceId[string],MapId[string],CostPower[int],InstanceMonster[vector;monsterid[string];number[int]],ThroughGold[int]
+300001,tid#instancename1,杀僵尸,,1,,,1,100001:10|100001:10;100002:25|100001:10;100002:25,200
+300002,tid#instancename2,杀骷髅,,1,300001,,1,100001:10|100001:10;100002:25|100001:10;100002:25,200
