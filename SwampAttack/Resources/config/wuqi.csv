@@ -1,4 +1,4 @@
-武器编号,武器名称编号,武器名称,模型编号,武器类型,强化等级,伤害,伤害范围,弹片数量,暴击率,精度,射速,射程,装填速度,切换武器速度,弹药上限,弹夹容量,弹道速度
-Id[string],WeaponName[string],,ModelId[string],WeaponType[string],StrengthenLevel[int],Damage[int],DamageArea[float],ShrapnelNumber[int],CritRate[float],Accuracy[float],FireRate[float],Range[float],ReloadSpeed[float],SwitchSpeed[float],AmmunitionLimit[int],MagazineSize[int],BulletSpeed[float]
-200001,tid#weaponname1,M617,,1,0,25,0,1,0.1,95,2,100,1.5,1.3,999,6,12
-200002,tid#weaponname2,柯尔特巨蟒,,1,0,50,0,1,0.1,95,2,100,1.5,1.23,999,6,12
+武器编号,武器名称编号,武器名称,模型编号,子弹模型编号,武器类型,强化等级,伤害,伤害范围,弹片数量,暴击率,暴击伤害倍率,精度,射速,射程,装填速度,切换武器速度,弹药上限,弹夹容量,弹道速度
+Id[string],WeaponName[string],,ModelId[string],BulletModelId[string],WeaponType[string],StrengthenLevel[int],Damage[int],DamageArea[float],ShrapnelNumber[int],CritRate[float],CritDamageRate[float],Accuracy[float],FireRate[float],Range[float],ReloadSpeed[float],SwitchSpeed[float],AmmunitionLimit[int],MagazineSize[int],BulletSpeed[float]
+200001,tid#weaponname1,M617,,,1,0,25,0,1,0.05,1.5,0.95,2,100,1.5,1.3,999,6,12
+200002,tid#weaponname2,柯尔特巨蟒,,,1,0,50,0,1,0.05,1.5,0.95,2,100,1.5,1.23,999,6,12
