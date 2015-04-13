@@ -10,36 +10,38 @@
 #include "BaseUtil.h"
 
 
-EnemySprite::EnemySprite()
+EnemySprite::EnemySprite(string name)
 {
-    m_map.insert(std::pair<std::string, Action*>("stone_walk",m_walkAction));
+    Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_walk", 14));
+    walkAction->retain();
+    Action * hurtAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt", 10),
+                                           CallFunc::create(CC_CALLBACK_0(EnemySprite::hurtCall, this)),
+                                           NULL);
+    hurtAction->retain();
+    Action * attackAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "attack", 12),
+                                             CallFunc::create(CC_CALLBACK_0(EnemySprite::attackCall, this)),
+                                             NULL);
+    attackAction->retain();
+    
+    m_map["walkAction"] = walkAction;
+    m_map["hurtAction"] = hurtAction;
+    m_map["attackAction"] = attackAction;
+    
+    scheduleUpdate();
 }
 EnemySprite::~EnemySprite()
 {
-    m_map.clear();
-    delete &m_map;
-    
-}
-bool EnemySprite::init()
-{
-    if (!Sprite::init()) {
-        return false;
+    std::map<std::string, Action * >::iterator itr;
+    for (itr = m_map.begin(); itr != m_map.end(); itr++) {
+        Action * ac = itr->second;
+        ac->release();
     }
-    return true;
-}
-void EnemySprite::createActionsWithFileName(const std::string &name)
-{
-    auto spriteFrameCache = SpriteFrameCache::getInstance();
+    m_map.clear();
     
-    //------ 此处可以移到 loading 中
-    spriteFrameCache->addSpriteFramesWithFile(
-                      StringUtils::format("image/%s.plist",name.c_str()),
-                      StringUtils::format("image/%s.png",name.c_str())
-                                              );
-    m_walkAction = m_map["stone_walk"];
-    m_walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name, 5));
-    m_walkAction->retain();
-//    m_map.insert(std::pair<std::string, Action*>("name",m_walkAction));
+}
+void EnemySprite::update(float data)
+{
+    
 }
 void EnemySprite::setMode(Enemy *model)
 {
@@ -47,15 +49,21 @@ void EnemySprite::setMode(Enemy *model)
 }
 void EnemySprite::move()
 {
-    if (m_walkAction) {
-        // 这 可能有其他操作：停止其他动画
-        runAction(m_walkAction);
-    }
+    runAction(m_map["walkAction"]);
 }
 void EnemySprite::hurt()
 {
-    if (m_hurtAction) {
-        // 这 可能有其他操作：停止其他动画
-        runAction(m_hurtAction);
-    }
+    runAction(m_map["hurtAction"]);
+}
+void EnemySprite::attack()
+{
+    runAction(m_map["attackAction"]);
+}
+void EnemySprite::hurtCall()
+{
+    
+}
+void EnemySprite::attackCall()
+{
+    
 }

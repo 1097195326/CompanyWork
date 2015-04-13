@@ -16,21 +16,21 @@
 class EnemySprite :public Sprite {
 private:
     Enemy * m_model = NULL;
-    Action  * m_walkAction;
-    Action  * m_hurtAction;
     
-    std::map<std::string, Action *>     m_map;
+    std::map<std::string, Action *> m_map;
 private:
     void    move();
     void    hurt();
+    void    attack();
+    
+    void    hurtCall();
+    void    attackCall();
 public:
-    CREATE_FUNC(EnemySprite);
-    EnemySprite();
+    EnemySprite(string name);
     virtual     ~EnemySprite();
-    bool        init();
+    void        update(float data);
 public:
     void    setMode(Enemy * model);
-    void    createActionsWithFileName(const std::string &name);
     
 
     

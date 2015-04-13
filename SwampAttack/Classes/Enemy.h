@@ -16,7 +16,21 @@
 
 using namespace std;
 
+enum EnemyStatus
+{
+    lear    = 0b00000000,
+    live    = 0b00000001,
+    die     = 0b00000010,
+    walk    = 0b00000100,
+    hurt    = 0b00001000,
+    attack  = 0b00010000,
+    
+};
+
 class Enemy :public GameObject {
+private:
+    Json::Value m_data;
+    EnemyStatus m_status;
 private:
     string  m_id;
     string  m_monsterName;
@@ -34,7 +48,6 @@ private:
 //    Vec2    m_maxSpeed;
 //    Vec2    m_force;
 //    float   m_mass;
-    Json::Value m_data;
     
 public:
     Enemy(Json::Value data);
