@@ -11,6 +11,7 @@
 #include "cocostudio/CocoStudio.h"
 
 #include "CCCsvHelper.h"
+#include "GameLoading.h"
 
 
 using namespace cocostudio;
@@ -21,6 +22,11 @@ bool GameFightScene::init()
     {
         return false;
     }
+    GameLoading::loadFrames();
+    
+    Sprite * bgSprite = Sprite::create(ImagePath("bg.png"));
+    addChild(bgSprite);
+    bgSprite->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5));
     
 //    EnemySprite * sprite =EnemySprite::create();
 //    sprite->createActionsWithFileName("stone_hurt");
@@ -40,6 +46,6 @@ bool GameFightScene::init()
 //                                visibleOrigin.y + visibleSize.height * 0.5));
 //    addChild(armature);
     
-    GCCsvHelper * csvHelper2 = new GCCsvHelper("guanqia.csv");
+//    GCCsvHelper * csvHelper2 = new GCCsvHelper("guanqia.csv");
     return true;
 }

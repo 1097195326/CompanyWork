@@ -11,19 +11,11 @@
 
 #include "BaseCode.h"
 
-class GameMap
-{
-private:
-    Vec2 m_startPoint;
-    Vec2 m_targetPoint;
+namespace Iphone5s {
+    Vec2 m_startPoint = {visibleOrigin.x + visibleSize.width,10};
+    Vec2 m_targetPoint = {visibleOrigin.x + 20,visibleOrigin.y + 20};
     
-public:
-    GameMap();
     
-    static GameMap *    getInstance();
-    Vec2    getStartPoint();
-    Vec2    getTargetPoint();
     
-};
-
+}
 #endif /* defined(__SwampAttack__GameMap__) */

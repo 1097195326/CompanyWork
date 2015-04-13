@@ -17,6 +17,9 @@ USING_NS_CC;
 extern  Size    winSize;
 extern  Size    visibleSize;
 extern  Vec2    visibleOrigin;
+//------------
+#define ImagePath( name ) std::string("image/")+std::string( name )
+#define ConfigePath( name ) std::string("config/")+std::string( name )
 //-------------
 #define CREATE_SCENE_FUNC(__TYPE__) \
 static cocos2d::Scene * scene() \

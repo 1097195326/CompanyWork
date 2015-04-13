@@ -9,7 +9,6 @@
 #ifndef __SwampAttack__Human__
 #define __SwampAttack__Human__
 
-#include "HumanSprite.h"
 #include "GameObject.h"
 
 
