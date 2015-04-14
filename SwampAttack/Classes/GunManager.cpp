@@ -7,3 +7,23 @@
 //
 
 #include "GunManager.h"
+
+
+GunManager::GunManager()
+{
+    
+}
+GunManager::~GunManager()
+{
+    
+}
+GunManager * GunManager::getInstance()
+{
+    static GunManager gunManager;
+    return &gunManager;
+}
+
+void GunManager::gameLoop(float data)
+{
+    
+}

@@ -30,6 +30,7 @@ Enemy::~Enemy()
 void Enemy::gameLoop(float data)
 {
     
+    
 }
 
 #pragma - get function

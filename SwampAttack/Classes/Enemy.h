@@ -31,6 +31,10 @@ class Enemy :public GameObject {
 private:
     Json::Value m_data;
     EnemyStatus m_status;
+    
+public:
+    
+    
 private:
     string  m_id;
     string  m_monsterName;
@@ -52,7 +56,6 @@ private:
 public:
     Enemy(Json::Value data);
     ~Enemy();
-    
     void    gameLoop(float data);
 public:
     string  getId();

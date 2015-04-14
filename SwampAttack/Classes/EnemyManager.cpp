@@ -25,13 +25,20 @@ EnemyManager * EnemyManager::getInstance()
 }
 void EnemyManager::setData(Json::Value data)
 {
+    for (int i = 0; i < data.size(); ++i) {
+        EnemyGroup * group = new EnemyGroup(data[i]);
+        m_map[i] = group;
+    }
     
 }
 void EnemyManager::clearData()
 {
-    
+    for (int i = 0; i < m_map.size(); ++i) {
+        delete m_map[i];
+    }
+    m_map.clear();
 }
 void EnemyManager::gameLoop(float data)
 {
-    
+    currentGroup->gameLoop(data);
 }

@@ -10,6 +10,8 @@
 #define __SwampAttack__Human__
 
 #include "GameObject.h"
+#include "GunManager.h"
+
 
 enum HumanStatus
 {
@@ -23,11 +25,16 @@ enum HumanStatus
 
 class Human : public GameObject {
 private:
-    HumanStatus m_status;
+    int m_status;
+    
+    
+public:
+    void    fire();
     
 public:
     Human();
     ~Human();
+    static Human * getInstance();
     
     void    gameLoop(float data);
 };

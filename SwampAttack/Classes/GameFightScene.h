@@ -21,7 +21,6 @@ public:
     CREATE_SCENE_FUNC(GameFightScene);
     CREATE_FUNC(GameFightScene);
     
-    
     virtual bool    init();
 };
 

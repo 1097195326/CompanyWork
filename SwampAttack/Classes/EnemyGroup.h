@@ -22,13 +22,15 @@ class EnemyGroup : public GameObject {
 private:
     EnemyGroupStatus status;
     std::map<int,Enemy*> enemyData;
+    
+    int index[10];
 public:
     EnemyGroup(Json::Value data);
     ~EnemyGroup();
     
 public:
     void    setData(Json::Value data);
-    
+    void    clearData();
     void    gameLoop(float data);
 };
 

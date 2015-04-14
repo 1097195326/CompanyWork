@@ -80,6 +80,9 @@
 		8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2ACD21AC53034004F3C1B /* BaseUtil.cpp */; };
 		8DC2ACD71AC5641B004F3C1B /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2ACD51AC5641B004F3C1B /* GameObject.cpp */; };
 		8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2ACD81AC56A77004F3C1B /* HumanSprite.cpp */; };
+		8DC34A9D1ADCF8DA00C6B657 /* GameMap5s.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC34A9B1ADCF8DA00C6B657 /* GameMap5s.cpp */; };
+		8DC34AA01ADCF96700C6B657 /* GameMap6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC34A9E1ADCF96700C6B657 /* GameMap6.cpp */; };
+		8DC34AA31ADCFA1400C6B657 /* GameMapManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC34AA11ADCFA1400C6B657 /* GameMapManager.cpp */; };
 		8DC352761ADB66E100E6A9C2 /* House.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC352741ADB66E100E6A9C2 /* House.cpp */; };
 		8DC3527B1ADBB44400E6A9C2 /* GameLoading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC352791ADBB44400E6A9C2 /* GameLoading.cpp */; };
 		8DC430A31AC8FF2A00AB1665 /* GameMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430A11AC8FF2A00AB1665 /* GameMap.cpp */; };
@@ -224,6 +227,12 @@
 		8DC2ACD61AC5641B004F3C1B /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		8DC2ACD81AC56A77004F3C1B /* HumanSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HumanSprite.cpp; sourceTree = "<group>"; };
 		8DC2ACD91AC56A77004F3C1B /* HumanSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanSprite.h; sourceTree = "<group>"; };
+		8DC34A9B1ADCF8DA00C6B657 /* GameMap5s.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMap5s.cpp; sourceTree = "<group>"; };
+		8DC34A9C1ADCF8DA00C6B657 /* GameMap5s.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMap5s.h; sourceTree = "<group>"; };
+		8DC34A9E1ADCF96700C6B657 /* GameMap6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMap6.cpp; sourceTree = "<group>"; };
+		8DC34A9F1ADCF96700C6B657 /* GameMap6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMap6.h; sourceTree = "<group>"; };
+		8DC34AA11ADCFA1400C6B657 /* GameMapManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMapManager.cpp; sourceTree = "<group>"; };
+		8DC34AA21ADCFA1400C6B657 /* GameMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMapManager.h; sourceTree = "<group>"; };
 		8DC352741ADB66E100E6A9C2 /* House.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = House.cpp; sourceTree = "<group>"; };
 		8DC352751ADB66E100E6A9C2 /* House.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = House.h; sourceTree = "<group>"; };
 		8DC352791ADBB44400E6A9C2 /* GameLoading.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLoading.cpp; sourceTree = "<group>"; };
@@ -482,10 +491,9 @@
 				8DC2ACD61AC5641B004F3C1B /* GameObject.h */,
 				8DC430A41AC929BE00AB1665 /* GameDirector.cpp */,
 				8DC430A51AC929BE00AB1665 /* GameDirector.h */,
-				8DC430A11AC8FF2A00AB1665 /* GameMap.cpp */,
-				8DC430A21AC8FF2A00AB1665 /* GameMap.h */,
 				8DC352791ADBB44400E6A9C2 /* GameLoading.cpp */,
 				8DC3527A1ADBB44400E6A9C2 /* GameLoading.h */,
+				8DC34A9A1ADCF87500C6B657 /* GameMap */,
 				8DC352731ADB664900E6A9C2 /* BuildingModels */,
 				8DC5EF9C1AD4CDDE00FC4D21 /* GuanQiaModels */,
 				8DD7F1FC1AD376C600D86BC5 /* BulletModels */,
@@ -522,6 +530,21 @@
 				8DC253481ACB970400D10652 /* CCCsvHelper.h */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		8DC34A9A1ADCF87500C6B657 /* GameMap */ = {
+			isa = PBXGroup;
+			children = (
+				8DC430A11AC8FF2A00AB1665 /* GameMap.cpp */,
+				8DC430A21AC8FF2A00AB1665 /* GameMap.h */,
+				8DC34A9B1ADCF8DA00C6B657 /* GameMap5s.cpp */,
+				8DC34A9C1ADCF8DA00C6B657 /* GameMap5s.h */,
+				8DC34A9E1ADCF96700C6B657 /* GameMap6.cpp */,
+				8DC34A9F1ADCF96700C6B657 /* GameMap6.h */,
+				8DC34AA11ADCFA1400C6B657 /* GameMapManager.cpp */,
+				8DC34AA21ADCFA1400C6B657 /* GameMapManager.h */,
+			);
+			name = GameMap;
 			sourceTree = "<group>";
 		};
 		8DC352731ADB664900E6A9C2 /* BuildingModels */ = {
@@ -753,6 +776,7 @@
 				8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */,
 				8DC352761ADB66E100E6A9C2 /* House.cpp in Sources */,
 				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
+				8DC34AA01ADCF96700C6B657 /* GameMap6.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */,
 				8DC430A61AC929BE00AB1665 /* GameDirector.cpp in Sources */,
@@ -772,6 +796,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				8DC10AB01AC3D629004F7DE2 /* GameFightScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				8DC34AA31ADCFA1400C6B657 /* GameMapManager.cpp in Sources */,
 				8DC10ABC1AC3D6FD004F7DE2 /* BulletSprite.cpp in Sources */,
 				8DC10AC21AC3D75F004F7DE2 /* Enemy.cpp in Sources */,
 				8DBB988E1ACD520C008C804D /* json_writer.cpp in Sources */,
@@ -779,6 +804,7 @@
 				8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */,
 				8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				8DC34A9D1ADCF8DA00C6B657 /* GameMap5s.cpp in Sources */,
 				8DC430A91AC92BD600AB1665 /* Gun.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

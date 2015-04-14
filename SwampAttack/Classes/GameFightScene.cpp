@@ -12,6 +12,8 @@
 
 #include "CCCsvHelper.h"
 #include "GameLoading.h"
+#include "GameDirector.h"
+
 
 
 using namespace cocostudio;
@@ -28,24 +30,41 @@ bool GameFightScene::init()
     addChild(bgSprite);
     bgSprite->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5));
     
-//    EnemySprite * sprite =EnemySprite::create();
-//    sprite->createActionsWithFileName("stone_hurt");
-//    sprite->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5,
-//                              visibleOrigin.y + visibleSize.height * 0.5)
-//                        );
-//    addChild(sprite);
-//    sprite->move();
+    Sprite * test = Sprite::create(ImagePath("xuenei.png"));
+    addChild(test);
+    test->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5));
     
-//    ArmatureDataManager::getInstance()->addArmatureFileInfoAsync("image/skeleton.json", this, CC_SCHEDULE_SELECTOR(TestAsynchronousLoading::dataLoaded));
     
-//    ArmatureDataManager::getInstance()->addArmatureFileInfo("image/Cowboy.ExportJson");
-////    ArmatureDataManager::getInstance()->addArmatureFileInfoAsync("image/skeleton.json", this, nullptr);
-//    Armature *armature = Armature::create("Cowboy");
-//    armature->getAnimation()->playWithIndex(0);
-//    armature->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5,
-//                                visibleOrigin.y + visibleSize.height * 0.5));
-//    addChild(armature);
+    auto listener = EventListenerTouchOneByOne::create();
+    listener->setSwallowTouches(true);
+
+    listener->onTouchBegan = [](Touch* touch, Event* event){
+        auto target = static_cast<Sprite*>(event->getCurrentTarget());
+        
+        Vec2 locationInNode = target->convertToNodeSpace(touch->getLocation());
+        Size s = target->getContentSize();
+        Rect rect = Rect(0, 0, s.width, s.height);
+
+        if (rect.containsPoint(locationInNode))
+        {
+            target->setOpacity(180);
+            return true;
+        }
+        return false;
+    };
+    listener->onTouchMoved = [](Touch* touch, Event* event){
+        
+    };
+    listener->onTouchEnded = [](Touch* touch, Event* event){
+        
+    };
     
-//    GCCsvHelper * csvHelper2 = new GCCsvHelper("guanqia.csv");
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, test);
+    
+    GameDirector * gameDirector = GameDirector::getInstance();
+    gameDirector->setGameLayer(this);
+    addChild(gameDirector);
+    
     return true;
 }
+

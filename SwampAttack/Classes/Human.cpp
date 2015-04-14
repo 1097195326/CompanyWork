@@ -17,8 +17,16 @@ Human::~Human()
 {
     
 }
-
+Human * Human::getInstance()
+{
+    static Human human;
+    return &human;
+}
 void Human::gameLoop(float data)
+{
+    
+}
+void Human::fire()
 {
     
 }
