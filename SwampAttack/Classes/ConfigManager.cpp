@@ -9,6 +9,7 @@
 #include "ConfigManager.h"
 
 
+
 ConfigManager::ConfigManager()
 {
     
@@ -33,7 +34,7 @@ void ConfigManager::addConfigData(std::string confName, GCCsvHelper *csvHelper)
 }
 Json::Value ConfigManager::getConfigByName(const std::string &cofName)
 {
-    if (m_dataMap[cofName]) {
+    if (m_dataMap.size() > 0 && m_dataMap[cofName]) {
         return m_dataMap[cofName]->getJsonData();
     }
     GCCsvHelper * csvHelper = new GCCsvHelper(cofName);

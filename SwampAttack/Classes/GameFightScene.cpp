@@ -14,9 +14,15 @@
 #include "GameLoading.h"
 #include "GameDirector.h"
 
+//---
+#include "EnemyManager.h"
+#include "ConfigManager.h"
+#include "GuanQiaModel.h"
+#include "BaseUtil.h"
 
 
 using namespace cocostudio;
+
 
 bool GameFightScene::init()
 {
@@ -24,47 +30,59 @@ bool GameFightScene::init()
     {
         return false;
     }
+    GameDirector * gameDirector = _G_D;
+    gameDirector->setGameLayer(this);
+    addChild(gameDirector);
+    
     GameLoading::loadFrames();
     
     Sprite * bgSprite = Sprite::create(ImagePath("bg.png"));
     addChild(bgSprite);
     bgSprite->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5));
     
-    Sprite * test = Sprite::create(ImagePath("xuenei.png"));
-    addChild(test);
-    test->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5));
-    
     
     auto listener = EventListenerTouchOneByOne::create();
     listener->setSwallowTouches(true);
 
     listener->onTouchBegan = [](Touch* touch, Event* event){
-        auto target = static_cast<Sprite*>(event->getCurrentTarget());
-        
-        Vec2 locationInNode = target->convertToNodeSpace(touch->getLocation());
-        Size s = target->getContentSize();
-        Rect rect = Rect(0, 0, s.width, s.height);
-
-        if (rect.containsPoint(locationInNode))
-        {
-            target->setOpacity(180);
-            return true;
-        }
-        return false;
+        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
+        gameFightScene->touchBegan(touch, event);
+        return true;
     };
     listener->onTouchMoved = [](Touch* touch, Event* event){
-        
+        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
+        gameFightScene->touchMoved(touch, event);
     };
     listener->onTouchEnded = [](Touch* touch, Event* event){
-        
+        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
+        gameFightScene->touchEnd(touch, event);
     };
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
-    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, test);
     
-    GameDirector * gameDirector = GameDirector::getInstance();
-    gameDirector->setGameLayer(this);
-    addChild(gameDirector);
+    
+    Json::Value value = _C_M->getDataByTag("guanqia", "300001");
+    GuanqiaModel * guanQia = new GuanqiaModel(value);
+    EnemyManager::getInstance()->setData(guanQia->getMonsters());
+    
+//    Sprite * sprite = Sprite::create();
+//    sprite->setPosition(Vec2(200, 200));
+//    addChild(sprite);
+//    Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("zombie_walk", 14));
+//    sprite->runAction(walkAction);
     
     return true;
 }
-
+bool GameFightScene::touchBegan(Touch *touch, Event *event)
+{
+    _G_D->onTouchBegin(touch, event);
+    return true;
+}
+void GameFightScene::touchMoved(Touch *touch, Event *event)
+{
+    _G_D->onTouchMove(touch, event);
+}
+void GameFightScene::touchEnd(Touch *touch, Event *event)
+{
+    _G_D->onTouchEnd(touch, event);
+}

@@ -1,6 +1,6 @@
 #include "CCCsvHelper.h"
 #include "ConfigManager.h"
-
+#include "BaseCode.h"
 
 using namespace std;
 
@@ -140,9 +140,9 @@ Json::Value jsonDataSplit(const std::string &content,char seperator)
 }
 bool GCCsvHelper::openAndResolveFile(const std::string fileName)
 {
-    char  configPath[100] = "config/";
-    
-    std::string pathKey = FileUtils::getInstance()->fullPathForFilename(strcat(configPath, fileName.c_str()));
+//    char  configPath[100] = "config/";
+//    std::string pathKey = FileUtils::getInstance()->fullPathForFilename(strcat(configPath, fileName.c_str()));
+    std::string pathKey = FileUtils::getInstance()->fullPathForFilename(ConfigePath(fileName));
     std::string pBuffer = FileUtils::getInstance()->getStringFromFile(pathKey.c_str());
     
 //    log("%s",pBuffer.c_str());
@@ -167,7 +167,6 @@ Json::Value GCCsvHelper::getJsonData()
 void GCCsvHelper::createJsonData(std::vector<std::vector<std::string> > & data)
 {
     //----------生成 json
-    Json::FastWriter writer;
     
     std::vector<std::string> headLine = data[1];
     for (int i = 2; i < data.size(); ++i) {
@@ -185,7 +184,7 @@ void GCCsvHelper::createJsonData(std::vector<std::vector<std::string> > & data)
                 
                 if (string::npos != type.find("vector"))
                 {
-                    Json::Value jsonObject;
+//                    Json::Value jsonObject;
                     
                     std::vector<std::string> subTagStr;
                     rowSplit(subTagStr, type, ';');
@@ -194,7 +193,8 @@ void GCCsvHelper::createJsonData(std::vector<std::vector<std::string> > & data)
                     if (subTagStr.size() == 1)
                     {
                         char seperator = ';';
-                        jsonObject[tag.c_str()] = jsonDataSplit(str,seperator);
+//                        jsonObject[tag.c_str()] = jsonDataSplit(str,seperator);
+                        lineArray[tag.c_str()] = jsonDataSplit(str,seperator);
                     }else
                     {
                         for (int i = 1; i < subTagStr.size(); ++i)
@@ -203,24 +203,25 @@ void GCCsvHelper::createJsonData(std::vector<std::vector<std::string> > & data)
 //                            log("%s",findTag(subTagStr[i]).c_str());
                         }
                         char seperator[] = {'|',';'};
-                        jsonObject[tag.c_str()] = jsonDataSplit(str,seperator,':',tags);
+//                        jsonObject[tag.c_str()] = jsonDataSplit(str,seperator,':',tags);
+                        lineArray[tag.c_str()] = jsonDataSplit(str,seperator,':',tags);
                     }
-                    
-                    lineArray.append(jsonObject);
+//                    lineArray.append(jsonObject);
                 }else
                 {
-                    Json::Value object;
-                    object[tag.c_str()] = str.c_str();
-                    lineArray.append(object);
+//                    Json::Value object;
+//                    object[tag.c_str()] = str.c_str();
+//                    lineArray.append(object);
+                    lineArray[tag.c_str()] = str.c_str();
                 }
             }
         }
-        Json::Value lineObject;
-        lineObject[line[0].c_str()] = lineArray;
-        root.append(lineObject);
+//        Json::Value lineObject;
+//        lineObject[line[0].c_str()] = lineArray;
+//        root.append(lineObject);
+        root[line[0].c_str()] = lineArray;
     }
-    std::string json_file = writer.write(root);
-    log("%s",json_file.c_str());
+//    log("%s",root.toStyledString().c_str());
 }
 
 void GCCsvHelper::rowSplit(std::vector<std::string> &rows, const std::string &content, const char &rowSeperator)

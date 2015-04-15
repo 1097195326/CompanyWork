@@ -21,4 +21,12 @@ float GameLoading::loadFrames()
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("shootShotGun.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("waitShotGun.plist"));
     
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieWalk.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieAttack.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieDown.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieHurt.plist"));
+    
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieWalk.plist"), ImagePath("zomBieWalk.png"));
+    
+    
 }

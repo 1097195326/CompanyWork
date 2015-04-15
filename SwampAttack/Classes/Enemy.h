@@ -18,22 +18,23 @@ using namespace std;
 
 enum EnemyStatus
 {
-    lear    = 0b00000000,
-    live    = 0b00000001,
-    die     = 0b00000010,
-    walk    = 0b00000100,
-    hurt    = 0b00001000,
-    attack  = 0b00010000,
+    clear   = 0b00000000,
+    waiting = 0b00000001,
+    dieing  = 0b00000010,
+    die     = 0b00000100,
+    walk    = 0b00001000,
+    hurt    = 0b00010000,
+    attack  = 0b00100000,
     
 };
 
 class Enemy :public GameObject {
 private:
     Json::Value m_data;
-    EnemyStatus m_status;
+    int     m_status;
     
 public:
-    
+    void    setView();
     
 private:
     string  m_id;
@@ -49,6 +50,7 @@ private:
     string  m_drop;
 
     Vec2    m_point;
+    Vec2    m_targetPoint;
 //    Vec2    m_maxSpeed;
 //    Vec2    m_force;
 //    float   m_mass;
@@ -58,6 +60,13 @@ public:
     ~Enemy();
     void    gameLoop(float data);
 public:
+    bool    isDieing();
+    bool    isWalk();
+    bool    isHurt();
+    bool    isAttack();
+    Vec2    getPosition();
+    Vec2    getTargetPosition();
+    //----
     string  getId();
     string  getMonsterName();
     string  getModelId();

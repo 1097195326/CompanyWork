@@ -22,6 +22,10 @@ public:
     CREATE_FUNC(GameFightScene);
     
     virtual bool    init();
+    
+    bool    touchBegan(Touch * touch, Event * event);
+    void    touchMoved(Touch * touch, Event * event);
+    void    touchEnd(Touch * touch, Event * event);
 };
 
 #endif /* defined(__SwampAttack__GameFightScene__) */

@@ -12,6 +12,7 @@
 
 EnemyGroup::EnemyGroup(Json::Value data):status(isHave)
 {
+    setData(data);
     
 }
 EnemyGroup::~EnemyGroup()
@@ -23,14 +24,13 @@ void EnemyGroup::setData(Json::Value data)
     for (int i = 0; i < data.size(); ++i) {
         Json::Value d = data[i];
         string monsterid = d["monsterid"].asString();
-        int     number = d["number"].asInt();
+        int     number = atoi(d["number"].asString().c_str());
         index[i] = number;
         for (int j = 0; j < number; ++j) {
-            Json::Value enemyData = ConfigManager::getInstance()->getDataByTag("guaiwu",monsterid);
-            Enemy * enemy = new Enemy(enemyData);
+            Json::Value enemyConfig = ConfigManager::getInstance()->getDataByTag("guaiwu",monsterid);
+            Enemy * enemy = new Enemy(enemyConfig);
             enemyData[i] = enemy;
         }
-        
     }
 }
 void EnemyGroup::clearData()

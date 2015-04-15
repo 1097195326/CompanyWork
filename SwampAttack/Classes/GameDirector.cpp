@@ -9,11 +9,11 @@
 #include "GameDirector.h"
 #include "EnemyManager.h"
 #include "Human.h"
+#include "BulletManager.h"
 
 
 GameDirector::GameDirector()
 {
-    log("game director gou zao ");
     gameMap = GameMapManager::getInstance()->getGameMap();
     schedule(CC_SCHEDULE_SELECTOR(GameDirector::gameLoop), 1/60);
     
@@ -31,16 +31,46 @@ GameDirector * GameDirector::getInstance()
 }
 void GameDirector::gameLoop(float data)
 {
-//    if (m_status & s_stop) {
-//        return;
-//    }
-    log("%f",data);
+    if (m_status & s_stop)
+    {
+        return;
+    }
+//    EnemyManager::getInstance()->gameLoop(data);
     
     
 }
-void GameDirector::setGameLayer(cocos2d::Layer *layer)
+void GameDirector::onTouchBegin(cocos2d::Touch *touch, cocos2d::Event *event)
 {
+    
+}
+void GameDirector::onTouchMove(cocos2d::Touch *touch, cocos2d::Event *event)
+{
+    
+}
+void GameDirector::onTouchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
+{
+    
+}
+void GameDirector::setGameLayer(Layer *layer)
+{
+    if (layer) {
+        log("layer is true");
+    }
     gameFightLayer = layer;
+}
+Layer * GameDirector::getGameLayer()
+{
+    return gameFightLayer;
+}
+void GameDirector::addChild(Node * node)
+{
+    if (gameFightLayer) {
+        
+        gameFightLayer->addChild(node);
+    }else
+    {
+        log("jia");
+    }
 }
 void GameDirector::start()
 {

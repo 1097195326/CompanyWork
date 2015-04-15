@@ -91,7 +91,7 @@
 		8DC430AC1AC92BEF00AB1665 /* GunManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430AA1AC92BEF00AB1665 /* GunManager.cpp */; };
 		8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430AD1AC930D800AB1665 /* Prop.cpp */; };
 		8DC430B21AC930E400AB1665 /* PropManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430B01AC930E400AB1665 /* PropManager.cpp */; };
-		8DC5EF9F1AD4CE0F00FC4D21 /* GuanQiaModels.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5EF9D1AD4CE0F00FC4D21 /* GuanQiaModels.cpp */; };
+		8DC5EF9F1AD4CE0F00FC4D21 /* GuanQiaModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5EF9D1AD4CE0F00FC4D21 /* GuanQiaModel.cpp */; };
 		8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */; };
 		8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -249,8 +249,8 @@
 		8DC430AE1AC930D800AB1665 /* Prop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prop.h; sourceTree = "<group>"; };
 		8DC430B01AC930E400AB1665 /* PropManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropManager.cpp; sourceTree = "<group>"; };
 		8DC430B11AC930E400AB1665 /* PropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropManager.h; sourceTree = "<group>"; };
-		8DC5EF9D1AD4CE0F00FC4D21 /* GuanQiaModels.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuanQiaModels.cpp; sourceTree = "<group>"; };
-		8DC5EF9E1AD4CE0F00FC4D21 /* GuanQiaModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuanQiaModels.h; sourceTree = "<group>"; };
+		8DC5EF9D1AD4CE0F00FC4D21 /* GuanQiaModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuanQiaModel.cpp; sourceTree = "<group>"; };
+		8DC5EF9E1AD4CE0F00FC4D21 /* GuanQiaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuanQiaModel.h; sourceTree = "<group>"; };
 		8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigManager.cpp; sourceTree = "<group>"; };
 		8DD0DE361ACE347000BA61D4 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
 		8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyGroup.cpp; sourceTree = "<group>"; };
@@ -559,8 +559,8 @@
 		8DC5EF9C1AD4CDDE00FC4D21 /* GuanQiaModels */ = {
 			isa = PBXGroup;
 			children = (
-				8DC5EF9D1AD4CE0F00FC4D21 /* GuanQiaModels.cpp */,
-				8DC5EF9E1AD4CE0F00FC4D21 /* GuanQiaModels.h */,
+				8DC5EF9D1AD4CE0F00FC4D21 /* GuanQiaModel.cpp */,
+				8DC5EF9E1AD4CE0F00FC4D21 /* GuanQiaModel.h */,
 			);
 			name = GuanQiaModels;
 			sourceTree = "<group>";
@@ -782,7 +782,7 @@
 				8DC430A61AC929BE00AB1665 /* GameDirector.cpp in Sources */,
 				8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */,
 				8DC430AC1AC92BEF00AB1665 /* GunManager.cpp in Sources */,
-				8DC5EF9F1AD4CE0F00FC4D21 /* GuanQiaModels.cpp in Sources */,
+				8DC5EF9F1AD4CE0F00FC4D21 /* GuanQiaModel.cpp in Sources */,
 				8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */,
 				8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */,
 				8DC3527B1ADBB44400E6A9C2 /* GameLoading.cpp in Sources */,

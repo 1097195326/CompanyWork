@@ -6,7 +6,7 @@
 //
 //
 
-#include "GuanQiaModels.h"
+#include "GuanQiaModel.h"
 
 GuanqiaModel::GuanqiaModel(Json::Value data):m_data(data)
 {
@@ -16,8 +16,8 @@ GuanqiaModel::GuanqiaModel(Json::Value data):m_data(data)
     m_instanceType = m_data["InstanceType"].asString();
     m_lastInstanceId = m_data["LastInstanceId"].asString();
     m_mapId = m_data["MapId"].asString();
-    m_costPower =  m_data["CostPower"].asInt();
-    m_throughGold =  m_data["ThroughGold"].asInt();
+    m_costPower = atoi(m_data["CostPower"].asString().c_str());
+    m_throughGold =  atoi(m_data["ThroughGold"].asString().c_str());
     
 }
 GuanqiaModel::~GuanqiaModel()
