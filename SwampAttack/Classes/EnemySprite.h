@@ -14,7 +14,7 @@
 
 enum ActionStatus
 {
-    nomul,
+    normal,
     isMoving,
     isHurting,
     isAttacking,
@@ -23,7 +23,7 @@ enum ActionStatus
 class EnemySprite :public Sprite {
 private:
     Enemy * m_model = NULL;
-    ActionStatus    actionStatus = nomul;
+    ActionStatus    actionStatus = normal;
     std::map<std::string, Action *> m_map;
 private:
     void    move();

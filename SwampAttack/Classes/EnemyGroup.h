@@ -15,8 +15,8 @@
 
 
 enum EnemyGroupStatus{
-    isHave,
-    isDie
+    _isHave,
+    _isDie
 };
 class EnemyGroup : public GameObject {
 private:
@@ -30,6 +30,8 @@ public:
     
 public:
     void    setData(Json::Value data);
+    bool    isDie();
+    
     void    clearData();
     void    gameLoop(float data);
 };

@@ -13,10 +13,19 @@
 #include "Human.h"
 
 
+enum H_ActionStatus
+{
+    _normal,
+    _isReloading,
+    _isRuning,
+    _isShooting,
+    _isWaiting,
+};
 
 class HumanSprite : public Sprite {
 private:
-    Human * human;
+    Human * m_human;
+    H_ActionStatus  m_status;
     std::map<std::string, Action *> m_actionData;
     
     
@@ -30,12 +39,12 @@ private:
     void    runShotCall();
     void    shootShotCall();
     void    waitShotCall();
+    void    changeCall();
     
 public:
     HumanSprite();
     ~HumanSprite();
     CREATE_FUNC(HumanSprite);
-    bool    init();
     
 public:
     void    setModel(Human * human);

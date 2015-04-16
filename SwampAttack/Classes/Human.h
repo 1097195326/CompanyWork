@@ -10,32 +10,54 @@
 #define __SwampAttack__Human__
 
 #include "GameObject.h"
+#include "BaseCode.h"
 #include "GunManager.h"
 
 
 enum HumanStatus
 {
-    waits   = 0b00000001,
-    run     = 0b00000010,
-    reload  = 0b00000100,
-    shoot   = 0b00001000,
-    exch    = 0b00010000,
+    _clear  = 0b00000000,
+    _waits  = 0b00000001,
+    _run    = 0b00000010,
+    _reload = 0b00000100,
+    _shoot  = 0b00001000,
+    _change = 0b00010000,
     
 };
-
+enum TouchStatus
+{
+    _t_normal,
+    _isTouching,
+    _touchEnd,
+};
 class Human : public GameObject {
 private:
-    int m_status;
-    
+    int     m_status;
+    TouchStatus m_touchStatus;
+    Vec2    m_point;
+    Gun *   m_gun;
+private:
+    void    setView();
     
 public:
-    void    fire();
+    Vec2    getPosition();
+    void    changeGun(Gun * gun);
+    void    fire(Touch * touch,Event * event);
+    void    stop();
     
+    void    reloadCall();
+    void    shootCall();
+    void    changeCall();
+    
+    bool    isWait();
+    bool    isRun();
+    bool    isReload();
+    bool    isShoot();
+    bool    isChange();
 public:
     Human();
     ~Human();
     static Human * getInstance();
-    
     void    gameLoop(float data);
 };
 

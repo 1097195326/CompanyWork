@@ -13,6 +13,7 @@
 #include <map>
 #include "CCCsvHelper.h"
 
+#define _C_M ConfigManager::getInstance()
 
 class ConfigManager
 {

@@ -12,6 +12,9 @@
 
 HumanSprite::HumanSprite()
 {
+    init();
+    setAnchorPoint(Vec2(0.5,0));
+    
     Action * reloadAction = Sequence::create(
                                              BaseUtil::makeAnimateWithNameAndIndex("reload_shotgun", 10),
                                              CallFunc::create(CC_CALLBACK_0(HumanSprite::reloadShotCall, this)),
@@ -33,7 +36,6 @@ HumanSprite::HumanSprite()
     
     
     scheduleUpdate();
-    
 }
 HumanSprite::~HumanSprite()
 {
@@ -45,41 +47,66 @@ HumanSprite::~HumanSprite()
     m_actionData.clear();
 
 }
-bool HumanSprite::init()
-{
-    if (!Sprite::init()) {
-        return false;
-    }
-    
-    return true;
-}
 void HumanSprite::setModel(Human *human)
 {
-    
+    m_human = human;
+    setPosition(m_human->getPosition());
 }
 void HumanSprite::update(float data)
 {
-    
-}
-void HumanSprite::run()
-{
-    runAction(m_actionData["runAction"]);
+    if (m_human->isWait())
+    {
+        wait();
+    }else if (m_human->isRun())
+    {
+        run();
+    }else if (m_human->isReload())
+    {
+        reload();
+    }else if (m_human->isShoot())
+    {
+        shoot();
+    }
 }
 void HumanSprite::wait()
 {
+    if (m_status == _isWaiting) {
+        return;
+    }
+    m_status = _isWaiting;
+    stopAllActions();
     runAction(m_actionData["waitAction"]);
+}
+void HumanSprite::run()
+{
+    if (m_status == _isRuning) {
+        return;
+    }
+    m_status = _isRuning;
+    stopAllActions();
+    runAction(m_actionData["runAction"]);
 }
 void HumanSprite::shoot()
 {
+    if (m_status == _isShooting) {
+        return;
+    }
+    m_status = _isShooting;
+    stopAllActions();
     runAction(m_actionData["shootAction"]);
 }
 void HumanSprite::reload()
 {
+    if (m_status == _isReloading) {
+        return;
+    }
+    m_status = _isReloading;
+    stopAllActions();
     runAction(m_actionData["reloadAction"]);
 }
 void HumanSprite::reloadShotCall()
 {
-    
+    m_human->reloadCall();
 }
 void HumanSprite::runShotCall()
 {
@@ -87,9 +114,13 @@ void HumanSprite::runShotCall()
 }
 void HumanSprite::shootShotCall()
 {
-    
+    m_human->shootCall();
 }
 void HumanSprite::waitShotCall()
 {
     
+}
+void HumanSprite::changeCall()
+{
+    m_human->changeCall();
 }

@@ -10,7 +10,7 @@
 #include "ConfigManager.h"
 
 
-EnemyGroup::EnemyGroup(Json::Value data):status(isHave)
+EnemyGroup::EnemyGroup(Json::Value data):status(_isHave)
 {
     setData(data);
     
@@ -44,4 +44,8 @@ void EnemyGroup::gameLoop(float data)
     for (int i = 0 ; i < enemyData.size(); ++i) {
         enemyData[i]->gameLoop(data);
     }
+}
+bool EnemyGroup::isDie()
+{
+    return status == _isDie;
 }

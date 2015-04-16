@@ -92,6 +92,10 @@
 		8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430AD1AC930D800AB1665 /* Prop.cpp */; };
 		8DC430B21AC930E400AB1665 /* PropManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430B01AC930E400AB1665 /* PropManager.cpp */; };
 		8DC5EF9F1AD4CE0F00FC4D21 /* GuanQiaModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5EF9D1AD4CE0F00FC4D21 /* GuanQiaModel.cpp */; };
+		8DC6A5CB1ADFD64A002A6159 /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6A5C91ADFD64A002A6159 /* State.cpp */; };
+		8DC6A5CE1ADFD75B002A6159 /* HumanWaitState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6A5CC1ADFD75B002A6159 /* HumanWaitState.cpp */; };
+		8DC6A5D11ADFD774002A6159 /* HumanShootState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6A5CF1ADFD774002A6159 /* HumanShootState.cpp */; };
+		8DC6A5D41ADFD788002A6159 /* HumanReloadState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6A5D21ADFD788002A6159 /* HumanReloadState.cpp */; };
 		8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */; };
 		8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -251,6 +255,14 @@
 		8DC430B11AC930E400AB1665 /* PropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropManager.h; sourceTree = "<group>"; };
 		8DC5EF9D1AD4CE0F00FC4D21 /* GuanQiaModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuanQiaModel.cpp; sourceTree = "<group>"; };
 		8DC5EF9E1AD4CE0F00FC4D21 /* GuanQiaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuanQiaModel.h; sourceTree = "<group>"; };
+		8DC6A5C91ADFD64A002A6159 /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
+		8DC6A5CA1ADFD64A002A6159 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		8DC6A5CC1ADFD75B002A6159 /* HumanWaitState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HumanWaitState.cpp; sourceTree = "<group>"; };
+		8DC6A5CD1ADFD75B002A6159 /* HumanWaitState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanWaitState.h; sourceTree = "<group>"; };
+		8DC6A5CF1ADFD774002A6159 /* HumanShootState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HumanShootState.cpp; sourceTree = "<group>"; };
+		8DC6A5D01ADFD774002A6159 /* HumanShootState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanShootState.h; sourceTree = "<group>"; };
+		8DC6A5D21ADFD788002A6159 /* HumanReloadState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HumanReloadState.cpp; sourceTree = "<group>"; };
+		8DC6A5D31ADFD788002A6159 /* HumanReloadState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanReloadState.h; sourceTree = "<group>"; };
 		8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigManager.cpp; sourceTree = "<group>"; };
 		8DD0DE361ACE347000BA61D4 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
 		8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyGroup.cpp; sourceTree = "<group>"; };
@@ -496,10 +508,10 @@
 				8DC34A9A1ADCF87500C6B657 /* GameMap */,
 				8DC352731ADB664900E6A9C2 /* BuildingModels */,
 				8DC5EF9C1AD4CDDE00FC4D21 /* GuanQiaModels */,
-				8DD7F1FC1AD376C600D86BC5 /* BulletModels */,
-				8DD7F1FB1AD376B200D86BC5 /* HumanModels */,
 				8DD7F1FA1AD3769F00D86BC5 /* PropModels */,
+				8DD7F1FB1AD376B200D86BC5 /* HumanModels */,
 				8DD7F1F91AD3769500D86BC5 /* GunModels */,
+				8DD7F1FC1AD376C600D86BC5 /* BulletModels */,
 				8DD7F1F81AD3768000D86BC5 /* EnemyModels */,
 			);
 			name = models;
@@ -605,6 +617,14 @@
 			children = (
 				8DC10AB41AC3D6C7004F7DE2 /* Human.cpp */,
 				8DC10AB51AC3D6C7004F7DE2 /* Human.h */,
+				8DC6A5C91ADFD64A002A6159 /* State.cpp */,
+				8DC6A5CA1ADFD64A002A6159 /* State.h */,
+				8DC6A5CC1ADFD75B002A6159 /* HumanWaitState.cpp */,
+				8DC6A5CD1ADFD75B002A6159 /* HumanWaitState.h */,
+				8DC6A5CF1ADFD774002A6159 /* HumanShootState.cpp */,
+				8DC6A5D01ADFD774002A6159 /* HumanShootState.h */,
+				8DC6A5D21ADFD788002A6159 /* HumanReloadState.cpp */,
+				8DC6A5D31ADFD788002A6159 /* HumanReloadState.h */,
 			);
 			name = HumanModels;
 			sourceTree = "<group>";
@@ -773,6 +793,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC430B21AC930E400AB1665 /* PropManager.cpp in Sources */,
+				8DC6A5D11ADFD774002A6159 /* HumanShootState.cpp in Sources */,
 				8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */,
 				8DC352761ADB66E100E6A9C2 /* House.cpp in Sources */,
 				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
@@ -786,6 +807,7 @@
 				8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */,
 				8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */,
 				8DC3527B1ADBB44400E6A9C2 /* GameLoading.cpp in Sources */,
+				8DC6A5CE1ADFD75B002A6159 /* HumanWaitState.cpp in Sources */,
 				8DC430A31AC8FF2A00AB1665 /* GameMap.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				8DC10AB61AC3D6C7004F7DE2 /* Human.cpp in Sources */,
@@ -796,6 +818,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				8DC10AB01AC3D629004F7DE2 /* GameFightScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				8DC6A5D41ADFD788002A6159 /* HumanReloadState.cpp in Sources */,
 				8DC34AA31ADCFA1400C6B657 /* GameMapManager.cpp in Sources */,
 				8DC10ABC1AC3D6FD004F7DE2 /* BulletSprite.cpp in Sources */,
 				8DC10AC21AC3D75F004F7DE2 /* Enemy.cpp in Sources */,
@@ -804,6 +827,7 @@
 				8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */,
 				8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				8DC6A5CB1ADFD64A002A6159 /* State.cpp in Sources */,
 				8DC34A9D1ADCF8DA00C6B657 /* GameMap5s.cpp in Sources */,
 				8DC430A91AC92BD600AB1665 /* Gun.cpp in Sources */,
 			);

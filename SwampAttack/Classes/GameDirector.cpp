@@ -35,13 +35,14 @@ void GameDirector::gameLoop(float data)
     {
         return;
     }
-//    EnemyManager::getInstance()->gameLoop(data);
+    EnemyManager::getInstance()->gameLoop(data);
+    Human::getInstance()->gameLoop(data);
     
     
 }
 void GameDirector::onTouchBegin(cocos2d::Touch *touch, cocos2d::Event *event)
 {
-    
+    Human::getInstance()->fire(touch, event);
 }
 void GameDirector::onTouchMove(cocos2d::Touch *touch, cocos2d::Event *event)
 {
@@ -49,7 +50,7 @@ void GameDirector::onTouchMove(cocos2d::Touch *touch, cocos2d::Event *event)
 }
 void GameDirector::onTouchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 {
-    
+    Human::getInstance()->stop();
 }
 void GameDirector::setGameLayer(Layer *layer)
 {

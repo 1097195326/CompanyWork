@@ -18,9 +18,10 @@ extern  Size    winSize;
 extern  Size    visibleSize;
 extern  Vec2    visibleOrigin;
 
+
 // get GameDirector
-#define _G_D GameDirector::getInstance()
-#define _C_M ConfigManager::getInstance()
+
+
 //------------
 #define ImagePath( name ) std::string("image/")+std::string( name )
 #define ConfigePath( name ) std::string("config/")+std::string( name )+std::string(".csv")

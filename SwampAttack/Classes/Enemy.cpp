@@ -16,10 +16,10 @@
 Enemy::Enemy(Json::Value data):m_data(data)
 {
     GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
-    m_point = gameMap->m_startPoint;
+    m_point = gameMap->m_startPoint + Vec2(0, random(1, 10));
     m_targetPoint = gameMap->m_targetPoint;
     ///--- set status ---
-    m_status = walk;
+    m_status = waiting;
     ///------set data-------
     m_id = m_data["Id"].asString();
     m_monsterName = m_data["MonsterName"].asString();
@@ -45,21 +45,30 @@ void Enemy::gameLoop(float data)
     {
         return;
     }
+    if (m_status == waiting) {
+        m_status &= clear;
+        m_status |= walk;
+    }
     if (m_status & walk)
     {
         m_point = m_point + m_speed * 0.1;
-//        if (m_targetPoint.x >= m_point.x) {
-//            m_status &= clear;
-//            m_status |= attack;
-//        }
+        if (m_targetPoint.x >= m_point.x) {
+            m_status &= clear;
+            m_status |= attack;
+            
+        }
     }
-    
+//    if (m_status & walk) {
+//        log("%d",m_status);
+//    }
+//    if (m_status & attack) {
+//        log("%d",m_status);
+//    }
     
 }
 void Enemy::setView()
 {
     EnemySprite * enemySprite = new EnemySprite("zombie");
-    enemySprite->setPosition(Vec2(100,100));
     enemySprite->setMode(this);
     _G_D->addChild(enemySprite);
     

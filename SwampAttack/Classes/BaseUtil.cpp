@@ -16,7 +16,7 @@ ActionInterval * BaseUtil::makeAnimateWithNameAndIndex(const std::string & name,
     {
 //            char str[100] = {};
 //            sprintf(str, "stone_hurt%002d.png",i);
-        log("str: %s",StringUtils::format("%s%00004d.png",name.c_str(),i).c_str());
+//        log("str: %s",StringUtils::format("%s%00004d.png",name.c_str(),i).c_str());
         SpriteFrame * frame = spriteFrameCache->getSpriteFrameByName(
                                         StringUtils::format("%s%00004d.png",name.c_str(),i));
         animation->addSpriteFrame(frame);

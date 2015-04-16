@@ -12,15 +12,24 @@
 #include "GameObject.h"
 #include "Gun.h"
 
+#define defaultGunID "200001"
 
 class GunManager : public GameObject {
 private:
-    std::map<int,Gun *> m_gunData;
+    std::map<string,Gun *> m_gunData;
+    Gun *   currentGun;
+private:
+    
+    
+public:
+    Gun *   getCurrentGun();
+    void    addGun(string gunId);
+    void    changeGun(string gunId);
+    
 public:
     static GunManager * getInstance();
     GunManager();
     ~GunManager();
-    
     void    gameLoop(float data);
     
 };

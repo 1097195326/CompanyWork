@@ -19,6 +19,10 @@
 #include "ConfigManager.h"
 #include "GuanQiaModel.h"
 #include "BaseUtil.h"
+#include "HumanSprite.h"
+
+#include "Human.h"
+
 
 
 using namespace cocostudio;
@@ -60,16 +64,21 @@ bool GameFightScene::init()
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
     
-    
     Json::Value value = _C_M->getDataByTag("guanqia", "300001");
     GuanqiaModel * guanQia = new GuanqiaModel(value);
     EnemyManager::getInstance()->setData(guanQia->getMonsters());
     
+    Human::getInstance();
+    
+//    Action * waitAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("wait_shotgun", 10));
 //    Sprite * sprite = Sprite::create();
-//    sprite->setPosition(Vec2(200, 200));
+//    sprite->setPosition(Vec2(200,200));
 //    addChild(sprite);
-//    Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("zombie_walk", 14));
-//    sprite->runAction(walkAction);
+//    sprite->runAction(waitAction);
+    
+//    HumanSprite * sprite = HumanSprite::create();
+//    sprite->setPosition(Vec2(200,200));
+//    addChild(sprite);
     
     return true;
 }

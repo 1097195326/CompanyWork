@@ -7,11 +7,15 @@
 //
 
 #include "GunManager.h"
+#include "ConfigManager.h"
+
 
 
 GunManager::GunManager()
 {
+    addGun(defaultGunID);
     
+    currentGun = m_gunData[defaultGunID];
 }
 GunManager::~GunManager()
 {
@@ -26,4 +30,17 @@ GunManager * GunManager::getInstance()
 void GunManager::gameLoop(float data)
 {
     
+}
+Gun * GunManager::getCurrentGun()
+{
+    return currentGun;
+}
+void GunManager::changeGun(string gunId)
+{
+    currentGun = m_gunData[gunId];
+}
+void GunManager::addGun(string gunId)
+{
+    Json::Value gunData = ConfigManager::getInstance()->getDataByTag("wuqi", gunId);
+    m_gunData[gunId] = new Gun(gunData);
 }

@@ -13,6 +13,7 @@
 EnemySprite::EnemySprite(string name)
 {
     init();
+    setAnchorPoint(Vec2(0.5,0));
     
     Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_walk", 14));
     walkAction->retain();
@@ -20,9 +21,9 @@ EnemySprite::EnemySprite(string name)
                                            CallFunc::create(CC_CALLBACK_0(EnemySprite::hurtCall, this)),
                                            NULL);
     hurtAction->retain();
-    Action * attackAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_attack", 12),
+    Action * attackAction = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_attack", 12),
                                              CallFunc::create(CC_CALLBACK_0(EnemySprite::attackCall, this)),
-                                             NULL);
+                                             NULL));
     attackAction->retain();
     Action * dieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_down", 14),
                                           CallFunc::create(CC_CALLBACK_0(EnemySprite::dieCall, this)),
@@ -53,8 +54,8 @@ void EnemySprite::update(float data)
         die();
     }else if (m_model->isWalk())
     {
-        move();
         setPosition(m_model->getPosition());
+        move();
     }else if (m_model->isHurt())
     {
         hurt();
@@ -63,30 +64,6 @@ void EnemySprite::update(float data)
         attack();
     }
     
-}
-void EnemySprite::initDataWithName(string name)
-{
-    Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_walk", 14));
-    walkAction->retain();
-    Action * hurtAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt", 10),
-                                           CallFunc::create(CC_CALLBACK_0(EnemySprite::hurtCall, this)),
-                                           NULL);
-    hurtAction->retain();
-    Action * attackAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_attack", 12),
-                                             CallFunc::create(CC_CALLBACK_0(EnemySprite::attackCall, this)),
-                                             NULL);
-    attackAction->retain();
-    Action * dieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_down", 14),
-                                          CallFunc::create(CC_CALLBACK_0(EnemySprite::dieCall, this)),
-                                          NULL);
-    dieAction->retain();
-    
-    m_map["walkAction"] = walkAction;
-    m_map["hurtAction"] = hurtAction;
-    m_map["attackAction"] = attackAction;
-    m_map["dieAction"] = dieAction;
-    
-    move();
 }
 void EnemySprite::setMode(Enemy *model)
 {
@@ -98,6 +75,7 @@ void EnemySprite::move()
         return;
     }
     actionStatus = isMoving;
+    stopAllActions();
     runAction(m_map["walkAction"]);
 }
 void EnemySprite::hurt()
@@ -106,6 +84,7 @@ void EnemySprite::hurt()
         return;
     }
     actionStatus = isHurting;
+    stopAllActions();
     runAction(m_map["hurtAction"]);
 }
 void EnemySprite::attack()
@@ -114,6 +93,7 @@ void EnemySprite::attack()
         return;
     }
     actionStatus = isAttacking;
+    stopAllActions();
     runAction(m_map["attackAction"]);
 }
 void EnemySprite::die()
@@ -122,6 +102,7 @@ void EnemySprite::die()
         return;
     }
     actionStatus = isDieing;
+    stopAllActions();
     runAction(m_map["dieAction"]);
 }
 void EnemySprite::hurtCall()

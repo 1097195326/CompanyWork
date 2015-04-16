@@ -20,6 +20,7 @@ class EnemyManager : public GameObject {
 private:
     std::map<int,EnemyGroup *>   m_map;
     EnemyGroup * currentGroup;
+    int     currentIndex;
     
 public:
     EnemyManager();

@@ -13,6 +13,7 @@
 #include "GameObject.h"
 #include "GameMapManager.h"
 
+#define _G_D GameDirector::getInstance()
 
 enum GameDirectorStatus
 {
