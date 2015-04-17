@@ -9,9 +9,6 @@
 #ifndef __SwampAttack__State__
 #define __SwampAttack__State__
 
-#include "Human.h"
-
-
 template <typename _typeName>
 class State {
 public:
@@ -20,5 +17,13 @@ public:
     virtual void Exit(_typeName *) = 0;
     virtual ~State(){}
 };
+
+//class State {
+//public:
+//    virtual void Enter(Human *) = 0;
+//    virtual void Execute(Human *) = 0;
+//    virtual void Exit(Human *) = 0;
+//    virtual ~State(){}
+//};
 
 #endif /* defined(__SwampAttack__State__) */

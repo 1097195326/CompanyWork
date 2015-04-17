@@ -7,8 +7,7 @@
 //
 
 #include "Gun.h"
-#include "BulletSprite.h"
-
+#include "BulletManager.h"
 
 
 Gun::Gun(Json::Value data)
@@ -34,7 +33,7 @@ Gun::Gun(Json::Value data)
     m_magazieSize = atoi(data["MagazineSize"].asString().c_str());
     m_bulletSpeed = atof(data["BulletSpeed"].asString().c_str());
     
-    
+    m_bullets = m_magazieSize;
 }
 Gun::~Gun()
 {
@@ -44,11 +43,30 @@ void Gun::gameLoop(float data)
 {
     
 }
-void Gun::fire(Touch * touch, Event * event)
+void Gun::fire(Vec2 position)
 {
+    --m_bullets;
+    BulletParameter bp(m_damage,
+                       m_damageArea,
+                       m_shrapnelNumber,
+                       m_critRate,
+                       m_critDamageRate,
+                       m_accuracy,
+                       m_range,
+                       m_bulletSpeed
+                       );
+    BulletManager::getInstance()->fire(bp, position);
     
 }
-void Gun::stop()
+void Gun::addBullet()
 {
-    
+    ++m_bullets;
+}
+bool Gun::isFull()
+{
+    return m_bullets == m_magazieSize;
+}
+bool Gun::isHaveBullet()
+{
+    return m_bullets > 0;
 }

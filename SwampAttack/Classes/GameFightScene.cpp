@@ -76,9 +76,10 @@ bool GameFightScene::init()
 //    addChild(sprite);
 //    sprite->runAction(waitAction);
     
-//    HumanSprite * sprite = HumanSprite::create();
-//    sprite->setPosition(Vec2(200,200));
-//    addChild(sprite);
+    Sprite * sprite = Sprite::create(ImagePath("bullet.png"));
+    sprite->setPosition(Vec2(200,200));
+//    sprite->seta(0.5);
+    addChild(sprite,3);
     
     return true;
 }

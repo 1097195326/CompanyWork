@@ -10,16 +10,15 @@
 #define __SwampAttack__HumanWaitState__
 
 #include "State.h"
+#include "Human.h"
 
-class HumanWaitState : public State<Human *>
+class HumanWaitState : public State<Human>
 {
 public:
-    HumanWaitState();
-    ~HumanWaitState();
+    virtual void Enter(Human *);
+    virtual void Execute(Human *);
+    virtual void Exit(Human *);
     static HumanWaitState * getInstance();
-    void Enter(Human *);
-    void Execute(Human *);
-    void Exit(Human *);
 };
 
 #endif /* defined(__SwampAttack__HumanWaitState__) */

@@ -12,16 +12,20 @@
 #include "GameObject.h"
 #include "BaseCode.h"
 #include "GunManager.h"
+#include "State.h"
 
 
 enum HumanStatus
 {
-    _clear  = 0b00000000,
-    _waits  = 0b00000001,
-    _run    = 0b00000010,
-    _reload = 0b00000100,
-    _shoot  = 0b00001000,
-    _change = 0b00010000,
+    _h_normal = 1,
+    _h_waits,
+    _h_run,
+    _h_reloading,
+//    _h_reloaded,
+    _h_shooting,
+    _h_shooted,
+    _h_changeing,
+    _h_changed
     
 };
 enum TouchStatus
@@ -34,21 +38,41 @@ class Human : public GameObject {
 private:
     int     m_status;
     TouchStatus m_touchStatus;
+    State<Human> * m_state;
+    
     Vec2    m_point;
     Gun *   m_gun;
+    
+    Vec2    m_fireToPoint;
 private:
     void    setView();
     
 public:
-    Vec2    getPosition();
+    //--- interface for game director
+    void    changeState(State<Human> * state);
     void    changeGun(Gun * gun);
     void    fire(Touch * touch,Event * event);
     void    stop();
     
+    
+    //--- interface for view call back
     void    reloadCall();
     void    shootCall();
     void    changeCall();
     
+    //--- interface for state
+    void    setStateShoot();
+    void    setStateReload();
+    void    setStateWait();
+    
+    bool    isTouching();
+    bool    isTouchEnd();
+    bool    isFull();
+    bool    isHaveBullet();
+//    bool    isReloaded();
+    bool    isShooted();
+    //--- interface for view
+    Vec2    getPosition();
     bool    isWait();
     bool    isRun();
     bool    isReload();

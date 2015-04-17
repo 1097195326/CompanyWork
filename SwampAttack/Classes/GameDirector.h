@@ -37,7 +37,7 @@ public:
 public:
     void    setGameLayer(Layer * layer);
     Layer * getGameLayer();
-    void    addChild(Node * node);
+    void    addChild(Node * node, int zOrder = 1);
     void    onTouchBegin(Touch * touch, Event * event);
     void    onTouchMove(Touch * touch, Event * event);
     void    onTouchEnd(Touch * touch, Event * event);

@@ -12,12 +12,14 @@
 #include "GameObject.h"
 #include "Bullet.h"
 
+
+
 class BulletManager : public GameObject {
 private:
     std::list<Bullet*> bullets;
     
 public:
-    void fire(int num);
+    void    fire(BulletParameter bp, Vec2 toPosition);
     
 public:
     

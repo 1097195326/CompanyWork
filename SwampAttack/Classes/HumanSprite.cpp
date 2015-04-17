@@ -59,6 +59,7 @@ void HumanSprite::update(float data)
         wait();
     }else if (m_human->isRun())
     {
+        setPosition(m_human->getPosition());
         run();
     }else if (m_human->isReload())
     {
@@ -106,6 +107,7 @@ void HumanSprite::reload()
 }
 void HumanSprite::reloadShotCall()
 {
+    m_status = _normal;
     m_human->reloadCall();
 }
 void HumanSprite::runShotCall()
@@ -114,6 +116,7 @@ void HumanSprite::runShotCall()
 }
 void HumanSprite::shootShotCall()
 {
+    m_status = _normal;
     m_human->shootCall();
 }
 void HumanSprite::waitShotCall()
@@ -122,5 +125,6 @@ void HumanSprite::waitShotCall()
 }
 void HumanSprite::changeCall()
 {
+    m_status = _normal;
     m_human->changeCall();
 }

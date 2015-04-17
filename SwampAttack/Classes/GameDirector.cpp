@@ -37,6 +37,7 @@ void GameDirector::gameLoop(float data)
     }
     EnemyManager::getInstance()->gameLoop(data);
     Human::getInstance()->gameLoop(data);
+    BulletManager::getInstance()->gameLoop(data);
     
     
 }
@@ -63,7 +64,7 @@ Layer * GameDirector::getGameLayer()
 {
     return gameFightLayer;
 }
-void GameDirector::addChild(Node * node)
+void GameDirector::addChild(Node * node, int zOrder)
 {
     if (gameFightLayer) {
         

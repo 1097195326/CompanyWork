@@ -21,13 +21,12 @@ BulletManager * BulletManager::getInstance()
     static BulletManager _bulletManager;
     return &_bulletManager;
 }
-void BulletManager::fire(int num)
+void BulletManager::fire(BulletParameter bp, cocos2d::Vec2 toPosition)
 {
-    for (int i = 0 ; i < num; ++i) {
-        Bullet * bullet = new Bullet();
+    for (int i = 0; i < bp.m_num; ++i) {
+        Bullet * bullet = new Bullet(bp,toPosition);
         bullets.push_back(bullet);
     }
-    
 }
 void BulletManager::gameLoop(float data)
 {

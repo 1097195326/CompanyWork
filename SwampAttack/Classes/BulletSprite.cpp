@@ -11,17 +11,33 @@
 
 BulletSprite::BulletSprite()
 {
+    init();
+    initWithFile(ImagePath("bullet.png"));
     
+    setRotation(0.4);
+    log("::%f",getRotation());
+    
+    scheduleUpdate();
 }
 BulletSprite::~BulletSprite()
 {
     
 }
-bool BulletSprite::init()
+void BulletSprite::setModel(Bullet *bullet)
 {
-    if (!Sprite::init()) {
-        return false;
-    }
+    m_model = bullet;
     
-    return true;
+}
+void BulletSprite::update(float data)
+{
+    if (m_model->isMoving()) {
+        setPosition(m_model->getPosition());
+    }else if (m_model->isArrive())
+    {
+        m_model->arriveCall();
+    }else if (m_model->isDie())
+    {
+        unscheduleUpdate();
+        removeFromParentAndCleanup(true);
+    }
 }

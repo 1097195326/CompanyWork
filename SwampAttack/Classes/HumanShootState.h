@@ -9,6 +9,16 @@
 #ifndef __SwampAttack__HumanShootState__
 #define __SwampAttack__HumanShootState__
 
-#include <stdio.h>
+#include "State.h"
+#include "Human.h"
+
+class HumanShootState : public State<Human>
+{
+public:
+    static HumanShootState * getInstance();
+    void Enter(Human *);
+    void Execute(Human *);
+    void Exit(Human *);
+};
 
 #endif /* defined(__SwampAttack__HumanShootState__) */

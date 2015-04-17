@@ -16,29 +16,18 @@
 
 using namespace std;
 
-enum GunStatus
-{
-    g_normal,
-    g_fire,
-    g_stop,
-    g_reload,
-    g_have,
-    g_empty,
-    
-};
-
 class Gun : public GameObject{
 private:
+    int     m_bullets;
     
 public:
-    void    fire(Touch * touch, Event * event);
-    void    stop();
+    void    fire(Vec2 position);
+    void    addBullet();
     
-    bool    isFire();
-    bool    isReload();
-    bool    isStop();
-    bool    isHave();
-    bool    isEmpty();
+    
+    bool    isFull();
+    bool    isHaveBullet();
+    
 private:
     string  m_id;
     string  m_weaponName;

@@ -7,29 +7,30 @@
 //
 
 #include "HumanWaitState.h"
+#include "HumanShootState.h"
+#include "HumanReloadState.h"
 
-HumanWaitState::HumanWaitState()
-{
-    
-}
-HumanWaitState::~HumanWaitState()
-{
-    
-}
+
 HumanWaitState * HumanWaitState::getInstance()
 {
-//    HumanWaitState<Human *> state;
-//    return &state;
+    static HumanWaitState state;
+    return &state;
 }
-void HumanWaitState::Enter(Human *)
+void HumanWaitState::Enter(Human * human)
 {
-    
+    human->setStateWait();
 }
-void HumanWaitState::Execute(Human *)
+void HumanWaitState::Execute(Human * human)
 {
-    
+    if (human->isTouching())
+    {
+        human->changeState(HumanShootState::getInstance());
+    }else if (!human->isFull())
+    {
+        human->changeState(HumanReloadState::getInstance());
+    }
 }
-void HumanWaitState::Exit(Human *)
+void HumanWaitState::Exit(Human * human)
 {
     
 }
