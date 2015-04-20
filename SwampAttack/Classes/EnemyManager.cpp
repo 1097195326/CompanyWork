@@ -15,7 +15,7 @@ EnemyManager::EnemyManager() : currentIndex(0)
 }
 EnemyManager::~EnemyManager()
 {
-    
+    clearData();
 }
 EnemyManager * EnemyManager::getInstance()
 {
@@ -31,6 +31,10 @@ void EnemyManager::setData(Json::Value data)
         m_map[i] = group;
     }
     
+}
+EnemyGroup * EnemyManager::getCurrectGroup()
+{
+    return currentGroup;
 }
 void EnemyManager::clearData()
 {
@@ -61,6 +65,9 @@ void EnemyManager::gameLoop(float data)
             if (currentIndex < m_map.size())
             {
                 currentGroup = m_map[currentIndex];
+            }else
+            {
+                log("Game Over");
             }
         }
     }

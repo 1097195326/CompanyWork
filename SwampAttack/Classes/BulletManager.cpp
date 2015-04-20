@@ -31,8 +31,19 @@ void BulletManager::fire(BulletParameter bp, cocos2d::Vec2 toPosition)
 void BulletManager::gameLoop(float data)
 {
     std::list<Bullet *>::iterator itr;
-    for (itr = bullets.begin(); itr != bullets.end(); itr++) {
+    for (itr = bullets.begin(); itr != bullets.end();) {
         Bullet * bullet = *itr;
-        bullet->gameLoop(data);
+        if (bullet->isCanDelete()) {
+            bullets.erase(itr++);
+            delete bullet;
+        }else
+        {
+            ++itr;
+            bullet->gameLoop(data);
+        }
     }
+}
+std::list<Bullet*> BulletManager::getBulletData()
+{
+    return bullets;
 }

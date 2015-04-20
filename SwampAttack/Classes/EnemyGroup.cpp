@@ -17,7 +17,7 @@ EnemyGroup::EnemyGroup(Json::Value data):status(_isHave)
 }
 EnemyGroup::~EnemyGroup()
 {
-    
+    clearData();
 }
 void EnemyGroup::setData(Json::Value data)
 {
@@ -33,6 +33,10 @@ void EnemyGroup::setData(Json::Value data)
         }
     }
 }
+std::map<int,Enemy*> EnemyGroup::getEnemyData()
+{
+    return enemyData;
+}
 void EnemyGroup::clearData()
 {
     for (int i = 0 ; i < enemyData.size(); ++i) {
@@ -41,8 +45,19 @@ void EnemyGroup::clearData()
 }
 void EnemyGroup::gameLoop(float data)
 {
+    if (status == _isDie) {
+        return;
+    }
+    bool die = true;
     for (int i = 0 ; i < enemyData.size(); ++i) {
-        enemyData[i]->gameLoop(data);
+        if (!enemyData[i]->isDied())
+        {
+            die = false;
+            enemyData[i]->gameLoop(data);
+        }
+    }
+    if (die) {
+        status = _isDie;
     }
 }
 bool EnemyGroup::isDie()

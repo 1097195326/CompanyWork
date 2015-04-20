@@ -39,7 +39,7 @@ void GameDirector::gameLoop(float data)
     Human::getInstance()->gameLoop(data);
     BulletManager::getInstance()->gameLoop(data);
     
-    
+    checkCross();
 }
 void GameDirector::onTouchBegin(cocos2d::Touch *touch, cocos2d::Event *event)
 {
@@ -52,6 +52,34 @@ void GameDirector::onTouchMove(cocos2d::Touch *touch, cocos2d::Event *event)
 void GameDirector::onTouchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 {
     Human::getInstance()->stop();
+}
+void GameDirector::checkCross()
+{
+    EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
+    if (!enemyGroup) {
+        return;
+    }
+    std::map<int,Enemy*> enemyData =enemyGroup->getEnemyData();
+    std::list<Bullet*> bulletData = BulletManager::getInstance()->getBulletData();
+    std::list<Bullet*>::iterator b_iter;
+    if (!bulletData.empty() && !enemyData.empty())
+    {
+        for (int i = 0; i < enemyData.size(); ++i)
+        {
+            for (b_iter = bulletData.begin(); b_iter != bulletData.end(); ++b_iter)
+            {
+                Enemy * enemy = enemyData[i];
+                Bullet * bullet = *b_iter;
+                Vec2 b_point = bullet->getPosition();
+                if (bullet->isArrive() &&
+                    !enemy->isDied() &&
+                    enemy->isContainsPoint(b_point))
+                {
+                    enemy->hurt(bullet->getDamage());
+                }
+            }
+        }
+    }
 }
 void GameDirector::setGameLayer(Layer *layer)
 {
@@ -68,7 +96,7 @@ void GameDirector::addChild(Node * node, int zOrder)
 {
     if (gameFightLayer) {
         
-        gameFightLayer->addChild(node);
+        gameFightLayer->addChild(node,zOrder);
     }else
     {
         log("jia");

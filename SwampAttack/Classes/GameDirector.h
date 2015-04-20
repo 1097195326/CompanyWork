@@ -30,6 +30,8 @@ private:
     GameMap * gameMap;
     
     Layer * gameFightLayer;
+private:
+    void    checkCross();
 public:
     static GameDirector * getInstance();
     GameDirector();

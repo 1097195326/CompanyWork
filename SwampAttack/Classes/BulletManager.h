@@ -20,7 +20,7 @@ private:
     
 public:
     void    fire(BulletParameter bp, Vec2 toPosition);
-    
+    std::list<Bullet*> getBulletData();
 public:
     
     BulletManager();

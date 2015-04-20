@@ -34,7 +34,7 @@ EnemySprite::EnemySprite(string name)
     m_map["hurtAction"] = hurtAction;
     m_map["attackAction"] = attackAction;
     m_map["dieAction"] = dieAction;
-    
+
     scheduleUpdate();
 }
 EnemySprite::~EnemySprite()
@@ -63,7 +63,7 @@ void EnemySprite::update(float data)
     {
         attack();
     }
-    
+    m_model->setRect(getBoundingBox());
 }
 void EnemySprite::setMode(Enemy *model)
 {
@@ -115,5 +115,5 @@ void EnemySprite::attackCall()
 }
 void EnemySprite::dieCall()
 {
-    
+    m_model->dieingCall();
 }

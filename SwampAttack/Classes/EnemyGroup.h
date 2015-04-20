@@ -31,6 +31,7 @@ public:
 public:
     void    setData(Json::Value data);
     bool    isDie();
+    std::map<int,Enemy*> getEnemyData();
     
     void    clearData();
     void    gameLoop(float data);

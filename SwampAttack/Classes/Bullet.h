@@ -46,6 +46,7 @@ enum BulletState
     _b_moving,
     _b_arrive,
     _b_die,
+    _b_canDelete,
 };
 
 class Bullet : public GameObject {
@@ -64,10 +65,13 @@ private:
     
 public:
     Vec2    getPosition();
+    int     getDamage();
     bool    isMoving();
     bool    isArrive();
     bool    isDie();
     void    arriveCall();
+    void    setCanDelete();
+    bool    isCanDelete();
     
 public:
     Bullet(BulletParameter bp, Vec2 fireToPosition);

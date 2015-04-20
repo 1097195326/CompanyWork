@@ -19,7 +19,7 @@ Enemy::Enemy(Json::Value data):m_data(data)
     m_point = gameMap->m_startPoint + Vec2(0, random(1, 10));
     m_targetPoint = gameMap->m_targetPoint;
     ///--- set status ---
-    m_status = waiting;
+    m_status = e_waiting;
     ///------set data-------
     m_id = m_data["Id"].asString();
     m_monsterName = m_data["MonsterName"].asString();
@@ -41,20 +41,20 @@ Enemy::~Enemy()
 }
 void Enemy::gameLoop(float data)
 {
-    if (m_status & die || m_status & dieing)
+    if (m_status & e_die || m_status & e_dieing)
     {
         return;
     }
-    if (m_status == waiting) {
-        m_status &= clear;
-        m_status |= walk;
+    if (m_status == e_waiting) {
+        m_status &= e_clear;
+        m_status |= e_walk;
     }
-    if (m_status & walk)
+    if (m_status & e_walk)
     {
         m_point = m_point + m_speed * 0.1;
         if (m_targetPoint.x >= m_point.x) {
-            m_status &= clear;
-            m_status |= attack;
+            m_status &= e_clear;
+            m_status |= e_attack;
             
         }
     }
@@ -73,22 +73,43 @@ void Enemy::setView()
     _G_D->addChild(enemySprite);
     
 }
-#pragma - get function
+void Enemy::setRect(cocos2d::Rect _rect)
+{
+    m_rect = _rect;
+}
+bool Enemy::isContainsPoint(cocos2d::Vec2 point)
+{
+    return m_rect.containsPoint(point);
+}
+void Enemy::hurt(int damage)
+{
+    m_health = m_health - damage;
+    if (m_health <= 0) {
+        m_status &= e_clear;
+        m_status |= e_dieing;
+    }
+    log("enemy health :%f",m_health);
+}
+//--- view 接口
 bool Enemy::isDieing()
 {
-    return m_status & dieing;
+    return m_status & e_dieing;
 }
 bool Enemy::isWalk()
 {
-    return m_status & walk;
+    return m_status & e_walk;
 }
 bool Enemy::isHurt()
 {
-    return m_status & hurt;
+    return m_status & e_hurt;
 }
 bool Enemy::isAttack()
 {
-    return m_status & attack;
+    return m_status & e_attack;
+}
+bool Enemy::isDied()
+{
+    return m_status & e_die;
 }
 Vec2 Enemy::getPosition()
 {
@@ -98,6 +119,12 @@ Vec2 Enemy::getTargetPosition()
 {
     return m_targetPoint;
 }
+void Enemy::dieingCall()
+{
+    m_status &= e_clear;
+    m_status |= e_die;
+}
+// - 获得 基本 属性
 string Enemy::getId()
 {
     return m_id;

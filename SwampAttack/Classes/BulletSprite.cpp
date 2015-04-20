@@ -12,10 +12,8 @@
 BulletSprite::BulletSprite()
 {
     init();
-    initWithFile(ImagePath("bullet.png"));
+    initWithFile(ImagePath("dandao.png"));
     
-    setRotation(0.4);
-    log("::%f",getRotation());
     
     scheduleUpdate();
 }
@@ -34,9 +32,15 @@ void BulletSprite::update(float data)
         setPosition(m_model->getPosition());
     }else if (m_model->isArrive())
     {
-        m_model->arriveCall();
+//        dlay += data;
+//        if (dlay > 0.4)
+//        {
+            m_model->arriveCall();
+//            dlay = 0;
+//        }
     }else if (m_model->isDie())
     {
+        m_model->setCanDelete();
         unscheduleUpdate();
         removeFromParentAndCleanup(true);
     }

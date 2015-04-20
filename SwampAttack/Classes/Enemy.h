@@ -18,13 +18,13 @@ using namespace std;
 
 enum EnemyStatus
 {
-    clear   = 0b00000000,
-    waiting = 0b00000001,
-    dieing  = 0b00000010,
-    die     = 0b00000100,
-    walk    = 0b00001000,
-    hurt    = 0b00010000,
-    attack  = 0b00100000,
+    e_clear   = 0b00000000,
+    e_waiting = 0b00000001,
+    e_dieing  = 0b00000010,
+    e_die     = 0b00000100,
+    e_walk    = 0b00001000,
+    e_hurt    = 0b00010000,
+    e_attack  = 0b00100000,
     
 };
 
@@ -32,9 +32,13 @@ class Enemy :public GameObject {
 private:
     Json::Value m_data;
     int     m_status;
+    Rect    m_rect;
     
 public:
     void    setView();
+    void    setRect(Rect _rect);
+    bool    isContainsPoint(Vec2 point);
+    void    hurt(int damage);
     
 private:
     string  m_id;
@@ -60,13 +64,17 @@ public:
     ~Enemy();
     void    gameLoop(float data);
 public:
+    //--- view 接口
     bool    isDieing();
     bool    isWalk();
     bool    isHurt();
     bool    isAttack();
     Vec2    getPosition();
     Vec2    getTargetPosition();
-    //----
+    void    dieingCall();
+    //--- interface for
+    bool    isDied();
+    //--- 获得 基本 属性
     string  getId();
     string  getMonsterName();
     string  getModelId();

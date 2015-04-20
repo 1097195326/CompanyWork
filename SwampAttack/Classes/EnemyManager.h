@@ -32,5 +32,6 @@ public:
     
     void    gameLoop(float data);
     
+    EnemyGroup * getCurrectGroup();
 };
 #endif /* defined(__SwampAttack__EnemyManager__) */
