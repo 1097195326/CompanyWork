@@ -43,5 +43,7 @@ void BulletSprite::update(float data)
         m_model->setCanDelete();
         unscheduleUpdate();
         removeFromParentAndCleanup(true);
+        delete this;
+        return;
     }
 }

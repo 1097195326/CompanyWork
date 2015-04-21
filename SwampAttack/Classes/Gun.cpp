@@ -53,7 +53,8 @@ void Gun::fire(Vec2 position)
                        m_critDamageRate,
                        m_accuracy,
                        m_range,
-                       m_bulletSpeed
+                       m_bulletSpeed,
+                       t_enemy
                        );
     BulletManager::getInstance()->fire(bp, position);
     

@@ -40,7 +40,7 @@ void Bullet::gameLoop(float data)
 {
     if (m_state == _b_moving)
     {
-        m_Point = m_Point + m_speed * 1;
+        m_Point = m_Point + m_speed * 12;
         if (m_Point.distanceSquared(m_StartPoint) >= m_toPoint.distanceSquared(m_StartPoint)) {
             m_state = _b_arrive;
         }

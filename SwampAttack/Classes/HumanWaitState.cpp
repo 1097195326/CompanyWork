@@ -27,7 +27,15 @@ void HumanWaitState::Execute(Human * human)
         human->changeState(HumanShootState::getInstance());
     }else if (!human->isFull())
     {
-        human->changeState(HumanReloadState::getInstance());
+        if (dlay >= 1)
+        {
+            human->changeState(HumanReloadState::getInstance());
+            dlay = 0;
+        }else
+        {
+            dlay += 0.055;
+        }
+        
     }
 }
 void HumanWaitState::Exit(Human * human)

@@ -16,16 +16,21 @@ HumanSprite::HumanSprite()
     setAnchorPoint(Vec2(0.5,0));
     
     Action * reloadAction = Sequence::create(
-                                             BaseUtil::makeAnimateWithNameAndIndex("reload_shotgun", 10),
+                                             BaseUtil::makeAnimateWithNameIndexDelay("reload_shotgun", 10,0.08),
                                              CallFunc::create(CC_CALLBACK_0(HumanSprite::reloadShotCall, this)),
                                              NULL);
     reloadAction->retain();
+    
     Action * runAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("run_shotgun", 8));
     runAction->retain();
-    Action * shootAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("shoot_shotgun", 7),
-                                            CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)),
-                                            NULL);
+
+    Action * shootAction = Spawn::create(
+                  Sequence::create(DelayTime::create(0.08 * 4),
+                                   CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)), NULL),
+                  BaseUtil::makeAnimateWithNameIndexDelay("shoot_shotgun", 7,0.08),
+                  NULL);
     shootAction->retain();
+    
     Action * waitAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("wait_shotgun", 10));
     waitAction->retain();
     

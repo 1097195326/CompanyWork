@@ -59,16 +59,18 @@ void GameDirector::checkCross()
     if (!enemyGroup) {
         return;
     }
-    std::map<int,Enemy*> enemyData =enemyGroup->getEnemyData();
+    std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
     std::list<Bullet*> bulletData = BulletManager::getInstance()->getBulletData();
-    std::list<Bullet*>::iterator b_iter;
+    
     if (!bulletData.empty() && !enemyData.empty())
     {
-        for (int i = 0; i < enemyData.size(); ++i)
+        std::list<Bullet*>::iterator b_iter;
+        std::list<Enemy*>::iterator e_iter;
+        for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
         {
             for (b_iter = bulletData.begin(); b_iter != bulletData.end(); ++b_iter)
             {
-                Enemy * enemy = enemyData[i];
+                Enemy * enemy = *e_iter;
                 Bullet * bullet = *b_iter;
                 Vec2 b_point = bullet->getPosition();
                 if (bullet->isArrive() &&

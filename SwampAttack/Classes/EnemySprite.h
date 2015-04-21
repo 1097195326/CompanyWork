@@ -27,11 +27,9 @@ private:
     std::map<std::string, Action *> m_map;
 private:
     void    move();
-    void    hurt();
     void    attack();
     void    die();
     
-    void    hurtCall();
     void    attackCall();
     void    dieCall();
 public:

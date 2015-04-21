@@ -17,10 +17,7 @@ EnemySprite::EnemySprite(string name)
     
     Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_walk", 14));
     walkAction->retain();
-    Action * hurtAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt", 10),
-                                           CallFunc::create(CC_CALLBACK_0(EnemySprite::hurtCall, this)),
-                                           NULL);
-    hurtAction->retain();
+    
     Action * attackAction = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_attack", 12),
                                              CallFunc::create(CC_CALLBACK_0(EnemySprite::attackCall, this)),
                                              NULL));
@@ -31,10 +28,10 @@ EnemySprite::EnemySprite(string name)
     dieAction->retain();
     
     m_map["walkAction"] = walkAction;
-    m_map["hurtAction"] = hurtAction;
     m_map["attackAction"] = attackAction;
     m_map["dieAction"] = dieAction;
 
+//    setDisplayFrameWithAnimationName(<#const std::string &animationName#>, <#ssize_t frameIndex#>)
     scheduleUpdate();
 }
 EnemySprite::~EnemySprite()
@@ -56,12 +53,16 @@ void EnemySprite::update(float data)
     {
         setPosition(m_model->getPosition());
         move();
-    }else if (m_model->isHurt())
-    {
-        hurt();
     }else if (m_model->isAttack())
     {
         attack();
+    }else if (m_model->isDied())
+    {
+        m_model->diedCall();
+        unscheduleUpdate();
+        removeFromParentAndCleanup(false);
+        delete this;
+        return;
     }
     m_model->setRect(getBoundingBox());
 }
@@ -77,15 +78,6 @@ void EnemySprite::move()
     actionStatus = isMoving;
     stopAllActions();
     runAction(m_map["walkAction"]);
-}
-void EnemySprite::hurt()
-{
-    if (actionStatus == isHurting) {
-        return;
-    }
-    actionStatus = isHurting;
-    stopAllActions();
-    runAction(m_map["hurtAction"]);
 }
 void EnemySprite::attack()
 {
@@ -104,10 +96,6 @@ void EnemySprite::die()
     actionStatus = isDieing;
     stopAllActions();
     runAction(m_map["dieAction"]);
-}
-void EnemySprite::hurtCall()
-{
-    
 }
 void EnemySprite::attackCall()
 {

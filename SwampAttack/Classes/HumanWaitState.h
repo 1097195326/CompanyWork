@@ -14,6 +14,8 @@
 
 class HumanWaitState : public State<Human>
 {
+private:
+    float   dlay = 0;
 public:
     virtual void Enter(Human *);
     virtual void Execute(Human *);

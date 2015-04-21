@@ -29,18 +29,22 @@ void EnemyGroup::setData(Json::Value data)
         for (int j = 0; j < number; ++j) {
             Json::Value enemyConfig = ConfigManager::getInstance()->getDataByTag("guaiwu",monsterid);
             Enemy * enemy = new Enemy(enemyConfig);
-            enemyData[i] = enemy;
+            enemyData.push_back(enemy);
         }
     }
 }
-std::map<int,Enemy*> EnemyGroup::getEnemyData()
+std::list<Enemy*> EnemyGroup::getEnemyData()
 {
     return enemyData;
 }
 void EnemyGroup::clearData()
 {
-    for (int i = 0 ; i < enemyData.size(); ++i) {
-        delete enemyData[i];
+    std::list<Enemy*>::iterator iter;
+    for (iter = enemyData.begin() ; iter != enemyData.end();)
+    {
+        Enemy * enemy = *iter;
+        enemyData.erase(iter++);
+        delete enemy;
     }
 }
 void EnemyGroup::gameLoop(float data)
@@ -49,11 +53,19 @@ void EnemyGroup::gameLoop(float data)
         return;
     }
     bool die = true;
-    for (int i = 0 ; i < enemyData.size(); ++i) {
-        if (!enemyData[i]->isDied())
+    std::list<Enemy*>::iterator iter;
+    for (iter = enemyData.begin() ; iter != enemyData.end(); )
+    {
+        Enemy * enemy = *iter;
+        if (enemy->isCanDelete())
+        {
+            enemyData.erase(iter++);
+            delete enemy;
+        }else
         {
             die = false;
-            enemyData[i]->gameLoop(data);
+            enemy->gameLoop(data);
+            ++iter;
         }
     }
     if (die) {

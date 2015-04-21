@@ -25,7 +25,7 @@ enum EnemyStatus
     e_walk    = 0b00001000,
     e_hurt    = 0b00010000,
     e_attack  = 0b00100000,
-    
+    e_canDel  = 0b01000000,
 };
 
 class Enemy :public GameObject {
@@ -34,6 +34,8 @@ private:
     int     m_status;
     Rect    m_rect;
     
+    float   dlay;
+    float   tatolDlay;
 public:
     void    setView();
     void    setRect(Rect _rect);
@@ -72,6 +74,8 @@ public:
     Vec2    getPosition();
     Vec2    getTargetPosition();
     void    dieingCall();
+    void    diedCall();
+    bool    isCanDelete();
     //--- interface for
     bool    isDied();
     //--- 获得 基本 属性

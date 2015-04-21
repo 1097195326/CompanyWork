@@ -11,7 +11,11 @@
 
 #include "BaseCode.h"
 #include "GameObject.h"
-
+enum BulletTarget
+{
+    t_enemy,
+    t_human,
+};
 struct BulletParameter
 {
     int     m_damage;         // 伤害
@@ -22,7 +26,7 @@ struct BulletParameter
     float   m_accuracy;       // 精度
     float   m_range;          // 射程
     float   m_bulletSpeed;    // 弹道速度
-    
+    BulletTarget m_target;      // 射击 对象
     BulletParameter(int damage,
                     float damageArea,
                     int num,
@@ -30,7 +34,8 @@ struct BulletParameter
                     float critDamageRate,
                     float accuracy,
                     float range,
-                    float bulletSpeed):
+                    float bulletSpeed,
+                    BulletTarget target):
     m_damage(damage),
     m_damageArea(damageArea),
     m_num(num),
@@ -38,7 +43,8 @@ struct BulletParameter
     m_critDamageRate(critDamageRate),
     m_accuracy(accuracy),
     m_range(range),
-    m_bulletSpeed(bulletSpeed){}
+    m_bulletSpeed(bulletSpeed),
+    m_target(target){}
 };
 
 enum BulletState

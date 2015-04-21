@@ -21,7 +21,7 @@ enum EnemyGroupStatus{
 class EnemyGroup : public GameObject {
 private:
     EnemyGroupStatus status;
-    std::map<int,Enemy*> enemyData;
+    std::list<Enemy*> enemyData;
     
     int index[10];
 public:
@@ -31,7 +31,7 @@ public:
 public:
     void    setData(Json::Value data);
     bool    isDie();
-    std::map<int,Enemy*> getEnemyData();
+    std::list<Enemy*> getEnemyData();
     
     void    clearData();
     void    gameLoop(float data);

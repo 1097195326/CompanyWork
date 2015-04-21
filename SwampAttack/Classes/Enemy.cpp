@@ -16,7 +16,7 @@
 Enemy::Enemy(Json::Value data):m_data(data)
 {
     GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
-    m_point = gameMap->m_startPoint + Vec2(0, random(1, 10));
+    m_point = gameMap->m_startPoint + Vec2(random(10, 200), random(1, 10));
     m_targetPoint = gameMap->m_targetPoint;
     ///--- set status ---
     m_status = e_waiting;
@@ -33,6 +33,9 @@ Enemy::Enemy(Json::Value data):m_data(data)
     m_gold = atoi(m_data["Gold"].asString().c_str());
     m_drop = m_data["Drop"].asString();
     
+    dlay = 0;
+    tatolDlay = random(0, 130) / 100.0f;
+//    log("tatolDlay:%f",tatolDlay);
     setView();
 }
 Enemy::~Enemy()
@@ -46,8 +49,12 @@ void Enemy::gameLoop(float data)
         return;
     }
     if (m_status == e_waiting) {
-        m_status &= e_clear;
-        m_status |= e_walk;
+        dlay += data;
+        if (dlay >= tatolDlay) {
+            dlay = 0;
+            m_status &= e_clear;
+            m_status |= e_walk;
+        }
     }
     if (m_status & e_walk)
     {
@@ -58,12 +65,6 @@ void Enemy::gameLoop(float data)
             
         }
     }
-//    if (m_status & walk) {
-//        log("%d",m_status);
-//    }
-//    if (m_status & attack) {
-//        log("%d",m_status);
-//    }
     
 }
 void Enemy::setView()
@@ -71,7 +72,6 @@ void Enemy::setView()
     EnemySprite * enemySprite = new EnemySprite("zombie");
     enemySprite->setMode(this);
     _G_D->addChild(enemySprite);
-    
 }
 void Enemy::setRect(cocos2d::Rect _rect)
 {
@@ -111,6 +111,10 @@ bool Enemy::isDied()
 {
     return m_status & e_die;
 }
+bool Enemy::isCanDelete()
+{
+    return m_status & e_canDel;
+}
 Vec2 Enemy::getPosition()
 {
     return m_point;
@@ -123,6 +127,11 @@ void Enemy::dieingCall()
 {
     m_status &= e_clear;
     m_status |= e_die;
+}
+void Enemy::diedCall()
+{
+//    m_status &= e_clear;
+    m_status |= e_canDel;
 }
 // - 获得 基本 属性
 string Enemy::getId()
