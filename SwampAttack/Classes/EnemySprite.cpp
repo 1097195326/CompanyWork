@@ -10,6 +10,7 @@
 #include "BaseUtil.h"
 
 
+
 EnemySprite::EnemySprite(string name)
 {
     init();
@@ -21,6 +22,12 @@ EnemySprite::EnemySprite(string name)
     Action * attackAction = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_attack", 12),
                                              CallFunc::create(CC_CALLBACK_0(EnemySprite::attackCall, this)),
                                              NULL));
+    
+//    Action * shootAction = Spawn::create(
+//                                         Sequence::create(DelayTime::create(0.08 * 8),
+//                                                          CallFunc::create(CC_CALLBACK_0(EnemySprite::attackCall, this)), NULL),
+//                                         BaseUtil::makeAnimateWithNameIndexDelay(name + "_attack", 12,0.1),
+//                                         NULL);
     attackAction->retain();
     Action * dieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_down", 14),
                                           CallFunc::create(CC_CALLBACK_0(EnemySprite::dieCall, this)),
@@ -30,8 +37,13 @@ EnemySprite::EnemySprite(string name)
     m_map["walkAction"] = walkAction;
     m_map["attackAction"] = attackAction;
     m_map["dieAction"] = dieAction;
+    
 
-//    setDisplayFrameWithAnimationName(<#const std::string &animationName#>, <#ssize_t frameIndex#>)
+    healthBar = new ProgressBar("xuenei.png","xuewai.png");
+    healthBar->ignoreAnchorPointForPosition(true);
+    addChild(healthBar,1);
+    healthBar->setVisible(false);
+    
     scheduleUpdate();
 }
 EnemySprite::~EnemySprite()
@@ -43,6 +55,8 @@ EnemySprite::~EnemySprite()
     }
     m_map.clear();
     
+    removeAllChildrenWithCleanup(true);
+    delete healthBar;
 }
 void EnemySprite::update(float data)
 {
@@ -64,11 +78,20 @@ void EnemySprite::update(float data)
         delete this;
         return;
     }
-    m_model->setRect(getBoundingBox());
+    if (m_model->isHurt()) {
+        healthBar->setVisible(true);
+        healthBar->updatePercent(m_model->getHealthPercent());
+    }else
+    {
+        healthBar->setVisible(false);
+    }
 }
 void EnemySprite::setMode(Enemy *model)
 {
     m_model = model;
+    int w = m_model->getWidth();
+    int h = m_model->getHeight();
+    healthBar->setPosition(Vec2(w * 0.5, h * 0.9));
 }
 void EnemySprite::move()
 {

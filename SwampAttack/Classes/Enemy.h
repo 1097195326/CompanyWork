@@ -36,9 +36,11 @@ private:
     
     float   dlay;
     float   tatolDlay;
+    float   hurtDlay;       //受伤 记数
+    
+//    Sprite * s;
 public:
     void    setView();
-    void    setRect(Rect _rect);
     bool    isContainsPoint(Vec2 point);
     void    hurt(int damage);
     
@@ -46,12 +48,17 @@ private:
     string  m_id;
     string  m_monsterName;
     string  m_modelId;
+    int     m_attackFrames;
+    int     m_width;
+    int     m_height;
     string  m_actionType;
     int     m_level;
     float   m_health;
+    float   m_totalHealth;
     Vec2    m_speed;
     float   m_damage;
     float   m_attackSpeed;
+    float   m_range;
     int     m_gold;
     string  m_drop;
 
@@ -82,9 +89,13 @@ public:
     string  getId();
     string  getMonsterName();
     string  getModelId();
+    int     getAttackFrame();
+    int     getWidth();
+    int     getHeight();
     string  getActionType();
     int     getLevel();
     int     getHealthValue();
+    float   getHealthPercent();
     Vec2    getSpeed();
     float   getDamage();
     float   getAttackSpeed();

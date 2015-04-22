@@ -11,6 +11,7 @@
 
 #include "BaseCode.h"
 #include "Enemy.h"
+#include "ProgressBar.h"
 
 enum ActionStatus
 {
@@ -25,6 +26,8 @@ private:
     Enemy * m_model = NULL;
     ActionStatus    actionStatus = normal;
     std::map<std::string, Action *> m_map;
+    ProgressBar *   healthBar;
+    
 private:
     void    move();
     void    attack();
