@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>Muroidea_down0001.png</key>
+            <key>muroidea_down0001.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{290,102},{124,136}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0002.png</key>
+            <key>muroidea_down0002.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{142,186},{106,134}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0003.png</key>
+            <key>muroidea_down0003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,278},{100,134}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0004.png</key>
+            <key>muroidea_down0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{192,294},{96,132}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0005.png</key>
+            <key>muroidea_down0005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,380},{98,128}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0006.png</key>
+            <key>muroidea_down0006.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{290,228},{106,124}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0007.png</key>
+            <key>muroidea_down0007.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{290,336},{112,100}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0008.png</key>
+            <key>muroidea_down0008.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{102,380},{128,88}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0009.png</key>
+            <key>muroidea_down0009.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,182},{138,94}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0010.png</key>
+            <key>muroidea_down0010.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{148,88},{140,96}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0011.png</key>
+            <key>muroidea_down0011.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{304,2},{140,98}}</string>
@@ -147,7 +147,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0012.png</key>
+            <key>muroidea_down0012.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,82},{144,98}}</string>
@@ -160,7 +160,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0013.png</key>
+            <key>muroidea_down0013.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{156,2},{146,84}}</string>
@@ -173,7 +173,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_down0014.png</key>
+            <key>muroidea_down0014.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{152,78}}</string>
@@ -192,13 +192,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>MuroideaDown.png</string>
+            <string>muroideaDown.png</string>
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:3318aa48394afdb10b826280118647b8:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:834c785596d502f35430f9e803404f02:1/1$</string>
             <key>textureFileName</key>
-            <string>MuroideaDown.png</string>
+            <string>muroideaDown.png</string>
         </dict>
     </dict>
 </plist>

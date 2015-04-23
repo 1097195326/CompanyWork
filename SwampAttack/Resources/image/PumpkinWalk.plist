@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>Pumpkin_walk0001.png</key>
+            <key>pumpkin_walk0001.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,410},{96,130}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0002.png</key>
+            <key>pumpkin_walk0002.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{134,406},{88,130}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0003.png</key>
+            <key>pumpkin_walk0003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{64,138},{80,132}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0004.png</key>
+            <key>pumpkin_walk0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{72,2},{74,132}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0005.png</key>
+            <key>pumpkin_walk0005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{68,134}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0006.png</key>
+            <key>pumpkin_walk0006.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{202,270},{60,132}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0007.png</key>
+            <key>pumpkin_walk0007.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{146,136},{62,132}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0008.png</key>
+            <key>pumpkin_walk0008.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{64,272},{70,132}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0009.png</key>
+            <key>pumpkin_walk0009.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{136,272},{64,132}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0010.png</key>
+            <key>pumpkin_walk0010.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{398,2},{60,130}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0011.png</key>
+            <key>pumpkin_walk0011.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,274},{60,134}}</string>
@@ -147,7 +147,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0012.png</key>
+            <key>pumpkin_walk0012.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,138},{60,134}}</string>
@@ -160,7 +160,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0013.png</key>
+            <key>pumpkin_walk0013.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{148,2},{60,132}}</string>
@@ -173,7 +173,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_walk0014.png</key>
+            <key>pumpkin_walk0014.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{266,2},{72,130}}</string>
@@ -192,13 +192,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>PumpkinWalk.png</string>
+            <string>pumpkinWalk.png</string>
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:5d85afeff5410633465ba70a7a864ad8:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:bafd668ff748e7ecee43e81a386c414a:1/1$</string>
             <key>textureFileName</key>
-            <string>PumpkinWalk.png</string>
+            <string>pumpkinWalk.png</string>
         </dict>
     </dict>
 </plist>

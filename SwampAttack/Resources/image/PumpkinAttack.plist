@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>Pumpkin_attack0001.png</key>
+            <key>pumpkin_attack0001.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,354},{78,132}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_attack0002.png</key>
+            <key>pumpkin_attack0002.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,134},{80,130}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_attack0003.png</key>
+            <key>pumpkin_attack0003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{190,352},{90,130}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_attack0004.png</key>
+            <key>pumpkin_attack0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{200,134},{96,130}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_attack0005.png</key>
+            <key>pumpkin_attack0005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{96,220},{102,130}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_attack0006.png</key>
+            <key>pumpkin_attack0006.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{82,354},{106,130}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_attack0007.png</key>
+            <key>pumpkin_attack0007.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{304,2},{110,132}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_attack0008.png</key>
+            <key>pumpkin_attack0008.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{150,130}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_attack0009.png</key>
+            <key>pumpkin_attack0009.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{154,2},{148,130}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_attack0010.png</key>
+            <key>pumpkin_attack0010.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{304,114},{104,132}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_attack0011.png</key>
+            <key>pumpkin_attack0011.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{304,2},{110,132}}</string>
@@ -147,7 +147,7 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>Pumpkin_attack0012.png</key>
+            <key>pumpkin_attack0012.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,220},{92,132}}</string>
@@ -166,13 +166,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>PumpkinAttack.png</string>
+            <string>pumpkinAttack.png</string>
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:bd3a7dec8cfb77880c115b590d2af6c1:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:862fc3bfa5513d37aaf945a2670f697f:1/1$</string>
             <key>textureFileName</key>
-            <string>PumpkinAttack.png</string>
+            <string>pumpkinAttack.png</string>
         </dict>
     </dict>
 </plist>

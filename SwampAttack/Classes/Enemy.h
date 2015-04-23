@@ -14,6 +14,7 @@
 #include "json/json.h"
 
 
+
 using namespace std;
 
 enum EnemyStatus
@@ -29,7 +30,7 @@ enum EnemyStatus
 };
 
 class Enemy :public GameObject {
-private:
+protected:
     Json::Value m_data;
     int     m_status;
     Rect    m_rect;
@@ -38,24 +39,27 @@ private:
     float   tatolDlay;
     float   hurtDlay;       //受伤 记数
     
-//    Sprite * s;
 public:
-    void    setView();
+    virtual void    setView();
     bool    isContainsPoint(Vec2 point);
     void    hurt(int damage);
+protected:
+    virtual void    move();
     
-private:
+protected:
     string  m_id;
     string  m_monsterName;
     string  m_modelId;
-    int     m_attackFrames;
     int     m_width;
     int     m_height;
-    string  m_actionType;
+    int     m_actionType;
+    string  m_bulletModelId;
+    int     m_attackType;
+    float   m_bulletSpeed;
     int     m_level;
     float   m_health;
     float   m_totalHealth;
-    Vec2    m_speed;
+    float   m_speed;
     float   m_damage;
     float   m_attackSpeed;
     float   m_range;
@@ -82,6 +86,7 @@ public:
     Vec2    getTargetPosition();
     void    dieingCall();
     void    diedCall();
+    void    attackCall();
     bool    isCanDelete();
     //--- interface for
     bool    isDied();
@@ -92,11 +97,14 @@ public:
     int     getAttackFrame();
     int     getWidth();
     int     getHeight();
-    string  getActionType();
+    int     getActionType();
+    string  getBulletModelId();
+    int     getAttackType();
+    float   getBulletSpeed();
     int     getLevel();
     int     getHealthValue();
     float   getHealthPercent();
-    Vec2    getSpeed();
+    float   getSpeed();
     float   getDamage();
     float   getAttackSpeed();
     int     getGoldForDied();

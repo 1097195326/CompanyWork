@@ -7,42 +7,24 @@
 //
 
 #include "EnemySprite.h"
-#include "BaseUtil.h"
 
 
 
-EnemySprite::EnemySprite(string name)
+
+EnemySprite::EnemySprite(Enemy * model):m_model(model)
 {
     init();
     setAnchorPoint(Vec2(0.5,0));
     
-    Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_walk", 14));
-    walkAction->retain();
+    int w = m_model->getWidth();
+    int h = m_model->getHeight();
     
-    Action * attackAction = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_attack", 12),
-                                             CallFunc::create(CC_CALLBACK_0(EnemySprite::attackCall, this)),
-                                             NULL));
-    
-//    Action * shootAction = Spawn::create(
-//                                         Sequence::create(DelayTime::create(0.08 * 8),
-//                                                          CallFunc::create(CC_CALLBACK_0(EnemySprite::attackCall, this)), NULL),
-//                                         BaseUtil::makeAnimateWithNameIndexDelay(name + "_attack", 12,0.1),
-//                                         NULL);
-    attackAction->retain();
-    Action * dieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_down", 14),
-                                          CallFunc::create(CC_CALLBACK_0(EnemySprite::dieCall, this)),
-                                          NULL);
-    dieAction->retain();
-    
-    m_map["walkAction"] = walkAction;
-    m_map["attackAction"] = attackAction;
-    m_map["dieAction"] = dieAction;
-    
-
     healthBar = new ProgressBar("xuenei.png","xuewai.png");
     healthBar->ignoreAnchorPointForPosition(true);
     addChild(healthBar,1);
+    healthBar->setPosition(Vec2(w * 0.5, h * 0.9));
     healthBar->setVisible(false);
+    
     
     scheduleUpdate();
 }
@@ -86,40 +68,12 @@ void EnemySprite::update(float data)
         healthBar->setVisible(false);
     }
 }
-void EnemySprite::setMode(Enemy *model)
-{
-    m_model = model;
-    int w = m_model->getWidth();
-    int h = m_model->getHeight();
-    healthBar->setPosition(Vec2(w * 0.5, h * 0.9));
-}
 void EnemySprite::move()
-{
-    if (actionStatus == isMoving) {
-        return;
-    }
-    actionStatus = isMoving;
-    stopAllActions();
-    runAction(m_map["walkAction"]);
-}
+{}
 void EnemySprite::attack()
-{
-    if (actionStatus == isAttacking) {
-        return;
-    }
-    actionStatus = isAttacking;
-    stopAllActions();
-    runAction(m_map["attackAction"]);
-}
+{}
 void EnemySprite::die()
-{
-    if (actionStatus == isDieing) {
-        return;
-    }
-    actionStatus = isDieing;
-    stopAllActions();
-    runAction(m_map["dieAction"]);
-}
+{}
 void EnemySprite::attackCall()
 {
     

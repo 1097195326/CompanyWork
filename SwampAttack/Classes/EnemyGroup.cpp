@@ -8,6 +8,8 @@
 
 #include "EnemyGroup.h"
 #include "ConfigManager.h"
+#include "FlyEnemy.h"
+#include "WalkEnemy.h"
 
 
 EnemyGroup::EnemyGroup(Json::Value data):status(_isHave)
@@ -28,7 +30,18 @@ void EnemyGroup::setData(Json::Value data)
         index[i] = number;
         for (int j = 0; j < number; ++j) {
             Json::Value enemyConfig = ConfigManager::getInstance()->getDataByTag("guaiwu",monsterid);
-            Enemy * enemy = new Enemy(enemyConfig);
+            int actionType = atoi(enemyConfig["ActionType"].asString().c_str());
+            Enemy * enemy = NULL; //new Enemy(enemyConfig);
+            switch (actionType) {
+                case 1:
+                    enemy = new WalkEnemy(enemyConfig);
+                    break;
+                case 2:
+                    enemy = new FlyEnemy(enemyConfig);
+                    break;
+                default:
+                    break;
+            }
             enemyData.push_back(enemy);
         }
     }

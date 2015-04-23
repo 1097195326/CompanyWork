@@ -85,6 +85,11 @@
 		8DC34AA31ADCFA1400C6B657 /* GameMapManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC34AA11ADCFA1400C6B657 /* GameMapManager.cpp */; };
 		8DC352761ADB66E100E6A9C2 /* House.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC352741ADB66E100E6A9C2 /* House.cpp */; };
 		8DC3527B1ADBB44400E6A9C2 /* GameLoading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC352791ADBB44400E6A9C2 /* GameLoading.cpp */; };
+		8DC3E19D1AE89C5C00BE6CA4 /* EnemyInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3E19B1AE89C5C00BE6CA4 /* EnemyInfo.cpp */; };
+		8DC3E1A01AE8C40A00BE6CA4 /* WalkEnemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3E19E1AE8C40A00BE6CA4 /* WalkEnemy.cpp */; };
+		8DC3E1A31AE8C72300BE6CA4 /* WalkEnemySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3E1A11AE8C72300BE6CA4 /* WalkEnemySprite.cpp */; };
+		8DC3E1A61AE8CF7B00BE6CA4 /* FlyEnemySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3E1A41AE8CF7B00BE6CA4 /* FlyEnemySprite.cpp */; };
+		8DC3E1A91AE8D08B00BE6CA4 /* FlyEnemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3E1A71AE8D08B00BE6CA4 /* FlyEnemy.cpp */; };
 		8DC430A31AC8FF2A00AB1665 /* GameMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430A11AC8FF2A00AB1665 /* GameMap.cpp */; };
 		8DC430A61AC929BE00AB1665 /* GameDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430A41AC929BE00AB1665 /* GameDirector.cpp */; };
 		8DC430A91AC92BD600AB1665 /* Gun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC430A71AC92BD600AB1665 /* Gun.cpp */; };
@@ -242,6 +247,16 @@
 		8DC352751ADB66E100E6A9C2 /* House.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = House.h; sourceTree = "<group>"; };
 		8DC352791ADBB44400E6A9C2 /* GameLoading.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLoading.cpp; sourceTree = "<group>"; };
 		8DC3527A1ADBB44400E6A9C2 /* GameLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLoading.h; sourceTree = "<group>"; };
+		8DC3E19B1AE89C5C00BE6CA4 /* EnemyInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyInfo.cpp; sourceTree = "<group>"; };
+		8DC3E19C1AE89C5C00BE6CA4 /* EnemyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyInfo.h; sourceTree = "<group>"; };
+		8DC3E19E1AE8C40A00BE6CA4 /* WalkEnemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WalkEnemy.cpp; sourceTree = "<group>"; };
+		8DC3E19F1AE8C40A00BE6CA4 /* WalkEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkEnemy.h; sourceTree = "<group>"; };
+		8DC3E1A11AE8C72300BE6CA4 /* WalkEnemySprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WalkEnemySprite.cpp; sourceTree = "<group>"; };
+		8DC3E1A21AE8C72300BE6CA4 /* WalkEnemySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkEnemySprite.h; sourceTree = "<group>"; };
+		8DC3E1A41AE8CF7B00BE6CA4 /* FlyEnemySprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FlyEnemySprite.cpp; sourceTree = "<group>"; };
+		8DC3E1A51AE8CF7B00BE6CA4 /* FlyEnemySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyEnemySprite.h; sourceTree = "<group>"; };
+		8DC3E1A71AE8D08B00BE6CA4 /* FlyEnemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FlyEnemy.cpp; sourceTree = "<group>"; };
+		8DC3E1A81AE8D08B00BE6CA4 /* FlyEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyEnemy.h; sourceTree = "<group>"; };
 		8DC430A11AC8FF2A00AB1665 /* GameMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMap.cpp; sourceTree = "<group>"; };
 		8DC430A21AC8FF2A00AB1665 /* GameMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMap.h; sourceTree = "<group>"; };
 		8DC430A41AC929BE00AB1665 /* GameDirector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameDirector.cpp; sourceTree = "<group>"; };
@@ -530,6 +545,10 @@
 				8DC2ACD91AC56A77004F3C1B /* HumanSprite.h */,
 				8DC10AC61AC3D7B1004F7DE2 /* EnemySprite.cpp */,
 				8DC10AC71AC3D7B1004F7DE2 /* EnemySprite.h */,
+				8DC3E1A11AE8C72300BE6CA4 /* WalkEnemySprite.cpp */,
+				8DC3E1A21AE8C72300BE6CA4 /* WalkEnemySprite.h */,
+				8DC3E1A41AE8CF7B00BE6CA4 /* FlyEnemySprite.cpp */,
+				8DC3E1A51AE8CF7B00BE6CA4 /* FlyEnemySprite.h */,
 				8DC10ABA1AC3D6FD004F7DE2 /* BulletSprite.cpp */,
 				8DC10ABB1AC3D6FD004F7DE2 /* BulletSprite.h */,
 			);
@@ -595,8 +614,14 @@
 		8DD7F1F81AD3768000D86BC5 /* EnemyModels */ = {
 			isa = PBXGroup;
 			children = (
+				8DC3E19B1AE89C5C00BE6CA4 /* EnemyInfo.cpp */,
+				8DC3E19C1AE89C5C00BE6CA4 /* EnemyInfo.h */,
 				8DC10AC01AC3D75F004F7DE2 /* Enemy.cpp */,
 				8DC10AC11AC3D75F004F7DE2 /* Enemy.h */,
+				8DC3E19E1AE8C40A00BE6CA4 /* WalkEnemy.cpp */,
+				8DC3E19F1AE8C40A00BE6CA4 /* WalkEnemy.h */,
+				8DC3E1A71AE8D08B00BE6CA4 /* FlyEnemy.cpp */,
+				8DC3E1A81AE8D08B00BE6CA4 /* FlyEnemy.h */,
 				8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */,
 				8DD7F1F61AD3737B00D86BC5 /* EnemyGroup.h */,
 				8DC10AC91AC40222004F7DE2 /* EnemyManager.cpp */,
@@ -805,13 +830,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC3E19D1AE89C5C00BE6CA4 /* EnemyInfo.cpp in Sources */,
 				8DC430B21AC930E400AB1665 /* PropManager.cpp in Sources */,
+				8DC3E1A31AE8C72300BE6CA4 /* WalkEnemySprite.cpp in Sources */,
 				8DC6A5D11ADFD774002A6159 /* HumanShootState.cpp in Sources */,
 				8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */,
 				8DC352761ADB66E100E6A9C2 /* House.cpp in Sources */,
 				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
 				8DC34AA01ADCF96700C6B657 /* GameMap6.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				8DC3E1A01AE8C40A00BE6CA4 /* WalkEnemy.cpp in Sources */,
 				8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */,
 				8DCA71AC1AE74787007ADFE6 /* ProgressBar.cpp in Sources */,
 				8DC430A61AC929BE00AB1665 /* GameDirector.cpp in Sources */,
@@ -834,11 +862,13 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				8DC6A5D41ADFD788002A6159 /* HumanReloadState.cpp in Sources */,
 				8DC34AA31ADCFA1400C6B657 /* GameMapManager.cpp in Sources */,
+				8DC3E1A61AE8CF7B00BE6CA4 /* FlyEnemySprite.cpp in Sources */,
 				8DC10ABC1AC3D6FD004F7DE2 /* BulletSprite.cpp in Sources */,
 				8DC10AC21AC3D75F004F7DE2 /* Enemy.cpp in Sources */,
 				8DBB988E1ACD520C008C804D /* json_writer.cpp in Sources */,
 				8DC10AC81AC3D7B1004F7DE2 /* EnemySprite.cpp in Sources */,
 				8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */,
+				8DC3E1A91AE8D08B00BE6CA4 /* FlyEnemy.cpp in Sources */,
 				8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				8DC6A5CB1ADFD64A002A6159 /* State.cpp in Sources */,

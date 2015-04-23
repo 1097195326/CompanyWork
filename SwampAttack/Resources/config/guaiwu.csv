@@ -1,4 +1,6 @@
-怪物编号,怪物名称编号,怪物名称,模型编号,攻击帧数,受击宽度,受击高度,行动类型,等级,生命,移动速度,伤害,攻击速度,射程,击杀获得金币,掉落
-Id[string],MonsterName[string],,ModelId[string],AttackFrames[string],Wide[string],High[string],ActionType[string],Level[int],Hp[int],Speed[float],Damage[int],AttackSpeed[float],Range[float],Gold[int],Drop[string]
-100001,tid#monstername1,僵尸,,8,190,190,1,1,120,10,10,0.5,30,5,
-100002,tid#monstername2,骷髅兵,,8,200,190,1,1,100,15,12,0.5,30,5,
+怪物编号,怪物名称编号,怪物名称,模型编号,攻击帧数,受击宽度,受击高度,行动类型,子弹模型编号,攻击类型,弹道速度,等级,生命,移动速度,伤害,攻击速度,射程,击杀获得金币,掉落
+Id[string],MonsterName[string],,ModelId[string],AttackFrames[int],Width[int],Height[int],ActionType[int],BulletModelId[string],AttackType[int],BulletSpeed[float],Level[int],Hp[int],Speed[float],Damage[int],AttackSpeed[float],Range[float],Gold[int],Drop[string]
+100001,tid#monstername1,僵尸,zombie,8,190,190,1,,1,,1,120,10,10,0.5,30,5,
+100002,tid#monstername2,骷髅兵,skull,8,200,190,1,,1,,1,100,15,12,0.5,30,5,
+100003,tid#monstername3,蝙蝠,bat,8,160,140,2,,2,100,1,80,20,8,0.5,150,5,
+100004,tid#monstername4,南瓜头,pumpkin,8,180,180,1,,2,100,1,90,10,8,0.5,150,5,

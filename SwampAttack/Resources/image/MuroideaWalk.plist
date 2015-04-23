@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>Muroidea_walk0001.png</key>
+            <key>muroidea_walk0001.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,532},{120,128}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0002.png</key>
+            <key>muroidea_walk0002.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{136,404},{130,126}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0003.png</key>
+            <key>muroidea_walk0003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{282,128},{138,124}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0004.png</key>
+            <key>muroidea_walk0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{140,272},{136,130}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0005.png</key>
+            <key>muroidea_walk0005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{140,136},{136,134}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0006.png</key>
+            <key>muroidea_walk0006.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{142,2},{132,138}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0007.png</key>
+            <key>muroidea_walk0007.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,274},{126,134}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0008.png</key>
+            <key>muroidea_walk0008.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{268,518},{120,130}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0009.png</key>
+            <key>muroidea_walk0009.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{278,388},{130,128}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0010.png</key>
+            <key>muroidea_walk0010.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{282,2},{138,124}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0011.png</key>
+            <key>muroidea_walk0011.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{278,254},{136,132}}</string>
@@ -147,7 +147,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0012.png</key>
+            <key>muroidea_walk0012.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,136},{136,136}}</string>
@@ -160,7 +160,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0013.png</key>
+            <key>muroidea_walk0013.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{132,138}}</string>
@@ -173,7 +173,7 @@
                 <key>sourceSize</key>
                 <string>{190,190}</string>
             </dict>
-            <key>Muroidea_walk0014.png</key>
+            <key>muroidea_walk0014.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,402},{128,132}}</string>
@@ -192,13 +192,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>MuroideaWalk.png</string>
+            <string>muroideaWalk.png</string>
             <key>size</key>
             <string>{512,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e07f59b47f78b392de7913d7f91d9496:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:3a24840d4779b60ca57acf66c1359c82:1/1$</string>
             <key>textureFileName</key>
-            <string>MuroideaWalk.png</string>
+            <string>muroideaWalk.png</string>
         </dict>
     </dict>
 </plist>

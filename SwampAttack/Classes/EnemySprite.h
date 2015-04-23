@@ -12,6 +12,8 @@
 #include "BaseCode.h"
 #include "Enemy.h"
 #include "ProgressBar.h"
+#include "EnemyInfo.h"
+
 
 enum ActionStatus
 {
@@ -22,26 +24,24 @@ enum ActionStatus
     isDieing,
 };
 class EnemySprite :public Sprite {
-private:
+protected:
     Enemy * m_model = NULL;
     ActionStatus    actionStatus = normal;
     std::map<std::string, Action *> m_map;
     ProgressBar *   healthBar;
     
-private:
-    void    move();
-    void    attack();
-    void    die();
+protected:
+    virtual void    move();
+    virtual void    attack();
+    virtual void    die();
     
     void    attackCall();
     void    dieCall();
 public:
-    EnemySprite(string name);
+    EnemySprite(Enemy * model);
     virtual     ~EnemySprite();
     void        update(float data);
 public:
-    void    setMode(Enemy * model);
-    void    initDataWithName(string name);
     
 
     

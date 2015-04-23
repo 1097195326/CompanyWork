@@ -70,19 +70,6 @@ bool GameFightScene::init()
     
     Human::getInstance();
     
-//    ProgressTimer * pt = ProgressTimer::create(Sprite::create(ImagePath("xuenei.png")));
-//    pt->setPosition(Vec2(200, 100));
-//    pt->setType(ProgressTimer::Type::BAR);
-//    pt->setBarChangeRate(Vec2(1, 0));
-//    pt->setMidpoint(Vec2(1, 0));
-//    addChild(pt,5);
-//    pt->setPercentage(70);
-//    pt->runAction(ProgressTo::create(2, 100));
-    
-//    ProgressBar *  p = new ProgressBar("xuenei.png","xuewai.png");
-//    p->setPosition(Vec2(200, 200));
-//    addChild(p);
-//    p->updatePercent(100);
     Sprite  * s = Sprite::create("CloseSelected.png");
     s->setPosition(Vec2(200, 200));
     addChild(s);
