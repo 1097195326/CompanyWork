@@ -32,12 +32,7 @@ void BulletSprite::update(float data)
         setPosition(m_model->getPosition());
     }else if (m_model->isArrive())
     {
-//        dlay += data;
-//        if (dlay > 0.4)
-//        {
-            m_model->arriveCall();
-//            dlay = 0;
-//        }
+        m_model->arriveCall();
     }else if (m_model->isDie())
     {
         m_model->setCanDelete();

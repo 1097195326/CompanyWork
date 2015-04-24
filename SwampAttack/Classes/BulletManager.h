@@ -19,7 +19,7 @@ private:
     std::list<Bullet*> bullets;
     
 public:
-    void    fire(BulletParameter bp, Vec2 toPosition);
+    void    fire(BulletParameter bp);
     std::list<Bullet*> getBulletData();
 public:
     

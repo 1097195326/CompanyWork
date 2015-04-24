@@ -26,7 +26,6 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model)
     healthBar->setVisible(false);
     
     
-    scheduleUpdate();
 }
 EnemySprite::~EnemySprite()
 {
@@ -40,34 +39,6 @@ EnemySprite::~EnemySprite()
     removeAllChildrenWithCleanup(true);
     delete healthBar;
 }
-void EnemySprite::update(float data)
-{
-    if (m_model->isDieing())
-    {
-        die();
-    }else if (m_model->isWalk())
-    {
-        setPosition(m_model->getPosition());
-        move();
-    }else if (m_model->isAttack())
-    {
-        attack();
-    }else if (m_model->isDied())
-    {
-        m_model->diedCall();
-        unscheduleUpdate();
-        removeFromParentAndCleanup(false);
-        delete this;
-        return;
-    }
-    if (m_model->isHurt()) {
-        healthBar->setVisible(true);
-        healthBar->updatePercent(m_model->getHealthPercent());
-    }else
-    {
-        healthBar->setVisible(false);
-    }
-}
 void EnemySprite::move()
 {}
 void EnemySprite::attack()
@@ -76,7 +47,7 @@ void EnemySprite::die()
 {}
 void EnemySprite::attackCall()
 {
-    
+    m_model->attackCall();
 }
 void EnemySprite::dieCall()
 {

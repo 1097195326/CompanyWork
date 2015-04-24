@@ -21,10 +21,10 @@ BulletManager * BulletManager::getInstance()
     static BulletManager _bulletManager;
     return &_bulletManager;
 }
-void BulletManager::fire(BulletParameter bp, cocos2d::Vec2 toPosition)
+void BulletManager::fire(BulletParameter bp)
 {
     for (int i = 0; i < bp.m_num; ++i) {
-        Bullet * bullet = new Bullet(bp,toPosition);
+        Bullet * bullet = new Bullet(bp);
         bullets.push_back(bullet);
     }
 }

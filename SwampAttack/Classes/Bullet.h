@@ -14,7 +14,7 @@
 enum BulletTarget
 {
     t_enemy,
-    t_human,
+    t_house,
 };
 struct BulletParameter
 {
@@ -27,6 +27,8 @@ struct BulletParameter
     float   m_range;          // 射程
     float   m_bulletSpeed;    // 弹道速度
     BulletTarget m_target;      // 射击 对象
+    Vec2    m_startPoint;       // 起始点
+    Vec2    m_targetPoint;        // 目标点
     BulletParameter(int damage,
                     float damageArea,
                     int num,
@@ -35,7 +37,10 @@ struct BulletParameter
                     float accuracy,
                     float range,
                     float bulletSpeed,
-                    BulletTarget target):
+                    BulletTarget target,
+                    Vec2    startPoint,
+                    Vec2    targetPoint
+                    ):
     m_damage(damage),
     m_damageArea(damageArea),
     m_num(num),
@@ -44,7 +49,10 @@ struct BulletParameter
     m_accuracy(accuracy),
     m_range(range),
     m_bulletSpeed(bulletSpeed),
-    m_target(target){}
+    m_target(target),
+    m_startPoint(startPoint),
+    m_targetPoint(targetPoint)
+    {}
 };
 
 enum BulletState
@@ -80,7 +88,7 @@ public:
     bool    isCanDelete();
     
 public:
-    Bullet(BulletParameter bp, Vec2 fireToPosition);
+    Bullet(BulletParameter bp);
     ~Bullet();
     
     void    gameLoop(float data);

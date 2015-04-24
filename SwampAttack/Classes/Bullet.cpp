@@ -13,18 +13,16 @@
 
 #define PAI 3.1415f
 
-Bullet::Bullet(BulletParameter bp, Vec2 fireToPosition)
-:m_bp(bp),m_toPoint(fireToPosition)
+Bullet::Bullet(BulletParameter bp):m_bp(bp)
 {
-    GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
+    m_Point= m_StartPoint = m_bp.m_startPoint;
+    m_toPoint = m_bp.m_targetPoint;
     
-    m_Point= m_StartPoint = gameMap->m_BulletStartPoint;
-    
-    
-    m_speed = fireToPosition - m_StartPoint;
+    m_speed = m_bp.m_targetPoint - m_StartPoint;
     m_speed.normalize();
     
-    m_angle = m_speed.getAngle(Vec2(1, 0)) * (180.0f / PAI);
+    Vec2 jizhunXian = m_bp.m_target == t_enemy ? Vec2(1, 0) : Vec2(-1, 0);
+    m_angle = m_speed.getAngle(jizhunXian) * (180.0f / PAI);
     
     m_speed = m_speed * m_bp.m_bulletSpeed;
     
@@ -40,7 +38,7 @@ void Bullet::gameLoop(float data)
 {
     if (m_state == _b_moving)
     {
-        m_Point = m_Point + m_speed * 12;
+        m_Point = m_Point + m_speed * 1;
         if (m_Point.distanceSquared(m_StartPoint) >= m_toPoint.distanceSquared(m_StartPoint)) {
             m_state = _b_arrive;
         }

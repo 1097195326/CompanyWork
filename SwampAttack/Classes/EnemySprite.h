@@ -40,7 +40,7 @@ protected:
 public:
     EnemySprite(Enemy * model);
     virtual     ~EnemySprite();
-    void        update(float data);
+    
 public:
     
 

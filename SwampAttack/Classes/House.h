@@ -10,22 +10,30 @@
 #define __SwampAttack__House__
 
 #include "BaseCode.h"
+#include "GameObject.h"
+
 
 enum HouseState
 {
-    _h_normal    = 0b00000000,
+    _h_clear    = 0b00000000,
+    _h_over     = 0b00000001,
+    
     
 };
-class House {
+class House : public GameObject {
 private:
     float   health;
-    
+    int     m_state;
 private:
     House();
     ~House();
 public:
     static House * getInstance();
+    void    gameLoop(float data);
     void    hurt(float damage);
+    
+public:
+    bool    isOver();
     
 };
 

@@ -16,7 +16,6 @@
 class BulletSprite : public Sprite {
 private:
     Bullet * m_model;
-    float   dlay;
 public:
     void    setModel(Bullet * bullet);
 public:

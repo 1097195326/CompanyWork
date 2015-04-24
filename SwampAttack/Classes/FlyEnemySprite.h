@@ -19,6 +19,7 @@ protected:
     void    attack();
     void    die();
 public:
+    void        update(float data);
     FlyEnemySprite(string name,Enemy * model);
 };
 

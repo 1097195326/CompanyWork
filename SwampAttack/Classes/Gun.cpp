@@ -8,6 +8,7 @@
 
 #include "Gun.h"
 #include "BulletManager.h"
+#include "GameMapManager.h"
 
 
 Gun::Gun(Json::Value data)
@@ -46,6 +47,8 @@ void Gun::gameLoop(float data)
 void Gun::fire(Vec2 position)
 {
     --m_bullets;
+    GameMap * map = GameMapManager::getInstance()->getGameMap();
+    
     BulletParameter bp(m_damage,
                        m_damageArea,
                        m_shrapnelNumber,
@@ -54,9 +57,11 @@ void Gun::fire(Vec2 position)
                        m_accuracy,
                        m_range,
                        m_bulletSpeed,
-                       t_enemy
+                       t_enemy,
+                       map->m_BulletStartPoint,
+                       position
                        );
-    BulletManager::getInstance()->fire(bp, position);
+    BulletManager::getInstance()->fire(bp);
     
 }
 void Gun::addBullet()

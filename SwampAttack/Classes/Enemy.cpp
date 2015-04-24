@@ -9,7 +9,8 @@
 #include "Enemy.h"
 #include "GameMapManager.h"
 #include "EnemyInfo.h"
-
+#include "House.h"
+#include "BulletManager.h"
 
 Enemy::Enemy(Json::Value data):m_data(data)
 {
@@ -117,11 +118,46 @@ void Enemy::diedCall()
 void Enemy::attackCall()
 {
     switch (m_attackType) {
-        case 1:
+        case 1:     // 陆地 近程
+            House::getInstance()->hurt(m_damage);
+            break;
+        case 2:     // 陆地 远程
+        {
+            BulletParameter bp(m_damage,
+                               0,
+                               1,
+                               0,
+                               0,
+                               100,
+                               100,
+                               m_bulletSpeed,
+                               t_house,
+                               m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_health * 0.7),
+                               m_targetPoint + Vec2(0,m_health * 0.7)
+                               );
+            BulletManager::getInstance()->fire(bp);
+        }
+            break;
+        case 3:     // 陆地 自爆
             
             break;
-        case 2:
-            
+        case 4:     // 飞行 远程
+        {
+            m_status &= (~e_attack);
+            BulletParameter bp(m_damage,
+                               0,
+                               1,
+                               0,
+                               0,
+                               100,
+                               100,
+                               m_bulletSpeed,
+                               t_house,
+                               m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_health * 0.7),
+                               m_targetPoint + Vec2(0,m_health * 0.7)
+                               );
+            BulletManager::getInstance()->fire(bp);
+        }
             break;
         default:
             break;
