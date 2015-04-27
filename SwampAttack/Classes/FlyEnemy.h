@@ -26,6 +26,7 @@ private:
     Vec2    m_speedVec;
     
     float   dlayToAttack;
+    bool    canMoveBack;
 private:
     void    setPointState();
     void    randomPoint();

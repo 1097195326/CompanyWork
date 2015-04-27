@@ -42,13 +42,12 @@ void FlyEnemySprite::update(float data)
     if (m_model->isDieing())
     {
         die();
-    }else if (m_model->isWalk())
-    {
-        setPosition(m_model->getPosition());
-        move();
     }else if (m_model->isAttack())
     {
         attack();
+    }else if (m_model->isWalk())
+    {
+        move();
     }else if (m_model->isDied())
     {
         m_model->diedCall();
@@ -64,6 +63,7 @@ void FlyEnemySprite::update(float data)
     {
         healthBar->setVisible(false);
     }
+    setPosition(m_model->getPosition());
 }
 void FlyEnemySprite::move()
 {

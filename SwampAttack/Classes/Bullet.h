@@ -86,6 +86,8 @@ public:
     void    arriveCall();
     void    setCanDelete();
     bool    isCanDelete();
+    bool    isFireEnemy();
+    bool    isFireHouse();
     
 public:
     Bullet(BulletParameter bp);

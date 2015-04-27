@@ -83,3 +83,11 @@ bool Bullet::isDie()
 {
     return m_state == _b_die;
 }
+bool Bullet::isFireEnemy()
+{
+    return m_bp.m_target == t_enemy;
+}
+bool Bullet::isFireHouse()
+{
+    return m_bp.m_target == t_house;
+}

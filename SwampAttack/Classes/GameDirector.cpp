@@ -10,6 +10,7 @@
 #include "EnemyManager.h"
 #include "Human.h"
 #include "BulletManager.h"
+#include "House.h"
 
 
 GameDirector::GameDirector()
@@ -74,10 +75,14 @@ void GameDirector::checkCross()
                 Bullet * bullet = *b_iter;
                 Vec2 b_point = bullet->getPosition();
                 if (bullet->isArrive() &&
+                    bullet->isFireEnemy() &&
                     !enemy->isDied() &&
                     enemy->isContainsPoint(b_point))
                 {
                     enemy->hurt(bullet->getDamage());
+                }else if (bullet->isArrive() && bullet->isFireHouse())
+                {
+                    House::getInstance()->hurt(bullet->getDamage());
                 }
             }
         }
