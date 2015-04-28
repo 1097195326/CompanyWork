@@ -47,7 +47,6 @@ public:
     void    onTouchEnd(Touch * touch, Event * event);
     void    start();
     void    stop();
-    void    resume();
     bool    isOver();
     void    clearStatus();
     void    gameLoop(float data);

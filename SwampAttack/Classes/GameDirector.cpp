@@ -125,10 +125,6 @@ void GameDirector::stop()
     clearStatus();
     m_status |= s_stop ;
 }
-void GameDirector::resume()
-{
-    
-}
 bool GameDirector::isOver()
 {
     return m_status & s_over;

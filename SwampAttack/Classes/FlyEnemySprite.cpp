@@ -52,7 +52,7 @@ void FlyEnemySprite::update(float data)
     {
         m_model->diedCall();
         unscheduleUpdate();
-        removeFromParentAndCleanup(false);
+        removeFromParentAndCleanup(true);
         delete this;
         return;
     }
