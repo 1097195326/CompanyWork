@@ -25,12 +25,14 @@ EnemyManager * EnemyManager::getInstance()
 }
 void EnemyManager::setData(Json::Value data)
 {
+    clearData();
+        
     for (int i = 0; i < data.size(); ++i)
     {
         EnemyGroup * group = new EnemyGroup(data[i]);
         m_map[i] = group;
     }
-    
+    m_isOver = false;
 }
 EnemyGroup * EnemyManager::getCurrectGroup()
 {
@@ -38,11 +40,14 @@ EnemyGroup * EnemyManager::getCurrectGroup()
 }
 void EnemyManager::clearData()
 {
-    for (int i = 0; i < m_map.size(); ++i)
+    if (m_map.size() > 0)
     {
-        delete m_map[i];
+        for (int i = 0; i < m_map.size(); ++i)
+        {
+            delete m_map[i];
+        }
+        m_map.clear();
     }
-    m_map.clear();
 }
 static float dley = 0;
 void EnemyManager::gameLoop(float data)
@@ -68,7 +73,12 @@ void EnemyManager::gameLoop(float data)
             }else
             {
                 log("Game Over");
+                m_isOver = true;
             }
         }
     }
+}
+bool EnemyManager::isOver()
+{
+    return m_isOver;
 }

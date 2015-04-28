@@ -74,7 +74,7 @@ protected:
     
 public:
     Enemy(Json::Value data);
-    ~Enemy();
+    virtual ~Enemy();
     void    gameLoop(float data);
 public:
     //--- view 接口

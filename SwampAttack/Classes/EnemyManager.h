@@ -21,16 +21,18 @@ private:
     std::map<int,EnemyGroup *>   m_map;
     EnemyGroup * currentGroup;
     int     currentIndex;
-    
-public:
-    EnemyManager();
-    ~EnemyManager();
+    bool    m_isOver;
 public:
     static EnemyManager * getInstance();
+    EnemyManager();
+    ~EnemyManager();
+    void    gameLoop(float data);
+public:
+    
     void    setData(Json::Value data);
     void    clearData();
+    bool    isOver();
     
-    void    gameLoop(float data);
     
     EnemyGroup * getCurrectGroup();
 };

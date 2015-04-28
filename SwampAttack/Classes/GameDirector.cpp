@@ -32,6 +32,11 @@ GameDirector * GameDirector::getInstance()
 }
 void GameDirector::gameLoop(float data)
 {
+    
+    if (m_status & s_over) {
+        
+        return;
+    }
     if (m_status & s_stop)
     {
         return;
@@ -41,6 +46,10 @@ void GameDirector::gameLoop(float data)
     BulletManager::getInstance()->gameLoop(data);
     
     checkCross();
+    if (EnemyManager::getInstance()->isOver() || House::getInstance()->isOver()) {
+        clearStatus();
+        m_status |= s_over;
+    }
 }
 void GameDirector::onTouchBegin(cocos2d::Touch *touch, cocos2d::Event *event)
 {
@@ -48,7 +57,7 @@ void GameDirector::onTouchBegin(cocos2d::Touch *touch, cocos2d::Event *event)
 }
 void GameDirector::onTouchMove(cocos2d::Touch *touch, cocos2d::Event *event)
 {
-    
+    Human::getInstance()->fire(touch, event);
 }
 void GameDirector::onTouchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 {
@@ -90,9 +99,6 @@ void GameDirector::checkCross()
 }
 void GameDirector::setGameLayer(Layer *layer)
 {
-    if (layer) {
-        log("layer is true");
-    }
     gameFightLayer = layer;
 }
 Layer * GameDirector::getGameLayer()
@@ -111,13 +117,21 @@ void GameDirector::addChild(Node * node, int zOrder)
 }
 void GameDirector::start()
 {
-    m_status &= ~s_stop;
-    m_status &= s_run ;
+    clearStatus();
+    m_status |= s_run ;
 }
 void GameDirector::stop()
 {
-    m_status &= ~s_run;
-    m_status &= s_stop ;
+    clearStatus();
+    m_status |= s_stop ;
+}
+void GameDirector::resume()
+{
+    
+}
+bool GameDirector::isOver()
+{
+    return m_status & s_over;
 }
 void GameDirector::clearStatus()
 {

@@ -53,12 +53,12 @@ void Human::changeState(State<Human> *state)
 }
 void Human::fire(Touch * touch,Event * event)
 {
+    m_fireToPoint = touch->getLocation();
     if (m_touchStatus == _isTouching)
     {
         return;
     }
     m_touchStatus = _isTouching;
-    m_fireToPoint = touch->getLocation();
 }
 void Human::stop()
 {

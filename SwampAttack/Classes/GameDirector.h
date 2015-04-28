@@ -17,9 +17,11 @@
 
 enum GameDirectorStatus
 {
-    s_clear   = 0b00000000,
-    s_stop    = 0b00000001,
-    s_run     = 0b00000010,
+    s_clear     = 0b00000000,
+    s_stop      = 0b00000001,
+    s_run       = 0b00000010,
+    s_start     = 0b00000100,
+    s_over      = 0b00001000,
     
 };
 
@@ -45,6 +47,8 @@ public:
     void    onTouchEnd(Touch * touch, Event * event);
     void    start();
     void    stop();
+    void    resume();
+    bool    isOver();
     void    clearStatus();
     void    gameLoop(float data);
 };
