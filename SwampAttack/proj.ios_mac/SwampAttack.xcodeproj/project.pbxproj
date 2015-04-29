@@ -104,6 +104,7 @@
 		8DCA71AC1AE74787007ADFE6 /* ProgressBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA71AA1AE74787007ADFE6 /* ProgressBar.cpp */; };
 		8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */; };
 		8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */; };
+		8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3B4561AF0B36800938655 /* HouseSprite.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -285,6 +286,8 @@
 		8DD0DE361ACE347000BA61D4 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
 		8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyGroup.cpp; sourceTree = "<group>"; };
 		8DD7F1F61AD3737B00D86BC5 /* EnemyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyGroup.h; sourceTree = "<group>"; };
+		8DE3B4561AF0B36800938655 /* HouseSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HouseSprite.cpp; sourceTree = "<group>"; };
+		8DE3B4571AF0B36800938655 /* HouseSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSprite.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -551,6 +554,8 @@
 				8DC3E1A51AE8CF7B00BE6CA4 /* FlyEnemySprite.h */,
 				8DC10ABA1AC3D6FD004F7DE2 /* BulletSprite.cpp */,
 				8DC10ABB1AC3D6FD004F7DE2 /* BulletSprite.h */,
+				8DE3B4561AF0B36800938655 /* HouseSprite.cpp */,
+				8DE3B4571AF0B36800938655 /* HouseSprite.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -839,6 +844,7 @@
 				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
 				8DC34AA01ADCF96700C6B657 /* GameMap6.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */,
 				8DC3E1A01AE8C40A00BE6CA4 /* WalkEnemy.cpp in Sources */,
 				8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */,
 				8DCA71AC1AE74787007ADFE6 /* ProgressBar.cpp in Sources */,
