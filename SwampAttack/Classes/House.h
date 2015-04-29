@@ -22,17 +22,20 @@ enum HouseState
 };
 class House : public GameObject {
 private:
-    float   health;
+    float   m_health;
+    float   m_totalHelath;
     int     m_state;
 private:
     House();
     ~House();
+    void    setView();
 public:
     static House * getInstance();
     void    gameLoop(float data);
     void    hurt(float damage);
     
 public:
+    float   getHealthPercent();
     bool    isOver();
     
 };

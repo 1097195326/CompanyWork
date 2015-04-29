@@ -57,5 +57,6 @@ void WalkEnemy::move()
 void WalkEnemy::setView()
 {
     EnemySprite * enemySprite = new WalkEnemySprite(m_modelId,this);
+    enemySprite->autorelease();
     _G_D->addChild(enemySprite);
 }

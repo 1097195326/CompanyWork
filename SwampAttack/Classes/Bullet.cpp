@@ -49,6 +49,7 @@ void Bullet::setView()
     BulletSprite * sprite = new BulletSprite();
     sprite->setModel(this);
     sprite->setRotation(m_angle);
+    sprite->autorelease();
     _G_D->addChild(sprite,2);
 }
 Vec2 Bullet::getPosition()

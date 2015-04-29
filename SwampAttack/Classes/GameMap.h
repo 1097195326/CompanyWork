@@ -19,6 +19,11 @@ public:
     
     Vec2 m_BulletStartPoint = {visibleOrigin.x + 150, visibleOrigin.y + 270};
     
+    
+    Vec2 fightScene_HouseSprite_Position = {visibleOrigin.x + 100 ,visibleOrigin.y + visibleSize.height - 50};
+    
+    
+    
 };
 
 #endif /* defined(__SwampAttack__GameMap__) */

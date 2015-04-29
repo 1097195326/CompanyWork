@@ -40,7 +40,7 @@ bool GameFightScene::init()
     
     GameLoading::loadFrames();
     
-    Sprite * bgSprite = Sprite::create(ImagePath("bg.png"));
+    Sprite * bgSprite = Sprite::create(ImagePath("scene1_Bg.png"));
     addChild(bgSprite);
     bgSprite->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5));
     
@@ -68,7 +68,8 @@ bool GameFightScene::init()
     GuanqiaModel * guanQia = new GuanqiaModel(value);
     EnemyManager::getInstance()->setData(guanQia->getMonsters());
     
-    Human::getInstance();
+    
+    
     
     Sprite  * s = Sprite::create("CloseSelected.png");
     s->setPosition(Vec2(200, 200));

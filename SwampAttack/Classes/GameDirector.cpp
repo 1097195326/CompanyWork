@@ -12,7 +12,6 @@
 #include "BulletManager.h"
 #include "House.h"
 
-
 GameDirector::GameDirector()
 {
     gameMap = GameMapManager::getInstance()->getGameMap();
@@ -29,6 +28,11 @@ GameDirector * GameDirector::getInstance()
 {
     static GameDirector gameDirector;
     return &gameDirector;
+}
+void GameDirector::initGameSingle()
+{
+    Human::getInstance();
+    House::getInstance();
 }
 void GameDirector::gameLoop(float data)
 {

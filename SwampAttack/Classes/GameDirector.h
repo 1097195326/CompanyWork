@@ -39,6 +39,7 @@ public:
     GameDirector();
     ~GameDirector();
 public:
+    void    initGameSingle();
     void    setGameLayer(Layer * layer);
     Layer * getGameLayer();
     void    addChild(Node * node, int zOrder = 1);

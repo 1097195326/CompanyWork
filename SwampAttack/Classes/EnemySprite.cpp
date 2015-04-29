@@ -20,8 +20,8 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model)
     int h = m_model->getHeight();
     
     healthBar = new ProgressBar("xuenei.png","xuewai.png");
-    healthBar->ignoreAnchorPointForPosition(true);
     addChild(healthBar,1);
+    healthBar->setBarLeft();
     healthBar->setPosition(Vec2(w * 0.5, h * 0.9));
     healthBar->setVisible(false);
     

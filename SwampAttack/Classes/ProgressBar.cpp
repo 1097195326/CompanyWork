@@ -31,5 +31,12 @@ void ProgressBar::updatePercent(float per)
 {
     timer->setPercentage(per);
 }
-
+void ProgressBar::setBarLeft()
+{
+    timer->setMidpoint(Vec2(1, 0));
+}
+void ProgressBar::setBarRight()
+{
+    timer->setMidpoint(Vec2(0, 0));
+}
 

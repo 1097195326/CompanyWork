@@ -72,6 +72,7 @@ void Human::setView()
 {
     HumanSprite * sprite = new HumanSprite();
     sprite->setModel(this);
+    sprite->autorelease();
     _G_D->addChild(sprite);
 }
 ///---- interface for view call back
