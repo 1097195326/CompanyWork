@@ -105,6 +105,8 @@
 		8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */; };
 		8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */; };
 		8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3B4561AF0B36800938655 /* HouseSprite.cpp */; };
+		8DE3F7B11AF75109001E048F /* SelectMenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3F7AF1AF75109001E048F /* SelectMenuController.cpp */; };
+		8DE3F7B41AF75AB5001E048F /* ScrollController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3F7B21AF75AB5001E048F /* ScrollController.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -288,6 +290,10 @@
 		8DD7F1F61AD3737B00D86BC5 /* EnemyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyGroup.h; sourceTree = "<group>"; };
 		8DE3B4561AF0B36800938655 /* HouseSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HouseSprite.cpp; sourceTree = "<group>"; };
 		8DE3B4571AF0B36800938655 /* HouseSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSprite.h; sourceTree = "<group>"; };
+		8DE3F7AF1AF75109001E048F /* SelectMenuController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectMenuController.cpp; sourceTree = "<group>"; };
+		8DE3F7B01AF75109001E048F /* SelectMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectMenuController.h; sourceTree = "<group>"; };
+		8DE3F7B21AF75AB5001E048F /* ScrollController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScrollController.cpp; sourceTree = "<group>"; };
+		8DE3F7B31AF75AB5001E048F /* ScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollController.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -543,6 +549,7 @@
 		8DC10AD21AC4050F004F7DE2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8DE3F7AE1AF74F37001E048F /* UIModel */,
 				8DCA71AD1AE74B6B007ADFE6 /* baseUI */,
 				8DC2ACD81AC56A77004F3C1B /* HumanSprite.cpp */,
 				8DC2ACD91AC56A77004F3C1B /* HumanSprite.h */,
@@ -681,6 +688,17 @@
 				8DC10ACD1AC40233004F7DE2 /* BulletManager.h */,
 			);
 			name = BulletModels;
+			sourceTree = "<group>";
+		};
+		8DE3F7AE1AF74F37001E048F /* UIModel */ = {
+			isa = PBXGroup;
+			children = (
+				8DE3F7AF1AF75109001E048F /* SelectMenuController.cpp */,
+				8DE3F7B01AF75109001E048F /* SelectMenuController.h */,
+				8DE3F7B21AF75AB5001E048F /* ScrollController.cpp */,
+				8DE3F7B31AF75AB5001E048F /* ScrollController.h */,
+			);
+			name = UIModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -867,6 +885,7 @@
 				8DC10AB01AC3D629004F7DE2 /* GameFightScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				8DC6A5D41ADFD788002A6159 /* HumanReloadState.cpp in Sources */,
+				8DE3F7B11AF75109001E048F /* SelectMenuController.cpp in Sources */,
 				8DC34AA31ADCFA1400C6B657 /* GameMapManager.cpp in Sources */,
 				8DC3E1A61AE8CF7B00BE6CA4 /* FlyEnemySprite.cpp in Sources */,
 				8DC10ABC1AC3D6FD004F7DE2 /* BulletSprite.cpp in Sources */,
@@ -875,6 +894,7 @@
 				8DC10AC81AC3D7B1004F7DE2 /* EnemySprite.cpp in Sources */,
 				8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */,
 				8DC3E1A91AE8D08B00BE6CA4 /* FlyEnemy.cpp in Sources */,
+				8DE3F7B41AF75AB5001E048F /* ScrollController.cpp in Sources */,
 				8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				8DC6A5CB1ADFD64A002A6159 /* State.cpp in Sources */,
