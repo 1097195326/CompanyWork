@@ -45,6 +45,8 @@ void EnemySprite::attack()
 {}
 void EnemySprite::die()
 {}
+void EnemySprite::hurt()
+{}
 void EnemySprite::attackCall()
 {
     m_model->attackCall();
@@ -52,4 +54,9 @@ void EnemySprite::attackCall()
 void EnemySprite::dieCall()
 {
     m_model->dieingCall();
+}
+void EnemySprite::hurtCall()
+{
+    actionStatus = normal;
+    m_model->hurtCall();
 }

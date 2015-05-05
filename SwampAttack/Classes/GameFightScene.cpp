@@ -25,8 +25,6 @@
 
 
 
-using namespace cocostudio;
-
 
 bool GameFightScene::init()
 {
@@ -70,7 +68,7 @@ bool GameFightScene::init()
     
     
     
-    
+    log("---- fight scene");
     Sprite  * s = Sprite::create("CloseSelected.png");
     s->setPosition(Vec2(200, 200));
     addChild(s);

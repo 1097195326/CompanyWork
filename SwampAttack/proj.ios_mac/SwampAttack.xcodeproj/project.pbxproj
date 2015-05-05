@@ -105,6 +105,7 @@
 		8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */; };
 		8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */; };
 		8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3B4561AF0B36800938655 /* HouseSprite.cpp */; };
+		8DE3E98E1AF8B5F900B1E8A6 /* GameMapScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3E98C1AF8B5F900B1E8A6 /* GameMapScene.cpp */; };
 		8DE3F7B11AF75109001E048F /* SelectMenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3F7AF1AF75109001E048F /* SelectMenuController.cpp */; };
 		8DE3F7B41AF75AB5001E048F /* ScrollController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3F7B21AF75AB5001E048F /* ScrollController.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -290,6 +291,8 @@
 		8DD7F1F61AD3737B00D86BC5 /* EnemyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyGroup.h; sourceTree = "<group>"; };
 		8DE3B4561AF0B36800938655 /* HouseSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HouseSprite.cpp; sourceTree = "<group>"; };
 		8DE3B4571AF0B36800938655 /* HouseSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSprite.h; sourceTree = "<group>"; };
+		8DE3E98C1AF8B5F900B1E8A6 /* GameMapScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMapScene.cpp; sourceTree = "<group>"; };
+		8DE3E98D1AF8B5F900B1E8A6 /* GameMapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMapScene.h; sourceTree = "<group>"; };
 		8DE3F7AF1AF75109001E048F /* SelectMenuController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectMenuController.cpp; sourceTree = "<group>"; };
 		8DE3F7B01AF75109001E048F /* SelectMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectMenuController.h; sourceTree = "<group>"; };
 		8DE3F7B21AF75AB5001E048F /* ScrollController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScrollController.cpp; sourceTree = "<group>"; };
@@ -519,6 +522,8 @@
 			children = (
 				8DC10AAE1AC3D629004F7DE2 /* GameFightScene.cpp */,
 				8DC10AAF1AC3D629004F7DE2 /* GameFightScene.h */,
+				8DE3E98C1AF8B5F900B1E8A6 /* GameMapScene.cpp */,
+				8DE3E98D1AF8B5F900B1E8A6 /* GameMapScene.h */,
 			);
 			name = scenes;
 			sourceTree = "<group>";
@@ -860,6 +865,7 @@
 				8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */,
 				8DC352761ADB66E100E6A9C2 /* House.cpp in Sources */,
 				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
+				8DE3E98E1AF8B5F900B1E8A6 /* GameMapScene.cpp in Sources */,
 				8DC34AA01ADCF96700C6B657 /* GameMap6.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */,

@@ -45,9 +45,10 @@ void WalkEnemy::gameLoop(float data)
         hurtDlay += data;
         if (hurtDlay > 3)
         {
-            m_status &= (~ e_hurt );
+//            m_status &= (~ e_hurt );
             hurtDlay = 0;
         }
+//        m_point = m_point + Vec2(-1, 0) * m_speed * 0.05;
     }
 }
 void WalkEnemy::move()

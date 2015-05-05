@@ -36,7 +36,6 @@ void GameDirector::initGameSingle()
 }
 void GameDirector::gameLoop(float data)
 {
-    
     if (m_status & s_over) {
         
         return;

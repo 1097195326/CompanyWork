@@ -25,6 +25,8 @@ float GameLoading::loadFrames()
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieAttack.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieDown.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieWait.plist"));
+    //
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieHurt.plist"));
     
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullWalk.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullAttack.plist"));

@@ -16,6 +16,18 @@ WalkEnemySprite::WalkEnemySprite(string name,Enemy * model):EnemySprite(model)
     float attackSpeed = m_model->getAttackSpeed();
     Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_walk", info.walkFrames));
     walkAction->retain();
+    if (name == "zombie") {
+//        Action * hurtAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_walk", 10),
+//                                               CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::hurtCall, this)),
+//                                               NULL);
+        
+        Action * hurtAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt", 10),
+                                              CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::hurtCall, this)),
+                                              NULL);
+        hurtAction->retain();
+        m_map["hurtAction"] = hurtAction;
+    }
+    
     
     Action * attackAction = RepeatForever::create(
                                   Spawn::create(
@@ -29,6 +41,7 @@ WalkEnemySprite::WalkEnemySprite(string name,Enemy * model):EnemySprite(model)
                                           CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::dieCall, this)),
                                           NULL);
     dieAction->retain();
+    
     
     m_map["walkAction"] = walkAction;
     m_map["attackAction"] = attackAction;
@@ -59,9 +72,23 @@ void WalkEnemySprite::update(float data)
     if (m_model->isHurt()) {
         healthBar->setVisible(true);
         healthBar->updatePercent(m_model->getHealthPercent());
+        hurt();
+        setPosition(m_model->getPosition());
     }else
     {
         healthBar->setVisible(false);
+    }
+}
+void WalkEnemySprite::hurt()
+{
+    if (m_model->getModelId() == "zombie")
+    {
+        if (actionStatus == isHurting) {
+            return;
+        }
+        actionStatus = isHurting;
+        stopAllActions();
+        runAction(m_map["hurtAction"]);
     }
 }
 void WalkEnemySprite::move()

@@ -68,6 +68,8 @@ void Enemy::hurt(int damage)
     }else
     {
         hurtDlay = 0;
+//        m_status |= e_hurt;
+        m_status &= e_clear;
         m_status |= e_hurt;
     }
     log("enemy health :%f",m_health);
@@ -114,6 +116,11 @@ void Enemy::diedCall()
 {
 //    m_status &= e_clear;
     m_status |= e_canDel;
+}
+void Enemy::hurtCall()
+{
+    m_status &= e_clear;
+    m_status |= e_walk;
 }
 void Enemy::attackCall()
 {

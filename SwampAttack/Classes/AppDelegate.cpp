@@ -1,6 +1,8 @@
 #include "AppDelegate.h"
+
 #include "HelloWorldScene.h"
 #include "GameFightScene.h"
+#include "GameMapScene.h"
 
 
 USING_NS_CC;
@@ -54,9 +56,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto scene = HelloWorld::createScene();
     
     auto gameScene = GameFightScene::scene();
+    auto mapScene = GameMapScene::scene();
     
     // run
-    director->runWithScene(gameScene);
+    director->runWithScene(mapScene);
     return true;
 }
 

@@ -18,6 +18,7 @@ protected:
     void    move();
     void    attack();
     void    die();
+    void    hurt();
 public:
     void        update(float data);
     WalkEnemySprite(string name,Enemy * model);

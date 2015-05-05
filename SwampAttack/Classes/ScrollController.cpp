@@ -26,12 +26,23 @@ void ScrollController::update(float data)
         
     }
     M_Vec2f force;
-    if (m_offSet.x > m_contentWidth - m_viewWidth) {
-        force.x = m_offSet.x - (m_contentWidth - m_viewWidth);
+    if (m_offSet.x > m_contentWidth - m_viewWidth)
+    {
+        force.x = (m_contentWidth - m_viewWidth - m_offSet.x) * 0.1;
         
+    }else if (m_offSet.x < 0.0)
+    {
+        force.x = (0.0 - m_offSet.x) * 0.1;
+    }
+    if (m_offSet.y > m_contentHeight - m_viewHeight)
+    {
+        force.y = (m_contentHeight - m_viewHeight - m_offSet.y) * 0.1;
+    }else if (m_offSet.y < 0.0)
+    {
+        force.y = (0.0 - m_offSet.y) * 0.1;
     }
     
-    M_Vec2f normalForce = multMV(m_velocity, 0.1);
+    M_Vec2f normalForce = multMV(m_velocity, -0.1);
     
     m_velocity.add(normalForce);
     m_velocity.add(force);

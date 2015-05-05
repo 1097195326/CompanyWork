@@ -87,6 +87,7 @@ public:
     void    dieingCall();
     void    diedCall();
     void    attackCall();
+    void    hurtCall();
     bool    isCanDelete();
     //--- interface for
     bool    isDied();

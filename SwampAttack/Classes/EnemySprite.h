@@ -34,9 +34,11 @@ protected:
     virtual void    move();
     virtual void    attack();
     virtual void    die();
+    virtual void    hurt();
     
     void    attackCall();
     void    dieCall();
+    void    hurtCall();
 public:
     EnemySprite(Enemy * model);
     virtual     ~EnemySprite();
