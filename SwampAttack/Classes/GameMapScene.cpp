@@ -7,6 +7,8 @@
 //
 
 #include "GameMapScene.h"
+#include "GameScrollView.h"
+
 
 bool GameMapScene::init()
 {
@@ -14,47 +16,33 @@ bool GameMapScene::init()
     {
         return false;
     }
+    Sprite * bg = Sprite::create("HelloWorld.png");
+    bg->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
+    addChild(bg);
+    
     Sprite * bgSprite = Sprite::create(ImagePath("shopBg.png"));
-//    addChild(bgSprite);
-//    bgSprite->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5));
+    bgSprite->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
+    Sprite * s1 = Sprite::create("CloseNormal.png");
     
-//    bgSprite->setTextureRect(Rect(0, 0, 400, 500));
-//    bgSprite->setPosition(Vec2( 0, 0));
-//    bgSprite->setContentSize(Size(1000,600));
+    GameScrollView * scrollView = new GameScrollView(300,200);
+    scrollView->setScrollControllerContentWidth(1136);
+    scrollView->setScrollControllerContentHeight(640);
+    scrollView->autorelease();
+    addChild(scrollView);
     
-//    auto listener = EventListenerTouchOneByOne::create();
-//    listener->setSwallowTouches(true);
-//    
-//    listener->onTouchBegan = [](Touch* touch, Event* event){
-//        GameMapScene * gameFightScene = static_cast<GameMapScene *>(event->getCurrentTarget());
-//        gameFightScene->touchBegan(touch, event);
-//        return true;
-//    };
-//    listener->onTouchMoved = [](Touch* touch, Event* event){
-//        GameMapScene * gameFightScene = static_cast<GameMapScene *>(event->getCurrentTarget());
-//        gameFightScene->touchMoved(touch, event);
-//    };
-//    listener->onTouchEnded = [](Touch* touch, Event* event){
-//        GameMapScene * gameFightScene = static_cast<GameMapScene *>(event->getCurrentTarget());
-//        gameFightScene->touchEnd(touch, event);
-//    };
-//    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+    scrollView->setPosition(Vec2(200,200));
+    scrollView->addChildToScrollView(bgSprite);
+    scrollView->addChildToScrollView(s1);
     
-//    setContentSize(Size(200, 100));
-//    setCameraMask(20,true);
-//    ClippingNode::create();
-    LayerColor * layerColor = LayerColor::create(Color4B(200, 0, 0, 200));
-    layerColor->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5));
-    addChild(layerColor);
-    layerColor->setContentSize(Size(200,300));
-    layerColor->addChild(bgSprite);
     
-    Director::getInstance()->getNotificationNode();
+
+    
+    
     return true;
 }
 bool GameMapScene::touchBegan(Touch *touch, Event *event)
 {
-    log("touch");
+//    log("touch");
     return true;
 }
 void GameMapScene::touchMoved(Touch *touch, Event *event)

@@ -38,26 +38,19 @@ private:
     M_Vec2f     m_velocity;
     
     
-    
-    bool        m_horizontal;
-    bool        m_vertical;
+    bool        m_horizontal;       // 水平
+    bool        m_vertical;         // 垂直
     float       m_viewWidth;
     float       m_viewHeight;
     float       m_contentWidth;
     float       m_contentHeight;
-private:
-    inline  M_Vec2f addMV(M_Vec2f a, M_Vec2f b)
-    {
-        return M_Vec2f(a.x + b.y, a.y + b.y);
-    }
-    inline  M_Vec2f multMV(M_Vec2f a, float d)
-    {
-        return M_Vec2f(a.x * d, a.y * d);
-    }
+
 public:
     ScrollController();
     ~ScrollController();
 public:
+    M_Vec2f getOffSet();
+    
     void    setHorizontal(bool canH);
     void    setVertical(bool canV);
     void    setViewWidth(float width);
@@ -67,6 +60,16 @@ public:
     
     void    update(float data);
     void    updateOffSet(float ox, float oy);
+    
+private:
+    inline  M_Vec2f addMV(M_Vec2f a, M_Vec2f b)
+    {
+        return M_Vec2f(a.x + b.y, a.y + b.y);
+    }
+    inline  M_Vec2f multMV(M_Vec2f a, float d)
+    {
+        return M_Vec2f(a.x * d, a.y * d);
+    }
 };
 
 #endif /* defined(__SwampAttack__ScrollController__) */
