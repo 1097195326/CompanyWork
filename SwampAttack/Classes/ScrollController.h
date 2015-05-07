@@ -9,7 +9,12 @@
 #ifndef __SwampAttack__ScrollController__
 #define __SwampAttack__ScrollController__
 
-
+enum CenterPoint
+{
+    leftTop,
+//    center,
+    leftBottom,
+};
 struct M_Vec2f
 {
     float x;
@@ -37,9 +42,10 @@ private:
     M_Vec2f     m_offSet;
     M_Vec2f     m_velocity;
     
-    
+    CenterPoint m_centerPoint;      // 坐标原点
     bool        m_horizontal;       // 水平
     bool        m_vertical;         // 垂直
+    bool        m_undulate;         // 波动
     float       m_viewWidth;
     float       m_viewHeight;
     float       m_contentWidth;
@@ -50,15 +56,19 @@ public:
     ~ScrollController();
 public:
     M_Vec2f getOffSet();
+//    bool    get
     
+    void    setCenterPoint(CenterPoint point);
     void    setHorizontal(bool canH);
     void    setVertical(bool canV);
+    void    setUndulate(bool undulate);
     void    setViewWidth(float width);
     void    setViewHeight(float height);
     void    setContentWidth(float width);
     void    setContentHeight(float height);
     
     void    update(float data);
+    void    updateVelocity(float ox, float oy);
     void    updateOffSet(float ox, float oy);
     
 private:

@@ -8,6 +8,7 @@
 
 #include "GameMapScene.h"
 #include "GameScrollView.h"
+#include "GameVerticalScrollHeadlerView.h"
 
 
 bool GameMapScene::init()
@@ -16,7 +17,7 @@ bool GameMapScene::init()
     {
         return false;
     }
-    Sprite * bg = Sprite::create("HelloWorld.png");
+    Sprite * bg = Sprite::create(ImagePath("shopBg.png"));
     bg->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
     addChild(bg);
     
@@ -24,15 +25,17 @@ bool GameMapScene::init()
     bgSprite->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
     Sprite * s1 = Sprite::create("CloseNormal.png");
     
-    GameScrollView * scrollView = new GameScrollView(300,200);
-    scrollView->setScrollControllerContentWidth(1136);
-    scrollView->setScrollControllerContentHeight(640);
+    GameVerticalScrollHeadlerView * scrollView = new GameVerticalScrollHeadlerView(800,500,800,210,6);
+    
+    scrollView->setScrollControllerContentWidth(800);
+    scrollView->setScrollControllerContentHeight(210 * 6);
+    
     scrollView->autorelease();
     addChild(scrollView);
     
-    scrollView->setPosition(Vec2(200,200));
-    scrollView->addChildToScrollView(bgSprite);
-    scrollView->addChildToScrollView(s1);
+    scrollView->setPosition(Vec2(100,100));
+    scrollView->addChild(bgSprite);
+//    scrollView->addChildToScrollView(s1);
     
     
 

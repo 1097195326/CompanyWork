@@ -106,6 +106,10 @@
 		8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */; };
 		8DD925721AF9BFB00075E9F5 /* GameScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD925701AF9BFB00075E9F5 /* GameScrollView.cpp */; };
 		8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3B4561AF0B36800938655 /* HouseSprite.cpp */; };
+		8DE3C38B1AFB0F9F00C61D89 /* GameScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3C3891AFB0F9F00C61D89 /* GameScrollHeadler.cpp */; };
+		8DE3C38E1AFB13F300C61D89 /* GameVerticalScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3C38C1AFB13F300C61D89 /* GameVerticalScrollView.cpp */; };
+		8DE3C3911AFB14F900C61D89 /* GameHorizontalScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3C38F1AFB14F900C61D89 /* GameHorizontalScrollView.cpp */; };
+		8DE3C3941AFB15A800C61D89 /* GameVerticalScrollHeadlerView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3C3921AFB15A800C61D89 /* GameVerticalScrollHeadlerView.cpp */; };
 		8DE3E98E1AF8B5F900B1E8A6 /* GameMapScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3E98C1AF8B5F900B1E8A6 /* GameMapScene.cpp */; };
 		8DE3F7B11AF75109001E048F /* SelectMenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3F7AF1AF75109001E048F /* SelectMenuController.cpp */; };
 		8DE3F7B41AF75AB5001E048F /* ScrollController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3F7B21AF75AB5001E048F /* ScrollController.cpp */; };
@@ -294,6 +298,14 @@
 		8DD925711AF9BFB00075E9F5 /* GameScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScrollView.h; sourceTree = "<group>"; };
 		8DE3B4561AF0B36800938655 /* HouseSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HouseSprite.cpp; sourceTree = "<group>"; };
 		8DE3B4571AF0B36800938655 /* HouseSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSprite.h; sourceTree = "<group>"; };
+		8DE3C3891AFB0F9F00C61D89 /* GameScrollHeadler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScrollHeadler.cpp; sourceTree = "<group>"; };
+		8DE3C38A1AFB0F9F00C61D89 /* GameScrollHeadler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScrollHeadler.h; sourceTree = "<group>"; };
+		8DE3C38C1AFB13F300C61D89 /* GameVerticalScrollView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameVerticalScrollView.cpp; sourceTree = "<group>"; };
+		8DE3C38D1AFB13F300C61D89 /* GameVerticalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameVerticalScrollView.h; sourceTree = "<group>"; };
+		8DE3C38F1AFB14F900C61D89 /* GameHorizontalScrollView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameHorizontalScrollView.cpp; sourceTree = "<group>"; };
+		8DE3C3901AFB14F900C61D89 /* GameHorizontalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHorizontalScrollView.h; sourceTree = "<group>"; };
+		8DE3C3921AFB15A800C61D89 /* GameVerticalScrollHeadlerView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameVerticalScrollHeadlerView.cpp; sourceTree = "<group>"; };
+		8DE3C3931AFB15A800C61D89 /* GameVerticalScrollHeadlerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameVerticalScrollHeadlerView.h; sourceTree = "<group>"; };
 		8DE3E98C1AF8B5F900B1E8A6 /* GameMapScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMapScene.cpp; sourceTree = "<group>"; };
 		8DE3E98D1AF8B5F900B1E8A6 /* GameMapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMapScene.h; sourceTree = "<group>"; };
 		8DE3F7AF1AF75109001E048F /* SelectMenuController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectMenuController.cpp; sourceTree = "<group>"; };
@@ -627,8 +639,16 @@
 			children = (
 				8DCA71AA1AE74787007ADFE6 /* ProgressBar.cpp */,
 				8DCA71AB1AE74787007ADFE6 /* ProgressBar.h */,
+				8DE3C3891AFB0F9F00C61D89 /* GameScrollHeadler.cpp */,
+				8DE3C38A1AFB0F9F00C61D89 /* GameScrollHeadler.h */,
 				8DD925701AF9BFB00075E9F5 /* GameScrollView.cpp */,
 				8DD925711AF9BFB00075E9F5 /* GameScrollView.h */,
+				8DE3C38C1AFB13F300C61D89 /* GameVerticalScrollView.cpp */,
+				8DE3C38D1AFB13F300C61D89 /* GameVerticalScrollView.h */,
+				8DE3C38F1AFB14F900C61D89 /* GameHorizontalScrollView.cpp */,
+				8DE3C3901AFB14F900C61D89 /* GameHorizontalScrollView.h */,
+				8DE3C3921AFB15A800C61D89 /* GameVerticalScrollHeadlerView.cpp */,
+				8DE3C3931AFB15A800C61D89 /* GameVerticalScrollHeadlerView.h */,
 			);
 			name = baseUI;
 			sourceTree = "<group>";
@@ -864,9 +884,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC3E19D1AE89C5C00BE6CA4 /* EnemyInfo.cpp in Sources */,
+				8DE3C38E1AFB13F300C61D89 /* GameVerticalScrollView.cpp in Sources */,
 				8DC430B21AC930E400AB1665 /* PropManager.cpp in Sources */,
 				8DD925721AF9BFB00075E9F5 /* GameScrollView.cpp in Sources */,
 				8DC3E1A31AE8C72300BE6CA4 /* WalkEnemySprite.cpp in Sources */,
+				8DE3C38B1AFB0F9F00C61D89 /* GameScrollHeadler.cpp in Sources */,
 				8DC6A5D11ADFD774002A6159 /* HumanShootState.cpp in Sources */,
 				8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */,
 				8DC352761ADB66E100E6A9C2 /* House.cpp in Sources */,
@@ -875,6 +897,7 @@
 				8DC34AA01ADCF96700C6B657 /* GameMap6.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */,
+				8DE3C3941AFB15A800C61D89 /* GameVerticalScrollHeadlerView.cpp in Sources */,
 				8DC3E1A01AE8C40A00BE6CA4 /* WalkEnemy.cpp in Sources */,
 				8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */,
 				8DCA71AC1AE74787007ADFE6 /* ProgressBar.cpp in Sources */,
@@ -896,6 +919,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				8DC10AB01AC3D629004F7DE2 /* GameFightScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				8DE3C3911AFB14F900C61D89 /* GameHorizontalScrollView.cpp in Sources */,
 				8DC6A5D41ADFD788002A6159 /* HumanReloadState.cpp in Sources */,
 				8DE3F7B11AF75109001E048F /* SelectMenuController.cpp in Sources */,
 				8DC34AA31ADCFA1400C6B657 /* GameMapManager.cpp in Sources */,

@@ -66,10 +66,10 @@ void GameScrollView::touchMoved(Touch *touch, Event *event)
 }
 void GameScrollView::touchEnd(Touch *touch, Event *event)
 {
-//    Vec2 perPoint = touch->getPreviousLocation();
-//    Vec2 currPoint = touch->getLocation();
-//    Vec2 c = currPoint - perPoint;
-//    m_scrollController->updateOffSet(c.x, c.y);
+    Vec2 perPoint = touch->getPreviousLocation();
+    Vec2 currPoint = touch->getLocation();
+    Vec2 c = currPoint - perPoint;
+    m_scrollController->updateVelocity(c.x, c.y);
 }
 void GameScrollView::addChildToScrollView(cocos2d::Node *node,int zOrder)
 {
@@ -77,9 +77,23 @@ void GameScrollView::addChildToScrollView(cocos2d::Node *node,int zOrder)
 }
 void GameScrollView::setScrollControllerContentWidth(float width)
 {
+    m_scrollContentWidth = width;
     m_scrollController->setContentWidth(width);
 }
 void GameScrollView::setScrollControllerContentHeight(float height)
 {
+    m_scrollContentHeight = height;
     m_scrollController->setContentHeight(height);
+}
+void GameScrollView::setScrollHorizontal(bool canH)
+{
+    m_scrollController->setHorizontal(canH);
+}
+void GameScrollView::setScrollVertical(bool canV)
+{
+    m_scrollController->setVertical(canV);
+}
+void GameScrollView::setScrollUndulate(bool undulate)
+{
+    m_scrollController->setUndulate(undulate);
 }

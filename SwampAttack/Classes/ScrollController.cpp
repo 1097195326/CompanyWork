@@ -11,7 +11,8 @@
 
 ScrollController::ScrollController():
 m_vertical(false),
-m_horizontal(false)
+m_horizontal(false),
+m_centerPoint(leftTop)
 {
     
     
@@ -28,36 +29,60 @@ void ScrollController::update(float data)
     M_Vec2f force;
     if (m_offSet.x < m_viewWidth - m_contentWidth)
     {
-        force.x = (m_viewWidth - m_contentWidth - m_offSet.x) * 0.2;
+        force.x = (m_viewWidth - m_contentWidth - m_offSet.x) * 0.5;
         
     }else if (m_offSet.x > 0.0)
     {
-        force.x = (0.0 - m_offSet.x) * 0.2;
+        force.x = (0.0 - m_offSet.x) * 0.5;
     }
-    if (m_offSet.y < m_viewHeight - m_contentHeight)
-    {
-        force.y = (m_viewHeight - m_contentHeight - m_offSet.y) * 0.2;
-    }else if (m_offSet.y > 0.0)
-    {
-        force.y = (0.0 - m_offSet.y) * 0.2;
+    if (m_centerPoint == leftTop) {
+        if (m_offSet.y > m_contentHeight - m_viewHeight)
+        {
+            force.y = (m_contentHeight - m_viewHeight - m_offSet.y) * 0.5;
+        }else if (m_offSet.y < 0.0)
+        {
+            force.y = (0.0 - m_offSet.y) * 0.5;
+        }
+    }
+    if (m_centerPoint == leftBottom) {
+        if (m_offSet.y < m_viewHeight - m_contentHeight)
+        {
+            force.y = (m_viewHeight - m_contentHeight - m_offSet.y) * 0.5;
+        }else if (m_offSet.y > 0.0)
+        {
+            force.y = (0.0 - m_offSet.y) * 0.5;
+        }
     }
     
     M_Vec2f normalForce = multMV(m_velocity, -0.1);
     
     m_velocity.add(normalForce);
-    m_velocity.add(force);
 //    printf("m_velocity x:%f,y:%f \n",m_velocity.x,m_velocity.y);
     M_Vec2f change = multMV(m_velocity, data);
     m_offSet.add(change);
+    m_offSet.add(force);
 //    printf("m_offSet x:%f,y:%f \n",m_offSet.x,m_offSet.y);
 }
 void ScrollController::updateOffSet(float ox, float oy)
 {
     if (!m_horizontal) {
-        oy = 0.0;
+        ox = 0.0;
     }
     if (!m_vertical) {
+        oy = 0.0;
+    }
+    M_Vec2f m = M_Vec2f(ox,oy);
+    m.mult(5);
+    m_velocity.add(m);
+//    m_offSet.add(m);
+}
+void ScrollController::updateVelocity(float ox, float oy)
+{
+    if (!m_horizontal) {
         ox = 0.0;
+    }
+    if (!m_vertical) {
+        oy = 0.0;
     }
     M_Vec2f m = M_Vec2f(ox,oy);
     m.mult(20);
@@ -67,6 +92,10 @@ M_Vec2f ScrollController::getOffSet()
 {
     return m_offSet;
 }
+void ScrollController::setCenterPoint(CenterPoint point)
+{
+    m_centerPoint = point;
+}
 void ScrollController::setHorizontal(bool canH)
 {
     m_horizontal = canH;
@@ -74,6 +103,10 @@ void ScrollController::setHorizontal(bool canH)
 void ScrollController::setVertical(bool canV)
 {
     m_vertical = canV;
+}
+void ScrollController::setUndulate(bool undulate)
+{
+    m_undulate = undulate;
 }
 void ScrollController::setViewWidth(float width)
 {

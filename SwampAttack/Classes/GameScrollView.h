@@ -14,20 +14,26 @@
 
 
 class GameScrollView : public ClippingNode {
-private:
+protected:
     ScrollController * m_scrollController;
     Layer   *   m_layer;
     float       m_viewWidth;
     float       m_viewHeight;
+    float       m_scrollContentWidth;
+    float       m_scrollContentHeight;
+private:
     EventListenerTouchOneByOne * m_listener;
 public:
     void    setScrollControllerContentWidth(float width);
     void    setScrollControllerContentHeight(float height);
+    void    setScrollHorizontal(bool canH);
+    void    setScrollVertical(bool canV);
+    void    setScrollUndulate(bool undulate);
     void    addChildToScrollView(Node * node, int zOrder = 1);
     
 public:
     GameScrollView(float width, float height);
-    ~GameScrollView();
+    virtual ~GameScrollView();
     void    update(float data);
     bool    touchBegan(Touch * touch, Event * event);
     void    touchMoved(Touch * touch, Event * event);
