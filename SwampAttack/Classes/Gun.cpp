@@ -9,13 +9,16 @@
 #include "Gun.h"
 #include "BulletManager.h"
 #include "GameMapManager.h"
+#include "ConfigManager.h"
+#include "GameUser.h"
 
 
 Gun::Gun(Json::Value data)
 {
     
     m_id = data["Id"].asString() ;
-    m_weaponName = data["WeaponName"].asString();
+    string weaponId = data["WeaponName"].asString();
+    m_weaponName = _C_M->getTranslateById(weaponId);
     m_modelId = data["ModelId"].asString();
     m_bulletModelId = data["BulletModelId"].asString();
     m_weaponType = data["WeaponType"].asString();
@@ -34,7 +37,7 @@ Gun::Gun(Json::Value data)
     m_magazieSize = atoi(data["MagazineSize"].asString().c_str());
     m_bulletSpeed = atof(data["BulletSpeed"].asString().c_str());
     
-    m_bullets = m_magazieSize;
+    m_bullets = _G_U->getGunBulletNumber("bullet_"+m_id);
 }
 Gun::~Gun()
 {
@@ -75,4 +78,12 @@ bool Gun::isFull()
 bool Gun::isHaveBullet()
 {
     return m_bullets > 0;
+}
+string Gun::getWeaponName()
+{
+    return m_weaponName;
+}
+int Gun::getBulletNum()
+{
+    return m_bullets;
 }

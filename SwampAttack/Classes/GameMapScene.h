@@ -19,16 +19,6 @@ private:
     
 public:
     CREATE_SCENE_FUNC(GameMapScene);
-//    static Scene * scene()
-//    {
-//        Scene * scene = Scene::create();
-//        LayerColor * layer = GameMapScene::create();
-//        
-//        scene->addChild(layer);
-//        layer->setContentSize(Size(200, 400));
-//        layer->setColor(Color3B(200, 0, 0));
-//        return scene;
-//    }
     CREATE_FUNC(GameMapScene);
     
     virtual bool    init();

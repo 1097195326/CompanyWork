@@ -49,6 +49,10 @@ private:
     int     m_magazieSize;
     float   m_bulletSpeed;
 public:
+    string  getWeaponName();
+    int     getBulletNum();
+    
+public:
     Gun(Json::Value data);
     ~Gun();
     void    gameLoop(float data);

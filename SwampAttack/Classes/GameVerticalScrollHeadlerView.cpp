@@ -19,7 +19,7 @@ m_itemHeight(itemHeight),
 m_totalCount(totalCount)
 {
     m_viewCount = m_viewHeight / m_itemHeight + 1;
-    log("view count : %d",m_viewCount);
+//    log("view count : %d",m_viewCount);
     for (int i = 0; i < m_viewCount; ++i)
     {
         addHeadlerByIndex(i);
@@ -39,14 +39,14 @@ void GameVerticalScrollHeadlerView::updateItems(float data)
     int index = ((int)offSetY / (int)m_itemHeight);
     
     if (index < 0 || index > m_totalCount - m_viewCount) {
-        log("scroll data yue jie");
-        log("index :%d",index);
+//        log("scroll data yue jie");
+//        log("index :%d",index);
         return;
     }
     if (index > m_currentIndex)
     {
-        log("xia hua");
-        log("index :%d",index);
+//        log("xia hua");
+//        log("index :%d",index);
         GameScrollHeadler * headler = m_headlerData[m_currentIndex];
 //        if (headler) {
             headler->removeFromParentAndCleanup(true);
@@ -56,8 +56,8 @@ void GameVerticalScrollHeadlerView::updateItems(float data)
     }
     else if (index < m_currentIndex && m_currentIndex > 0)
     {
-        log("shang hua");
-        log("index :%d",index);
+//        log("shang hua");
+//        log("index :%d",index);
         m_currentIndex = index;
         GameScrollHeadler * headler = m_headlerData[m_currentIndex + m_viewCount];
 //        if (headler) {

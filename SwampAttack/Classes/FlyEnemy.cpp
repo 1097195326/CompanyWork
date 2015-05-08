@@ -114,8 +114,8 @@ void FlyEnemy::randomPoint()
     {
         m_nextPoint.y = visibleOrigin.y + visibleSize.height;
     }
-    log("move x ::%f",m_nextPoint.x - m_point.x);
-    log("move y ::%f",m_nextPoint.y - m_point.y);
+//    log("move x ::%f",m_nextPoint.x - m_point.x);
+//    log("move y ::%f",m_nextPoint.y - m_point.y);
     m_speedVec = m_nextPoint - m_point;
     m_speedVec.normalize();
     m_speedVec = m_speedVec * m_speed;

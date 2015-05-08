@@ -13,9 +13,19 @@
 
 GunManager::GunManager()
 {
-    addGun(defaultGunID);
+    GCCsvHelper * gunHelper = _C_M->getCsvHelperByName("wuqi");
+    std::map<int,std::string> hashHead = gunHelper->getHashHead();
+    Json::Value data = gunHelper->getJsonData();
+    std::map<int,std::string>::iterator iter;
+    for (iter = hashHead.begin(); iter != hashHead.end(); ++iter) {
+        string gunId = iter->second;
+        m_gunData[gunId] = new Gun(data[gunId]);
+    }
+    
     
     currentGun = m_gunData[defaultGunID];
+    
+    
 }
 GunManager::~GunManager()
 {
@@ -38,9 +48,4 @@ Gun * GunManager::getCurrentGun()
 void GunManager::changeGun(string gunId)
 {
     currentGun = m_gunData[gunId];
-}
-void GunManager::addGun(string gunId)
-{
-    Json::Value gunData = ConfigManager::getInstance()->getDataByTag("wuqi", gunId);
-    m_gunData[gunId] = new Gun(gunData);
 }

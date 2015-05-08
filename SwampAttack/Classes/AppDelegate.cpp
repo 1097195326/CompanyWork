@@ -3,6 +3,7 @@
 #include "HelloWorldScene.h"
 #include "GameFightScene.h"
 #include "GameMapScene.h"
+#include "GameShopScene.h"
 
 
 USING_NS_CC;
@@ -53,13 +54,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
-    
+    auto helloScene = HelloWorld::createScene();
     auto gameScene = GameFightScene::scene();
     auto mapScene = GameMapScene::scene();
-    
+    auto shopScene = GameShopScene::scene();
     // run
-    director->runWithScene(mapScene);
+    director->runWithScene(shopScene);
     return true;
 }
 

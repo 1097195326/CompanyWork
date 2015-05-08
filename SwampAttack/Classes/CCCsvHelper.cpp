@@ -6,8 +6,9 @@ using namespace std;
 
 
 GCCsvHelper::GCCsvHelper(const std::string fileName)
-	:m_seperator(",")
-	,m_colLength(0)
+	:m_seperator(","),
+    m_colLength(0),
+    m_rowLength(0)
 {
     ConfigManager::getInstance()->addConfigData(fileName, this);
     openAndResolveFile(fileName);
@@ -156,6 +157,7 @@ bool GCCsvHelper::openAndResolveFile(const std::string fileName)
 		data.push_back(fieldVector);
 		m_colLength = std::max(m_colLength, (int)fieldVector.size());
 	}
+//    m_rowLength = line.size() - 2;
     createJsonData(data);
 
 	return true;
@@ -177,7 +179,7 @@ void GCCsvHelper::createJsonData(std::vector<std::vector<std::string> > & data)
             string head = headLine[i];
             string str = line[i];
             
-            if ("" != head)
+            if ("" != head && "" != line[0])
             {
                 string tag = findTag(head);
                 string type = findType(head);
@@ -220,6 +222,10 @@ void GCCsvHelper::createJsonData(std::vector<std::vector<std::string> > & data)
 //        lineObject[line[0].c_str()] = lineArray;
 //        root.append(lineObject);
         root[line[0].c_str()] = lineArray;
+        if ("" != line[0]) {
+            m_hashHead[m_rowLength] = line[0];
+            ++m_rowLength;
+        }
     }
 //    log("%s",root.toStyledString().c_str());
 }

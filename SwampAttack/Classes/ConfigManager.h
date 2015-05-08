@@ -24,12 +24,15 @@ private:
     ~ConfigManager();
 public:
     static ConfigManager * getInstance();
-    void addConfigData(std::string confName, GCCsvHelper * csvHelper);
+    void            addConfigData(std::string confName, GCCsvHelper * csvHelper);
     
-    Json::Value getConfigByName(const std::string & cofName);
-    Json::Value getDataByTag(const std::string & cofName, const std::string & tag);
-    Json::Value getDataByName(const std::string & cofName,const std::string & tag, const std::string & name);
-    Json::Value getDataByNameFromData(const std::string & name, Json::Value & data);
+    GCCsvHelper *   getCsvHelperByName(const std::string & cofName);
+    Json::Value     getConfigByName(const std::string & cofName);
+    int             getConfigDataNumByName(const std::string & cofName);
+    Json::Value     getDataByTag(const std::string & cofName, const std::string & tag);
+    Json::Value     getDataByName(const std::string & cofName,const std::string & tag, const std::string & name);
+    Json::Value     getDataByNameFromData(const std::string & name, Json::Value & data);
+    std::string     getTranslateById(std::string nameId);
     
     
 };

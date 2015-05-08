@@ -1,5 +1,12 @@
-武器编号,武器名称编号,武器名称,模型编号,子弹模型编号,武器类型,强化等级,伤害,伤害范围,弹片数量,暴击率,暴击伤害倍率,精度,射速,射程,装填类型,装填速度,切换武器速度,弹药上限,弹夹容量,弹道速度
-Id[string],WeaponName[string],,ModelId[string],BulletModelId[string],WeaponType[string],StrengthenLevel[int],Damage[int],DamageArea[float],ShrapnelNumber[int],CritRate[float],CritDamageRate[float],Accuracy[float],FireRate[float],Range[float],ReloadType[string],ReloadSpeed[float],SwitchSpeed[float],AmmunitionLimit[int],MagazineSize[int],BulletSpeed[float]
-200001,tid#weaponname1,M617,,,1,0,25,0,1,0.05,1.5,0.95,2,100,2,1.5,1.3,999,6,12
-200002,tid#weaponname2,柯尔特巨蟒,,,1,0,50,0,1,0.05,1.5,0.95,2,100,2,1.5,1.23,999,6,12
-,,,,,,,,,,,,,,,,,,,,
+武器编号,武器名称编号,武器名称,模型编号,子弹模型编号,受击动作,武器类型,强化等级,伤害,伤害范围,弹片数量,暴击率,暴击伤害倍率,精度,射速,射程,装填类型,装填速度,切换武器速度,弹药上限,弹夹容量,弹道速度
+Id[string],WeaponName[string],,ModelId[string],BulletModelId[string],UnderAttackAction[int],WeaponType[string],StrengthenLevel[int],Damage[int],DamageArea[float],ShrapnelNumber[int],CritRate[float],CritDamageRate[float],Accuracy[float],FireRate[float],Range[float],ReloadType[string],ReloadSpeed[float],SwitchSpeed[float],AmmunitionLimit[int],MagazineSize[int],BulletSpeed[float]
+200001,tid#weaponname1,M617,,,,1,0,50,0,1,0.1,1.5,0.95,3,100,2,1,1,240,24,200
+200002,tid#weaponname2,柯尔特巨蟒,,,,1,0,75,0,1,0.1,1.5,0.95,3,100,2,1,1,240,24,200
+200003,tid#weaponname3,线膛燧发枪,,,,2,0,30,0,5,0.05,1.5,0.7,2,100,1,0.5,1.5,12,12,200
+200004,tid#weaponname4,伯恩塞德卡宾枪,,,,2,0,32,0,7,0.05,1.5,0.6,2,100,1,0.5,1.5,12,12,200
+200005,tid#weaponname5,UZI,,,,3,0,15,0,1,0.05,1.5,0.8,12,100,2,1.5,1.5,480,48,200
+200006,tid#weaponname6,汤姆逊冲锋枪,,,,3,0,22,0,1,0.05,1.5,0.8,12,100,2,1.5,1.5,480,48,200
+200007,tid#weaponname7,AK47,,,,4,0,20,0,1,0.05,1.5,0.85,10,100,2,1.5,1.5,540,54,200
+200008,tid#weaponname8,M4A1,,,,4,0,30,0,1,0.05,1.5,0.85,10,100,2,1.5,1.5,540,54,200
+200009,tid#weaponname9,斥候步枪,,,,5,0,200,0,1,0.25,2,0.98,1,100,2,2,2,60,6,200
+200010,tid#weaponname10,L115A3,,,,5,0,300,0,1,0.25,2,0.98,1,100,2,2,2,60,6,200

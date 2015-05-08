@@ -8,6 +8,7 @@
 
 #include "ConfigManager.h"
 
+#include "GameConfig.h"
 
 
 ConfigManager::ConfigManager()
@@ -32,13 +33,23 @@ void ConfigManager::addConfigData(std::string confName, GCCsvHelper *csvHelper)
 {
     m_dataMap[confName] = csvHelper;
 }
-Json::Value ConfigManager::getConfigByName(const std::string &cofName)
+GCCsvHelper * ConfigManager::getCsvHelperByName(const std::string &cofName)
 {
     if (m_dataMap.size() > 0 && m_dataMap[cofName]) {
-        return m_dataMap[cofName]->getJsonData();
+        return m_dataMap[cofName];
     }
     GCCsvHelper * csvHelper = new GCCsvHelper(cofName);
+    return csvHelper;
+}
+Json::Value ConfigManager::getConfigByName(const std::string &cofName)
+{
+    GCCsvHelper * csvHelper = getCsvHelperByName(cofName);
     return csvHelper->getJsonData();
+}
+int ConfigManager::getConfigDataNumByName(const std::string &cofName)
+{
+    GCCsvHelper * csvHelper = getCsvHelperByName(cofName);
+    return csvHelper->getRowLength();
 }
 Json::Value ConfigManager::getDataByTag(const std::string &cofName, const std::string &tag)
 {
@@ -54,4 +65,9 @@ Json::Value ConfigManager::getDataByName(const std::string &cofName, const std::
 Json::Value ConfigManager::getDataByNameFromData(const std::string &name, Json::Value &data)
 {
     return data[name];
+}
+std::string ConfigManager::getTranslateById(std::string nameId)
+{
+    Json::Value data = getDataByName("translate", nameId, GameLanguage);
+    return data.asString();
 }
