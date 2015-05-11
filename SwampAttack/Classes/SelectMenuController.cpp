@@ -18,6 +18,8 @@ SelectMenuController::~SelectMenuController()
 }
 void SelectMenuController::setControllerSize(int size)
 {
+    m_menus.reserve(size);
+    
     for (int i = 0; i < size; ++i) {
         SelectMenu menu;
         if (i == 0) {

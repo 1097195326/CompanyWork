@@ -14,12 +14,14 @@
 
 class GameScrollHeadler : public Node  {
 private:
+    int     m_index;
     
 public:
     GameScrollHeadler();
     ~GameScrollHeadler();
 public:
-    
+    void    setIndex(int index);
+    int     getIndex();
 };
 
 #endif /* defined(__SwampAttack__GameScrollHeadler__) */

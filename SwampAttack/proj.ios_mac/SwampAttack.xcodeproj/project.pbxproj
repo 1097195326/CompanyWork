@@ -298,6 +298,7 @@
 		8DCA71AB1AE74787007ADFE6 /* ProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressBar.h; sourceTree = "<group>"; };
 		8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigManager.cpp; sourceTree = "<group>"; };
 		8DD0DE361ACE347000BA61D4 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
+		8DD594871B00AFB300A2FD0A /* GameScrollHeadlerTargetInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScrollHeadlerTargetInterface.h; sourceTree = "<group>"; };
 		8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyGroup.cpp; sourceTree = "<group>"; };
 		8DD7F1F61AD3737B00D86BC5 /* EnemyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyGroup.h; sourceTree = "<group>"; };
 		8DD8C11F1AFC5D0E00872AA2 /* GameSubject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSubject.cpp; sourceTree = "<group>"; };
@@ -569,6 +570,7 @@
 			children = (
 				8DD8C1251AFC640100872AA2 /* UserData */,
 				8DD8C11E1AFC5CB800872AA2 /* ObserverModels */,
+				8DD594871B00AFB300A2FD0A /* GameScrollHeadlerTargetInterface.h */,
 				8DC2ACD51AC5641B004F3C1B /* GameObject.cpp */,
 				8DC2ACD61AC5641B004F3C1B /* GameObject.h */,
 				8DC430A41AC929BE00AB1665 /* GameDirector.cpp */,

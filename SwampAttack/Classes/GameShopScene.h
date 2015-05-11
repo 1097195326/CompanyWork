@@ -10,9 +10,11 @@
 #define __SwampAttack__GameShopScene__
 
 #include "BaseCode.h"
+#include "GameObserver.h"
+#include "GameScrollHeadlerTargetInterface.h"
 
 
-class GameShopScene : public cocos2d::LayerColor
+class GameShopScene : public cocos2d::LayerColor, public GameObserver,public GameScrollHeadlerTargetInterface
 {
 private:
     
@@ -23,6 +25,8 @@ public:
     
     virtual bool    init();
     
+    void    updateData();
+    GameScrollHeadler * getHeadlerByIndex(int index);
 };
 
 #endif /* defined(__SwampAttack__GameShopScene__) */

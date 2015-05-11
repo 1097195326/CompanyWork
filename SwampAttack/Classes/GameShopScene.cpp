@@ -8,6 +8,7 @@
 
 #include "GameShopScene.h"
 #include "GameVerticalScrollHeadlerView.h"
+#include "ShopSelectMeumView.h"
 
 
 bool GameShopScene::init()
@@ -24,8 +25,19 @@ bool GameShopScene::init()
     bg2->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
     addChild(bg2);
     Sprite * scrollBg = Sprite::create(ImagePath("shopScrollBg.png"));
-    scrollBg->setPosition(bg2->getTextureRect().size.width * 0.5, bg2->getTextureRect().size.height * 0.4);
+    scrollBg->setPosition(bg2->getTextureRect().size.width * 0.5, bg2->getTextureRect().size.height * 0.368);
     bg2->addChild(scrollBg);
+    
+    ShopSelectMenuView * menuView = new ShopSelectMenuView(4);
+    menuView->autorelease();
+    setSubject(menuView);
+    menuView->setNormalSprite("shopItemNormal");
+    menuView->setSelectSprite("shopItemSelect");
+    menuView->setIconSprite("shopItemIcon");
+    menuView->checkIndex();
+    menuView->setPosition(bg2->getTextureRect().size.width * 0.5, bg2->getTextureRect().size.height * 0.8);
+    bg2->addChild(menuView);
+    
     
 //    GameVerticalScrollHeadlerView * scrollView = new GameVerticalScrollHeadlerView(800,500,800,210,6);
 //    
@@ -43,4 +55,12 @@ bool GameShopScene::init()
     
     
     return true;
+}
+void GameShopScene::updateData()
+{
+    log("shop scene update data");
+}
+GameScrollHeadler * GameShopScene::getHeadlerByIndex(int index)
+{
+    
 }

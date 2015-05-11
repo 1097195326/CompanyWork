@@ -78,10 +78,15 @@ void GameVerticalScrollHeadlerView::addHeadlerByIndex(int index)
 }
 GameScrollHeadler * GameVerticalScrollHeadlerView::getHeadlerWithIndex(int index)
 {
-    GameScrollHeadler * headler = new GameScrollHeadler();
+    
+//    GameScrollHeadler * headler = new GameScrollHeadler();
+    GameScrollHeadler * headler = m_target->getHeadlerByIndex(index);
+    headler->autorelease();
     return headler;
 }
-void GameVerticalScrollHeadlerView::setHeadlersData()
+void GameVerticalScrollHeadlerView::setGetHeadlerTarget(GameScrollHeadlerTargetInterface * getHeadlerTarget)
 {
+    
+    m_target = getHeadlerTarget;
     
 }

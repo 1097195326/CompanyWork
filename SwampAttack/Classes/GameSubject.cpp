@@ -64,6 +64,11 @@ void GameSubject::notify()
     for (iter = m_list_Observers.begin(); iter != m_list_Observers.end(); ++iter)
     {
         GameObserver * server = * iter;
-        server->update();
+        server->updateData();
     }
+}
+void GameSubject::notifyByName(std::string name)
+{
+    GameObserver * server = m_map_Observers[name];
+    server->updateData();
 }

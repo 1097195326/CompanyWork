@@ -10,11 +10,19 @@
 
 GameScrollHeadler::GameScrollHeadler()
 {
-    Sprite * bg = Sprite::create(ImagePath("gunItemBg.png"));
-    addChild(bg);
+//    Sprite * bg = Sprite::create(ImagePath("gunItemBg.png"));
+//    addChild(bg);
     
 }
 GameScrollHeadler::~GameScrollHeadler()
 {
     
+}
+void GameScrollHeadler::setIndex(int index)
+{
+    m_index = index;
+}
+int GameScrollHeadler::getIndex()
+{
+    return m_index;
 }

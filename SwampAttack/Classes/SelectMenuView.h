@@ -27,7 +27,11 @@ public:
     virtual void    setSelectSprite(std::string name) = 0;
 public:
     SelectMenuView(int num);
-    ~SelectMenuView();
+    virtual ~SelectMenuView();
+    
+    virtual bool    touchBegan(Touch * touch, Event * event);
+    virtual void    touchMoved(Touch * touch, Event * event);
+    virtual void    touchEnd(Touch * touch, Event * event);
     
 };
 

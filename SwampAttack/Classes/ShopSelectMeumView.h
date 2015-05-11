@@ -11,7 +11,7 @@
 
 #include "SelectMenuView.h"
 
-class ShopSelectMenuView : public SelectMenuView {
+class ShopSelectMenuView : public SelectMenuView{
 private:
     
 public:
@@ -19,6 +19,13 @@ public:
     ~ShopSelectMenuView();
     void    setNormalSprite(std::string name);
     void    setSelectSprite(std::string name);
+    void    setIconSprite(std::string name);
+    void    checkIndex();
+
+    bool    touchBegan(Touch * touch, Event * event);
+    void    touchEnd(Touch * touch, Event * event);
+    
+    
 };
 
 #endif /* defined(__SwampAttack__ShopSelectMeumView__) */

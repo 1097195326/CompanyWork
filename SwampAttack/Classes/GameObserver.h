@@ -17,8 +17,8 @@ protected:
     GameSubject * m_sub;
     
 public:
-    virtual void    update() = 0;
-    virtual void    setSubject(GameSubject * sub) = 0;
+    virtual void    updateData() = 0;
+    virtual void    setSubject(GameSubject * sub);
 public:
     GameObserver();
     virtual ~GameObserver();

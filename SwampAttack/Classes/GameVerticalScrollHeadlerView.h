@@ -11,6 +11,7 @@
 
 #include "GameVerticalScrollView.h"
 #include "GameScrollHeadler.h"
+#include "GameScrollHeadlerTargetInterface.h"
 
 
 class GameVerticalScrollHeadlerView : public GameVerticalScrollView{
@@ -22,13 +23,14 @@ private:
     int     m_viewCount;
     int     m_currentIndex;
     
+    GameScrollHeadlerTargetInterface * m_target;
     
 private:
-    void updateItems(float data);
+    void    updateItems(float data);
     void    addHeadlerByIndex(int index);
     GameScrollHeadler * getHeadlerWithIndex(int index);
 public:
-    void    setHeadlersData();
+    void    setGetHeadlerTarget(GameScrollHeadlerTargetInterface * getHeadlerTarget);
 public:
     GameVerticalScrollHeadlerView(float viewWidth ,
                                   float viewHeight,
