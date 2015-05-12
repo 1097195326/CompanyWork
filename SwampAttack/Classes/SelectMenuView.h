@@ -25,6 +25,9 @@ protected:
 public:
     virtual void    setNormalSprite(std::string name) = 0;
     virtual void    setSelectSprite(std::string name) = 0;
+    
+    int     getSelectIndex();
+    int     getControllerSize();
 public:
     SelectMenuView(int num);
     virtual ~SelectMenuView();

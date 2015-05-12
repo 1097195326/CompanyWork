@@ -26,9 +26,11 @@ private:
     void    setBoolForKey(string name,bool value);
     void    setIntForKey(string name,int value);
     void    setFloatForKey(string name,float value);
+    void    setStringForKey(string name,string value);
     bool    getBoolForKey(string name);
     int     getIntForKey(string name);
     float   getFloatForKey(string name);
+    string  getStringForKey(string name);
     
 public:
     static GameUser * getInstance();
@@ -37,10 +39,10 @@ public:
     //---  gun ----
     void    unlockGun(string gunId);
     bool    isUnlockGun(string gunId);
-    void    setGunDamage(string gunId, float damage);
-    float   getGunDamage(string gunId);
-    void    setGunBulletNumber(string bulletId,int num);
-    int     getGunBulletNumber(string bulletId);
+    void    setGunLevel(string gunId, int level);
+    int     getGunLevel(string gunId);
+    void    setGunBulletNumber(string gunId,int num);
+    int     getGunBulletNumber(string gunId);
     //--- building ---
     
     //--- prop -----

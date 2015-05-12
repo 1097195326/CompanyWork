@@ -13,7 +13,7 @@
 
 
 class GameScrollHeadler : public Node  {
-private:
+protected:
     int     m_index;
     
 public:

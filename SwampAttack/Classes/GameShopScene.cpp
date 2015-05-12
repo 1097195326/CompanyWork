@@ -7,8 +7,10 @@
 //
 
 #include "GameShopScene.h"
-#include "GameVerticalScrollHeadlerView.h"
+
 #include "ShopSelectMeumView.h"
+#include "ShopItemScrollHeadler.h"
+#include "GunManager.h"
 
 
 bool GameShopScene::init()
@@ -20,14 +22,42 @@ bool GameShopScene::init()
     Sprite * bg = Sprite::create(ImagePath("shopBg.png"));
     bg->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
     addChild(bg);
-    
     Sprite * bg2 = Sprite::create(ImagePath("shopBg2.png"));
     bg2->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
     addChild(bg2);
     Sprite * scrollBg = Sprite::create(ImagePath("shopScrollBg.png"));
     scrollBg->setPosition(bg2->getTextureRect().size.width * 0.5, bg2->getTextureRect().size.height * 0.368);
     bg2->addChild(scrollBg);
-    
+    //--- scroll view  for 4 --------
+    m_scrollViews.reserve(4);
+    for (int i = 0; i < 4 ; ++i)
+    {
+        int num = 0;
+        switch (i) {
+            case 0:
+                num = GunManager::getInstance()->getGunNum();
+                break;
+            case 1:
+                num = 6;
+                break;
+            case 2:
+                num = 6;
+                break;
+            case 3:
+                num = 6;
+                break;
+        }
+        m_scrollViews[i] = new GameVerticalScrollHeadlerView(800,400,750,210,num);
+        m_scrollViews[i]->setScrollControllerContentWidth(800);
+        m_scrollViews[i]->setScrollControllerContentHeight(210 * num);
+        m_scrollViews[i]->setGetHeadlerTarget(this);
+        m_scrollViews[i]->initView();
+        m_scrollViews[i]->autorelease();
+        m_scrollViews[i]->setPosition(bg2->getBoundingBox().origin.x, bg2->getBoundingBox().origin.y);
+        bg2->addChild(m_scrollViews[i]);
+        m_scrollViews[i]->setScale(0.0001);
+    }
+    //--- select menu view ----
     ShopSelectMenuView * menuView = new ShopSelectMenuView(4);
     menuView->autorelease();
     setSubject(menuView);
@@ -38,29 +68,28 @@ bool GameShopScene::init()
     menuView->setPosition(bg2->getTextureRect().size.width * 0.5, bg2->getTextureRect().size.height * 0.8);
     bg2->addChild(menuView);
     
-    
-//    GameVerticalScrollHeadlerView * scrollView = new GameVerticalScrollHeadlerView(800,500,800,210,6);
-//    
-//    scrollView->setScrollControllerContentWidth(800);
-//    scrollView->setScrollControllerContentHeight(210 * 6);
-//    
-//    scrollView->autorelease();
-//    addChild(scrollView);
-//    
-//    scrollView->setPosition(Vec2(100,100));
-//    scrollView->addChild(bgSprite);
-    
-    
-    
-    
-    
+   
     return true;
 }
 void GameShopScene::updateData()
 {
-    log("shop scene update data");
+    ShopSelectMenuView * menuView = (ShopSelectMenuView *) m_sub;
+    m_itemIndex = menuView->getSelectIndex();
+    
+    for (int i = 0; i < 4 ; ++i)
+    {
+        if (m_itemIndex == i)
+        {
+            m_scrollViews[i]->setScale(1);
+        }else
+        {
+            m_scrollViews[i]->setScale(0.0001);
+        }
+    }
 }
 GameScrollHeadler * GameShopScene::getHeadlerByIndex(int index)
 {
-    
+    ShopItemScrollHeadler * headler = new ShopItemScrollHeadler(index, m_itemIndex);
+    headler->autorelease();
+    return headler;
 }

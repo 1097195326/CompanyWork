@@ -103,6 +103,7 @@
 		8DC6A5D41ADFD788002A6159 /* HumanReloadState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6A5D21ADFD788002A6159 /* HumanReloadState.cpp */; };
 		8DCA71AC1AE74787007ADFE6 /* ProgressBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA71AA1AE74787007ADFE6 /* ProgressBar.cpp */; };
 		8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */; };
+		8DD7D5AB1B0199D100DD3711 /* ShopItemScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7D5A91B0199D100DD3711 /* ShopItemScrollHeadler.cpp */; };
 		8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */; };
 		8DD8C1211AFC5D0E00872AA2 /* GameSubject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C11F1AFC5D0E00872AA2 /* GameSubject.cpp */; };
 		8DD8C1241AFC5D2000872AA2 /* GameObserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C1221AFC5D2000872AA2 /* GameObserver.cpp */; };
@@ -299,6 +300,8 @@
 		8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigManager.cpp; sourceTree = "<group>"; };
 		8DD0DE361ACE347000BA61D4 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
 		8DD594871B00AFB300A2FD0A /* GameScrollHeadlerTargetInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScrollHeadlerTargetInterface.h; sourceTree = "<group>"; };
+		8DD7D5A91B0199D100DD3711 /* ShopItemScrollHeadler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopItemScrollHeadler.cpp; sourceTree = "<group>"; };
+		8DD7D5AA1B0199D100DD3711 /* ShopItemScrollHeadler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopItemScrollHeadler.h; sourceTree = "<group>"; };
 		8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyGroup.cpp; sourceTree = "<group>"; };
 		8DD7F1F61AD3737B00D86BC5 /* EnemyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyGroup.h; sourceTree = "<group>"; };
 		8DD8C11F1AFC5D0E00872AA2 /* GameSubject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSubject.cpp; sourceTree = "<group>"; };
@@ -598,6 +601,8 @@
 				8DCA71AD1AE74B6B007ADFE6 /* baseUI */,
 				8DD8C1301AFCBF6300872AA2 /* ShopSelectMeumView.cpp */,
 				8DD8C1311AFCBF6300872AA2 /* ShopSelectMeumView.h */,
+				8DD7D5A91B0199D100DD3711 /* ShopItemScrollHeadler.cpp */,
+				8DD7D5AA1B0199D100DD3711 /* ShopItemScrollHeadler.h */,
 				8DC2ACD81AC56A77004F3C1B /* HumanSprite.cpp */,
 				8DC2ACD91AC56A77004F3C1B /* HumanSprite.h */,
 				8DC10AC61AC3D7B1004F7DE2 /* EnemySprite.cpp */,
@@ -968,6 +973,7 @@
 				8DC10AB61AC3D6C7004F7DE2 /* Human.cpp in Sources */,
 				8DC2ACD71AC5641B004F3C1B /* GameObject.cpp in Sources */,
 				8DD8C12F1AFCB81C00872AA2 /* SelectMenuView.cpp in Sources */,
+				8DD7D5AB1B0199D100DD3711 /* ShopItemScrollHeadler.cpp in Sources */,
 				8DC10AB91AC3D6E2004F7DE2 /* Bullet.cpp in Sources */,
 				8DC253491ACB970400D10652 /* CCCsvHelper.cpp in Sources */,
 				8DC10ACB1AC40222004F7DE2 /* EnemyManager.cpp in Sources */,

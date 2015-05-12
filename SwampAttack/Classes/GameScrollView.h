@@ -17,6 +17,7 @@ class GameScrollView : public ClippingNode {
 protected:
     ScrollController * m_scrollController;
     Layer   *   m_layer;
+//    Sprite   *   m_layer;
     float       m_viewWidth;
     float       m_viewHeight;
     float       m_scrollContentWidth;

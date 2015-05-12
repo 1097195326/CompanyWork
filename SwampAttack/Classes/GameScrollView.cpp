@@ -26,6 +26,7 @@ m_viewHeight(height)
     m_scrollController->setViewHeight(m_viewHeight);
     
     m_layer = Layer::create();
+//    m_layer = Sprite::create();
     addChild(m_layer,3);
     
     //------ listener --------
@@ -37,6 +38,7 @@ m_viewHeight(height)
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener, this);
     
     schedule(CC_SCHEDULE_SELECTOR(GameScrollView::update), 1/60);
+//    scheduleUpdate();
 }
 GameScrollView::~GameScrollView()
 {
@@ -51,8 +53,9 @@ void GameScrollView::update(float data)
 }
 bool GameScrollView::touchBegan(Touch *touch, Event *event)
 {
-    Rect r = Rect(getPosition().x, getPosition().y, m_viewWidth, m_viewHeight);
-    if (r.containsPoint(touch->getLocation())) {
+    Vec2 p = convertToNodeSpace(touch->getLocation());
+    Rect r = Rect(0, 0, m_viewWidth, m_viewHeight);
+    if (r.containsPoint(p)) {
         return true;
     }
     return false;

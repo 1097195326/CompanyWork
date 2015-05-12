@@ -18,12 +18,9 @@ m_itemWidth(itemWidth),
 m_itemHeight(itemHeight),
 m_totalCount(totalCount)
 {
-    m_viewCount = m_viewHeight / m_itemHeight + 1;
+    m_viewCount = m_viewHeight / m_itemHeight + 2;
 //    log("view count : %d",m_viewCount);
-    for (int i = 0; i < m_viewCount; ++i)
-    {
-        addHeadlerByIndex(i);
-    }
+    
     m_currentIndex = 0;
     
     schedule(CC_SCHEDULE_SELECTOR(GameVerticalScrollHeadlerView::updateItems), 1/60);
@@ -31,6 +28,13 @@ m_totalCount(totalCount)
 GameVerticalScrollHeadlerView::~GameVerticalScrollHeadlerView()
 {
     
+}
+void GameVerticalScrollHeadlerView::initView()
+{
+    for (int i = 0; i < m_viewCount; ++i)
+    {
+        addHeadlerByIndex(i);
+    }
 }
 void GameVerticalScrollHeadlerView::updateItems(float data)
 {
@@ -71,22 +75,17 @@ void GameVerticalScrollHeadlerView::addHeadlerByIndex(int index)
 {
     GameScrollHeadler * headler = getHeadlerWithIndex(index);
     Vec2 v_p = Vec2(m_itemWidth * 0.5, 0.0 - m_itemHeight * (index + 1) + m_viewHeight + m_itemHeight * 0.5);
-    headler->setPosition(v_p);
     addChildToScrollView(headler);
-
+    headler->setPosition(v_p);
     m_headlerData[index] = headler;
 }
 GameScrollHeadler * GameVerticalScrollHeadlerView::getHeadlerWithIndex(int index)
 {
-    
-//    GameScrollHeadler * headler = new GameScrollHeadler();
+    assert(m_target);
     GameScrollHeadler * headler = m_target->getHeadlerByIndex(index);
-    headler->autorelease();
     return headler;
 }
 void GameVerticalScrollHeadlerView::setGetHeadlerTarget(GameScrollHeadlerTargetInterface * getHeadlerTarget)
 {
-    
     m_target = getHeadlerTarget;
-    
 }

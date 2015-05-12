@@ -55,8 +55,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     auto helloScene = HelloWorld::createScene();
-    auto gameScene = GameFightScene::scene();
-    auto mapScene = GameMapScene::scene();
+//    auto gameScene = GameFightScene::scene();
+//    auto mapScene = GameMapScene::scene();
     auto shopScene = GameShopScene::scene();
     // run
     director->runWithScene(shopScene);

@@ -13,7 +13,7 @@
 #include "GameUser.h"
 
 
-Gun::Gun(Json::Value data)
+Gun::Gun(Json::Value data):m_isMaxLevel(false)
 {
     
     m_id = data["Id"].asString() ;
@@ -21,9 +21,9 @@ Gun::Gun(Json::Value data)
     m_weaponName = _C_M->getTranslateById(weaponId);
     m_modelId = data["ModelId"].asString();
     m_bulletModelId = data["BulletModelId"].asString();
+    m_underAttackAction = atoi(data["UnderAttackAction"].asString().c_str());
     m_weaponType = data["WeaponType"].asString();
-    m_strengthenLevel = atoi(data["StrengthenLevel"].asString().c_str());
-    m_damage = atof(data["Damage"].asString().c_str());
+    m_limitLevel = atoi(data["LimitLevel"].asString().c_str());
     m_damageArea = atof(data["DamageArea"].asString().c_str());
     m_shrapnelNumber = atoi(data["ShrapnelNumber"].asString().c_str());
     m_critRate = atof(data["CritRate"].asString().c_str());
@@ -31,13 +31,33 @@ Gun::Gun(Json::Value data)
     m_accuracy = atof(data["Accuracy"].asString().c_str());
     m_fireRate = atof(data["FireRate"].asString().c_str());
     m_range = atof(data["Range"].asString().c_str());
+    m_bulletSpeed = atof(data["BulletSpeed"].asString().c_str());
+    m_reloadType = atoi(data["ReloadType"].asString().c_str());
     m_reloadSpeed = atof(data["ReloadSpeed"].asString().c_str());
     m_switchSpeed = atof(data["SwitchSpeed"].asString().c_str());
     m_ammunltionLimit = atoi(data["AmmunitionLimit"].asString().c_str());
     m_magazieSize = atoi(data["MagazineSize"].asString().c_str());
-    m_bulletSpeed = atof(data["BulletSpeed"].asString().c_str());
+    m_bulletPrice = atoi(data["BulletPrice"].asString().c_str());
     
-    m_bullets = _G_U->getGunBulletNumber("bullet_"+m_id);
+    m_unlockMission = data["UnlockMission"].asString();
+    m_unlockGold = atoi(data["UnlockGold"].asString().c_str());
+    
+    m_weaponDescription = data["WeaponDescription"].asString();// _C_M->getTranslateById( data["WeaponDescription"].asString());
+    //-------
+    m_bullets = _G_U->getGunBulletNumber(m_id);
+    m_strengthenLevel = _G_U->getGunLevel(m_id);
+    string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
+    Json::Value upgradeData = _C_M->getDataByTag("wuqiUpgrade",upId);
+    m_damage = atof(upgradeData["Damage"].asString().c_str());
+    if (m_limitLevel == m_strengthenGold) {
+        m_isMaxLevel = true;
+    }else
+    {
+        m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
+    }
+    
+    
+    
 }
 Gun::~Gun()
 {
@@ -71,6 +91,10 @@ void Gun::addBullet()
 {
     ++m_bullets;
 }
+bool Gun::isMaxLevel()
+{
+    return m_isMaxLevel;
+}
 bool Gun::isFull()
 {
     return m_bullets == m_magazieSize;
@@ -79,11 +103,104 @@ bool Gun::isHaveBullet()
 {
     return m_bullets > 0;
 }
-string Gun::getWeaponName()
+void Gun::setStrengthenLevel(int level)
 {
-    return m_weaponName;
+    _G_U->setGunLevel(m_id, level);
 }
 int Gun::getBulletNum()
 {
     return m_bullets;
 }
+string Gun::getWeaponName()
+{
+    return m_weaponName;
+}
+string Gun::getModelId()
+{
+    return m_modelId;
+}
+string Gun::getBulletModelId()
+{
+    return m_bulletModelId;
+}
+int Gun::getUnderAttackAction()
+{
+    return m_underAttackAction;
+}
+int Gun::getStrengthenLevel()
+{
+    return m_strengthenLevel;
+}
+float Gun::getDamage()
+{
+    return m_damage;
+}
+float Gun::getDamageArea()
+{
+    return m_damageArea;
+}
+int Gun::getShrapnelNumber()
+{
+    return m_shrapnelNumber;
+}
+float Gun::getCritRate()
+{
+    return m_critRate;
+}
+float Gun::getCritDamageRate()
+{
+    return m_critDamageRate;
+}
+float Gun::getAccuracy()
+{
+    return m_accuracy;
+}
+float Gun::getFireRate()
+{
+    return m_fireRate;
+}
+float Gun::getRange()
+{
+    return m_range;
+}
+float Gun::getBulletSpeed()
+{
+    return m_bulletSpeed;
+}
+int Gun::getReloadType()
+{
+    return m_reloadType;
+}
+float Gun::getReloadSpeed()
+{
+    return m_reloadSpeed;
+}
+float Gun::getSwitchSpeed()
+{
+    return m_switchSpeed;
+}
+int Gun::getAmmunltionLimit()
+{
+    return m_ammunltionLimit;
+}
+int Gun::getMagazieSize()
+{
+    return m_magazieSize;
+}
+int Gun::getBulletPrice()
+{
+    return m_bulletPrice;
+}
+string Gun::getUnlockMission()
+{
+    return m_unlockMission;
+}
+int Gun::getUnlockGold()
+{
+    return m_unlockGold;
+}
+string Gun::getWeaponDescription()
+{
+    return m_weaponDescription;
+}
+

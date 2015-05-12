@@ -29,21 +29,21 @@ bool GameUser::isUnlockGun(string gunId)
 {
     return getBoolForKey(gunId);
 }
-void GameUser::setGunDamage(string gunId,float damage)
+void GameUser::setGunLevel(string gunId, int level)
 {
-    setFloatForKey(gunId, damage);
+    setIntForKey(gunId + "_level", level);
 }
-float GameUser::getGunDamage(string gunId)
+int GameUser::getGunLevel(string gunId)
 {
-    return getFloatForKey(gunId);
+    return getIntForKey(gunId + "_level");
 }
-void GameUser::setGunBulletNumber(string bulletId, int num)
+void GameUser::setGunBulletNumber(string gunId, int num)
 {
-    setIntForKey(bulletId, num);
+    setIntForKey(gunId + "_bullet", num);
 }
-int GameUser::getGunBulletNumber(string bulletId)
+int GameUser::getGunBulletNumber(string gunId)
 {
-    return getIntForKey(bulletId);
+    return getIntForKey(gunId + "_bullet");
 }
 
 //----- private function
@@ -62,6 +62,11 @@ void GameUser::setFloatForKey(string name, float value)
     m_user->setFloatForKey(name.c_str(), value);
     m_user->flush();
 }
+void GameUser::setStringForKey(string name, string value)
+{
+    m_user->setStringForKey(name.c_str(), value);
+    m_user->flush();
+}
 bool GameUser::getBoolForKey(string name)
 {
     return m_user->getBoolForKey(name.c_str(), false);
@@ -73,4 +78,8 @@ int GameUser::getIntForKey(string name)
 float GameUser::getFloatForKey(string name)
 {
     return m_user->getFloatForKey(name.c_str());
+}
+string GameUser::getStringForKey(string name)
+{
+    return m_user->getStringForKey(name.c_str());
 }

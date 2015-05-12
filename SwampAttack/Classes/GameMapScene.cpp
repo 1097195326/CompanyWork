@@ -25,16 +25,16 @@ bool GameMapScene::init()
     bgSprite->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
     Sprite * s1 = Sprite::create("CloseNormal.png");
     
-    GameVerticalScrollHeadlerView * scrollView = new GameVerticalScrollHeadlerView(800,500,800,210,6);
-    
-    scrollView->setScrollControllerContentWidth(800);
-    scrollView->setScrollControllerContentHeight(210 * 6);
-    
-    scrollView->autorelease();
-    addChild(scrollView);
-    
-    scrollView->setPosition(Vec2(100,100));
-    scrollView->addChild(bgSprite);
+//    GameVerticalScrollHeadlerView * scrollView = new GameVerticalScrollHeadlerView(800,500,800,210,6);
+//    scrollView->setGetHeadlerTarget(this);
+//    scrollView->setScrollControllerContentWidth(800);
+//    scrollView->setScrollControllerContentHeight(210 * 6);
+//    
+//    scrollView->autorelease();
+//    addChild(scrollView);
+//    
+//    scrollView->setPosition(Vec2(100,100));
+//    scrollView->addChild(bgSprite);
 //    scrollView->addChildToScrollView(s1);
     
     

@@ -35,3 +35,11 @@ void SelectMenuView::touchEnd(Touch *touch, Event *event)
 {
     
 }
+int SelectMenuView::getSelectIndex()
+{
+    return m_controller->getSelectIndex();
+}
+int SelectMenuView::getControllerSize()
+{
+    return m_controller->getControllerSize();
+}

@@ -10,7 +10,7 @@
 
 GameScrollHeadler::GameScrollHeadler()
 {
-//    Sprite * bg = Sprite::create(ImagePath("gunItemBg.png"));
+//    Sprite * bg = Sprite::create(ImagePath("shopItemBg1.png"));
 //    addChild(bg);
     
 }

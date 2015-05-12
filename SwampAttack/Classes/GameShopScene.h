@@ -12,12 +12,14 @@
 #include "BaseCode.h"
 #include "GameObserver.h"
 #include "GameScrollHeadlerTargetInterface.h"
+#include "GameVerticalScrollHeadlerView.h"
 
 
 class GameShopScene : public cocos2d::LayerColor, public GameObserver,public GameScrollHeadlerTargetInterface
 {
 private:
-    
+    int     m_itemIndex;
+    std::vector< GameVerticalScrollHeadlerView * >m_scrollViews;
     
 public:
     CREATE_SCENE_FUNC(GameShopScene);
