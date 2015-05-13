@@ -37,3 +37,60 @@ ActionInterval * BaseUtil::makeAnimateWithNameIndexDelay(const std::string & nam
     animation->setDelayPerUnit(delay);
     return Animate::create(animation);
 }
+void BaseUtil::addGray(Sprite* sp)
+{
+    do
+    {
+        GLchar* pszFragSource =
+        "#ifdef GL_ES \n \
+        precision mediump float; \n \
+        #endif \n \
+        uniform sampler2D u_texture; \n \
+        varying vec2 v_texCoord; \n \
+        varying vec4 v_fragmentColor; \n \
+        void main(void) \n \
+        { \n \
+        // Convert to greyscale using NTSC weightings \n \
+        vec4 col = texture2D(u_texture, v_texCoord); \n \
+        float grey = dot(col.rgb, vec3(0.299, 0.587, 0.114)); \n \
+        gl_FragColor = vec4(grey, grey, grey, col.a); \n \
+        }";
+        GLProgram* pProgram = new GLProgram();
+        pProgram->initWithByteArrays(ccPositionTextureColor_vert, pszFragSource);
+        sp->setGLProgram(pProgram);
+        CHECK_GL_ERROR_DEBUG();
+        
+        sp->getGLProgram()->bindAttribLocation(GLProgram::ATTRIBUTE_NAME_POSITION, GLProgram::VERTEX_ATTRIB_POSITION);
+        sp->getGLProgram()->bindAttribLocation(GLProgram::ATTRIBUTE_NAME_COLOR, GLProgram::VERTEX_ATTRIB_COLOR);
+        sp->getGLProgram()->bindAttribLocation(GLProgram::ATTRIBUTE_NAME_TEX_COORD, GLProgram::VERTEX_ATTRIB_TEX_COORD);
+        
+        CHECK_GL_ERROR_DEBUG();
+        
+        sp->getGLProgram()->link();
+        CHECK_GL_ERROR_DEBUG();
+        
+        sp->getGLProgram()->updateUniforms();
+        CHECK_GL_ERROR_DEBUG();
+    } while (0);
+}
+void BaseUtil::removeGray(Sprite* sp)
+{
+    do
+    {
+        GLProgram* pProgram = GLProgramCache::getInstance()->getGLProgram(GLProgram::SHADER_NAME_POSITION_TEXTURE_COLOR);
+        sp->setGLProgram(pProgram);
+        CHECK_GL_ERROR_DEBUG();
+        
+        
+        sp->getGLProgram()->bindAttribLocation(GLProgram::ATTRIBUTE_NAME_POSITION, GLProgram::VERTEX_ATTRIB_POSITION);
+        sp->getGLProgram()->bindAttribLocation(GLProgram::ATTRIBUTE_NAME_COLOR, GLProgram::VERTEX_ATTRIB_COLOR);
+        sp->getGLProgram()->bindAttribLocation(GLProgram::ATTRIBUTE_NAME_TEX_COORD, GLProgram::VERTEX_ATTRIB_TEX_COORD);
+        CHECK_GL_ERROR_DEBUG();
+        
+        sp->getGLProgram()->link();
+        CHECK_GL_ERROR_DEBUG();
+        
+        sp->getGLProgram()->updateUniforms();
+        CHECK_GL_ERROR_DEBUG();
+    } while (0);
+}

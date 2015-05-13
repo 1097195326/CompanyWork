@@ -78,7 +78,7 @@ void Human::setView()
 ///---- interface for view call back
 void Human::reloadCall()
 {
-    m_gun->addBullet();
+    m_gun->reloadBullet();
 //    m_status = _h_reloaded;
 }
 void Human::shootCall()

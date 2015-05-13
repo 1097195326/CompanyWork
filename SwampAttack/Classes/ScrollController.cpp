@@ -34,27 +34,27 @@ void ScrollController::update(float data)
     {
         if (m_offSet.x < m_viewWidth - m_contentWidth)
         {
-            force.x = (m_viewWidth - m_contentWidth - m_offSet.x) * 0.3;
+            force.x = (m_viewWidth - m_contentWidth - m_offSet.x) * 0.1;
         }else if (m_offSet.x > 0.0)
         {
-            force.x = (0.0 - m_offSet.x) * 0.3;
+            force.x = (0.0 - m_offSet.x) * 0.1;
         }
         if (m_centerPoint == leftTop) {
             if (m_offSet.y > m_contentHeight - m_viewHeight)
             {
-                force.y = (m_contentHeight - m_viewHeight - m_offSet.y) * 0.3;
+                force.y = (m_contentHeight - m_viewHeight - m_offSet.y) * 0.1;
             }else if (m_offSet.y < 0.0)
             {
-                force.y = (0.0 - m_offSet.y) * 0.3;
+                force.y = (0.0 - m_offSet.y) * 0.1;
             }
         }
         if (m_centerPoint == leftBottom) {
             if (m_offSet.y < m_viewHeight - m_contentHeight)
             {
-                force.y = (m_viewHeight - m_contentHeight - m_offSet.y) * 0.3;
+                force.y = (m_viewHeight - m_contentHeight - m_offSet.y) * 0.1;
             }else if (m_offSet.y > 0.0)
             {
-                force.y = (0.0 - m_offSet.y) * 0.3;
+                force.y = (0.0 - m_offSet.y) * 0.1;
             }
         }
     }else

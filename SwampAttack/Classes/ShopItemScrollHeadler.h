@@ -10,12 +10,31 @@
 #define __SwampAttack__ShopItemScrollHeadler__
 
 #include "GameScrollHeadler.h"
+#include "ProgressBar.h"
+
 
 class ShopItemScrollHeadler : public GameScrollHeadler {
 private:
     int     m_itemIndex;
+    Label   *   m_buyLabel;
+    Label   *   m_upgradeLabel;
+    Label   *   m_bulletsLabel;
+    
+    ProgressBar *   m_progressBar;
+    
+    MenuItemImage * m_upGradeButton;
+    MenuItemImage * m_unLockButton;
+    MenuItemImage * m_buyButton;
     
     
+private:
+    void    initGunView();
+    void    updateGunView();
+    
+    
+    void    upGrade(Ref * pSender);
+    void    unLock(Ref * pSender);
+    void    buy(Ref * pSender);
 public:
     
     ShopItemScrollHeadler(int index,int itemIndex);

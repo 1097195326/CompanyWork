@@ -36,6 +36,8 @@ public:
     static GameUser * getInstance();
     //--- health ----
     int     getUserHealth();
+    void    setUserGold(int gold);
+    int     getUserGold();
     //---  gun ----
     void    unlockGun(string gunId);
     bool    isUnlockGun(string gunId);

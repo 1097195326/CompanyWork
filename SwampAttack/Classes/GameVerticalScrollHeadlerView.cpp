@@ -82,7 +82,7 @@ void GameVerticalScrollHeadlerView::addHeadlerByIndex(int index)
 GameScrollHeadler * GameVerticalScrollHeadlerView::getHeadlerWithIndex(int index)
 {
     assert(m_target);
-    GameScrollHeadler * headler = m_target->getHeadlerByIndex(index);
+    GameScrollHeadler * headler = m_target->getHeadlerByIndex(index,getTag());
     return headler;
 }
 void GameVerticalScrollHeadlerView::setGetHeadlerTarget(GameScrollHeadlerTargetInterface * getHeadlerTarget)

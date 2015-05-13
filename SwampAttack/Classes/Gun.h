@@ -20,11 +20,16 @@ class Gun : public GameObject{
 private:
     int     m_bullets;
     bool    m_isMaxLevel;
+    bool    m_isUnlock;
+private:
+    
 public:
+    void    unlockGun();
+    void    reloadBullet();
     void    fire(Vec2 position);
-    void    addBullet();
     
     
+    bool    isUnlock();
     bool    isFull();
     bool    isHaveBullet();
     bool    isMaxLevel();
@@ -60,15 +65,17 @@ private:
     
 public:
     //--- set function --
-    void    setStrengthenLevel(int level);
-    
+    void    addStrengthenLevel();
+    void    buyBullet();
     //--- get function ---
     string  getWeaponName();
     int     getBulletNum();
     string  getModelId();
     string  getBulletModelId();
     int     getUnderAttackAction();
+    int     getLimitLevel();
     int     getStrengthenLevel();
+    int     getStrengthenGold();
     float   getDamage();
     float   getDamageArea();
     int     getShrapnelNumber();

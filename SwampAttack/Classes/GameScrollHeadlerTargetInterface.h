@@ -12,7 +12,7 @@
 #include "GameScrollHeadler.h"
 
 struct GameScrollHeadlerTargetInterface {
-     virtual GameScrollHeadler * getHeadlerByIndex(int index) = 0;
+     virtual GameScrollHeadler * getHeadlerByIndex(int index,int viewTag) = 0;
 };
 
 #endif /* defined(__SwampAttack__GameScrollHeadlerTargetInterface__) */

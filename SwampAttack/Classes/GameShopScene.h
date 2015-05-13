@@ -18,7 +18,6 @@
 class GameShopScene : public cocos2d::LayerColor, public GameObserver,public GameScrollHeadlerTargetInterface
 {
 private:
-    int     m_itemIndex;
     std::vector< GameVerticalScrollHeadlerView * >m_scrollViews;
     
 public:
@@ -28,7 +27,8 @@ public:
     virtual bool    init();
     
     void    updateData();
-    GameScrollHeadler * getHeadlerByIndex(int index);
+    void    upGrade(Ref * pSender);
+    GameScrollHeadler * getHeadlerByIndex(int index,int viewTag);
 };
 
 #endif /* defined(__SwampAttack__GameShopScene__) */

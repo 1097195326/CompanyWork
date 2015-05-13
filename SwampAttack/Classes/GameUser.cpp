@@ -21,6 +21,14 @@ GameUser * GameUser::getInstance()
     static GameUser user;
     return &user;
 }
+void GameUser::setUserGold(int gold)
+{
+    setIntForKey("user_gold", gold);
+}
+int GameUser::getUserGold()
+{
+    return getIntForKey("user_gold");
+}
 void GameUser::unlockGun(string gunId)
 {
     setBoolForKey(gunId, true);

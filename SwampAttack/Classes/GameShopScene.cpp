@@ -51,6 +51,7 @@ bool GameShopScene::init()
         m_scrollViews[i]->setScrollControllerContentWidth(800);
         m_scrollViews[i]->setScrollControllerContentHeight(210 * num);
         m_scrollViews[i]->setGetHeadlerTarget(this);
+        m_scrollViews[i]->setTag(i);
         m_scrollViews[i]->initView();
         m_scrollViews[i]->autorelease();
         m_scrollViews[i]->setPosition(bg2->getBoundingBox().origin.x, bg2->getBoundingBox().origin.y);
@@ -68,28 +69,40 @@ bool GameShopScene::init()
     menuView->setPosition(bg2->getTextureRect().size.width * 0.5, bg2->getTextureRect().size.height * 0.8);
     bg2->addChild(menuView);
     
-   
+//    MenuItemImage * upButton = MenuItemImage::create(ImagePath("shopItemButtonNormal.png"),
+//                                          ImagePath("shopItemButtonNormal.png"),
+//                                          CC_CALLBACK_1(GameShopScene::upGrade, this));
+//    
+////    upButton->setNormalImage()
+//    
+//    Menu * buttonMenu = Menu::create(upButton, NULL);
+//    addChild(buttonMenu);
+    
     return true;
+}
+void GameShopScene::upGrade(cocos2d::Ref *pSender)
+{
+    log("--------");
 }
 void GameShopScene::updateData()
 {
     ShopSelectMenuView * menuView = (ShopSelectMenuView *) m_sub;
-    m_itemIndex = menuView->getSelectIndex();
+    int itemIndex = menuView->getSelectIndex();
     
     for (int i = 0; i < 4 ; ++i)
     {
-        if (m_itemIndex == i)
+        if (itemIndex == i)
         {
             m_scrollViews[i]->setScale(1);
         }else
         {
-            m_scrollViews[i]->setScale(0.0001);
+             m_scrollViews[i]->setScale(0.0001);
         }
     }
 }
-GameScrollHeadler * GameShopScene::getHeadlerByIndex(int index)
+GameScrollHeadler * GameShopScene::getHeadlerByIndex(int index,int viewTag)
 {
-    ShopItemScrollHeadler * headler = new ShopItemScrollHeadler(index, m_itemIndex);
+    ShopItemScrollHeadler * headler = new ShopItemScrollHeadler(index, viewTag);
     headler->autorelease();
     return headler;
 }

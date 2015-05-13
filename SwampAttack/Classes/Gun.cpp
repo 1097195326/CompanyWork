@@ -13,7 +13,7 @@
 #include "GameUser.h"
 
 
-Gun::Gun(Json::Value data):m_isMaxLevel(false)
+Gun::Gun(Json::Value data):m_isMaxLevel(false),m_isUnlock(false)
 {
     
     m_id = data["Id"].asString() ;
@@ -49,14 +49,15 @@ Gun::Gun(Json::Value data):m_isMaxLevel(false)
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
     Json::Value upgradeData = _C_M->getDataByTag("wuqiUpgrade",upId);
     m_damage = atof(upgradeData["Damage"].asString().c_str());
-    if (m_limitLevel == m_strengthenGold) {
+    if (m_limitLevel == m_strengthenLevel)
+    {
         m_isMaxLevel = true;
     }else
     {
         m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
     }
     
-    
+    m_isUnlock = _G_U->isUnlockGun(m_id);
     
 }
 Gun::~Gun()
@@ -87,9 +88,18 @@ void Gun::fire(Vec2 position)
     BulletManager::getInstance()->fire(bp);
     
 }
-void Gun::addBullet()
+void Gun::reloadBullet()
 {
     ++m_bullets;
+}
+bool Gun::isUnlock()
+{
+    return m_isUnlock;
+}
+void Gun::unlockGun()
+{
+    m_isUnlock = true;
+    _G_U->unlockGun(m_id);
 }
 bool Gun::isMaxLevel()
 {
@@ -103,9 +113,28 @@ bool Gun::isHaveBullet()
 {
     return m_bullets > 0;
 }
-void Gun::setStrengthenLevel(int level)
+void Gun::addStrengthenLevel()
 {
-    _G_U->setGunLevel(m_id, level);
+    m_strengthenLevel += 1;
+    _G_U->setGunLevel(m_id, m_strengthenLevel);
+    string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
+    Json::Value upgradeData = _C_M->getDataByTag("wuqiUpgrade",upId);
+    m_damage = atof(upgradeData["Damage"].asString().c_str());
+    if (m_limitLevel == m_strengthenLevel)
+    {
+        m_isMaxLevel = true;
+    }else
+    {
+        m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
+    }
+}
+void Gun::buyBullet()
+{
+    m_bullets += m_magazieSize;
+    _G_U->setGunBulletNumber(m_id, m_bullets);
+    int userGold = _G_U->getUserGold();
+    userGold -= m_bulletPrice;
+    _G_U->setUserGold(userGold);
 }
 int Gun::getBulletNum()
 {
@@ -127,9 +156,17 @@ int Gun::getUnderAttackAction()
 {
     return m_underAttackAction;
 }
+int Gun::getLimitLevel()
+{
+    return m_limitLevel;
+}
 int Gun::getStrengthenLevel()
 {
     return m_strengthenLevel;
+}
+int Gun::getStrengthenGold()
+{
+    return m_strengthenGold;
 }
 float Gun::getDamage()
 {
