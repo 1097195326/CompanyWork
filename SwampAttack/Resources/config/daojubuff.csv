@@ -1,0 +1,5 @@
+状态编号,状态名称,状态模型,状态类型,伤害,百分比伤害,持续时间
+BuffId[string],,ModelId[string],BuffType[string],Damage[string],PercentageDamage[string],Time[string]
+600001,燃烧瓶-灼烧,,1,5,0.04,5
+600002,暴风雪-伤害,,1,10,0.05,5
+600003,暴风雪-减速,,2,,0.5,5

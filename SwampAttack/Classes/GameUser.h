@@ -46,9 +46,15 @@ public:
     void    setGunBulletNumber(string gunId,int num);
     int     getGunBulletNumber(string gunId);
     //--- building ---
-    
+    void    unlockBuilding(string buildingId);
+    bool    isUnlockBuilding(string buildingId);
+    void    setBuildingLevel(string buildingId,int level);
+    int     getBuildingLevel(string buildingId);
     //--- prop -----
-    
+    void    unlockProp(string propId);
+    bool    isUnlockProp(string propId);
+    void    setPorpNum(string propId,int num);
+    int     getPropNum(string propId);
     //--- award ----
     
     

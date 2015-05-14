@@ -9,6 +9,20 @@
 #ifndef __SwampAttack__PropManager__
 #define __SwampAttack__PropManager__
 
-#include <stdio.h>
+#include "Prop.h"
+
+
+class PropManager {
+private:
+    std::map<string,Prop *> m_propData;
+    std::map<int,std::string> m_hashHead;
+public:
+    Prop *   getPropByIndex(int index);
+    int     getPropNum();
+public:
+    static PropManager * getInstance();
+    PropManager();
+    ~PropManager();
+};
 
 #endif /* defined(__SwampAttack__PropManager__) */

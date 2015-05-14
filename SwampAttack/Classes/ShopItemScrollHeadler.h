@@ -30,7 +30,10 @@ private:
 private:
     void    initGunView();
     void    updateGunView();
-    
+    void    initDefenseView();
+    void    updateDefenseView();
+    void    initDaojuView();
+    void    updateDaojuView();
     
     void    upGrade(Ref * pSender);
     void    unLock(Ref * pSender);

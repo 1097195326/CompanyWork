@@ -29,31 +29,65 @@ int GameUser::getUserGold()
 {
     return getIntForKey("user_gold");
 }
+//--- gun ---
 void GameUser::unlockGun(string gunId)
 {
-    setBoolForKey(gunId, true);
+    setBoolForKey(gunId + "gun", true);
 }
 bool GameUser::isUnlockGun(string gunId)
 {
-    return getBoolForKey(gunId);
+    return getBoolForKey(gunId + "gun");
 }
 void GameUser::setGunLevel(string gunId, int level)
 {
-    setIntForKey(gunId + "_level", level);
+    setIntForKey(gunId + "gunlevel", level);
 }
 int GameUser::getGunLevel(string gunId)
 {
-    return getIntForKey(gunId + "_level");
+    return getIntForKey(gunId + "gunlevel");
 }
 void GameUser::setGunBulletNumber(string gunId, int num)
 {
-    setIntForKey(gunId + "_bullet", num);
+    setIntForKey(gunId + "gunbullet", num);
 }
 int GameUser::getGunBulletNumber(string gunId)
 {
-    return getIntForKey(gunId + "_bullet");
+    return getIntForKey(gunId + "gunbullet");
 }
-
+//--- building ---
+void GameUser::unlockBuilding(string buildingId)
+{
+    setBoolForKey(buildingId + "building", true);
+}
+bool GameUser::isUnlockBuilding(string buildingId)
+{
+    return getBoolForKey(buildingId + "building");
+}
+void GameUser::setBuildingLevel(string buildingId, int level)
+{
+    setIntForKey(buildingId + "buildingLevel", level);
+}
+int GameUser::getBuildingLevel(string buildingId)
+{
+    return getIntForKey(buildingId + "buildingLevel");
+}
+//--- prop ----
+void GameUser::unlockProp(string propId)
+{
+    setBoolForKey(propId + "prop", true);
+}
+bool GameUser::isUnlockProp(string propId)
+{
+    return getBoolForKey(propId + "prop");
+}
+void GameUser::setPorpNum(string propId, int num)
+{
+    setIntForKey(propId + "propNum", num);
+}
+int GameUser::getPropNum(string propId)
+{
+    return getIntForKey(propId + "propNum");
+}
 //----- private function
 void GameUser::setBoolForKey(string name, bool value)
 {

@@ -11,6 +11,9 @@
 #include "ShopSelectMeumView.h"
 #include "ShopItemScrollHeadler.h"
 #include "GunManager.h"
+#include "PropManager.h"
+#include "DefenseBuildingManager.h"
+
 
 
 bool GameShopScene::init()
@@ -19,6 +22,8 @@ bool GameShopScene::init()
     {
         return false;
     }
+    PropManager::getInstance();
+    
     Sprite * bg = Sprite::create(ImagePath("shopBg.png"));
     bg->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
     addChild(bg);
@@ -38,13 +43,13 @@ bool GameShopScene::init()
                 num = GunManager::getInstance()->getGunNum();
                 break;
             case 1:
-                num = 6;
+                num = PropManager::getInstance()->getPropNum();
                 break;
             case 2:
-                num = 6;
+                num = DefenseBuildingManager::getInstance()->getBuildingNum();
                 break;
             case 3:
-                num = 6;
+                num = 3;
                 break;
         }
         m_scrollViews[i] = new GameVerticalScrollHeadlerView(800,400,750,210,num);
@@ -77,6 +82,16 @@ bool GameShopScene::init()
 //    
 //    Menu * buttonMenu = Menu::create(upButton, NULL);
 //    addChild(buttonMenu);
+//    Timer::
+    struct timeval now;
+    struct tm * time;
+    gettimeofday(&now, NULL);
+    
+    time = localtime(&now.tv_sec);
+    
+    log("year :%d",time->tm_year + 1900);
+    log("year :%ld",now.tv_sec * 1000);
+    
     
     return true;
 }

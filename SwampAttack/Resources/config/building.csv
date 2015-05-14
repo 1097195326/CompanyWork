@@ -1,0 +1,6 @@
+防御编号,防御名称编号,防御名称,模型编号,防御类型,强化等级,强化等级上限,生命,伤害,伤害范围,解锁关卡,解锁价格,防御描述编号,防御描述
+DefenceId[string],DefenceName[string],,ModelId[string],DefenceType[string],StrengthenLevel[int],LimitLevel[string],Hp[int],Damage[int],DamageArea[float],UnlockMission[string],UnlockGold[string],DefenceDescription[string],
+700001,tid#DefenceName1,木板,building1,1,0,20,3,,,400001,20000,tid#DefenceDescription1,能够增加一定的防御能力。
+700002,tid#DefenceName2,木栅栏,building2,1,0,20,5,,,400002,40000,tid#DefenceDescription2,能够增加一定的防御能力。
+700003,tid#DefenceName3,铁丝网,building3,2,0,20,,5,,400003,60000,tid#DefenceDescription3,对接近的怪物持续造成伤害。
+700004,tid#DefenceName4,小钢炮,building4,3,0,20,,20,100,400004,80000,tid#DefenceDescription4,小猴子操作的小炮，能够对陆行怪物造成群体伤害。
