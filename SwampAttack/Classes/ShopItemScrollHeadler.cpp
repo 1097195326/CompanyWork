@@ -312,7 +312,6 @@ void ShopItemScrollHeadler::initDefenseView()
         Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
         iconBg->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, 0);
         addChild(iconBg);
-        log("building unlock");
         
         string buildingModelId = building->getModelId();
         string buildingIconStr = StringUtils::format("%s_icon.png",buildingModelId.c_str());
@@ -346,7 +345,7 @@ void ShopItemScrollHeadler::initDefenseView()
         m_upgradeLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.28);
         addChild(m_upgradeLabel);
     }else
-    {   log("building lock");
+    {
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg2.png"));
         addChild(itemBg);
         //

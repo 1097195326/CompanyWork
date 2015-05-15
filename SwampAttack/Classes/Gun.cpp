@@ -13,7 +13,7 @@
 #include "GameUser.h"
 
 
-Gun::Gun(Json::Value data):m_isMaxLevel(false),m_isUnlock(false)
+Gun::Gun(Json::Value data):m_isMaxLevel(false),m_isUnlock(false),m_isTakeUp(false)
 {
     
     m_id = data["Id"].asString() ;
@@ -91,6 +91,18 @@ void Gun::fire(Vec2 position)
 void Gun::reloadBullet()
 {
     ++m_bullets;
+}
+void Gun::takeUp()
+{
+    m_isTakeUp = true;
+}
+void Gun::takeDown()
+{
+    m_isTakeUp = false;
+}
+bool Gun::isTakeUp()
+{
+    return m_isTakeUp;
 }
 bool Gun::isUnlock()
 {

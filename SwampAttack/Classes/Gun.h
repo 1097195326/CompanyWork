@@ -21,14 +21,18 @@ private:
     int     m_bullets;
     bool    m_isMaxLevel;
     bool    m_isUnlock;
+    bool    m_isTakeUp;
 private:
     
 public:
+    void    takeUp();
+    void    takeDown();
     void    unlockGun();
     void    reloadBullet();
     void    fire(Vec2 position);
     
     
+    bool    isTakeUp();
     bool    isUnlock();
     bool    isFull();
     bool    isHaveBullet();
