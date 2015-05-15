@@ -40,7 +40,9 @@ private:
     
 public:
     bool    isUnlock();
+    void    unlockBuilding();
     bool    isMaxLevel();
+    void    addStrengthenLevel();
     
     string  getId();
     string  getDefenceName();

@@ -45,10 +45,30 @@ DefenseBuilding::~DefenseBuilding()
 {
     
 }
-
+void DefenseBuilding::addStrengthenLevel()
+{
+    m_strengthenLevel += 1;
+    _G_U->setBuildingLevel(m_id, m_strengthenLevel);
+    string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
+    Json::Value upgradeData = _C_M->getDataByTag("buildingUpgrade",upId);
+    m_damage = atof(upgradeData["Damage"].asString().c_str());
+    m_hp = atoi(upgradeData["Hp"].asString().c_str());
+    if (m_limitLevel == m_strengthenLevel)
+    {
+        m_isMaxLevel = true;
+    }else
+    {
+        m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
+    }
+}
 bool DefenseBuilding::isUnlock()
 {
     return m_isUnlock;
+}
+void DefenseBuilding::unlockBuilding()
+{
+    m_isUnlock = true;
+    _G_U->unlockBuilding(m_id);
 }
 bool DefenseBuilding::isMaxLevel()
 {

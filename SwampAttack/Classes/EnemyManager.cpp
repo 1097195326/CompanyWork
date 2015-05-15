@@ -72,7 +72,7 @@ void EnemyManager::gameLoop(float data)
                 currentGroup = m_map[currentIndex];
             }else
             {
-                log("Game Over");
+//                log("Game Over");
                 m_isOver = true;
             }
         }

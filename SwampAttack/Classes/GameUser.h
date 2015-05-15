@@ -16,12 +16,15 @@
 #define _G_U GameUser::getInstance()
 using namespace std;
 
-class GameUser : public GameSubject {
+class GameUser : public GameSubject,public Node {
 private:
     UserDefault * m_user;
+    int     m_userHealth;
+    int     m_time;
 private:
     GameUser();
     ~GameUser();
+    void    updateTime(float data);
     
     void    setBoolForKey(string name,bool value);
     void    setIntForKey(string name,int value);
@@ -31,11 +34,17 @@ private:
     int     getIntForKey(string name);
     float   getFloatForKey(string name);
     string  getStringForKey(string name);
-    
+    //
+    double    getTimeSec();
+    void    setTimeSec();
 public:
     static GameUser * getInstance();
+    
+    void    enterGame();
+    void    exitGame();
     //--- health ----
     int     getUserHealth();
+    void    setUserHealth(int health);
     void    setUserGold(int gold);
     int     getUserGold();
     //---  gun ----
@@ -53,7 +62,7 @@ public:
     //--- prop -----
     void    unlockProp(string propId);
     bool    isUnlockProp(string propId);
-    void    setPorpNum(string propId,int num);
+    void    setPropNum(string propId,int num);
     int     getPropNum(string propId);
     //--- award ----
     

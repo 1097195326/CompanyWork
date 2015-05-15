@@ -11,6 +11,7 @@
 
 #include "GameScrollHeadler.h"
 #include "ProgressBar.h"
+#include "GameShopScene.h"
 
 
 class ShopItemScrollHeadler : public GameScrollHeadler {
@@ -26,7 +27,7 @@ private:
     MenuItemImage * m_unLockButton;
     MenuItemImage * m_buyButton;
     
-    
+    GameShopScene * m_shopScene;
 private:
     void    initGunView();
     void    updateGunView();
@@ -39,7 +40,7 @@ private:
     void    unLock(Ref * pSender);
     void    buy(Ref * pSender);
 public:
-    
+    void    setGameShopScene(GameShopScene * shopScene);
     ShopItemScrollHeadler(int index,int itemIndex);
     ~ShopItemScrollHeadler();
     

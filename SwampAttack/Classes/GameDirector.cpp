@@ -36,6 +36,7 @@ void GameDirector::initGameSingle()
 }
 void GameDirector::gameLoop(float data)
 {
+//    log("----");
     if (m_status & s_over) {
         
         return;
@@ -49,10 +50,10 @@ void GameDirector::gameLoop(float data)
     BulletManager::getInstance()->gameLoop(data);
     
     checkCross();
-    if (EnemyManager::getInstance()->isOver() || House::getInstance()->isOver()) {
-        clearStatus();
-        m_status |= s_over;
-    }
+//    if (EnemyManager::getInstance()->isOver() || House::getInstance()->isOver()) {
+//        clearStatus();
+//        m_status |= s_over;
+//    }
 }
 void GameDirector::onTouchBegin(cocos2d::Touch *touch, cocos2d::Event *event)
 {

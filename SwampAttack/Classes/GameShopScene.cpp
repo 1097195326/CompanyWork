@@ -13,6 +13,7 @@
 #include "GunManager.h"
 #include "PropManager.h"
 #include "DefenseBuildingManager.h"
+#include "GameUser.h"
 
 
 
@@ -25,14 +26,37 @@ bool GameShopScene::init()
     PropManager::getInstance();
     
     Sprite * bg = Sprite::create(ImagePath("shopBg.png"));
-    bg->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
+    bg->setPosition(visibleOrigin.x + visibleSize.width * 0.5,
+                    visibleOrigin.y + visibleSize.height * 0.5);
     addChild(bg);
+    Sprite * upBg = Sprite::create(ImagePath("shopUpBg.png"));
+    upBg->setPosition(visibleOrigin.x + visibleSize.width * 0.5,
+                      visibleOrigin.y + visibleSize.height - upBg->getContentSize().height * 0.5);
+    addChild(upBg);
+    
     Sprite * bg2 = Sprite::create(ImagePath("shopBg2.png"));
-    bg2->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
+    bg2->setPosition(visibleOrigin.x + visibleSize.width * 0.5,
+                     visibleOrigin.y + visibleSize.height * 0.46);
     addChild(bg2);
     Sprite * scrollBg = Sprite::create(ImagePath("shopScrollBg.png"));
-    scrollBg->setPosition(bg2->getTextureRect().size.width * 0.5, bg2->getTextureRect().size.height * 0.368);
+    scrollBg->setPosition(bg2->getTextureRect().size.width * 0.5,
+                          bg2->getTextureRect().size.height * 0.368);
     bg2->addChild(scrollBg);
+    
+    m_healthSprites.reserve(5);
+    for (int i = 0; i < 5; ++i) {
+        Sprite * xinBg = Sprite::create(ImagePath("shopXinBg.png"));
+        Sprite * xin = Sprite::create(ImagePath("shopXinIcon.png"));
+        
+        Vec2 xinP = Vec2(visibleOrigin.x + visibleSize.width * 0.16 + xinBg->getContentSize().width * i,
+                         visibleOrigin.y + visibleSize.height * 0.94);
+        xinBg->setPosition(xinP);
+        xin->setPosition(xinP);
+        addChild(xinBg);
+        addChild(xin);
+        xin->setVisible(false);
+        m_healthSprites.push_back(xin);
+    }
     //--- scroll view  for 4 --------
     m_scrollViews.reserve(4);
     for (int i = 0; i < 4 ; ++i)
@@ -71,36 +95,52 @@ bool GameShopScene::init()
     menuView->setSelectSprite("shopItemSelect");
     menuView->setIconSprite("shopItemIcon");
     menuView->checkIndex();
-    menuView->setPosition(bg2->getTextureRect().size.width * 0.5, bg2->getTextureRect().size.height * 0.8);
+    menuView->setPosition(bg2->getTextureRect().size.width * 0.5,
+                          bg2->getTextureRect().size.height * 0.8);
     bg2->addChild(menuView);
     
-//    MenuItemImage * upButton = MenuItemImage::create(ImagePath("shopItemButtonNormal.png"),
-//                                          ImagePath("shopItemButtonNormal.png"),
-//                                          CC_CALLBACK_1(GameShopScene::upGrade, this));
-//    
-////    upButton->setNormalImage()
-//    
-//    Menu * buttonMenu = Menu::create(upButton, NULL);
-//    addChild(buttonMenu);
-//    Timer::
-    struct timeval now;
-    struct tm * time;
-    gettimeofday(&now, NULL);
+    MenuItemImage * homeButton = MenuItemImage::create(ImagePath("shopHomeButton.png"),
+                                                       ImagePath("shopHomeButton.png"),
+                                                       CC_CALLBACK_1(GameShopScene::homeButtonFunc, this));
+    homeButton->setPosition(visibleOrigin.x + homeButton->getContentSize().width * 0.5,
+                            visibleOrigin.y + visibleSize.height - homeButton->getContentSize().height * 0.5);
+    MenuItemImage * backButton = MenuItemImage::create(ImagePath("shopBackButton.png"),
+                                                       ImagePath("shopBackButton.png"),
+                                                       CC_CALLBACK_1(GameShopScene::backButtonFunc, this));
+    backButton->setPosition(visibleOrigin.x + visibleSize.width - backButton->getContentSize().width * 0.5 ,
+                            visibleOrigin.y + visibleSize.height - backButton->getContentSize().height * 0.5);
+    Menu * buttonMenu = Menu::create(homeButton,backButton, NULL);
+    buttonMenu->setPosition(Point::ZERO);
+    addChild(buttonMenu);
+    //
+    m_goldLabel = Label::createWithTTF(StringUtils::format("%d",_G_U->getUserGold()),
+                                       "fonts/American Typewriter.ttf",
+                                       35);
+    m_goldLabel->setPosition(visibleOrigin.x + visibleSize.width * 0.55,
+                             visibleOrigin.y + visibleSize.height * 0.94);
+    addChild(m_goldLabel);
     
-    time = localtime(&now.tv_sec);
-    
-    log("year :%d",time->tm_year + 1900);
-    log("year :%ld",now.tv_sec * 1000);
-    
-    
+    _G_U->attach(this);
     return true;
 }
-void GameShopScene::upGrade(cocos2d::Ref *pSender)
+GameShopScene::~GameShopScene()
 {
-    log("--------");
+    _G_U->detach(this);
 }
+
 void GameShopScene::updateData()
 {
+    int userHealth = _G_U->getUserHealth();
+    for (int i = 0; i < 5; ++i)
+    {
+        if (i < userHealth)
+        {
+            m_healthSprites[i]->setVisible(true);
+        }else
+        {
+            m_healthSprites[i]->setVisible(false);
+        }
+    }
     ShopSelectMenuView * menuView = (ShopSelectMenuView *) m_sub;
     int itemIndex = menuView->getSelectIndex();
     
@@ -118,6 +158,19 @@ void GameShopScene::updateData()
 GameScrollHeadler * GameShopScene::getHeadlerByIndex(int index,int viewTag)
 {
     ShopItemScrollHeadler * headler = new ShopItemScrollHeadler(index, viewTag);
+    headler->setGameShopScene(this);
     headler->autorelease();
     return headler;
+}
+void GameShopScene::updateGoldView()
+{
+    m_goldLabel->setString(StringUtils::format("%d",_G_U->getUserGold()));
+}
+void GameShopScene::homeButtonFunc(cocos2d::Ref *pSender)
+{
+    log("--------1");
+}
+void GameShopScene::backButtonFunc(cocos2d::Ref *pSender)
+{
+    log("--------2");
 }

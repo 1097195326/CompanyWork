@@ -5,6 +5,8 @@
 #include "GameMapScene.h"
 #include "GameShopScene.h"
 
+#include "GameUser.h"
+
 
 USING_NS_CC;
 
@@ -53,8 +55,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 
+    GameUser::getInstance();
     // create a scene. it's an autorelease object
-    auto helloScene = HelloWorld::createScene();
+//    auto helloScene = HelloWorld::createScene();
 //    auto gameScene = GameFightScene::scene();
 //    auto mapScene = GameMapScene::scene();
     auto shopScene = GameShopScene::scene();

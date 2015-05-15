@@ -48,10 +48,19 @@ Prop::~Prop()
     
 }
 
-
+void Prop::buyProp()
+{
+    ++m_num;
+    _G_U->setPropNum(m_id, m_num);
+}
 bool Prop::isUnlock()
 {
     return m_isUnlock;
+}
+void Prop::unlockProp()
+{
+    m_isUnlock = true;
+    _G_U->unlockProp(m_id);
 }
 int Prop::getNum()
 {

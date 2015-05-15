@@ -26,8 +26,9 @@ public:
     ~Prop();
 public:
     bool    isUnlock();
+    void    unlockProp();
     int     getNum();
-    
+    void    buyProp();
 private:
     
     string      m_id;           //

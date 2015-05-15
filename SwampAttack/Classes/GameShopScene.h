@@ -19,16 +19,22 @@ class GameShopScene : public cocos2d::LayerColor, public GameObserver,public Gam
 {
 private:
     std::vector< GameVerticalScrollHeadlerView * >m_scrollViews;
-    
+    std::vector<Sprite *> m_healthSprites;
+    Label   * m_goldLabel;
 public:
     CREATE_SCENE_FUNC(GameShopScene);
     CREATE_FUNC(GameShopScene);
-    
+    ~GameShopScene();
     virtual bool    init();
     
     void    updateData();
-    void    upGrade(Ref * pSender);
     GameScrollHeadler * getHeadlerByIndex(int index,int viewTag);
+    
+    
+    void    homeButtonFunc(Ref * pSender);
+    void    backButtonFunc(Ref * pSender);
+public:
+    void    updateGoldView();
 };
 
 #endif /* defined(__SwampAttack__GameShopScene__) */

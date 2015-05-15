@@ -49,6 +49,10 @@ ShopItemScrollHeadler::~ShopItemScrollHeadler()
 {
     
 }
+void ShopItemScrollHeadler::setGameShopScene(GameShopScene *shopScene)
+{
+    m_shopScene = shopScene;
+}
 void ShopItemScrollHeadler::initGunView()
 {
     removeAllChildrenWithCleanup(true);
@@ -59,7 +63,7 @@ void ShopItemScrollHeadler::initGunView()
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg1.png"));
         addChild(itemBg);
         Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
-        iconBg->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, getPositionY());
+        iconBg->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, 0);
         addChild(iconBg);
         
         
@@ -201,7 +205,7 @@ void ShopItemScrollHeadler::initDaojuView()
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg1.png"));
         addChild(itemBg);
         Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
-        iconBg->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, getPositionY());
+        iconBg->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, 0);
         addChild(iconBg);
 
         string propModelId = prop->getModelId();
@@ -306,9 +310,9 @@ void ShopItemScrollHeadler::initDefenseView()
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg1.png"));
         addChild(itemBg);
         Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
-        iconBg->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, getPositionY());
+        iconBg->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, 0);
         addChild(iconBg);
-
+        log("building unlock");
         
         string buildingModelId = building->getModelId();
         string buildingIconStr = StringUtils::format("%s_icon.png",buildingModelId.c_str());
@@ -342,7 +346,7 @@ void ShopItemScrollHeadler::initDefenseView()
         m_upgradeLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.28);
         addChild(m_upgradeLabel);
     }else
-    {
+    {   log("building lock");
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg2.png"));
         addChild(itemBg);
         //
@@ -414,17 +418,40 @@ void ShopItemScrollHeadler::upGrade(Ref * pSender)
         case 0:
         {
             Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
-            gun->addStrengthenLevel();
-            updateGunView();
-        }
-            break;
-        case 1:
-        {
+            int upgradeGold = gun->getStrengthenGold();
+            int userGold = _G_U->getUserGold();
+            if (userGold >= upgradeGold)
+            {
+                userGold -= upgradeGold;
+                _G_U->setUserGold(userGold);
+                m_shopScene->updateGoldView();
+                gun->addStrengthenLevel();
+                updateGunView();
+            }else
+            {
+                
+            }
             
         }
             break;
+        case 1:
+            break;
         case 2:
         {
+            DefenseBuilding * building = DefenseBuildingManager::getInstance()->getBuildingByIndex(m_index);
+            int upgradeGold = building->getStrengthGold();
+            int userGold = _G_U->getUserGold();
+            if (userGold >= upgradeGold)
+            {
+                userGold -= upgradeGold;
+                _G_U->setUserGold(userGold);
+                m_shopScene->updateGoldView();
+                building->addStrengthenLevel();
+                updateDefenseView();
+            }else
+            {
+                
+            }
             
         }
             break;
@@ -441,18 +468,58 @@ void ShopItemScrollHeadler::unLock(Ref * pSender)
     {
         case 0:
         {
-//            Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
-//            gun->addStrengthenLevel();
-//            updateGunView();
+            Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
+            int unlockGold = gun->getUnlockGold();
+            int userGold = _G_U->getUserGold();
+            if (userGold >= unlockGold)
+            {
+                userGold -= unlockGold;
+                _G_U->setUserGold(userGold);
+                m_shopScene->updateGoldView();
+                gun->unlockGun();
+                initGunView();
+            }else
+            {
+                log("no enough money for unlock");
+            }
+            
         }
             break;
         case 1:
         {
+            Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
+            int unlockGold = prop->getUnlockGold();
+            int userGold = _G_U->getUserGold();
+            if (userGold >= unlockGold)
+            {
+                userGold -= unlockGold;
+                _G_U->setUserGold(userGold);
+                m_shopScene->updateGoldView();
+                prop->unlockProp();
+                initDaojuView();
+            }else
+            {
+                log("no enough money for unlock");
+            }
             
         }
             break;
         case 2:
         {
+            DefenseBuilding * building = DefenseBuildingManager::getInstance()->getBuildingByIndex(m_index);
+            int unlockGold = building->getUnlockGold();
+            int userGold = _G_U->getUserGold();
+            if (userGold >= unlockGold)
+            {
+                userGold -= unlockGold;
+                _G_U->setUserGold(userGold);
+                m_shopScene->updateGoldView();
+                building->unlockBuilding();
+                initDefenseView();
+            }else
+            {
+                log("no enough money for unlock");
+            }
             
         }
             break;
@@ -470,12 +537,38 @@ void ShopItemScrollHeadler::buy(Ref * pSender)
         case 0:
         {
             Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
-            gun->buyBullet();
-            updateGunView();
+            int price = gun->getBulletPrice();
+            int userGold = _G_U->getUserGold();
+            if (userGold >= price)
+            {
+                userGold -= price;
+                _G_U->setUserGold(userGold);
+                m_shopScene->updateGoldView();
+                gun->buyBullet();
+                updateGunView();
+            }else
+            {
+                
+            }
+            
         }
             break;
         case 1:
         {
+            Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
+            int price = prop->getPropPrice();
+            int userGold = _G_U->getUserGold();
+            if (userGold >= price)
+            {
+                userGold -= price;
+                _G_U->setUserGold(userGold);
+                m_shopScene->updateGoldView();
+                prop->buyProp();
+                updateDaojuView();
+            }else
+            {
+                
+            }
             
         }
             break;

@@ -14,7 +14,9 @@ GameObserver::GameObserver()
 }
 GameObserver::~GameObserver()
 {
-    m_sub->detach(this);
+    if (m_sub) {
+        m_sub->detach(this);
+    }
 }
 void GameObserver::setSubject(GameSubject *sub)
 {
