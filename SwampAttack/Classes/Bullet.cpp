@@ -15,10 +15,20 @@
 
 Bullet::Bullet(BulletParameter bp):m_bp(bp)
 {
+    m_damage = bp.m_damage;
+    if(random(1, 100) < bp.m_critRate * 100)
+    {
+        m_damage = m_damage * bp.m_critDamageRate;
+    }
+    
     m_Point= m_StartPoint = m_bp.m_startPoint;
     m_toPoint = m_bp.m_targetPoint;
     
-    m_speed = m_bp.m_targetPoint - m_StartPoint;
+    int accuray = (int)(100 - m_bp.m_accuracy * 100);
+    m_toPoint.x += random(-accuray, accuray) ;
+    m_toPoint.y += random(-accuray, accuray) ;
+    
+    m_speed = m_toPoint - m_StartPoint;
     m_speed.normalize();
     
     Vec2 jizhunXian = m_bp.m_target == t_enemy ? Vec2(1, 0) : Vec2(-1, 0);
@@ -52,13 +62,24 @@ void Bullet::setView()
     sprite->autorelease();
     _G_D->addChild(sprite,2);
 }
+int Bullet::getAttackIndex()
+{
+    return m_bp.m_underAttackAction;
+}
 Vec2 Bullet::getPosition()
 {
     return m_Point;
 }
+Rect Bullet::getRect()
+{
+    return Rect(m_Point.x - m_bp.m_damageArea * 0.5,
+                m_Point.y - m_bp.m_damageArea * 0.5,
+                m_bp.m_damageArea,
+                m_bp.m_damageArea);
+}
 int Bullet::getDamage()
 {
-    return m_bp.m_damage;
+    return m_damage;
 }
 void Bullet::arriveCall()
 {

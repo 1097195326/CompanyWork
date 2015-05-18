@@ -50,12 +50,12 @@ void FlyEnemy::gameLoop(float data)
     if (!canMoveBack && m_point.x <= visibleOrigin.x + visibleSize.width * 0.3) {
         canMoveBack = true;
     }
-    if (m_status & e_hurt)
+    if (m_isShowHurt)
     {
         hurtDlay += data;
         if (hurtDlay > 3)
         {
-            m_status &= (~ e_hurt );
+            m_isShowHurt = false;
             hurtDlay = 0;
         }
     }

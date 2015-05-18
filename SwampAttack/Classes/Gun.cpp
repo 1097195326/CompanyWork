@@ -81,6 +81,7 @@ void Gun::fire(Vec2 position)
                        m_accuracy,
                        m_range,
                        m_bulletSpeed,
+                       m_underAttackAction,
                        t_enemy,
                        map->m_BulletStartPoint,
                        position

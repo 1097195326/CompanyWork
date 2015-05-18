@@ -12,7 +12,7 @@
 #include "House.h"
 #include "BulletManager.h"
 
-Enemy::Enemy(Json::Value data):m_data(data)
+Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false)
 {
     
     GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
@@ -53,12 +53,12 @@ Enemy::~Enemy()
 void Enemy::gameLoop(float data){}
 void Enemy::move(){}
 void Enemy::setView(){}
-bool Enemy::isContainsPoint(cocos2d::Vec2 point)
+bool Enemy::isContainsPoint(cocos2d::Rect rect)
 {
     m_rect = Rect(m_point.x - m_width * 0.5, m_point.y, m_width, m_height);
-    return m_rect.containsPoint(point);
+    return m_rect.intersectsRect(rect);
 }
-void Enemy::hurt(int damage)
+void Enemy::hurt(int damage,int index)
 {
     m_health = m_health - damage;
     if (m_health <= 0)
@@ -68,13 +68,27 @@ void Enemy::hurt(int damage)
     }else
     {
         hurtDlay = 0;
-//        m_status |= e_hurt;
+        m_isShowHurt = true;
         m_status &= e_clear;
-        m_status |= e_hurt;
+        switch (index) {
+            case 1:
+                m_status |= e_hurt1;
+                break;
+            case 2:
+                m_status |= e_hurt2;
+                break;
+            case 3:
+                m_status |= e_hurt3;
+                break;
+        }
     }
     log("enemy health :%f",m_health);
 }
 //--- view 接口
+bool Enemy::isShowHurt()
+{
+    return m_isShowHurt;
+}
 bool Enemy::isDieing()
 {
     return m_status & e_dieing;
@@ -85,7 +99,24 @@ bool Enemy::isWalk()
 }
 bool Enemy::isHurt()
 {
-    return m_status & e_hurt;
+    return m_status & e_hurt1 || m_status & e_hurt2 || m_status & e_hurt3;
+}
+int Enemy::getHurtIndex()
+{
+    switch (m_status) {
+        case e_hurt1:
+            return 1;
+            break;
+        case e_hurt2:
+            return 2;
+            break;
+        case e_hurt3:
+            return 3;
+            break;
+        default:
+            return 0;
+            break;
+    }
 }
 bool Enemy::isAttack()
 {
@@ -135,9 +166,10 @@ void Enemy::attackCall()
                                1,
                                0,
                                0,
-                               100,
+                               1,
                                100,
                                m_bulletSpeed,
+                               0,
                                t_house,
                                m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_health * 0.7),
                                m_targetPoint + Vec2(0,m_health * 0.7)
@@ -156,9 +188,10 @@ void Enemy::attackCall()
                                1,
                                0,
                                0,
-                               100,
+                               1,
                                100,
                                m_bulletSpeed,
+                               0,
                                t_house,
                                m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_health * 0.7),
                                m_targetPoint + Vec2(0,m_health * 0.7)

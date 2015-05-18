@@ -19,14 +19,16 @@ using namespace std;
 
 enum EnemyStatus
 {
-    e_clear   = 0b00000000,
-    e_waiting = 0b00000001,
-    e_dieing  = 0b00000010,
-    e_die     = 0b00000100,
-    e_walk    = 0b00001000,
-    e_hurt    = 0b00010000,
-    e_attack  = 0b00100000,
-    e_canDel  = 0b01000000,
+    e_clear   = 0b000000000,
+    e_waiting = 0b000000001,
+    e_dieing  = 0b000000010,
+    e_die     = 0b000000100,
+    e_walk    = 0b000001000,
+    e_hurt1   = 0b000010000,
+    e_hurt2   = 0b000100000,
+    e_hurt3   = 0b001000000,
+    e_attack  = 0b010000000,
+    e_canDel  = 0b100000000,
 };
 
 class Enemy :public GameObject {
@@ -34,6 +36,7 @@ protected:
     Json::Value m_data;
     int     m_status;
     Rect    m_rect;
+    bool    m_isShowHurt;
     
     float   dlay;
     float   tatolDlay;
@@ -41,8 +44,8 @@ protected:
     
 public:
     virtual void    setView();
-    bool    isContainsPoint(Vec2 point);
-    void    hurt(int damage);
+    bool    isContainsPoint(Rect rect);
+    void    hurt(int damage,int index);
 protected:
     virtual void    move();
     
@@ -78,9 +81,11 @@ public:
     void    gameLoop(float data);
 public:
     //--- view 接口
+    bool    isShowHurt();
     bool    isDieing();
     bool    isWalk();
     bool    isHurt();
+    int     getHurtIndex();
     bool    isAttack();
     Vec2    getPosition();
     Vec2    getTargetPosition();

@@ -26,7 +26,7 @@ EnemyManager * EnemyManager::getInstance()
 void EnemyManager::setData(Json::Value data)
 {
     clearData();
-        
+    
     for (int i = 0; i < data.size(); ++i)
     {
         EnemyGroup * group = new EnemyGroup(data[i]);

@@ -62,11 +62,9 @@ bool GameFightScene::init()
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
     
-    Json::Value value = _C_M->getDataByTag("guanqia", "300001");
+    Json::Value value = _C_M->getDataByTag("guanqia", "400001");
     GuanqiaModel * guanQia = new GuanqiaModel(value);
     EnemyManager::getInstance()->setData(guanQia->getMonsters());
-    
-    
     
     log("---- fight scene");
     Sprite  * s = Sprite::create("CloseSelected.png");

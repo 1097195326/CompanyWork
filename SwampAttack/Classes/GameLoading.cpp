@@ -16,43 +16,52 @@ float GameLoading::loadSprites()
 float GameLoading::loadFrames()
 {
     auto spriteFrameCache = SpriteFrameCache::getInstance();
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("reloadShotGun.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("runShotGun.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("shootShotGun.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("waitShotGun.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("reload.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("run.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("shoot.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wait.plist"));
     
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieWalk.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieAttack.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieDown.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieWait.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie1.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie2.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie3.plist"));
     //
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zomBieHurt.plist"));
     
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullWalk.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullAttack.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullDown.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullWait.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull1.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull2.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull3.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull4.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullArmor.plist"));
     
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrowWalk.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrowAttack.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrowDown.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrowWait.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow1.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow2.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow3.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow4.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrowArmor.plist"));
     
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("pumpkinWalk.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("pumpkinAttack.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("pumpkinDown.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("pumpkinWait.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf1.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf2.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf3.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf4.plist"));
     
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("muroideaWalk.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("muroideaAttack.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("muroideaDown.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("muroideaWait.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin1.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin2.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin3.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin4.plist"));
     
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("batFly.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("batAttack.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea1.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea2.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea3.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea4.plist"));
     
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("crowFly.plist"));
-    spriteFrameCache->addSpriteFramesWithFile(ImagePath("crowAttack.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("bat.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("demon.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("crow.plist"));
+    
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("explosion.plist"));
+    
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind1.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind2.plist"));
+    
     
     
 }

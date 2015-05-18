@@ -55,7 +55,7 @@ int GuanqiaModel::getCostPower()
 }
 Json::Value GuanqiaModel::getMonsters()
 {
-    return m_data["InstanceMonster"];
+    return m_data["MissionMonster"];
 }
 int  GuanqiaModel::getThroughGold()
 {

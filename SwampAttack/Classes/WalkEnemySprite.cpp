@@ -16,18 +16,22 @@ WalkEnemySprite::WalkEnemySprite(string name,Enemy * model):EnemySprite(model)
     float attackSpeed = m_model->getAttackSpeed();
     Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_walk", info.walkFrames));
     walkAction->retain();
-    if (name == "zombie") {
-//        Action * hurtAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_walk", 10),
-//                                               CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::hurtCall, this)),
-//                                               NULL);
-        
-        Action * hurtAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt", 10),
-                                              CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::hurtCall, this)),
-                                              NULL);
-        hurtAction->retain();
-        m_map["hurtAction"] = hurtAction;
-    }
-    
+    m_map["walkAction"] = walkAction;
+    Action * hurtHeavyAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt_heavy", info.hurtHeavyFrames),
+                                          CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::hurtCall, this)),
+                                          NULL);
+    hurtHeavyAction->retain();
+    m_map["hurtAction3"] = hurtHeavyAction;
+    Action * hurtLightAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt_light", info.hurtLightFrames),
+                                                CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::hurtCall, this)),
+                                                NULL);
+    hurtLightAction->retain();
+    m_map["hurtAction2"] = hurtLightAction;
+    Action * hurtOnAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt_on", info.hurtOnFrames),
+                                                CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::hurtCall, this)),
+                                                NULL);
+    hurtOnAction->retain();
+    m_map["hurtAction1"] = hurtOnAction;
     
     Action * attackAction = RepeatForever::create(
                                   Spawn::create(
@@ -37,16 +41,12 @@ WalkEnemySprite::WalkEnemySprite(string name,Enemy * model):EnemySprite(model)
                                           NULL)
                                                   );
     attackAction->retain();
+    m_map["attackAction"] = attackAction;
     Action * dieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_down", info.downFrames),
                                           CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::dieCall, this)),
                                           NULL);
     dieAction->retain();
-    
-    
-    m_map["walkAction"] = walkAction;
-    m_map["attackAction"] = attackAction;
     m_map["dieAction"] = dieAction;
-    
     
     scheduleUpdate();
 }
@@ -68,12 +68,14 @@ void WalkEnemySprite::update(float data)
         unscheduleUpdate();
         removeFromParentAndCleanup(true);
         return;
+    }else if (m_model->isHurt())
+    {
+        hurt();
     }
-    if (m_model->isHurt()) {
+    if (m_model->isShowHurt())
+    {
         healthBar->setVisible(true);
         healthBar->updatePercent(m_model->getHealthPercent());
-        hurt();
-        setPosition(m_model->getPosition());
     }else
     {
         healthBar->setVisible(false);
@@ -81,14 +83,24 @@ void WalkEnemySprite::update(float data)
 }
 void WalkEnemySprite::hurt()
 {
-    if (m_model->getModelId() == "zombie")
-    {
-        if (actionStatus == isHurting) {
-            return;
-        }
-        actionStatus = isHurting;
-        stopAllActions();
-        runAction(m_map["hurtAction"]);
+    if (actionStatus == isHurting) {
+        return;
+    }
+    actionStatus = isHurting;
+    stopAllActions();
+    int index = m_model->getHurtIndex();
+    switch (index) {
+        case 1:
+            runAction(m_map["hurtAction1"]);
+            break;
+        case 2:
+            runAction(m_map["hurtAction2"]);
+            break;
+        case 3:
+            runAction(m_map["hurtAction3"]);
+            break;
+        default:
+            break;
     }
 }
 void WalkEnemySprite::move()

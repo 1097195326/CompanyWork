@@ -86,13 +86,13 @@ void GameDirector::checkCross()
             {
                 Enemy * enemy = *e_iter;
                 Bullet * bullet = *b_iter;
-                Vec2 b_point = bullet->getPosition();
+                Rect b_rect = bullet->getRect();
                 if (bullet->isArrive() &&
                     bullet->isFireEnemy() &&
                     !enemy->isDied() &&
-                    enemy->isContainsPoint(b_point))
+                    enemy->isContainsPoint(b_rect))
                 {
-                    enemy->hurt(bullet->getDamage());
+                    enemy->hurt(bullet->getDamage(),bullet->getAttackIndex());
                 }else if (bullet->isArrive() && bullet->isFireHouse())
                 {
                     House::getInstance()->hurt(bullet->getDamage());

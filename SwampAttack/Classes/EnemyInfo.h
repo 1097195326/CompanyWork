@@ -15,7 +15,9 @@ using namespace std;
 struct EnemyInfoData {
     int     attackFrame;
     int     attackFrames;
-    int     waitFrames;
+    int     hurtHeavyFrames;
+    int     hurtLightFrames;
+    int     hurtOnFrames;
     int     walkFrames;
     int     downFrames;
     int     width;
