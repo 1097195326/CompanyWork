@@ -31,8 +31,10 @@ GameDirector * GameDirector::getInstance()
 }
 void GameDirector::initGameSingle()
 {
-    Human::getInstance();
+    
     House::getInstance();
+    Human::getInstance();
+    
 }
 void GameDirector::gameLoop(float data)
 {

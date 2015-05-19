@@ -45,6 +45,10 @@ DefenseBuilding::~DefenseBuilding()
 {
     
 }
+void DefenseBuilding::setView()
+{
+    
+}
 void DefenseBuilding::addStrengthenLevel()
 {
     m_strengthenLevel += 1;

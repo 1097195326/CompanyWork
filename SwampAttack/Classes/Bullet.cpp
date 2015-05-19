@@ -34,7 +34,7 @@ Bullet::Bullet(BulletParameter bp):m_bp(bp)
     Vec2 jizhunXian = m_bp.m_target == t_enemy ? Vec2(1, 0) : Vec2(-1, 0);
     m_angle = m_speed.getAngle(jizhunXian) * (180.0f / PAI);
     
-    m_speed = m_speed * m_bp.m_bulletSpeed;
+    m_speed = m_speed * m_bp.m_bulletSpeed * 0.1;
     
     m_state = _b_moving;
     

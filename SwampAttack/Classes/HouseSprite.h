@@ -18,6 +18,9 @@ class HouseSprite : public Sprite {
 private:
     House * m_houseModel;
     ProgressBar * m_healthBar;
+    
+private:
+    void    initView();
 public:
     void    setModel(House * house);
 public:

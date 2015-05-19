@@ -18,6 +18,8 @@ public:
     DefenseBuilding(Json::Value data);
     ~DefenseBuilding();
     
+public:
+    void    setView();
     
 private:
     string      m_id;

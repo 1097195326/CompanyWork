@@ -10,9 +10,11 @@
 #include "HouseSprite.h"
 #include "GameDirector.h"
 #include "GameMapManager.h"
+#include "GameUser.h"
 
 
-House::House(): m_health(500.0),m_totalHelath(m_health)
+House::House(): m_health(500.0),
+m_totalHelath(m_health)
 {
     m_state = _h_clear;
     
@@ -38,8 +40,6 @@ void House::setView()
     sprite->autorelease();
     sprite->setModel(this);
     _G_D->addChild(sprite);
-    Vec2 position = GameMapManager::getInstance()->getGameMap()->fightScene_HouseSprite_Position;
-    sprite->setPosition(position);
 }
 void House::hurt(float damage)
 {
@@ -51,10 +51,15 @@ void House::hurt(float damage)
     }
     log("house health :%f",m_health);
 }
+void House::addHealth(int health)
+{
+    m_health = m_totalHelath += health;
+}
 float House::getHealthPercent()
 {
     return m_health / m_totalHelath * 100;
 }
+
 bool House::isOver()
 {
     return m_state & _h_over;

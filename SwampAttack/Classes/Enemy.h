@@ -62,7 +62,8 @@ protected:
     int     m_level;
     float   m_health;
     float   m_totalHealth;
-    float   m_speed;
+    Vec2    m_speedV;
+    float   m_speedF;
     float   m_damage;
     float   m_attackSpeed;
     float   m_range;
@@ -110,7 +111,8 @@ public:
     int     getLevel();
     int     getHealthValue();
     float   getHealthPercent();
-    float   getSpeed();
+    Vec2    getSpeedV();
+    float   getSpeedF();
     float   getDamage();
     float   getAttackSpeed();
     int     getGoldForDied();

@@ -20,7 +20,7 @@
 Human::Human()
 {
     GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
-    m_point = gameMap->m_targetPoint;
+    m_point = gameMap->fightScene_human_Point;
     m_gun = GunManager::getInstance()->getCurrentGun();
     
     m_status = _h_waits;

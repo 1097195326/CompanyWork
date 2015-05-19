@@ -97,7 +97,7 @@ EnemyInfo::EnemyInfo()
     muroidea.hurtLightFrames = 5;
     muroidea.hurtOnFrames = 5;
     muroidea.walkFrames = 14;
-    muroidea.downFrames = 14;
+    muroidea.downFrames = 13;
     muroidea.width = 180;
     muroidea.height = 180;
     muroidea.widthOffSet = 0;

@@ -16,8 +16,22 @@ Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false)
 {
     
     GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
-    m_point = gameMap->m_startPoint + Vec2(random(10, 200), random(1, 10));
-    m_targetPoint = gameMap->m_targetPoint;
+    
+    m_point = gameMap->enemy_start_buttomPoint + Vec2(random(10, 200), random(0, gameMap->enemy_start_upline));
+    
+    if (m_point.y > gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upling)
+    {
+        m_targetPoint.y = gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upling;
+    }else if (m_point.y < gameMap->enemy_target_buttomPoint.y)
+    {
+        m_targetPoint.y = gameMap->enemy_target_buttomPoint.y;
+    }else
+    {
+        m_targetPoint.y = m_point.y;
+    }
+    m_targetPoint.x = gameMap->enemy_target_buttomPoint.x;
+    
+    
     ///--- set status ---
     m_status = e_waiting;
     ///------set data-------
@@ -32,8 +46,12 @@ Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false)
     m_bulletSpeed = atof(m_data["BulletSpeed"].asString().c_str());
     m_level = atoi(m_data["Level"].asString().c_str());
     m_totalHealth = m_health = atoi(m_data["Hp"].asString().c_str());
-    m_speed = atof(m_data["Speed"].asString().c_str());
+    m_speedF = atof(m_data["Speed"].asString().c_str());
     m_damage = atof(m_data["Damage"].asString().c_str());
+    
+    m_speedV = m_targetPoint - m_point;
+    m_speedV.normalize();
+    m_speedV = m_speedV * m_speedF;
     
     float as = atof(m_data["AttackSpeed"].asString().c_str()) ;
     float af = EnemyInfo::getInstance()->getInfoByName(m_modelId).attackFrames;
@@ -182,7 +200,8 @@ void Enemy::attackCall()
             break;
         case 4:     // 飞行 远程
         {
-            m_status &= (~e_attack);
+            m_status &= e_clear;
+            m_status |= e_walk;
             BulletParameter bp(m_damage,
                                0,
                                1,
@@ -255,9 +274,13 @@ float Enemy::getHealthPercent()
     }
     return m_health / m_totalHealth * 100.0f;
 }
-float Enemy::getSpeed()
+Vec2 Enemy::getSpeedV()
 {
-    return m_speed;
+    return m_speedV;
+}
+float Enemy::getSpeedF()
+{
+    return m_speedF;
 }
 float Enemy::getDamage()
 {

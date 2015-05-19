@@ -55,7 +55,7 @@ void FlyEnemySprite::update(float data)
         removeFromParentAndCleanup(true);
         return;
     }
-    if (m_model->isHurt()) {
+    if (m_model->isShowHurt()) {
         healthBar->setVisible(true);
         healthBar->updatePercent(m_model->getHealthPercent());
     }else

@@ -33,14 +33,14 @@ void FlyEnemy::gameLoop(float data)
             m_status |= e_walk;
         }
     }
-    if (m_status & e_walk)
+    if (m_status & e_walk || isHurt())
     {
         move();
     }
     if (dlayToAttack >= 3) {
-        dlayToAttack = 0;
         if (m_targetPoint.x + m_range >= m_point.x)
         {
+            dlayToAttack = 0;
             m_status |= e_attack;
         }
     }else
@@ -70,7 +70,7 @@ void FlyEnemy::move()
     {
         randomPoint();
     }
-    m_point = m_point + m_speedVec * 0.1;
+    m_point = m_point + m_speedVec;
 }
 void FlyEnemy::setView()
 {
@@ -118,13 +118,13 @@ void FlyEnemy::randomPoint()
 //    log("move y ::%f",m_nextPoint.y - m_point.y);
     m_speedVec = m_nextPoint - m_point;
     m_speedVec.normalize();
-    m_speedVec = m_speedVec * m_speed;
+    m_speedVec = m_speedVec * m_speedF;
     
 }
 void FlyEnemy::setPointState()
 {
-    float backLine = visibleOrigin.x + visibleSize.width * 0.9;
-    float frontLine = visibleOrigin.x + visibleSize.width * 0.3;
+    float backLine = visibleOrigin.x + visibleSize.width * 0.8;
+    float frontLine = visibleOrigin.x + visibleSize.width * 0.4;
     float bottomLine = visibleOrigin.y + visibleSize.height * 0.3;
     float upLine = visibleOrigin.y + visibleSize.height * 0.8;
     

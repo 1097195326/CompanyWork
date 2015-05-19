@@ -51,7 +51,7 @@ void WalkEnemy::gameLoop(float data)
 }
 void WalkEnemy::move()
 {
-    m_point = m_point + Vec2(-1, 0) * m_speed;
+    m_point = m_point + m_speedV;
 }
 void WalkEnemy::setView()
 {

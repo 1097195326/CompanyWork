@@ -17,7 +17,7 @@ enum HouseState
 {
     _h_clear    = 0b00000000,
     _h_over     = 0b00000001,
-    
+//    _h_
     
 };
 class House : public GameObject {
@@ -25,6 +25,8 @@ private:
     float   m_health;
     float   m_totalHelath;
     int     m_state;
+    
+    
 private:
     House();
     ~House();
@@ -33,10 +35,12 @@ public:
     static House * getInstance();
     void    gameLoop(float data);
     void    hurt(float damage);
+    void    addHealth(int health);
     
 public:
     float   getHealthPercent();
     bool    isOver();
+    
     
 };
 

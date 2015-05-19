@@ -14,6 +14,7 @@
 #include "GameMap6.h"
 #include "GameMap5s.h"
 
+#define _G_M_M GameMapManager::getInstance()->getGameMap()
 class GameMapManager {
     
 public:

@@ -13,6 +13,7 @@
 #include "CCCsvHelper.h"
 #include "GameLoading.h"
 #include "GameDirector.h"
+#include "GameMapManager.h"
 
 //---
 #include "EnemyManager.h"
@@ -36,7 +37,10 @@ bool GameFightScene::init()
     gameDirector->setGameLayer(this);
     addChild(gameDirector);
     
+    
     GameLoading::loadFrames();
+    
+    gameDirector->initGameSingle();
     
     Sprite * bgSprite = Sprite::create(ImagePath("scene1_Bg.png"));
     addChild(bgSprite);
@@ -66,10 +70,8 @@ bool GameFightScene::init()
     GuanqiaModel * guanQia = new GuanqiaModel(value);
     EnemyManager::getInstance()->setData(guanQia->getMonsters());
     
-    log("---- fight scene");
-    Sprite  * s = Sprite::create("CloseSelected.png");
-    s->setPosition(Vec2(200, 200));
-    addChild(s);
+    
+    
     return true;
 }
 bool GameFightScene::touchBegan(Touch *touch, Event *event)
