@@ -61,3 +61,7 @@ void GunManager::changeGun(string gunId)
 {
     currentGun = m_gunData[gunId];
 }
+void GunManager::setView()
+{
+    currentGun->setView();
+}

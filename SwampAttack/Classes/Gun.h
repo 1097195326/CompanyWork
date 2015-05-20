@@ -12,13 +12,14 @@
 #include "json/json.h"
 #include "BaseCode.h"
 #include "GameObject.h"
-
+#include "GameSubject.h"
 
 using namespace std;
 
-class Gun : public GameObject{
+class Gun : public GameObject, public GameSubject{
 private:
     int     m_bullets;
+    int     m_totalBullets;
     bool    m_isMaxLevel;
     bool    m_isUnlock;
     bool    m_isTakeUp;
@@ -29,7 +30,8 @@ public:
     void    takeDown();
     void    unlockGun();
     void    reloadBullet();
-    void    fire(Vec2 position);
+    bool    fire(Vec2 position);
+    void    setView();
     
     
     bool    isTakeUp();
@@ -74,6 +76,7 @@ public:
     //--- get function ---
     string  getWeaponName();
     int     getBulletNum();
+    int     getTotalBulletNum();
     string  getModelId();
     string  getBulletModelId();
     int     getUnderAttackAction();

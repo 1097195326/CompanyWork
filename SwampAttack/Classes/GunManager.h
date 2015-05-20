@@ -29,6 +29,7 @@ public:
     void    changeGun(string gunId);
     Gun *   getGunByIndex(int index);
     int     getGunNum();
+    void    setView();
     
 public:
     static GunManager * getInstance();

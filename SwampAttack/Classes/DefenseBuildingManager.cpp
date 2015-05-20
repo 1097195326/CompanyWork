@@ -31,6 +31,26 @@ DefenseBuildingManager * DefenseBuildingManager::getInstance()
     static DefenseBuildingManager manager;
     return &manager;
 }
+void DefenseBuildingManager::gameLoop(float data)
+{
+    std::map<string,DefenseBuilding *>::iterator iter;
+    for (iter = m_buildingData.begin(); iter != m_buildingData.end(); ++iter) {
+        DefenseBuilding * building = iter->second;
+        building->gameLoop(data);
+    }
+}
+void DefenseBuildingManager::setView()
+{
+    std::map<string,DefenseBuilding *>::iterator iter;
+    for (iter = m_buildingData.begin(); iter != m_buildingData.end(); ++iter) {
+        DefenseBuilding * building = iter->second;
+        building->setView();
+    }
+}
+std::map<string,DefenseBuilding *> DefenseBuildingManager::getBuildingData()
+{
+    return m_buildingData;
+}
 DefenseBuilding * DefenseBuildingManager::getBuildingByIndex(int index)
 {
     string propId = m_hashHead[index];

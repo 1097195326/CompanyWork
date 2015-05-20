@@ -11,6 +11,8 @@
 #include "Human.h"
 #include "BulletManager.h"
 #include "House.h"
+#include "DefenseBuildingManager.h"
+
 
 GameDirector::GameDirector()
 {
@@ -33,7 +35,9 @@ void GameDirector::initGameSingle()
 {
     
     House::getInstance();
+    DefenseBuildingManager::getInstance()->setView();
     Human::getInstance();
+    GunManager::getInstance()->setView();
     
 }
 void GameDirector::gameLoop(float data)
@@ -50,6 +54,7 @@ void GameDirector::gameLoop(float data)
     EnemyManager::getInstance()->gameLoop(data);
     Human::getInstance()->gameLoop(data);
     BulletManager::getInstance()->gameLoop(data);
+    DefenseBuildingManager::getInstance()->gameLoop(data);
     
     checkCross();
 //    if (EnemyManager::getInstance()->isOver() || House::getInstance()->isOver()) {
@@ -77,31 +82,73 @@ void GameDirector::checkCross()
     }
     std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
     std::list<Bullet*> bulletData = BulletManager::getInstance()->getBulletData();
+    std::map<string,DefenseBuilding *> buildingData = DefenseBuildingManager::getInstance()->getBuildingData();
     
-    if (!bulletData.empty() && !enemyData.empty())
+    if (!enemyData.empty())
     {
         std::list<Bullet*>::iterator b_iter;
         std::list<Enemy*>::iterator e_iter;
+        std::map<string,DefenseBuilding *>::iterator d_iter;
+        
         for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
         {
-            for (b_iter = bulletData.begin(); b_iter != bulletData.end(); ++b_iter)
+            Enemy * enemy = *e_iter;
+            // bullet
+            if (!bulletData.empty())
             {
-                Enemy * enemy = *e_iter;
-                Bullet * bullet = *b_iter;
-                Rect b_rect = bullet->getRect();
-                if (bullet->isArrive() &&
-                    bullet->isFireEnemy() &&
-                    !enemy->isDied() &&
-                    enemy->isContainsPoint(b_rect))
+                for (b_iter = bulletData.begin(); b_iter != bulletData.end(); ++b_iter)
                 {
-                    enemy->hurt(bullet->getDamage(),bullet->getAttackIndex());
-                }else if (bullet->isArrive() && bullet->isFireHouse())
-                {
-                    House::getInstance()->hurt(bullet->getDamage());
+                    
+                    Bullet * bullet = *b_iter;
+                    Rect b_rect = bullet->getRect();
+                    if (bullet->isArrive() &&
+                        bullet->isFireEnemy() &&
+                        !enemy->isDied() &&
+                        enemy->isContainsPoint(b_rect))
+                    {
+                        enemy->hurt(bullet->getDamage(),bullet->getAttackIndex());
+                    }else if (bullet->isArrive() && bullet->isFireHouse())
+                    {
+                        House::getInstance()->hurt(bullet->getDamage());
+                    }
                 }
             }
+            
+            // defense
+            if (!buildingData.empty())
+            {
+                for (d_iter = buildingData.begin(); d_iter != buildingData.end(); ++d_iter)
+                {
+                    DefenseBuilding * building = d_iter->second;
+                    if (building->isCanHurt() &&
+                        building->isInRange(enemy->getPosition()) &&
+                        enemy->getActionType() == 1)
+                    {
+                        switch (building->getDefenceType())
+                        {
+                            case 2:
+                                enemy->hurt(building->getDamage());
+                                break;
+                            case 3:
+                                 building->fire(Vec2(enemy->getPosition().x,
+                                                     enemy->getPosition().y + enemy->getHeight() * 0.5));
+                                
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+            }
+            
         }
     }
+    
+    
+    
+    
+    
+    
 }
 void GameDirector::setGameLayer(Layer *layer)
 {

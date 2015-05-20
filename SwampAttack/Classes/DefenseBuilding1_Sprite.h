@@ -10,15 +10,14 @@
 #define __SwampAttack__DefenseBuilding1_Sprite__
 
 #include "BaseCode.h"
-#include "DefenseBuilding.h"
+#include "DefenseBuildingSprite.h"
 
 
-class DefenseBuilding1_Sprite : public Sprite {
+class DefenseBuilding1_Sprite : public DefenseBuildingSprite {
 private:
-    DefenseBuilding * m_building;
+    
 public:
-    bool    init();
-    DefenseBuilding1_Sprite();
+    DefenseBuilding1_Sprite(DefenseBuilding * building);
     
 };
 

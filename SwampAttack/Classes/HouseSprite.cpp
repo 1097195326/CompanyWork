@@ -22,7 +22,7 @@ HouseSprite::HouseSprite()
     addChild(m_healthBar);
     m_healthBar->setBarRight();
     m_healthBar->setPosition(_G_M_M->fightScene_HouseBar_Position);
-    
+    log("house bar :%f",_G_M_M->fightScene_HouseBar_Position.y);
     scheduleUpdate();
 }
 HouseSprite::~HouseSprite()

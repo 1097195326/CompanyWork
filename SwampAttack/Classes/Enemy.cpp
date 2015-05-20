@@ -14,23 +14,35 @@
 
 Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false)
 {
+    m_actionType = atoi(m_data["ActionType"].asString().c_str());
     
     GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
-    
-    m_point = gameMap->enemy_start_buttomPoint + Vec2(random(10, 200), random(0, gameMap->enemy_start_upline));
-    
-    if (m_point.y > gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upling)
-    {
-        m_targetPoint.y = gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upling;
-    }else if (m_point.y < gameMap->enemy_target_buttomPoint.y)
-    {
-        m_targetPoint.y = gameMap->enemy_target_buttomPoint.y;
-    }else
-    {
-        m_targetPoint.y = m_point.y;
+    switch (m_actionType) {
+        case 1:
+        {
+            m_point = gameMap->enemy_start_buttomPoint + Vec2(random(30, 200), random(0, gameMap->enemy_start_upline));
+            if (m_point.y > gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upline)
+            {
+                m_targetPoint.y = gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upline;
+            }else if (m_point.y < gameMap->enemy_target_buttomPoint.y)
+            {
+                m_targetPoint.y = gameMap->enemy_target_buttomPoint.y;
+            }else
+            {
+                m_targetPoint.y = m_point.y;
+            }
+            m_targetPoint.x = gameMap->enemy_target_buttomPoint.x;
+        }
+            break;
+        case 2:
+        {
+            m_point = gameMap->flyEnemy_start_buttomPoint + Vec2(random(20, 200), random(0, gameMap->flyEnemy_start_upline));
+            m_targetPoint = gameMap->flyEnemy_target_buttomPoint;
+        }
+            break;
+        default:
+            break;
     }
-    m_targetPoint.x = gameMap->enemy_target_buttomPoint.x;
-    
     
     ///--- set status ---
     m_status = e_waiting;
@@ -40,7 +52,7 @@ Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false)
     m_modelId = m_data["ModelId"].asString();
     m_width = EnemyInfo::getInstance()->getInfoByName(m_modelId).width;
     m_height = EnemyInfo::getInstance()->getInfoByName(m_modelId).height;
-    m_actionType = atoi(m_data["ActionType"].asString().c_str());
+    
     m_bulletModelId = m_data["BulletModelId"].asString();
     m_attackType = atoi(m_data["AttackType"].asString().c_str());
     m_bulletSpeed = atof(m_data["BulletSpeed"].asString().c_str());
@@ -101,6 +113,18 @@ void Enemy::hurt(int damage,int index)
         }
     }
     log("enemy health :%f",m_health);
+}
+void Enemy::hurt(int damage)
+{
+    m_health = m_health - damage;
+    if (m_health <= 0)
+    {
+        m_status &= e_clear;
+        m_status |= e_dieing;
+    }
+    hurtDlay = 0;
+    m_isShowHurt = true;
+    log("enemy health2 :%f",m_health);
 }
 //--- view 接口
 bool Enemy::isShowHurt()
@@ -213,7 +237,8 @@ void Enemy::attackCall()
                                0,
                                t_house,
                                m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_health * 0.7),
-                               m_targetPoint + Vec2(0,m_health * 0.7)
+                               m_targetPoint + Vec2(random(0, _G_M_M->flyEnemy_target_rightLine),
+                                                    random(0, _G_M_M->flyEnemy_target_upLine))
                                );
             BulletManager::getInstance()->fire(bp);
         }

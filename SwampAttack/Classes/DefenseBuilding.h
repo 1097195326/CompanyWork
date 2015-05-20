@@ -10,18 +10,34 @@
 #define __SwampAttack__DefenseBuilding__
 
 #include "json/json.h"
+#include "GameObject.h"
+#include "BaseCode.h"
 
+
+enum DefenseState
+{
+    d_normal,
+    d_wait,
+    d_hurt,
+};
 using namespace std;
 
-class DefenseBuilding {
+class DefenseBuilding : public GameObject{
 public:
     DefenseBuilding(Json::Value data);
     ~DefenseBuilding();
-    
+    void    gameLoop(float data);
 public:
     void    setView();
     
+    bool    isCanHurt();
+    bool    isInRange(Vec2 point);
+    void    fire(Vec2 position);
 private:
+    DefenseState m_state;
+    float       m_index;
+    Vec2        m_point;
+    //--- ---
     string      m_id;
     string      m_defenceName;
     string      m_modelId;

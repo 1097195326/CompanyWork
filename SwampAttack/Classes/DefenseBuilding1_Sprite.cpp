@@ -8,17 +8,24 @@
 
 #include "DefenseBuilding1_Sprite.h"
 
-bool DefenseBuilding1_Sprite::init()
+DefenseBuilding1_Sprite::DefenseBuilding1_Sprite(DefenseBuilding * building):
+DefenseBuildingSprite(building)
 {
-    if (!Sprite::init()) {
-        return false;
+    string modelId = m_building->getModelId();
+    if (modelId == "building1")
+    {
+        Sprite * buildingS = Sprite::create(ImagePath("fight_building1.png"));
+        addChild(buildingS);
+        buildingS->setPosition(visibleOrigin.x,visibleOrigin.y + 220);
+        Sprite * buildingS2 = Sprite::create(ImagePath("fight_building1.png"));
+        addChild(buildingS2);
+        buildingS2->setPosition(visibleOrigin.x + 70,visibleOrigin.y + 220);
+    }else if(modelId == "building2")
+    {
+        
     }
-    Sprite * building = Sprite::create(ImagePath("fight_building1.png"));
-    addChild(building);
-    building->setPosition(visibleOrigin.x,visibleOrigin.y + 220);
-    Sprite * building2 = Sprite::create(ImagePath("fight_building1.png"));
-    addChild(building2);
-    building2->setPosition(visibleOrigin.x + 70,visibleOrigin.y + 220);
     
-    return true;
+    
+    
+    
 }

@@ -4,7 +4,7 @@ Id[string],MonsterName[string],,ModelId[string],CapId[string],ActionType[int],At
 100002,tid#MonsterName2,锅盖骷髅兵,skull,skull_armor,1,1,1,150,0.9,5,0.5,30,,,15,,tid#MonsterDescription2,骷髅兵升级版本
 100003,tid#MonsterName3,僵尸,zombie,,1,1,1,120,0.8,8,0.5,30,,,12,,tid#MonsterDescription3,移动速度极慢，血厚
 100004,tid#MonsterName4,锅盖僵尸,zombie,zombie_armor,1,1,1,180,0.7,8,0.5,30,,,18,,tid#MonsterDescription4,僵尸升级版本
-100005,tid#MonsterName5,蝙蝠,bat,,2,4,1,80,1.2,3,0.5,150,,100,8,,tid#MonsterDescription5,远程飞行兵种，声波攻击
+100005,tid#MonsterName5,蝙蝠,bat,,2,4,1,80,1.2,3,0.5,450,,100,8,,tid#MonsterDescription5,远程飞行兵种，声波攻击
 100006,tid#MonsterName6,锅盖蝙蝠,bat,bat_armor,2,4,1,120,1.1,3,0.5,150,,100,12,,tid#MonsterDescription6,蝙蝠升级版本
 100007,tid#MonsterName7,乌鸦,crow,,2,5,1,200,0.9,,0.5,30,,,20,,tid#MonsterDescription7,飞行兵种，吞噬道具
 100008,tid#MonsterName8,锅盖乌鸦,crow,crow_armor,2,5,1,300,1.8,,0.5,30,,,30,,tid#MonsterDescription8,乌鸦升级版本

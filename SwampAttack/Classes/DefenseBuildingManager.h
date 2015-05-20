@@ -13,7 +13,7 @@
 
 using namespace std;
 
-class DefenseBuildingManager {
+class DefenseBuildingManager : public GameObject{
 private:
     std::map<string,DefenseBuilding *> m_buildingData;
     std::map<int,std::string> m_hashHead;
@@ -21,12 +21,13 @@ private:
 public:
     DefenseBuilding *   getBuildingByIndex(int index);
     int     getBuildingNum();
-    
+    void    setView();
+    std::map<string,DefenseBuilding *> getBuildingData();
 public:
     DefenseBuildingManager();
     ~DefenseBuildingManager();
     static DefenseBuildingManager * getInstance();
-
+    void    gameLoop(float data);
 public:
     
 };

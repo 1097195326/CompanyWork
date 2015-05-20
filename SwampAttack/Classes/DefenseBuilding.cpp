@@ -9,9 +9,21 @@
 #include "DefenseBuilding.h"
 #include "ConfigManager.h"
 #include "GameUser.h"
+#include "GameDirector.h"
+#include "House.h"
+#include "BulletManager.h"
+
+#include "DefenseBuilding1_Sprite.h"
+#include "DefenseBuilding2_Sprite.h"
+#include "DefenseBuilding3_Sprite.h"
+#include "DefenseBuilding4_Sprite.h"
 
 
-DefenseBuilding::DefenseBuilding(Json::Value data):m_isMaxLevel(false),m_isUnlock(false)
+DefenseBuilding::DefenseBuilding(Json::Value data):
+m_isMaxLevel(false),
+m_isUnlock(false),
+m_state(d_normal),
+m_index(0.0)
 {
     m_id = data["DefenceId"].asString() ;
     string defenceName = data["DefenceName"].asString();
@@ -45,9 +57,71 @@ DefenseBuilding::~DefenseBuilding()
 {
     
 }
+void DefenseBuilding::gameLoop(float data)
+{
+//    if (!m_isUnlock)
+//    {
+//        return;
+//    }
+    if (m_defenceType == 2 || m_defenceType == 3)
+    {
+        m_index += data;
+        if (m_index >= 1)
+        {
+            m_index = 0;
+            m_state = d_hurt;
+        }else
+        {
+            m_state = d_wait;
+        }
+    }
+}
+void DefenseBuilding::fire(Vec2 position)
+{
+    if (m_state == d_hurt) {
+        GameMap * map = GameMapManager::getInstance()->getGameMap();
+        
+        BulletParameter bp(m_damage,
+                           0,
+                           1,
+                           0,
+                           0,
+                           1,
+                           m_damageArea,
+                           100,
+                           1,
+                           t_enemy,
+                           map->gangpao_BulletStartPoint,
+                           position
+                           );
+        BulletManager::getInstance()->fire(bp);
+        m_state = d_wait;
+    }
+}
 void DefenseBuilding::setView()
 {
-    
+//    if (!m_isUnlock) {
+//        return;
+//    }
+    DefenseBuildingSprite * sprite = NULL;
+    switch (m_defenceType) {
+        case 1:
+            House::getInstance()->addHealth(m_hp);
+            sprite = new DefenseBuilding1_Sprite(this);
+            break;
+        case 2:
+            sprite = new DefenseBuilding2_Sprite(this);
+            break;
+        case 3:
+            sprite = new DefenseBuilding3_Sprite(this);
+            break;
+        case 4:
+            sprite = new DefenseBuilding4_Sprite(this);
+        default:
+            break;
+    }
+    sprite->autorelease();
+    _G_D->addChild(sprite);
 }
 void DefenseBuilding::addStrengthenLevel()
 {
@@ -64,6 +138,30 @@ void DefenseBuilding::addStrengthenLevel()
     {
         m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
     }
+}
+bool DefenseBuilding::isCanHurt()
+{
+    return m_state == d_hurt;
+}
+bool DefenseBuilding::isInRange(cocos2d::Vec2 point)
+{
+    switch (m_defenceType) {
+        case 2:
+            if (point.x < _G_M_M->fightScene_zhalan_line + m_damageArea)
+            {
+                return true;
+            }
+            break;
+        case 3:
+            if (point.x < _G_M_M->fightScene_gangpao_Point.x + m_damageArea)
+            {
+                return true;
+            }
+        default:
+            break;
+    }
+    
+    return false;
 }
 bool DefenseBuilding::isUnlock()
 {

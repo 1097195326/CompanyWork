@@ -12,6 +12,7 @@
 GameMapManager * GameMapManager::getInstance()
 {
     static GameMapManager manager;
+    manager.getGameMap();
     return &manager;
 }
 GameMap * GameMapManager::getGameMap()

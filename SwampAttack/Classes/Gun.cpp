@@ -11,6 +11,9 @@
 #include "GameMapManager.h"
 #include "ConfigManager.h"
 #include "GameUser.h"
+#include "GunBulletSprite.h"
+#include "GameDirector.h"
+
 
 
 Gun::Gun(Json::Value data):m_isMaxLevel(false),m_isUnlock(false),m_isTakeUp(false)
@@ -44,7 +47,7 @@ Gun::Gun(Json::Value data):m_isMaxLevel(false),m_isUnlock(false),m_isTakeUp(fals
     
     m_weaponDescription = data["WeaponDescription"].asString();// _C_M->getTranslateById( data["WeaponDescription"].asString());
     //-------
-    m_bullets = _G_U->getGunBulletNumber(m_id);
+    m_totalBullets = _G_U->getGunBulletNumber(m_id);
     m_strengthenLevel = _G_U->getGunLevel(m_id);
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
     Json::Value upgradeData = _C_M->getDataByTag("wuqiUpgrade",upId);
@@ -58,6 +61,7 @@ Gun::Gun(Json::Value data):m_isMaxLevel(false),m_isUnlock(false),m_isTakeUp(fals
     }
     
     m_isUnlock = _G_U->isUnlockGun(m_id);
+    m_bullets = m_totalBullets >= m_magazieSize ? m_magazieSize : m_totalBullets % m_magazieSize;
     
 }
 Gun::~Gun()
@@ -68,9 +72,10 @@ void Gun::gameLoop(float data)
 {
     
 }
-void Gun::fire(Vec2 position)
+bool Gun::fire(Vec2 position)
 {
     --m_bullets;
+    --m_totalBullets;
     GameMap * map = GameMapManager::getInstance()->getGameMap();
     
     BulletParameter bp(m_damage,
@@ -88,10 +93,33 @@ void Gun::fire(Vec2 position)
                        );
     BulletManager::getInstance()->fire(bp);
     
+    notify();
+    return m_totalBullets > 0;
+}
+void Gun::setView()
+{
+    GunBulletSprite * sprite = new GunBulletSprite(this);
+    sprite->autorelease();
+    _G_D->addChild(sprite);
 }
 void Gun::reloadBullet()
 {
-    ++m_bullets;
+//    ++m_bullets;
+    switch (m_reloadType) {
+        case 1:
+             ++m_bullets;
+            log("bullet1:%d",m_bullets);
+            m_bullets = m_bullets > m_totalBullets ? m_totalBullets : m_bullets;
+            log("bullet2:%d",m_bullets);
+            break;
+        case 2:
+            m_bullets = m_totalBullets > m_magazieSize ? m_magazieSize : m_totalBullets % m_magazieSize;
+            break;
+            
+        default:
+            break;
+    }
+    notify();
 }
 void Gun::takeUp()
 {
@@ -120,7 +148,17 @@ bool Gun::isMaxLevel()
 }
 bool Gun::isFull()
 {
-    return m_bullets == m_magazieSize;
+    if (m_reloadType == 2)
+    {
+        return isHaveBullet();
+    }
+    if (m_totalBullets >= m_magazieSize)
+    {
+        return m_bullets == m_magazieSize;
+    }else
+    {
+        return m_bullets == m_totalBullets;
+    }
 }
 bool Gun::isHaveBullet()
 {
@@ -143,8 +181,8 @@ void Gun::addStrengthenLevel()
 }
 void Gun::buyBullet()
 {
-    m_bullets += m_magazieSize;
-    _G_U->setGunBulletNumber(m_id, m_bullets);
+    m_totalBullets += m_magazieSize;
+    _G_U->setGunBulletNumber(m_id, m_totalBullets);
     int userGold = _G_U->getUserGold();
     userGold -= m_bulletPrice;
     _G_U->setUserGold(userGold);
@@ -152,6 +190,10 @@ void Gun::buyBullet()
 int Gun::getBulletNum()
 {
     return m_bullets;
+}
+int Gun::getTotalBulletNum()
+{
+    return m_totalBullets;
 }
 string Gun::getWeaponName()
 {

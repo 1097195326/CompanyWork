@@ -9,22 +9,19 @@
 #include "DefenseBuilding2_Sprite.h"
 
 
-bool DefenseBuilding2_Sprite::init()
+DefenseBuilding2_Sprite::DefenseBuilding2_Sprite(DefenseBuilding * building):
+DefenseBuildingSprite(building)
 {
-    if (!Sprite::init()) {
-        return false;
-    }
+    Sprite * buildingS2 = Sprite::create(ImagePath("fight_building2.png"));
+    addChild(buildingS2);
+    buildingS2->setPosition(_G_M_M->fightScene_zhalan_point2);
+    Sprite * buildingS1 = Sprite::create(ImagePath("fight_building2.png"));
+    addChild(buildingS1);
+    buildingS1->setPosition(_G_M_M->fightScene_zhalan_point1);
     
-    Sprite * building = Sprite::create(ImagePath("fight_building2.png"));
-    addChild(building);
-    building->setPosition(visibleOrigin.x + 320,visibleOrigin.y + 100);
+    
     
     scheduleUpdate();
-    return true;
-}
-void DefenseBuilding2_Sprite::setModel(DefenseBuilding *building)
-{
-    m_building = building;
 }
 void DefenseBuilding2_Sprite::update(float data)
 {
