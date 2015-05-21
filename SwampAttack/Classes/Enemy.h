@@ -37,6 +37,7 @@ protected:
     int     m_status;
     Rect    m_rect;
     bool    m_isShowHurt;
+    bool    m_isWeak;
     
     float   dlay;
     float   tatolDlay;
@@ -54,6 +55,7 @@ protected:
     string  m_id;
     string  m_monsterName;
     string  m_modelId;
+    string  m_capId;
     int     m_width;
     int     m_height;
     int     m_actionType;
@@ -83,6 +85,7 @@ public:
     void    gameLoop(float data);
 public:
     //--- view 接口
+    bool    isWeak();
     bool    isShowHurt();
     bool    isDieing();
     bool    isWalk();
@@ -102,6 +105,7 @@ public:
     string  getId();
     string  getMonsterName();
     string  getModelId();
+    string  getCapId();
     int     getAttackFrame();
     int     getWidth();
     int     getHeight();

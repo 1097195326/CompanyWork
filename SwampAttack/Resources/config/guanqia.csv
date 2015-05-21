@@ -1,6 +1,6 @@
 关卡编号,关卡名称编号,关卡名称,关卡类型,关卡怪物,金币奖励,战斗场景编号,解锁关卡
 MissionId[string],MissionName[string],,MissionType[int],MissionMonster[vector;monsterid[string];number[int]],Gold[int],SceneId[string],UnlockMission[string]
-400001,tid#MissionName1,闹鬼墓地1,1,100001:2;100005:1;100011:1|100001:4,500,300001,
+400001,tid#MissionName1,闹鬼墓地1,1,100002:1|100001:4,500,300001,
 400002,tid#MissionName2,闹鬼墓地2,1,100003:2|100003:4,600,300001,400001
 400003,tid#MissionName3,闹鬼墓地3,1,100001:2|100003:2|100001:4;100003:4,700,300001,400002
 400004,tid#MissionName4,闹鬼墓地4,1,100001:4|100001:4;100003:4|l00001:10;100003:6,800,300001,400003

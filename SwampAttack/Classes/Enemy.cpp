@@ -12,7 +12,7 @@
 #include "House.h"
 #include "BulletManager.h"
 
-Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false)
+Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false),m_isWeak(false)
 {
     m_actionType = atoi(m_data["ActionType"].asString().c_str());
     
@@ -50,6 +50,7 @@ Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false)
     m_id = m_data["Id"].asString();
     m_monsterName = m_data["MonsterName"].asString();
     m_modelId = m_data["ModelId"].asString();
+    m_capId = m_data["CapId"].asString();
     m_width = EnemyInfo::getInstance()->getInfoByName(m_modelId).width;
     m_height = EnemyInfo::getInstance()->getInfoByName(m_modelId).height;
     
@@ -111,6 +112,9 @@ void Enemy::hurt(int damage,int index)
                 m_status |= e_hurt3;
                 break;
         }
+        if (!m_isWeak && m_health < m_totalHealth * 0.5) {
+            m_isWeak =true;
+        }
     }
     log("enemy health :%f",m_health);
 }
@@ -127,6 +131,10 @@ void Enemy::hurt(int damage)
     log("enemy health2 :%f",m_health);
 }
 //--- view 接口
+bool Enemy::isWeak()
+{
+    return m_isWeak;
+}
 bool Enemy::isShowHurt()
 {
     return m_isShowHurt;
@@ -259,6 +267,10 @@ string Enemy::getMonsterName()
 string Enemy::getModelId()
 {
     return m_modelId;
+}
+string Enemy::getCapId()
+{
+    return m_capId;
 }
 int Enemy::getWidth()
 {

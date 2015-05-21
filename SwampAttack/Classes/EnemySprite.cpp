@@ -11,7 +11,7 @@
 
 
 
-EnemySprite::EnemySprite(Enemy * model):m_model(model)
+EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
 {
     init();
     setAnchorPoint(Vec2(0.5,0));

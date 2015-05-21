@@ -47,7 +47,7 @@ EnemyInfo::EnemyInfo()
     skullArmor.walkFrames = 14;
     skullArmor.downFrames = 0;
     skullArmor.width = 180;
-    skullArmor.height = 180;
+    skullArmor.height = 90;
     skullArmor.widthOffSet = 0;
     m_data["skull_armor"] = skullArmor;
     // scarecrow 草人

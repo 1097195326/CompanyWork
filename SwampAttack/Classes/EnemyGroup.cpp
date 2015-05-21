@@ -23,6 +23,7 @@ EnemyGroup::~EnemyGroup()
 }
 void EnemyGroup::setData(Json::Value data)
 {
+//    log("%s",data.toStyledString().c_str());
     for (int i = 0; i < data.size(); ++i) {
         Json::Value d = data[i];
         string monsterid = d["monsterid"].asString();

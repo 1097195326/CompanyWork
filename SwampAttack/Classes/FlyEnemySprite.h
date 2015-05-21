@@ -18,9 +18,10 @@ protected:
     void    move();
     void    attack();
     void    die();
+    void    setArmorView();
 public:
     void        update(float data);
-    FlyEnemySprite(string name,Enemy * model);
+    FlyEnemySprite(Enemy * model);
 };
 
 #endif /* defined(__SwampAttack__FlyEnemySprite__) */
