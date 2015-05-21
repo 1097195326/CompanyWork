@@ -112,6 +112,7 @@
 		8DD499791B04868C0037CBAA /* DefenseBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD499771B04868C0037CBAA /* DefenseBuilding.cpp */; };
 		8DD4997C1B04869A0037CBAA /* DefenseBuildingManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4997A1B04869A0037CBAA /* DefenseBuildingManager.cpp */; };
 		8DD53AF91B0C2774000DB8DC /* DefenseBuildingSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD53AF71B0C2774000DB8DC /* DefenseBuildingSprite.cpp */; };
+		8DD7765D1B0DCF8700B8DE0C /* GamePauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7765B1B0DCF8700B8DE0C /* GamePauseScene.cpp */; };
 		8DD7D5AB1B0199D100DD3711 /* ShopItemScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7D5A91B0199D100DD3711 /* ShopItemScrollHeadler.cpp */; };
 		8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */; };
 		8DD8C1211AFC5D0E00872AA2 /* GameSubject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C11F1AFC5D0E00872AA2 /* GameSubject.cpp */; };
@@ -328,6 +329,8 @@
 		8DD53AF71B0C2774000DB8DC /* DefenseBuildingSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DefenseBuildingSprite.cpp; sourceTree = "<group>"; };
 		8DD53AF81B0C2774000DB8DC /* DefenseBuildingSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefenseBuildingSprite.h; sourceTree = "<group>"; };
 		8DD594871B00AFB300A2FD0A /* GameScrollHeadlerTargetInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScrollHeadlerTargetInterface.h; sourceTree = "<group>"; };
+		8DD7765B1B0DCF8700B8DE0C /* GamePauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamePauseScene.cpp; sourceTree = "<group>"; };
+		8DD7765C1B0DCF8700B8DE0C /* GamePauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePauseScene.h; sourceTree = "<group>"; };
 		8DD7D5A91B0199D100DD3711 /* ShopItemScrollHeadler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopItemScrollHeadler.cpp; sourceTree = "<group>"; };
 		8DD7D5AA1B0199D100DD3711 /* ShopItemScrollHeadler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopItemScrollHeadler.h; sourceTree = "<group>"; };
 		8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyGroup.cpp; sourceTree = "<group>"; };
@@ -594,6 +597,8 @@
 				8DE3E98D1AF8B5F900B1E8A6 /* GameMapScene.h */,
 				8DD8C12A1AFCB15F00872AA2 /* GameShopScene.cpp */,
 				8DD8C12B1AFCB15F00872AA2 /* GameShopScene.h */,
+				8DD7765B1B0DCF8700B8DE0C /* GamePauseScene.cpp */,
+				8DD7765C1B0DCF8700B8DE0C /* GamePauseScene.h */,
 			);
 			name = scenes;
 			sourceTree = "<group>";
@@ -1028,6 +1033,7 @@
 				8DD8C12F1AFCB81C00872AA2 /* SelectMenuView.cpp in Sources */,
 				8DD7D5AB1B0199D100DD3711 /* ShopItemScrollHeadler.cpp in Sources */,
 				8DC10AB91AC3D6E2004F7DE2 /* Bullet.cpp in Sources */,
+				8DD7765D1B0DCF8700B8DE0C /* GamePauseScene.cpp in Sources */,
 				8DC253491ACB970400D10652 /* CCCsvHelper.cpp in Sources */,
 				8DD499731B0450000037CBAA /* GameBuff.cpp in Sources */,
 				8DC10ACB1AC40222004F7DE2 /* EnemyManager.cpp in Sources */,

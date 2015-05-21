@@ -13,6 +13,8 @@
 #include "DefenseBuilding.h"
 #include "GameMapManager.h"
 
+
+
 class DefenseBuildingSprite : public Sprite {
 protected:
     DefenseBuilding * m_building;

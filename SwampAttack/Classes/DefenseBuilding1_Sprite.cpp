@@ -11,21 +11,19 @@
 DefenseBuilding1_Sprite::DefenseBuilding1_Sprite(DefenseBuilding * building):
 DefenseBuildingSprite(building)
 {
+    
     string modelId = m_building->getModelId();
-    if (modelId == "building1")
+    log("%s",modelId.c_str());
+//    if (modelId == "building1")
     {
+        
         Sprite * buildingS = Sprite::create(ImagePath("fight_building1.png"));
         addChild(buildingS);
         buildingS->setPosition(visibleOrigin.x,visibleOrigin.y + 220);
         Sprite * buildingS2 = Sprite::create(ImagePath("fight_building1.png"));
         addChild(buildingS2);
         buildingS2->setPosition(visibleOrigin.x + 70,visibleOrigin.y + 220);
-    }else if(modelId == "building2")
-    {
-        
     }
-    
-    
     
     
 }

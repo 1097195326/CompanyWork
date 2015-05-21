@@ -12,9 +12,9 @@
 #include "BaseCode.h"
 #include "DefenseBuildingSprite.h"
 
-
 class DefenseBuilding1_Sprite : public DefenseBuildingSprite {
 private:
+
     
 public:
     DefenseBuilding1_Sprite(DefenseBuilding * building);

@@ -7,11 +7,12 @@
 //
 
 #include "DefenseBuildingSprite.h"
-
+#include "GameFightScene.h"
 
 
 DefenseBuildingSprite::DefenseBuildingSprite(DefenseBuilding * building):
 m_building(building)
 {
-    
+    init();
+    _G_V->addChild(this,1);
 }

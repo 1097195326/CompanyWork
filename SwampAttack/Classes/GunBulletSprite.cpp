@@ -8,6 +8,7 @@
 
 #include "GunBulletSprite.h"
 #include "GameMapManager.h"
+#include "GameFightScene.h"
 
 
 GunBulletSprite::GunBulletSprite(Gun * gun):m_gun(gun)
@@ -32,6 +33,7 @@ GunBulletSprite::GunBulletSprite(Gun * gun):m_gun(gun)
         m_bullets.push_back(b_i);
     }
     updateData();
+    _G_V->addChild(this,1);
 }
 void GunBulletSprite::updateData()
 {

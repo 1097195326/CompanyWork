@@ -31,7 +31,6 @@ private:
     int     m_status = s_clear;
     GameMap * gameMap;
     
-    Layer * gameFightLayer;
 private:
     void    checkCross();
 public:
@@ -40,9 +39,6 @@ public:
     ~GameDirector();
 public:
     void    initGameSingle();
-    void    setGameLayer(Layer * layer);
-    Layer * getGameLayer();
-    void    addChild(Node * node, int zOrder = 1);
     void    onTouchBegin(Touch * touch, Event * event);
     void    onTouchMove(Touch * touch, Event * event);
     void    onTouchEnd(Touch * touch, Event * event);

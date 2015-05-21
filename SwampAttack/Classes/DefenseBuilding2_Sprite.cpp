@@ -19,8 +19,6 @@ DefenseBuildingSprite(building)
     addChild(buildingS1);
     buildingS1->setPosition(_G_M_M->fightScene_zhalan_point1);
     
-    
-    
     scheduleUpdate();
 }
 void DefenseBuilding2_Sprite::update(float data)

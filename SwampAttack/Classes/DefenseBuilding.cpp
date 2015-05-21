@@ -106,22 +106,26 @@ void DefenseBuilding::setView()
     DefenseBuildingSprite * sprite = NULL;
     switch (m_defenceType) {
         case 1:
+        {
             House::getInstance()->addHealth(m_hp);
             sprite = new DefenseBuilding1_Sprite(this);
+            
+            sprite->autorelease();
+        }
             break;
         case 2:
             sprite = new DefenseBuilding2_Sprite(this);
+             sprite->autorelease();
             break;
         case 3:
             sprite = new DefenseBuilding3_Sprite(this);
+             sprite->autorelease();
             break;
         case 4:
-            sprite = new DefenseBuilding4_Sprite(this);
+//            sprite = new DefenseBuilding4_Sprite(this);
         default:
             break;
     }
-    sprite->autorelease();
-    _G_D->addChild(sprite);
 }
 void DefenseBuilding::addStrengthenLevel()
 {

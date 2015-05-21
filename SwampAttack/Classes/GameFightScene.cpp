@@ -14,6 +14,7 @@
 #include "GameLoading.h"
 #include "GameDirector.h"
 #include "GameMapManager.h"
+#include "GamePauseScene.h"
 
 //---
 #include "EnemyManager.h"
@@ -25,8 +26,20 @@
 #include "Human.h"
 
 
-
-
+Scene * GameFightScene::scene()
+{
+    Scene * scene = Scene::create();
+    GameFightScene * layer =(GameFightScene*)GameFightScene::getInstance();
+    layer->init();
+    scene->addChild(layer);
+    
+    return scene;
+}
+Layer * GameFightScene::getInstance()
+{
+    static GameFightScene layer;
+    return &layer;
+}
 bool GameFightScene::init()
 {
     if (!Layer::init())
@@ -34,17 +47,16 @@ bool GameFightScene::init()
         return false;
     }
     GameDirector * gameDirector = _G_D;
-    gameDirector->setGameLayer(this);
-    addChild(gameDirector);
-    
-    
+//    gameDirector->setGameLayer(this);
+//    
+//    
     GameLoading::loadFrames();
-    
     gameDirector->initGameSingle();
     
     Sprite * bgSprite = Sprite::create(ImagePath("scene1_Bg.png"));
     addChild(bgSprite);
-    bgSprite->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5));
+    bgSprite->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5,
+                               visibleOrigin.y + visibleSize.height * 0.5));
     
     
     auto listener = EventListenerTouchOneByOne::create();
@@ -66,13 +78,31 @@ bool GameFightScene::init()
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
     
-    Json::Value value = _C_M->getDataByTag("guanqia", "400001");
-    GuanqiaModel * guanQia = new GuanqiaModel(value);
-    EnemyManager::getInstance()->setData(guanQia->getMonsters());
+//    Json::Value value = _C_M->getDataByTag("guanqia", "400001");
+//    GuanqiaModel * guanQia = new GuanqiaModel(value);
+//    EnemyManager::getInstance()->setData(guanQia->getMonsters());
     
-    
+    MenuItemImage * pauseButton = MenuItemImage::create(ImagePath("fight_pause_button.png"),
+                                                        ImagePath("fight_pause_button.png"),
+                                                        CC_CALLBACK_1( GameFightScene::pauseGame, this));
+    pauseButton->setPosition(visibleOrigin.x + pauseButton->getContentSize().width * 0.6,
+                             visibleOrigin.y + visibleSize.height - pauseButton->getContentSize().height * 0.6);
+    Menu * buttonMenu = Menu::create(pauseButton, NULL);
+    buttonMenu->setPosition(Point::ZERO);
+    addChild(buttonMenu,200);
     
     return true;
+}
+void GameFightScene::pauseGame(cocos2d::Ref *pSender)
+{
+    RenderTexture * rt = RenderTexture::create(visibleSize.width, visibleSize.height);
+    
+    rt->begin();
+    this->visit();
+    rt->end();
+    
+    Director::getInstance()->pushScene(GamePauseScene::scene(rt));
+    
 }
 bool GameFightScene::touchBegan(Touch *touch, Event *event)
 {

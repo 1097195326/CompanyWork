@@ -7,6 +7,7 @@
 //
 
 #include "BulletSprite.h"
+#include "GameFightScene.h"
 
 
 BulletSprite::BulletSprite()
@@ -16,6 +17,7 @@ BulletSprite::BulletSprite()
     
     
     scheduleUpdate();
+    _G_V->addChild(this,2);
 }
 BulletSprite::~BulletSprite()
 {

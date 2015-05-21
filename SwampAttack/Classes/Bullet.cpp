@@ -9,7 +9,6 @@
 #include "Bullet.h"
 #include "GameMapManager.h"
 #include "BulletSprite.h"
-#include "GameDirector.h"
 
 #define PAI 3.1415f
 
@@ -60,7 +59,6 @@ void Bullet::setView()
     sprite->setModel(this);
     sprite->setRotation(m_angle);
     sprite->autorelease();
-    _G_D->addChild(sprite,2);
 }
 int Bullet::getAttackIndex()
 {

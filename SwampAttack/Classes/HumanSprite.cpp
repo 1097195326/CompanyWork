@@ -8,6 +8,7 @@
 
 #include "HumanSprite.h"
 #include "BaseUtil.h"
+#include "GameFightScene.h"
 
 
 HumanSprite::HumanSprite()
@@ -39,7 +40,7 @@ HumanSprite::HumanSprite()
     m_actionData["shootAction"] = shootAction;
     m_actionData["waitAction"] = waitAction;
     
-    
+    _G_V->addChild(this,1);
     scheduleUpdate();
 }
 HumanSprite::~HumanSprite()

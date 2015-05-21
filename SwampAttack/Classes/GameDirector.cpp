@@ -17,9 +17,9 @@
 GameDirector::GameDirector()
 {
     gameMap = GameMapManager::getInstance()->getGameMap();
-    schedule(CC_SCHEDULE_SELECTOR(GameDirector::gameLoop), 1/60);
+//    schedule(CC_SCHEDULE_SELECTOR(GameDirector::gameLoop), 1/60);
     
-    
+    Director::getInstance()->getScheduler()->schedule(CC_SCHEDULE_SELECTOR(GameDirector::gameLoop), this, 1/60, false);
     
 }
 GameDirector::~GameDirector()
@@ -37,12 +37,12 @@ void GameDirector::initGameSingle()
     House::getInstance();
     DefenseBuildingManager::getInstance()->setView();
     Human::getInstance();
-    GunManager::getInstance()->setView();
+//    GunManager::getInstance()->setView();
     
 }
 void GameDirector::gameLoop(float data)
 {
-//    log("----");
+//    log("game loop ----");
     if (m_status & s_over) {
         
         return;
@@ -149,24 +149,6 @@ void GameDirector::checkCross()
     
     
     
-}
-void GameDirector::setGameLayer(Layer *layer)
-{
-    gameFightLayer = layer;
-}
-Layer * GameDirector::getGameLayer()
-{
-    return gameFightLayer;
-}
-void GameDirector::addChild(Node * node, int zOrder)
-{
-    if (gameFightLayer) {
-        
-        gameFightLayer->addChild(node,zOrder);
-    }else
-    {
-        log("jia");
-    }
 }
 void GameDirector::start()
 {

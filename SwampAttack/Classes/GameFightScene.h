@@ -10,7 +10,7 @@
 #define __SwampAttack__GameFightScene__
 
 #include "BaseCode.h"
-
+#define _G_V GameFightScene::getInstance()
 
 class GameFightScene : public cocos2d::Layer
 {
@@ -18,7 +18,9 @@ private:
     
     
 public:
-    CREATE_SCENE_FUNC(GameFightScene);
+//    CREATE_SCENE_FUNC(GameFightScene);
+    static  Scene * scene();
+    static  Layer * getInstance();
     CREATE_FUNC(GameFightScene);
     
     virtual bool    init();
@@ -26,6 +28,8 @@ public:
     bool    touchBegan(Touch * touch, Event * event);
     void    touchMoved(Touch * touch, Event * event);
     void    touchEnd(Touch * touch, Event * event);
+    
+    void    pauseGame(Ref * pSender);
 };
 
 #endif /* defined(__SwampAttack__GameFightScene__) */

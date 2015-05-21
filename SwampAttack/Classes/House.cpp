@@ -8,7 +8,6 @@
 
 #include "House.h"
 #include "HouseSprite.h"
-#include "GameDirector.h"
 #include "GameMapManager.h"
 #include "GameUser.h"
 
@@ -39,7 +38,6 @@ void House::setView()
     HouseSprite * sprite = new HouseSprite();
     sprite->autorelease();
     sprite->setModel(this);
-    _G_D->addChild(sprite);
 }
 void House::hurt(float damage)
 {

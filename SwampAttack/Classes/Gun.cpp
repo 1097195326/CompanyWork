@@ -100,7 +100,6 @@ void Gun::setView()
 {
     GunBulletSprite * sprite = new GunBulletSprite(this);
     sprite->autorelease();
-    _G_D->addChild(sprite);
 }
 void Gun::reloadBullet()
 {
