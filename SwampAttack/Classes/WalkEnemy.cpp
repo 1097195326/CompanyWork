@@ -57,5 +57,4 @@ void WalkEnemy::setView()
 {
     EnemySprite * enemySprite = new WalkEnemySprite(this);
     enemySprite->autorelease();
-    _G_D->addChild(enemySprite);
 }

@@ -67,6 +67,10 @@ void Human::changeGun(Gun *gun)
 {
     
 }
+Gun * Human::getGun()
+{
+    return m_gun;
+}
 void Human::setView()
 {
     HumanSprite * sprite = new HumanSprite();

@@ -50,6 +50,10 @@ public:
     //---  gun ----
     void    unlockGun(string gunId);
     bool    isUnlockGun(string gunId);
+    void    setTakeUpGun(string gunId,bool takeUp);
+    bool    isTakeUp(string gunId);
+    void    setTakeUpIndex(string gunId,int index);
+    int     getTakeUpIndex(string gunId);
     void    setGunLevel(string gunId, int level);
     int     getGunLevel(string gunId);
     void    setGunBulletNumber(string gunId,int num);

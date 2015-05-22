@@ -8,6 +8,7 @@
 
 #include "EnemySprite.h"
 
+#include "GameFightScene.h"
 
 
 
@@ -25,7 +26,7 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
     healthBar->setPosition(Vec2(w * 0.5, h * 0.9));
     healthBar->setVisible(false);
     
-    
+    _G_V->addChild(this,200 - m_model->getPosition().y);
 }
 EnemySprite::~EnemySprite()
 {

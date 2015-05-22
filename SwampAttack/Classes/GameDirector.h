@@ -42,8 +42,10 @@ public:
     void    onTouchBegin(Touch * touch, Event * event);
     void    onTouchMove(Touch * touch, Event * event);
     void    onTouchEnd(Touch * touch, Event * event);
-    void    start();
-    void    stop();
+    void    startGame();
+    void    restartGame();
+    void    continueGame();
+    void    stopGame();
     bool    isOver();
     void    clearStatus();
     void    gameLoop(float data);

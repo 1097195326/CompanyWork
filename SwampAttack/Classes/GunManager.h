@@ -12,13 +12,15 @@
 #include "GameObject.h"
 #include "Gun.h"
 
-#define defaultGunID "200003"
+
 
 class GunManager : public GameObject {
 private:
     std::map<string,Gun *> m_gunData;
-    std::map<int,Gun *> m_canUseGunData;
     std::map<int,std::string> m_hashHead;
+    
+    std::map<string,Gun *> m_takeUpGunData;
+    
     Gun *   currentGun;
 private:
     
@@ -29,7 +31,11 @@ public:
     void    changeGun(string gunId);
     Gun *   getGunByIndex(int index);
     int     getGunNum();
+    int     getTakeUpGunNum();
     void    setView();
+    
+    void    takeUpGun(string gunId,int index);
+    void    takeDownGun(string gunId);
     
 public:
     static GunManager * getInstance();

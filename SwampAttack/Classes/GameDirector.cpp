@@ -37,7 +37,7 @@ void GameDirector::initGameSingle()
     House::getInstance();
     DefenseBuildingManager::getInstance()->setView();
     Human::getInstance();
-//    GunManager::getInstance()->setView();
+    GunManager::getInstance()->setView();
     
 }
 void GameDirector::gameLoop(float data)
@@ -150,16 +150,26 @@ void GameDirector::checkCross()
     
     
 }
-void GameDirector::start()
+void GameDirector::startGame()
 {
     clearStatus();
     m_status |= s_run ;
 }
-void GameDirector::stop()
+void GameDirector::restartGame()
+{
+    
+}
+void GameDirector::continueGame()
+{
+    clearStatus();
+    m_status |= s_start;
+}
+void GameDirector::stopGame()
 {
     clearStatus();
     m_status |= s_stop ;
 }
+
 bool GameDirector::isOver()
 {
     return m_status & s_over;

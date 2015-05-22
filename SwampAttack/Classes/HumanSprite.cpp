@@ -10,37 +10,11 @@
 #include "BaseUtil.h"
 #include "GameFightScene.h"
 
-
 HumanSprite::HumanSprite()
 {
     init();
     setAnchorPoint(Vec2(0.5,0));
     
-    Action * reloadAction = Sequence::create(
-                                             BaseUtil::makeAnimateWithNameIndexDelay("reload_shotgun", 9,0.08),
-                                             CallFunc::create(CC_CALLBACK_0(HumanSprite::reloadShotCall, this)),
-                                             NULL);
-    reloadAction->retain();
-    
-    Action * runAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("run_shotgun", 8));
-    runAction->retain();
-
-    Action * shootAction = Spawn::create(
-                  Sequence::create(DelayTime::create(0.08 * 4),
-                                   CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)), NULL),
-                  BaseUtil::makeAnimateWithNameIndexDelay("shoot_shotgun", 6,0.08),
-                  NULL);
-    shootAction->retain();
-    
-    Action * waitAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("wait_shotgun", 9));
-    waitAction->retain();
-    
-    m_actionData["reloadAction"] = reloadAction;
-    m_actionData["runAction"] = runAction;
-    m_actionData["shootAction"] = shootAction;
-    m_actionData["waitAction"] = waitAction;
-    
-    _G_V->addChild(this,1);
     scheduleUpdate();
 }
 HumanSprite::~HumanSprite()
@@ -53,10 +27,46 @@ HumanSprite::~HumanSprite()
     m_actionData.clear();
 
 }
+void HumanSprite::updateData()
+{
+    
+}
 void HumanSprite::setModel(Human *human)
 {
     m_human = human;
     setPosition(m_human->getPosition());
+    Gun * gun = m_human->getGun();
+    GunActionData actionData = GunActionInfo::getInstance()->getInfoByName(gun->getModelId());
+    
+    Action * reloadAction = Sequence::create(
+                                             BaseUtil::makeAnimateWithNameIndexDelay("reload_qiang3",
+                                                                                     actionData.reloadFrames,
+                                                                                     gun->getReloadSpeed()),
+                                             CallFunc::create(CC_CALLBACK_0(HumanSprite::reloadShotCall, this)),
+                                             NULL);
+    reloadAction->retain();
+    
+    Action * shootAction = Spawn::create(
+                                         Sequence::create(DelayTime::create(gun->getFireRate() * actionData.attackFrame),
+                                                          CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)), NULL),
+                                         BaseUtil::makeAnimateWithNameIndexDelay("shoot_qiang3",
+                                                                                 actionData.attackFrames,
+                                                                                 gun->getFireRate()),
+                                         NULL);
+    shootAction->retain();
+    
+    Action * waitAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("wait_qiang3", actionData.waitFrames));
+    waitAction->retain();
+    
+    Action * runAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("run_qiang3", 8));
+    runAction->retain();
+    
+    m_actionData["reloadAction"] = reloadAction;
+    m_actionData["runAction"] = runAction;
+    m_actionData["shootAction"] = shootAction;
+    m_actionData["waitAction"] = waitAction;
+    
+    _G_V->addChild(this,1);
 }
 void HumanSprite::update(float data)
 {

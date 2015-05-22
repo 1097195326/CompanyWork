@@ -104,6 +104,22 @@ bool GameUser::isUnlockGun(string gunId)
 {
     return getBoolForKey(gunId + "gun");
 }
+void GameUser::setTakeUpGun(string gunId,bool takeUp)
+{
+    setBoolForKey(gunId + "guntakeup", takeUp);
+}
+bool GameUser::isTakeUp(string gunId)
+{
+    return getBoolForKey(gunId + "guntakeup");
+}
+void GameUser::setTakeUpIndex(string gunId, int index)
+{
+    setIntForKey(gunId + "gunTakeUpIndex", index);
+}
+int GameUser::getTakeUpIndex(string gunId)
+{
+    return getIntForKey(gunId + "gunTakeUpIndex");
+}
 void GameUser::setGunLevel(string gunId, int level)
 {
     setIntForKey(gunId + "gunlevel", level);

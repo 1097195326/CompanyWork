@@ -13,6 +13,7 @@
 #include "BaseCode.h"
 #include "GunManager.h"
 #include "State.h"
+#include "GameSubject.h"
 
 
 enum HumanStatus
@@ -34,7 +35,7 @@ enum TouchStatus
     _isTouching,
     _touchEnd,
 };
-class Human : public GameObject {
+class Human : public GameObject ,public GameSubject {
 private:
     int     m_status;
     TouchStatus m_touchStatus;
@@ -51,6 +52,7 @@ public:
     //--- interface for game director
     void    changeState(State<Human> * state);
     void    changeGun(Gun * gun);
+    Gun *   getGun();
     void    fire(Touch * touch,Event * event);
     void    stop();
     

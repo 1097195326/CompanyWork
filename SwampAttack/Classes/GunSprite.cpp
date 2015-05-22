@@ -6,15 +6,20 @@
 //
 //
 
-#include "GunBulletSprite.h"
+#include "GunSprite.h"
 #include "GameMapManager.h"
 #include "GameFightScene.h"
+#include "GunManager.h"
 
 
-GunBulletSprite::GunBulletSprite(Gun * gun):m_gun(gun)
+GunSprite::GunSprite(Gun * gun):m_gun(gun)
 {
     init();
     setSubject(m_gun);
+    
+    m_greenBg = Sprite::create(ImagePath("fight_gun_greenBg.png"));
+    m_blueBg = Sprite::create(ImagePath("fight_gun_blueBg.png"));
+    
     
     int size = m_gun->getMagazieSize();
     Vec2 point = _G_M_M->fightScene_Bullet_Position;
@@ -35,7 +40,7 @@ GunBulletSprite::GunBulletSprite(Gun * gun):m_gun(gun)
     updateData();
     _G_V->addChild(this,1);
 }
-void GunBulletSprite::updateData()
+void GunSprite::updateData()
 {
     int bulletNum = m_gun->getBulletNum();
     int size = m_gun->getMagazieSize();

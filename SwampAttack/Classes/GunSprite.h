@@ -13,13 +13,15 @@
 #include "Gun.h"
 #include "GameObserver.h"
 
-class GunBulletSprite : public Sprite,public GameObserver{
+class GunSprite : public Sprite,public GameObserver{
 private:
     Gun * m_gun;
     std::vector<Sprite * > m_bullets;
+    Sprite  *   m_greenBg;
+    Sprite  *   m_blueBg;
     
 public:
-    GunBulletSprite(Gun * gun);
+    GunSprite(Gun * gun);
     void updateData();
 };
 

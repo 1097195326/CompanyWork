@@ -47,9 +47,7 @@ bool GameFightScene::init()
         return false;
     }
     GameDirector * gameDirector = _G_D;
-//    gameDirector->setGameLayer(this);
-//    
-//    
+    
     GameLoading::loadFrames();
     gameDirector->initGameSingle();
     
@@ -78,9 +76,9 @@ bool GameFightScene::init()
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
     
-//    Json::Value value = _C_M->getDataByTag("guanqia", "400001");
-//    GuanqiaModel * guanQia = new GuanqiaModel(value);
-//    EnemyManager::getInstance()->setData(guanQia->getMonsters());
+    Json::Value value = _C_M->getDataByTag("guanqia", "400001");
+    GuanqiaModel * guanQia = new GuanqiaModel(value);
+    EnemyManager::getInstance()->setData(guanQia->getMonsters());
     
     MenuItemImage * pauseButton = MenuItemImage::create(ImagePath("fight_pause_button.png"),
                                                         ImagePath("fight_pause_button.png"),
@@ -100,7 +98,7 @@ void GameFightScene::pauseGame(cocos2d::Ref *pSender)
     rt->begin();
     this->visit();
     rt->end();
-    
+    _G_D->stopGame();
     Director::getInstance()->pushScene(GamePauseScene::scene(rt));
     
 }

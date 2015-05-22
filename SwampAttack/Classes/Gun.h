@@ -14,8 +14,27 @@
 #include "GameObject.h"
 #include "GameSubject.h"
 
+#define defaultGunID "200003"
+
 using namespace std;
 
+struct GunActionData
+{
+    int attackFrame;
+    int attackFrames;
+    int changeFrames;
+    int reloadFrames;
+    int waitFrames;
+};
+class GunActionInfo {
+private:
+    std::map<string,GunActionData> m_infoData;
+    GunActionInfo();
+public:
+    static GunActionInfo * getInstance();
+    GunActionData getInfoByName(string name);
+};
+//-------
 class Gun : public GameObject, public GameSubject{
 private:
     int     m_bullets;
@@ -23,22 +42,29 @@ private:
     bool    m_isMaxLevel;
     bool    m_isUnlock;
     bool    m_isTakeUp;
+    bool    m_isDefaultGun;
+    int     m_takeUpIndex;
+    bool    m_isCurrentGun;
 private:
     
 public:
-    void    takeUp();
+    void    takeUp(int index);
     void    takeDown();
     void    unlockGun();
+    void    setIsCurrentGun(bool is);
     void    reloadBullet();
     bool    fire(Vec2 position);
     void    setView();
     
-    
+    bool    isDefaultGun();
+    bool    isCurrentGun();
     bool    isTakeUp();
     bool    isUnlock();
     bool    isFull();
     bool    isHaveBullet();
     bool    isMaxLevel();
+    
+    int     getTakeUpIndex();
 private:
     string  m_id;
     string  m_weaponName;           //  武器名称

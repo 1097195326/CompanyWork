@@ -76,7 +76,6 @@ void FlyEnemy::setView()
 {
     EnemySprite * enemySprite = new FlyEnemySprite(this);
     enemySprite->autorelease();
-    _G_D->addChild(enemySprite);
 }
 void FlyEnemy::randomPoint()
 {

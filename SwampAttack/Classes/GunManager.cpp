@@ -19,11 +19,15 @@ GunManager::GunManager()
     std::map<int,std::string>::iterator iter;
     for (iter = m_hashHead.begin(); iter != m_hashHead.end(); ++iter) {
         string gunId = iter->second;
-        m_gunData[gunId] = new Gun(data[gunId]);
+        Gun * gun = new Gun(data[gunId]);
+        m_gunData[gunId] = gun;
+        if (gun->isTakeUp())
+        {
+            m_takeUpGunData[gunId] = gun;
+        }
     }
-    
     currentGun = m_gunData[defaultGunID];
-    m_canUseGunData[0] = currentGun;
+    
     
 }
 GunManager::~GunManager()
@@ -53,6 +57,20 @@ int GunManager::getGunNum()
 //    }
     return (int)m_gunData.size();
 }
+int GunManager::getTakeUpGunNum()
+{
+    return (int)m_takeUpGunData.size();
+}
+void GunManager::takeUpGun(string gunId,int index)
+{
+    m_gunData[gunId]->takeUp(index);
+    m_takeUpGunData[gunId] = m_gunData[gunId];
+}
+void GunManager::takeDownGun(string gunId)
+{
+    m_gunData[gunId]->takeDown();
+    m_takeUpGunData.erase(gunId);
+}
 Gun * GunManager::getCurrentGun()
 {
     return currentGun;
@@ -63,5 +81,10 @@ void GunManager::changeGun(string gunId)
 }
 void GunManager::setView()
 {
-    currentGun->setView();
+    std::map<string,Gun *>::iterator iter;
+    for (iter = m_takeUpGunData.begin(); iter != m_takeUpGunData.end(); ++iter)
+    {
+        Gun * _gun = iter->second;
+        _gun->setView();
+    }
 }

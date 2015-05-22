@@ -19,6 +19,10 @@ public:
     CREATE_FUNC(GamePauseScene);
     
     bool init();
+    
+    void    continueGame(Ref * pSender);
+    void    restartGame(Ref * pSender);
+    
 };
 
 #endif /* defined(__SwampAttack__GamePauseScene__) */
