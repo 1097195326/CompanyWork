@@ -34,7 +34,7 @@ FlyEnemySprite::FlyEnemySprite(Enemy * model):EnemySprite(model)
     m_map["attackAction"] = attackAction;
 //    m_map["dieAction"] = dieAction;
     
-//    setArmorView();
+    setArmorView();
     scheduleUpdate();
     
 }
@@ -97,19 +97,20 @@ void FlyEnemySprite::setArmorView()
         armorSprite->setPosition(info.width * 0.5,info.height);
         
         float attackSpeed = m_model->getAttackSpeed();
-        Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_walk", info.walkFrames));
-        walkAction->retain();
-        m_map["armorWalkAction"] = walkAction;
         
-        Action * attackAction = RepeatForever::create(
-                                                      Spawn::create(
-                                                                    Sequence::create(DelayTime::create(attackSpeed * info.attackFrame),
-                                                                                     CallFunc::create(CC_CALLBACK_0(FlyEnemySprite::attackCall, this)), NULL),
-                                                                    BaseUtil::makeAnimateWithNameIndexDelay(armorName + "_attack", info.attackFrames,attackSpeed),
-                                                                    NULL)
-                                                      );
+        Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_fly",
+                                                                                          info.walkFrames));
+        walkAction->retain();
+        
+        Action * attackAction = Sequence::create(BaseUtil::makeAnimateWithNameIndexDelay(armorName + "_attack",
+                                                                                         info.attackFrames,
+                                                                                         attackSpeed),
+                                              NULL);
         attackAction->retain();
+        
+        m_map["armorWalkAction"] = walkAction;
         m_map["armorAttackAction"] = attackAction;
+        
     }
 }
 void FlyEnemySprite::move()
@@ -125,6 +126,15 @@ void FlyEnemySprite::move()
         armorSprite->runAction(m_map["armorWalkAction"]);
     }
 }
+//void FlyEnemySprite::hurt()
+//{
+//    if (actionStatus == isHurting) {
+//        return;
+//    }
+//    actionStatus = isHurting;
+//    texiaoSprite->setVisible(true);
+//    texiaoSprite->runAction(texiaoAction);
+//}
 void FlyEnemySprite::attack()
 {
     if (actionStatus == isAttacking) {

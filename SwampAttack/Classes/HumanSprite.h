@@ -20,10 +20,11 @@ enum H_ActionStatus
     _isRuning,
     _isShooting,
     _isWaiting,
+    _isChangeing,
 };
 #include "GameObserver.h"
 
-class HumanSprite : public Sprite,public GameObserver {
+class HumanSprite : public Sprite {
 private:
     Human * m_human;
     H_ActionStatus  m_status;
@@ -35,6 +36,8 @@ private:
     void    wait();
     void    shoot();
     void    reload();
+    void    change();
+    void    changeActions();
     
     void    reloadShotCall();
     void    runShotCall();
@@ -46,7 +49,6 @@ public:
     HumanSprite();
     ~HumanSprite();
     CREATE_FUNC(HumanSprite);
-    void    updateData();
 public:
     void    setModel(Human * human);
     

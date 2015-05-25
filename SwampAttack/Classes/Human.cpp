@@ -14,6 +14,7 @@
 #include "HumanWaitState.h"
 #include "HumanShootState.h"
 #include "HumanReloadState.h"
+#include "HumanChangeState.h"
 
 
 Human::Human()
@@ -65,7 +66,8 @@ void Human::stop()
 }
 void Human::changeGun(Gun *gun)
 {
-    
+    m_gun = gun;
+    changeState(HumanChangeState::getInstance());
 }
 Gun * Human::getGun()
 {
@@ -96,7 +98,7 @@ void Human::shootCall()
 }
 void Human::changeCall()
 {
-    
+    m_status = _h_changed;
 }
 //---- interface for state
 void Human::setStateReload()
@@ -110,6 +112,10 @@ void Human::setStateShoot()
 void Human::setStateWait()
 {
     m_status = _h_waits;
+}
+void Human::setStateChange()
+{
+    m_status = _h_changeing;
 }
 bool Human::isTouching()
 {
@@ -126,6 +132,14 @@ bool Human::isFull()
 bool Human::isHaveBullet()
 {
     return m_gun->isHaveBullet();
+}
+bool Human::isShooted()
+{
+    return m_status == _h_shooted;
+}
+bool Human::isChanged()
+{
+    return m_status == _h_changed;
 }
 //------- interface for view
 Vec2 Human::getPosition()
@@ -151,10 +165,6 @@ bool Human::isReload()
 bool Human::isShoot()
 {
     return m_status == _h_shooting;
-}
-bool Human::isShooted()
-{
-    return m_status == _h_shooted;
 }
 bool Human::isChange()
 {

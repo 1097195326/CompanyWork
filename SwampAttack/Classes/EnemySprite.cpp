@@ -26,7 +26,18 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
     healthBar->setPosition(Vec2(w * 0.5, h * 0.9));
     healthBar->setVisible(false);
     
-    _G_V->addChild(this,200 - m_model->getPosition().y);
+    texiaoSprite = Sprite::create();
+    texiaoSprite->setPosition(Vec2(w * 0.5, h * 0.5));
+    addChild(texiaoSprite,2);
+    texiaoAction = Sequence::create(Spawn::create(
+                                                  BaseUtil::makeAnimateWithNameAndIndex("blood", 7),
+                                                  BaseUtil::makeAnimateWithNameAndIndex("hit", 4),
+                                                  NULL),
+                                    CallFunc::create(CC_CALLBACK_0(EnemySprite::texiaoCall, this)),
+                                    NULL);
+    ;
+    texiaoAction->retain();
+    _G_V->addChild(this,640 - m_model->getPosition().y);
 }
 EnemySprite::~EnemySprite()
 {
@@ -39,6 +50,7 @@ EnemySprite::~EnemySprite()
     
     removeAllChildrenWithCleanup(true);
     delete healthBar;
+    texiaoAction->release();
 }
 void EnemySprite::move()
 {}
@@ -48,6 +60,10 @@ void EnemySprite::die()
 {}
 void EnemySprite::hurt()
 {}
+void EnemySprite::texiaoCall()
+{
+    texiaoSprite->setVisible(false);
+}
 void EnemySprite::attackCall()
 {
     m_model->attackCall();

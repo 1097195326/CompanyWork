@@ -7,7 +7,6 @@
 //
 
 #include "WalkEnemySprite.h"
-#include "BaseUtil.h"
 
 
 WalkEnemySprite::WalkEnemySprite(Enemy * model):EnemySprite(model)
@@ -136,11 +135,7 @@ void WalkEnemySprite::setArmorView()
         m_map["armorHurtAction1"] = hurtOnAction;
         
         Action * attackAction = RepeatForever::create(
-                                                      Spawn::create(
-                                                                    Sequence::create(DelayTime::create(attackSpeed * info.attackFrame),
-                                                                                     CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::attackCall, this)), NULL),
-                                                                    BaseUtil::makeAnimateWithNameIndexDelay(armorName + "_attack", info.attackFrames,attackSpeed),
-                                                                    NULL)
+                                                      BaseUtil::makeAnimateWithNameIndexDelay(armorName + "_attack", info.attackFrames,attackSpeed)
                                                       );
         attackAction->retain();
         m_map["armorAttackAction"] = attackAction;
@@ -179,6 +174,9 @@ void WalkEnemySprite::hurt()
         default:
             break;
     }
+    texiaoSprite->stopAllActions();
+    texiaoSprite->setVisible(true);
+    texiaoSprite->runAction(texiaoAction);
 }
 void WalkEnemySprite::move()
 {

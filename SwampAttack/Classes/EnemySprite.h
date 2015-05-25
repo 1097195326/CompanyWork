@@ -13,6 +13,7 @@
 #include "Enemy.h"
 #include "ProgressBar.h"
 #include "EnemyInfo.h"
+#include "BaseUtil.h"
 
 
 enum ActionStatus
@@ -30,7 +31,10 @@ protected:
     std::map<std::string, Action *> m_map;
     ProgressBar *   healthBar;
     Sprite      *   armorSprite;
+    Sprite      *   texiaoSprite;
     bool            isHaveArmor;
+    
+    Action      *   texiaoAction;
     
 protected:
     virtual void    move();
@@ -41,6 +45,7 @@ protected:
     void    attackCall();
     void    dieCall();
     void    hurtCall();
+    void    texiaoCall();
 public:
     EnemySprite(Enemy * model);
     virtual     ~EnemySprite();

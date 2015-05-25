@@ -32,6 +32,7 @@ public:
     Gun *   getGunByIndex(int index);
     int     getGunNum();
     int     getTakeUpGunNum();
+    int     getTakeUpGunIndex(string gunId);
     void    setView();
     
     void    takeUpGun(string gunId,int index);

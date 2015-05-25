@@ -66,6 +66,7 @@ public:
     void    setStateShoot();
     void    setStateReload();
     void    setStateWait();
+    void    setStateChange();
     
     bool    isTouching();
     bool    isTouchEnd();
@@ -73,6 +74,7 @@ public:
     bool    isHaveBullet();
 //    bool    isReloaded();
     bool    isShooted();
+    bool    isChanged();
     //--- interface for view
     Vec2    getPosition();
     bool    isWait();

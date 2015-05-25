@@ -107,6 +107,9 @@ m_isCurrentGun(false)
         m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
     }
     
+    
+    m_totalBullets = 200;
+    
     if (m_id == defaultGunID) {
         m_bullets = m_magazieSize;
         m_isDefaultGun = true;
@@ -123,7 +126,6 @@ m_isCurrentGun(false)
     }
     ///--- for test ---
     static int index = 1;
-    m_totalBullets = 60;
     m_isTakeUp = true;
     m_takeUpIndex = index;
     ++index;
@@ -297,6 +299,10 @@ int Gun::getBulletNum()
 int Gun::getTotalBulletNum()
 {
     return m_totalBullets;
+}
+string Gun::getId()
+{
+    return m_id;
 }
 string Gun::getWeaponName()
 {

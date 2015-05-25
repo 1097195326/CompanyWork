@@ -8,7 +8,7 @@
 
 #include "GunManager.h"
 #include "ConfigManager.h"
-
+#include "Human.h"
 
 
 GunManager::GunManager()
@@ -61,6 +61,20 @@ int GunManager::getTakeUpGunNum()
 {
     return (int)m_takeUpGunData.size();
 }
+int GunManager::getTakeUpGunIndex(string gunId)
+{
+    int index = 0;
+    std::map<string,Gun *>::iterator iter;
+    for (iter = m_takeUpGunData.begin(); iter != m_takeUpGunData.end(); ++iter)
+    {
+        ++index;
+        if (iter->first == gunId)
+        {
+            break;
+        }
+    }
+    return index;
+}
 void GunManager::takeUpGun(string gunId,int index)
 {
     m_gunData[gunId]->takeUp(index);
@@ -77,7 +91,27 @@ Gun * GunManager::getCurrentGun()
 }
 void GunManager::changeGun(string gunId)
 {
-    currentGun = m_gunData[gunId];
+    if(m_takeUpGunData[gunId]->getTotalBulletNum() < 1)
+    {
+        return;
+    }
+    std::map<string,Gun *>::iterator iter;
+    for (iter = m_takeUpGunData.begin(); iter != m_takeUpGunData.end(); ++iter)
+    {
+        Gun * gun = iter->second;
+        if (iter->first == gunId)
+        {
+            gun->setIsCurrentGun(true);
+            currentGun = m_takeUpGunData[gunId];
+        }else
+        {
+            gun->setIsCurrentGun(false);
+        }
+        gun->notify();
+    }
+    
+    Human::getInstance()->changeGun(currentGun);
+    
 }
 void GunManager::setView()
 {

@@ -100,6 +100,7 @@ public:
     void    addStrengthenLevel();
     void    buyBullet();
     //--- get function ---
+    string  getId();
     string  getWeaponName();
     int     getBulletNum();
     int     getTotalBulletNum();

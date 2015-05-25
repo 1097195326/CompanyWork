@@ -27,10 +27,6 @@ HumanSprite::~HumanSprite()
     m_actionData.clear();
 
 }
-void HumanSprite::updateData()
-{
-    
-}
 void HumanSprite::setModel(Human *human)
 {
     m_human = human;
@@ -39,7 +35,7 @@ void HumanSprite::setModel(Human *human)
     GunActionData actionData = GunActionInfo::getInstance()->getInfoByName(gun->getModelId());
     
     Action * reloadAction = Sequence::create(
-                                             BaseUtil::makeAnimateWithNameIndexDelay("reload_qiang3",
+                                             BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("reload_%s",gun->getModelId().c_str()),
                                                                                      actionData.reloadFrames,
                                                                                      gun->getReloadSpeed()),
                                              CallFunc::create(CC_CALLBACK_0(HumanSprite::reloadShotCall, this)),
@@ -49,28 +45,42 @@ void HumanSprite::setModel(Human *human)
     Action * shootAction = Spawn::create(
                                          Sequence::create(DelayTime::create(gun->getFireRate() * actionData.attackFrame),
                                                           CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)), NULL),
-                                         BaseUtil::makeAnimateWithNameIndexDelay("shoot_qiang3",
+                                         BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("shoot_%s",gun->getModelId().c_str()),
                                                                                  actionData.attackFrames,
                                                                                  gun->getFireRate()),
                                          NULL);
     shootAction->retain();
     
-    Action * waitAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("wait_qiang3", actionData.waitFrames));
+    Action * waitAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(StringUtils::format("wait_%s",gun->getModelId().c_str()),
+                                                                                      actionData.waitFrames));
     waitAction->retain();
     
     Action * runAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("run_qiang3", 8));
     runAction->retain();
     
+    Action * changeAction = Sequence::create(
+                                             BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("reload_%s",gun->getModelId().c_str()),
+                                                                                     actionData.reloadFrames,
+                                                                                     gun->getReloadSpeed()),
+                                             CallFunc::create(CC_CALLBACK_0(HumanSprite::changeCall, this)),
+                                             NULL);
+    changeAction->retain();
+    
     m_actionData["reloadAction"] = reloadAction;
-    m_actionData["runAction"] = runAction;
     m_actionData["shootAction"] = shootAction;
     m_actionData["waitAction"] = waitAction;
+    m_actionData["changeAction"] = changeAction;
+    
+    m_actionData["runAction"] = runAction;
     
     _G_V->addChild(this,1);
 }
 void HumanSprite::update(float data)
 {
-    if (m_human->isWait())
+    if (m_human->isChange())
+    {
+        change();
+    }else if (m_human->isWait())
     {
         wait();
     }else if (m_human->isRun())
@@ -120,6 +130,60 @@ void HumanSprite::reload()
     m_status = _isReloading;
     stopAllActions();
     runAction(m_actionData["reloadAction"]);
+}
+void HumanSprite::change()
+{
+    if (m_status == _isChangeing) {
+        return;
+    }
+    m_status = _isChangeing;
+    stopAllActions();
+    changeActions();
+    runAction(m_actionData["changeAction"]);
+}
+void HumanSprite::changeActions()
+{
+    m_actionData["reloadAction"]->release();
+    m_actionData["shootAction"]->release();
+    m_actionData["waitAction"]->release();
+    m_actionData["changeAction"]->release();
+    
+    Gun * gun = m_human->getGun();
+    GunActionData actionData = GunActionInfo::getInstance()->getInfoByName(gun->getModelId());
+    
+    Action * reloadAction = Sequence::create(
+                                             BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("reload_%s",gun->getModelId().c_str()),
+                                                                                     actionData.reloadFrames,
+                                                                                     gun->getReloadSpeed()),
+                                             CallFunc::create(CC_CALLBACK_0(HumanSprite::reloadShotCall, this)),
+                                             NULL);
+    reloadAction->retain();
+    
+    Action * shootAction = Spawn::create(
+                                         Sequence::create(DelayTime::create(gun->getFireRate() * actionData.attackFrame),
+                                                          CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)), NULL),
+                                         BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("shoot_%s",gun->getModelId().c_str()),
+                                                                                 actionData.attackFrames,
+                                                                                 gun->getFireRate()),
+                                         NULL);
+    shootAction->retain();
+    
+    Action * waitAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(StringUtils::format("wait_%s",gun->getModelId().c_str()),
+                                                                                      actionData.waitFrames));
+    waitAction->retain();
+    
+    Action * changeAction = Sequence::create(
+                                             BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("reload_%s",gun->getModelId().c_str()),
+                                                                                     actionData.reloadFrames,
+                                                                                     gun->getReloadSpeed()),
+                                             CallFunc::create(CC_CALLBACK_0(HumanSprite::changeCall, this)),
+                                             NULL);
+    changeAction->retain();
+    
+    m_actionData["reloadAction"] = reloadAction;
+    m_actionData["shootAction"] = shootAction;
+    m_actionData["waitAction"] = waitAction;
+    m_actionData["changeAction"] = changeAction;
 }
 void HumanSprite::reloadShotCall()
 {

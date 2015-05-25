@@ -111,6 +111,15 @@ EnemyInfo::EnemyInfo()
     bat.height = 140;
     bat.widthOffSet = 0;
     m_data["bat"] = bat;
+    // bat_armor
+    EnemyInfoData batArmor;
+    batArmor.attackFrame = 7;
+    batArmor.attackFrames = 11;
+    batArmor.walkFrames = 7;
+    batArmor.width = 160;
+    batArmor.height = 70;
+    batArmor.widthOffSet = 0;
+    m_data["bat_armor"] = batArmor;
     // crow 乌鸦
     EnemyInfoData crow;
     crow.attackFrame = 6;

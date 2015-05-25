@@ -54,10 +54,12 @@ float GameLoading::loadFrames()
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea4.plist"));
     
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("bat.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("batArmor.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("demon.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("crow.plist"));
     
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("explosion.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao.plist"));
     
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind1.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind2.plist"));

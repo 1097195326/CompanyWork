@@ -47,7 +47,7 @@ public:
     virtual void    setView();
     bool    isContainsPoint(Rect rect);
     void    hurt(int damage,int index);
-    void    hurt(int damage);
+    virtual void    hurt(int damage);
 protected:
     virtual void    move();
     
