@@ -169,10 +169,14 @@ bool Gun::fire(Vec2 position)
     }
     return m_totalBullets > 0;
 }
-void Gun::setView()
+void Gun::setFightView()
 {
     GunSprite * sprite = new GunSprite(this);
     sprite->autorelease();
+    
+}
+void Gun::setShopView()
+{
     
 }
 void Gun::reloadBullet()

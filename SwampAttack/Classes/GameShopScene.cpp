@@ -14,12 +14,13 @@
 #include "PropManager.h"
 #include "DefenseBuildingManager.h"
 #include "GameUser.h"
+#include "GameMapScene.h"
 
 
 
 bool GameShopScene::init()
 {
-    if (!LayerColor::init())
+    if (!Layer::init())
     {
         return false;
     }
@@ -58,35 +59,42 @@ bool GameShopScene::init()
         m_healthSprites.push_back(xin);
     }
     //--- scroll view  for 4 --------
-    m_scrollViews.reserve(4);
-    for (int i = 0; i < 4 ; ++i)
-    {
-        int num = 0;
-        switch (i) {
-            case 0:
-                num = GunManager::getInstance()->getGunNum();
-                break;
-            case 1:
-                num = PropManager::getInstance()->getPropNum();
-                break;
-            case 2:
-                num = DefenseBuildingManager::getInstance()->getBuildingNum();
-                break;
-            case 3:
-                num = 3;
-                break;
-        }
-        m_scrollViews[i] = new GameVerticalScrollHeadlerView(800,400,750,210,num);
-        m_scrollViews[i]->setScrollControllerContentWidth(800);
-        m_scrollViews[i]->setScrollControllerContentHeight(210 * num);
-        m_scrollViews[i]->setGetHeadlerTarget(this);
-        m_scrollViews[i]->setTag(i);
-        m_scrollViews[i]->initView();
-        m_scrollViews[i]->autorelease();
-        m_scrollViews[i]->setPosition(bg2->getBoundingBox().origin.x, bg2->getBoundingBox().origin.y);
-        bg2->addChild(m_scrollViews[i]);
-        m_scrollViews[i]->setScale(0.0001);
-    }
+//    m_scrollViews.reserve(4);
+//    for (int i = 0; i < 4 ; ++i)
+//    {
+//        int num = 0;
+//        switch (i) {
+//            case 0:
+//                num = GunManager::getInstance()->getGunNum();
+//                break;
+//            case 1:
+//                num = PropManager::getInstance()->getPropNum();
+//                break;
+//            case 2:
+//                num = DefenseBuildingManager::getInstance()->getBuildingNum();
+//                break;
+//            case 3:
+//                num = 3;
+//                break;
+//        }
+//        m_scrollViews[i] = new GameVerticalScrollHeadlerView(800,400,750,210,num);
+//        m_scrollViews[i]->setScrollControllerContentWidth(800);
+//        m_scrollViews[i]->setScrollControllerContentHeight(210 * num);
+//        m_scrollViews[i]->setGetHeadlerTarget(this);
+//        m_scrollViews[i]->setTag(i);
+//        m_scrollViews[i]->initView();
+//        m_scrollViews[i]->autorelease();
+//        m_scrollViews[i]->setPosition(bg2->getBoundingBox().origin.x, bg2->getBoundingBox().origin.y);
+//        bg2->addChild(m_scrollViews[i]);
+//        m_scrollViews[i]->setScale(0.0001);
+//    }
+    m_scrollView = new GameVerticalScrollHeadlerView(800,400,750,210,0);
+    m_scrollView->setScrollControllerContentWidth(800);
+    m_scrollView->setGetHeadlerTarget(this);
+    m_scrollView->autorelease();
+    m_scrollView->setPosition(bg2->getBoundingBox().origin.x, bg2->getBoundingBox().origin.y);
+    bg2->addChild(m_scrollView);
+    
     //--- select menu view ----
     ShopSelectMenuView * menuView = new ShopSelectMenuView(4);
     menuView->autorelease();
@@ -144,16 +152,35 @@ void GameShopScene::updateData()
     ShopSelectMenuView * menuView = (ShopSelectMenuView *) m_sub;
     int itemIndex = menuView->getSelectIndex();
     
-    for (int i = 0; i < 4 ; ++i)
-    {
-        if (itemIndex == i)
-        {
-            m_scrollViews[i]->setScale(1);
-        }else
-        {
-             m_scrollViews[i]->setScale(0.0001);
-        }
+//    for (int i = 0; i < 4 ; ++i)
+//    {
+//        if (itemIndex == i)
+//        {
+//            m_scrollViews[i]->setScale(1);
+//        }else
+//        {
+//             m_scrollViews[i]->setScale(0.0001);
+//        }
+//    }
+    int num = 0;
+    switch (itemIndex) {
+        case 0:
+            num = GunManager::getInstance()->getGunNum();
+            break;
+        case 1:
+            num = PropManager::getInstance()->getPropNum();
+            break;
+        case 2:
+            num = DefenseBuildingManager::getInstance()->getBuildingNum();
+            break;
+        case 3:
+            num = 3;
+            break;
     }
+    m_scrollView->setTag(itemIndex);
+    m_scrollView->setScrollControllerContentHeight(210 * num);
+    m_scrollView->reSetTotalCount(num);
+    m_scrollView->reSetView();
 }
 GameScrollHeadler * GameShopScene::getHeadlerByIndex(int index,int viewTag)
 {
@@ -172,5 +199,5 @@ void GameShopScene::homeButtonFunc(cocos2d::Ref *pSender)
 }
 void GameShopScene::backButtonFunc(cocos2d::Ref *pSender)
 {
-    log("--------2");
+    Director::getInstance()->replaceScene(GameMapScene::scene());
 }

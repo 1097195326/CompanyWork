@@ -32,6 +32,8 @@ private:
 public:
     void    setGetHeadlerTarget(GameScrollHeadlerTargetInterface * getHeadlerTarget);
     void    initView();
+    void    reSetView();
+    void    reSetTotalCount(int num);
 public:
     GameVerticalScrollHeadlerView(float viewWidth ,
                                   float viewHeight,

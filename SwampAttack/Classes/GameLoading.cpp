@@ -63,6 +63,7 @@ float GameLoading::loadFrames()
     
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind1.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind2.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("blindArmor.plist"));
     
     
     

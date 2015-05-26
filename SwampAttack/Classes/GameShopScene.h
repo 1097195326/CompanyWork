@@ -15,10 +15,11 @@
 #include "GameVerticalScrollHeadlerView.h"
 
 
-class GameShopScene : public cocos2d::LayerColor, public GameObserver,public GameScrollHeadlerTargetInterface
+class GameShopScene : public Layer, public GameObserver,public GameScrollHeadlerTargetInterface
 {
 private:
-    std::vector< GameVerticalScrollHeadlerView * >m_scrollViews;
+//    std::vector< GameVerticalScrollHeadlerView * >m_scrollViews;
+    GameVerticalScrollHeadlerView * m_scrollView;
     std::vector<Sprite *> m_healthSprites;
     Label   * m_goldLabel;
 public:

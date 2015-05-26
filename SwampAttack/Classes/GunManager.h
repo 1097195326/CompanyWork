@@ -33,9 +33,10 @@ public:
     int     getGunNum();
     int     getTakeUpGunNum();
     int     getTakeUpGunIndex(string gunId);
-    void    setView();
+    void    setFightView();
+    void    setShopView();
     
-    void    takeUpGun(string gunId,int index);
+    void    takeUpGun(string gunId);
     void    takeDownGun(string gunId);
     
 public:

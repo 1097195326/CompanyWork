@@ -31,7 +31,7 @@ public:
     void    setScrollVertical(bool canV);
     void    setScrollUndulate(bool undulate);
     void    addChildToScrollView(Node * node, int zOrder = 1);
-    
+    void    removeAllChildFromScrollView();
 public:
     GameScrollView(float width, float height);
     virtual ~GameScrollView();

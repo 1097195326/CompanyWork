@@ -22,6 +22,7 @@ public:
     CREATE_FUNC(GameMapScene);
     
     virtual bool    init();
+    void    buttonTouch(Ref * psender);
     
     bool    touchBegan(Touch * touch, Event * event);
     void    touchMoved(Touch * touch, Event * event);

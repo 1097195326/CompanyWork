@@ -54,7 +54,8 @@ public:
     void    setIsCurrentGun(bool is);
     void    reloadBullet();
     bool    fire(Vec2 position);
-    void    setView();
+    void    setFightView();
+    void    setShopView();
     
     bool    isDefaultGun();
     bool    isCurrentGun();

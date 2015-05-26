@@ -7,6 +7,7 @@
 //
 
 #include "EnemyManager.h"
+#include "EnemyProgressBar.h"
 
 
 EnemyManager::EnemyManager() : currentIndex(0)
@@ -70,6 +71,7 @@ void EnemyManager::gameLoop(float data)
             if (currentIndex < m_map.size())
             {
                 currentGroup = m_map[currentIndex];
+                notify();
             }else
             {
 //                log("Game Over");
@@ -78,7 +80,17 @@ void EnemyManager::gameLoop(float data)
         }
     }
 }
+float EnemyManager::getEnemyProgress()
+{
+    return (float)(currentIndex+1) / (float )m_map.size() * 100;
+}
 bool EnemyManager::isOver()
 {
     return m_isOver;
+}
+void EnemyManager::setView()
+{
+    EnemyProgressBar * bar = new EnemyProgressBar();
+    bar->setSubject(this);
+    bar->autorelease();
 }

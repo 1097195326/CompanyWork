@@ -78,6 +78,10 @@ void GameScrollView::addChildToScrollView(cocos2d::Node *node,int zOrder)
 {
     m_layer->addChild(node,zOrder);
 }
+void GameScrollView::removeAllChildFromScrollView()
+{
+    m_layer->removeAllChildrenWithCleanup(true);
+}
 void GameScrollView::setScrollControllerContentWidth(float width)
 {
     m_scrollContentWidth = width;

@@ -47,7 +47,7 @@ ShopItemScrollHeadler::ShopItemScrollHeadler(int index,int itemIndex):m_itemInde
 }
 ShopItemScrollHeadler::~ShopItemScrollHeadler()
 {
-    
+//    log("shop item scroll headler remove");
 }
 void ShopItemScrollHeadler::setGameShopScene(GameShopScene *shopScene)
 {

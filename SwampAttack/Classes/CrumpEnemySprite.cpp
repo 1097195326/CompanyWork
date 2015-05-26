@@ -1,50 +1,51 @@
 //
-//  WalkEnemySprite.cpp
+//  CrumpEnemySprite.cpp
 //  SwampAttack
 //
-//  Created by oceantech02 on 15/4/23.
+//  Created by oceantech02 on 15/5/26.
 //
 //
 
-#include "WalkEnemySprite.h"
+#include "CrumpEnemySprite.h"
 
 
-WalkEnemySprite::WalkEnemySprite(Enemy * model):EnemySprite(model)
+CrumpEnemySprite::CrumpEnemySprite(Enemy * model):EnemySprite(model)
 {
     string name = m_model->getModelId();
     
     EnemyInfoData info = EnemyInfo::getInstance()->getInfoByName(name);
     float attackSpeed = m_model->getAttackSpeed();
-    Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_walk", info.walkFrames));
+    Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_run", info.walkFrames));
     walkAction->retain();
     m_map["walkAction"] = walkAction;
     Action * hurtHeavyAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt_heavy", info.hurtHeavyFrames),
-                                          CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::hurtCall, this)),
-                                          NULL);
+                                                CallFunc::create(CC_CALLBACK_0(CrumpEnemySprite::hurtCall, this)),
+                                                NULL);
     hurtHeavyAction->retain();
     m_map["hurtAction3"] = hurtHeavyAction;
     Action * hurtLightAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt_light", info.hurtLightFrames),
-                                                CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::hurtCall, this)),
+                                                CallFunc::create(CC_CALLBACK_0(CrumpEnemySprite::hurtCall, this)),
                                                 NULL);
     hurtLightAction->retain();
     m_map["hurtAction2"] = hurtLightAction;
     Action * hurtOnAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt_on", info.hurtOnFrames),
-                                                CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::hurtCall, this)),
-                                                NULL);
+                                             CallFunc::create(CC_CALLBACK_0(CrumpEnemySprite::hurtCall, this)),
+                                             NULL);
     hurtOnAction->retain();
     m_map["hurtAction1"] = hurtOnAction;
     
-    Action * attackAction = RepeatForever::create(
-                                  Spawn::create(
-                                          Sequence::create(DelayTime::create(attackSpeed * info.attackFrame),
-                                                           CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::attackCall, this)), NULL),
-                                          BaseUtil::makeAnimateWithNameIndexDelay(name + "_attack", info.attackFrames,attackSpeed),
-                                          NULL)
-                                                  );
+    Action * attackAction = Sequence::create(
+                                              Spawn::create(
+                                                            Sequence::create(DelayTime::create(attackSpeed * info.attackFrame),
+                                                                             CallFunc::create(CC_CALLBACK_0(CrumpEnemySprite::attackCall, this)), NULL),
+                                                            BaseUtil::makeAnimateWithNameIndexDelay("explosion", info.attackFrames,attackSpeed),
+                                                            NULL),
+                                             NULL
+                                            );
     attackAction->retain();
     m_map["attackAction"] = attackAction;
-    Action * dieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_down", info.downFrames),
-                                          CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::dieCall, this)),
+    Action * dieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("explosion", info.downFrames),
+                                          CallFunc::create(CC_CALLBACK_0(CrumpEnemySprite::dieCall, this)),
                                           NULL);
     dieAction->retain();
     m_map["dieAction"] = dieAction;
@@ -53,7 +54,7 @@ WalkEnemySprite::WalkEnemySprite(Enemy * model):EnemySprite(model)
     
     scheduleUpdate();
 }
-void WalkEnemySprite::update(float data)
+void CrumpEnemySprite::update(float data)
 {
     if (m_model->isDieing())
     {
@@ -104,7 +105,7 @@ void WalkEnemySprite::update(float data)
         armor->runAction(a3);
     }
 }
-void WalkEnemySprite::setArmorView()
+void CrumpEnemySprite::setArmorView()
 {
     string armorName = m_model->getCapId();
     if ((armorName.size() > 0)) {
@@ -114,8 +115,7 @@ void WalkEnemySprite::setArmorView()
         addChild(armorSprite);
         armorSprite->setPosition(0,info.height);
         
-        float attackSpeed = m_model->getAttackSpeed();
-        Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_walk", info.walkFrames));
+        Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_run", info.walkFrames));
         walkAction->retain();
         m_map["armorWalkAction"] = walkAction;
         Action * hurtHeavyAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_hurt_heavy", info.hurtHeavyFrames),
@@ -130,15 +130,9 @@ void WalkEnemySprite::setArmorView()
                                                  NULL);
         hurtOnAction->retain();
         m_map["armorHurtAction1"] = hurtOnAction;
-        
-        Action * attackAction = RepeatForever::create(
-                                                      BaseUtil::makeAnimateWithNameIndexDelay(armorName + "_attack", info.attackFrames,attackSpeed)
-                                                      );
-        attackAction->retain();
-        m_map["armorAttackAction"] = attackAction;
     }
 }
-void WalkEnemySprite::hurt()
+void CrumpEnemySprite::hurt()
 {
     if (actionStatus == isHurting) {
         return;
@@ -175,7 +169,7 @@ void WalkEnemySprite::hurt()
     texiaoSprite->setVisible(true);
     texiaoSprite->runAction(texiaoAction);
 }
-void WalkEnemySprite::move()
+void CrumpEnemySprite::move()
 {
     if (actionStatus == isMoving) {
         return;
@@ -188,7 +182,7 @@ void WalkEnemySprite::move()
         armorSprite->runAction(m_map["armorWalkAction"]);
     }
 }
-void WalkEnemySprite::attack()
+void CrumpEnemySprite::attack()
 {
     if (actionStatus == isAttacking) {
         return;
@@ -196,12 +190,12 @@ void WalkEnemySprite::attack()
     actionStatus = isAttacking;
     guaiwuSprite->stopAllActions();
     guaiwuSprite->runAction(m_map["attackAction"]);
-    if (isHaveArmor) {
+    if (isHaveArmor && armorSprite) {
         armorSprite->stopAllActions();
-        armorSprite->runAction(m_map["armorAttackAction"]);
+        armorSprite->setVisible(false);
     }
 }
-void WalkEnemySprite::die()
+void CrumpEnemySprite::die()
 {
     if (actionStatus == isDieing) {
         return;

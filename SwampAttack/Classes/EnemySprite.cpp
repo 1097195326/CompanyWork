@@ -23,11 +23,15 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
     healthBar = new ProgressBar("xuenei.png","xuewai.png");
     addChild(healthBar,1);
     healthBar->setBarLeft();
-    healthBar->setPosition(Vec2(w * 0.5, h * 0.9));
+    healthBar->setPosition(Vec2(0, h * 0.9));
     healthBar->setVisible(false);
     
+    guaiwuSprite = Sprite::create();
+    guaiwuSprite->setPosition(Vec2(0, h * 0.5));
+    addChild(guaiwuSprite);
+    
     texiaoSprite = Sprite::create();
-    texiaoSprite->setPosition(Vec2(w * 0.5, h * 0.5));
+    texiaoSprite->setPosition(Vec2(0, h * 0.5));
     addChild(texiaoSprite,2);
     texiaoAction = Sequence::create(Spawn::create(
                                                   BaseUtil::makeAnimateWithNameAndIndex("blood", 7),

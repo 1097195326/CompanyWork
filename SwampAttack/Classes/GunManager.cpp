@@ -75,8 +75,9 @@ int GunManager::getTakeUpGunIndex(string gunId)
     }
     return index;
 }
-void GunManager::takeUpGun(string gunId,int index)
+void GunManager::takeUpGun(string gunId)
 {
+    int index = (int)m_takeUpGunData.size() + 1;
     m_gunData[gunId]->takeUp(index);
     m_takeUpGunData[gunId] = m_gunData[gunId];
 }
@@ -113,12 +114,21 @@ void GunManager::changeGun(string gunId)
     Human::getInstance()->changeGun(currentGun);
     
 }
-void GunManager::setView()
+void GunManager::setFightView()
 {
     std::map<string,Gun *>::iterator iter;
     for (iter = m_takeUpGunData.begin(); iter != m_takeUpGunData.end(); ++iter)
     {
         Gun * _gun = iter->second;
-        _gun->setView();
+        _gun->setFightView();
+    }
+}
+void GunManager::setShopView()
+{
+    std::map<string,Gun *>::iterator iter;
+    for (iter = m_takeUpGunData.begin(); iter != m_takeUpGunData.end(); ++iter)
+    {
+        Gun * _gun = iter->second;
+//        _gun->setView();
     }
 }

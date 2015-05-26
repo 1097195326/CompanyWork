@@ -96,6 +96,7 @@ void Enemy::hurt(int damage,int index)
     {
         m_status &= e_clear;
         m_status |= e_dieing;
+        m_isShowHurt = false;
     }else
     {
         hurtDlay = 0;
@@ -116,7 +117,7 @@ void Enemy::hurt(int damage,int index)
             m_isWeak =true;
         }
     }
-    log("enemy health :%f",m_health);
+//    log("enemy health :%f",m_health);
 }
 void Enemy::hurt(int damage)
 {
@@ -125,10 +126,13 @@ void Enemy::hurt(int damage)
     {
         m_status &= e_clear;
         m_status |= e_dieing;
+        m_isShowHurt = false;
+    }else
+    {
+        hurtDlay = 0;
+        m_isShowHurt = true;
     }
-    hurtDlay = 0;
-    m_isShowHurt = true;
-    log("enemy health2 :%f",m_health);
+//    log("enemy health2 :%f",m_health);
 }
 //--- view 接口
 bool Enemy::isWeak()
@@ -228,7 +232,8 @@ void Enemy::attackCall()
         }
             break;
         case 3:     // 陆地 自爆
-            
+            House::getInstance()->hurt(m_damage);
+            dieingCall();
             break;
         case 4:     // 飞行 远程
         {

@@ -9,7 +9,7 @@
 #include "GameMapScene.h"
 #include "GameScrollView.h"
 #include "GameVerticalScrollHeadlerView.h"
-
+#include "GameFightScene.h"
 
 bool GameMapScene::init()
 {
@@ -23,7 +23,18 @@ bool GameMapScene::init()
     
     Sprite * bgSprite = Sprite::create(ImagePath("shopBg.png"));
     bgSprite->setPosition(visibleOrigin.x + visibleSize.width * 0.5, visibleOrigin.y + visibleSize.height * 0.5);
-    Sprite * s1 = Sprite::create("CloseNormal.png");
+    
+    MenuItem * buttonSprite = MenuItemImage::create("CloseNormal.png",
+                                                    "CloseNormal.png",
+                                                    CC_CALLBACK_1(GameMapScene::buttonTouch, this));
+    buttonSprite->setPosition(visibleOrigin.x + visibleSize.width * 0.5,
+                    visibleOrigin.y + visibleSize.height * 0.5);
+    
+    Menu * buttonMenu = Menu::create(buttonSprite, NULL);
+    buttonMenu->setPosition(Point::ZERO);
+    addChild(buttonMenu);
+    
+    
     
 //    GameVerticalScrollHeadlerView * scrollView = new GameVerticalScrollHeadlerView(800,500,800,210,6);
 //    scrollView->setGetHeadlerTarget(this);
@@ -42,6 +53,10 @@ bool GameMapScene::init()
     
     
     return true;
+}
+void GameMapScene::buttonTouch(cocos2d::Ref *psender)
+{
+    Director::getInstance()->replaceScene(GameFightScene::scene());
 }
 bool GameMapScene::touchBegan(Touch *touch, Event *event)
 {

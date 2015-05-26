@@ -40,6 +40,7 @@ public:
     
     Vec2 fightScene_HouseSprite_Position = {visibleOrigin.x + 150 ,visibleOrigin.y + 250};
     Vec2 fightScene_HouseBar_Position = {visibleOrigin.x + 300 ,visibleOrigin.y + visibleSize.height - 50};
+    Vec2 fightScene_EnemyBar_Position = {visibleOrigin.x + visibleSize.width - 300 , visibleOrigin.y + visibleSize.height - 50};
     
     Vec2 fightScene_Bullet_Position = {visibleOrigin.x +510 ,visibleOrigin.y + visibleSize.height - 120};
     Vec2 fightScene_gunIcon_Position = {visibleOrigin.x +40 ,visibleOrigin.y + visibleSize.height - 140};

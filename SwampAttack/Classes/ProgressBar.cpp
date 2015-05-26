@@ -27,6 +27,10 @@ ProgressBar::~ProgressBar()
 {
     removeAllChildrenWithCleanup(true);
 }
+void ProgressBar::setBarPositon(cocos2d::Vec2 point)
+{
+    timer->setPosition(point);
+}
 void ProgressBar::updatePercent(float per)
 {
     timer->setPercentage(per);

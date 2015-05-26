@@ -107,6 +107,7 @@ EnemyInfo::EnemyInfo()
     bat.attackFrame = 7;
     bat.attackFrames = 11;
     bat.walkFrames = 7;
+    bat.downFrames = 13;
     bat.width = 160;
     bat.height = 140;
     bat.widthOffSet = 0;
@@ -129,6 +130,32 @@ EnemyInfo::EnemyInfo()
     crow.height = 170;
     crow.widthOffSet = 0;
     m_data["crow"] = crow;
+    // blind 自爆兵
+    EnemyInfoData blind;
+    blind.attackFrame = 7;
+    blind.attackFrames = 14;
+    blind.hurtHeavyFrames = 9;
+    blind.hurtLightFrames = 5;
+    blind.hurtOnFrames = 5;
+    blind.walkFrames = 8;
+    blind.downFrames = 14;
+    blind.width = 170;
+    blind.height = 160;
+    blind.widthOffSet = 0;
+    m_data["blind"] = blind;
+    // blindArmor
+    EnemyInfoData blindArmor;
+    blindArmor.attackFrame = 7;
+    blindArmor.attackFrames = 14;
+    blindArmor.hurtHeavyFrames = 9;
+    blindArmor.hurtLightFrames = 5;
+    blindArmor.hurtOnFrames = 5;
+    blindArmor.walkFrames = 8;
+    blindArmor.width = 170;
+    blindArmor.height = 80;
+    blindArmor.widthOffSet = 0;
+    m_data["blind_armor"] = blindArmor;
+    
     
 }
 EnemyInfo * EnemyInfo::getInstance()

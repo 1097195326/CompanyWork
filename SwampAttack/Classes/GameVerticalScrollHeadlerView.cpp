@@ -36,6 +36,23 @@ void GameVerticalScrollHeadlerView::initView()
         addHeadlerByIndex(i);
     }
 }
+void GameVerticalScrollHeadlerView::reSetView()
+{
+    m_currentIndex = 0;
+    removeAllChildFromScrollView();
+//    std::map<int,GameScrollHeadler *>::iterator iter;
+//    for (iter = m_headlerData.begin(); iter != m_headlerData.end(); ++iter)
+//    {
+//        iter->second->removeFromParentAndCleanup(true);
+//    }
+    m_headlerData.clear();
+    initView();
+    
+}
+void GameVerticalScrollHeadlerView::reSetTotalCount(int num)
+{
+    m_totalCount = num;
+}
 void GameVerticalScrollHeadlerView::updateItems(float data)
 {
     M_Vec2f offSet = m_scrollController->getOffSet();

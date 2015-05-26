@@ -37,7 +37,8 @@ void GameDirector::initGameSingle()
     House::getInstance();
     DefenseBuildingManager::getInstance()->setView();
     Human::getInstance();
-    GunManager::getInstance()->setView();
+    GunManager::getInstance()->setFightView();
+    EnemyManager::getInstance()->setView();
     
 }
 void GameDirector::gameLoop(float data)
@@ -115,31 +116,31 @@ void GameDirector::checkCross()
             }
             
             // defense
-            if (!buildingData.empty())
-            {
-                for (d_iter = buildingData.begin(); d_iter != buildingData.end(); ++d_iter)
-                {
-                    DefenseBuilding * building = d_iter->second;
-                    if (building->isCanHurt() &&
-                        building->isInRange(enemy->getPosition()) &&
-                        enemy->getActionType() == 1)
-                    {
-                        switch (building->getDefenceType())
-                        {
-                            case 2:
-                                enemy->hurt(building->getDamage());
-                                break;
-                            case 3:
-                                 building->fire(Vec2(enemy->getPosition().x,
-                                                     enemy->getPosition().y + enemy->getHeight() * 0.5));
-                                
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                }
-            }
+//            if (!buildingData.empty())
+//            {
+//                for (d_iter = buildingData.begin(); d_iter != buildingData.end(); ++d_iter)
+//                {
+//                    DefenseBuilding * building = d_iter->second;
+//                    if (building->isCanHurt() &&
+//                        building->isInRange(enemy->getPosition()) &&
+//                        enemy->getActionType() == 1)
+//                    {
+//                        switch (building->getDefenceType())
+//                        {
+//                            case 2:
+//                                enemy->hurt(building->getDamage());
+//                                break;
+//                            case 3:
+//                                 building->fire(Vec2(enemy->getPosition().x,
+//                                                     enemy->getPosition().y + enemy->getHeight() * 0.5));
+//                                
+//                                break;
+//                            default:
+//                                break;
+//                        }
+//                    }
+//                }
+//            }
             
         }
     }

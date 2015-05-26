@@ -14,9 +14,10 @@
 #include "GameObject.h"
 #include "EnemyGroup.h"
 #include "json/json.h"
+#include "GameSubject.h"
 
 
-class EnemyManager : public GameObject {
+class EnemyManager : public GameObject ,public GameSubject{
 private:
     std::map<int,EnemyGroup *>   m_map;
     EnemyGroup * currentGroup;
@@ -29,9 +30,11 @@ public:
     void    gameLoop(float data);
 public:
     
+    void    setView();
     void    setData(Json::Value data);
     void    clearData();
     bool    isOver();
+    float   getEnemyProgress();
     
     
     EnemyGroup * getCurrectGroup();

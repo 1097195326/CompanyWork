@@ -8,6 +8,7 @@
 
 #include "WalkEnemy.h"
 #include "WalkEnemySprite.h"
+#include "CrumpEnemySprite.h"
 #include "GameDirector.h"
 
 WalkEnemy::WalkEnemy(Json::Value data):Enemy(data)
@@ -55,6 +56,13 @@ void WalkEnemy::move()
 }
 void WalkEnemy::setView()
 {
-    EnemySprite * enemySprite = new WalkEnemySprite(this);
-    enemySprite->autorelease();
+    if (m_attackType == 3)
+    {
+        EnemySprite * enemySprite = new CrumpEnemySprite(this);
+        enemySprite->autorelease();
+    }else
+    {
+        EnemySprite * enemySprite = new WalkEnemySprite(this);
+        enemySprite->autorelease();
+    }
 }

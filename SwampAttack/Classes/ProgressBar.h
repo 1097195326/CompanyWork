@@ -21,6 +21,7 @@ public:
     void    updatePercent(float per);
     void    setBarLeft();
     void    setBarRight();
+    void    setBarPositon(Vec2 point);
 public:
     ProgressBar(std::string barName, std::string barBg);
     ~ProgressBar();

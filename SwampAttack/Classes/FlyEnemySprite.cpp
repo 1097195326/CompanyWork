@@ -25,14 +25,14 @@ FlyEnemySprite::FlyEnemySprite(Enemy * model):EnemySprite(model)
                                           BaseUtil::makeAnimateWithNameIndexDelay(name + "_attack", info.attackFrames,attackSpeed),
                                           NULL);
     attackAction->retain();
-//    Action * dieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_down", info.downFrames),
-//                                          CallFunc::create(CC_CALLBACK_0(FlyEnemySprite::dieCall, this)),
-//                                          NULL);
-//    dieAction->retain();
+    Action * dieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("flydown", info.downFrames),
+                                          CallFunc::create(CC_CALLBACK_0(FlyEnemySprite::dieCall, this)),
+                                          NULL);
+    dieAction->retain();
     
     m_map["walkAction"] = walkAction;
     m_map["attackAction"] = attackAction;
-//    m_map["dieAction"] = dieAction;
+    m_map["dieAction"] = dieAction;
     
     setArmorView();
     scheduleUpdate();
@@ -94,7 +94,7 @@ void FlyEnemySprite::setArmorView()
         EnemyInfoData info = EnemyInfo::getInstance()->getInfoByName(armorName);
         armorSprite = Sprite::create();
         addChild(armorSprite);
-        armorSprite->setPosition(info.width * 0.5,info.height);
+        armorSprite->setPosition(0,info.height);
         
         float attackSpeed = m_model->getAttackSpeed();
         
@@ -119,8 +119,8 @@ void FlyEnemySprite::move()
         return;
     }
     actionStatus = isMoving;
-    stopAllActions();
-    runAction(m_map["walkAction"]);
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["walkAction"]);
     if (isHaveArmor) {
         armorSprite->stopAllActions();
         armorSprite->runAction(m_map["armorWalkAction"]);
@@ -141,8 +141,8 @@ void FlyEnemySprite::attack()
         return;
     }
     actionStatus = isAttacking;
-    stopAllActions();
-    runAction(m_map["attackAction"]);
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["attackAction"]);
     if (isHaveArmor) {
         armorSprite->stopAllActions();
         armorSprite->runAction(m_map["armorAttackAction"]);
@@ -155,7 +155,10 @@ void FlyEnemySprite::die()
         return;
     }
     actionStatus = isDieing;
-    dieCall();
-//    stopAllActions();
-//    runAction(m_map["dieAction"]);
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["dieAction"]);
+    if (isHaveArmor && armorSprite) {
+        armorSprite->stopAllActions();
+        armorSprite->setVisible(false);
+    }
 }
