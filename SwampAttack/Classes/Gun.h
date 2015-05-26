@@ -35,7 +35,7 @@ public:
     GunActionData getInfoByName(string name);
 };
 //-------
-class Gun : public GameObject, public GameSubject{
+class Gun : public GameSubject{
 private:
     int     m_bullets;
     int     m_totalBullets;
@@ -133,7 +133,6 @@ public:
 public:
     Gun(Json::Value data);
     ~Gun();
-    void    gameLoop(float data);
 public:
     
 };

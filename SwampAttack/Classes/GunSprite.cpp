@@ -15,7 +15,6 @@
 GunSprite::GunSprite(Gun * gun):m_gun(gun)
 {
     init();
-    setSubject(m_gun);
     
     if (GunManager::getInstance()->getTakeUpGunNum() > 1)
     {

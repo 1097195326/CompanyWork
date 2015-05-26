@@ -135,10 +135,6 @@ Gun::~Gun()
 {
     
 }
-void Gun::gameLoop(float data)
-{
-    
-}
 bool Gun::fire(Vec2 position)
 {
     --m_bullets;
@@ -172,6 +168,7 @@ bool Gun::fire(Vec2 position)
 void Gun::setFightView()
 {
     GunSprite * sprite = new GunSprite(this);
+    sprite->setSubject(this);
     sprite->autorelease();
     
 }
