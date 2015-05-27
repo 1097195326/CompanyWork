@@ -12,7 +12,7 @@
 #include "GameObject.h"
 #include "Gun.h"
 
-
+class ShopGunIcon;
 
 class GunManager : public GameObject {
 private:
@@ -22,6 +22,7 @@ private:
     std::map<string,Gun *> m_takeUpGunData;
     
     Gun *   currentGun;
+    std::vector<ShopGunIcon *>   m_GunIcons;
 private:
     
     
@@ -31,13 +32,15 @@ public:
     void    changeGun(string gunId);
     Gun *   getGunByIndex(int index);
     int     getGunNum();
-    int     getTakeUpGunNum();
-    int     getTakeUpGunIndex(string gunId);
-    void    setFightView();
-    void    setShopView();
     
+    int     getTakeUpGunNum();
+    Gun *   getTakeUpGunByIndex(int index);
+    int     getTakeUpGunIndexByName(string name);
     void    takeUpGun(string gunId);
     void    takeDownGun(string gunId);
+    
+    void    setFightView();
+    void    setShopView(Sprite * shopScene);
     
 public:
     static GunManager * getInstance();

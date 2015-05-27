@@ -18,6 +18,7 @@ GameUser::GameUser():m_time(0)
         m_userHealth = 5;
         setUserHealth(m_userHealth);
     }
+    setUserGold(900000);
     m_userHealth = getUserHealth();
     
     enterGame();

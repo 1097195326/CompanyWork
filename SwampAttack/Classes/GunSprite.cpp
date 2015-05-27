@@ -19,7 +19,7 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
     if (GunManager::getInstance()->getTakeUpGunNum() > 1)
     {
         m_iconScale = 0.5;
-        int iconIndex = GunManager::getInstance()->getTakeUpGunIndex(m_gun->getId());
+        int iconIndex = GunManager::getInstance()->getTakeUpGunIndexByName(m_gun->getId());
         m_greenBg = Sprite::create(ImagePath("fight_gun_greenBg.png"));
         m_blueBg = Sprite::create(ImagePath("fight_gun_blueBg.png"));
         Sprite * gunIcon = Sprite::create(ImagePath(StringUtils::format("%s_icon.png",m_gun->getModelId().c_str())));

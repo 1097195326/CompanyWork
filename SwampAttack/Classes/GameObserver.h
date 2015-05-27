@@ -14,11 +14,12 @@
 
 class GameObserver {
 protected:
-    GameSubject * m_sub;
+    GameSubject * m_sub = NULL;
     
 public:
     virtual void    updateData() = 0;
     virtual void    setSubject(GameSubject * sub);
+    virtual void    detachSubject();
 public:
     GameObserver();
     virtual ~GameObserver();

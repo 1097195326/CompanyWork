@@ -107,9 +107,6 @@ m_isCurrentGun(false)
         m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
     }
     
-    
-    m_totalBullets = 200;
-    
     if (m_id == defaultGunID) {
         m_bullets = m_magazieSize;
         m_isDefaultGun = true;
@@ -124,11 +121,6 @@ m_isCurrentGun(false)
         m_isTakeUp = _G_U->isTakeUp(m_id);
         m_takeUpIndex = _G_U->getTakeUpIndex(m_id);
     }
-    ///--- for test ---
-    static int index = 1;
-    m_isTakeUp = true;
-    m_takeUpIndex = index;
-    ++index;
     
 }
 Gun::~Gun()
@@ -172,10 +164,6 @@ void Gun::setFightView()
     sprite->autorelease();
     
 }
-void Gun::setShopView()
-{
-    
-}
 void Gun::reloadBullet()
 {
     switch (m_reloadType) {
@@ -205,6 +193,7 @@ void Gun::takeUp(int index)
     m_takeUpIndex = index;
     _G_U->setTakeUpGun(m_id, m_isTakeUp);
     _G_U->setTakeUpIndex(m_id, index);
+    notify();
 }
 void Gun::takeDown()
 {
@@ -212,6 +201,7 @@ void Gun::takeDown()
     m_takeUpIndex = 0;
     _G_U->setTakeUpGun(m_id, m_isTakeUp);
     _G_U->setTakeUpIndex(m_id, 0);
+    notify();
 }
 void Gun::setIsCurrentGun(bool is)
 {
@@ -237,10 +227,18 @@ bool Gun::isUnlock()
 {
     return m_isUnlock;
 }
-void Gun::unlockGun()
+bool Gun::unlockGun()
 {
+    int userGold = _G_U->getUserGold();
+    if (userGold < m_unlockGold)
+    {
+        return false;
+    }
+    userGold -= m_unlockGold;
+    _G_U->setUserGold(userGold);
     m_isUnlock = true;
     _G_U->unlockGun(m_id);
+    return true;
 }
 bool Gun::isMaxLevel()
 {
@@ -270,8 +268,16 @@ bool Gun::isHaveBullet()
 {
     return m_bullets > 0;
 }
-void Gun::addStrengthenLevel()
+bool Gun::addStrengthenLevel()
 {
+    int userGold = _G_U->getUserGold();
+    if (userGold < m_strengthenGold)
+    {
+        return false;
+    }
+    userGold -= m_strengthenGold;
+    _G_U->setUserGold(userGold);
+        
     m_strengthenLevel += 1;
     _G_U->setGunLevel(m_id, m_strengthenLevel);
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
@@ -284,14 +290,22 @@ void Gun::addStrengthenLevel()
     {
         m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
     }
+    return true;
 }
-void Gun::buyBullet()
+bool Gun::buyBullet()
 {
+    int userGold = _G_U->getUserGold();
+    if (userGold < m_bulletPrice)
+    {
+        return false;
+    }
     m_totalBullets += m_magazieSize;
     _G_U->setGunBulletNumber(m_id, m_totalBullets);
-    int userGold = _G_U->getUserGold();
+    
     userGold -= m_bulletPrice;
     _G_U->setUserGold(userGold);
+    notify();
+    return true;
 }
 int Gun::getBulletNum()
 {

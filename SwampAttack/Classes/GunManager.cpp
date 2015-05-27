@@ -9,6 +9,7 @@
 #include "GunManager.h"
 #include "ConfigManager.h"
 #include "Human.h"
+#include "ShopGunIcon.h"
 
 
 GunManager::GunManager()
@@ -61,15 +62,29 @@ int GunManager::getTakeUpGunNum()
 {
     return (int)m_takeUpGunData.size();
 }
-int GunManager::getTakeUpGunIndex(string gunId)
+Gun * GunManager::getTakeUpGunByIndex(int index)
+{
+    Gun * gun = NULL;
+    int i = 0;
+    std::map<string,Gun *>::iterator iter;
+    for (iter = m_takeUpGunData.begin(); iter != m_takeUpGunData.end(); ++iter)
+    {
+        if (index == i) {
+            gun = iter->second;
+            break;
+        }
+        ++i;
+    }
+    return gun;
+}
+int GunManager::getTakeUpGunIndexByName(string name)
 {
     int index = 0;
     std::map<string,Gun *>::iterator iter;
     for (iter = m_takeUpGunData.begin(); iter != m_takeUpGunData.end(); ++iter)
     {
         ++index;
-        if (iter->first == gunId)
-        {
+        if (iter->first == name) {
             break;
         }
     }
@@ -77,9 +92,23 @@ int GunManager::getTakeUpGunIndex(string gunId)
 }
 void GunManager::takeUpGun(string gunId)
 {
-    int index = (int)m_takeUpGunData.size() + 1;
-    m_gunData[gunId]->takeUp(index);
-    m_takeUpGunData[gunId] = m_gunData[gunId];
+    int index = (int)m_takeUpGunData.size();
+    Gun * gun = m_gunData[gunId];
+    if (index >= 3)
+    {
+        Gun * lastGun = getTakeUpGunByIndex(2);
+        takeDownGun(lastGun->getId());
+        
+        gun->takeUp(index);
+        m_takeUpGunData[gunId] = gun;
+        m_GunIcons[index -1]->reSetIcon(gun);
+    }else
+    {
+        gun->takeUp(index + 1);
+        m_takeUpGunData[gunId] = gun;
+        m_GunIcons[index]->reSetIcon(gun);
+    }
+    
 }
 void GunManager::takeDownGun(string gunId)
 {
@@ -123,12 +152,15 @@ void GunManager::setFightView()
         _gun->setFightView();
     }
 }
-void GunManager::setShopView()
+void GunManager::setShopView(Sprite * gunItemSprite)
 {
-    std::map<string,Gun *>::iterator iter;
-    for (iter = m_takeUpGunData.begin(); iter != m_takeUpGunData.end(); ++iter)
+    m_GunIcons.reserve(3);
+    for (int i = 0; i < 3; i++)
     {
-        Gun * _gun = iter->second;
-//        _gun->setView();
+        Gun * gun = getTakeUpGunByIndex(i);
+        ShopGunIcon * icon = new ShopGunIcon(i);
+        icon->reSetIcon(gun);
+        gunItemSprite->addChild(icon);
+        m_GunIcons[i] = icon;
     }
 }

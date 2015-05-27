@@ -50,12 +50,11 @@ private:
 public:
     void    takeUp(int index);
     void    takeDown();
-    void    unlockGun();
+    bool    unlockGun();
     void    setIsCurrentGun(bool is);
     void    reloadBullet();
     bool    fire(Vec2 position);
     void    setFightView();
-    void    setShopView();
     
     bool    isDefaultGun();
     bool    isCurrentGun();
@@ -98,8 +97,8 @@ private:
     
 public:
     //--- set function --
-    void    addStrengthenLevel();
-    void    buyBullet();
+    bool    addStrengthenLevel();
+    bool    buyBullet();
     //--- get function ---
     string  getId();
     string  getWeaponName();

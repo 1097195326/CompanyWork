@@ -14,14 +14,21 @@
 #include "GameScrollHeadlerTargetInterface.h"
 #include "GameVerticalScrollHeadlerView.h"
 
+class Gun;
+
 
 class GameShopScene : public Layer, public GameObserver,public GameScrollHeadlerTargetInterface
 {
 private:
-//    std::vector< GameVerticalScrollHeadlerView * >m_scrollViews;
-    GameVerticalScrollHeadlerView * m_scrollView;
+    std::vector< GameVerticalScrollHeadlerView * >m_scrollViews;
+//    GameVerticalScrollHeadlerView * m_scrollView;
     std::vector<Sprite *> m_healthSprites;
     Label   * m_goldLabel;
+    
+private:
+    void    visibelItemBg(int index);
+    void    setItemBgSprite();
+    void    setGunIcon();
 public:
     CREATE_SCENE_FUNC(GameShopScene);
     CREATE_FUNC(GameShopScene);
@@ -36,6 +43,10 @@ public:
     void    backButtonFunc(Ref * pSender);
 public:
     void    updateGoldView();
+    
+    Sprite  * m_gunItembgSprite;
+    Sprite  * m_propItembgSprite;
+    
 };
 
 #endif /* defined(__SwampAttack__GameShopScene__) */

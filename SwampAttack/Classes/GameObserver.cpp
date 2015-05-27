@@ -23,3 +23,9 @@ void GameObserver::setSubject(GameSubject *sub)
     m_sub = sub;
     m_sub->attach(this);
 }
+void GameObserver::detachSubject()
+{
+    if (m_sub) {
+        m_sub->detach(this);
+    }
+}
