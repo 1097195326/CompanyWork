@@ -118,8 +118,8 @@ m_isCurrentGun(false)
     {
         m_bullets = m_totalBullets >= m_magazieSize ? m_magazieSize : m_totalBullets % m_magazieSize;
         m_isUnlock = _G_U->isUnlockGun(m_id);
-        m_isTakeUp = _G_U->isTakeUp(m_id);
-        m_takeUpIndex = _G_U->getTakeUpIndex(m_id);
+        m_isTakeUp = _G_U->isTakeUpGun(m_id);
+        m_takeUpIndex = _G_U->getTakeUpGunIndex(m_id);
     }
     
 }
@@ -192,7 +192,7 @@ void Gun::takeUp(int index)
     m_isTakeUp = true;
     m_takeUpIndex = index;
     _G_U->setTakeUpGun(m_id, m_isTakeUp);
-    _G_U->setTakeUpIndex(m_id, index);
+    _G_U->setTakeUpGunIndex(m_id, index);
     notify();
 }
 void Gun::takeDown()
@@ -200,7 +200,7 @@ void Gun::takeDown()
     m_isTakeUp = false;
     m_takeUpIndex = 0;
     _G_U->setTakeUpGun(m_id, m_isTakeUp);
-    _G_U->setTakeUpIndex(m_id, 0);
+    _G_U->setTakeUpGunIndex(m_id, 0);
     notify();
 }
 void Gun::setIsCurrentGun(bool is)

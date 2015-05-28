@@ -51,9 +51,9 @@ public:
     void    unlockGun(string gunId);
     bool    isUnlockGun(string gunId);
     void    setTakeUpGun(string gunId,bool takeUp);
-    bool    isTakeUp(string gunId);
-    void    setTakeUpIndex(string gunId,int index);
-    int     getTakeUpIndex(string gunId);
+    bool    isTakeUpGun(string gunId);
+    void    setTakeUpGunIndex(string gunId,int index);
+    int     getTakeUpGunIndex(string gunId);
     void    setGunLevel(string gunId, int level);
     int     getGunLevel(string gunId);
     void    setGunBulletNumber(string gunId,int num);
@@ -68,6 +68,11 @@ public:
     bool    isUnlockProp(string propId);
     void    setPropNum(string propId,int num);
     int     getPropNum(string propId);
+    
+    void    setTakeUpProp(string propId,bool takeUp);
+    bool    isTakeUpProp(string propId);
+    void    setTakeUpPropIndex(string propId,int index);
+    int     getTakeUpPropIndex(string propId);
     //--- award ----
     
     

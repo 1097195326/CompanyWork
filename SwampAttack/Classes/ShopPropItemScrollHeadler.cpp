@@ -7,7 +7,7 @@
 //
 
 #include "ShopPropItemScrollHeadler.h"
-#include "GunManager.h"
+//#include "GunManager.h"
 #include "PropManager.h"
 #include "DefenseBuildingManager.h"
 #include "GameUser.h"
@@ -33,6 +33,7 @@ void ShopPropItemScrollHeadler::initDaojuView()
     removeAllChildrenWithCleanup(true);
     
     Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
+    setSubject(prop);
     if (prop->isUnlock())
     {
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg1.png"));
@@ -60,6 +61,20 @@ void ShopPropItemScrollHeadler::initDaojuView()
         Menu * buttonMenu = Menu::create(m_buyButton, NULL);
         buttonMenu->setPosition(Point::ZERO);
         addChild(buttonMenu);
+        
+        m_takeUpButton = MenuItemImage::create(ImagePath("shop_zhuanbei.png"),
+                                               ImagePath("shop_zhuanbei.png"),
+                                               CC_CALLBACK_1(ShopPropItemScrollHeadler::takeUp, this));
+        
+        m_takeUpButton->setPosition(itemBg->getContentSize().width * 0.5, 0);
+        Menu * takeUpMenu = Menu::create(m_takeUpButton, NULL);
+        takeUpMenu->setPosition(Point::ZERO);
+        addChild(takeUpMenu);
+        if (prop->isTakeUp())
+        {
+            m_takeUpButton->setVisible(false);
+        }
+        
         
         Sprite * buyLabel = Sprite::create(ImagePath("shopItemLabel2.png"));
         buyLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.15);
@@ -133,6 +148,20 @@ void ShopPropItemScrollHeadler::updateDaojuView()
         }
     }
 }
+void ShopPropItemScrollHeadler::updateData()
+{
+    Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
+    if (prop->isUnlock())
+    {
+        if (prop->isTakeUp())
+        {
+            m_takeUpButton->setVisible(false);
+        }else
+        {
+            m_takeUpButton->setVisible(true);
+        }
+    }
+}
 void ShopPropItemScrollHeadler::upGrade(Ref * pSender)
 {
     
@@ -141,14 +170,10 @@ void ShopPropItemScrollHeadler::unLock(Ref * pSender)
 {
     
     Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
-    int unlockGold = prop->getUnlockGold();
-    int userGold = _G_U->getUserGold();
-    if (userGold >= unlockGold)
+    bool sec = prop->unlockProp();
+    if (sec)
     {
-        userGold -= unlockGold;
-        _G_U->setUserGold(userGold);
         m_shopScene->updateGoldView();
-        prop->unlockProp();
         initDaojuView();
     }else
     {
@@ -159,17 +184,19 @@ void ShopPropItemScrollHeadler::buy(Ref * pSender)
 {
     
     Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
-    int price = prop->getPropPrice();
-    int userGold = _G_U->getUserGold();
-    if (userGold >= price)
+    bool sec = prop->buyProp();
+    if (sec)
     {
-        userGold -= price;
-        _G_U->setUserGold(userGold);
         m_shopScene->updateGoldView();
-        prop->buyProp();
         updateDaojuView();
     }else
     {
         
     }
+}
+void ShopPropItemScrollHeadler::takeUp(cocos2d::Ref *pSender)
+{
+    Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
+    PropManager::getInstance()->takeUpProp(prop->getId());
+    
 }

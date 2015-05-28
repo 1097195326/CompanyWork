@@ -109,15 +109,15 @@ void GameUser::setTakeUpGun(string gunId,bool takeUp)
 {
     setBoolForKey(gunId + "guntakeup", takeUp);
 }
-bool GameUser::isTakeUp(string gunId)
+bool GameUser::isTakeUpGun(string gunId)
 {
     return getBoolForKey(gunId + "guntakeup");
 }
-void GameUser::setTakeUpIndex(string gunId, int index)
+void GameUser::setTakeUpGunIndex(string gunId, int index)
 {
     setIntForKey(gunId + "gunTakeUpIndex", index);
 }
-int GameUser::getTakeUpIndex(string gunId)
+int GameUser::getTakeUpGunIndex(string gunId)
 {
     return getIntForKey(gunId + "gunTakeUpIndex");
 }
@@ -170,6 +170,22 @@ void GameUser::setPropNum(string propId, int num)
 int GameUser::getPropNum(string propId)
 {
     return getIntForKey(propId + "propNum");
+}
+void GameUser::setTakeUpProp(string propId, bool takeUp)
+{
+    setBoolForKey(propId + "proptakeup", takeUp);
+}
+bool GameUser::isTakeUpProp(string propId)
+{
+    return getBoolForKey(propId + "proptakeup");
+}
+void GameUser::setTakeUpPropIndex(string propId, int index)
+{
+    setIntForKey(propId + "propTakeUpIndex", index);
+}
+int GameUser::getTakeUpPropIndex(string propId)
+{
+    return getIntForKey(propId + "propTakeUpIndex");
 }
 //----- private function
 void GameUser::setBoolForKey(string name, bool value)

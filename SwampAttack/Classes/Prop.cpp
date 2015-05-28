@@ -41,26 +41,71 @@ Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0)
     
     m_num = _G_U->getPropNum(m_id);
     m_isUnlock = _G_U->isUnlockProp(m_id);
-    
+    m_isTakeUp = _G_U->isTakeUpProp(m_id);
+    m_takeUpIndex = _G_U->getTakeUpPropIndex(m_id);
 }
 Prop::~Prop()
 {
     
 }
 
-void Prop::buyProp()
+bool Prop::buyProp()
 {
+    int userGold = _G_U->getUserGold();
+    if (userGold < m_itemPrice)
+    {
+        return false;
+    }
+    userGold -= m_itemPrice;
+    _G_U->setUserGold(userGold);
+    
     ++m_num;
     _G_U->setPropNum(m_id, m_num);
+    notify();
+    return true;
+}
+void Prop::takeUp(int index)
+{
+    m_isTakeUp = true;
+    m_takeUpIndex = index;
+    _G_U->setTakeUpProp(m_id, m_isTakeUp);
+    _G_U->setTakeUpGunIndex(m_id, index);
+    notify();
+}
+void Prop::takeDown()
+{
+    m_isTakeUp = false;
+    m_takeUpIndex = 0;
+    _G_U->setTakeUpProp(m_id, m_isTakeUp);
+    _G_U->setTakeUpPropIndex(m_id, 0);
+    notify();
+}
+int Prop::getTakeUpIndex()
+{
+    return m_takeUpIndex;
+}
+bool Prop::isTakeUp()
+{
+    return m_isTakeUp;
 }
 bool Prop::isUnlock()
 {
     return m_isUnlock;
 }
-void Prop::unlockProp()
+bool Prop::unlockProp()
 {
+    int userGold = _G_U->getUserGold();
+    if (userGold < m_unlockGold)
+    {
+        return false;
+    }
+    userGold -= m_unlockGold;
+    _G_U->setUserGold(userGold);
+        
     m_isUnlock = true;
     _G_U->unlockProp(m_id);
+    
+    return true;
 }
 int Prop::getNum()
 {

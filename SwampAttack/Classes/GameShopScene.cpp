@@ -275,11 +275,8 @@ void GameShopScene::setItemBgSprite()
     m_propItembgSprite->setPosition(visibleOrigin.x + visibleSize.width - 60,
                                    visibleOrigin.y + visibleSize.height * 0.5);
     addChild(m_propItembgSprite);
-    for (int i = 0; i < 4; i++)
-    {
-        Sprite * s = Sprite::create(ImagePath("fight_gun_blueBg.png"));
-        m_propItembgSprite->addChild(s);
-        s->setPosition( 0, s->getContentSize().height * (2 - i));
-    }
+    
+    PropManager::getInstance()->setShopView(m_propItembgSprite);
+    
     m_propItembgSprite->setVisible(false);
 }

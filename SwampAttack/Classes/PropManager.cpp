@@ -8,6 +8,7 @@
 
 #include "PropManager.h"
 #include "ConfigManager.h"
+#include "ShopPropIcon.h"
 
 
 PropManager::PropManager()
@@ -19,7 +20,11 @@ PropManager::PropManager()
     std::map<int,std::string>::iterator iter;
     for (iter = m_hashHead.begin(); iter != m_hashHead.end(); ++iter) {
         string propId = iter->second;
-        m_propData[propId] = new Prop(data[propId]);
+        Prop * prop = new Prop(data[propId]);
+        m_propData[propId] = prop;
+        if (prop->isTakeUp()) {
+            m_takeUpPropData[propId] = prop;
+        }
     }
     
 }
@@ -40,4 +45,74 @@ Prop * PropManager::getPropByIndex(int index)
 int PropManager::getPropNum()
 {
     return (int)m_propData.size();
+}
+
+int PropManager::getTakeUpPropNum()
+{
+    return (int)m_takeUpPropData.size();
+}
+Prop * PropManager::getTakeUpPropByIndex(int index)
+{
+    Prop * prop = NULL;
+    int i = 0;
+    std::map<string,Prop *>::iterator iter;
+    for (iter = m_takeUpPropData.begin(); iter != m_takeUpPropData.end(); ++iter)
+    {
+        if (index == i) {
+            prop = iter->second;
+            break;
+        }
+        ++i;
+    }
+    return prop;
+}
+int PropManager::getTakeUpPropIndexByName(string name)
+{
+    int index = 0;
+    std::map<string,Prop *>::iterator iter;
+    for (iter = m_takeUpPropData.begin(); iter != m_takeUpPropData.end(); ++iter)
+    {
+        ++index;
+        if (iter->first == name) {
+            break;
+        }
+    }
+    return index;
+}
+void PropManager::takeUpProp(string propId)
+{
+    int index = (int)m_takeUpPropData.size();
+    Prop * prop = m_propData[propId];
+    if (index >= 4)
+    {
+        Prop * lastProp = getTakeUpPropByIndex(3);
+        takeDownProp(lastProp->getId());
+        
+        prop->takeUp(index);
+        m_takeUpPropData[propId] = prop;
+        m_propIcons[index -1]->reSetIcon(prop);
+    }else
+    {
+        prop->takeUp(index + 1);
+        m_takeUpPropData[propId] = prop;
+        m_propIcons[index]->reSetIcon(prop);
+    }
+    
+}
+void PropManager::takeDownProp(string propId)
+{
+    m_propData[propId]->takeDown();
+    m_takeUpPropData.erase(propId);
+}
+void PropManager::setShopView(Sprite * propItemSprite)
+{
+    m_propIcons.reserve(4);
+    for (int i = 0; i < 4; i++)
+    {
+        Prop * prop = getTakeUpPropByIndex(i);
+        ShopPropIcon * icon = new ShopPropIcon(i);
+        icon->reSetIcon(prop);
+        propItemSprite->addChild(icon);
+        m_propIcons[i] = icon;
+    }
 }

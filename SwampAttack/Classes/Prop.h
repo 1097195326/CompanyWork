@@ -10,25 +10,34 @@
 #define __SwampAttack__Prop__
 
 
-#include "GameObject.h"
 #include "json/json.h"
 #include "BaseCode.h"
+#include "GameSubject.h"
+
 
 using namespace std;
 
-class Prop {
+class Prop : public GameSubject{
 private:
     bool        m_isUnlock;
     int         m_num;
+    bool        m_isTakeUp;
+    int         m_takeUpIndex;
+    
     
 public:
     Prop(Json::Value value);
     ~Prop();
 public:
+    void    takeUp(int index);
+    void    takeDown();
+    int     getTakeUpIndex();
+    bool    isTakeUp();
+    
     bool    isUnlock();
-    void    unlockProp();
+    bool    unlockProp();
     int     getNum();
-    void    buyProp();
+    bool    buyProp();
 private:
     
     string      m_id;           //

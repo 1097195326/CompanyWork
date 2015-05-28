@@ -12,9 +12,10 @@
 #include "GameScrollHeadler.h"
 #include "ProgressBar.h"
 #include "GameShopScene.h"
+#include "GameObserver.h"
 
 
-class ShopPropItemScrollHeadler : public GameScrollHeadler {
+class ShopPropItemScrollHeadler : public GameScrollHeadler , public GameObserver{
 private:
     Label   *   m_buyLabel;
     Label   *   m_upgradeLabel;
@@ -25,6 +26,7 @@ private:
     MenuItemImage * m_upGradeButton;
     MenuItemImage * m_unLockButton;
     MenuItemImage * m_buyButton;
+    MenuItemImage * m_takeUpButton;
     
     GameShopScene * m_shopScene;
 private:
@@ -34,11 +36,13 @@ private:
     void    upGrade(Ref * pSender);
     void    unLock(Ref * pSender);
     void    buy(Ref * pSender);
+    void    takeUp(Ref * pSender);
 public:
     void    setGameShopScene(GameShopScene * shopScene);
     ShopPropItemScrollHeadler(int index);
     ~ShopPropItemScrollHeadler();
     
+    void    updateData();
 };
 
 #endif /* defined(__SwampAttack__ShopPropItemScrollHeadler__) */
