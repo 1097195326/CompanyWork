@@ -18,7 +18,7 @@ class ShopPropIcon : public Sprite, public GameObserver {
 private:
     EventListenerTouchOneByOne * m_listener;
     Sprite *    m_iconBg;
-    Prop    *   m_prop;
+    Prop    *   m_prop = NULL;
     Sprite  *   m_icon;
     Label   *   m_num;
 private:

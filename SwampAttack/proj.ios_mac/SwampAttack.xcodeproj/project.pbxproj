@@ -104,6 +104,8 @@
 		8DCA71AC1AE74787007ADFE6 /* ProgressBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA71AA1AE74787007ADFE6 /* ProgressBar.cpp */; };
 		8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */; };
 		8DD215681B16BA720090EEEB /* ShopPropIcon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD215661B16BA720090EEEB /* ShopPropIcon.cpp */; };
+		8DD2156B1B16E7160090EEEB /* GameScrollHeadlerView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD215691B16E7160090EEEB /* GameScrollHeadlerView.cpp */; };
+		8DD2156E1B16F4480090EEEB /* GameHorizontalScrollHeadlerView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2156C1B16F4480090EEEB /* GameHorizontalScrollHeadlerView.cpp */; };
 		8DD29D371B0B3B9A00ECB826 /* DefenseBuilding1_Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD29D351B0B3B9A00ECB826 /* DefenseBuilding1_Sprite.cpp */; };
 		8DD29D3A1B0B3BDA00ECB826 /* DefenseBuilding2_Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD29D381B0B3BDA00ECB826 /* DefenseBuilding2_Sprite.cpp */; };
 		8DD29D3D1B0B3C1400ECB826 /* DefenseBuilding3_Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD29D3B1B0B3C1400ECB826 /* DefenseBuilding3_Sprite.cpp */; };
@@ -321,6 +323,10 @@
 		8DD0DE361ACE347000BA61D4 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
 		8DD215661B16BA720090EEEB /* ShopPropIcon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopPropIcon.cpp; sourceTree = "<group>"; };
 		8DD215671B16BA720090EEEB /* ShopPropIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopPropIcon.h; sourceTree = "<group>"; };
+		8DD215691B16E7160090EEEB /* GameScrollHeadlerView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScrollHeadlerView.cpp; sourceTree = "<group>"; };
+		8DD2156A1B16E7160090EEEB /* GameScrollHeadlerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScrollHeadlerView.h; sourceTree = "<group>"; };
+		8DD2156C1B16F4480090EEEB /* GameHorizontalScrollHeadlerView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameHorizontalScrollHeadlerView.cpp; sourceTree = "<group>"; };
+		8DD2156D1B16F4480090EEEB /* GameHorizontalScrollHeadlerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHorizontalScrollHeadlerView.h; sourceTree = "<group>"; };
 		8DD29D351B0B3B9A00ECB826 /* DefenseBuilding1_Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DefenseBuilding1_Sprite.cpp; sourceTree = "<group>"; };
 		8DD29D361B0B3B9A00ECB826 /* DefenseBuilding1_Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefenseBuilding1_Sprite.h; sourceTree = "<group>"; };
 		8DD29D381B0B3BDA00ECB826 /* DefenseBuilding2_Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DefenseBuilding2_Sprite.cpp; sourceTree = "<group>"; };
@@ -736,6 +742,10 @@
 				8DE3C3901AFB14F900C61D89 /* GameHorizontalScrollView.h */,
 				8DE3C3921AFB15A800C61D89 /* GameVerticalScrollHeadlerView.cpp */,
 				8DE3C3931AFB15A800C61D89 /* GameVerticalScrollHeadlerView.h */,
+				8DD2156C1B16F4480090EEEB /* GameHorizontalScrollHeadlerView.cpp */,
+				8DD2156D1B16F4480090EEEB /* GameHorizontalScrollHeadlerView.h */,
+				8DD215691B16E7160090EEEB /* GameScrollHeadlerView.cpp */,
+				8DD2156A1B16E7160090EEEB /* GameScrollHeadlerView.h */,
 			);
 			name = baseUI;
 			sourceTree = "<group>";
@@ -1081,6 +1091,7 @@
 				8DE3C3941AFB15A800C61D89 /* GameVerticalScrollHeadlerView.cpp in Sources */,
 				8DC3E1A01AE8C40A00BE6CA4 /* WalkEnemy.cpp in Sources */,
 				8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */,
+				8DD2156E1B16F4480090EEEB /* GameHorizontalScrollHeadlerView.cpp in Sources */,
 				8DCA71AC1AE74787007ADFE6 /* ProgressBar.cpp in Sources */,
 				8DC430A61AC929BE00AB1665 /* GameDirector.cpp in Sources */,
 				8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */,
@@ -1105,6 +1116,7 @@
 				8DC253491ACB970400D10652 /* CCCsvHelper.cpp in Sources */,
 				8DD87E6D1B15A29300FC073A /* ShopBuildingItemScrollHeadler.cpp in Sources */,
 				8DD499731B0450000037CBAA /* GameBuff.cpp in Sources */,
+				8DD2156B1B16E7160090EEEB /* GameScrollHeadlerView.cpp in Sources */,
 				8DC10ACB1AC40222004F7DE2 /* EnemyManager.cpp in Sources */,
 				8DD29D401B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,

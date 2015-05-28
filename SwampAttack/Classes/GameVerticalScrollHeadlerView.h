@@ -9,31 +9,12 @@
 #ifndef __SwampAttack__GameVerticalScrollHeadlerView__
 #define __SwampAttack__GameVerticalScrollHeadlerView__
 
-#include "GameVerticalScrollView.h"
-#include "GameScrollHeadler.h"
-#include "GameScrollHeadlerTargetInterface.h"
+#include "GameScrollHeadlerView.h"
 
 
-class GameVerticalScrollHeadlerView : public GameVerticalScrollView{
+class GameVerticalScrollHeadlerView : public GameScrollHeadlerView{
 private:
-    std::map<int,GameScrollHeadler *> m_headlerData;
-    float   m_itemWidth;
-    float   m_itemHeight;
-    int     m_totalCount;
-    int     m_viewCount;
-    int     m_currentIndex;
     
-    GameScrollHeadlerTargetInterface * m_target;
-    
-private:
-    void    updateItems(float data);
-    void    addHeadlerByIndex(int index);
-    GameScrollHeadler * getHeadlerWithIndex(int index);
-public:
-    void    setGetHeadlerTarget(GameScrollHeadlerTargetInterface * getHeadlerTarget);
-    void    initView();
-    void    reSetView();
-    void    reSetTotalCount(int num);
 public:
     GameVerticalScrollHeadlerView(float viewWidth ,
                                   float viewHeight,
@@ -41,6 +22,8 @@ public:
                                   float itemHeight,
                                   int   totalCount);
     ~GameVerticalScrollHeadlerView();
+    
+    void setScrollOritation();
 };
 
 #endif /* defined(__SwampAttack__GameVerticalScrollHeadlerView__) */

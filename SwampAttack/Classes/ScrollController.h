@@ -41,11 +41,13 @@ class ScrollController {
 private:
     M_Vec2f     m_offSet;
     M_Vec2f     m_velocity;
+    M_Vec2f     m_force;
     
     CenterPoint m_centerPoint;      // 坐标原点
     bool        m_horizontal;       // 水平
     bool        m_vertical;         // 垂直
     bool        m_undulate;         // 波动
+    bool        m_isMoving;
     float       m_viewWidth;
     float       m_viewHeight;
     float       m_contentWidth;

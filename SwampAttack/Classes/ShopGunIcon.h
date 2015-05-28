@@ -18,7 +18,7 @@ class ShopGunIcon : public Sprite, public GameObserver {
 private:
     EventListenerTouchOneByOne * m_listener;
     Sprite *    m_iconBg;
-    Gun     *   m_gun;
+    Gun     *   m_gun = NULL;
     Sprite  *   m_icon;
     Label   *   m_bullets;
 private:

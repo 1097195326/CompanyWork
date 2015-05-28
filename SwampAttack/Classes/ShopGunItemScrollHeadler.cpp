@@ -151,7 +151,7 @@ void ShopGunItemScrollHeadler::updateGunView()
         float level = gun->getStrengthenLevel();
         float limitLevel = gun->getLimitLevel();
         int upgradeGold = gun->getStrengthenGold();
-        int bullets = gun->getBulletNum();
+        int bullets = gun->getTotalBulletNum();
         
         m_buyLabel->setString(StringUtils::format("%d",bulletPrice));
         m_upgradeLabel->setString(StringUtils::format("%d",upgradeGold));

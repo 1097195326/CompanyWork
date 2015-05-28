@@ -1,30 +1,31 @@
 //
-//  GameVerticalScrollHeadlerView.cpp
+//  GameHorizontalScrollHeadlerView.cpp
 //  SwampAttack
 //
-//  Created by oceantech02 on 15/5/7.
+//  Created by oceantech02 on 15/5/28.
 //
 //
 
-#include "GameVerticalScrollHeadlerView.h"
+#include "GameHorizontalScrollHeadlerView.h"
 
-GameVerticalScrollHeadlerView::GameVerticalScrollHeadlerView(float viewWidth ,
+
+GameHorizontalScrollHeadlerView::GameHorizontalScrollHeadlerView(float viewWidth ,
                                                              float viewHeight,
                                                              float itemWidth,
                                                              float itemHeight,
                                                              int   totalCount):
 GameScrollHeadlerView(viewWidth,viewHeight,itemWidth,itemHeight,totalCount)
 {
-    setScrollVertical(true);
+    setScrollHorizontal(true);
     setScrollOritation();
     m_viewCount = m_oritation == s_vertical ? m_verticalViewCount : m_horizontalViewCount;
     
 }
-GameVerticalScrollHeadlerView::~GameVerticalScrollHeadlerView()
+GameHorizontalScrollHeadlerView::~GameHorizontalScrollHeadlerView()
 {
     
 }
-void GameVerticalScrollHeadlerView::setScrollOritation()
+void GameHorizontalScrollHeadlerView::setScrollOritation()
 {
-    m_oritation = s_vertical;
+    m_oritation = s_horizontal;
 }
