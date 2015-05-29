@@ -118,6 +118,7 @@
 		8DD53AF91B0C2774000DB8DC /* DefenseBuildingSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD53AF71B0C2774000DB8DC /* DefenseBuildingSprite.cpp */; };
 		8DD5D0B41B1419AF00AA2A07 /* EnemyProgressBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5D0B21B1419AF00AA2A07 /* EnemyProgressBar.cpp */; };
 		8DD5D0B71B144A1E00AA2A07 /* CrumpEnemySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5D0B51B144A1E00AA2A07 /* CrumpEnemySprite.cpp */; };
+		8DD601131B1810DC005E811B /* MapScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD601111B1810DC005E811B /* MapScrollHeadler.cpp */; };
 		8DD7765D1B0DCF8700B8DE0C /* GamePauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7765B1B0DCF8700B8DE0C /* GamePauseScene.cpp */; };
 		8DD7D5AB1B0199D100DD3711 /* ShopItemScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7D5A91B0199D100DD3711 /* ShopItemScrollHeadler.cpp */; };
 		8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */; };
@@ -352,6 +353,8 @@
 		8DD5D0B31B1419AF00AA2A07 /* EnemyProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyProgressBar.h; sourceTree = "<group>"; };
 		8DD5D0B51B144A1E00AA2A07 /* CrumpEnemySprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrumpEnemySprite.cpp; sourceTree = "<group>"; };
 		8DD5D0B61B144A1E00AA2A07 /* CrumpEnemySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumpEnemySprite.h; sourceTree = "<group>"; };
+		8DD601111B1810DC005E811B /* MapScrollHeadler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapScrollHeadler.cpp; sourceTree = "<group>"; };
+		8DD601121B1810DC005E811B /* MapScrollHeadler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapScrollHeadler.h; sourceTree = "<group>"; };
 		8DD7765B1B0DCF8700B8DE0C /* GamePauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamePauseScene.cpp; sourceTree = "<group>"; };
 		8DD7765C1B0DCF8700B8DE0C /* GamePauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePauseScene.h; sourceTree = "<group>"; };
 		8DD7D5A91B0199D100DD3711 /* ShopItemScrollHeadler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopItemScrollHeadler.cpp; sourceTree = "<group>"; };
@@ -669,6 +672,7 @@
 				8DCA71AD1AE74B6B007ADFE6 /* baseUI */,
 				8DD87E611B1575B900FC073A /* fightUI */,
 				8DD87E601B1575AD00FC073A /* shopUI */,
+				8DD601101B180FD2005E811B /* mapUI */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -748,6 +752,15 @@
 				8DD2156A1B16E7160090EEEB /* GameScrollHeadlerView.h */,
 			);
 			name = baseUI;
+			sourceTree = "<group>";
+		};
+		8DD601101B180FD2005E811B /* mapUI */ = {
+			isa = PBXGroup;
+			children = (
+				8DD601111B1810DC005E811B /* MapScrollHeadler.cpp */,
+				8DD601121B1810DC005E811B /* MapScrollHeadler.h */,
+			);
+			name = mapUI;
 			sourceTree = "<group>";
 		};
 		8DD7F1F81AD3768000D86BC5 /* EnemyModels */ = {
@@ -1095,6 +1108,7 @@
 				8DCA71AC1AE74787007ADFE6 /* ProgressBar.cpp in Sources */,
 				8DC430A61AC929BE00AB1665 /* GameDirector.cpp in Sources */,
 				8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */,
+				8DD601131B1810DC005E811B /* MapScrollHeadler.cpp in Sources */,
 				8DC430AC1AC92BEF00AB1665 /* GunManager.cpp in Sources */,
 				8DC5EF9F1AD4CE0F00FC4D21 /* GuanQiaModel.cpp in Sources */,
 				8DD29D3D1B0B3C1400ECB826 /* DefenseBuilding3_Sprite.cpp in Sources */,

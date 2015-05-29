@@ -8,12 +8,14 @@
 
 #include "ScrollController.h"
 
+static float MoveToTime = 0.3;
 
 ScrollController::ScrollController():
 m_vertical(false),
 m_horizontal(false),
 m_undulate(true),
 m_isMoving(false),
+m_isMoveToing(false),
 m_centerPoint(leftTop)
 {
     
@@ -25,6 +27,19 @@ ScrollController::~ScrollController()
 }
 void ScrollController::update(float data)
 {
+    
+    if (m_isMoveToing) {
+        M_Vec2f change = multMV(m_velocity, data);
+        m_offSet.add(change);
+        m_delay += data;
+        if (m_delay >= MoveToTime) {
+            m_isMoveToing = false;
+            m_velocity.mult(0);
+            m_delay = 0;
+        }
+        return;
+    }
+    
     M_Vec2f normalForce = multMV(m_velocity, -0.1);
     m_velocity.add(normalForce);
     M_Vec2f change = multMV(m_velocity, data);
@@ -124,6 +139,24 @@ void ScrollController::updateVelocity(float ox, float oy)
     M_Vec2f m = M_Vec2f(ox,oy);
     m.mult(50);
     m_velocity.add(m);
+}
+void ScrollController::moveToOffSet(float ox, float oy)
+{
+    if (m_isMoveToing) {
+        return;
+    }
+    m_delay = 0;
+    m_velocity.mult(0);
+    m_isMoveToing = true;
+    
+    
+    M_Vec2f juli;
+    m_velocity.x = ox - m_offSet.x;
+    m_velocity.y = oy - m_offSet.y;
+    
+    m_velocity.mult(1.0f / MoveToTime);
+//    m_velocity = juli;
+    
 }
 M_Vec2f ScrollController::getOffSet()
 {

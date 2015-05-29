@@ -10,23 +10,31 @@
 #define __SwampAttack__GameMapScene__
 
 #include "BaseCode.h"
+#include "GameScrollHeadlerTargetInterface.h"
+#include "GameHorizontalScrollHeadlerView.h"
 
 
-class GameMapScene : public cocos2d::LayerColor
+class GameMapScene : public cocos2d::LayerColor,public GameScrollHeadlerTargetInterface
 {
 private:
-    
-    
+    MenuItem * m_leftItem ;
+    MenuItem * m_rightItem;
+    GameHorizontalScrollHeadlerView * m_scrollView;
 public:
     CREATE_SCENE_FUNC(GameMapScene);
     CREATE_FUNC(GameMapScene);
     
     virtual bool    init();
-    void    buttonTouch(Ref * psender);
     
-    bool    touchBegan(Touch * touch, Event * event);
-    void    touchMoved(Touch * touch, Event * event);
-    void    touchEnd(Touch * touch, Event * event);
+    GameScrollHeadler * getHeadlerByIndex(int index,int viewTag);
+    
+    void    homeButtonFuc(Ref * psender);
+    void    shopButtonFuc(Ref * psender);
+    void    leftButtonFuc(Ref * psender);
+    void    rightButtonFuc(Ref * psender);
+    
+    
+    
 };
 
 

@@ -42,6 +42,11 @@ public:
     void    initView();
     void    reSetView();
     void    reSetTotalCount(int num);
+    void    moveToViewAtIndex(int index);
+    void    moveAddView();
+    void    moveMinusView();
+    bool    canMoveAddView();
+    bool    canMoveMinusView();
     virtual void setScrollOritation() = 0;
 public:
     GameScrollHeadlerView(float viewWidth ,

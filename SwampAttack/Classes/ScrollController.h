@@ -48,6 +48,8 @@ private:
     bool        m_vertical;         // 垂直
     bool        m_undulate;         // 波动
     bool        m_isMoving;
+    bool        m_isMoveToing;
+    float       m_delay;
     float       m_viewWidth;
     float       m_viewHeight;
     float       m_contentWidth;
@@ -72,11 +74,16 @@ public:
     void    update(float data);
     void    updateVelocity(float ox, float oy);
     void    updateOffSet(float ox, float oy);
+    void    moveToOffSet(float ox, float oy);
     
 private:
     inline  M_Vec2f addMV(M_Vec2f a, M_Vec2f b)
     {
         return M_Vec2f(a.x + b.y, a.y + b.y);
+    }
+    inline  M_Vec2f minusMv(M_Vec2f a, M_Vec2f b)
+    {
+        return M_Vec2f(a.x - b.y, a.y - b.y);
     }
     inline  M_Vec2f multMV(M_Vec2f a, float d)
     {
