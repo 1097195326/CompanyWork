@@ -20,6 +20,8 @@ public:
     ~MapScrollHeadler();
     
     
+    
+    
 };
 
 #endif /* defined(__SwampAttack__MapScrollHeadler__) */

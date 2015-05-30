@@ -17,6 +17,7 @@ GameUser::GameUser():m_time(0)
         setUserGold(90000);
         m_userHealth = 5;
         setUserHealth(m_userHealth);
+        unlockGuanqia("400001_1");
     }
     setUserGold(900000);
     m_userHealth = getUserHealth();

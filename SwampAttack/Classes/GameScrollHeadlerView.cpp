@@ -188,7 +188,11 @@ void GameScrollHeadlerView::updateItems(float data)
             GameScrollHeadler * headler = m_headlerData[m_currentIndex - 1];
             headler->removeFromParentAndCleanup(true);
         }
-        addHeadlerByIndex(m_currentIndex + m_viewCount);
+        if (m_currentIndex + m_viewCount < m_totalCount)
+        {
+            addHeadlerByIndex(m_currentIndex + m_viewCount);
+        }
+        
         m_currentIndex = index;
         m_perOffSet = offSetV;
     }
@@ -198,9 +202,11 @@ void GameScrollHeadlerView::updateItems(float data)
         //        log("index :%d",index);
         m_currentIndex = index;
         m_perOffSet = offSetV;
-        GameScrollHeadler * headler = m_headlerData[m_currentIndex + m_viewCount];
-        //        if (headler) {
-        headler->removeFromParentAndCleanup(true);
+        if (m_currentIndex + m_viewCount < m_totalCount)
+        {
+            GameScrollHeadler * headler = m_headlerData[m_currentIndex + m_viewCount];
+            headler->removeFromParentAndCleanup(true);
+        }
         if (m_currentIndex >= 1)
         {
             addHeadlerByIndex(m_currentIndex - 1);

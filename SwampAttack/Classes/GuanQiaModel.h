@@ -10,27 +10,33 @@
 #define __SwampAttack__GuanQiaModels__
 
 #include "ConfigManager.h"
+#include "GameSubject.h"
 
 using namespace std;
 
-class GuanqiaModel {
+class GuanqiaModel : public GameSubject {
 private:
     Json::Value m_data;
     
     string  m_id;
-    string  m_instanceName;
+    string  m_missionName;
     string  m_modelId;
-    string  m_instanceType;
-    string  m_lastInstanceId;
-    string  m_mapId;
-    int     m_costPower;
-    int     m_throughGold;
+    string  m_missionType;
+//    string  m_lastInstanceId;
+//    string  m_mapId;
+//    int     m_costPower;
+    string  m_unlockMission;
+    int     m_gold;
     
     bool    m_isUnlock;
+    Vec2    m_point;
 public:
+    
     bool    isUnlock();
     void    unlockGuanqia();
+    Vec2    getGuanqiaPoint();
 public:
+    
     GuanqiaModel(Json::Value data);
     ~GuanqiaModel();
     
@@ -38,11 +44,12 @@ public:
     string  getId();
     string  getGuanqiaName();
     string  getModelId();
-    string  getInstanceType();
-    string  getLastInstanceId();
-    string  getMapId();
-    int     getCostPower();
+    string  getMissionType();
+//    string  getLastInstanceId();
+//    string  getMapId();
+//    int     getCostPower();
     int     getThroughGold();
+    string  getUnlockMission();
     Json::Value    getMonsters();
     
 };
