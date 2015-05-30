@@ -13,6 +13,7 @@
 
 struct GameScrollHeadlerTargetInterface {
      virtual GameScrollHeadler * getHeadlerByIndex(int index,int viewTag) = 0;
+    virtual void moveToEndCall(){}
 };
 
 #endif /* defined(__SwampAttack__GameScrollHeadlerTargetInterface__) */

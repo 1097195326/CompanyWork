@@ -8,7 +8,6 @@
 
 #include "ScrollController.h"
 
-static float MoveToTime = 0.3;
 
 ScrollController::ScrollController():
 m_vertical(false),
@@ -39,10 +38,12 @@ void ScrollController::update(float data)
         if (force.x < 0 && force.x > -1) {
             m_isMoveToing = false;
             m_offSet.x = m_toOffSet.x;
+            return;
         }else if (force.x > 0 && force.x < 1)
         {
             m_isMoveToing = false;
             m_offSet.x = m_toOffSet.x;
+            return;
         }
         
         force.mult(0.3);
@@ -156,13 +157,11 @@ void ScrollController::moveToOffSet(float ox, float oy)
     if (m_isMoveToing) {
         return;
     }
-    m_delay = 0;
 //    m_velocity.mult(0);
     m_isMoveToing = true;
     
-    printf("x:%f,y:%f\n",m_offSet.x,m_offSet.y);
-    printf("ox :%f,y:%f\n",ox,oy);
-    M_Vec2f juli;
+//    printf("x:%f,y:%f\n",m_offSet.x,m_offSet.y);
+//    printf("ox :%f,y:%f\n",ox,oy);
     
     m_toOffSet.x = ox;// - m_offSet.x;
     m_toOffSet.y = oy;// - m_offSet.y;

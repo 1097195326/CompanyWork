@@ -61,20 +61,7 @@ bool GameMapScene::init()
     addChild(m_scrollView);
     
     
-//    if (m_scrollView->canMoveMinusView())
-//    {
-//        m_leftItem->setVisible(true);
-//    }else
-//    {
-//        m_leftItem->setVisible(false);
-//    }
-//    if (m_scrollView->canMoveAddView())
-//    {
-//        m_rightItem->setVisible(true);
-//    }else
-//    {
-//        m_rightItem->setVisible(false);
-//    }
+    moveToEndCall();
     
     
     return true;
@@ -84,6 +71,24 @@ GameScrollHeadler * GameMapScene::getHeadlerByIndex(int index,int viewTag)
     MapScrollHeadler * headler = new MapScrollHeadler(index);
     headler->autorelease();
     return headler;
+}
+void GameMapScene::moveToEndCall()
+{
+    if (m_scrollView->canMoveMinusView())
+    {
+        m_leftItem->setVisible(true);
+    }else
+    {
+        m_leftItem->setVisible(false);
+    }
+    if (m_scrollView->canMoveAddView())
+    {
+        m_rightItem->setVisible(true);
+    }else
+    {
+        m_rightItem->setVisible(false);
+    }
+
 }
 void GameMapScene::homeButtonFuc(cocos2d::Ref *psender)
 {
@@ -95,39 +100,11 @@ void GameMapScene::shopButtonFuc(cocos2d::Ref *psender)
 }
 void GameMapScene::leftButtonFuc(cocos2d::Ref *psender)
 {
-    log("left move");
+//    log("left move");
     m_scrollView->moveMinusView();
-//    if (m_scrollView->canMoveMinusView())
-//    {
-//        m_leftItem->setVisible(true);
-//    }else
-//    {
-//        m_leftItem->setVisible(false);
-//    }
-//    if (m_scrollView->canMoveAddView())
-//    {
-//        m_rightItem->setVisible(true);
-//    }else
-//    {
-//        m_rightItem->setVisible(false);
-//    }
 }
 void GameMapScene::rightButtonFuc(cocos2d::Ref *psender)
 {
-    log("right move");
+//    log("right move");
     m_scrollView->moveAddView();
-//    if (m_scrollView->canMoveAddView())
-//    {
-//        m_rightItem->setVisible(true);
-//    }else
-//    {
-//        m_rightItem->setVisible(false);
-//    }
-//    if (m_scrollView->canMoveMinusView())
-//    {
-//        m_leftItem->setVisible(true);
-//    }else
-//    {
-//        m_leftItem->setVisible(false);
-//    }
 }

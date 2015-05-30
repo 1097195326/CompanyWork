@@ -33,6 +33,7 @@ public:
     void    leftButtonFuc(Ref * psender);
     void    rightButtonFuc(Ref * psender);
     
+    void    moveToEndCall();
     
     
 };

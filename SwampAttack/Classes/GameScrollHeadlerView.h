@@ -48,6 +48,7 @@ public:
     void    moveMinusView();
     bool    canMoveAddView();
     bool    canMoveMinusView();
+    void    moveToEndCall();
     virtual void setScrollOritation() = 0;
 public:
     GameScrollHeadlerView(float viewWidth ,

@@ -61,8 +61,8 @@ void GameScrollHeadlerView::reSetTotalCount(int num)
 }
 void GameScrollHeadlerView::moveToViewAtIndex(int index)
 {
-    log("m_currentIndex index :%d",m_currentIndex);
-    log("move to index :%d",index);
+//    log("m_currentIndex index :%d",m_currentIndex);
+//    log("move to index :%d",index);
     if ((m_oritation == s_horizontal && m_viewWidth == m_itemWidth) ||
         (m_oritation == s_vertical && m_viewHeight == m_itemHeight))
     {
@@ -96,7 +96,7 @@ void GameScrollHeadlerView::moveToViewAtIndex(int index)
 //            }
             break;
     }
-    log("---:%f",toX);
+//    log("---:%f",toX);
     m_scrollController->moveToOffSet(toX, toY);
 }
 void GameScrollHeadlerView::moveAddView()
@@ -111,6 +111,7 @@ void GameScrollHeadlerView::moveMinusView()
 }
 bool GameScrollHeadlerView::canMoveAddView()
 {
+    log("add view:%d",m_currentIndex);
     if ((m_oritation == s_horizontal && m_viewWidth == m_itemWidth) ||
         (m_oritation == s_vertical && m_viewHeight == m_itemHeight))
     {
@@ -120,6 +121,7 @@ bool GameScrollHeadlerView::canMoveAddView()
 }
 bool GameScrollHeadlerView::canMoveMinusView()
 {
+    log("minus view:%d",m_currentIndex);
     return m_currentIndex > 0;
 }
 void GameScrollHeadlerView::updateItems(float data)
@@ -203,8 +205,8 @@ void GameScrollHeadlerView::updateItems(float data)
         {
             addHeadlerByIndex(m_currentIndex - 1);
         }
-        
     }
+    m_target->moveToEndCall();
 }
 void GameScrollHeadlerView::addHeadlerByIndex(int index)
 {
@@ -239,4 +241,8 @@ GameScrollHeadler * GameScrollHeadlerView::getHeadlerWithIndex(int index)
 void GameScrollHeadlerView::setGetHeadlerTarget(GameScrollHeadlerTargetInterface * getHeadlerTarget)
 {
     m_target = getHeadlerTarget;
+}
+void GameScrollHeadlerView::moveToEndCall()
+{
+    m_target->moveToEndCall();
 }

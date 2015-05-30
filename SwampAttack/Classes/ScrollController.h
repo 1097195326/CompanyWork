@@ -9,6 +9,7 @@
 #ifndef __SwampAttack__ScrollController__
 #define __SwampAttack__ScrollController__
 
+
 enum CenterPoint
 {
     leftTop,
@@ -50,12 +51,11 @@ private:
     bool        m_undulate;         // 波动
     bool        m_isMoving;
     bool        m_isMoveToing;
-    float       m_delay;
     float       m_viewWidth;
     float       m_viewHeight;
     float       m_contentWidth;
     float       m_contentHeight;
-
+    
 public:
     ScrollController();
     ~ScrollController();
