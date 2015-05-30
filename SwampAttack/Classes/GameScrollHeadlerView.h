@@ -24,6 +24,7 @@ protected:
     std::map<int,GameScrollHeadler *> m_headlerData;
     float   m_itemWidth;
     float   m_itemHeight;
+    Vec2    m_perOffSet;
     int     m_totalCount;
     int     m_verticalViewCount;
     int     m_horizontalViewCount;

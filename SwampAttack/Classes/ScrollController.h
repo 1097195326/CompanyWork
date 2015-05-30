@@ -42,6 +42,7 @@ private:
     M_Vec2f     m_offSet;
     M_Vec2f     m_velocity;
     M_Vec2f     m_force;
+    M_Vec2f     m_toOffSet;
     
     CenterPoint m_centerPoint;      // 坐标原点
     bool        m_horizontal;       // 水平

@@ -48,7 +48,7 @@ bool GameMapScene::init()
     addChild(buttonMenu,2);
     
     
-    int num = 2;
+    int num = 3;
     m_scrollView = new GameHorizontalScrollHeadlerView(1136,640,1136,640,num);
     m_scrollView->setScrollControllerContentWidth(1136 * num);
     m_scrollView->setScrollControllerContentHeight(640);

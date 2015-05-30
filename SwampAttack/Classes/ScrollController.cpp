@@ -28,16 +28,27 @@ ScrollController::~ScrollController()
 void ScrollController::update(float data)
 {
     
-    if (m_isMoveToing) {
-        M_Vec2f change = multMV(m_velocity, data);
-        m_offSet.add(change);
-        m_delay += data;
-        if (m_delay >= MoveToTime) {
+    if (m_isMoveToing)
+    {
+        
+        M_Vec2f force;
+        force.x = m_toOffSet.x - m_offSet.x;
+        force.y = m_toOffSet.y - m_offSet.y;
+        
+//        printf("--:%f\n",force.x);
+        if (force.x < 0 && force.x > -1) {
             m_isMoveToing = false;
-            m_velocity.mult(0);
-            m_delay = 0;
+            m_offSet.x = m_toOffSet.x;
+        }else if (force.x > 0 && force.x < 1)
+        {
+            m_isMoveToing = false;
+            m_offSet.x = m_toOffSet.x;
         }
-        return;
+        
+        force.mult(0.3);
+        m_offSet.add(force);
+        force.mult(0);
+        
     }
     
     M_Vec2f normalForce = multMV(m_velocity, -0.1);
@@ -146,15 +157,20 @@ void ScrollController::moveToOffSet(float ox, float oy)
         return;
     }
     m_delay = 0;
-    m_velocity.mult(0);
+//    m_velocity.mult(0);
     m_isMoveToing = true;
     
-    
+    printf("x:%f,y:%f\n",m_offSet.x,m_offSet.y);
+    printf("ox :%f,y:%f\n",ox,oy);
     M_Vec2f juli;
-    m_velocity.x = ox - m_offSet.x;
-    m_velocity.y = oy - m_offSet.y;
     
-    m_velocity.mult(1.0f / MoveToTime);
+    m_toOffSet.x = ox;// - m_offSet.x;
+    m_toOffSet.y = oy;// - m_offSet.y;
+
+//    m_velocity.x = ox - m_offSet.x;
+//    m_velocity.y = oy - m_offSet.y;
+//    
+//    m_velocity.mult(1.0f / MoveToTime);
 //    m_velocity = juli;
     
 }

@@ -25,7 +25,7 @@ m_totalCount(totalCount)
     m_verticalViewCount = m_verticalViewCount > m_totalCount ? m_totalCount : m_verticalViewCount;
     m_horizontalViewCount = m_horizontalViewCount > m_totalCount ? m_totalCount : m_horizontalViewCount;
     
-    
+    m_perOffSet = {0.0f,0.0f};
     m_currentIndex = 0;
     
     schedule(CC_SCHEDULE_SELECTOR(GameScrollHeadlerView::updateItems), 1/60);
@@ -61,6 +61,7 @@ void GameScrollHeadlerView::reSetTotalCount(int num)
 }
 void GameScrollHeadlerView::moveToViewAtIndex(int index)
 {
+    log("m_currentIndex index :%d",m_currentIndex);
     log("move to index :%d",index);
     if ((m_oritation == s_horizontal && m_viewWidth == m_itemWidth) ||
         (m_oritation == s_vertical && m_viewHeight == m_itemHeight))
@@ -88,13 +89,14 @@ void GameScrollHeadlerView::moveToViewAtIndex(int index)
             }
             break;
         case s_horizontal:
-            toX = m_itemWidth * index;
-            if (m_currentIndex < index)
-            {
-                toX *= -1;
-            }
+            toX = -m_itemWidth * index;
+//            if (m_currentIndex < index)
+//            {
+//                toX *= -1;
+//            }
             break;
     }
+    log("---:%f",toX);
     m_scrollController->moveToOffSet(toX, toY);
 }
 void GameScrollHeadlerView::moveAddView()
@@ -123,29 +125,45 @@ bool GameScrollHeadlerView::canMoveMinusView()
 void GameScrollHeadlerView::updateItems(float data)
 {
     M_Vec2f offSet = m_scrollController->getOffSet();
-    int index = 0;
+    Vec2 offSetV = {offSet.x,offSet.y};
+    
+    int index = m_currentIndex;
     
     switch (m_oritation) {
         case s_vertical:
         {
-            float offSetY = std::abs(offSet.y);
-            index = ((int)offSetY / (int)m_itemHeight);
+            int i = ((int)offSetV.y - (int)m_perOffSet.y)/(int)m_itemHeight;
+            if (std::abs(i) >= 1)
+            {
+                index += i;
+            }
         }
             break;
         case s_horizontal:
         {
-            float offSetX = std::abs(offSet.x);
-            index = ((int)offSetX / (int)m_itemWidth);
+            int i = ((int)m_perOffSet.x - (int)offSetV.x)/(int)m_itemWidth;
+            if (std::abs(i) >= 1)
+            {
+                index += i;
+            }
         }
             break;
         default:
             break;
     }
+    
+    if (index == m_currentIndex)
+    {
+        return;
+    }
+//    log("index :%d",index);
+//    log("m_currentIndex :%d",m_currentIndex);
+    
     if ((m_oritation == s_horizontal && m_viewWidth == m_itemWidth) ||
         (m_oritation == s_vertical && m_viewHeight == m_itemHeight)
         )
     {
-        if (index < 0 || index > m_totalCount - 1 ) {
+        if (index < 0 || index > m_totalCount -1) {
             //        log("scroll data yue jie");
             //        log("index :%d",index);
             return;
@@ -163,23 +181,28 @@ void GameScrollHeadlerView::updateItems(float data)
     {
         //        log("xia hua");
         //        log("index :%d",index);
-        GameScrollHeadler * headler = m_headlerData[m_currentIndex];
-        //        if (headler) {
-        headler->removeFromParentAndCleanup(true);
+        if (m_currentIndex >= 1)
+        {
+            GameScrollHeadler * headler = m_headlerData[m_currentIndex - 1];
+            headler->removeFromParentAndCleanup(true);
+        }
         addHeadlerByIndex(m_currentIndex + m_viewCount);
         m_currentIndex = index;
-        //        }
+        m_perOffSet = offSetV;
     }
     else if (index < m_currentIndex && m_currentIndex > 0)
     {
         //        log("shang hua");
         //        log("index :%d",index);
         m_currentIndex = index;
+        m_perOffSet = offSetV;
         GameScrollHeadler * headler = m_headlerData[m_currentIndex + m_viewCount];
         //        if (headler) {
         headler->removeFromParentAndCleanup(true);
-        addHeadlerByIndex(m_currentIndex);
-        //        }
+        if (m_currentIndex >= 1)
+        {
+            addHeadlerByIndex(m_currentIndex - 1);
+        }
         
     }
 }
