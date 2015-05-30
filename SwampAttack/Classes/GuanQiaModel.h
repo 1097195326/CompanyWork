@@ -25,8 +25,11 @@ private:
     string  m_mapId;
     int     m_costPower;
     int     m_throughGold;
-private:
     
+    bool    m_isUnlock;
+public:
+    bool    isUnlock();
+    void    unlockGuanqia();
 public:
     GuanqiaModel(Json::Value data);
     ~GuanqiaModel();

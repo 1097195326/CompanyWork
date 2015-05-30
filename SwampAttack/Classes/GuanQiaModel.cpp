@@ -7,8 +7,11 @@
 //
 
 #include "GuanQiaModel.h"
+#include "GameUser.h"
 
-GuanqiaModel::GuanqiaModel(Json::Value data):m_data(data)
+
+GuanqiaModel::GuanqiaModel(Json::Value data):m_data(data),
+m_isUnlock(false)
 {
     m_id = m_data["Id"].asString();
     m_instanceName = m_data["InstanceName"].asString();
@@ -19,10 +22,19 @@ GuanqiaModel::GuanqiaModel(Json::Value data):m_data(data)
     m_costPower = atoi(m_data["CostPower"].asString().c_str());
     m_throughGold =  atoi(m_data["ThroughGold"].asString().c_str());
     
+    m_isUnlock = _G_U->isUnlockGuanqia(m_id);
 }
 GuanqiaModel::~GuanqiaModel()
 {
     
+}
+void GuanqiaModel::unlockGuanqia()
+{
+    _G_U->unlockGuanqia(m_id);
+}
+bool GuanqiaModel::isUnlock()
+{
+    return m_isUnlock;
 }
 #pragma get function
 string GuanqiaModel::getId()

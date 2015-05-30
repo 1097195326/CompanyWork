@@ -96,6 +96,15 @@ int GameUser::getUserGold()
 {
     return getIntForKey("user_gold");
 }
+//--- guan qia ---
+void GameUser::unlockGuanqia(string guanqiaId)
+{
+    setBoolForKey(guanqiaId + "guanqia", true);
+}
+bool GameUser::isUnlockGuanqia(string guanqiaId)
+{
+    return getBoolForKey(guanqiaId + "guanqia");
+}
 //--- gun ---
 void GameUser::unlockGun(string gunId)
 {

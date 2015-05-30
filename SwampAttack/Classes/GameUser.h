@@ -42,6 +42,9 @@ public:
     
     void    enterGame();
     void    exitGame();
+    //--- guan qia ---
+    void    unlockGuanqia(string guanqiaId);
+    bool    isUnlockGuanqia(string guanqiaId);
     //--- health ----
     int     getUserHealth();
     void    setUserHealth(int health);
