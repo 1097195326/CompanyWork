@@ -125,6 +125,10 @@ void GunManager::changeGun(string gunId)
     {
         return;
     }
+    if (Human::getInstance()->isChange())
+    {
+        return;
+    }
     std::map<string,Gun *>::iterator iter;
     for (iter = m_takeUpGunData.begin(); iter != m_takeUpGunData.end(); ++iter)
     {
