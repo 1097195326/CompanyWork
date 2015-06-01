@@ -45,8 +45,9 @@ private:
     Gun *   m_gun;
     
     Vec2    m_fireToPoint;
+    float   m_waitingTime;
 private:
-    void    setView();
+    
     
 public:
     //--- interface for game director
@@ -68,6 +69,9 @@ public:
     void    setStateWait();
     void    setStateChange();
     
+    float   getWaitingTime();
+    void    minusWaitingTime();
+    
     bool    isTouching();
     bool    isTouchEnd();
     bool    isFull();
@@ -87,6 +91,7 @@ public:
     ~Human();
     static Human * getInstance();
     void    gameLoop(float data);
+    void    setView();
 };
 
 #endif /* defined(__SwampAttack__Human__) */

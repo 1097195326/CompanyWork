@@ -22,7 +22,10 @@ void HumanShootState::Enter(Human * human)
 }
 void HumanShootState::Execute(Human * human)
 {
-    if (human->isTouching())
+    if (human->getWaitingTime() > 0.0f)
+    {
+        human->changeState(HumanWaitState::getInstance());
+    }else if (human->isTouching())
     {
         if (human->isShooted())
         {

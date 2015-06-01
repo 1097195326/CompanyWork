@@ -152,6 +152,7 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		D8D673A91B19DFD0004C463F /* GuanQiaManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D673A71B19DFD0004C463F /* GuanQiaManager.cpp */; };
 		D8D673AC1B19F7DD004C463F /* MapGuanqiaButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D673AA1B19F7DD004C463F /* MapGuanqiaButton.cpp */; };
+		D8D673AF1B1C098D004C463F /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D673AD1B1C098D004C463F /* GameOverScene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -417,6 +418,8 @@
 		D8D673A81B19DFD0004C463F /* GuanQiaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuanQiaManager.h; sourceTree = "<group>"; };
 		D8D673AA1B19F7DD004C463F /* MapGuanqiaButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapGuanqiaButton.cpp; sourceTree = "<group>"; };
 		D8D673AB1B19F7DD004C463F /* MapGuanqiaButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGuanqiaButton.h; sourceTree = "<group>"; };
+		D8D673AD1B1C098D004C463F /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverScene.cpp; sourceTree = "<group>"; };
+		D8D673AE1B1C098D004C463F /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -641,6 +644,8 @@
 				8DD8C12B1AFCB15F00872AA2 /* GameShopScene.h */,
 				8DD7765B1B0DCF8700B8DE0C /* GamePauseScene.cpp */,
 				8DD7765C1B0DCF8700B8DE0C /* GamePauseScene.h */,
+				D8D673AD1B1C098D004C463F /* GameOverScene.cpp */,
+				D8D673AE1B1C098D004C463F /* GameOverScene.h */,
 			);
 			name = scenes;
 			sourceTree = "<group>";
@@ -1131,6 +1136,7 @@
 				8DC430A31AC8FF2A00AB1665 /* GameMap.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				8DC10AB61AC3D6C7004F7DE2 /* Human.cpp in Sources */,
+				D8D673AF1B1C098D004C463F /* GameOverScene.cpp in Sources */,
 				8DC2ACD71AC5641B004F3C1B /* GameObject.cpp in Sources */,
 				8DD494001B1307080024CE36 /* HumanChangeState.cpp in Sources */,
 				8DD8C12F1AFCB81C00872AA2 /* SelectMenuView.cpp in Sources */,

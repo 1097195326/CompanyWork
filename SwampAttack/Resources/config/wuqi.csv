@@ -1,5 +1,5 @@
 武器编号,武器名称编号,武器名称,模型编号,子弹模型编号,受击动作,武器类型,强化等级,强化等级上限,伤害,伤害范围,弹片数量,暴击率,暴击伤害倍率,精度,射速,射程,弹道速度,装填类型,装填速度,切换武器速度,弹药上限,弹夹容量,弹药价格,解锁关卡,解锁价格,武器描述编号,武器描述
 Id[string],WeaponName[string],,ModelId[string],BulletModelId[string],UnderAttackAction[int],WeaponType[string],StrengthenLevel[int],LimitLevel[string],Damage[int],DamageArea[float],ShrapnelNumber[int],CritRate[float],CritDamageRate[float],Accuracy[float],FireRate[float],Range[float],BulletSpeed[float],ReloadType[string],ReloadSpeed[float],SwitchSpeed[float],AmmunitionLimit[int],MagazineSize[int],BulletPrice[string],UnlockMission[string],UnlockGold[string],WeaponDescription[string],
-200003,tid#WeaponName3,线膛燧发枪,qiang3,,3,2,0,20,30,0,5,0.05,1.5,0.3,2,100,500,1,1,1,12,12,0,400001_5,50000,tid#WeaponDescription3,基本散弹枪
+200003,tid#WeaponName3,线膛燧发枪,qiang3,,3,2,0,20,30,0,5,0.05,1.5,0.3,0.3,100,500,1,1,1,12,12,0,400001_5,50000,tid#WeaponDescription3,基本散弹枪
 200005,tid#WeaponName5,UZI,qiang5,,1,3,0,20,15,0,1,0.05,1.5,0.3,10,100,500,2,1,1,480,48,500,400001_5,50000,tid#WeaponDescription5,基本冲锋枪
 200007,tid#WeaponName7,AK47,qiang7,,2,4,0,20,20,0,1,0.05,1.5,0.6,6,100,500,2,1,1,360,36,500,400001_5,50000,tid#WeaponDescription7,基本步枪

@@ -23,7 +23,7 @@ BulletManager * BulletManager::getInstance()
 }
 void BulletManager::fire(BulletParameter bp)
 {
-    bp.m_num = 1;
+//    bp.m_num = 1;
     for (int i = 0; i < bp.m_num; ++i) {
         Bullet * bullet = new Bullet(bp);
         bullets.push_back(bullet);

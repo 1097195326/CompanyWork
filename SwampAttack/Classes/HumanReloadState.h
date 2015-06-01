@@ -13,12 +13,14 @@
 #include "Human.h"
 
 class HumanReloadState : public State<Human> {
+private:
     
 public:
     static HumanReloadState * getInstance();
     void    Enter(Human *);
     void    Execute(Human *);
     void    Exit(Human *);
+    void resetData();
 };
 
 #endif /* defined(__SwampAttack__HumanReloadState__) */

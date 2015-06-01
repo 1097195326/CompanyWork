@@ -13,7 +13,7 @@ DefenseBuildingSprite(building)
 {
     
     string modelId = m_building->getModelId();
-    log("%s",modelId.c_str());
+//    log("%s",modelId.c_str());
 //    if (modelId == "building1")
     {
         

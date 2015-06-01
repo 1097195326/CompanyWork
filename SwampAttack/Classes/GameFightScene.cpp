@@ -17,13 +17,13 @@
 #include "GamePauseScene.h"
 
 //---
-#include "EnemyManager.h"
-#include "ConfigManager.h"
-#include "GuanQiaModel.h"
-#include "BaseUtil.h"
-#include "HumanSprite.h"
-#include "ProgressBar.h"
-#include "Human.h"
+//#include "EnemyManager.h"
+//#include "ConfigManager.h"
+//#include "GuanQiaModel.h"
+//#include "BaseUtil.h"
+//#include "HumanSprite.h"
+//#include "ProgressBar.h"
+//#include "Human.h"
 
 
 Scene * GameFightScene::scene()
@@ -46,10 +46,9 @@ bool GameFightScene::init()
     {
         return false;
     }
-    GameDirector * gameDirector = _G_D;
     
-    GameLoading::loadFrames();
-    gameDirector->initGameSingle();
+//    GameLoading::loadFrames();
+    _G_D->initGameSingle();
     
     Sprite * bgSprite = Sprite::create(ImagePath("scene1_Bg.png"));
     addChild(bgSprite);
@@ -60,25 +59,28 @@ bool GameFightScene::init()
     auto listener = EventListenerTouchOneByOne::create();
     listener->setSwallowTouches(true);
 
-    listener->onTouchBegan = [](Touch* touch, Event* event){
-        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
-        gameFightScene->touchBegan(touch, event);
-        return true;
-    };
-    listener->onTouchMoved = [](Touch* touch, Event* event){
-        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
-        gameFightScene->touchMoved(touch, event);
-    };
-    listener->onTouchEnded = [](Touch* touch, Event* event){
-        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
-        gameFightScene->touchEnd(touch, event);
-    };
+    listener->onTouchBegan = CC_CALLBACK_2(GameFightScene::touchBegan, this);
+//    [](Touch* touch, Event* event){
+//        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
+//        gameFightScene->touchBegan(touch, event);
+//        return true;
+//    };
+    listener->onTouchMoved = CC_CALLBACK_2(GameFightScene::touchMoved, this);
+//    [](Touch* touch, Event* event){
+//        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
+//        gameFightScene->touchMoved(touch, event);
+//    };
+    listener->onTouchEnded = CC_CALLBACK_2(GameFightScene::touchEnd, this);
+//    [](Touch* touch, Event* event){
+//        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
+//        gameFightScene->touchEnd(touch, event);
+//    };
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
     
-    Json::Value value = _C_M->getDataByTag("guanqia", "400001");
-    GuanqiaModel * guanQia = new GuanqiaModel(value);
-    EnemyManager::getInstance()->setData(guanQia->getMonsters());
+//    Json::Value value = _C_M->getDataByTag("guanqia", "400001");
+//    GuanqiaModel * guanQia = new GuanqiaModel(value);
+//    EnemyManager::getInstance()->setData(guanQia->getMonsters());
     
     MenuItemImage * pauseButton = MenuItemImage::create(ImagePath("fight_pause_button.png"),
                                                         ImagePath("fight_pause_button.png"),
@@ -88,6 +90,10 @@ bool GameFightScene::init()
     Menu * buttonMenu = Menu::create(pauseButton, NULL);
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu,200);
+    
+    _G_D->startGame();
+    
+//    log("game fight scene init");
     
     return true;
 }

@@ -57,7 +57,9 @@ m_isMaxLevel(false),
 m_isUnlock(false),
 m_isTakeUp(false),
 m_isDefaultGun(false),
-m_isCurrentGun(false)
+m_isCurrentGun(false),
+m_fireWaitingTime(0.0f),
+m_reloadWiatingTime(0.0f)
 {
     
     m_id = data["Id"].asString() ;
@@ -92,6 +94,19 @@ m_isCurrentGun(false)
     m_fireRate =  1.0f/ m_fireRate / (float)actionData.attackFrames;
     m_reloadSpeed =  1.0f/ m_reloadSpeed / (float)actionData.reloadFrames;
     m_switchSpeed =  1.0f/ m_switchSpeed / (float)actionData.changeFrames;
+    
+    if(m_fireRate > 0.08f)
+    {
+        float   cha = m_fireRate - 0.08f;
+        m_fireWaitingTime = cha * actionData.attackFrames;
+        m_fireRate = 0.08f;
+    }
+    if (m_reloadSpeed > 0.08f)
+    {
+        float   cha = m_reloadSpeed - 0.08f;
+        m_reloadWiatingTime = cha * actionData.reloadFrames;
+        m_reloadSpeed = 0.08f;
+    }
     
     //-------
     m_totalBullets = _G_U->getGunBulletNumber(m_id);
@@ -159,6 +174,7 @@ bool Gun::fire(Vec2 position)
 }
 void Gun::setFightView()
 {
+    
     GunSprite * sprite = new GunSprite(this);
     sprite->setSubject(this);
     sprite->autorelease();
@@ -306,6 +322,14 @@ bool Gun::buyBullet()
     _G_U->setUserGold(userGold);
     notify();
     return true;
+}
+float Gun::getFireWaitingTime()
+{
+    return m_fireWaitingTime;
+}
+float Gun::getReloadWaitingTime()
+{
+    return m_reloadWiatingTime;
 }
 int Gun::getBulletNum()
 {

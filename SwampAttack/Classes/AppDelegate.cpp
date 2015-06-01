@@ -4,6 +4,8 @@
 #include "GameFightScene.h"
 #include "GameMapScene.h"
 #include "GameShopScene.h"
+#include "GameOverScene.h"
+
 
 #include "GameUser.h"
 
@@ -61,6 +63,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 //    auto scene = GameFightScene::scene();
     auto scene = GameMapScene::scene();
 //    auto scene = GameShopScene::scene();
+//    auto scene = GameOverScene::scene(o_loss);
     // run
     director->runWithScene(scene);
     return true;

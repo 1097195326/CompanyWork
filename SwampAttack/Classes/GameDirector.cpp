@@ -12,14 +12,15 @@
 #include "BulletManager.h"
 #include "House.h"
 #include "DefenseBuildingManager.h"
-
+#include "GameOverScene.h"
 
 GameDirector::GameDirector()
 {
     gameMap = GameMapManager::getInstance()->getGameMap();
-//    schedule(CC_SCHEDULE_SELECTOR(GameDirector::gameLoop), 1/60);
     
     Director::getInstance()->getScheduler()->schedule(CC_SCHEDULE_SELECTOR(GameDirector::gameLoop), this, 1/60, false);
+    
+    stopGame();
     
 }
 GameDirector::~GameDirector()
@@ -36,7 +37,7 @@ void GameDirector::initGameSingle()
     
     House::getInstance();
     DefenseBuildingManager::getInstance()->setView();
-    Human::getInstance();
+    Human::getInstance()->setView();
     GunManager::getInstance()->setFightView();
     EnemyManager::getInstance()->setView();
     
@@ -58,10 +59,18 @@ void GameDirector::gameLoop(float data)
     DefenseBuildingManager::getInstance()->gameLoop(data);
     
     checkCross();
-//    if (EnemyManager::getInstance()->isOver() || House::getInstance()->isOver()) {
-//        clearStatus();
-//        m_status |= s_over;
-//    }
+    if (EnemyManager::getInstance()->isOver() || House::getInstance()->isOver()) {
+        clearStatus();
+        m_status |= s_over;
+        GameOverStatus status;
+        if (House::getInstance()->isOver()) {
+            status = o_loss;
+        }else
+        {
+            status = o_win;
+        }
+        Director::getInstance()->replaceScene(GameOverScene::scene(status));
+    }
 }
 void GameDirector::onTouchBegin(cocos2d::Touch *touch, cocos2d::Event *event)
 {
@@ -116,31 +125,31 @@ void GameDirector::checkCross()
             }
             
             // defense
-//            if (!buildingData.empty())
-//            {
-//                for (d_iter = buildingData.begin(); d_iter != buildingData.end(); ++d_iter)
-//                {
-//                    DefenseBuilding * building = d_iter->second;
-//                    if (building->isCanHurt() &&
-//                        building->isInRange(enemy->getPosition()) &&
-//                        enemy->getActionType() == 1)
-//                    {
-//                        switch (building->getDefenceType())
-//                        {
-//                            case 2:
-//                                enemy->hurt(building->getDamage());
-//                                break;
-//                            case 3:
-//                                 building->fire(Vec2(enemy->getPosition().x,
-//                                                     enemy->getPosition().y + enemy->getHeight() * 0.5));
-//                                
-//                                break;
-//                            default:
-//                                break;
-//                        }
-//                    }
-//                }
-//            }
+            if (!buildingData.empty())
+            {
+                for (d_iter = buildingData.begin(); d_iter != buildingData.end(); ++d_iter)
+                {
+                    DefenseBuilding * building = d_iter->second;
+                    if (building->isCanHurt() &&
+                        building->isInRange(enemy->getPosition()) &&
+                        enemy->getActionType() == 1)
+                    {
+                        switch (building->getDefenceType())
+                        {
+                            case 2:
+                                enemy->hurt(building->getDamage());
+                                break;
+                            case 3:
+                                 building->fire(Vec2(enemy->getPosition().x,
+                                                     enemy->getPosition().y + enemy->getHeight() * 0.5));
+                                
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+            }
             
         }
     }
@@ -163,7 +172,7 @@ void GameDirector::restartGame()
 void GameDirector::continueGame()
 {
     clearStatus();
-    m_status |= s_start;
+    m_status |= s_run;
 }
 void GameDirector::stopGame()
 {

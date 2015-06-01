@@ -96,7 +96,7 @@ void GameMapScene::homeButtonFuc(cocos2d::Ref *psender)
 }
 void GameMapScene::shopButtonFuc(cocos2d::Ref *psender)
 {
-    
+    Director::getInstance()->replaceScene(GameShopScene::scene());
 }
 void GameMapScene::leftButtonFuc(cocos2d::Ref *psender)
 {

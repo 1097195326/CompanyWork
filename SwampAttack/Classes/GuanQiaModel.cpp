@@ -48,6 +48,7 @@ GuanqiaModel::~GuanqiaModel()
 }
 void GuanqiaModel::unlockGuanqia()
 {
+    m_isUnlock = true;
     _G_U->unlockGuanqia(m_id);
 }
 bool GuanqiaModel::isUnlock()

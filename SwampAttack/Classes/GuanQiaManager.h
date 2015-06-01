@@ -17,6 +17,7 @@ private:
     std::map<string,GuanqiaModel *> m_guanQiaData;
     std::map<int,std::string> m_hashHead;
     
+    string  m_currentGuanqiaId;
     
 public:
     GuanqiaModel *   getGuanqiaByIndex(int index);
@@ -24,8 +25,8 @@ public:
     int     getGuanqiaNum();
     
     
-    void    setShopView(Sprite * shopScene);
-    
+    void    setCurrentGuanqiaId(string guanqiaId);
+    GuanqiaModel * getCurrentGuanqia();
 public:
     static GuanQiaManager * getInstance();
     GuanQiaManager();

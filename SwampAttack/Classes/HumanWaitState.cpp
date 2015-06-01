@@ -22,7 +22,9 @@ void HumanWaitState::Enter(Human * human)
 }
 void HumanWaitState::Execute(Human * human)
 {
-    if (human->isTouching())
+    if (human->getWaitingTime() > 0.0f) {
+        human->minusWaitingTime();
+    }else if (human->isTouching())
     {
         human->changeState(HumanShootState::getInstance());
     }else if (!human->isFull())

@@ -45,6 +45,9 @@ private:
     bool    m_isDefaultGun;
     int     m_takeUpIndex;
     bool    m_isCurrentGun;
+    
+    float   m_fireWaitingTime;
+    float   m_reloadWiatingTime;
 private:
     
 public:
@@ -99,6 +102,8 @@ public:
     //--- set function --
     bool    addStrengthenLevel();
     bool    buyBullet();
+    float   getFireWaitingTime();
+    float   getReloadWaitingTime();
     //--- get function ---
     string  getId();
     string  getWeaponName();

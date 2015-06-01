@@ -48,3 +48,11 @@ int GuanQiaManager::getGuanqiaNum()
 {
     return (int)m_guanQiaData.size();
 }
+void GuanQiaManager::setCurrentGuanqiaId(string guanqiaId)
+{
+    m_currentGuanqiaId = guanqiaId;
+}
+GuanqiaModel * GuanQiaManager::getCurrentGuanqia()
+{
+    return m_guanQiaData[m_currentGuanqiaId];
+}

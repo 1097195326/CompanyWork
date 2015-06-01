@@ -27,7 +27,7 @@ Human::Human()
     m_state = HumanWaitState::getInstance();
     m_touchStatus = _t_normal;
     
-    setView();
+//    setView();
 }
 Human::~Human()
 {
@@ -83,6 +83,7 @@ void Human::setView()
 void Human::reloadCall()
 {
     m_gun->reloadBullet();
+    m_waitingTime = m_gun->getReloadWaitingTime();
 //    m_status = _h_reloaded;
 }
 void Human::shootCall()
@@ -95,12 +96,22 @@ void Human::shootCall()
         // 枪 没有子弹了，请切换到 默认 枪
     }
     m_status = _h_shooted;
+    m_waitingTime = m_gun->getFireWaitingTime();
 }
 void Human::changeCall()
 {
     m_status = _h_changed;
 }
 //---- interface for state
+float Human::getWaitingTime()
+{
+//    log("m_waiting time :%f",m_waitingTime);
+    return m_waitingTime;
+}
+void Human::minusWaitingTime()
+{
+    m_waitingTime -= 0.055;
+}
 void Human::setStateReload()
 {
     m_status = _h_reloading;

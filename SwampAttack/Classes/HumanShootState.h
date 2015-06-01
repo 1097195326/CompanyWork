@@ -14,11 +14,14 @@
 
 class HumanShootState : public State<Human>
 {
+private:
+    
 public:
     static HumanShootState * getInstance();
     void Enter(Human *);
     void Execute(Human *);
     void Exit(Human *);
+    void resetData();
 };
 
 #endif /* defined(__SwampAttack__HumanShootState__) */
