@@ -8,6 +8,7 @@
 
 #include "ScrollController.h"
 
+#include "BaseCode.h"
 
 ScrollController::ScrollController():
 m_vertical(false),

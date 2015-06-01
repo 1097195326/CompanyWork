@@ -16,7 +16,7 @@ class MapGuanqiaButton : public Sprite, public GameObserver {
 private:
     int     m_sceneIndex;
     int     m_index;
-    string  m_guanqiaId;
+    std::string  m_guanqiaId;
     
     
     MenuItem * m_menuItem;

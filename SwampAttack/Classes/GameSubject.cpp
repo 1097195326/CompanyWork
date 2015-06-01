@@ -7,7 +7,6 @@
 //
 
 #include "GameSubject.h"
-#include "GameObserver.h"
 
 
 GameSubject::GameSubject()
@@ -29,10 +28,10 @@ GameSubject::~GameSubject()
     
     if (m_map_Observers.size() > 0)
     {
-        map<string,GameObserver *>::iterator iter;
+        std::map<std::string,GameObserver *>::iterator iter;
         for (iter = m_map_Observers.begin(); iter != m_map_Observers.end(); ++iter)
         {
-            string name = iter->first;
+            std::string name = iter->first;
             detach(name);
         }
     }

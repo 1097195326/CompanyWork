@@ -8,6 +8,7 @@
 
 #include "SelectMenuController.h"
 
+
 SelectMenuController::SelectMenuController()
 {
     m_menus.reserve(6);

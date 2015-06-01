@@ -345,7 +345,20 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/AppDelegate.o: \
  jni/../../cocos2d/cocos/3d/../deprecated/CCString.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCNotificationCenter.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h \
- jni/../../Classes/HelloWorldScene.h
+ jni/../../Classes/HelloWorldScene.h jni/../../Classes/GameFightScene.h \
+ jni/../../Classes/BaseCode.h \
+ jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
+ jni/../../cocos2d/cocos/audio/android/../include/Export.h \
+ jni/../../Classes/GameMapScene.h \
+ jni/../../Classes/GameScrollHeadlerTargetInterface.h \
+ jni/../../Classes/GameScrollHeadler.h \
+ jni/../../Classes/GameHorizontalScrollHeadlerView.h \
+ jni/../../Classes/GameScrollHeadlerView.h \
+ jni/../../Classes/GameScrollView.h jni/../../Classes/ScrollController.h \
+ jni/../../Classes/GameShopScene.h jni/../../Classes/GameObserver.h \
+ jni/../../Classes/GameVerticalScrollHeadlerView.h \
+ jni/../../Classes/GameOverScene.h jni/../../Classes/GameUser.h \
+ jni/../../Classes/GameSubject.h
 
 jni/../../Classes/AppDelegate.h:
 
@@ -1040,3 +1053,37 @@ jni/../../cocos2d/cocos/3d/../deprecated/CCNotificationCenter.h:
 jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h:
 
 jni/../../Classes/HelloWorldScene.h:
+
+jni/../../Classes/GameFightScene.h:
+
+jni/../../Classes/BaseCode.h:
+
+jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
+
+jni/../../cocos2d/cocos/audio/android/../include/Export.h:
+
+jni/../../Classes/GameMapScene.h:
+
+jni/../../Classes/GameScrollHeadlerTargetInterface.h:
+
+jni/../../Classes/GameScrollHeadler.h:
+
+jni/../../Classes/GameHorizontalScrollHeadlerView.h:
+
+jni/../../Classes/GameScrollHeadlerView.h:
+
+jni/../../Classes/GameScrollView.h:
+
+jni/../../Classes/ScrollController.h:
+
+jni/../../Classes/GameShopScene.h:
+
+jni/../../Classes/GameObserver.h:
+
+jni/../../Classes/GameVerticalScrollHeadlerView.h:
+
+jni/../../Classes/GameOverScene.h:
+
+jni/../../Classes/GameUser.h:
+
+jni/../../Classes/GameSubject.h:

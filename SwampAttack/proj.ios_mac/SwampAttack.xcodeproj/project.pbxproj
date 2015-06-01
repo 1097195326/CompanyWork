@@ -132,7 +132,7 @@
 		8DD8C1281AFC642F00872AA2 /* GameUser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C1261AFC642F00872AA2 /* GameUser.cpp */; };
 		8DD8C12C1AFCB15F00872AA2 /* GameShopScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C12A1AFCB15F00872AA2 /* GameShopScene.cpp */; };
 		8DD8C12F1AFCB81C00872AA2 /* SelectMenuView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C12D1AFCB81C00872AA2 /* SelectMenuView.cpp */; };
-		8DD8C1321AFCBF6300872AA2 /* ShopSelectMeumView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C1301AFCBF6300872AA2 /* ShopSelectMeumView.cpp */; };
+		8DD8C1321AFCBF6300872AA2 /* ShopSelectMenuView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C1301AFCBF6300872AA2 /* ShopSelectMenuView.cpp */; };
 		8DD925721AF9BFB00075E9F5 /* GameScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD925701AF9BFB00075E9F5 /* GameScrollView.cpp */; };
 		8DDA89351B0C7B2C00F9F74B /* GunSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DDA89331B0C7B2C00F9F74B /* GunSprite.cpp */; };
 		8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3B4561AF0B36800938655 /* HouseSprite.cpp */; };
@@ -386,8 +386,8 @@
 		8DD8C12B1AFCB15F00872AA2 /* GameShopScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameShopScene.h; sourceTree = "<group>"; };
 		8DD8C12D1AFCB81C00872AA2 /* SelectMenuView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectMenuView.cpp; sourceTree = "<group>"; };
 		8DD8C12E1AFCB81C00872AA2 /* SelectMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectMenuView.h; sourceTree = "<group>"; };
-		8DD8C1301AFCBF6300872AA2 /* ShopSelectMeumView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopSelectMeumView.cpp; sourceTree = "<group>"; };
-		8DD8C1311AFCBF6300872AA2 /* ShopSelectMeumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopSelectMeumView.h; sourceTree = "<group>"; };
+		8DD8C1301AFCBF6300872AA2 /* ShopSelectMenuView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopSelectMenuView.cpp; sourceTree = "<group>"; };
+		8DD8C1311AFCBF6300872AA2 /* ShopSelectMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopSelectMenuView.h; sourceTree = "<group>"; };
 		8DD925701AF9BFB00075E9F5 /* GameScrollView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScrollView.cpp; sourceTree = "<group>"; };
 		8DD925711AF9BFB00075E9F5 /* GameScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScrollView.h; sourceTree = "<group>"; };
 		8DDA89331B0C7B2C00F9F74B /* GunSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GunSprite.cpp; sourceTree = "<group>"; };
@@ -857,8 +857,8 @@
 		8DD87E601B1575AD00FC073A /* shopUI */ = {
 			isa = PBXGroup;
 			children = (
-				8DD8C1301AFCBF6300872AA2 /* ShopSelectMeumView.cpp */,
-				8DD8C1311AFCBF6300872AA2 /* ShopSelectMeumView.h */,
+				8DD8C1301AFCBF6300872AA2 /* ShopSelectMenuView.cpp */,
+				8DD8C1311AFCBF6300872AA2 /* ShopSelectMenuView.h */,
 				8DD7D5A91B0199D100DD3711 /* ShopItemScrollHeadler.cpp */,
 				8DD7D5AA1B0199D100DD3711 /* ShopItemScrollHeadler.h */,
 				8DD87E651B15A26900FC073A /* ShopGunItemScrollHeadler.cpp */,
@@ -1100,7 +1100,7 @@
 				8DC3E19D1AE89C5C00BE6CA4 /* EnemyInfo.cpp in Sources */,
 				8DDA89351B0C7B2C00F9F74B /* GunSprite.cpp in Sources */,
 				8DE3C38E1AFB13F300C61D89 /* GameVerticalScrollView.cpp in Sources */,
-				8DD8C1321AFCBF6300872AA2 /* ShopSelectMeumView.cpp in Sources */,
+				8DD8C1321AFCBF6300872AA2 /* ShopSelectMenuView.cpp in Sources */,
 				8DD8C1211AFC5D0E00872AA2 /* GameSubject.cpp in Sources */,
 				8DC430B21AC930E400AB1665 /* PropManager.cpp in Sources */,
 				8DD925721AF9BFB00075E9F5 /* GameScrollView.cpp in Sources */,

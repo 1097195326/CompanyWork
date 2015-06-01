@@ -7,10 +7,12 @@
 //
 
 #include "GameObserver.h"
+#include "GameSubject.h"
+
 
 GameObserver::GameObserver()
 {
-    
+    m_sub = NULL;
 }
 GameObserver::~GameObserver()
 {

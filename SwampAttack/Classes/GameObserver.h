@@ -9,12 +9,13 @@
 #ifndef __SwampAttack__GameObserver__
 #define __SwampAttack__GameObserver__
 
-#include "GameSubject.h"
+//#include "GameSubject.h"
 
+class GameSubject;
 
 class GameObserver {
 protected:
-    GameSubject * m_sub = NULL;
+    GameSubject * m_sub;
     
 public:
     virtual void    updateData() = 0;

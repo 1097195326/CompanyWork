@@ -9,6 +9,10 @@
 #ifndef __SwampAttack__SelectMenuController__
 #define __SwampAttack__SelectMenuController__
 
+#include "BaseCode.h"
+
+#include <stdlib.h>
+
 enum SelectMenuStatus
 {
     s_m_normal,

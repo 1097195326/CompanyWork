@@ -9,8 +9,11 @@
 #ifndef __SwampAttack__GameSubject__
 #define __SwampAttack__GameSubject__
 
-class GameObserver;
-using namespace std;
+#include "GameObserver.h"
+#include "BaseCode.h"
+
+#include <stdlib.h>
+//using namespace std;
 
 class GameSubject {
 protected:

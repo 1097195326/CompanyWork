@@ -8,7 +8,7 @@
 
 #include "GameShopScene.h"
 
-#include "ShopSelectMeumView.h"
+#include "ShopSelectMenuView.h"
 #include "GunManager.h"
 #include "PropManager.h"
 #include "DefenseBuildingManager.h"
