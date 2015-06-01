@@ -22,7 +22,7 @@ enum HumanStatus
     _h_waits,
     _h_run,
     _h_reloading,
-//    _h_reloaded,
+    _h_reloaded,
     _h_shooting,
     _h_shooted,
     _h_changeing,
@@ -76,7 +76,7 @@ public:
     bool    isTouchEnd();
     bool    isFull();
     bool    isHaveBullet();
-//    bool    isReloaded();
+    bool    isReloaded();
     bool    isShooted();
     bool    isChanged();
     //--- interface for view

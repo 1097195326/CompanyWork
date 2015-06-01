@@ -13,7 +13,7 @@
 #include "GameUser.h"
 #include "GunSprite.h"
 #include "GameDirector.h"
-
+#include "GuanQiaManager.h"
 
 GunActionInfo::GunActionInfo()
 {
@@ -129,6 +129,7 @@ m_reloadWiatingTime(0.0f)
         m_isUnlock = true;
         m_isTakeUp = true;
         m_takeUpIndex = 1;
+        m_totalBullets = 1;
     }else
     {
         m_bullets = m_totalBullets >= m_magazieSize ? m_magazieSize : m_totalBullets % m_magazieSize;
@@ -141,6 +142,15 @@ m_reloadWiatingTime(0.0f)
 Gun::~Gun()
 {
     
+}
+void Gun::checkUnlock()
+{
+    GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getGuanqiaById(m_unlockMission);
+    if (guanqia->isUnlock())
+    {
+        m_isUnlock = true;
+        _G_U->unlockGun(m_id);
+    }
 }
 bool Gun::fire(Vec2 position)
 {

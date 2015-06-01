@@ -13,6 +13,9 @@
 
 USING_NS_CC;
 
+#include "SimpleAudioEngine.h"
+using namespace CocosDenshion;
+
 //-------------
 extern  Size    winSize;
 extern  Size    visibleSize;
@@ -24,6 +27,7 @@ extern  Vec2    visibleOrigin;
 
 //------------
 #define ImagePath( name ) std::string("image/")+std::string( name )
+#define MusicPath( name ) (std::string("music/")+std::string( name ))
 #define ConfigePath( name ) std::string("config/")+std::string( name )+std::string(".csv")
 //-------------
 #define CREATE_SCENE_FUNC(__TYPE__) \

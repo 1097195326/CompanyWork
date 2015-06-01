@@ -164,3 +164,12 @@ void GunManager::setShopView(Sprite * gunItemSprite)
         m_GunIcons[i] = icon;
     }
 }
+void GunManager::checkUnlock()
+{
+    std::map<string,Gun *>::iterator iter;
+    for (iter = m_gunData.begin(); iter != m_gunData.end(); ++iter)
+    {
+        Gun * _gun = iter->second;
+        _gun->checkUnlock();
+    }
+}

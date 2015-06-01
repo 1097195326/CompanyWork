@@ -32,6 +32,9 @@ void HumanReloadState::Execute(Human * human)
         if (human->isFull())
         {
             human->changeState(HumanWaitState::getInstance());
+        }else
+        {
+            human->setStateReload();
         }
     }
 }

@@ -42,6 +42,7 @@ public:
     void    setFightView();
     void    setShopView(Sprite * shopScene);
     
+    void    checkUnlock();
 public:
     static GunManager * getInstance();
     GunManager();

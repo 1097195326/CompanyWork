@@ -174,6 +174,7 @@ void WalkEnemySprite::hurt()
     texiaoSprite->stopAllActions();
     texiaoSprite->setVisible(true);
     texiaoSprite->runAction(texiaoAction);
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("hitEnemy.mp3").c_str());
 }
 void WalkEnemySprite::move()
 {
@@ -209,4 +210,8 @@ void WalkEnemySprite::die()
     actionStatus = isDieing;
     guaiwuSprite->stopAllActions();
     guaiwuSprite->runAction(m_map["dieAction"]);
+    
+    string name = m_model->getModelId();
+    string yinxiao = StringUtils::format("%s_die.mp3",name.c_str());
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath(yinxiao).c_str());
 }

@@ -161,4 +161,5 @@ void FlyEnemySprite::die()
         armorSprite->stopAllActions();
         armorSprite->setVisible(false);
     }
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("flyEnemy_die.mp3").c_str());
 }

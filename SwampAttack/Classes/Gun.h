@@ -68,6 +68,7 @@ public:
     bool    isMaxLevel();
     
     int     getTakeUpIndex();
+    void    checkUnlock();
 private:
     string  m_id;
     string  m_weaponName;           //  武器名称

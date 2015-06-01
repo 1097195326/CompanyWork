@@ -63,6 +63,8 @@ void Human::fire(Touch * touch,Event * event)
 void Human::stop()
 {
     m_touchStatus = _touchEnd;
+//    string yinxiao = StringUtils::format("%s_shoot.mp3",m_gun->getModelId().c_str());
+    SimpleAudioEngine::getInstance()->stopAllEffects();
 }
 void Human::changeGun(Gun *gun)
 {
@@ -84,7 +86,7 @@ void Human::reloadCall()
 {
     m_gun->reloadBullet();
     m_waitingTime = m_gun->getReloadWaitingTime();
-//    m_status = _h_reloaded;
+    m_status = _h_reloaded;
 }
 void Human::shootCall()
 {
@@ -169,10 +171,10 @@ bool Human::isReload()
 {
     return m_status == _h_reloading;
 }
-//bool Human::isReloaded()
-//{
-//    return m_status == _h_reloaded;
-//}
+bool Human::isReloaded()
+{
+    return m_status == _h_reloaded;
+}
 bool Human::isShoot()
 {
     return m_status == _h_shooting;

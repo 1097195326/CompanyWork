@@ -15,6 +15,7 @@
 #include "EnemyManager.h"
 #include "GuanQiaManager.h"
 #include "GameLoading.h"
+#include "GunManager.h"
 
 
 Scene * GameOverScene::scene(GameOverStatus status)
@@ -71,6 +72,7 @@ bool GameOverScene::init()
         GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
         GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
         nextGuanqia->unlockGuanqia();
+        GunManager::getInstance()->checkUnlock();
     }else
     {
         gotoMapButton->setPosition(visibleOrigin.x + visibleSize.width * 0.5 - widthOffset * 0.7,

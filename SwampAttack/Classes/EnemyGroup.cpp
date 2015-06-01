@@ -41,6 +41,7 @@ void EnemyGroup::setData(Json::Value data)
                     enemy = new FlyEnemy(enemyConfig);
                     break;
                 default:
+                    enemy = new WalkEnemy(enemyConfig);
                     break;
             }
             enemyData.push_back(enemy);
