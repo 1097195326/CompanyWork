@@ -33,6 +33,7 @@ public:
     
     
     void    setShopView(Sprite * shopScene);
+    void    setFightView();
     
 public:
     static PropManager * getInstance();

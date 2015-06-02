@@ -104,6 +104,14 @@ void PropManager::takeDownProp(string propId)
     m_propData[propId]->takeDown();
     m_takeUpPropData.erase(propId);
 }
+void PropManager::setFightView()
+{
+    std::map<string,Prop *>::iterator iter;
+    for (iter = m_takeUpPropData.begin(); iter != m_takeUpPropData.end(); ++iter)
+    {
+        iter->second->setFightView();
+    }
+}
 void PropManager::setShopView(Sprite * propItemSprite)
 {
     m_propIcons.reserve(4);

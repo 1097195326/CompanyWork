@@ -28,6 +28,7 @@ private:
 public:
     Prop(Json::Value value);
     ~Prop();
+    void    setFightView();
 public:
     void    takeUp(int index);
     void    takeDown();

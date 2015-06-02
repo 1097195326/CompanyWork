@@ -9,6 +9,7 @@
 #include "Prop.h"
 #include "ConfigManager.h"
 #include "GameUser.h"
+#include "PropSprite.h"
 
 
 Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0)
@@ -48,7 +49,13 @@ Prop::~Prop()
 {
     
 }
-
+void Prop::setFightView()
+{
+    PropSprite * sprite = new PropSprite(this);
+    sprite->setSubject(this);
+    sprite->autorelease();
+    
+}
 bool Prop::buyProp()
 {
     int userGold = _G_U->getUserGold();

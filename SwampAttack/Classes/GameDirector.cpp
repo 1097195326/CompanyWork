@@ -12,6 +12,7 @@
 #include "BulletManager.h"
 #include "House.h"
 #include "DefenseBuildingManager.h"
+#include "PropManager.h"
 #include "GameOverScene.h"
 
 GameDirector::GameDirector()
@@ -39,6 +40,7 @@ void GameDirector::initGameSingle()
     DefenseBuildingManager::getInstance()->setView();
     Human::getInstance()->setView();
     GunManager::getInstance()->setFightView();
+    PropManager::getInstance()->setFightView();
     EnemyManager::getInstance()->setView();
     
 }
