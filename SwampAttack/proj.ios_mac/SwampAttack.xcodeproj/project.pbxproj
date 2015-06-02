@@ -154,6 +154,7 @@
 		D8D673AC1B19F7DD004C463F /* MapGuanqiaButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D673AA1B19F7DD004C463F /* MapGuanqiaButton.cpp */; };
 		D8D673AF1B1C098D004C463F /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D673AD1B1C098D004C463F /* GameOverScene.cpp */; };
 		D8D673B21B1C4DBB004C463F /* music in Resources */ = {isa = PBXBuildFile; fileRef = D8D673B11B1C4DBB004C463F /* music */; };
+		D8D6781A1B1DB58C008C3BA6 /* PropSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D678181B1DB58C008C3BA6 /* PropSprite.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -422,6 +423,8 @@
 		D8D673AD1B1C098D004C463F /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverScene.cpp; sourceTree = "<group>"; };
 		D8D673AE1B1C098D004C463F /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		D8D673B11B1C4DBB004C463F /* music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = music; sourceTree = "<group>"; };
+		D8D678181B1DB58C008C3BA6 /* PropSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropSprite.cpp; sourceTree = "<group>"; };
+		D8D678191B1DB58C008C3BA6 /* PropSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropSprite.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -906,6 +909,8 @@
 				8DD29D3F1B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.h */,
 				8DDA89331B0C7B2C00F9F74B /* GunSprite.cpp */,
 				8DDA89341B0C7B2C00F9F74B /* GunSprite.h */,
+				D8D678181B1DB58C008C3BA6 /* PropSprite.cpp */,
+				D8D678191B1DB58C008C3BA6 /* PropSprite.h */,
 				8DD5D0B21B1419AF00AA2A07 /* EnemyProgressBar.cpp */,
 				8DD5D0B31B1419AF00AA2A07 /* EnemyProgressBar.h */,
 			);
@@ -1119,6 +1124,7 @@
 				8DE3E98E1AF8B5F900B1E8A6 /* GameMapScene.cpp in Sources */,
 				8DC34AA01ADCF96700C6B657 /* GameMap6.cpp in Sources */,
 				8DD87E701B15A2B500FC073A /* ShopAwardItemScrollHeadler.cpp in Sources */,
+				D8D6781A1B1DB58C008C3BA6 /* PropSprite.cpp in Sources */,
 				8DD215681B16BA720090EEEB /* ShopPropIcon.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */,

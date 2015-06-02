@@ -50,7 +50,7 @@ m_index(0.0)
         m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
     }
     
-    m_isUnlock = _G_U->isUnlockGun(m_id);
+    m_isUnlock = _G_U->isUnlockBuilding(m_id);
     
 }
 DefenseBuilding::~DefenseBuilding()
@@ -59,10 +59,10 @@ DefenseBuilding::~DefenseBuilding()
 }
 void DefenseBuilding::gameLoop(float data)
 {
-//    if (!m_isUnlock)
-//    {
-//        return;
-//    }
+    if (!m_isUnlock)
+    {
+        return;
+    }
     if (m_defenceType == 2 || m_defenceType == 3)
     {
         m_index += data;
@@ -100,9 +100,9 @@ void DefenseBuilding::fire(Vec2 position)
 }
 void DefenseBuilding::setView()
 {
-//    if (!m_isUnlock) {
-//        return;
-//    }
+    if (!m_isUnlock) {
+        return;
+    }
     DefenseBuildingSprite * sprite = NULL;
     switch (m_defenceType) {
         case 1:

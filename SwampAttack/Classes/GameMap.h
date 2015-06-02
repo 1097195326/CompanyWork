@@ -28,7 +28,7 @@ public:
     Vec2 flyEnemy_target_buttomPoint = {m_visibleOrigin.x + 30, m_visibleOrigin.y + 80};
     
     
-    Vec2 m_BulletStartPoint = {m_visibleOrigin.x + 230, m_visibleOrigin.y + 220};
+    Vec2 m_BulletStartPoint = {m_visibleOrigin.x + 230, m_visibleOrigin.y + 240};
     Vec2 gangpao_BulletStartPoint = {m_visibleOrigin.x + 150, m_visibleOrigin.y + 320};
     
     Vec2 fightScene_human_Point = {m_visibleOrigin.x + 200, m_visibleOrigin.y + 150};
@@ -38,12 +38,16 @@ public:
     Vec2 fightScene_zhalan_point2 = {m_visibleOrigin.x + 340,m_visibleOrigin.y + 150};
     float fightScene_zhalan_line = m_visibleOrigin.x + 330;
     
-    Vec2 fightScene_HouseSprite_Position = {m_visibleOrigin.x + 150 ,m_visibleOrigin.y + 250};
+    Vec2 fightScene_HouseSprite_Position = {m_visibleOrigin.x + 150 ,m_visibleOrigin.y + 240};
     Vec2 fightScene_HouseBar_Position = {m_visibleOrigin.x + 300 ,m_visibleOrigin.y + m_visibleSize.height - 50};
     Vec2 fightScene_EnemyBar_Position = {m_visibleOrigin.x + m_visibleSize.width - 300 , m_visibleOrigin.y + m_visibleSize.height - 50};
     
     Vec2 fightScene_Bullet_Position = {m_visibleOrigin.x +510 ,m_visibleOrigin.y + m_visibleSize.height - 120};
     Vec2 fightScene_gunIcon_Position = {m_visibleOrigin.x +40 ,m_visibleOrigin.y + m_visibleSize.height - 140};
+    
+    Vec2 fightScene_PropIcon_Position = {m_visibleOrigin.x + m_visibleSize.width -60,m_visibleOrigin.y + m_visibleSize.height - 120};
+    
+    
     
 };
 

@@ -49,12 +49,15 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
     Vec2 point = _G_M_M->fightScene_Bullet_Position;
     m_bullets.reserve(size);
     
+    
+    string gunModelId = m_gun->getModelId();
+    
     for (int i = 0; i < size; ++i)
     {
-        Sprite * b_g = Sprite::create(ImagePath("fight_bullet_bg.png"));
-        Sprite * b_i = Sprite::create(ImagePath("fight_bullet_icon.png"));
+        Sprite * b_g = Sprite::create(ImagePath(gunModelId + "_bulletBg.png"));
+        Sprite * b_i = Sprite::create(ImagePath(gunModelId + "_bulletIcon.png"));
         
-        point.x = point.x - b_g->getContentSize().width;
+        point.x = point.x - b_g->getContentSize().width * 0.7;
         b_g->setPosition(point);
         b_i->setPosition(point);
         addChild(b_g);

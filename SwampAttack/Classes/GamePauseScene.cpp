@@ -8,6 +8,9 @@
 
 #include "GamePauseScene.h"
 #include "GameDirector.h"
+#include "GuanQiaManager.h"
+#include "EnemyManager.h"
+
 
 
 Scene * GamePauseScene::scene(RenderTexture * rt)
@@ -64,5 +67,7 @@ void GamePauseScene::continueGame(cocos2d::Ref *pSender)
 }
 void GamePauseScene::restartGame(cocos2d::Ref *pSender)
 {
+    GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
+    EnemyManager::getInstance()->setData(guanqia->getMonsters());
     
 }
