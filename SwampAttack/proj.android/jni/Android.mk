@@ -93,7 +93,6 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/json/json_reader.cpp \
 				   ../../Classes/json/json_value.cpp \
 				   ../../Classes/json/json_writer.cpp \
-                   ../../Classes/AppDelegate.cpp \
                    ../../Classes/HelloWorldScene.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes

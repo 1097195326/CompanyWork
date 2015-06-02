@@ -24,23 +24,23 @@ bool GameMapScene::init()
     MenuItem * houmItem = MenuItemImage::create(ImagePath("map_homeButton.png"),
                                                     ImagePath("map_homeButton.png"),
                                                     CC_CALLBACK_1(GameMapScene::homeButtonFuc, this));
-    houmItem->setPosition(visibleOrigin.x + 60,
-                    visibleOrigin.y + visibleSize.height - 60);
+    houmItem->setPosition(m_visibleOrigin.x + 60,
+                    m_visibleOrigin.y + m_visibleSize.height - 60);
     MenuItem * shopItem = MenuItemImage::create(ImagePath("map_shopButton.png"),
                                                 ImagePath("map_shopButton.png"),
                                                 CC_CALLBACK_1(GameMapScene::shopButtonFuc, this));
-    shopItem->setPosition(visibleOrigin.x + visibleSize.width - 60,
-                          visibleOrigin.y + visibleSize.height - 60);
+    shopItem->setPosition(m_visibleOrigin.x + m_visibleSize.width - 60,
+                          m_visibleOrigin.y + m_visibleSize.height - 60);
     m_leftItem = MenuItemImage::create(ImagePath("map_leftButton.png"),
                                                 ImagePath("map_leftButton.png"),
                                                 CC_CALLBACK_1(GameMapScene::leftButtonFuc, this));
-    m_leftItem->setPosition(visibleOrigin.x + 60,
-                          visibleOrigin.y +  60);
+    m_leftItem->setPosition(m_visibleOrigin.x + 60,
+                          m_visibleOrigin.y +  60);
     m_rightItem = MenuItemImage::create(ImagePath("map_rightButton.png"),
                                                 ImagePath("map_rightButton.png"),
                                                 CC_CALLBACK_1(GameMapScene::rightButtonFuc, this));
-    m_rightItem->setPosition(visibleOrigin.x + visibleSize.width - 60,
-                          visibleOrigin.y + 60);
+    m_rightItem->setPosition(m_visibleOrigin.x + m_visibleSize.width - 60,
+                          m_visibleOrigin.y + 60);
     
     
     

@@ -17,7 +17,7 @@ Scene * GamePauseScene::scene(RenderTexture * rt)
     scene->addChild(layer,1);
     
     Sprite * bg = Sprite::createWithTexture(rt->getSprite()->getTexture());
-    bg->setPosition(visibleSize.width * 0.5,visibleSize.height * 0.5);
+    bg->setPosition(m_visibleSize.width * 0.5,m_visibleSize.height * 0.5);
     bg->setFlippedY(true);
     bg->setColor(Color3B::GRAY);
     scene->addChild(bg);
@@ -33,21 +33,21 @@ bool GamePauseScene::init()
     }
     
     Sprite * bg = Sprite::create(ImagePath("pauseScene_bg.png"));
-    bg->setPosition(visibleOrigin.x + visibleSize.width * 0.5,
-                    visibleOrigin.y + visibleSize.height * 0.5);
+    bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                    m_visibleOrigin.y + m_visibleSize.height * 0.5);
     addChild(bg);
     
     MenuItemImage * continueButton = MenuItemImage::create(ImagePath("pauseScene_continue.png"),
                                                         ImagePath("pauseScene_continue.png"),
                                                         CC_CALLBACK_1( GamePauseScene::continueGame, this));
-    continueButton->setPosition(visibleOrigin.x + visibleSize.width * 0.45,
-                             visibleOrigin.y + visibleSize.height * 0.5);
+    continueButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.45,
+                             m_visibleOrigin.y + m_visibleSize.height * 0.5);
     
     MenuItemImage * restartButton = MenuItemImage::create(ImagePath("pauseScene_restart.png"),
                                                         ImagePath("pauseScene_restart.png"),
                                                         CC_CALLBACK_1( GamePauseScene::restartGame, this));
-    restartButton->setPosition(visibleOrigin.x + visibleSize.width * 0.55,
-                             visibleOrigin.y + visibleSize.height * 0.5);
+    restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.55,
+                             m_visibleOrigin.y + m_visibleSize.height * 0.5);
     
     
     Menu * buttonMenu = Menu::create(continueButton,restartButton, NULL);

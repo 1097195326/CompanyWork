@@ -13,10 +13,13 @@
 USING_NS_CC;
 
 
-Size winSize;
-Size visibleSize;
-Vec2 visibleOrigin;
+Size m_winSize;
+Size m_visibleSize;
+Vec2 m_visibleOrigin;
 
+//extern  Size    winSize;
+//extern  Size    visibleSize;
+//extern  Vec2    visibleOrigin;
 
 AppDelegate::AppDelegate() {
 
@@ -46,9 +49,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
-    winSize = Director::getInstance()->getWinSize();
-    visibleSize = Director::getInstance()->getVisibleSize();
-    visibleOrigin = Director::getInstance()->getVisibleOrigin();
+    m_winSize = Director::getInstance()->getWinSize();
+    m_visibleSize = Director::getInstance()->getVisibleSize();
+    m_visibleOrigin = Director::getInstance()->getVisibleOrigin();
     
     
     // turn on display FPS

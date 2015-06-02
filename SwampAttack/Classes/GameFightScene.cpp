@@ -52,8 +52,8 @@ bool GameFightScene::init()
     
     Sprite * bgSprite = Sprite::create(ImagePath("scene1_Bg.png"));
     addChild(bgSprite);
-    bgSprite->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5,
-                               visibleOrigin.y + visibleSize.height * 0.5));
+    bgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                               m_visibleOrigin.y + m_visibleSize.height * 0.5));
     
     
     auto listener = EventListenerTouchOneByOne::create();
@@ -85,8 +85,8 @@ bool GameFightScene::init()
     MenuItemImage * pauseButton = MenuItemImage::create(ImagePath("fight_pause_button.png"),
                                                         ImagePath("fight_pause_button.png"),
                                                         CC_CALLBACK_1( GameFightScene::pauseGame, this));
-    pauseButton->setPosition(visibleOrigin.x + pauseButton->getContentSize().width * 0.6,
-                             visibleOrigin.y + visibleSize.height - pauseButton->getContentSize().height * 0.6);
+    pauseButton->setPosition(m_visibleOrigin.x + pauseButton->getContentSize().width * 0.6,
+                             m_visibleOrigin.y + m_visibleSize.height - pauseButton->getContentSize().height * 0.6);
     Menu * buttonMenu = Menu::create(pauseButton, NULL);
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu,200);
@@ -99,7 +99,7 @@ bool GameFightScene::init()
 }
 void GameFightScene::pauseGame(cocos2d::Ref *pSender)
 {
-    RenderTexture * rt = RenderTexture::create(visibleSize.width, visibleSize.height);
+    RenderTexture * rt = RenderTexture::create(m_visibleSize.width, m_visibleSize.height);
     
     rt->begin();
     this->visit();

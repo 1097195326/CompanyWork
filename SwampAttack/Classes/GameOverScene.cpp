@@ -42,8 +42,8 @@ bool GameOverScene::init()
     Director::getInstance()->getTextureCache()->removeAllTextures();
     
     Sprite * bg = Sprite::create(ImagePath("overScene_bg.png"));
-    bg->setPosition(visibleOrigin.x + visibleSize.width * 0.5,
-                    visibleOrigin.y + visibleSize.height * 0.5);
+    bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                    m_visibleOrigin.y + m_visibleSize.height * 0.5);
     addChild(bg);
     
     
@@ -61,12 +61,12 @@ bool GameOverScene::init()
         MenuItemImage * nextButton = MenuItemImage::create(ImagePath("overScene_next.png"),
                                                            ImagePath("overScene_next.png"),
                                                            CC_CALLBACK_1( GameOverScene::nextGuanqia, this));
-        gotoMapButton->setPosition(visibleOrigin.x + visibleSize.width * 0.5 - widthOffset,
-                                   visibleOrigin.y + visibleSize.height * 0.35);
-        restartButton->setPosition(visibleOrigin.x + visibleSize.width * 0.5,
-                                   visibleOrigin.y + visibleSize.height * 0.35);
-        nextButton->setPosition(visibleOrigin.x + visibleSize.width * 0.5 + widthOffset,
-                                visibleOrigin.y + visibleSize.height * 0.35);
+        gotoMapButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 - widthOffset,
+                                   m_visibleOrigin.y + m_visibleSize.height * 0.35);
+        restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                                   m_visibleOrigin.y + m_visibleSize.height * 0.35);
+        nextButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset,
+                                m_visibleOrigin.y + m_visibleSize.height * 0.35);
         buttonMenu = Menu::create(gotoMapButton,restartButton,nextButton, NULL);
         
         GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
@@ -75,10 +75,10 @@ bool GameOverScene::init()
         GunManager::getInstance()->checkUnlock();
     }else
     {
-        gotoMapButton->setPosition(visibleOrigin.x + visibleSize.width * 0.5 - widthOffset * 0.7,
-                                   visibleOrigin.y + visibleSize.height * 0.35);
-        restartButton->setPosition(visibleOrigin.x + visibleSize.width * 0.5 + widthOffset * 0.7,
-                                   visibleOrigin.y + visibleSize.height * 0.35);
+        gotoMapButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 - widthOffset * 0.7,
+                                   m_visibleOrigin.y + m_visibleSize.height * 0.35);
+        restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset * 0.7,
+                                   m_visibleOrigin.y + m_visibleSize.height * 0.35);
         buttonMenu = Menu::create(gotoMapButton,restartButton, NULL);
     }
     buttonMenu->setPosition(Point::ZERO);

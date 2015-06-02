@@ -22,10 +22,10 @@ GameMap * GameMapManager::getGameMap()
     {
         return gameMap;
     }
-    if (winSize.width == 1136)
+    if (m_winSize.width == 1136)
     {
         gameMap = new GameMap5s();
-    }else if(winSize.width  > 1136)
+    }else if(m_winSize.width  > 1136)
     {
         gameMap = new GameMap5s();
     }

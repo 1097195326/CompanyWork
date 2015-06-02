@@ -47,7 +47,7 @@ void FlyEnemy::gameLoop(float data)
     {
         dlayToAttack += data;
     }
-    if (!canMoveBack && m_point.x <= visibleOrigin.x + visibleSize.width * 0.3) {
+    if (!canMoveBack && m_point.x <= m_visibleOrigin.x + m_visibleSize.width * 0.3) {
         canMoveBack = true;
     }
     if (m_isShowHurt)
@@ -109,9 +109,9 @@ void FlyEnemy::randomPoint()
    
     m_nextPoint = m_point + normalForce + frontForce + backForce + buttomForce + upForce;
     
-    if (m_nextPoint.y > visibleOrigin.y + visibleSize.height)
+    if (m_nextPoint.y > m_visibleOrigin.y + m_visibleSize.height)
     {
-        m_nextPoint.y = visibleOrigin.y + visibleSize.height;
+        m_nextPoint.y = m_visibleOrigin.y + m_visibleSize.height;
     }
 //    log("move x ::%f",m_nextPoint.x - m_point.x);
 //    log("move y ::%f",m_nextPoint.y - m_point.y);
@@ -122,10 +122,10 @@ void FlyEnemy::randomPoint()
 }
 void FlyEnemy::setPointState()
 {
-    float backLine = visibleOrigin.x + visibleSize.width * 0.8;
-    float frontLine = visibleOrigin.x + visibleSize.width * 0.4;
-    float bottomLine = visibleOrigin.y + visibleSize.height * 0.3;
-    float upLine = visibleOrigin.y + visibleSize.height * 0.8;
+    float backLine = m_visibleOrigin.x + m_visibleSize.width * 0.8;
+    float frontLine = m_visibleOrigin.x + m_visibleSize.width * 0.4;
+    float bottomLine = m_visibleOrigin.y + m_visibleSize.height * 0.3;
+    float upLine = m_visibleOrigin.y + m_visibleSize.height * 0.8;
     
     if (m_point.x >= backLine)
     {

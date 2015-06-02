@@ -20,8 +20,8 @@ MapScrollHeadler::MapScrollHeadler(int sceneIndex)
     for (int i = 1; i <= 10; ++i)
     {
         MapGuanqiaButton * button = new MapGuanqiaButton(m_index,i);
-        button->setPosition(visibleOrigin.x - visibleSize.width * 0.5,
-                            visibleOrigin.y - visibleSize.height * 0.5);
+        button->setPosition(m_visibleOrigin.x - m_visibleSize.width * 0.5,
+                            m_visibleOrigin.y - m_visibleSize.height * 0.5);
         button->autorelease();
         addChild(button,3);
     }

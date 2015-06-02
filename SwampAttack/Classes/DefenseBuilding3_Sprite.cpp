@@ -14,7 +14,7 @@ DefenseBuildingSprite(building)
     
     Sprite * buildingS = Sprite::create(ImagePath("fight_building4.png"));
     addChild(buildingS);
-    buildingS->setPosition(visibleOrigin.x + 130,visibleOrigin.y + 320);
+    buildingS->setPosition(m_visibleOrigin.x + 130,m_visibleOrigin.y + 320);
     
     scheduleUpdate();
 }

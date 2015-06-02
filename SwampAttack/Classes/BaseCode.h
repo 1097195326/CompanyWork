@@ -17,10 +17,13 @@ USING_NS_CC;
 using namespace CocosDenshion;
 
 //-------------
-extern  Size    winSize;
-extern  Size    visibleSize;
-extern  Vec2    visibleOrigin;
+extern  Size    m_winSize;
+extern  Size    m_visibleSize;
+extern  Vec2    m_visibleOrigin;
 
+//Size winSize;
+//Size visibleSize;
+//Vec2 visibleOrigin;
 
 // get GameDirector
 

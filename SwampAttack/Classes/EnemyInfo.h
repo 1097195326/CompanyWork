@@ -9,6 +9,7 @@
 #ifndef __SwampAttack__EnemyInfo__
 #define __SwampAttack__EnemyInfo__
 
+#include "BaseCode.h"
 
 using namespace std;
 
