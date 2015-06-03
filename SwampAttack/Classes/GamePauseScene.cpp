@@ -10,6 +10,7 @@
 #include "GameDirector.h"
 #include "GuanQiaManager.h"
 #include "EnemyManager.h"
+#include "GameFightScene.h"
 
 
 
@@ -67,7 +68,7 @@ void GamePauseScene::continueGame(cocos2d::Ref *pSender)
 }
 void GamePauseScene::restartGame(cocos2d::Ref *pSender)
 {
-    GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
-    EnemyManager::getInstance()->setData(guanqia->getMonsters());
-    
+//    GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
+//    EnemyManager::getInstance()->setData(guanqia->getMonsters());
+//    Director::getInstance()->replaceScene(GameFightScene::scene());
 }

@@ -66,10 +66,19 @@ void HumanSprite::setModel(Human *human)
                                              NULL);
     changeAction->retain();
     
+    Action * throwAction = Spawn::create(
+                                         Sequence::create(DelayTime::create(0.08 * 7),
+                                                          CallFunc::create(CC_CALLBACK_0(HumanSprite::throwEndCall, this)), NULL),
+                                         BaseUtil::makeAnimateWithNameIndexDelay("throw", 9,0.08),
+                                         NULL);
+//    Action * throwAction = RepeatForever::create(BaseUtil::makeAnimateWithNameIndexDelay("throw", 9,0.08));
+    throwAction->retain();
+    
     m_actionData["reloadAction"] = reloadAction;
     m_actionData["shootAction"] = shootAction;
     m_actionData["waitAction"] = waitAction;
     m_actionData["changeAction"] = changeAction;
+    m_actionData["throwAction"] = throwAction;
     
     m_actionData["runAction"] = runAction;
     
@@ -93,6 +102,9 @@ void HumanSprite::update(float data)
     }else if (m_human->isShoot())
     {
         shoot();
+    }else if (m_human->isThrowing())
+    {
+        throwProp();
     }
 }
 void HumanSprite::wait()
@@ -146,6 +158,15 @@ void HumanSprite::change()
     stopAllActions();
     changeActions();
     runAction(m_actionData["changeAction"]);
+}
+void HumanSprite::throwProp()
+{
+    if (m_status == _isThrowProp) {
+        return;
+    }
+    m_status = _isThrowProp;
+    stopAllActions();
+    runAction(m_actionData["throwAction"]);
 }
 void HumanSprite::changeActions()
 {
@@ -214,4 +235,9 @@ void HumanSprite::changeCall()
 {
     m_status = _normal;
     m_human->changeCall();
+}
+void HumanSprite::throwEndCall()
+{
+    m_status = _normal;
+    m_human->throwPropCall();
 }

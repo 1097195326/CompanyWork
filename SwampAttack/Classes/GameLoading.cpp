@@ -18,8 +18,13 @@ float GameLoading::loadFrames()
     auto spriteFrameCache = SpriteFrameCache::getInstance();
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang3.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang3_2.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("HumanThrow.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang5.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang7.plist"));
+    
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Daoju12.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Daoju5.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("burn.plist"));
     
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie1.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie2.plist"));

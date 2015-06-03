@@ -30,6 +30,7 @@ Scene * GameFightScene::scene()
 {
     Scene * scene = Scene::create();
     GameFightScene * layer =(GameFightScene*)GameFightScene::getInstance();
+    layer->removeFromParentAndCleanup(true);
     layer->init();
     scene->addChild(layer);
     

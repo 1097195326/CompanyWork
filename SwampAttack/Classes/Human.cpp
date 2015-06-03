@@ -15,6 +15,7 @@
 #include "HumanShootState.h"
 #include "HumanReloadState.h"
 #include "HumanChangeState.h"
+#include "HumanThrowPropState.h"
 
 
 Human::Human()
@@ -75,6 +76,11 @@ Gun * Human::getGun()
 {
     return m_gun;
 }
+void Human::throwProp(Prop *prop)
+{
+    changeState(HumanThrowPropState::getInstance());
+    m_throwProp = prop;
+}
 void Human::setView()
 {
     HumanSprite * sprite = new HumanSprite();
@@ -104,6 +110,15 @@ void Human::changeCall()
 {
     m_status = _h_changed;
 }
+void Human::throwPropCall()
+{
+    m_status = _h_throwed;
+    if (m_throwProp) {
+        log("set state throwing");
+        m_throwProp->setStateThrowing();
+    }
+    m_throwProp = NULL;
+}
 //---- interface for state
 float Human::getWaitingTime()
 {
@@ -130,6 +145,10 @@ void Human::setStateChange()
 {
     m_status = _h_changeing;
 }
+void Human::setStateThrow()
+{
+    m_status = _h_throwing;
+}
 bool Human::isTouching()
 {
     return m_touchStatus == _isTouching;
@@ -153,6 +172,10 @@ bool Human::isShooted()
 bool Human::isChanged()
 {
     return m_status == _h_changed;
+}
+bool Human::isThrowEnd()
+{
+    return m_status == _h_throwed;
 }
 //------- interface for view
 Vec2 Human::getPosition()
@@ -182,4 +205,8 @@ bool Human::isShoot()
 bool Human::isChange()
 {
     return m_status == _h_changeing;
+}
+bool Human::isThrowing()
+{
+    return m_status == _h_throwing;
 }

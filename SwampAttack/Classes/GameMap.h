@@ -47,7 +47,7 @@ public:
     
     Vec2 fightScene_PropIcon_Position = {m_visibleOrigin.x + m_visibleSize.width -60,m_visibleOrigin.y + m_visibleSize.height - 120};
     
-    
+    float fightScene_PropArrve_line = m_visibleOrigin.y + 100;
     
 };
 

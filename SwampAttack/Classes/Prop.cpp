@@ -9,7 +9,13 @@
 #include "Prop.h"
 #include "ConfigManager.h"
 #include "GameUser.h"
-#include "PropSprite.h"
+#include "GameMapManager.h"
+#include "Human.h"
+
+#include "PropSprite_daoju1.h"
+#include "PropSprite_daoju2.h"
+#include "PropSprite_daoju3.h"
+#include "PropSprite_daoju5.h"
 
 
 Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0)
@@ -51,10 +57,31 @@ Prop::~Prop()
 }
 void Prop::setFightView()
 {
-    PropSprite * sprite = new PropSprite(this);
-    sprite->setSubject(this);
-    sprite->autorelease();
+    if (m_modelId == "daoju1") {
+        PropSprite * sprite = new PropSprite_daoju1(this);
+        sprite->setSubject(this);
+        sprite->autorelease();
+    }else
+    {
+        PropSprite * sprite = new PropSprite(this);
+        sprite->setSubject(this);
+        sprite->autorelease();
+    }
     
+}
+void Prop::gameLoop(float data)
+{
+//    if (isMoveEnd())
+//    {
+//        float arrveLine = _G_M_M->enemy_start_buttomPoint.y + _G_M_M->enemy_start_upline;
+//        
+//        if (m_point.y > arrveLine) {
+//            
+//        }else
+//        {
+//            
+//        }
+//    }
 }
 bool Prop::buyProp()
 {
@@ -117,6 +144,86 @@ bool Prop::unlockProp()
 int Prop::getNum()
 {
     return m_num;
+}
+//--- prop state ---
+void Prop::setPropPoint(cocos2d::Vec2 point)
+{
+    m_point = point;
+}
+Vec2 Prop::getPropPoint()
+{
+    return m_point;
+}
+bool Prop::isCanArrve()
+{
+    float arrveLine = _G_M_M->enemy_start_buttomPoint.y + _G_M_M->enemy_start_upline;
+    return m_point.y < arrveLine ? true : false;
+}
+void Prop::arrveCall()
+{
+    setStateArrve();
+    Human::getInstance()->throwProp(this);
+}
+void Prop::throwCall()
+{
+    log("throw call");
+    setStateReadyToHurt();
+}
+void Prop::setStateMoveing()
+{
+    m_state = p_moveing;
+}
+void Prop::setStateMoveEnd()
+{
+    m_state = p_moveEnd;
+}
+void Prop::setStateArrve()
+{
+    m_state = p_arrve;
+}
+void Prop::setStateThrowing()
+{
+    m_state = p_throw;
+}
+void Prop::setStateReadyToHurt()
+{
+    m_state = p_readyToHurt;
+}
+void Prop::setStateDie()
+{
+    m_state = p_die;
+}
+void Prop::setStateCanDelete()
+{
+    m_state = p_canDelete;
+}
+bool Prop::isMoveing()
+{
+    return m_state == p_moveing;
+}
+bool Prop::isMoveEnd()
+{
+    return m_state == p_moveEnd;
+}
+bool Prop::isArrve()
+{
+    return m_state == p_arrve;
+}
+bool Prop::isThrowing()
+{
+    return m_state == p_throw;
+}
+bool Prop::isReadyToHurt()
+{
+    return m_state == p_readyToHurt;
+}
+bool Prop::isDie()
+{
+    return m_state == p_die;
+}
+bool Prop::isCanDelete()
+{
+    return m_state == p_canDelete;
 }
 
 //--- get function ----

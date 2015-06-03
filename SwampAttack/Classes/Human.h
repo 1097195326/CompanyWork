@@ -14,7 +14,7 @@
 #include "GunManager.h"
 #include "State.h"
 #include "GameSubject.h"
-
+#include "PropManager.h"
 
 enum HumanStatus
 {
@@ -26,7 +26,9 @@ enum HumanStatus
     _h_shooting,
     _h_shooted,
     _h_changeing,
-    _h_changed
+    _h_changed,
+    _h_throwing,
+    _h_throwed,
     
 };
 enum TouchStatus
@@ -43,6 +45,7 @@ private:
     
     Vec2    m_point;
     Gun *   m_gun;
+    Prop *  m_throwProp;
     
     Vec2    m_fireToPoint;
     float   m_waitingTime;
@@ -54,6 +57,7 @@ public:
     void    changeState(State<Human> * state);
     void    changeGun(Gun * gun);
     Gun *   getGun();
+    void    throwProp(Prop * prop);
     void    fire(Touch * touch,Event * event);
     void    stop();
     
@@ -62,12 +66,14 @@ public:
     void    reloadCall();
     void    shootCall();
     void    changeCall();
+    void    throwPropCall();
     
     //--- interface for state
     void    setStateShoot();
     void    setStateReload();
     void    setStateWait();
     void    setStateChange();
+    void    setStateThrow();
     
     float   getWaitingTime();
     void    minusWaitingTime();
@@ -79,6 +85,7 @@ public:
     bool    isReloaded();
     bool    isShooted();
     bool    isChanged();
+    bool    isThrowEnd();
     //--- interface for view
     Vec2    getPosition();
     bool    isWait();
@@ -86,6 +93,7 @@ public:
     bool    isReload();
     bool    isShoot();
     bool    isChange();
+    bool    isThrowing();
 public:
     Human();
     ~Human();

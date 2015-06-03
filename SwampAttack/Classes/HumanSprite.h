@@ -21,6 +21,7 @@ enum H_ActionStatus
     _isShooting,
     _isWaiting,
     _isChangeing,
+    _isThrowProp,
 };
 #include "GameObserver.h"
 
@@ -37,6 +38,7 @@ private:
     void    shoot();
     void    reload();
     void    change();
+    void    throwProp();
     void    changeActions();
     
     void    reloadShotCall();
@@ -44,6 +46,7 @@ private:
     void    shootShotCall();
     void    waitShotCall();
     void    changeCall();
+    void    throwEndCall();
     
 public:
     HumanSprite();

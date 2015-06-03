@@ -13,23 +13,40 @@
 #include "json/json.h"
 #include "BaseCode.h"
 #include "GameSubject.h"
-
+#include "GameObject.h"
 
 using namespace std;
 
-class Prop : public GameSubject{
+enum PropState
+{
+    p_normal,
+    p_moveing,
+    p_moveEnd,
+    p_arrve,
+    p_throw,
+    p_readyToHurt,
+    p_die,
+    p_canDelete,
+};
+
+class Prop : public GameSubject,public GameObject{
 private:
     bool        m_isUnlock;
     int         m_num;
     bool        m_isTakeUp;
     int         m_takeUpIndex;
     
-    
+    PropState   m_state;
+    Vec2        m_point;
 public:
     Prop(Json::Value value);
     ~Prop();
     void    setFightView();
+    void    gameLoop(float data);
 public:
+    //---
+    
+    //---
     void    takeUp(int index);
     void    takeDown();
     int     getTakeUpIndex();
@@ -39,6 +56,31 @@ public:
     bool    unlockProp();
     int     getNum();
     bool    buyProp();
+    
+    //--- prop state ---
+    void    setPropPoint(Vec2 point);
+    Vec2    getPropPoint();
+    bool    isCanArrve();
+    
+    void    arrveCall();
+    void    throwCall();
+    
+    
+    void    setStateMoveing();
+    void    setStateMoveEnd();
+    void    setStateArrve();
+    void    setStateThrowing();
+    void    setStateReadyToHurt();
+    void    setStateDie();
+    void    setStateCanDelete();
+    bool    isMoveing();
+    bool    isMoveEnd();
+    bool    isArrve();
+    bool    isThrowing();
+    bool    isReadyToHurt();
+    bool    isDie();
+    bool    isCanDelete();
+    
 private:
     
     string      m_id;           //
