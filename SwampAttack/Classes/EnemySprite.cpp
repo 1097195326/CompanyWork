@@ -30,6 +30,10 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
     guaiwuSprite->setPosition(Vec2(0, h * 0.5));
     addChild(guaiwuSprite);
     
+    buffSprite = Sprite::create();
+    buffSprite->setPosition(Vec2(0, h * 0.5));
+    addChild(buffSprite,1);
+    
     texiaoSprite = Sprite::create();
     texiaoSprite->setPosition(Vec2(0, h * 0.5));
     addChild(texiaoSprite,2);

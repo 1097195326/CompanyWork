@@ -14,6 +14,8 @@
 #include "DefenseBuildingManager.h"
 #include "PropManager.h"
 #include "GameOverScene.h"
+#include "GameBuffManager.h"
+
 
 GameDirector::GameDirector()
 {
@@ -55,10 +57,12 @@ void GameDirector::gameLoop(float data)
     {
         return;
     }
+    GameBuffManager::getInstance()->gameLoop(data);
     EnemyManager::getInstance()->gameLoop(data);
     Human::getInstance()->gameLoop(data);
     BulletManager::getInstance()->gameLoop(data);
     DefenseBuildingManager::getInstance()->gameLoop(data);
+    PropManager::getInstance()->gameLoop(data);
     
     checkCross();
     if (EnemyManager::getInstance()->isOver() || House::getInstance()->isOver()) {
@@ -95,6 +99,7 @@ void GameDirector::checkCross()
     std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
     std::list<Bullet*> bulletData = BulletManager::getInstance()->getBulletData();
     std::map<string,DefenseBuilding *> buildingData = DefenseBuildingManager::getInstance()->getBuildingData();
+//    std::map<string,Prop *> propData = PropManager::getInstance()->getTakeUpProp();
     
     if (!enemyData.empty())
     {

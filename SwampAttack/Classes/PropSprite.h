@@ -18,32 +18,31 @@ enum PropSpriteState
     p_s_normal,
     p_s_arrve,
     p_s_throwing,
+    p_s_hurting,
 };
 
-class PropSprite : public Sprite,public GameObserver{
+class PropSprite : public Sprite{
 protected:
     Prop * m_prop;
-    Sprite  *   m_blueBg;
-    Label   *   m_numLabel;
-    EventListenerTouchOneByOne * m_listener;
     float   m_iconScale;
     Sprite  *   m_propIcon;
     Sprite  *   m_propTexiao;
     PropSpriteState m_state;
     
+    
 public:
-    PropSprite(Prop * prop);
+    PropSprite(string propId);
     ~PropSprite();
+    void    moveEnd();
+    void    moveIng(Vec2 point);
     virtual void    throwProp();
-    void updateData();
+    virtual void    readyToHurt();
+    
     void update(float data);
     
     void    propArrveCall(Node * pSender);
     void    propThrowCall(Node * pSender);
     
-    bool    touchBegan(Touch * touch, Event * event);
-    void    touchMove(Touch * touch, Event * event);
-    void    touchEnd(Touch * touch, Event * event);
 };
 
 #endif /* defined(__SwampAttack__PropSprite__) */

@@ -33,6 +33,7 @@ protected:
     Sprite      *   guaiwuSprite;
     Sprite      *   armorSprite;
     Sprite      *   texiaoSprite;
+    Sprite      *   buffSprite;
     bool            isHaveArmor;
     
     Action      *   texiaoAction;

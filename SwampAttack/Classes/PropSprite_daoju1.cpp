@@ -10,7 +10,7 @@
 #include "GameMapManager.h"
 #include "BaseUtil.h"
 
-PropSprite_daoju1::PropSprite_daoju1(Prop * pp):PropSprite(pp)
+PropSprite_daoju1::PropSprite_daoju1(string propId):PropSprite(propId)
 {
     
 }
@@ -22,7 +22,6 @@ void PropSprite_daoju1::throwProp()
     }
     m_state = p_s_throwing;
     
-    log("throw prop");
     
 //    propThrowCall(NULL);
     Vec2 startPoint = _G_M_M->m_BulletStartPoint;

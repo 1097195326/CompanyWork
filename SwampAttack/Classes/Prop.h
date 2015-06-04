@@ -21,10 +21,10 @@ enum PropState
 {
     p_normal,
     p_moveing,
-    p_moveEnd,
     p_arrve,
     p_throw,
     p_readyToHurt,
+    p_canToHurt,
     p_die,
     p_canDelete,
 };
@@ -45,7 +45,7 @@ public:
     void    gameLoop(float data);
 public:
     //---
-    
+    Rect    getPropRect();
     //---
     void    takeUp(int index);
     void    takeDown();
@@ -64,20 +64,23 @@ public:
     
     void    arrveCall();
     void    throwCall();
+    bool    checkCanToHurt();
     
     
     void    setStateMoveing();
-    void    setStateMoveEnd();
     void    setStateArrve();
     void    setStateThrowing();
     void    setStateReadyToHurt();
+    void    setStateCanToHurt();
     void    setStateDie();
     void    setStateCanDelete();
+    void    setStateNormal();
+    bool    isNormal();
     bool    isMoveing();
-    bool    isMoveEnd();
     bool    isArrve();
     bool    isThrowing();
     bool    isReadyToHurt();
+    bool    isCanToHurt();
     bool    isDie();
     bool    isCanDelete();
     

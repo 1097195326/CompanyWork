@@ -22,7 +22,7 @@ private:
 public:
     GameBuffManager();
     ~GameBuffManager();
-    void    addBuff(GameBuff * buff);
+    GameBuff * addBuff(string buffId);
     static GameBuffManager * getInstance();
     void    gameLoop(float data);
 };

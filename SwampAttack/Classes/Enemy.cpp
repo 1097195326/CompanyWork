@@ -84,9 +84,36 @@ Enemy::~Enemy()
 void Enemy::gameLoop(float data){}
 void Enemy::move(){}
 void Enemy::setView(){}
+void Enemy::addBuff(GameBuff *buff)
+{
+    m_buffData.push_back(buff);
+}
+void Enemy::moveBuff(GameBuff *buff)
+{
+    m_buffData.remove(buff);
+}
+bool Enemy::isHaveBuff()
+{
+    return m_buffData.size() > 0;
+}
+std::list<GameBuff *>  Enemy::getBuffData()
+{
+    return m_buffData;
+}
+void Enemy::removeAllBuffS()
+{
+    std::list<GameBuff *>::iterator iter;
+    for (iter = m_buffData.begin(); iter != m_buffData.end();)
+    {
+        GameBuff * buff = *iter;
+        buff->enemyDieCall();
+        m_buffData.erase(iter++);
+        
+    }
+}
 bool Enemy::isContainsPoint(cocos2d::Rect rect)
 {
-    m_rect = Rect(m_point.x - m_width * 0.5, m_point.y, m_width, m_height);
+    m_rect = Rect(m_point.x, m_point.y, m_width, m_height);
     return m_rect.intersectsRect(rect);
 }
 void Enemy::hurt(int damage,int index)
@@ -97,6 +124,7 @@ void Enemy::hurt(int damage,int index)
         m_status &= e_clear;
         m_status |= e_dieing;
         m_isShowHurt = false;
+        removeAllBuffS();
     }else
     {
         hurtDlay = 0;
@@ -127,6 +155,7 @@ void Enemy::hurt(int damage)
         m_status &= e_clear;
         m_status |= e_dieing;
         m_isShowHurt = false;
+        removeAllBuffS();
     }else
     {
         hurtDlay = 0;

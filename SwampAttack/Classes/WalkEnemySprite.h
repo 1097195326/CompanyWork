@@ -23,6 +23,7 @@ protected:
 public:
     void        update(float data);
     WalkEnemySprite(Enemy * model);
+    void    showBuff();
 };
 
 #endif /* defined(__SwampAttack__WalkEnemySprite__) */

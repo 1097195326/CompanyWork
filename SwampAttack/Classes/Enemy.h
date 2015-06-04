@@ -13,6 +13,7 @@
 #include "GameObject.h"
 #include "json/json.h"
 
+#include "GameBuff.h"
 
 
 using namespace std;
@@ -43,11 +44,18 @@ protected:
     float   tatolDlay;
     float   hurtDlay;       //受伤 记数
     
+    std::list<GameBuff *>   m_buffData;
+    
 public:
     virtual void    setView();
     bool    isContainsPoint(Rect rect);
     void    hurt(int damage,int index);
     virtual void    hurt(int damage);
+    void    addBuff(GameBuff * buff);
+    void    moveBuff(GameBuff * buff);
+    bool    isHaveBuff();
+    std::list<GameBuff *>  getBuffData();
+    void    removeAllBuffS();
 protected:
     virtual void    move();
     

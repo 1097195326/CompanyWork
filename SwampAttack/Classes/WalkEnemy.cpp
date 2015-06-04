@@ -49,6 +49,18 @@ void WalkEnemy::gameLoop(float data)
             m_isShowHurt = false;
         }
     }
+    std::list<GameBuff *>::iterator iter;
+    for (iter = m_buffData.begin(); iter != m_buffData.end();)
+    {
+        GameBuff * buff = *iter;
+        iter++;
+        if (buff->isCanHurt())
+        {
+            log("buff hurt enemy");
+            buff->setStateWaiting();
+            hurt(buff->getDamage() + m_health * buff->getPercentageDamage());
+        }
+    }
 }
 void WalkEnemy::move()
 {

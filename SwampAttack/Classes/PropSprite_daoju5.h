@@ -15,8 +15,10 @@ class PropSprite_daoju5 : public PropSprite {
 private:
     
 public:
-    PropSprite_daoju5(Prop * prop);
+    PropSprite_daoju5(string propId);
     void    throwProp();
+    void    spriteCall(Node * psender);
+    void    spriteCall2(Node * psender);
 };
 
 #endif /* defined(__SwampAttack__PropSprite_daoju5__) */

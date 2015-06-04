@@ -11,14 +11,14 @@
 #include "GameUser.h"
 #include "GameMapManager.h"
 #include "Human.h"
-
-#include "PropSprite_daoju1.h"
-#include "PropSprite_daoju2.h"
-#include "PropSprite_daoju3.h"
-#include "PropSprite_daoju5.h"
+#include "EnemyManager.h"
+#include "GameBuffManager.h"
 
 
-Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0)
+
+#include "PropSpriteView.h"
+
+Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal)
 {
     m_id = data["ItemId"].asString() ;
     string itemName = data["ItemName"].asString();
@@ -57,31 +57,82 @@ Prop::~Prop()
 }
 void Prop::setFightView()
 {
-    if (m_modelId == "daoju1") {
-        PropSprite * sprite = new PropSprite_daoju1(this);
-        sprite->setSubject(this);
-        sprite->autorelease();
-    }else
-    {
-        PropSprite * sprite = new PropSprite(this);
-        sprite->setSubject(this);
-        sprite->autorelease();
-    }
+    PropSpriteView * sprite = new PropSpriteView(this);
+    sprite->setSubject(this);
+    sprite->autorelease();
     
 }
 void Prop::gameLoop(float data)
 {
-//    if (isMoveEnd())
-//    {
-//        float arrveLine = _G_M_M->enemy_start_buttomPoint.y + _G_M_M->enemy_start_upline;
-//        
-//        if (m_point.y > arrveLine) {
-//            
-//        }else
-//        {
-//            
-//        }
-//    }
+    if (isNormal()) {
+        return;
+    }
+    EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
+    if (!enemyGroup) {
+        return;
+    }
+    std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
+    if (enemyData.empty())
+    {
+        return;
+    }
+    if (isCanToHurt())
+    {
+        log("can to hurt");
+        std::list<Enemy*>::iterator e_iter;
+        for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
+        {
+            Enemy * enemy = *e_iter;
+            if (enemy->isContainsPoint(getPropRect()))
+            {
+                enemy->hurt(m_damage);
+                if (!m_buffIds.empty())
+                {
+                    for (int i = 0; i < m_buffIds.size(); ++i)
+                    {
+                        log("buff index:%s",m_buffIds[i].c_str());
+                        GameBuff * buff = _G_B_F->addBuff(m_buffIds[i]);
+                        buff->setEnemyModel(enemy);
+                        enemy->addBuff(buff);
+                    }
+                }
+            }
+        }
+        setStateDie();
+    }
+}
+Rect Prop::getPropRect()
+{
+    return Rect(m_point.x ,//- m_effectArea * 0.5,
+                m_point.y ,// - m_effectArea * 0.5,
+                m_effectArea,
+                m_effectArea);
+}
+bool Prop::checkCanToHurt()
+{
+    EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
+    if (!enemyGroup) {
+        return false;
+    }
+    std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
+    if (enemyData.empty())
+    {
+        return false;
+    }
+    if (isReadyToHurt())
+    {
+        log("check to hurt");
+        std::list<Enemy*>::iterator e_iter;
+        for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
+        {
+            Enemy * enemy = *e_iter;
+            if (enemy->isContainsPoint(getPropRect()))
+            {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 bool Prop::buyProp()
 {
@@ -159,35 +210,40 @@ bool Prop::isCanArrve()
     float arrveLine = _G_M_M->enemy_start_buttomPoint.y + _G_M_M->enemy_start_upline;
     return m_point.y < arrveLine ? true : false;
 }
-void Prop::arrveCall()
+void Prop::arrveCall()  // 3
 {
     setStateArrve();
     Human::getInstance()->throwProp(this);
 }
-void Prop::throwCall()
+void Prop::throwCall()  //5
 {
     log("throw call");
-    setStateReadyToHurt();
+    if (m_modelId == "daoju3") {
+        setStateReadyToHurt();
+    }else
+    {
+        setStateCanToHurt();
+    }
 }
-void Prop::setStateMoveing()
+void Prop::setStateMoveing() // 1
 {
     m_state = p_moveing;
-}
-void Prop::setStateMoveEnd()
-{
-    m_state = p_moveEnd;
 }
 void Prop::setStateArrve()
 {
     m_state = p_arrve;
 }
-void Prop::setStateThrowing()
+void Prop::setStateThrowing() // 4
 {
     m_state = p_throw;
 }
 void Prop::setStateReadyToHurt()
 {
     m_state = p_readyToHurt;
+}
+void Prop::setStateCanToHurt()
+{
+    m_state = p_canToHurt;
 }
 void Prop::setStateDie()
 {
@@ -197,13 +253,17 @@ void Prop::setStateCanDelete()
 {
     m_state = p_canDelete;
 }
+void Prop::setStateNormal()
+{
+    m_state = p_normal;
+}
+bool Prop::isNormal()
+{
+    return m_state == p_normal;
+}
 bool Prop::isMoveing()
 {
     return m_state == p_moveing;
-}
-bool Prop::isMoveEnd()
-{
-    return m_state == p_moveEnd;
 }
 bool Prop::isArrve()
 {
@@ -216,6 +276,10 @@ bool Prop::isThrowing()
 bool Prop::isReadyToHurt()
 {
     return m_state == p_readyToHurt;
+}
+bool Prop::isCanToHurt()
+{
+    return m_state == p_canToHurt;
 }
 bool Prop::isDie()
 {

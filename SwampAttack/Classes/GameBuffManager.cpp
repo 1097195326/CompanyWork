@@ -7,6 +7,8 @@
 //
 
 #include "GameBuffManager.h"
+#include "ConfigManager.h"
+
 
 GameBuffManager::GameBuffManager():m_dlay(0.0f)
 {
@@ -21,23 +23,29 @@ GameBuffManager * GameBuffManager::getInstance()
     static GameBuffManager manager;
     return &manager;
 }
-void GameBuffManager::addBuff(GameBuff * buff)
+GameBuff *  GameBuffManager::addBuff(string buffId)
 {
+    GCCsvHelper * propHelper = _C_M->getCsvHelperByName("daojubuff");
+    Json::Value data = propHelper->getJsonData();
+    GameBuff * buff = new GameBuff(data[buffId]);
     m_buffData.push_back(buff);
+    return buff;
 }
 void GameBuffManager::gameLoop(float data)
 {
-    if (m_buffData.size() == 0) {
-        return;
-    }
-    m_dlay += data;
-    if (m_dlay > 1)
+    std::list<GameBuff *>::iterator iter;
+    for (iter = m_buffData.begin(); iter != m_buffData.end();)
     {
-        m_dlay = 0;
-    }else
-    {
-        return;
+        GameBuff * buff = *iter;
+        if (buff->isCanDelete()) {
+            delete buff;
+            m_buffData.erase(iter++);
+        }else
+        {
+            iter++;
+            buff->gameLoop(data);
+        }
     }
-    
+//    log("buff manager size :%d",(int)m_buffData.size());
     
 }

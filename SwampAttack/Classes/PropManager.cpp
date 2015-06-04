@@ -37,6 +37,30 @@ PropManager * PropManager::getInstance()
     static PropManager manager;
     return &manager;
 }
+void PropManager::gameLoop(float data)
+{
+    std::list<Prop *>::iterator iter;
+    for (iter = m_usingPropDta.begin(); iter != m_usingPropDta.end();)
+    {
+        Prop * prop = *iter;
+        if (prop->isCanDelete()) {
+            delete prop;
+            m_usingPropDta.erase(iter++);
+        }else
+        {
+            iter++;
+            prop->gameLoop(data);
+        }
+    }
+}
+Prop * PropManager::addUsingProp(string propId)
+{
+    GCCsvHelper * propHelper = _C_M->getCsvHelperByName("daoju");
+    Json::Value data = propHelper->getJsonData();
+    Prop * prop = new Prop(data[propId]);
+    m_usingPropDta.push_back(prop);
+    return prop;
+}
 Prop * PropManager::getPropByIndex(int index)
 {
     string propId = m_hashHead[index];
@@ -78,6 +102,10 @@ int PropManager::getTakeUpPropIndexByName(string name)
         }
     }
     return index;
+}
+std::map<string,Prop *> PropManager::getTakeUpProp()
+{
+    return m_takeUpPropData;
 }
 void PropManager::takeUpProp(string propId)
 {

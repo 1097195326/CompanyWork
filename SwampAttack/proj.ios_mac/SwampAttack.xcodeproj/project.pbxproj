@@ -110,6 +110,8 @@
 		8DD29D3A1B0B3BDA00ECB826 /* DefenseBuilding2_Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD29D381B0B3BDA00ECB826 /* DefenseBuilding2_Sprite.cpp */; };
 		8DD29D3D1B0B3C1400ECB826 /* DefenseBuilding3_Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD29D3B1B0B3C1400ECB826 /* DefenseBuilding3_Sprite.cpp */; };
 		8DD29D401B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD29D3E1B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.cpp */; };
+		8DD3FA561B2036A40028DB92 /* PropSpriteView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3FA541B2036A40028DB92 /* PropSpriteView.cpp */; };
+		8DD3FA591B205B430028DB92 /* BuffSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3FA571B205B430028DB92 /* BuffSprite.cpp */; };
 		8DD494001B1307080024CE36 /* HumanChangeState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD493FE1B1307080024CE36 /* HumanChangeState.cpp */; };
 		8DD499731B0450000037CBAA /* GameBuff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD499711B0450000037CBAA /* GameBuff.cpp */; };
 		8DD499761B04500B0037CBAA /* GameBuffManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD499741B04500B0037CBAA /* GameBuffManager.cpp */; };
@@ -346,6 +348,10 @@
 		8DD29D3C1B0B3C1400ECB826 /* DefenseBuilding3_Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefenseBuilding3_Sprite.h; sourceTree = "<group>"; };
 		8DD29D3E1B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DefenseBuilding4_Sprite.cpp; sourceTree = "<group>"; };
 		8DD29D3F1B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefenseBuilding4_Sprite.h; sourceTree = "<group>"; };
+		8DD3FA541B2036A40028DB92 /* PropSpriteView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropSpriteView.cpp; sourceTree = "<group>"; };
+		8DD3FA551B2036A40028DB92 /* PropSpriteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropSpriteView.h; sourceTree = "<group>"; };
+		8DD3FA571B205B430028DB92 /* BuffSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BuffSprite.cpp; sourceTree = "<group>"; };
+		8DD3FA581B205B430028DB92 /* BuffSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuffSprite.h; sourceTree = "<group>"; };
 		8DD493FE1B1307080024CE36 /* HumanChangeState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HumanChangeState.cpp; sourceTree = "<group>"; };
 		8DD493FF1B1307080024CE36 /* HumanChangeState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanChangeState.h; sourceTree = "<group>"; };
 		8DD499711B0450000037CBAA /* GameBuff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameBuff.cpp; sourceTree = "<group>"; };
@@ -902,6 +908,8 @@
 			children = (
 				8DC2ACD81AC56A77004F3C1B /* HumanSprite.cpp */,
 				8DC2ACD91AC56A77004F3C1B /* HumanSprite.h */,
+				8DD3FA571B205B430028DB92 /* BuffSprite.cpp */,
+				8DD3FA581B205B430028DB92 /* BuffSprite.h */,
 				8DC10AC61AC3D7B1004F7DE2 /* EnemySprite.cpp */,
 				8DC10AC71AC3D7B1004F7DE2 /* EnemySprite.h */,
 				8DC3E1A11AE8C72300BE6CA4 /* WalkEnemySprite.cpp */,
@@ -926,6 +934,8 @@
 				8DD29D3F1B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.h */,
 				8DDA89331B0C7B2C00F9F74B /* GunSprite.cpp */,
 				8DDA89341B0C7B2C00F9F74B /* GunSprite.h */,
+				8DD3FA541B2036A40028DB92 /* PropSpriteView.cpp */,
+				8DD3FA551B2036A40028DB92 /* PropSpriteView.h */,
 				D8D678181B1DB58C008C3BA6 /* PropSprite.cpp */,
 				D8D678191B1DB58C008C3BA6 /* PropSprite.h */,
 				8DDC27BD1B1EEDE600A4FD8D /* PropSprite_daoju1.cpp */,
@@ -1207,7 +1217,9 @@
 				8DD8C12C1AFCB15F00872AA2 /* GameShopScene.cpp in Sources */,
 				8DC10AC21AC3D75F004F7DE2 /* Enemy.cpp in Sources */,
 				8DBB988E1ACD520C008C804D /* json_writer.cpp in Sources */,
+				8DD3FA591B205B430028DB92 /* BuffSprite.cpp in Sources */,
 				8DC10AC81AC3D7B1004F7DE2 /* EnemySprite.cpp in Sources */,
+				8DD3FA561B2036A40028DB92 /* PropSpriteView.cpp in Sources */,
 				8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */,
 				8DD499761B04500B0037CBAA /* GameBuffManager.cpp in Sources */,
 				8DC3E1A91AE8D08B00BE6CA4 /* FlyEnemy.cpp in Sources */,
