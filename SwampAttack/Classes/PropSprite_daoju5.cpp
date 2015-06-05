@@ -32,7 +32,7 @@ void PropSprite_daoju5::throwProp()
     
     float tatolTime = (800 - tagetPoint.y) * 0.001;
     
-    ActionInterval * a1 = Sequence::create(MoveTo::create(tatolTime, tagetPoint),NULL);
+    ActionInterval * a1 = Sequence::create(EaseBounceIn::create(MoveTo::create(tatolTime, tagetPoint)),NULL);
     
     ActionInterval * a2 = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("daoju5", 10), NULL));
     Sprite * s2 =Sprite::create();
@@ -53,9 +53,12 @@ void PropSprite_daoju5::spriteCall(Node * psender)
                                    a2,
                                    CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju5::spriteCall2, this)),
                                    NULL) );
+    string modelId = m_prop->getModelId();
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath(modelId + ".mp3").c_str());
 }
 void PropSprite_daoju5::spriteCall2(Node * psender)
 {
+    m_prop->setStateDie();
     Sprite * ss = (Sprite *)psender;
     ss->stopAllActions();
     ss->removeFromParentAndCleanup(true);

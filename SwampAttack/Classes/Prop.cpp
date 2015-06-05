@@ -98,7 +98,7 @@ void Prop::gameLoop(float data)
                 }
             }
         }
-        setStateDie();
+        setStateDieing();
     }
 }
 Rect Prop::getPropRect()
@@ -121,7 +121,7 @@ bool Prop::checkCanToHurt()
     }
     if (isReadyToHurt())
     {
-        log("check to hurt");
+//        log("check to hurt");
         std::list<Enemy*>::iterator e_iter;
         for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
         {
@@ -244,6 +244,10 @@ void Prop::setStateReadyToHurt()
 void Prop::setStateCanToHurt()
 {
     m_state = p_canToHurt;
+}
+void Prop::setStateDieing()
+{
+    m_state = p_dieing;
 }
 void Prop::setStateDie()
 {

@@ -25,6 +25,9 @@ float GameLoading::loadFrames()
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("Daoju12.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("Daoju5.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("burn.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear1.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear2.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear3.plist"));
     
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie1.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie2.plist"));

@@ -15,6 +15,7 @@
 #include "PropSprite_daoju2.h"
 #include "PropSprite_daoju3.h"
 #include "PropSprite_daoju5.h"
+#include "PropSprite_daoju6.h"
 
 PropSpriteView::PropSpriteView(Prop * prop):
 m_prop(prop),
@@ -71,6 +72,9 @@ bool PropSpriteView::touchBegan(Touch *touch, Event *event)
         }else if (m_prop->getModelId() == "daoju5")
         {
             m_propIcon = new PropSprite_daoju5(m_prop->getId());
+        }else if (m_prop->getModelId() == "daoju6")
+        {
+            m_propIcon = new PropSprite_daoju6(m_prop->getId());
         }else
         {
             m_propIcon = new PropSprite(m_prop->getId());

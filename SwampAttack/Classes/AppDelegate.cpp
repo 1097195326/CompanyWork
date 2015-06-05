@@ -5,7 +5,7 @@
 #include "GameMapScene.h"
 #include "GameShopScene.h"
 #include "GameOverScene.h"
-
+#include "GameHomeScene.h"
 
 #include "GameUser.h"
 
@@ -64,9 +64,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // create a scene. it's an autorelease object
 //    auto scene = HelloWorld::createScene();
 //    auto scene = GameFightScene::scene();
-    auto scene = GameMapScene::scene();
+//    auto scene = GameMapScene::scene();
 //    auto scene = GameShopScene::scene();
 //    auto scene = GameOverScene::scene(o_loss);
+    auto scene = GameHomeScene::scene();
     // run
     director->runWithScene(scene);
     return true;

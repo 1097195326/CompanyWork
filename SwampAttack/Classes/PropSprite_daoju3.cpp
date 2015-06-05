@@ -40,6 +40,7 @@ void PropSprite_daoju3::canToHurt()
                                    Spawn::create(a1,a2, NULL),
                                    CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju3::spriteCall2, this)),
                                    NULL) );
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("boom.mp3").c_str());
 }
 
 void PropSprite_daoju3::throwProp()
@@ -76,8 +77,8 @@ void PropSprite_daoju3::hurtCall(Node * psender)
 }
 void PropSprite_daoju3::spriteCall2(Node * psender)
 {
+    m_prop->setStateDie();
     m_state = p_s_normal;
-    
     Sprite * ss = (Sprite *)psender;
     ss->stopAllActions();
     ss->removeFromParentAndCleanup(true);

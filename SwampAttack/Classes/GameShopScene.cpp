@@ -7,6 +7,7 @@
 //
 
 #include "GameShopScene.h"
+#include "GameHomeScene.h"
 
 #include "ShopSelectMenuView.h"
 #include "GunManager.h"
@@ -254,10 +255,12 @@ void GameShopScene::updateGoldView()
 }
 void GameShopScene::homeButtonFunc(cocos2d::Ref *pSender)
 {
-    log("--------1");
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
+    Director::getInstance()->replaceScene(GameHomeScene::scene());
 }
 void GameShopScene::backButtonFunc(cocos2d::Ref *pSender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Director::getInstance()->replaceScene(GameMapScene::scene());
 }
 void GameShopScene::setItemBgSprite()

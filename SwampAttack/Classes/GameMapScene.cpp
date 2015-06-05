@@ -7,6 +7,7 @@
 //
 
 #include "GameMapScene.h"
+#include "GameHomeScene.h"
 #include "GameFightScene.h"
 #include "GameShopScene.h"
 #include "MapScrollHeadler.h"
@@ -94,7 +95,7 @@ void GameMapScene::moveToEndCall()
 }
 void GameMapScene::homeButtonFuc(cocos2d::Ref *psender)
 {
-    
+    Director::getInstance()->replaceScene(GameHomeScene::scene());
 }
 void GameMapScene::shopButtonFuc(cocos2d::Ref *psender)
 {

@@ -25,6 +25,7 @@ enum PropState
     p_throw,
     p_readyToHurt,
     p_canToHurt,
+    p_dieing,
     p_die,
     p_canDelete,
 };
@@ -72,6 +73,7 @@ public:
     void    setStateThrowing();
     void    setStateReadyToHurt();
     void    setStateCanToHurt();
+    void    setStateDieing();
     void    setStateDie();
     void    setStateCanDelete();
     void    setStateNormal();

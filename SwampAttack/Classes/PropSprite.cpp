@@ -61,6 +61,7 @@ void PropSprite::update(float data)
 void PropSprite::throwProp()
 {
     m_state = p_s_normal;
+    m_prop->setStateDie();
 }
 void PropSprite::propArrveCall(Node * pSender)
 {
@@ -74,7 +75,6 @@ void PropSprite::propThrowCall(Node * pSender)
     log("prop throw call");
     m_state = p_s_normal;
     m_prop->throwCall();
-    
 }
 void PropSprite::readyToHurt()
 {

@@ -56,7 +56,7 @@ void WalkEnemy::gameLoop(float data)
         iter++;
         if (buff->isCanHurt())
         {
-            log("buff hurt enemy");
+//            log("buff hurt enemy");
             buff->setStateWaiting();
             hurt(buff->getDamage() + m_health * buff->getPercentageDamage());
         }

@@ -100,6 +100,7 @@ bool GameFightScene::init()
 }
 void GameFightScene::pauseGame(cocos2d::Ref *pSender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     RenderTexture * rt = RenderTexture::create(m_visibleSize.width, m_visibleSize.height);
     
     rt->begin();

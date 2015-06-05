@@ -55,9 +55,11 @@ void PropSprite_daoju1::spriteCall(Node * psender)
                                    Spawn::create(a1,a2, NULL),
                                    CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju1::spriteCall2, this)),
                                    NULL) );
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("boom.mp3").c_str());
 }
 void PropSprite_daoju1::spriteCall2(Node * psender)
 {
+    m_prop->setStateDie();
     Sprite * ss = (Sprite *)psender;
     ss->stopAllActions();
     ss->removeFromParentAndCleanup(true);

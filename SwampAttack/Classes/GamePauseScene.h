@@ -22,7 +22,7 @@ public:
     
     void    continueGame(Ref * pSender);
     void    restartGame(Ref * pSender);
-    
+    void    gotoMap(Ref * pSender);
 };
 
 #endif /* defined(__SwampAttack__GamePauseScene__) */

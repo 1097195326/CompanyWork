@@ -32,11 +32,13 @@ void PropSprite_daoju2::throwProp()
     m_propTexiao->setPosition(startPoint);
     addChild(m_propTexiao,6);
     
+    string modelId = m_prop->getModelId();
+    
     float tatolTime = (tagetPoint.x - startPoint.x) * 0.001;
     
     ActionInterval * a1 = Sequence::create(MoveTo::create(tatolTime, tagetPoint),NULL);
     
-    ActionInterval * a2 = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("daoju2", 8), NULL));
+    ActionInterval * a2 = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(modelId, 8), NULL));
     Sprite * s2 =Sprite::create();
     m_propTexiao->addChild(s2);
     s2->runAction(a2);
@@ -55,9 +57,12 @@ void PropSprite_daoju2::spriteCall(Node * psender)
                                    Spawn::create(a1,a2, NULL),
                                    CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju2::spriteCall2, this)),
                                    NULL) );
+    string modelId = m_prop->getModelId();
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath(modelId + ".mp3").c_str());
 }
 void PropSprite_daoju2::spriteCall2(Node * psender)
 {
+    m_prop->setStateDie();
     Sprite * ss = (Sprite *)psender;
     ss->stopAllActions();
     ss->removeFromParentAndCleanup(true);
