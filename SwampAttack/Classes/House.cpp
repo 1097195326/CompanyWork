@@ -17,7 +17,6 @@ m_totalHelath(m_health)
 {
     m_state = _h_clear;
     
-    setView();
 }
 House::~House()
 {

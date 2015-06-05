@@ -35,15 +35,15 @@ GameDirector * GameDirector::getInstance()
     static GameDirector gameDirector;
     return &gameDirector;
 }
-void GameDirector::initGameSingle()
+void GameDirector::initGameView()
 {
     
-    House::getInstance();
+    House::getInstance()->setView();
     DefenseBuildingManager::getInstance()->setView();
     Human::getInstance()->setView();
     GunManager::getInstance()->setFightView();
     PropManager::getInstance()->setFightView();
-    EnemyManager::getInstance()->setView();
+//    EnemyManager::getInstance()->setView();
     
 }
 void GameDirector::gameLoop(float data)
@@ -174,6 +174,10 @@ void GameDirector::startGame()
 }
 void GameDirector::restartGame()
 {
+    clearStatus();
+    m_status |= s_run ;
+    
+    EnemyManager::getInstance()->reStartGame();
     
 }
 void GameDirector::continueGame()

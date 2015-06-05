@@ -30,13 +30,13 @@ private:
 private:
     House();
     ~House();
-    void    setView();
+    
 public:
     static House * getInstance();
     void    gameLoop(float data);
     void    hurt(float damage);
     void    addHealth(int health);
-    
+    void    setView();
 public:
     float   getHealthPercent();
     bool    isOver();

@@ -18,7 +18,7 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
     
     if (GunManager::getInstance()->getTakeUpGunNum() > 1)
     {
-        m_iconScale = 0.5;
+        m_iconScale = 0.6;
         int iconIndex = GunManager::getInstance()->getTakeUpGunIndexByName(m_gun->getId());
         m_greenBg = Sprite::create(ImagePath("fight_gun_greenBg.png"));
         m_blueBg = Sprite::create(ImagePath("fight_gun_blueBg.png"));
@@ -30,12 +30,12 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
         
         m_greenBg->setScale(m_iconScale);
         m_blueBg->setScale(m_iconScale);
-        gunIcon->setScale(0.35);
+        gunIcon->setScale(0.45);
         Vec2 iconPoint = _G_M_M->fightScene_gunIcon_Position;
         float iconHeight = m_greenBg->getContentSize().height;
-        m_greenBg->setPosition(iconPoint - Vec2(0, (iconHeight + 20) * (3-iconIndex)) * m_iconScale);
-        m_blueBg->setPosition(iconPoint - Vec2(0, (iconHeight + 20) * (3-iconIndex)) * m_iconScale);
-        gunIcon->setPosition(iconPoint - Vec2(0, (iconHeight + 20) * (3-iconIndex)) * m_iconScale);
+        m_greenBg->setPosition(iconPoint - Vec2(0, (iconHeight + 30) * (3-iconIndex)) * m_iconScale);
+        m_blueBg->setPosition(iconPoint - Vec2(0, (iconHeight + 30) * (3-iconIndex)) * m_iconScale);
+        gunIcon->setPosition(iconPoint - Vec2(0, (iconHeight + 30) * (3-iconIndex)) * m_iconScale);
         
         
         m_listener = EventListenerTouchOneByOne::create();

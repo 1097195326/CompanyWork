@@ -14,7 +14,6 @@
 WalkEnemy::WalkEnemy(Json::Value data):Enemy(data)
 {
     
-    setView();
 }
 void WalkEnemy::gameLoop(float data)
 {
@@ -77,4 +76,5 @@ void WalkEnemy::setView()
         EnemySprite * enemySprite = new WalkEnemySprite(this);
         enemySprite->autorelease();
     }
+    m_status = e_waiting;
 }

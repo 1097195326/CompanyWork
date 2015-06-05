@@ -20,7 +20,7 @@ bool GameMapScene::init()
     {
         return false;
     }
-    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("map_bg1.mp3")).c_str());
+//    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("map_bg1.mp3")).c_str());
     
     MenuItem * houmItem = MenuItemImage::create(ImagePath("map_homeButton.png"),
                                                     ImagePath("map_homeButton.png"),

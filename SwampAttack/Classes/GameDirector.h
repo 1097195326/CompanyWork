@@ -37,7 +37,7 @@ public:
     GameDirector();
     ~GameDirector();
 public:
-    void    initGameSingle();
+    void    initGameView();
     void    onTouchBegin(Touch * touch, Event * event);
     void    onTouchMove(Touch * touch, Event * event);
     void    onTouchEnd(Touch * touch, Event * event);

@@ -20,6 +20,7 @@ HouseSprite::HouseSprite()
     houseSprite->setPosition(_G_M_M->fightScene_HouseSprite_Position);
     
     m_healthBar = new ProgressBar("fight_house_bar.png","fight_house_barbg.png");
+    m_healthBar->autorelease();
     addChild(m_healthBar);
     m_healthBar->setBarRight();
     m_healthBar->setPosition(_G_M_M->fightScene_HouseBar_Position);
@@ -29,7 +30,7 @@ HouseSprite::HouseSprite()
 }
 HouseSprite::~HouseSprite()
 {
-    delete m_healthBar;
+//    log("house release");
 }
 void HouseSprite::update(float data)
 {

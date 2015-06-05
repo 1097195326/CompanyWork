@@ -45,7 +45,7 @@ Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false),m_isWeak(false)
     }
     
     ///--- set status ---
-    m_status = e_waiting;
+    m_status = e_clear;
     ///------set data-------
     m_id = m_data["Id"].asString();
     m_monsterName = m_data["MonsterName"].asString();

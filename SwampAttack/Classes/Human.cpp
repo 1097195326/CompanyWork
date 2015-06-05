@@ -28,7 +28,6 @@ Human::Human()
     m_state = HumanWaitState::getInstance();
     m_touchStatus = _t_normal;
     
-//    setView();
 }
 Human::~Human()
 {

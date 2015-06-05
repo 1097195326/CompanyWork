@@ -16,6 +16,7 @@ HumanSprite::HumanSprite()
     setAnchorPoint(Vec2(0.5,0));
     
     scheduleUpdate();
+//    log("human create");
 }
 HumanSprite::~HumanSprite()
 {
@@ -25,7 +26,7 @@ HumanSprite::~HumanSprite()
         ac->release();
     }
     m_actionData.clear();
-
+//    log("human deleate");
 }
 void HumanSprite::setModel(Human *human)
 {

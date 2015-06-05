@@ -15,7 +15,6 @@ FlyEnemy::FlyEnemy(Json::Value data):Enemy(data)
     dlayToAttack = 0;
     canMoveBack = false;
     randomPoint();
-    setView();
 }
 void FlyEnemy::gameLoop(float data)
 {
@@ -76,6 +75,7 @@ void FlyEnemy::setView()
 {
     EnemySprite * enemySprite = new FlyEnemySprite(this);
     enemySprite->autorelease();
+    m_status = e_waiting;
 }
 void FlyEnemy::randomPoint()
 {

@@ -25,7 +25,6 @@ ProgressBar::ProgressBar(std::string barName, std::string barBg)
 }
 ProgressBar::~ProgressBar()
 {
-    removeAllChildrenWithCleanup(true);
 }
 void ProgressBar::setBarPositon(cocos2d::Vec2 point)
 {

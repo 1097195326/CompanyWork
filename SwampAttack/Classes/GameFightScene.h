@@ -15,13 +15,13 @@
 class GameFightScene : public cocos2d::Layer
 {
 private:
-    
+    EventListenerTouchOneByOne * m_listener;
     
 public:
-//    CREATE_SCENE_FUNC(GameFightScene);
     static  Scene * scene();
     static  Layer * getInstance();
-    CREATE_FUNC(GameFightScene);
+    GameFightScene();
+    ~GameFightScene();
     
     virtual bool    init();
     

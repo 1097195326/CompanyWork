@@ -16,6 +16,8 @@
 #include "GameMapManager.h"
 #include "GamePauseScene.h"
 
+#include "GameMapScene.h"
+
 //---
 //#include "EnemyManager.h"
 //#include "ConfigManager.h"
@@ -25,21 +27,32 @@
 //#include "ProgressBar.h"
 //#include "Human.h"
 
+GameFightScene * g_f_layer = NULL;
 
 Scene * GameFightScene::scene()
 {
     Scene * scene = Scene::create();
-    GameFightScene * layer =(GameFightScene*)GameFightScene::getInstance();
-    layer->removeFromParentAndCleanup(true);
+    GameFightScene * layer =new GameFightScene();
     layer->init();
+    layer->autorelease();
     scene->addChild(layer);
-    
     return scene;
 }
 Layer * GameFightScene::getInstance()
 {
-    static GameFightScene layer;
-    return &layer;
+    return g_f_layer;
+}
+GameFightScene::GameFightScene()
+{
+    
+}
+GameFightScene::~GameFightScene()
+{
+    g_f_layer = NULL;
+    if(m_listener)
+    {
+        Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
+    }
 }
 bool GameFightScene::init()
 {
@@ -47,9 +60,7 @@ bool GameFightScene::init()
     {
         return false;
     }
-    
-//    GameLoading::loadFrames();
-    _G_D->initGameSingle();
+    g_f_layer = this;
     
     Sprite * bgSprite = Sprite::create(ImagePath("scene1_Bg.png"));
     addChild(bgSprite);
@@ -57,31 +68,13 @@ bool GameFightScene::init()
                                m_visibleOrigin.y + m_visibleSize.height * 0.5));
     
     
-    auto listener = EventListenerTouchOneByOne::create();
-    listener->setSwallowTouches(true);
+    m_listener = EventListenerTouchOneByOne::create();
+    m_listener->setSwallowTouches(true);
 
-    listener->onTouchBegan = CC_CALLBACK_2(GameFightScene::touchBegan, this);
-//    [](Touch* touch, Event* event){
-//        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
-//        gameFightScene->touchBegan(touch, event);
-//        return true;
-//    };
-    listener->onTouchMoved = CC_CALLBACK_2(GameFightScene::touchMoved, this);
-//    [](Touch* touch, Event* event){
-//        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
-//        gameFightScene->touchMoved(touch, event);
-//    };
-    listener->onTouchEnded = CC_CALLBACK_2(GameFightScene::touchEnd, this);
-//    [](Touch* touch, Event* event){
-//        GameFightScene * gameFightScene = static_cast<GameFightScene *>(event->getCurrentTarget());
-//        gameFightScene->touchEnd(touch, event);
-//    };
-    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
-    
-    
-//    Json::Value value = _C_M->getDataByTag("guanqia", "400001");
-//    GuanqiaModel * guanQia = new GuanqiaModel(value);
-//    EnemyManager::getInstance()->setData(guanQia->getMonsters());
+    m_listener->onTouchBegan = CC_CALLBACK_2(GameFightScene::touchBegan, this);
+    m_listener->onTouchMoved = CC_CALLBACK_2(GameFightScene::touchMoved, this);
+    m_listener->onTouchEnded = CC_CALLBACK_2(GameFightScene::touchEnd, this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener, this);
     
     MenuItemImage * pauseButton = MenuItemImage::create(ImagePath("fight_pause_button.png"),
                                                         ImagePath("fight_pause_button.png"),
@@ -90,11 +83,12 @@ bool GameFightScene::init()
                              m_visibleOrigin.y + m_visibleSize.height - pauseButton->getContentSize().height * 0.6);
     Menu * buttonMenu = Menu::create(pauseButton, NULL);
     buttonMenu->setPosition(Point::ZERO);
-    addChild(buttonMenu,200);
+    addChild(buttonMenu,2);
     
-    _G_D->startGame();
+    log("fight scene init");
+    _G_D->initGameView();
+//    _G_D->startGame();
     
-//    log("game fight scene init");
     
     return true;
 }
@@ -107,9 +101,11 @@ void GameFightScene::pauseGame(cocos2d::Ref *pSender)
     this->visit();
     rt->end();
     _G_D->stopGame();
-    Director::getInstance()->pushScene(GamePauseScene::scene(rt));
-    
+    GamePauseScene * pauseScene = new GamePauseScene(rt);
+    pauseScene->autorelease();
+    addChild(pauseScene,10);
 }
+
 bool GameFightScene::touchBegan(Touch *touch, Event *event)
 {
     _G_D->onTouchBegin(touch, event);

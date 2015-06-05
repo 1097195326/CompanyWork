@@ -8,6 +8,7 @@
 
 #include "EnemyManager.h"
 #include "EnemyProgressBar.h"
+#include "GuanQiaManager.h"
 
 
 EnemyManager::EnemyManager() : currentIndex(0)
@@ -23,6 +24,13 @@ EnemyManager * EnemyManager::getInstance()
     static EnemyManager manager;
     
     return &manager;
+}
+void EnemyManager::reStartGame()
+{
+    currentIndex = 0;
+    GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
+    setData(guanqia->getMonsters());
+    
 }
 void EnemyManager::setData(Json::Value data)
 {

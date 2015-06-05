@@ -45,6 +45,9 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
                                     NULL);
     ;
     texiaoAction->retain();
+    if (!_G_V) {
+        log("game fight layer is null");
+    }
     _G_V->addChild(this,640 - m_model->getPosition().y);
 }
 EnemySprite::~EnemySprite()
