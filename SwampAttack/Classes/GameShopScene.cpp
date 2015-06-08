@@ -136,6 +136,8 @@ bool GameShopScene::init()
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu);
     //
+    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
     
     
     _G_U->attach(this);

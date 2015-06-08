@@ -154,12 +154,17 @@ void Gun::checkUnlock()
 }
 bool Gun::fire(Vec2 position)
 {
+    
+    GameMap * map = GameMapManager::getInstance()->getGameMap();
+    if (map->m_BulletStartPoint.x > position.x)
+    {
+        return true;
+    }
     --m_bullets;
     if (!m_isDefaultGun) {
         --m_totalBullets;
     }
     
-    GameMap * map = GameMapManager::getInstance()->getGameMap();
     
     BulletParameter bp(m_damage,
                        m_damageArea,

@@ -64,7 +64,7 @@ void Human::stop()
 {
     m_touchStatus = _touchEnd;
 //    string yinxiao = StringUtils::format("%s_shoot.mp3",m_gun->getModelId().c_str());
-    SimpleAudioEngine::getInstance()->stopAllEffects();
+//    SimpleAudioEngine::getInstance()->stopAllEffects();
 }
 void Human::changeGun(Gun *gun)
 {

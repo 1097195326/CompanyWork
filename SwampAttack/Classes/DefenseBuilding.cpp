@@ -13,10 +13,6 @@
 #include "House.h"
 #include "BulletManager.h"
 
-#include "DefenseBuilding1_Sprite.h"
-#include "DefenseBuilding2_Sprite.h"
-#include "DefenseBuilding3_Sprite.h"
-#include "DefenseBuilding4_Sprite.h"
 
 
 DefenseBuilding::DefenseBuilding(Json::Value data):
@@ -52,6 +48,8 @@ m_index(0.0)
     
     m_isUnlock = _G_U->isUnlockBuilding(m_id);
     
+    m_state = d_wait;
+    
 }
 DefenseBuilding::~DefenseBuilding()
 {
@@ -59,72 +57,11 @@ DefenseBuilding::~DefenseBuilding()
 }
 void DefenseBuilding::gameLoop(float data)
 {
-    if (!m_isUnlock)
-    {
-        return;
-    }
-    if (m_defenceType == 2 || m_defenceType == 3)
-    {
-        m_index += data;
-        if (m_index >= 1)
-        {
-            m_index = 0;
-            m_state = d_hurt;
-        }else
-        {
-            m_state = d_wait;
-        }
-    }
-}
-void DefenseBuilding::fire(Vec2 position)
-{
-    if (m_state == d_hurt) {
-        GameMap * map = GameMapManager::getInstance()->getGameMap();
-        
-        BulletParameter bp(m_damage,
-                           0,
-                           1,
-                           0,
-                           0,
-                           1,
-                           m_damageArea,
-                           100,
-                           1,
-                           t_enemy,
-                           map->gangpao_BulletStartPoint,
-                           position
-                           );
-        BulletManager::getInstance()->fire(bp);
-        m_state = d_wait;
-    }
 }
 void DefenseBuilding::setView()
 {
     if (!m_isUnlock) {
         return;
-    }
-    DefenseBuildingSprite * sprite = NULL;
-    switch (m_defenceType) {
-        case 1:
-        {
-            House::getInstance()->addHealth(m_hp);
-            sprite = new DefenseBuilding1_Sprite(this);
-            
-            sprite->autorelease();
-        }
-            break;
-        case 2:
-            sprite = new DefenseBuilding2_Sprite(this);
-             sprite->autorelease();
-            break;
-        case 3:
-            sprite = new DefenseBuilding3_Sprite(this);
-             sprite->autorelease();
-            break;
-        case 4:
-//            sprite = new DefenseBuilding4_Sprite(this);
-        default:
-            break;
     }
 }
 void DefenseBuilding::addStrengthenLevel()
@@ -145,7 +82,22 @@ void DefenseBuilding::addStrengthenLevel()
 }
 bool DefenseBuilding::isCanHurt()
 {
-    return m_state == d_hurt;
+    return m_state == d_canHurt;
+}
+bool DefenseBuilding::isStateHurting()
+{
+    return m_state == d_hurting;
+}
+bool DefenseBuilding::isStateWait()
+{
+    return m_state == d_wait;
+}
+void DefenseBuilding::hurtEnemy(Enemy * enemy)
+{
+    
+}
+void DefenseBuilding::hurtCall()
+{
 }
 bool DefenseBuilding::isInRange(cocos2d::Vec2 point)
 {

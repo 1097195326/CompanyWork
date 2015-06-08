@@ -131,6 +131,9 @@
 		8DD87E6A1B15A28000FC073A /* ShopPropItemScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD87E681B15A28000FC073A /* ShopPropItemScrollHeadler.cpp */; };
 		8DD87E6D1B15A29300FC073A /* ShopBuildingItemScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD87E6B1B15A29300FC073A /* ShopBuildingItemScrollHeadler.cpp */; };
 		8DD87E701B15A2B500FC073A /* ShopAwardItemScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD87E6E1B15A2B500FC073A /* ShopAwardItemScrollHeadler.cpp */; };
+		8DD88E741B2598050072688E /* DefenseBuilding1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD88E721B2598050072688E /* DefenseBuilding1.cpp */; };
+		8DD88E771B2598150072688E /* DefenseBuilding2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD88E751B2598150072688E /* DefenseBuilding2.cpp */; };
+		8DD88E7A1B2598240072688E /* DefenseBuilding3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD88E781B2598240072688E /* DefenseBuilding3.cpp */; };
 		8DD8C1211AFC5D0E00872AA2 /* GameSubject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C11F1AFC5D0E00872AA2 /* GameSubject.cpp */; };
 		8DD8C1241AFC5D2000872AA2 /* GameObserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C1221AFC5D2000872AA2 /* GameObserver.cpp */; };
 		8DD8C1281AFC642F00872AA2 /* GameUser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C1261AFC642F00872AA2 /* GameUser.cpp */; };
@@ -393,6 +396,12 @@
 		8DD87E6C1B15A29300FC073A /* ShopBuildingItemScrollHeadler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopBuildingItemScrollHeadler.h; sourceTree = "<group>"; };
 		8DD87E6E1B15A2B500FC073A /* ShopAwardItemScrollHeadler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopAwardItemScrollHeadler.cpp; sourceTree = "<group>"; };
 		8DD87E6F1B15A2B500FC073A /* ShopAwardItemScrollHeadler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopAwardItemScrollHeadler.h; sourceTree = "<group>"; };
+		8DD88E721B2598050072688E /* DefenseBuilding1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DefenseBuilding1.cpp; sourceTree = "<group>"; };
+		8DD88E731B2598050072688E /* DefenseBuilding1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefenseBuilding1.h; sourceTree = "<group>"; };
+		8DD88E751B2598150072688E /* DefenseBuilding2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DefenseBuilding2.cpp; sourceTree = "<group>"; };
+		8DD88E761B2598150072688E /* DefenseBuilding2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefenseBuilding2.h; sourceTree = "<group>"; };
+		8DD88E781B2598240072688E /* DefenseBuilding3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DefenseBuilding3.cpp; sourceTree = "<group>"; };
+		8DD88E791B2598240072688E /* DefenseBuilding3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefenseBuilding3.h; sourceTree = "<group>"; };
 		8DD8C11F1AFC5D0E00872AA2 /* GameSubject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSubject.cpp; sourceTree = "<group>"; };
 		8DD8C1201AFC5D0E00872AA2 /* GameSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSubject.h; sourceTree = "<group>"; };
 		8DD8C1221AFC5D2000872AA2 /* GameObserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObserver.cpp; sourceTree = "<group>"; };
@@ -760,6 +769,12 @@
 				8DC352751ADB66E100E6A9C2 /* House.h */,
 				8DD499771B04868C0037CBAA /* DefenseBuilding.cpp */,
 				8DD499781B04868C0037CBAA /* DefenseBuilding.h */,
+				8DD88E721B2598050072688E /* DefenseBuilding1.cpp */,
+				8DD88E731B2598050072688E /* DefenseBuilding1.h */,
+				8DD88E751B2598150072688E /* DefenseBuilding2.cpp */,
+				8DD88E761B2598150072688E /* DefenseBuilding2.h */,
+				8DD88E781B2598240072688E /* DefenseBuilding3.cpp */,
+				8DD88E791B2598240072688E /* DefenseBuilding3.h */,
 				8DD4997A1B04869A0037CBAA /* DefenseBuildingManager.cpp */,
 				8DD4997B1B04869A0037CBAA /* DefenseBuildingManager.h */,
 			);
@@ -1200,6 +1215,7 @@
 				8DC2ACD71AC5641B004F3C1B /* GameObject.cpp in Sources */,
 				8DD494001B1307080024CE36 /* HumanChangeState.cpp in Sources */,
 				8DD8C12F1AFCB81C00872AA2 /* SelectMenuView.cpp in Sources */,
+				8DD88E7A1B2598240072688E /* DefenseBuilding3.cpp in Sources */,
 				8DD87E671B15A26900FC073A /* ShopGunItemScrollHeadler.cpp in Sources */,
 				8DD7D5AB1B0199D100DD3711 /* ShopItemScrollHeadler.cpp in Sources */,
 				8DD5D0B41B1419AF00AA2A07 /* EnemyProgressBar.cpp in Sources */,
@@ -1211,6 +1227,7 @@
 				8DD2156B1B16E7160090EEEB /* GameScrollHeadlerView.cpp in Sources */,
 				8DC10ACB1AC40222004F7DE2 /* EnemyManager.cpp in Sources */,
 				8DD29D401B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.cpp in Sources */,
+				8DD88E741B2598050072688E /* DefenseBuilding1.cpp in Sources */,
 				8DDC27C51B1EEE1000A4FD8D /* PropSprite_daoju5.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				8DC10AB01AC3D629004F7DE2 /* GameFightScene.cpp in Sources */,
@@ -1218,6 +1235,7 @@
 				8DD53AF91B0C2774000DB8DC /* DefenseBuildingSprite.cpp in Sources */,
 				8DE3C3911AFB14F900C61D89 /* GameHorizontalScrollView.cpp in Sources */,
 				8DD87E641B15760D00FC073A /* ShopGunIcon.cpp in Sources */,
+				8DD88E771B2598150072688E /* DefenseBuilding2.cpp in Sources */,
 				8DC6A5D41ADFD788002A6159 /* HumanReloadState.cpp in Sources */,
 				8DE3F7B11AF75109001E048F /* SelectMenuController.cpp in Sources */,
 				8DD4997C1B04869A0037CBAA /* DefenseBuildingManager.cpp in Sources */,

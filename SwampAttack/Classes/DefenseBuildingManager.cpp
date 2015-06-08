@@ -8,7 +8,9 @@
 
 #include "DefenseBuildingManager.h"
 #include "ConfigManager.h"
-
+#include "DefenseBuilding1.h"
+#include "DefenseBuilding2.h"
+#include "DefenseBuilding3.h"
 
 DefenseBuildingManager::DefenseBuildingManager()
 {
@@ -19,7 +21,21 @@ DefenseBuildingManager::DefenseBuildingManager()
     std::map<int,std::string>::iterator iter;
     for (iter = m_hashHead.begin(); iter != m_hashHead.end(); ++iter) {
         string propId = iter->second;
-        m_buildingData[propId] = new DefenseBuilding(data[propId]);
+        int type = atoi(data[propId]["DefenceType"].asString().c_str());
+        switch (type) {
+            case 1:
+                m_buildingData[propId] = new DefenseBuilding1(data[propId]);
+                break;
+            case 2:
+                m_buildingData[propId] = new DefenseBuilding2(data[propId]);
+                break;
+            case 3:
+                m_buildingData[propId] = new DefenseBuilding3(data[propId]);
+                break;
+            default:
+                break;
+        }
+        
     }
 }
 DefenseBuildingManager::~DefenseBuildingManager()

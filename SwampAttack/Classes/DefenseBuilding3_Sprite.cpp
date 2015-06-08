@@ -12,7 +12,7 @@ DefenseBuilding3_Sprite::DefenseBuilding3_Sprite(DefenseBuilding * building):
 DefenseBuildingSprite(building)
 {
     
-    Sprite * buildingS = Sprite::create(ImagePath("fight_building4.png"));
+    Sprite * buildingS = Sprite::create();
     addChild(buildingS);
     buildingS->setPosition(m_visibleOrigin.x + 130,m_visibleOrigin.y + 320);
     

@@ -93,7 +93,7 @@ void EnemyGroup::gameLoop(float data)
     if (!isLastIndex)
     {
         delay += data;
-        if (delay >= 5)
+        if (delay >= 3)
         {
             delay = 0.0f;
             std::list<Enemy*>::iterator iter = enemyData.begin();

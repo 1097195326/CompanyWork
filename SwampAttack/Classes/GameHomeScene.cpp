@@ -47,6 +47,8 @@ bool GameHomeScene::init()
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu);
     
+    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
     
     return true;
 }

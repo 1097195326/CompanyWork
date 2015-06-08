@@ -144,11 +144,12 @@ void GameDirector::checkCross()
                         switch (building->getDefenceType())
                         {
                             case 2:
-                                enemy->hurt(building->getDamage());
+                                building->hurtEnemy(enemy);
                                 break;
                             case 3:
-                                 building->fire(Vec2(enemy->getPosition().x,
-                                                     enemy->getPosition().y + enemy->getHeight() * 0.5));
+                                building->hurtEnemy(enemy);
+//                                 building->fire(Vec2(enemy->getPosition().x,
+//                                                     enemy->getPosition().y + enemy->getHeight() * 0.5));
                                 
                                 break;
                             default:

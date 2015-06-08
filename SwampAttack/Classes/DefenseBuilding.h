@@ -12,13 +12,14 @@
 #include "json/json.h"
 #include "GameObject.h"
 #include "BaseCode.h"
-
+class Enemy;
 
 enum DefenseState
 {
     d_normal,
     d_wait,
-    d_hurt,
+    d_canHurt,
+    d_hurting,
 };
 using namespace std;
 
@@ -28,12 +29,18 @@ public:
     ~DefenseBuilding();
     void    gameLoop(float data);
 public:
-    void    setView();
+    virtual void    setView();
+    virtual void    hurtEnemy(Enemy * enemy);
+    virtual void    hurtCall();
     
     bool    isCanHurt();
+    bool    isStateHurting();
+    bool    isStateWait();
+    
+    
+    
     bool    isInRange(Vec2 point);
-    void    fire(Vec2 position);
-private:
+protected:
     DefenseState m_state;
     float       m_index;
     Vec2        m_point;
@@ -61,6 +68,7 @@ public:
     void    unlockBuilding();
     bool    isMaxLevel();
     void    addStrengthenLevel();
+    
     
     string  getId();
     string  getDefenceName();

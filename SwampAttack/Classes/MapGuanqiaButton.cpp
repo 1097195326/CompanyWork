@@ -63,6 +63,10 @@ void MapGuanqiaButton::pressGuanqiaButtonFunc(cocos2d::Ref *pSender)
 {
     log("enter guan qia  id : %s",m_guanqiaId.c_str());
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
+    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+    string musicName = StringUtils::format("sceneMusic%d.mp3",m_sceneIndex + 1);
+    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath(musicName)).c_str());
+    
     GuanqiaModel * guanQia = GuanQiaManager::getInstance()->getGuanqiaById(m_guanqiaId);
     if (guanQia->isUnlock())
     {
