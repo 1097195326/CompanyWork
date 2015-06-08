@@ -45,6 +45,7 @@ public:
     void    restartGame();
     void    continueGame();
     void    stopGame();
+    void    overGame();
     bool    isOver();
     void    clearStatus();
     void    gameLoop(float data);

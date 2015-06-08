@@ -85,14 +85,16 @@ GamePauseScene::GamePauseScene(RenderTexture * rt)
 void GamePauseScene::continueGame(cocos2d::Ref *pSender)
 {
     removeFromParentAndCleanup(true);
-//    _G_D->continueGame();
+    _G_D->continueGame();
 }
 void GamePauseScene::restartGame(cocos2d::Ref *pSender)
 {
     Director::getInstance()->replaceScene(GameFightScene::scene());
+    _G_D->restartGame();
 }
 void GamePauseScene::gotoMap(cocos2d::Ref *pSender)
 {
+    _G_D->overGame();
     Director::getInstance()->replaceScene(GameMapScene::scene());
 }
 bool GamePauseScene::touchBegan(Touch *touch, Event *event)

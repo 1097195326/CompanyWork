@@ -36,6 +36,7 @@ public:
     bool    isOver();
     float   getEnemyProgress();
     void    reStartGame();
+    void    overGame();
     
     
     EnemyGroup * getCurrectGroup();

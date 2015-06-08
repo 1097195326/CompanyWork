@@ -43,7 +43,7 @@ void GameDirector::initGameView()
     Human::getInstance()->setView();
     GunManager::getInstance()->setFightView();
     PropManager::getInstance()->setFightView();
-//    EnemyManager::getInstance()->setView();
+    EnemyManager::getInstance()->setView();
     
 }
 void GameDirector::gameLoop(float data)
@@ -178,6 +178,11 @@ void GameDirector::restartGame()
     m_status |= s_run ;
     
     EnemyManager::getInstance()->reStartGame();
+    
+}
+void GameDirector::overGame()
+{
+    EnemyManager::getInstance()->overGame();
     
 }
 void GameDirector::continueGame()

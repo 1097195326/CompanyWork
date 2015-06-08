@@ -87,7 +87,8 @@ bool GameFightScene::init()
     
     log("fight scene init");
     _G_D->initGameView();
-//    _G_D->startGame();
+    
+    _G_D->startGame();
     
     
     return true;

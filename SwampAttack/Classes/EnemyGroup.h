@@ -22,8 +22,11 @@ class EnemyGroup : public GameObject {
 private:
     EnemyGroupStatus status;
     std::list<Enemy*> enemyData;
+    std::list<Enemy*> show_enemyData;
     
-    int index[10];
+    int enemy_index;
+    bool    isLastIndex;
+    float   delay;
 public:
     EnemyGroup(Json::Value data);
     ~EnemyGroup();

@@ -48,7 +48,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
         glview = GLViewImpl::create("My Game");
         director->setOpenGLView(glview);
     }
-
+    director->setContentScaleFactor(1.0f);
+    glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_WIDTH);
+    
+    
+    
     m_winSize = Director::getInstance()->getWinSize();
     m_visibleSize = Director::getInstance()->getVisibleSize();
     m_visibleOrigin = Director::getInstance()->getVisibleOrigin();

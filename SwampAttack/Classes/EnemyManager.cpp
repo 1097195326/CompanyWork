@@ -32,6 +32,13 @@ void EnemyManager::reStartGame()
     setData(guanqia->getMonsters());
     
 }
+void EnemyManager::overGame()
+{
+    currentIndex = 0;
+    currentGroup = NULL;
+    m_isOver = true;
+    clearData();
+}
 void EnemyManager::setData(Json::Value data)
 {
     clearData();
@@ -87,6 +94,7 @@ void EnemyManager::gameLoop(float data)
                 currentIndex = 0;
                 currentGroup = NULL;
                 m_isOver = true;
+                clearData();
             }
         }
     }
