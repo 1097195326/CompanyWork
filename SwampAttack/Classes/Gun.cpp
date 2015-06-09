@@ -88,7 +88,7 @@ m_reloadWiatingTime(0.0f)
     m_unlockMission = data["UnlockMission"].asString();
     m_unlockGold = atoi(data["UnlockGold"].asString().c_str());
     
-    m_weaponDescription = data["WeaponDescription"].asString();// _C_M->getTranslateById( data["WeaponDescription"].asString());
+    m_weaponDescription = _C_M->getTranslateById( data["WeaponDescription"].asString());
     //--- gun info
     GunActionData actionData = GunActionInfo::getInstance()->getInfoByName(m_modelId);
     m_fireRate =  1.0f/ m_fireRate / (float)actionData.attackFrames;

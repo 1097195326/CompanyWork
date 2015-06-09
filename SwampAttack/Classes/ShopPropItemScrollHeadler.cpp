@@ -77,15 +77,22 @@ void ShopPropItemScrollHeadler::initDaojuView()
         
         
         Sprite * buyLabel = Sprite::create(ImagePath("shopItemLabel2.png"));
-        buyLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.15);
+        buyLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.1);
         addChild(buyLabel);
         
-        m_buyLabel = Label::createWithTTF("", "fonts/American Typewriter.ttf", 20);
-        m_buyLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.28);
+        string price = StringUtils::format("%d",prop->getPropPrice());
+        m_buyLabel = Label::createWithTTF(price, "fonts/Arial Black.ttf", 20);
+        m_buyLabel->setPosition(itemBg->getContentSize().width * 0.33, -itemBg->getContentSize().height * 0.25);
         addChild(m_buyLabel);
-        m_bulletsLabel = Label::createWithTTF("", "fonts/American Typewriter.ttf", 20);
-        m_bulletsLabel->setPosition(- itemBg->getContentSize().width * 0.3, -itemBg->getContentSize().height * 0.25);
+        m_bulletsLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 20);
+        m_bulletsLabel->setPosition(- itemBg->getContentSize().width * 0.27, -itemBg->getContentSize().height * 0.25);
         addChild(m_bulletsLabel);
+        m_bulletsLabel->setColor(Color3B(0, 0, 0));
+        
+        Sprite * jinbi1 = Sprite::create(ImagePath("jinbi_icon.png"));
+        jinbi1->setPosition(itemBg->getContentSize().width * 0.4, -itemBg->getContentSize().height * 0.23);
+        addChild(jinbi1);
+        
     }else
     {
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg2.png"));
@@ -118,7 +125,7 @@ void ShopPropItemScrollHeadler::initDaojuView()
         addChild(unlockName);
         
         Label * unlockLabel = Label::createWithTTF(StringUtils::format("%d",prop->getUnlockGold()),
-                                                   "fonts/American Typewriter.ttf",
+                                                   "fonts/Arial Black.ttf",
                                                    20);
         unlockLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.28);
         addChild(unlockLabel);

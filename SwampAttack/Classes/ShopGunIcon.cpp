@@ -55,9 +55,11 @@ void ShopGunIcon::reSetIcon(Gun *gun)
     
     Sprite * gunIcon = Sprite::create(ImagePath(StringUtils::format("%s_icon.png",gunModelId.c_str())));
     m_icon->addChild(gunIcon);
-    m_bullets = Label::createWithTTF("", "fonts/American Typewriter.ttf", 20);
+    m_bullets = Label::createWithTTF("", "fonts/Arial Black.ttf", 17);
     m_icon->addChild(m_bullets);
     m_bullets->setString(StringUtils::format("%d",m_gun->getTotalBulletNum()));
+    m_bullets->setPosition(Vec2(m_iconBg->getContentSize().width * 0.2, -m_iconBg->getContentSize().height * 0.3));
+    m_bullets->setColor(Color3B(0, 0, 0));
 }
 void ShopGunIcon::updateData()
 {

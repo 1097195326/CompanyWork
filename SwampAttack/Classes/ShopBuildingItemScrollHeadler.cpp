@@ -64,16 +64,19 @@ void ShopBuildingItemScrollHeadler::initDefenseView()
         addChild(buttonMenu);
         
         Sprite * upgradeLabel = Sprite::create(ImagePath("shopItemLabel1.png"));
-        upgradeLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.15);
+        upgradeLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.1);
         addChild(upgradeLabel);
         
         m_progressBar = new ProgressBar("shopItemTiao1.png","shopItemTiao2.png");
         m_progressBar->setBarRight();
         m_progressBar->setPosition(itemBg->getContentSize().width * 0.29, itemBg->getContentSize().height * 0.18);
         addChild(m_progressBar);
-        m_upgradeLabel = Label::createWithTTF("", "fonts/American Typewriter.ttf", 20);
-        m_upgradeLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.28);
+        m_upgradeLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 20);
+        m_upgradeLabel->setPosition(itemBg->getContentSize().width * 0.33, -itemBg->getContentSize().height * 0.25);
         addChild(m_upgradeLabel);
+        Sprite * jinbi1 = Sprite::create(ImagePath("jinbi_icon.png"));
+        jinbi1->setPosition(itemBg->getContentSize().width * 0.4, -itemBg->getContentSize().height * 0.23);
+        addChild(jinbi1);
     }else
     {
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg2.png"));

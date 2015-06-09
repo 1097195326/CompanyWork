@@ -82,25 +82,35 @@ void ShopGunItemScrollHeadler::initGunView()
         }
         
         Sprite * buyLabel = Sprite::create(ImagePath("shopItemLabel2.png"));
-        buyLabel->setPosition(-itemBg->getContentSize().width * 0.03, -itemBg->getContentSize().height * 0.15);
+        buyLabel->setPosition(-itemBg->getContentSize().width * 0.03, -itemBg->getContentSize().height * 0.1);
         addChild(buyLabel);
         Sprite * upgradeLabel = Sprite::create(ImagePath("shopItemLabel1.png"));
-        upgradeLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.15);
+        upgradeLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.1);
         addChild(upgradeLabel);
         
         m_progressBar = new ProgressBar("shopItemTiao1.png","shopItemTiao2.png");
         m_progressBar->setBarRight();
         m_progressBar->setPosition(itemBg->getContentSize().width * 0.29, itemBg->getContentSize().height * 0.18);
         addChild(m_progressBar);
-        m_buyLabel = Label::createWithTTF("", "fonts/American Typewriter.ttf", 20);
-        m_buyLabel->setPosition(-itemBg->getContentSize().width * 0.01, -itemBg->getContentSize().height * 0.28);
+        m_buyLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 20);
+        m_buyLabel->setPosition(itemBg->getContentSize().width * 0.02, -itemBg->getContentSize().height * 0.23);
         addChild(m_buyLabel);
-        m_upgradeLabel = Label::createWithTTF("", "fonts/American Typewriter.ttf", 20);
-        m_upgradeLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.28);
+        m_upgradeLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 20);
+        m_upgradeLabel->setPosition(itemBg->getContentSize().width * 0.33, -itemBg->getContentSize().height * 0.23);
         addChild(m_upgradeLabel);
-        m_bulletsLabel = Label::createWithTTF("", "fonts/American Typewriter.ttf", 20);
+        m_bulletsLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 20);
+        m_bulletsLabel->setColor(Color3B(0, 0, 0));
         m_bulletsLabel->setPosition(- itemBg->getContentSize().width * 0.3, -itemBg->getContentSize().height * 0.25);
         addChild(m_bulletsLabel);
+        Sprite * bulletIcon = Sprite::create(ImagePath("shop_bullet_icon.png"));
+        bulletIcon->setPosition(- itemBg->getContentSize().width * 0.26, -itemBg->getContentSize().height * 0.25);
+        addChild(bulletIcon);
+        Sprite * jinbi1 = Sprite::create(ImagePath("jinbi_icon.png"));
+        jinbi1->setPosition(itemBg->getContentSize().width * 0.08, -itemBg->getContentSize().height * 0.23);
+        addChild(jinbi1);
+        Sprite * jinbi2 = Sprite::create(ImagePath("jinbi_icon.png"));
+        jinbi2->setPosition(itemBg->getContentSize().width * 0.4, -itemBg->getContentSize().height * 0.23);
+        addChild(jinbi2);
     }else
     {
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg2.png"));
@@ -133,7 +143,7 @@ void ShopGunItemScrollHeadler::initGunView()
         addChild(unlockName);
         
         Label * unlockLabel = Label::createWithTTF(StringUtils::format("%d",gun->getUnlockGold()),
-                                                   "fonts/American Typewriter.ttf",
+                                                   "fonts/Arial Black.ttf",
                                                    20);
         unlockLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.28);
         addChild(unlockLabel);
