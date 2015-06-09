@@ -92,6 +92,10 @@ bool DefenseBuilding::isStateWait()
 {
     return m_state == d_wait;
 }
+void DefenseBuilding::setStateWait()
+{
+    m_state = d_wait;
+}
 void DefenseBuilding::hurtEnemy(Enemy * enemy)
 {
     

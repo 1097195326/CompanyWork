@@ -30,6 +30,7 @@ struct BulletParameter
     BulletTarget m_target;      // 射击 对象
     Vec2    m_startPoint;       // 起始点
     Vec2    m_targetPoint;        // 目标点
+    std::string m_modelId;
     BulletParameter(int damage,
                     float damageArea,
                     int num,
@@ -41,7 +42,8 @@ struct BulletParameter
                     int underAttackAction,
                     BulletTarget target,
                     Vec2    startPoint,
-                    Vec2    targetPoint
+                    Vec2    targetPoint,
+                    std::string modelId = "dandao.png"
                     ):
     m_damage(damage),
     m_damageArea(damageArea),
@@ -54,7 +56,8 @@ struct BulletParameter
     m_underAttackAction(underAttackAction),
     m_target(target),
     m_startPoint(startPoint),
-    m_targetPoint(targetPoint)
+    m_targetPoint(targetPoint),
+    m_modelId(modelId)
     {}
 };
 
@@ -82,6 +85,7 @@ private:
     void    setView();
     
 public:
+    std::string getModelId();
     Vec2    getPosition();
     Rect    getRect();
     int     getDamage();

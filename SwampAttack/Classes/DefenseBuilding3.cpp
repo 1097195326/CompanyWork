@@ -49,11 +49,10 @@ void DefenseBuilding3::hurtEnemy(Enemy *enemy)
     m_state = d_hurting;
     
     fireEnemy = enemy;
-    
 }
 void DefenseBuilding3::hurtCall()
 {
-    if (!fireEnemy || fireEnemy->isDied() || fireEnemy->isCanDelete()) {
+    if (!fireEnemy ) { // || fireEnemy->isDied() || fireEnemy->isCanDelete()
         return;
     }
     GameMap * map = GameMapManager::getInstance()->getGameMap();
@@ -64,14 +63,14 @@ void DefenseBuilding3::hurtCall()
                        0,
                        1,
                        m_damageArea,
-                       100,
+                       120,
                        1,
                        t_enemy,
                        map->gangpao_BulletStartPoint,
-                       (fireEnemy->getPosition() + Vec2(0,fireEnemy->getHeight() * 0.5))
+                       (fireEnemy->getPosition() + Vec2(0,fireEnemy->getHeight() * 0.4)),
+                       "monkeyShell.png"
                        );
     BulletManager::getInstance()->fire(bp);
 
     fireEnemy = NULL;
-    m_state = d_wait;
 }

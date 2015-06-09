@@ -64,6 +64,10 @@ int Bullet::getAttackIndex()
 {
     return m_bp.m_underAttackAction;
 }
+std::string Bullet::getModelId()
+{
+    return m_bp.m_modelId;
+}
 Vec2 Bullet::getPosition()
 {
     return m_Point;

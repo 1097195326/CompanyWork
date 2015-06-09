@@ -33,9 +33,9 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
         gunIcon->setScale(0.45);
         Vec2 iconPoint = _G_M_M->fightScene_gunIcon_Position;
         float iconHeight = m_greenBg->getContentSize().height;
-        m_greenBg->setPosition(iconPoint - Vec2(0, (iconHeight + 30) * (3-iconIndex)) * m_iconScale);
-        m_blueBg->setPosition(iconPoint - Vec2(0, (iconHeight + 30) * (3-iconIndex)) * m_iconScale);
-        gunIcon->setPosition(iconPoint - Vec2(0, (iconHeight + 30) * (3-iconIndex)) * m_iconScale);
+        m_greenBg->setPosition(iconPoint - Vec2(0, (iconHeight + 10) * (3-iconIndex)) * m_iconScale);
+        m_blueBg->setPosition(iconPoint - Vec2(0, (iconHeight + 10) * (3-iconIndex)) * m_iconScale);
+        gunIcon->setPosition(iconPoint - Vec2(0, (iconHeight + 10) * (3-iconIndex)) * m_iconScale);
         
         
         m_listener = EventListenerTouchOneByOne::create();
@@ -67,7 +67,7 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
     }
     
     updateData();
-    _G_V->addChild(this,1);
+    _G_V->addChild(this,5);
 }
 GunSprite::~GunSprite()
 {

@@ -37,6 +37,8 @@ public:
     bool    isStateHurting();
     bool    isStateWait();
     
+    void    setStateWait();
+    
     
     
     bool    isInRange(Vec2 point);

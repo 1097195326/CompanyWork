@@ -14,5 +14,5 @@ DefenseBuildingSprite::DefenseBuildingSprite(DefenseBuilding * building):
 m_building(building)
 {
     init();
-    _G_V->addChild(this,1);
+    _G_V->addChild(this,3);
 }

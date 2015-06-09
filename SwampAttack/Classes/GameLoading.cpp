@@ -28,6 +28,7 @@ float GameLoading::loadFrames()
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear1.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear2.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear3.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("monkey.plist"));
     
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie1.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie2.plist"));

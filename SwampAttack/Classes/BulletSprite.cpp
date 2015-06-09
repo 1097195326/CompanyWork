@@ -13,7 +13,7 @@
 BulletSprite::BulletSprite()
 {
     init();
-    initWithFile(ImagePath("dandao.png"));
+    
     
     
     scheduleUpdate();
@@ -26,6 +26,9 @@ BulletSprite::~BulletSprite()
 void BulletSprite::setModel(Bullet *bullet)
 {
     m_model = bullet;
+    std::string dandao = m_model->getModelId();
+    
+    initWithFile(ImagePath(dandao));
     
 }
 void BulletSprite::update(float data)

@@ -83,7 +83,7 @@ void HumanSprite::setModel(Human *human)
     
     m_actionData["runAction"] = runAction;
     
-    _G_V->addChild(this,1);
+    _G_V->addChild(this,4);
 }
 void HumanSprite::update(float data)
 {
