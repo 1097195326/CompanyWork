@@ -23,6 +23,7 @@ PropManager::PropManager()
         Prop * prop = new Prop(data[propId]);
         m_propData[propId] = prop;
         if (prop->isTakeUp()) {
+//            log("prop take up index :%d",prop->getTakeUpIndex());
             m_takeUpPropData[propId] = prop;
         }
     }
@@ -78,15 +79,15 @@ int PropManager::getTakeUpPropNum()
 Prop * PropManager::getTakeUpPropByIndex(int index)
 {
     Prop * prop = NULL;
-    int i = 0;
+//    int i = 0;
     std::map<string,Prop *>::iterator iter;
     for (iter = m_takeUpPropData.begin(); iter != m_takeUpPropData.end(); ++iter)
     {
-        if (index == i) {
+        if (index == iter->second->getTakeUpIndex()) {
             prop = iter->second;
             break;
         }
-        ++i;
+//        ++i;
     }
     return prop;
 }
@@ -113,7 +114,7 @@ void PropManager::takeUpProp(string propId)
     Prop * prop = m_propData[propId];
     if (index >= 4)
     {
-        Prop * lastProp = getTakeUpPropByIndex(3);
+        Prop * lastProp = getTakeUpPropByIndex(4);
         takeDownProp(lastProp->getId());
         
         prop->takeUp(index);
@@ -121,9 +122,16 @@ void PropManager::takeUpProp(string propId)
         m_propIcons[index -1]->reSetIcon(prop);
     }else
     {
-        prop->takeUp(index + 1);
-        m_takeUpPropData[propId] = prop;
-        m_propIcons[index]->reSetIcon(prop);
+        for (int i = 0; i < 4; ++i)
+        {
+            if (!m_propIcons[i]->isHaveProp())
+            {
+                prop->takeUp(i + 1);
+                m_takeUpPropData[propId] = prop;
+                m_propIcons[i]->reSetIcon(prop);
+                break;
+            }
+        }
     }
     
 }
@@ -145,7 +153,7 @@ void PropManager::setShopView(Sprite * propItemSprite)
     m_propIcons.reserve(4);
     for (int i = 0; i < 4; i++)
     {
-        Prop * prop = getTakeUpPropByIndex(i);
+        Prop * prop = getTakeUpPropByIndex(i+1);
         ShopPropIcon * icon = new ShopPropIcon(i);
         icon->reSetIcon(prop);
         propItemSprite->addChild(icon);

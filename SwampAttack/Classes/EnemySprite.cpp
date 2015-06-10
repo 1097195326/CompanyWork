@@ -29,6 +29,7 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
     guaiwuSprite = Sprite::create();
     guaiwuSprite->setPosition(Vec2(0, h * 0.5));
     addChild(guaiwuSprite);
+//    guaiwuSprite->setScale(1.2);
     
     buffSprite = Sprite::create();
     buffSprite->setPosition(Vec2(0, h * 0.5));

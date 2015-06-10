@@ -24,6 +24,7 @@ GunManager::GunManager()
         m_gunData[gunId] = gun;
         if (gun->isTakeUp())
         {
+//            log("gun take up index :%d",gun->getTakeUpIndex());
             m_takeUpGunData[gunId] = gun;
         }
     }
@@ -65,15 +66,15 @@ int GunManager::getTakeUpGunNum()
 Gun * GunManager::getTakeUpGunByIndex(int index)
 {
     Gun * gun = NULL;
-    int i = 0;
+//    int i = 0;
     std::map<string,Gun *>::iterator iter;
     for (iter = m_takeUpGunData.begin(); iter != m_takeUpGunData.end(); ++iter)
     {
-        if (index == i) {
+        if (index == iter->second->getTakeUpIndex()) {
             gun = iter->second;
             break;
         }
-        ++i;
+//        ++i;
     }
     return gun;
 }
@@ -96,7 +97,7 @@ void GunManager::takeUpGun(string gunId)
     Gun * gun = m_gunData[gunId];
     if (index >= 3)
     {
-        Gun * lastGun = getTakeUpGunByIndex(2);
+        Gun * lastGun = getTakeUpGunByIndex(3);
         takeDownGun(lastGun->getId());
         
         gun->takeUp(index);
@@ -104,9 +105,16 @@ void GunManager::takeUpGun(string gunId)
         m_GunIcons[index -1]->reSetIcon(gun);
     }else
     {
-        gun->takeUp(index + 1);
-        m_takeUpGunData[gunId] = gun;
-        m_GunIcons[index]->reSetIcon(gun);
+        for (int i = 0; i < 3; ++i)
+        {
+            if (!m_GunIcons[i]->isHaveGun())
+            {
+                gun->takeUp(i + 1);
+                m_takeUpGunData[gunId] = gun;
+                m_GunIcons[i]->reSetIcon(gun);
+                break;
+            }
+        }
     }
     
 }
@@ -161,7 +169,7 @@ void GunManager::setShopView(Sprite * gunItemSprite)
     m_GunIcons.reserve(3);
     for (int i = 0; i < 3; i++)
     {
-        Gun * gun = getTakeUpGunByIndex(i);
+        Gun * gun = getTakeUpGunByIndex(i+1);
         ShopGunIcon * icon = new ShopGunIcon(i);
         icon->reSetIcon(gun);
         gunItemSprite->addChild(icon);

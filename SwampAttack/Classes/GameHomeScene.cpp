@@ -10,6 +10,8 @@
 #include "GameMapScene.h"
 #include "GameShopScene.h"
 
+#include "GameShowLevelupLayer.h"
+
 
 Scene * GameHomeScene::scene()
 {
@@ -65,7 +67,9 @@ void GameHomeScene::toShopScene(cocos2d::Ref *pSender)
 }
 void GameHomeScene::settingFunc(cocos2d::Ref *pSender)
 {
-    
+//    GameShowLevelupLayer * levelUp = new GameShowLevelupLayer("qiang3");
+//    levelUp->autorelease();
+//    addChild(levelUp);
 }
 void GameHomeScene::jiangbeiFunc(cocos2d::Ref *pSender)
 {

@@ -11,6 +11,7 @@
 #include "PropManager.h"
 #include "DefenseBuildingManager.h"
 #include "GameUser.h"
+#include "GameShowLevelupLayer.h"
 
 
 ShopGunItemScrollHeadler::ShopGunItemScrollHeadler(int index)
@@ -66,6 +67,7 @@ void ShopGunItemScrollHeadler::initGunView()
         m_upGradeButton->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.15);
         Menu * buttonMenu = Menu::create(m_buyButton,m_upGradeButton, NULL);
         buttonMenu->setPosition(Point::ZERO);
+//        buttonMenu->setSwallowsTouches(false);
         addChild(buttonMenu);
         
         m_takeUpButton = MenuItemImage::create(ImagePath("shop_zhuanbei.png"),
@@ -216,6 +218,9 @@ void ShopGunItemScrollHeadler::upGrade(Ref * pSender)
     {
         m_shopScene->updateGoldView();
         updateGunView();
+        GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(gun->getModelId());
+        showLayer->autorelease();
+        m_shopScene->addChild(showLayer);
     }else
     {
         

@@ -154,7 +154,7 @@ void Prop::takeUp(int index)
     m_isTakeUp = true;
     m_takeUpIndex = index;
     _G_U->setTakeUpProp(m_id, m_isTakeUp);
-    _G_U->setTakeUpGunIndex(m_id, index);
+    _G_U->setTakeUpPropIndex(m_id, index);
     notify();
 }
 void Prop::takeDown()

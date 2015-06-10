@@ -11,7 +11,7 @@
 #include "PropManager.h"
 
 
-ShopPropIcon::ShopPropIcon(int index)
+ShopPropIcon::ShopPropIcon(int index):m_prop(NULL)
 {
     init();
     
@@ -46,15 +46,27 @@ void ShopPropIcon::reSetIcon(Prop * prop)
     m_prop = prop;
     detachSubject();
     setSubject(m_prop);
-    string gunModelId = m_prop->getModelId();
     
+    Sprite * noIcon = Sprite::create(ImagePath("shop_No_icon.png"));
+    noIcon->setPosition(Vec2(m_iconBg->getContentSize().width * 0.23, m_iconBg->getContentSize().height * 0.33));
+    m_icon->addChild(noIcon);
+    
+    string gunModelId = m_prop->getModelId();
     Sprite * gunIcon = Sprite::create(ImagePath(StringUtils::format("%s_icon.png",gunModelId.c_str())));
     m_icon->addChild(gunIcon);
+    gunIcon->setScale(0.6);
     m_num = Label::createWithTTF("", "fonts/Arial Black.ttf", 18);
     m_icon->addChild(m_num);
     m_num->setString(StringUtils::format("%d",m_prop->getNum()));
     m_num->setPosition(Vec2(m_iconBg->getContentSize().width * 0.2, -m_iconBg->getContentSize().height * 0.3));
     m_num->setColor(Color3B(0, 0, 0));
+}
+bool ShopPropIcon::isHaveProp()
+{
+    if (m_prop) {
+        return true;
+    }
+    return false;
 }
 void ShopPropIcon::updateData()
 {

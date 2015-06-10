@@ -11,6 +11,7 @@
 #include "PropManager.h"
 #include "DefenseBuildingManager.h"
 #include "GameUser.h"
+#include "GameShowLevelupLayer.h"
 
 
 ShopBuildingItemScrollHeadler::ShopBuildingItemScrollHeadler(int index)
@@ -156,6 +157,9 @@ void ShopBuildingItemScrollHeadler::upGrade(Ref * pSender)
         m_shopScene->updateGoldView();
         building->addStrengthenLevel();
         updateDefenseView();
+        GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(building->getModelId());
+        showLayer->autorelease();
+        m_shopScene->addChild(showLayer);
     }else
     {
         

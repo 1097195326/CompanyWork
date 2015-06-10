@@ -8,6 +8,17 @@
 
 #include "BaseUtil.h"
 
+ActionInterval * BaseUtil::makeAnimateWithSprite(const std::string & name, int count)
+{
+    auto animation = Animation::create();
+    for (int i = 1; i <= count; ++i)
+    {
+        std::string fileName = StringUtils::format("image/%s%00004d.png",name.c_str(),i);
+        animation->addSpriteFrameWithFile(fileName);
+    }
+    animation->setDelayPerUnit(0.08);
+    return Animate::create(animation);
+}
 ActionInterval * BaseUtil::makeAnimateWithNameAndIndex(const std::string & name, int count)
 {
     auto spriteFrameCache = SpriteFrameCache::getInstance();

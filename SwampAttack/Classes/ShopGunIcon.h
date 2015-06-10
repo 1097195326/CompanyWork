@@ -31,6 +31,7 @@ public:
     ~ShopGunIcon();
     void    updateData();
     void    reSetIcon(Gun * gun);
+    bool    isHaveGun();
     
 };
 

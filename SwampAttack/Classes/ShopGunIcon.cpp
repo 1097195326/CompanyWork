@@ -10,7 +10,7 @@
 #include "GunManager.h"
 
 
-ShopGunIcon::ShopGunIcon(int index)
+ShopGunIcon::ShopGunIcon(int index):m_gun(NULL)
 {
     init();
     
@@ -51,15 +51,28 @@ void ShopGunIcon::reSetIcon(Gun *gun)
     m_gun = gun;
     detachSubject();
     setSubject(m_gun);
-    string gunModelId = m_gun->getModelId();
     
+    Sprite * noIcon = Sprite::create(ImagePath("shop_No_icon.png"));
+    noIcon->setPosition(Vec2(m_iconBg->getContentSize().width * 0.23, m_iconBg->getContentSize().height * 0.33));
+    m_icon->addChild(noIcon);
+    
+    string gunModelId = m_gun->getModelId();
     Sprite * gunIcon = Sprite::create(ImagePath(StringUtils::format("%s_icon.png",gunModelId.c_str())));
     m_icon->addChild(gunIcon);
+    gunIcon->setScale(0.6);
     m_bullets = Label::createWithTTF("", "fonts/Arial Black.ttf", 17);
     m_icon->addChild(m_bullets);
     m_bullets->setString(StringUtils::format("%d",m_gun->getTotalBulletNum()));
     m_bullets->setPosition(Vec2(m_iconBg->getContentSize().width * 0.2, -m_iconBg->getContentSize().height * 0.3));
     m_bullets->setColor(Color3B(0, 0, 0));
+    
+}
+bool ShopGunIcon::isHaveGun()
+{
+    if (m_gun) {
+        return true;
+    }
+    return false;
 }
 void ShopGunIcon::updateData()
 {

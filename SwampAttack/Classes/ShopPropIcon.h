@@ -18,7 +18,7 @@ class ShopPropIcon : public Sprite, public GameObserver {
 private:
     EventListenerTouchOneByOne * m_listener;
     Sprite *    m_iconBg;
-    Prop    *   m_prop = NULL;
+    Prop    *   m_prop;
     Sprite  *   m_icon;
     Label   *   m_num;
 private:
@@ -31,6 +31,7 @@ public:
     ~ShopPropIcon();
     void    updateData();
     void    reSetIcon(Prop * prop);
+    bool    isHaveProp();
     
 };
 
