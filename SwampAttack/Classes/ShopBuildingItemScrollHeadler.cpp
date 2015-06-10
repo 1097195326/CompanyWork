@@ -7,8 +7,8 @@
 //
 
 #include "ShopBuildingItemScrollHeadler.h"
-#include "GunManager.h"
-#include "PropManager.h"
+//#include "GunManager.h"
+//#include "PropManager.h"
 #include "DefenseBuildingManager.h"
 #include "GameUser.h"
 #include "GameShowLevelupLayer.h"

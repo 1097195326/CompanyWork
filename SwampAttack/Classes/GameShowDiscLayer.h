@@ -17,12 +17,13 @@ private:
 public:
     //    static Scene * scene(RenderTexture * rt);
     //    CREATE_FUNC(GamePauseScene);
-    GameShowDiscLayer();
+    GameShowDiscLayer(std::string name,std::string disc,Vec2 position);
     ~GameShowDiscLayer();
     
 //    void    continueGame(Ref * pSender);
     
     bool    touchBegan(Touch * touch, Event * event);
+    void    touchEnd(Touch * touch, Event * event);
 };
 
 

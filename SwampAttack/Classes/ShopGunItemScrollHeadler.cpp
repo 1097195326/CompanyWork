@@ -8,11 +8,12 @@
 
 #include "ShopGunItemScrollHeadler.h"
 #include "GunManager.h"
-#include "PropManager.h"
-#include "DefenseBuildingManager.h"
+//#include "PropManager.h"
+//#include "DefenseBuildingManager.h"
 #include "GameUser.h"
 #include "GameShowLevelupLayer.h"
-
+#include "GameSprite.h"
+#include "GameShowDiscLayer.h"
 
 ShopGunItemScrollHeadler::ShopGunItemScrollHeadler(int index)
 {
@@ -39,9 +40,16 @@ void ShopGunItemScrollHeadler::initGunView()
     {
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg1.png"));
         addChild(itemBg);
-        Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
+        
+        GameSprite * iconBg = new GameSprite(ImagePath("shopItemIconBg.png"));
+        iconBg->autorelease();
+        iconBg->m_touchMeCall = CC_CALLBACK_2(ShopGunItemScrollHeadler::showDiscView, this);
+        
+//        Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
         iconBg->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, 0);
         addChild(iconBg);
+        
+        
         
         
         string gunModelId = gun->getModelId();
@@ -257,5 +265,17 @@ void ShopGunItemScrollHeadler::takeUp(cocos2d::Ref *pSender)
 {
     Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
     GunManager::getInstance()->takeUpGun(gun->getId());
+    
+}
+void ShopGunItemScrollHeadler::showDiscView(cocos2d::Touch *touch, cocos2d::Event *event)
+{
+    Vec2 point = touch->getLocation();
+//    log("touch me x:%f,y:%f",point.x,point.y);
+    Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
+    std::string name = gun->getModelId();
+    std::string disc = gun->getWeaponDescription();
+    GameShowDiscLayer * showLayer = new GameShowDiscLayer(name,disc,point);
+    showLayer->autorelease();
+    m_shopScene->addChild(showLayer);
     
 }

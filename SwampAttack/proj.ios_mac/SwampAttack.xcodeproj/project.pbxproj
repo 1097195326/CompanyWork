@@ -124,9 +124,9 @@
 		8DD5D0B71B144A1E00AA2A07 /* CrumpEnemySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5D0B51B144A1E00AA2A07 /* CrumpEnemySprite.cpp */; };
 		8DD5F2F51B27DE4800DC5DB9 /* GameShowDiscLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5F2F31B27DE4800DC5DB9 /* GameShowDiscLayer.cpp */; };
 		8DD5F2F81B2806B100DC5DB9 /* GameShowLevelupLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5F2F61B2806B100DC5DB9 /* GameShowLevelupLayer.cpp */; };
+		8DD5F2FB1B283FE500DC5DB9 /* GameSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5F2F91B283FE500DC5DB9 /* GameSprite.cpp */; };
 		8DD601131B1810DC005E811B /* MapScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD601111B1810DC005E811B /* MapScrollHeadler.cpp */; };
 		8DD7765D1B0DCF8700B8DE0C /* GamePauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7765B1B0DCF8700B8DE0C /* GamePauseScene.cpp */; };
-		8DD7D5AB1B0199D100DD3711 /* ShopItemScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7D5A91B0199D100DD3711 /* ShopItemScrollHeadler.cpp */; };
 		8DD7F1F71AD3737B00D86BC5 /* EnemyGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */; };
 		8DD87E641B15760D00FC073A /* ShopGunIcon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD87E621B15760D00FC073A /* ShopGunIcon.cpp */; };
 		8DD87E671B15A26900FC073A /* ShopGunItemScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD87E651B15A26900FC073A /* ShopGunItemScrollHeadler.cpp */; };
@@ -384,12 +384,12 @@
 		8DD5F2F41B27DE4800DC5DB9 /* GameShowDiscLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameShowDiscLayer.h; sourceTree = "<group>"; };
 		8DD5F2F61B2806B100DC5DB9 /* GameShowLevelupLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameShowLevelupLayer.cpp; sourceTree = "<group>"; };
 		8DD5F2F71B2806B100DC5DB9 /* GameShowLevelupLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameShowLevelupLayer.h; sourceTree = "<group>"; };
+		8DD5F2F91B283FE500DC5DB9 /* GameSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSprite.cpp; sourceTree = "<group>"; };
+		8DD5F2FA1B283FE500DC5DB9 /* GameSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSprite.h; sourceTree = "<group>"; };
 		8DD601111B1810DC005E811B /* MapScrollHeadler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapScrollHeadler.cpp; sourceTree = "<group>"; };
 		8DD601121B1810DC005E811B /* MapScrollHeadler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapScrollHeadler.h; sourceTree = "<group>"; };
 		8DD7765B1B0DCF8700B8DE0C /* GamePauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamePauseScene.cpp; sourceTree = "<group>"; };
 		8DD7765C1B0DCF8700B8DE0C /* GamePauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePauseScene.h; sourceTree = "<group>"; };
-		8DD7D5A91B0199D100DD3711 /* ShopItemScrollHeadler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopItemScrollHeadler.cpp; sourceTree = "<group>"; };
-		8DD7D5AA1B0199D100DD3711 /* ShopItemScrollHeadler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopItemScrollHeadler.h; sourceTree = "<group>"; };
 		8DD7F1F51AD3737B00D86BC5 /* EnemyGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyGroup.cpp; sourceTree = "<group>"; };
 		8DD7F1F61AD3737B00D86BC5 /* EnemyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyGroup.h; sourceTree = "<group>"; };
 		8DD87E621B15760D00FC073A /* ShopGunIcon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopGunIcon.cpp; sourceTree = "<group>"; };
@@ -823,6 +823,8 @@
 				8DD2156D1B16F4480090EEEB /* GameHorizontalScrollHeadlerView.h */,
 				8DD215691B16E7160090EEEB /* GameScrollHeadlerView.cpp */,
 				8DD2156A1B16E7160090EEEB /* GameScrollHeadlerView.h */,
+				8DD5F2F91B283FE500DC5DB9 /* GameSprite.cpp */,
+				8DD5F2FA1B283FE500DC5DB9 /* GameSprite.h */,
 			);
 			name = baseUI;
 			sourceTree = "<group>";
@@ -918,8 +920,6 @@
 			children = (
 				8DD8C1301AFCBF6300872AA2 /* ShopSelectMenuView.cpp */,
 				8DD8C1311AFCBF6300872AA2 /* ShopSelectMenuView.h */,
-				8DD7D5A91B0199D100DD3711 /* ShopItemScrollHeadler.cpp */,
-				8DD7D5AA1B0199D100DD3711 /* ShopItemScrollHeadler.h */,
 				8DD87E651B15A26900FC073A /* ShopGunItemScrollHeadler.cpp */,
 				8DD87E661B15A26900FC073A /* ShopGunItemScrollHeadler.h */,
 				8DD87E681B15A28000FC073A /* ShopPropItemScrollHeadler.cpp */,
@@ -1221,6 +1221,7 @@
 				8DC3527B1ADBB44400E6A9C2 /* GameLoading.cpp in Sources */,
 				8DC6A5CE1ADFD75B002A6159 /* HumanWaitState.cpp in Sources */,
 				8DC430A31AC8FF2A00AB1665 /* GameMap.cpp in Sources */,
+				8DD5F2FB1B283FE500DC5DB9 /* GameSprite.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				8DC10AB61AC3D6C7004F7DE2 /* Human.cpp in Sources */,
 				D8D673AF1B1C098D004C463F /* GameOverScene.cpp in Sources */,
@@ -1229,7 +1230,6 @@
 				8DD8C12F1AFCB81C00872AA2 /* SelectMenuView.cpp in Sources */,
 				8DD88E7A1B2598240072688E /* DefenseBuilding3.cpp in Sources */,
 				8DD87E671B15A26900FC073A /* ShopGunItemScrollHeadler.cpp in Sources */,
-				8DD7D5AB1B0199D100DD3711 /* ShopItemScrollHeadler.cpp in Sources */,
 				8DD5D0B41B1419AF00AA2A07 /* EnemyProgressBar.cpp in Sources */,
 				8DC10AB91AC3D6E2004F7DE2 /* Bullet.cpp in Sources */,
 				8DD7765D1B0DCF8700B8DE0C /* GamePauseScene.cpp in Sources */,

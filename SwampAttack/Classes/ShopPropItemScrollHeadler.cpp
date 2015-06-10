@@ -9,7 +9,7 @@
 #include "ShopPropItemScrollHeadler.h"
 //#include "GunManager.h"
 #include "PropManager.h"
-#include "DefenseBuildingManager.h"
+//#include "DefenseBuildingManager.h"
 #include "GameUser.h"
 
 
