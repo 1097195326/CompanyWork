@@ -38,7 +38,7 @@ Scene * GameFightScene::scene()
     scene->addChild(layer);
     return scene;
 }
-Layer * GameFightScene::getInstance()
+GameFightScene * GameFightScene::getInstance()
 {
     return g_f_layer;
 }
@@ -106,7 +106,23 @@ void GameFightScene::pauseGame(cocos2d::Ref *pSender)
     pauseScene->autorelease();
     addChild(pauseScene,10);
 }
-
+void GameFightScene::addBulletTexiao(cocos2d::Vec2 position)
+{
+    Sprite * tx = Sprite::create();
+    tx->setPosition(position);
+    addChild(tx,640);
+    ActionInterval * ac = BaseUtil::makeAnimateWithNameAndIndex("bullet_hit", 6);
+    tx->runAction(Sequence::create(ac,
+                                   CallFuncN::create(CC_CALLBACK_1(GameFightScene::removeBulletTexiao, this)),
+                                   NULL));
+    
+}
+void GameFightScene::removeBulletTexiao(cocos2d::Node *pSender)
+{
+    Sprite * sp = (Sprite *)pSender;
+    sp->stopAllActions();
+    sp->removeFromParentAndCleanup(true);
+}
 bool GameFightScene::touchBegan(Touch *touch, Event *event)
 {
     _G_D->onTouchBegin(touch, event);

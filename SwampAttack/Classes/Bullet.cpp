@@ -9,10 +9,14 @@
 #include "Bullet.h"
 #include "GameMapManager.h"
 #include "BulletSprite.h"
+#include "EnemyManager.h"
+#include "House.h"
 
 #define PAI 3.1415f
 
-Bullet::Bullet(BulletParameter bp):m_bp(bp)
+Bullet::Bullet(BulletParameter bp):
+m_bp(bp),
+m_enemy(NULL)
 {
     m_damage = bp.m_damage;
     if(random(1, 100) < bp.m_critRate * 100)
@@ -48,8 +52,46 @@ void Bullet::gameLoop(float data)
     if (m_state == _b_moving)
     {
         m_Point = m_Point + m_speed * 1;
-        if (m_Point.distanceSquared(m_StartPoint) >= m_toPoint.distanceSquared(m_StartPoint)) {
+        if (m_Point.distanceSquared(m_StartPoint) >= m_toPoint.distanceSquared(m_StartPoint))
+        {
             m_state = _b_arrive;
+        }
+    }
+    if (m_state == _b_arrive) {
+        EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
+        if (!enemyGroup) {
+            return;
+        }
+        std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
+        if (!enemyData.empty())
+        {
+            std::list<Enemy*>::iterator e_iter;
+            for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
+            {
+                Enemy * enemy = *e_iter;
+                Rect b_rect = getRect();
+                if (isFireEnemy() &&
+                    !enemy->isDied() &&
+                    enemy->isContainsPoint(b_rect))
+                {
+//                    enemy->hurt(m_damage,m_bp.m_underAttackAction);
+                    if (m_enemy && m_enemy->getPosition().y > enemy->getPosition().y)
+                    {
+                        m_enemy = enemy;
+                    }else
+                    {
+                        m_enemy = enemy;
+                    }
+                }else if (isFireHouse())
+                {
+                    House::getInstance()->hurt(m_damage);
+                }
+            }
+            if (m_enemy)
+            {
+                m_enemy->hurt(m_damage,m_bp.m_underAttackAction);
+                m_enemy = NULL;
+            }
         }
     }
 }

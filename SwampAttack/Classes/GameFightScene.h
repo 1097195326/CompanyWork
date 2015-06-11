@@ -19,7 +19,7 @@ private:
     
 public:
     static  Scene * scene();
-    static  Layer * getInstance();
+    static  GameFightScene * getInstance();
     GameFightScene();
     ~GameFightScene();
     
@@ -30,6 +30,8 @@ public:
     void    touchEnd(Touch * touch, Event * event);
     
     void    pauseGame(Ref * pSender);
+    void    addBulletTexiao(Vec2 position);
+    void    removeBulletTexiao(Node * pSender);
 };
 
 #endif /* defined(__SwampAttack__GameFightScene__) */

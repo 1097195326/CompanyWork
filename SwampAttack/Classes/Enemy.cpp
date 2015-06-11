@@ -20,7 +20,7 @@ Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false),m_isWeak(false)
     switch (m_actionType) {
         case 1:
         {
-            m_point = gameMap->enemy_start_buttomPoint + Vec2(random(30, 200), random(0, gameMap->enemy_start_upline));
+            m_point = gameMap->enemy_start_buttomPoint + Vec2(0, random(0, gameMap->enemy_start_upline));
             if (m_point.y > gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upline)
             {
                 m_targetPoint.y = gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upline;
@@ -36,7 +36,7 @@ Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false),m_isWeak(false)
             break;
         case 2:
         {
-            m_point = gameMap->flyEnemy_start_buttomPoint + Vec2(random(20, 200), random(0, gameMap->flyEnemy_start_upline));
+            m_point = gameMap->flyEnemy_start_buttomPoint + Vec2(0, random(0, gameMap->flyEnemy_start_upline));
             m_targetPoint = gameMap->flyEnemy_target_buttomPoint;
         }
             break;

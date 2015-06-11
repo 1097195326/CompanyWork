@@ -38,6 +38,7 @@ void BulletSprite::update(float data)
     }else if (m_model->isArrive())
     {
         m_model->arriveCall();
+        _G_V->addBulletTexiao(m_model->getPosition());
     }else if (m_model->isDie())
     {
         m_model->setCanDelete();

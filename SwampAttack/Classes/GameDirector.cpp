@@ -97,9 +97,8 @@ void GameDirector::checkCross()
         return;
     }
     std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
-    std::list<Bullet*> bulletData = BulletManager::getInstance()->getBulletData();
+//    std::list<Bullet*> bulletData = BulletManager::getInstance()->getBulletData();
     std::map<string,DefenseBuilding *> buildingData = DefenseBuildingManager::getInstance()->getBuildingData();
-//    std::map<string,Prop *> propData = PropManager::getInstance()->getTakeUpProp();
     
     if (!enemyData.empty())
     {
@@ -111,26 +110,26 @@ void GameDirector::checkCross()
         {
             Enemy * enemy = *e_iter;
             // bullet
-            if (!bulletData.empty())
-            {
-                for (b_iter = bulletData.begin(); b_iter != bulletData.end(); ++b_iter)
-                {
-                    
-                    Bullet * bullet = *b_iter;
-                    Rect b_rect = bullet->getRect();
-                    if (bullet->isArrive() &&
-                        bullet->isFireEnemy() &&
-                        !enemy->isDied() &&
-                        enemy->isContainsPoint(b_rect))
-                    {
-                        enemy->hurt(bullet->getDamage(),bullet->getAttackIndex());
-                    }else if (bullet->isArrive() && bullet->isFireHouse())
-                    {
-                        House::getInstance()->hurt(bullet->getDamage());
-                    }
-                }
-            }
-            
+//            if (!bulletData.empty())
+//            {
+//                for (b_iter = bulletData.begin(); b_iter != bulletData.end(); ++b_iter)
+//                {
+//                    
+//                    Bullet * bullet = *b_iter;
+//                    Rect b_rect = bullet->getRect();
+//                    if (bullet->isArrive() &&
+//                        bullet->isFireEnemy() &&
+//                        !enemy->isDied() &&
+//                        enemy->isContainsPoint(b_rect))
+//                    {
+//                        enemy->hurt(bullet->getDamage(),bullet->getAttackIndex());
+//                    }else if (bullet->isArrive() && bullet->isFireHouse())
+//                    {
+//                        House::getInstance()->hurt(bullet->getDamage());
+//                    }
+//                }
+//            }
+        
             // defense
             if (!buildingData.empty())
             {

@@ -69,6 +69,8 @@ enum BulletState
     _b_canDelete,
 };
 
+class Enemy;
+
 class Bullet : public GameObject {
 private:
     BulletParameter m_bp;
@@ -80,6 +82,7 @@ private:
     float   m_angle;
     
     BulletState m_state;
+    Enemy   * m_enemy;
     
 private:
     void    setView();
