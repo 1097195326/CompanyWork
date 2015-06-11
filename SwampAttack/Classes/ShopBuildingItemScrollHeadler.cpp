@@ -12,7 +12,8 @@
 #include "DefenseBuildingManager.h"
 #include "GameUser.h"
 #include "GameShowLevelupLayer.h"
-
+#include "GameSprite.h"
+#include "GameShowDiscLayer.h"
 
 ShopBuildingItemScrollHeadler::ShopBuildingItemScrollHeadler(int index)
 {
@@ -40,7 +41,12 @@ void ShopBuildingItemScrollHeadler::initDefenseView()
     {
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg1.png"));
         addChild(itemBg);
-        Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
+        
+        GameSprite * iconBg = new GameSprite(ImagePath("shopItemIconBg.png"));
+        iconBg->autorelease();
+        iconBg->m_touchMeCall = CC_CALLBACK_2(ShopBuildingItemScrollHeadler::showDiscView, this);
+        
+//        Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
         iconBg->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, 0);
         addChild(iconBg);
         
@@ -185,5 +191,18 @@ void ShopBuildingItemScrollHeadler::unLock(Ref * pSender)
 }
 void ShopBuildingItemScrollHeadler::buy(Ref * pSender)
 {
+    
+}
+void ShopBuildingItemScrollHeadler::showDiscView(cocos2d::Touch *touch, cocos2d::Event *event)
+{
+    Sprite * icon = (Sprite *) event->getCurrentTarget();
+    Vec2 iconPoint = convertToWorldSpace(icon->getPosition());
+    
+    DefenseBuilding * building = DefenseBuildingManager::getInstance()->getBuildingByIndex(m_index);
+    std::string name = building->getModelId();
+    std::string disc = building->getDefenceDescription();
+    GameShowDiscLayer * showLayer = new GameShowDiscLayer(name,disc,iconPoint);
+    showLayer->autorelease();
+    m_shopScene->addChild(showLayer);
     
 }

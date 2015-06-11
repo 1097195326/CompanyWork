@@ -37,6 +37,7 @@ private:
     void    unLock(Ref * pSender);
     void    buy(Ref * pSender);
     void    takeUp(Ref * pSender);
+    void    showDiscView(Touch * touch, Event * event);
 public:
     void    setGameShopScene(GameShopScene * shopScene);
     ShopPropItemScrollHeadler(int index);

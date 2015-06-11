@@ -14,6 +14,11 @@
 class GameShowDiscLayer : public Layer {
 private:
     EventListenerTouchOneByOne * m_listener;
+    
+    Sprite * bg;
+    LayerColor * layerColor;
+    Vec2    m_point;
+    
 public:
     //    static Scene * scene(RenderTexture * rt);
     //    CREATE_FUNC(GamePauseScene);
@@ -24,6 +29,7 @@ public:
     
     bool    touchBegan(Touch * touch, Event * event);
     void    touchEnd(Touch * touch, Event * event);
+    void    actionEndCall();
 };
 
 

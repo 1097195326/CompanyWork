@@ -11,7 +11,8 @@
 #include "PropManager.h"
 //#include "DefenseBuildingManager.h"
 #include "GameUser.h"
-
+#include "GameSprite.h"
+#include "GameShowDiscLayer.h"
 
 ShopPropItemScrollHeadler::ShopPropItemScrollHeadler(int index)
 {
@@ -38,7 +39,12 @@ void ShopPropItemScrollHeadler::initDaojuView()
     {
         Sprite * itemBg = Sprite::create(ImagePath("shopItemBg1.png"));
         addChild(itemBg);
-        Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
+        
+        GameSprite * iconBg = new GameSprite(ImagePath("shopItemIconBg.png"));
+        iconBg->autorelease();
+        iconBg->m_touchMeCall = CC_CALLBACK_2(ShopPropItemScrollHeadler::showDiscView, this);
+        
+//        Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
         iconBg->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, 0);
         addChild(iconBg);
         
@@ -205,5 +211,18 @@ void ShopPropItemScrollHeadler::takeUp(cocos2d::Ref *pSender)
 {
     Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
     PropManager::getInstance()->takeUpProp(prop->getId());
+    
+}
+void ShopPropItemScrollHeadler::showDiscView(cocos2d::Touch *touch, cocos2d::Event *event)
+{
+    Sprite * icon = (Sprite *) event->getCurrentTarget();
+    Vec2 iconPoint = convertToWorldSpace(icon->getPosition());
+    
+    Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
+    std::string name = prop->getModelId();
+    std::string disc = prop->getItemDestription();
+    GameShowDiscLayer * showLayer = new GameShowDiscLayer(name,disc,iconPoint);
+    showLayer->autorelease();
+    m_shopScene->addChild(showLayer);
     
 }

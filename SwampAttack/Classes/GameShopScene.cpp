@@ -47,7 +47,7 @@ bool GameShopScene::init()
     addChild(bg2);
     Sprite * scrollBg = Sprite::create(ImagePath("shopScrollBg.png"));
     scrollBg->setPosition(bg2->getTextureRect().size.width * 0.5,
-                          bg2->getTextureRect().size.height * 0.368);
+                          bg2->getTextureRect().size.height * 0.36 - 15);
     bg2->addChild(scrollBg);
     
     m_goldLabel = Label::createWithTTF(StringUtils::format("%d",_G_U->getUserGold()),
@@ -100,7 +100,7 @@ bool GameShopScene::init()
         m_scrollViews[i]->initView();
         m_scrollViews[i]->autorelease();
         m_scrollViews[i]->setPosition(bg2->getBoundingBox().origin.x, bg2->getBoundingBox().origin.y);
-        bg2->addChild(m_scrollViews[i]);
+        bg2->addChild(m_scrollViews[i],2);
         m_scrollViews[i]->setScale(0.0001);
     }
 //    m_scrollView = new GameVerticalScrollHeadlerView(800,400,750,210,0);
@@ -118,7 +118,7 @@ bool GameShopScene::init()
     menuView->setSelectSprite("shopItemSelect");
     menuView->setIconSprite("shopItemIcon");
     menuView->checkIndex();
-    menuView->setPosition(bg2->getTextureRect().size.width * 0.5,
+    menuView->setPosition(bg2->getTextureRect().size.width * 0.5 -5,
                           bg2->getTextureRect().size.height * 0.8);
     bg2->addChild(menuView);
     

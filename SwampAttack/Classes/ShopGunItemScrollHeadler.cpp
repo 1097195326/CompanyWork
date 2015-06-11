@@ -269,12 +269,13 @@ void ShopGunItemScrollHeadler::takeUp(cocos2d::Ref *pSender)
 }
 void ShopGunItemScrollHeadler::showDiscView(cocos2d::Touch *touch, cocos2d::Event *event)
 {
-    Vec2 point = touch->getLocation();
-//    log("touch me x:%f,y:%f",point.x,point.y);
+    Sprite * icon = (Sprite *) event->getCurrentTarget();
+    Vec2 iconPoint = convertToWorldSpace(icon->getPosition());
+    
     Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
     std::string name = gun->getModelId();
     std::string disc = gun->getWeaponDescription();
-    GameShowDiscLayer * showLayer = new GameShowDiscLayer(name,disc,point);
+    GameShowDiscLayer * showLayer = new GameShowDiscLayer(name,disc,iconPoint);
     showLayer->autorelease();
     m_shopScene->addChild(showLayer);
     

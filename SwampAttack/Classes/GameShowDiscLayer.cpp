@@ -19,6 +19,8 @@ GameShowDiscLayer::~GameShowDiscLayer()
 GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 position)
 {
     init();
+    m_point = position;
+    
     
     m_listener = EventListenerTouchOneByOne::create();
     m_listener->setSwallowTouches(true);
@@ -27,17 +29,36 @@ GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 posi
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener, this);
     
     
-    LayerColor * layerColor = LayerColor::create(Color4B(0, 0, 0, 0));
+    layerColor = LayerColor::create(Color4B(0, 0, 0, 0));
     addChild(layerColor);
-    layerColor->runAction(FadeTo::create(0.3, 120));
+    layerColor->runAction(FadeTo::create(0.5, 120));
     
-    Sprite * bg = Sprite::create(ImagePath("shop_show_discbg.png"));
+    bg = Sprite::create(ImagePath("shop_show_discbg.png"));
     bg->setPosition(position);
     addChild(bg);
-    bg->setScale(0.1);
-    bg->runAction(Spawn::create(MoveTo::create(0.3,Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+    
+    
+    std::string iconName = StringUtils::format("%s_icon.png",name.c_str());
+    std::string textName = StringUtils::format("%s_name.png",name.c_str());
+    
+    Sprite * iconSpr = Sprite::create(ImagePath(iconName));
+    Sprite * nameSpr = Sprite::create(ImagePath(textName));
+    Label  * discLabel = Label::createWithTTF(disc, "fonts/mimi.ttf", 30);
+    discLabel->setColor(Color3B(0, 0, 0));
+    
+    Size bgSize = bg->getContentSize();
+    iconSpr->setPosition(bgSize.width * 0.21, bgSize.height * 0.75);
+    nameSpr->setPosition(bgSize.width * 0.68, bgSize.height * 0.58);
+    discLabel->setPosition(bgSize.width * 0.5, bgSize.height * 0.37);
+    
+    bg->addChild(iconSpr);
+    bg->addChild(nameSpr);
+    bg->addChild(discLabel);
+    
+    bg->setScale(0.001);
+    bg->runAction(Spawn::create(MoveTo::create(0.5,Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                                                m_visibleOrigin.y + m_visibleSize.height * 0.5)),
-                                ScaleTo::create(0.3, 1),
+                                ScaleTo::create(0.5, 1),
                                 NULL));
     
     
@@ -49,5 +70,19 @@ bool GameShowDiscLayer::touchBegan(Touch *touch, Event *event)
 }
 void GameShowDiscLayer::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 {
+    layerColor->stopAllActions();
+    bg->stopAllActions();
+    layerColor->runAction(FadeTo::create(0.5, 0));
+    bg->runAction(Sequence::create(Spawn::create(MoveTo::create(0.5,m_point),
+                                                ScaleTo::create(0.5, 0.001),
+                                                NULL),
+                                   CallFunc::create(CC_CALLBACK_0(GameShowDiscLayer::actionEndCall, this)),
+                                   NULL
+                                   ));
+}
+void GameShowDiscLayer::actionEndCall()
+{
+    layerColor->stopAllActions();
+    bg->stopAllActions();
     removeFromParentAndCleanup(true);
 }
