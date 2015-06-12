@@ -23,10 +23,13 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
         m_greenBg = Sprite::create(ImagePath("fight_gun_greenBg.png"));
         m_blueBg = Sprite::create(ImagePath("fight_gun_blueBg.png"));
         Sprite * gunIcon = Sprite::create(ImagePath(StringUtils::format("%s_icon.png",m_gun->getModelId().c_str())));
+        m_bulletLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 15);
+//        m_bulletLabel->setColor(Color3B(0, 0, 0));
         
         addChild(m_greenBg);
         addChild(m_blueBg);
         addChild(gunIcon,5);
+        addChild(m_bulletLabel,6);
         
         m_greenBg->setScale(m_iconScale);
         m_blueBg->setScale(m_iconScale);
@@ -36,7 +39,7 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
         m_greenBg->setPosition(iconPoint - Vec2(0, (iconHeight + 10) * (3-iconIndex)) * m_iconScale);
         m_blueBg->setPosition(iconPoint - Vec2(0, (iconHeight + 10) * (3-iconIndex)) * m_iconScale);
         gunIcon->setPosition(iconPoint - Vec2(0, (iconHeight + 10) * (3-iconIndex)) * m_iconScale);
-        
+        m_bulletLabel->setPosition(iconPoint - Vec2(0, (iconHeight + 10) * (3-iconIndex)) * m_iconScale + Vec2(20, -20));
         
         m_listener = EventListenerTouchOneByOne::create();
         m_listener->setSwallowTouches(true);
@@ -111,6 +114,11 @@ void GunSprite::updateData()
         {
             m_blueBg->setLocalZOrder(3);
             m_greenBg->setLocalZOrder(4);
+            if (!m_gun->isDefaultGun())
+            {
+                string ss= StringUtils::format("%d",m_gun->getTotalBulletNum());
+                m_bulletLabel->setString(ss);
+            }
         }
     }else
     {
@@ -123,6 +131,11 @@ void GunSprite::updateData()
         {
             m_blueBg->setLocalZOrder(4);
             m_greenBg->setLocalZOrder(3);
+            if (!m_gun->isDefaultGun())
+            {
+                string ss= StringUtils::format("%d",m_gun->getTotalBulletNum());
+                m_bulletLabel->setString(ss);
+            }
         }
     }
     

@@ -29,11 +29,11 @@ void HumanShootState::Execute(Human * human)
     {
 //        if (human->isShooted())
 //        {
-            if (!human->isHaveBullet())
+            if (human->isHaveBullet())
             {
-//                human->setStateShoot();
-//            }else
-//            {
+                human->setStateShoot();
+            }else
+            {
                 human->changeState(HumanReloadState::getInstance());
             }
 //        }
