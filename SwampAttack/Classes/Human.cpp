@@ -54,6 +54,12 @@ void Human::changeState(State<Human> *state)
 void Human::fire(Touch * touch,Event * event)
 {
     m_fireToPoint = touch->getLocation();
+    GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
+    if (gameMap->m_BulletStartPoint.x > m_fireToPoint.x)
+    {
+        m_touchStatus = _touchEnd;
+        return;
+    }
     if (m_touchStatus == _isTouching)
     {
         return;
@@ -98,10 +104,13 @@ void Human::shootCall()
     bool isHaveBullet = m_gun->fire(m_fireToPoint);
     if (isHaveBullet) {
         //  枪 有子弹 可以继续使用
+        log("shoot call have bullet");
     }else
     {
         // 枪 没有子弹了，请切换到 默认 枪
+        log("shoot call no bullet");
     }
+//    log("shoot call");
     m_status = _h_shooted;
     m_waitingTime = m_gun->getFireWaitingTime();
 }

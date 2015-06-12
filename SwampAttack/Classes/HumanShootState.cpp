@@ -27,16 +27,16 @@ void HumanShootState::Execute(Human * human)
         human->changeState(HumanWaitState::getInstance());
     }else if (human->isTouching())
     {
-        if (human->isShooted())
-        {
-            if (human->isHaveBullet())
+//        if (human->isShooted())
+//        {
+            if (!human->isHaveBullet())
             {
-                human->setStateShoot();
-            }else
-            {
+//                human->setStateShoot();
+//            }else
+//            {
                 human->changeState(HumanReloadState::getInstance());
             }
-        }
+//        }
     }else if (human->isTouchEnd() && human->isShooted())
     {
         human->changeState(HumanWaitState::getInstance());

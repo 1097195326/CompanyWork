@@ -156,10 +156,7 @@ bool Gun::fire(Vec2 position)
 {
     
     GameMap * map = GameMapManager::getInstance()->getGameMap();
-    if (map->m_BulletStartPoint.x > position.x)
-    {
-        return true;
-    }
+    
     --m_bullets;
     if (!m_isDefaultGun) {
         --m_totalBullets;
@@ -183,7 +180,7 @@ bool Gun::fire(Vec2 position)
     
     notify();
     if (m_isDefaultGun) {
-        return true;
+        return m_bullets > 0;
     }
     return m_totalBullets > 0;
 }
