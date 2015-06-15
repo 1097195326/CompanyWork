@@ -14,15 +14,16 @@ ShopSelectMenuView::ShopSelectMenuView(int num):SelectMenuView(num)
 }
 ShopSelectMenuView::~ShopSelectMenuView()
 {
-    
+    if (m_listener) {
+        Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
+    }
 }
 
 void ShopSelectMenuView::setNormalSprite(std::string name)
 {
-    EventListenerTouchOneByOne * m_listener = EventListenerTouchOneByOne::create();
+    m_listener = EventListenerTouchOneByOne::create();
     m_listener->setSwallowTouches(true);
     m_listener->onTouchBegan = CC_CALLBACK_2(ShopSelectMenuView::touchBegan, this);
-    m_listener->onTouchMoved = CC_CALLBACK_2(ShopSelectMenuView::touchMoved,this);
     m_listener->onTouchEnded = CC_CALLBACK_2(ShopSelectMenuView::touchEnd, this);
     
     for (int i = 0; i < m_num; ++i)
@@ -78,7 +79,7 @@ bool ShopSelectMenuView::touchBegan(Touch *touch, Event *event)
     Size size = s->getContentSize();
     Rect r = Rect(0, 0, size.width, size.height);
     if (r.containsPoint(p)) {
-//        log("sprite tag :%d",s->getTag());
+        log("sprite tag :%d",s->getTag());
         return true;
     }
     return false;

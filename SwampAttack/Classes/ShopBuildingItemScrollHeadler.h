@@ -19,6 +19,7 @@ private:
     Label   *   m_buyLabel;
     Label   *   m_upgradeLabel;
     Label   *   m_bulletsLabel;
+    Label   *   m_levelUpLabel;
     
     ProgressBar *   m_progressBar;
     

@@ -74,6 +74,13 @@ void ShopBuildingItemScrollHeadler::initDefenseView()
         upgradeLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.1);
         addChild(upgradeLabel);
         
+        Sprite * levelBg = Sprite::create(ImagePath("shopItemLevelBg.png"));
+        levelBg->setPosition(itemBg->getContentSize().width * 0.13, itemBg->getContentSize().height * 0.18);
+        addChild(levelBg);
+        m_levelUpLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 18);
+        m_levelUpLabel->setPosition(levelBg->getContentSize().width * 0.5, levelBg->getContentSize().height * 0.5);
+        levelBg->addChild(m_levelUpLabel);
+        
         m_progressBar = new ProgressBar("shopItemTiao1.png","shopItemTiao2.png");
         m_progressBar->setBarRight();
         m_progressBar->setPosition(itemBg->getContentSize().width * 0.29, itemBg->getContentSize().height * 0.18);
@@ -135,6 +142,7 @@ void ShopBuildingItemScrollHeadler::updateDefenseView()
         int upgradeGold = building->getStrengthGold();
         
         m_upgradeLabel->setString(StringUtils::format("%d",upgradeGold));
+        m_levelUpLabel->setString(StringUtils::format("LV.%d",(int)level));
         m_progressBar->updatePercent(level/limitLevel * 100);
         
         int userGold = GameUser::getInstance()->getUserGold();

@@ -17,18 +17,19 @@
 
 class ShopGunItemScrollHeadler : public GameScrollHeadler, public GameObserver {
 private:
-    Label   *   m_buyLabel;
-    Label   *   m_upgradeLabel;
-    Label   *   m_bulletsLabel;
-    
-    ProgressBar *   m_progressBar;
-    
     MenuItemImage * m_upGradeButton;
     MenuItemImage * m_unLockButton;
     MenuItemImage * m_buyButton;
     MenuItemImage * m_takeUpButton;
     
+    ProgressBar *   m_progressBar;
+    
     GameShopScene * m_shopScene;
+    
+    Label   *   m_buyLabel;
+    Label   *   m_bulletsLabel;
+    Label   *   m_upgradeLabel;
+    Label   *   m_levelUpLabel;
 private:
     void    initGunView();
     void    updateGunView();

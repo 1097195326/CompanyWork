@@ -13,7 +13,7 @@
 
 class ShopSelectMenuView : public SelectMenuView{
 private:
-    
+    EventListenerTouchOneByOne * m_listener ;
 public:
     ShopSelectMenuView(int num);
     ~ShopSelectMenuView();
