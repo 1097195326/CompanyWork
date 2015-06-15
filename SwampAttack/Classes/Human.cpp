@@ -109,7 +109,11 @@ void Human::shootCall()
     {
         // 枪 没有子弹了，请切换到 默认 枪
 //        log("shoot call no bullet");
-        GunManager::getInstance()->changeGun(defaultGunID);
+        if (!m_gun->isDefaultGun())
+        {
+            GunManager::getInstance()->changeGun(defaultGunID);
+        }
+        
     }
 //    log("shoot call");
     m_status = _h_shooted;
