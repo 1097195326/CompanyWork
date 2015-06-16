@@ -8,12 +8,12 @@
 
 #include "MapGuanqiaButton.h"
 #include "GuanQiaManager.h"
-#include "GameFightScene.h"
-#include "EnemyManager.h"
-#include "GameLoading.h"
-
-
+#include "GameLoadingScene.h"
+//#include "GameFightScene.h"
+//#include "EnemyManager.h"
+//#include "GameLoading.h"
 //#include "GameDirector.h"
+
 
 
 MapGuanqiaButton::MapGuanqiaButton(int sceneIndex, int index):
@@ -70,10 +70,11 @@ void MapGuanqiaButton::pressGuanqiaButtonFunc(cocos2d::Ref *pSender)
     GuanqiaModel * guanQia = GuanQiaManager::getInstance()->getGuanqiaById(m_guanqiaId);
     if (guanQia->isUnlock())
     {
-        GameLoading::loadFrames();
-        GuanQiaManager::getInstance()->setCurrentGuanqiaId(guanQia->getId());
-        EnemyManager::getInstance()->setData(guanQia->getMonsters());
-        Director::getInstance()->replaceScene(GameFightScene::scene());
+        Director::getInstance()->replaceScene(GameLoadingScene::scene(m_guanqiaId));
+//        GameLoading::loadFrames();
+//        GuanQiaManager::getInstance()->setCurrentGuanqiaId(guanQia->getId());
+//        EnemyManager::getInstance()->setData(guanQia->getMonsters());
+//        Director::getInstance()->replaceScene(GameFightScene::scene());
     }else
     {
         log("this guan qia is lcok");

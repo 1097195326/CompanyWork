@@ -24,7 +24,7 @@ SelectMenuView::~SelectMenuView()
 }
 bool SelectMenuView::touchBegan(Touch *touch, Event *event)
 {
-    //    log("touch");
+        log("touch");
     return false;
 }
 void SelectMenuView::touchMoved(Touch *touch, Event *event)

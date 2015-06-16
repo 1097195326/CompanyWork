@@ -125,7 +125,7 @@ void FlyEnemy::setPointState()
     float backLine = m_visibleOrigin.x + m_visibleSize.width * 0.8;
     float frontLine = m_visibleOrigin.x + m_visibleSize.width * 0.4;
     float bottomLine = m_visibleOrigin.y + m_visibleSize.height * 0.3;
-    float upLine = m_visibleOrigin.y + m_visibleSize.height * 0.8;
+    float upLine = m_visibleOrigin.y + m_visibleSize.height * 0.7;
     
     if (m_point.x >= backLine)
     {

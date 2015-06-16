@@ -76,6 +76,7 @@ Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false),m_isWeak(false)
     dlay = 0;
     tatolDlay = random(0, 130) / 100.0f;
     hurtDlay = 0;
+    
 }
 Enemy::~Enemy()
 {

@@ -120,7 +120,7 @@ bool GameShopScene::init()
     menuView->checkIndex();
     menuView->setPosition(bg2->getTextureRect().size.width * 0.5 -5,
                           bg2->getTextureRect().size.height * 0.8);
-    bg2->addChild(menuView);
+    bg2->addChild(menuView,5);
     
     MenuItemImage * homeButton = MenuItemImage::create(ImagePath("shopHomeButton.png"),
                                                        ImagePath("shopHomeButton.png"),

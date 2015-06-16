@@ -89,8 +89,9 @@ void GamePauseScene::continueGame(cocos2d::Ref *pSender)
 }
 void GamePauseScene::restartGame(cocos2d::Ref *pSender)
 {
-    Director::getInstance()->replaceScene(GameFightScene::scene());
     _G_D->restartGame();
+    Director::getInstance()->replaceScene(GameFightScene::scene());
+    
 }
 void GamePauseScene::gotoMap(cocos2d::Ref *pSender)
 {

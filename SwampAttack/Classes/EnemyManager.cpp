@@ -28,6 +28,7 @@ EnemyManager * EnemyManager::getInstance()
 void EnemyManager::reStartGame()
 {
     currentIndex = 0;
+    currentGroup = NULL;
     GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
     setData(guanqia->getMonsters());
     

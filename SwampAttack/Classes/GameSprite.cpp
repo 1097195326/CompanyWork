@@ -38,6 +38,7 @@ bool GameSprite::touchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
     Rect rect = Rect(0, 0, getContentSize().width, getContentSize().height);
     if (rect.containsPoint(point))
     {
+//        log("game sprite touch");
         m_isTouchMe = true;
         return true;
     }

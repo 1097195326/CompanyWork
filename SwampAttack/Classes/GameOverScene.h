@@ -11,19 +11,18 @@
 
 #include "BaseCode.h"
 
-enum GameOverStatus
-{
-    o_win,
-    o_loss,
-};
+
 class GameOverScene : public Layer {
 private:
     GameOverStatus  m_overStatus;
+    EventListenerTouchOneByOne * m_listener;
 public:
-    static Scene * scene(GameOverStatus status);
-    GameOverScene(GameOverStatus status);
+    static Scene * scene(GameOverStatus status, RenderTexture * rt);
+    GameOverScene(GameOverStatus status,RenderTexture * rt);
+    ~GameOverScene();
     
     bool init();
+    bool    touchBegan(Touch * touch, Event * event);
     
     void    nextGuanqia(Ref * pSender);
     void    restartGame(Ref * pSender);

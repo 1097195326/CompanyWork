@@ -16,6 +16,7 @@
 #include "GameOverScene.h"
 #include "GameBuffManager.h"
 
+#include "GameFightScene.h"
 
 GameDirector::GameDirector()
 {
@@ -68,14 +69,16 @@ void GameDirector::gameLoop(float data)
     if (EnemyManager::getInstance()->isOver() || House::getInstance()->isOver()) {
         clearStatus();
         m_status |= s_over;
-        GameOverStatus status;
+        
         if (House::getInstance()->isOver()) {
-            status = o_loss;
+            m_overStatus = o_loss;
         }else
         {
-            status = o_win;
+            m_overStatus = o_win;
         }
-        Director::getInstance()->replaceScene(GameOverScene::scene(status));
+        notify();
+//        RenderTexture * rt = _G_V->getFightSceneTex();
+//        Director::getInstance()->replaceScene(GameOverScene::scene(status,NULL));
     }
 }
 void GameDirector::onTouchBegin(cocos2d::Touch *touch, cocos2d::Event *event)
@@ -172,8 +175,8 @@ void GameDirector::startGame()
 }
 void GameDirector::restartGame()
 {
-    clearStatus();
-    m_status |= s_run ;
+//    clearStatus();
+//    m_status |= s_run ;
     
     EnemyManager::getInstance()->reStartGame();
     
@@ -193,7 +196,10 @@ void GameDirector::stopGame()
     clearStatus();
     m_status |= s_stop ;
 }
-
+GameOverStatus GameDirector::getOverStatus()
+{
+    return m_overStatus;
+}
 bool GameDirector::isOver()
 {
     return m_status & s_over;
