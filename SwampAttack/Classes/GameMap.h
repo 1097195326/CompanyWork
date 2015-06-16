@@ -40,9 +40,9 @@ public:
     
     Vec2 fightScene_HouseSprite_Position = {m_visibleOrigin.x + 150 ,m_visibleOrigin.y + 240};
     Vec2 fightScene_HouseBar_Position = {m_visibleOrigin.x + 300 ,m_visibleOrigin.y + m_visibleSize.height - 50};
-    Vec2 fightScene_EnemyBar_Position = {m_visibleOrigin.x + m_visibleSize.width - 300 , m_visibleOrigin.y + m_visibleSize.height - 50};
+    Vec2 fightScene_EnemyBar_Position = {m_visibleOrigin.x + m_visibleSize.width - 230 , m_visibleOrigin.y + m_visibleSize.height - 50};
     
-    Vec2 fightScene_Bullet_Position = {m_visibleOrigin.x +510 ,m_visibleOrigin.y + m_visibleSize.height - 120};
+    Vec2 fightScene_Bullet_Position = {m_visibleOrigin.x +510 ,m_visibleOrigin.y + m_visibleSize.height - 100};
     Vec2 fightScene_gunIcon_Position = {m_visibleOrigin.x +40 ,m_visibleOrigin.y + m_visibleSize.height - 140};
     
     Vec2 fightScene_PropIcon_Position = {m_visibleOrigin.x + m_visibleSize.width -60,m_visibleOrigin.y + m_visibleSize.height - 120};

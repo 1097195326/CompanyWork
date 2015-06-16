@@ -26,7 +26,11 @@ extern  Vec2    m_visibleOrigin;
 //Vec2 visibleOrigin;
 
 // get GameDirector
-
+enum GameOverStatus
+{
+    o_win,
+    o_loss,
+};
 
 //------------
 #define ImagePath( name ) std::string("image/")+std::string( name )

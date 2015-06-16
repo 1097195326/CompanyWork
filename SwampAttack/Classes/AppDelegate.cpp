@@ -70,7 +70,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 //    auto scene = GameFightScene::scene();
 //    auto scene = GameMapScene::scene();
 //    auto scene = GameShopScene::scene();
-//    auto scene = GameOverScene::scene(o_loss);
+//    auto scene = GameOverScene::scene(o_loss,NULL);
     auto scene = GameHomeScene::scene();
     // run
     director->runWithScene(scene);

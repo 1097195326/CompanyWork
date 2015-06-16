@@ -102,6 +102,7 @@
 		8DC6A5D11ADFD774002A6159 /* HumanShootState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6A5CF1ADFD774002A6159 /* HumanShootState.cpp */; };
 		8DC6A5D41ADFD788002A6159 /* HumanReloadState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6A5D21ADFD788002A6159 /* HumanReloadState.cpp */; };
 		8DCA71AC1AE74787007ADFE6 /* ProgressBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA71AA1AE74787007ADFE6 /* ProgressBar.cpp */; };
+		8DD08C921B2FC8E800BECE66 /* GameLoadingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD08C901B2FC8E800BECE66 /* GameLoadingScene.cpp */; };
 		8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */; };
 		8DD215681B16BA720090EEEB /* ShopPropIcon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD215661B16BA720090EEEB /* ShopPropIcon.cpp */; };
 		8DD2156B1B16E7160090EEEB /* GameScrollHeadlerView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD215691B16E7160090EEEB /* GameScrollHeadlerView.cpp */; };
@@ -339,6 +340,8 @@
 		8DC6A5D31ADFD788002A6159 /* HumanReloadState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanReloadState.h; sourceTree = "<group>"; };
 		8DCA71AA1AE74787007ADFE6 /* ProgressBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProgressBar.cpp; sourceTree = "<group>"; };
 		8DCA71AB1AE74787007ADFE6 /* ProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressBar.h; sourceTree = "<group>"; };
+		8DD08C901B2FC8E800BECE66 /* GameLoadingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLoadingScene.cpp; sourceTree = "<group>"; };
+		8DD08C911B2FC8E800BECE66 /* GameLoadingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLoadingScene.h; sourceTree = "<group>"; };
 		8DD0DE351ACE347000BA61D4 /* ConfigManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigManager.cpp; sourceTree = "<group>"; };
 		8DD0DE361ACE347000BA61D4 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
 		8DD215661B16BA720090EEEB /* ShopPropIcon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopPropIcon.cpp; sourceTree = "<group>"; };
@@ -700,6 +703,8 @@
 				8DD5F2F41B27DE4800DC5DB9 /* GameShowDiscLayer.h */,
 				8DD5F2F61B2806B100DC5DB9 /* GameShowLevelupLayer.cpp */,
 				8DD5F2F71B2806B100DC5DB9 /* GameShowLevelupLayer.h */,
+				8DD08C901B2FC8E800BECE66 /* GameLoadingScene.cpp */,
+				8DD08C911B2FC8E800BECE66 /* GameLoadingScene.h */,
 			);
 			name = scenes;
 			sourceTree = "<group>";
@@ -1264,6 +1269,7 @@
 				8DD3FA561B2036A40028DB92 /* PropSpriteView.cpp in Sources */,
 				8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */,
 				8DD499761B04500B0037CBAA /* GameBuffManager.cpp in Sources */,
+				8DD08C921B2FC8E800BECE66 /* GameLoadingScene.cpp in Sources */,
 				8DC3E1A91AE8D08B00BE6CA4 /* FlyEnemy.cpp in Sources */,
 				8DE3F7B41AF75AB5001E048F /* ScrollController.cpp in Sources */,
 				8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */,

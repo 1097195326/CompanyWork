@@ -20,7 +20,6 @@ EnemyProgressBar::EnemyProgressBar():m_progress(0),m_enemyProgress(0)
     addChild(m_progressBar);
     m_progressBar->setBarLeft();
     m_progressBar->updatePercent(0);
-    m_progressBar->setBarPositon(Vec2(10, 0));
     setPosition(_G_M_M->fightScene_EnemyBar_Position);
     
     schedule(CC_SCHEDULE_SELECTOR(EnemyProgressBar::update), 1/30);

@@ -11,7 +11,9 @@
 
 #include "BaseCode.h"
 #include "GameObject.h"
+#include "GameSubject.h"
 #include "GameMapManager.h"
+
 
 #define _G_D GameDirector::getInstance()
 
@@ -24,12 +26,12 @@ enum GameDirectorStatus
     
 };
 
-class GameDirector : public Node, public GameObject
+class GameDirector : public Node, public GameObject,public GameSubject
 {
 private:
     int     m_status = s_clear;
     GameMap * gameMap;
-    
+    GameOverStatus m_overStatus;
 private:
     void    checkCross();
 public:
@@ -47,6 +49,7 @@ public:
     void    stopGame();
     void    overGame();
     bool    isOver();
+    GameOverStatus getOverStatus();
     void    clearStatus();
     void    gameLoop(float data);
 };

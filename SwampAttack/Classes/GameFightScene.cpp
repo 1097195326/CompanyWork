@@ -17,7 +17,7 @@
 #include "GamePauseScene.h"
 
 #include "GameMapScene.h"
-
+#include "GameOverScene.h"
 //---
 //#include "EnemyManager.h"
 //#include "ConfigManager.h"
@@ -48,7 +48,7 @@ GameFightScene::GameFightScene()
 }
 GameFightScene::~GameFightScene()
 {
-    g_f_layer = NULL;
+//    g_f_layer = NULL;
     if(m_listener)
     {
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
@@ -83,28 +83,43 @@ bool GameFightScene::init()
                              m_visibleOrigin.y + m_visibleSize.height - pauseButton->getContentSize().height * 0.6);
     Menu * buttonMenu = Menu::create(pauseButton, NULL);
     buttonMenu->setPosition(Point::ZERO);
-    addChild(buttonMenu,2);
+//    addChild(buttonMenu,2);
     
     log("fight scene init");
     _G_D->initGameView();
     
     _G_D->startGame();
-    
+    setSubject(_G_D);
     
     return true;
+}
+void GameFightScene::updateData()
+{
+    if (_G_D->isOver())
+    {
+        RenderTexture * rt = getFightSceneTex();
+        GameOverScene * overScene = new GameOverScene(_G_D->getOverStatus(),rt);
+        overScene->init();
+        overScene->autorelease();
+        addChild(overScene,640);
+    }
+}
+RenderTexture * GameFightScene::getFightSceneTex()
+{
+    RenderTexture * rt = RenderTexture::create(m_visibleSize.width, m_visibleSize.height);
+    rt->begin();
+    this->visit();
+    rt->end();
+    return rt;
 }
 void GameFightScene::pauseGame(cocos2d::Ref *pSender)
 {
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-    RenderTexture * rt = RenderTexture::create(m_visibleSize.width, m_visibleSize.height);
-    
-    rt->begin();
-    this->visit();
-    rt->end();
+    RenderTexture * rt = getFightSceneTex();
     _G_D->stopGame();
     GamePauseScene * pauseScene = new GamePauseScene(rt);
     pauseScene->autorelease();
-    addChild(pauseScene,10);
+    addChild(pauseScene,640);
 }
 void GameFightScene::addBulletTexiao(cocos2d::Vec2 position)
 {
