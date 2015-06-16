@@ -36,6 +36,7 @@ public:
     int     getTakeUpGunNum();
     Gun *   getTakeUpGunByIndex(int index);
     int     getTakeUpGunIndexByName(string name);
+    std::map<string,Gun *> getTakeUpGunData();
     void    takeUpGun(string gunId);
     void    takeDownGun(string gunId);
     
