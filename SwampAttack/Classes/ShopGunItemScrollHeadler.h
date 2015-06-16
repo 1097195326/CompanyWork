@@ -32,6 +32,8 @@ private:
     Label   *   m_levelUpLabel;
 private:
     void    initGunView();
+    void    initUnlockGunView();
+    void    initLockGunView();
     void    updateGunView();
     
     void    upGrade(Ref * pSender);

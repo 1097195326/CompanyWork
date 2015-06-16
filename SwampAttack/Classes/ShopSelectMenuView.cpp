@@ -79,7 +79,7 @@ bool ShopSelectMenuView::touchBegan(Touch *touch, Event *event)
     Size size = s->getContentSize();
     Rect r = Rect(0, 0, size.width, size.height);
     if (r.containsPoint(p)) {
-        log("sprite tag :%d",s->getTag());
+//        log("sprite tag :%d",s->getTag());
         return true;
     }
     return false;
