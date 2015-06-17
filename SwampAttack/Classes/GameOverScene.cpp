@@ -7,18 +7,17 @@
 //
 
 #include "GameOverScene.h"
-#include "GameFightScene.h"
 #include "GameMapScene.h"
-
-
-#include "GameDirector.h"
-#include "EnemyManager.h"
-#include "GuanQiaManager.h"
-#include "GameLoading.h"
-#include "GunManager.h"
-
 #include "GameLoadingScene.h"
 
+#include "GuanQiaManager.h"
+#include "GunManager.h"
+#include "PropManager.h"
+#include "GunManager.h"
+
+//#include "GameDirector.h"
+//#include "EnemyManager.h"
+//#include "GameLoading.h"
 
 
 Scene * GameOverScene::scene(GameOverStatus status,RenderTexture * rt)
@@ -98,6 +97,8 @@ bool GameOverScene::init()
         GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
         nextGuanqia->unlockGuanqia();
         GunManager::getInstance()->checkUnlock();
+        PropManager::getInstance()->checkUnlock();
+        GunManager::getInstance()->saveBullet();
     }else
     {
         Sprite * title = Sprite::create(ImagePath("overScene_title.png"));

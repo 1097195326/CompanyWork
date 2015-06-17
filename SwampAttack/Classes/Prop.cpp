@@ -14,7 +14,7 @@
 #include "EnemyManager.h"
 #include "GameBuffManager.h"
 
-
+#include "GuanQiaManager.h"
 
 #include "PropSpriteView.h"
 
@@ -191,6 +191,15 @@ bool Prop::unlockProp()
     _G_U->unlockProp(m_id);
     
     return true;
+}
+void Prop::checkUnlock()
+{
+    GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getGuanqiaById(m_unlockMission);
+    if (guanqia->isUnlock())
+    {
+        m_isUnlock = true;
+        _G_U->unlockProp(m_id);
+    }
 }
 int Prop::getNum()
 {

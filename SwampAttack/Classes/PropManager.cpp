@@ -160,3 +160,12 @@ void PropManager::setShopView(Sprite * propItemSprite)
         m_propIcons[i] = icon;
     }
 }
+void PropManager::checkUnlock()
+{
+    std::map<string,Prop *>::iterator iter;
+    for (iter = m_propData.begin(); iter != m_propData.end(); ++iter)
+    {
+        Prop * prop = iter->second;
+        prop->checkUnlock();
+    }
+}

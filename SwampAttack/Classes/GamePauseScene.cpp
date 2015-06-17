@@ -10,7 +10,7 @@
 #include "GameDirector.h"
 #include "GuanQiaManager.h"
 #include "EnemyManager.h"
-#include "GameFightScene.h"
+#include "GunManager.h"
 
 #include "GameMapScene.h"
 #include "GameLoadingScene.h"
@@ -88,6 +88,7 @@ GamePauseScene::GamePauseScene(RenderTexture * rt)
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu,200);
     
+    GunManager::getInstance()->saveBullet();
 }
 
 void GamePauseScene::continueGame(cocos2d::Ref *pSender)

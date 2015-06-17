@@ -57,6 +57,7 @@ public:
     bool    unlockProp();
     int     getNum();
     bool    buyProp();
+    void    checkUnlock();
     
     //--- prop state ---
     void    setPropPoint(Vec2 point);

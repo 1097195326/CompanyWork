@@ -45,6 +45,7 @@ public:
     
     void    checkUnlock();
     void    resetData();
+    void    saveBullet();
 public:
     static GunManager * getInstance();
     GunManager();

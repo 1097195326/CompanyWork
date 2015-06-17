@@ -42,6 +42,7 @@ public:
     void    setShopView(Sprite * shopScene);
     void    setFightView();
     
+    void    checkUnlock();
 public:
     static PropManager * getInstance();
     PropManager();

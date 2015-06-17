@@ -162,6 +162,10 @@ void Gun::resetData()
         reloadBullet();
     }
 }
+void Gun::saveBullet()
+{
+    _G_U->setGunBulletNumber(m_id, m_totalBullets);
+}
 bool Gun::fire(Vec2 position)
 {
     

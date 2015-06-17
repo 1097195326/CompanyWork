@@ -198,3 +198,12 @@ void GunManager::resetData()
         _gun->resetData();
     }
 }
+void GunManager::saveBullet()
+{
+    std::map<string,Gun *>::iterator iter;
+    for (iter = m_takeUpGunData.begin(); iter != m_takeUpGunData.end(); ++iter)
+    {
+        Gun * _gun = iter->second;
+        _gun->saveBullet();
+    }
+}
