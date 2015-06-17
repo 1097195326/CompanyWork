@@ -95,7 +95,7 @@ void EnemyManager::gameLoop(float data)
                 notify();
             }else
             {
-                log("EnemyManager Game Over");
+//                log("EnemyManager Game Over");
                 currentIndex = 0;
                 currentGroup = NULL;
                 m_isOver = true;

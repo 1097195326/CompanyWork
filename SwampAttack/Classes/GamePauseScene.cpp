@@ -58,23 +58,30 @@ GamePauseScene::GamePauseScene(RenderTexture * rt)
                     m_visibleOrigin.y + m_visibleSize.height * 0.5);
     addChild(bg);
     
+    Sprite * pauseSpr = Sprite::create(ImagePath("pause_title.png"));
+    Size bgSize = bg->getContentSize();
+    pauseSpr->setPosition(bgSize.width * 0.5,bgSize.height * 0.5);
+    bg->addChild(pauseSpr);
+    
+    int widthOffset = 100;
+    
     MenuItemImage * gotoMapButton = MenuItemImage::create(ImagePath("overScene_tomap.png"),
                                                           ImagePath("overScene_tomap.png"),
                                                           CC_CALLBACK_1( GamePauseScene::gotoMap, this));
-    gotoMapButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.45,
-                               m_visibleOrigin.y + m_visibleSize.height * 0.35);
+    gotoMapButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 - widthOffset,
+                               m_visibleOrigin.y + m_visibleSize.height * 0.25);
     
-    MenuItemImage * restartButton = MenuItemImage::create(ImagePath("pauseScene_restart.png"),
-                                                          ImagePath("pauseScene_restart.png"),
+    MenuItemImage * restartButton = MenuItemImage::create(ImagePath("overScene_restart.png"),
+                                                          ImagePath("overScene_restart.png"),
                                                           CC_CALLBACK_1( GamePauseScene::restartGame, this));
     restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                               m_visibleOrigin.y + m_visibleSize.height * 0.35);
+                               m_visibleOrigin.y + m_visibleSize.height * 0.25);
     
-    MenuItemImage * continueButton = MenuItemImage::create(ImagePath("pauseScene_continue.png"),
-                                                           ImagePath("pauseScene_continue.png"),
+    MenuItemImage * continueButton = MenuItemImage::create(ImagePath("overScene_next.png"),
+                                                           ImagePath("overScene_next.png"),
                                                            CC_CALLBACK_1( GamePauseScene::continueGame, this));
-    continueButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.55,
-                                m_visibleOrigin.y + m_visibleSize.height * 0.35);
+    continueButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset,
+                                m_visibleOrigin.y + m_visibleSize.height * 0.25);
     
     Menu * buttonMenu = Menu::create(gotoMapButton,restartButton,continueButton, NULL);
     buttonMenu->setPosition(Point::ZERO);
