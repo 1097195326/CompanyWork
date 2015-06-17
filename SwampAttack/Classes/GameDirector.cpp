@@ -77,6 +77,7 @@ void GameDirector::gameLoop(float data)
             m_overStatus = o_win;
         }
         notify();
+        log("-- director over");
 //        RenderTexture * rt = _G_V->getFightSceneTex();
 //        Director::getInstance()->replaceScene(GameOverScene::scene(status,NULL));
     }

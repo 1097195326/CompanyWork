@@ -35,7 +35,7 @@ void EnemyProgressBar::update(float data)
     {
         return;
     }
-    m_progress += data * 2;
+    m_progress += data * 3;
     m_progressBar->updatePercent(m_progress);
 }
 void EnemyProgressBar::updateData()

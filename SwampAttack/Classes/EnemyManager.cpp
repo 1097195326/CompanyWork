@@ -44,7 +44,7 @@ void EnemyManager::setData(Json::Value data)
 {
     clearData();
     m_isOver = false;
-    
+//    log("enemy data:%s",data.toStyledString().c_str());
     for (int i = 0; i < data.size(); ++i)
     {
         EnemyGroup * group = new EnemyGroup(data[i]);
@@ -70,6 +70,10 @@ void EnemyManager::clearData()
 static float dley = 0;
 void EnemyManager::gameLoop(float data)
 {
+    if (m_isOver)
+    {
+        return;
+    }
     if (currentGroup)
     {
         if (currentGroup->isDie())
@@ -91,7 +95,7 @@ void EnemyManager::gameLoop(float data)
                 notify();
             }else
             {
-//                log("Game Over");
+                log("EnemyManager Game Over");
                 currentIndex = 0;
                 currentGroup = NULL;
                 m_isOver = true;

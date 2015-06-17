@@ -23,7 +23,7 @@ EnemyGroup::~EnemyGroup()
 }
 void EnemyGroup::setData(Json::Value data)
 {
-//    log("%s",data.toStyledString().c_str());
+    log("EnemyGroup:%s",data.toStyledString().c_str());
     enemy_index = 0;
     isLastIndex = false;
     delay = 0.0f;

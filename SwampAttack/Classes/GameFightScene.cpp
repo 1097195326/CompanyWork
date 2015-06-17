@@ -95,6 +95,7 @@ bool GameFightScene::init()
 }
 void GameFightScene::updateData()
 {
+    log("game is over");
     if (_G_D->isOver())
     {
         RenderTexture * rt = getFightSceneTex();
