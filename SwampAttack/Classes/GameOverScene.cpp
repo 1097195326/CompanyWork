@@ -94,10 +94,10 @@ bool GameOverScene::init()
                                 m_visibleOrigin.y + m_visibleSize.height * 0.22);
         buttonMenu = Menu::create(gotoMapButton,restartButton,nextButton, NULL);
         
-//        GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
-//        GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
-//        nextGuanqia->unlockGuanqia();
-//        GunManager::getInstance()->checkUnlock();
+        GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
+        GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
+        nextGuanqia->unlockGuanqia();
+        GunManager::getInstance()->checkUnlock();
     }else
     {
         Sprite * title = Sprite::create(ImagePath("overScene_title.png"));

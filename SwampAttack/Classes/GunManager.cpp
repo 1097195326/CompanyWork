@@ -91,6 +91,10 @@ int GunManager::getTakeUpGunIndexByName(string name)
     }
     return index;
 }
+std::map<string,Gun *> GunManager::getTakeUpGunData()
+{
+    return m_takeUpGunData;
+}
 void GunManager::takeUpGun(string gunId)
 {
     int index = (int)m_takeUpGunData.size();

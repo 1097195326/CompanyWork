@@ -83,7 +83,7 @@ bool GameFightScene::init()
                              m_visibleOrigin.y + m_visibleSize.height - pauseButton->getContentSize().height * 0.6);
     Menu * buttonMenu = Menu::create(pauseButton, NULL);
     buttonMenu->setPosition(Point::ZERO);
-//    addChild(buttonMenu,2);
+    addChild(buttonMenu,2);
     
     log("fight scene init");
     _G_D->initGameView();

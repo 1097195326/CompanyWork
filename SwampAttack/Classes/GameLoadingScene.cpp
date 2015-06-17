@@ -44,9 +44,9 @@ void GameLoadingScene::loadingData(float data)
 {
     log("loading data");
     GuanqiaModel * guanQia = GuanQiaManager::getInstance()->getGuanqiaById(m_guanqiaId);
-    
-    GameLoading::loadFrames();
     GuanQiaManager::getInstance()->setCurrentGuanqiaId(guanQia->getId());
+    GameLoading::loadFrames();
+    
     EnemyManager::getInstance()->setData(guanQia->getMonsters());
 }
 void GameLoadingScene::gotoFightScene(float data)
