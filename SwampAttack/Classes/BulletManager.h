@@ -21,6 +21,7 @@ private:
 public:
     void    fire(BulletParameter bp);
     std::list<Bullet*> getBulletData();
+    void    resetData();
 public:
     
     BulletManager();

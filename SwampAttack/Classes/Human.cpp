@@ -46,6 +46,12 @@ void Human::gameLoop(float data)
     m_state->Execute(this);
     
 }
+void Human::resetData()
+{
+    stop();
+    changeState(HumanWaitState::getInstance());
+    
+}
 void Human::changeState(State<Human> *state)
 {
     state->Enter(this);

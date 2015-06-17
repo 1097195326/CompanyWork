@@ -34,7 +34,7 @@ m_guanqiaId(guanqiaId)
     addChild(bg);
     
     scheduleOnce(CC_SCHEDULE_SELECTOR(GameLoadingScene::loadingData), 0.3);
-    scheduleOnce(CC_SCHEDULE_SELECTOR(GameLoadingScene::gotoFightScene), 3);
+    scheduleOnce(CC_SCHEDULE_SELECTOR(GameLoadingScene::gotoFightScene), 2);
 }
 GameLoadingScene::~GameLoadingScene()
 {

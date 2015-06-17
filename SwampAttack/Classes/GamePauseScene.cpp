@@ -13,6 +13,7 @@
 #include "GameFightScene.h"
 
 #include "GameMapScene.h"
+#include "GameLoadingScene.h"
 
 
 //Scene * GamePauseScene::scene(RenderTexture * rt)
@@ -96,13 +97,20 @@ void GamePauseScene::continueGame(cocos2d::Ref *pSender)
 }
 void GamePauseScene::restartGame(cocos2d::Ref *pSender)
 {
-    _G_D->restartGame();
-    Director::getInstance()->replaceScene(GameFightScene::scene());
+    SpriteFrameCache::getInstance()->removeSpriteFrames();
+    Director::getInstance()->getTextureCache()->removeAllTextures();
     
+    _G_D->resetGameData();
+    
+    GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
+    Director::getInstance()->replaceScene(GameLoadingScene::scene(guanqia->getId()));
 }
 void GamePauseScene::gotoMap(cocos2d::Ref *pSender)
 {
-    _G_D->overGame();
+    SpriteFrameCache::getInstance()->removeSpriteFrames();
+    Director::getInstance()->getTextureCache()->removeAllTextures();
+    
+    _G_D->resetGameData();
     Director::getInstance()->replaceScene(GameMapScene::scene());
 }
 bool GamePauseScene::touchBegan(Touch *touch, Event *event)

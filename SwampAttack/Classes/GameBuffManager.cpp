@@ -31,6 +31,16 @@ GameBuff *  GameBuffManager::addBuff(string buffId)
     m_buffData.push_back(buff);
     return buff;
 }
+void GameBuffManager::resetData()
+{
+    std::list<GameBuff *>::iterator iter;
+    for (iter = m_buffData.begin(); iter != m_buffData.end();)
+    {
+        GameBuff * buff = *iter++;
+        delete buff;
+    }
+    m_buffData.clear();
+}
 void GameBuffManager::gameLoop(float data)
 {
     std::list<GameBuff *>::iterator iter;

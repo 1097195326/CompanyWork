@@ -152,6 +152,16 @@ void Gun::checkUnlock()
         _G_U->unlockGun(m_id);
     }
 }
+void Gun::resetData()
+{
+    if (m_isDefaultGun)
+    {
+        m_bullets = m_magazieSize;
+    }else
+    {
+        reloadBullet();
+    }
+}
 bool Gun::fire(Vec2 position)
 {
     

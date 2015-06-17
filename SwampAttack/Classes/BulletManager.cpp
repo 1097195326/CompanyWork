@@ -44,6 +44,15 @@ void BulletManager::gameLoop(float data)
         }
     }
 }
+void BulletManager::resetData()
+{
+    std::list<Bullet *>::iterator itr;
+    for (itr = bullets.begin(); itr != bullets.end();) {
+        Bullet * bullet = *itr++;
+        delete bullet;
+    }
+    bullets.clear();
+}
 std::list<Bullet*> BulletManager::getBulletData()
 {
     return bullets;

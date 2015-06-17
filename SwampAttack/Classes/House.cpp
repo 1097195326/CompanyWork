@@ -13,6 +13,7 @@
 
 
 House::House(): m_health(500.0),
+m_baseHealth(m_health),
 m_totalHelath(m_health)
 {
     m_state = _h_clear;
@@ -60,4 +61,9 @@ float House::getHealthPercent()
 bool House::isOver()
 {
     return m_state & _h_over;
+}
+void House::resetData()
+{
+    m_state &= _h_clear;
+    m_health = m_totalHelath = m_baseHealth;
 }

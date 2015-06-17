@@ -77,8 +77,8 @@ void GameDirector::gameLoop(float data)
             m_overStatus = o_win;
         }
         notify();
-//        RenderTexture * rt = _G_V->getFightSceneTex();
-//        Director::getInstance()->replaceScene(GameOverScene::scene(status,NULL));
+        resetGameData();
+//        overGame();
     }
 }
 void GameDirector::onTouchBegin(cocos2d::Touch *touch, cocos2d::Event *event)
@@ -100,7 +100,6 @@ void GameDirector::checkCross()
         return;
     }
     std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
-//    std::list<Bullet*> bulletData = BulletManager::getInstance()->getBulletData();
     std::map<string,DefenseBuilding *> buildingData = DefenseBuildingManager::getInstance()->getBuildingData();
     
     if (!enemyData.empty())
@@ -113,25 +112,6 @@ void GameDirector::checkCross()
         {
             Enemy * enemy = *e_iter;
             // bullet
-//            if (!bulletData.empty())
-//            {
-//                for (b_iter = bulletData.begin(); b_iter != bulletData.end(); ++b_iter)
-//                {
-//                    
-//                    Bullet * bullet = *b_iter;
-//                    Rect b_rect = bullet->getRect();
-//                    if (bullet->isArrive() &&
-//                        bullet->isFireEnemy() &&
-//                        !enemy->isDied() &&
-//                        enemy->isContainsPoint(b_rect))
-//                    {
-//                        enemy->hurt(bullet->getDamage(),bullet->getAttackIndex());
-//                    }else if (bullet->isArrive() && bullet->isFireHouse())
-//                    {
-//                        House::getInstance()->hurt(bullet->getDamage());
-//                    }
-//                }
-//            }
         
             // defense
             if (!buildingData.empty())
@@ -168,23 +148,20 @@ void GameDirector::checkCross()
     
     
 }
+void GameDirector::resetGameData()
+{
+    House::getInstance()->resetData();
+    GunManager::getInstance()->resetData();
+    BulletManager::getInstance()->resetData();
+    GameBuffManager::getInstance()->resetData();
+    Human::getInstance()->resetData();
+    
+    EnemyManager::getInstance()->resetData();
+}
 void GameDirector::startGame()
 {
     clearStatus();
     m_status |= s_run ;
-}
-void GameDirector::restartGame()
-{
-//    clearStatus();
-//    m_status |= s_run ;
-    
-    EnemyManager::getInstance()->reStartGame();
-    
-}
-void GameDirector::overGame()
-{
-    EnemyManager::getInstance()->overGame();
-    
 }
 void GameDirector::continueGame()
 {

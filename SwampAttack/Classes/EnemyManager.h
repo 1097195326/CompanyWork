@@ -32,11 +32,10 @@ public:
     
     void    setView();
     void    setData(Json::Value data);
+    void    resetData();
     void    clearData();
     bool    isOver();
     float   getEnemyProgress();
-    void    reStartGame();
-    void    overGame();
     
     
     EnemyGroup * getCurrectGroup();

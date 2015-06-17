@@ -33,8 +33,8 @@ EnemyInfo::EnemyInfo()
     zombieking.hurtOnFrames = 5;
     zombieking.walkFrames = 14;
     zombieking.downFrames = 13;
-    zombieking.width = 170;
-    zombieking.height = 170;
+    zombieking.width = 240;
+    zombieking.height = 230;
     zombieking.widthOffSet = 0;
     m_data["zombieking"] = zombieking;
     // wolf 狼人
@@ -85,8 +85,8 @@ EnemyInfo::EnemyInfo()
     skullking.hurtOnFrames = 5;
     skullking.walkFrames = 14;
     skullking.downFrames = 13;
-    skullking.width = 180;
-    skullking.height = 180;
+    skullking.width = 270;
+    skullking.height = 270;
     skullking.widthOffSet = 0;
     m_data["skullking"] = skullking;
     // skullArmor
@@ -124,8 +124,8 @@ EnemyInfo::EnemyInfo()
     scareking.hurtOnFrames = 5;
     scareking.walkFrames = 14;
     scareking.downFrames = 13;
-    scareking.width = 230;
-    scareking.height = 190;
+    scareking.width = 310;
+    scareking.height = 250;
     scareking.widthOffSet = 0;
     m_data["scareking"] = scareking;
     // scarecrowArmor 草人

@@ -23,6 +23,7 @@ enum HouseState
 class House : public GameObject {
 private:
     float   m_health;
+    float   m_baseHealth;
     float   m_totalHelath;
     int     m_state;
     
@@ -37,6 +38,7 @@ public:
     void    hurt(float damage);
     void    addHealth(int health);
     void    setView();
+    void    resetData();
 public:
     float   getHealthPercent();
     bool    isOver();

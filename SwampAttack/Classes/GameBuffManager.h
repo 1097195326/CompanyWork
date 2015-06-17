@@ -23,6 +23,8 @@ public:
     GameBuffManager();
     ~GameBuffManager();
     GameBuff * addBuff(string buffId);
+    void    resetData();
+    
     static GameBuffManager * getInstance();
     void    gameLoop(float data);
 };

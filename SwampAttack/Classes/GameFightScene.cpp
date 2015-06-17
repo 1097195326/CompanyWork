@@ -98,6 +98,8 @@ void GameFightScene::updateData()
     log("game is over");
     if (_G_D->isOver())
     {
+        Director::getInstance()->getActionManager()->pauseAllRunningActions();
+        
         RenderTexture * rt = getFightSceneTex();
         GameOverScene * overScene = new GameOverScene(_G_D->getOverStatus(),rt);
         overScene->init();

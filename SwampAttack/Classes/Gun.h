@@ -69,6 +69,7 @@ public:
     
     int     getTakeUpIndex();
     void    checkUnlock();
+    void    resetData();
 private:
     string  m_id;
     string  m_weaponName;           //  武器名称

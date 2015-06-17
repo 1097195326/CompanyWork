@@ -80,7 +80,7 @@ Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false),m_isWeak(false)
 }
 Enemy::~Enemy()
 {
-    
+//    log("enemy delete");
 }
 void Enemy::gameLoop(float data){}
 void Enemy::move(){}

@@ -19,11 +19,12 @@ EnemyGroup::EnemyGroup(Json::Value data):status(_isHave)
 }
 EnemyGroup::~EnemyGroup()
 {
+//    log("enemy group delete");
     clearData();
 }
 void EnemyGroup::setData(Json::Value data)
 {
-    log("EnemyGroup:%s",data.toStyledString().c_str());
+//    log("EnemyGroup:%s",data.toStyledString().c_str());
     enemy_index = 0;
     isLastIndex = false;
     delay = 0.0f;
@@ -62,9 +63,12 @@ void EnemyGroup::clearData()
     for (iter = enemyData.begin() ; iter != enemyData.end();)
     {
         Enemy * enemy = *iter;
-        enemyData.erase(iter++);
         delete enemy;
+        enemyData.erase(iter++);
+        
     }
+    enemyData.clear();
+    show_enemyData.clear();
 }
 void EnemyGroup::gameLoop(float data)
 {

@@ -25,24 +25,18 @@ EnemyManager * EnemyManager::getInstance()
     
     return &manager;
 }
-void EnemyManager::reStartGame()
-{
-    currentIndex = 0;
-    currentGroup = NULL;
-    GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
-    setData(guanqia->getMonsters());
-    
-}
-void EnemyManager::overGame()
+void EnemyManager::resetData()
 {
     currentIndex = 0;
     currentGroup = NULL;
     m_isOver = true;
-    clearData();
+//    clearData();
 }
 void EnemyManager::setData(Json::Value data)
 {
     clearData();
+    currentIndex = 0;
+    currentGroup = NULL;
     m_isOver = false;
 //    log("enemy data:%s",data.toStyledString().c_str());
     for (int i = 0; i < data.size(); ++i)
@@ -58,10 +52,19 @@ EnemyGroup * EnemyManager::getCurrectGroup()
 }
 void EnemyManager::clearData()
 {
+//    std::map<int,EnemyGroup *>::iterator iter;
+//    for (iter = m_map.begin(); iter != m_map.end();)
+//    {
+//        EnemyGroup * group = iter->second;
+//        delete group;
+//        iter++;
+//    }
+//    m_map.clear();
     if (m_map.size() > 0)
     {
         for (int i = 0; i < m_map.size();)
         {
+//            log("enemy manager clear");
             delete m_map[i++];
         }
         m_map.clear();
@@ -96,10 +99,7 @@ void EnemyManager::gameLoop(float data)
             }else
             {
 //                log("EnemyManager Game Over");
-                currentIndex = 0;
-                currentGroup = NULL;
-                m_isOver = true;
-                clearData();
+                resetData();
             }
         }
     }

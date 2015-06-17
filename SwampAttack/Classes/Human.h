@@ -60,7 +60,7 @@ public:
     void    throwProp(Prop * prop);
     void    fire(Touch * touch,Event * event);
     void    stop();
-    
+    void    resetData();
     
     //--- interface for view call back
     void    reloadCall();
