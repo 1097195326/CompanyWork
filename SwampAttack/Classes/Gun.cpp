@@ -216,7 +216,7 @@ void Gun::reloadBullet()
                 m_bullets = m_magazieSize;
             }else
             {
-                m_bullets = m_totalBullets > m_magazieSize ? m_magazieSize : m_totalBullets % m_magazieSize;
+                m_bullets = m_totalBullets >= m_magazieSize ? m_magazieSize : m_totalBullets % m_magazieSize;
             }
             break;
             
