@@ -22,7 +22,7 @@ GameDirector::GameDirector()
 {
     gameMap = GameMapManager::getInstance()->getGameMap();
     
-    Director::getInstance()->getScheduler()->schedule(CC_SCHEDULE_SELECTOR(GameDirector::gameLoop), this, 1/60, false);
+    Director::getInstance()->getScheduler()->schedule(CC_SCHEDULE_SELECTOR(GameDirector::gameLoop), this, 1/30, false);
     
     stopGame();
     
