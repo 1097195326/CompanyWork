@@ -1,0 +1,3 @@
+道具编号,道具名称编号,模型,道具名称,作用,道具描述编号,道具描述,道具类型
+ID[string],IDName[string],ModelID[string],,Effec[string],HpDescription[string],,type[string]
+100001,tid#HP1,hp1,体力药剂,5,tid#HpDescription1,"角色死亡使角色复活补满体力",2

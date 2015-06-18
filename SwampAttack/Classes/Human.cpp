@@ -111,7 +111,7 @@ void Human::shootCall()
     if (isHaveBullet) {
         //  枪 有子弹 可以继续使用
 //        log("shoot call have bullet");
-        m_status = _h_shooted;
+        
         m_waitingTime = m_gun->getFireWaitingTime();
     }else
     {
@@ -120,10 +120,10 @@ void Human::shootCall()
         if (!m_gun->isDefaultGun())
         {
             GunManager::getInstance()->changeGun(defaultGunID);
-            return;
         }
     }
-//    log("shoot call");
+    m_status = _h_shooted;
+    log("shoot call");
 }
 void Human::changeCall()
 {

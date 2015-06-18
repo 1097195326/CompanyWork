@@ -13,6 +13,8 @@
 #include "GunManager.h"
 #include "PropManager.h"
 #include "DefenseBuildingManager.h"
+#include "SpecialManager.h"
+
 #include "GameUser.h"
 #include "GameMapScene.h"
 #include "ShopGunIcon.h"
@@ -89,6 +91,7 @@ bool GameShopScene::init()
                 num = DefenseBuildingManager::getInstance()->getBuildingNum();
                 break;
             case 3:
+                SpecialManager::getInstance();
                 num = 3;
                 break;
         }

@@ -78,6 +78,7 @@ void EnemySprite::texiaoCall()
 }
 void EnemySprite::attackCall()
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("enemy_attack.mp3").c_str());
     m_model->attackCall();
 }
 void EnemySprite::dieCall()
