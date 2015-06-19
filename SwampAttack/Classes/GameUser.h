@@ -50,6 +50,9 @@ public:
     void    setUserHealth(int health);
     void    setUserGold(int gold);
     int     getUserGold();
+    //--- expend award ---
+    void    setExpendPropNum(int num);
+    int     getExpendPropNum();
     //---  gun ----
     void    unlockGun(string gunId);
     bool    isUnlockGun(string gunId);

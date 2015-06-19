@@ -97,6 +97,15 @@ int GameUser::getUserGold()
 {
     return getIntForKey("user_gold");
 }
+//--- expend prop
+void GameUser::setExpendPropNum(int num)
+{
+    setIntForKey("user_expend_prop", num);
+}
+int GameUser::getExpendPropNum()
+{
+    return getIntForKey("user_expend_prop");
+}
 //--- guan qia ---
 void GameUser::unlockGuanqia(string guanqiaId)
 {

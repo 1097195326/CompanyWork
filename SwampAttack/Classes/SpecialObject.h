@@ -30,6 +30,7 @@ private:
     ExpendObject    *   m_expendObject;
     
 public:
+    void    buyEnd();
     MoneyObject     *   getMoneyObject();
     ExpendObject    *   getExpendObject();
     

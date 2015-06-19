@@ -32,7 +32,6 @@ private:
     void    updateAwardView();
     
     void    buy(cocos2d::Touch *touch, cocos2d::Event *event);
-    void    showDiscView(Touch * touch, Event * event);
 public:
     void    setGameShopScene(GameShopScene * shopScene);
     ShopAwardItemScrollHeadler(int index);

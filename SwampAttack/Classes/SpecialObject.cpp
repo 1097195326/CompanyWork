@@ -8,6 +8,7 @@
 
 #include "SpecialObject.h"
 
+#include "GameUser.h"
 
 
 SpecialObject::SpecialObject(Json::Value data):
@@ -37,6 +38,29 @@ m_expendObject(NULL)
 SpecialObject::~SpecialObject()
 {
     
+}
+void SpecialObject::buyEnd()
+{
+    switch (m_type) {
+        case 1:
+        {
+            int userGold = _G_U->getUserGold();
+            int money = m_moneyObject->getEffect() * m_num;
+            userGold += money;
+            _G_U->setUserGold(userGold);
+        }
+            break;
+        case 2:
+        {
+            int expendPropNum = _G_U->getExpendPropNum();
+            int num = m_expendObject->getEffect() * m_num;
+            expendPropNum += num;
+            _G_U->setExpendPropNum(expendPropNum);
+        }
+            break;
+        default:
+            break;
+    }
 }
 ///--- sub object funtion
 string  SpecialObject::getName()

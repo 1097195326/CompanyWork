@@ -53,11 +53,18 @@ bool GameShopScene::init()
     bg2->addChild(scrollBg);
     
     m_goldLabel = Label::createWithTTF(StringUtils::format("%d",_G_U->getUserGold()),
-                                       "fonts/American Typewriter.ttf",
+                                       "fonts/Arial Black.ttf",
                                        35);
     m_goldLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.55,
                              m_visibleOrigin.y + m_visibleSize.height * 0.94);
     addChild(m_goldLabel);
+    
+    m_expendPropLabel = Label::createWithTTF(StringUtils::format("%d",_G_U->getExpendPropNum()),
+                                       "fonts/Arial Black.ttf",
+                                       35);
+    m_expendPropLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.75,
+                             m_visibleOrigin.y + m_visibleSize.height * 0.94);
+    addChild(m_expendPropLabel);
     
     setItemBgSprite();
     
@@ -256,6 +263,7 @@ void GameShopScene::visibelItemBg(int index)
 void GameShopScene::updateGoldView()
 {
     m_goldLabel->setString(StringUtils::format("%d",_G_U->getUserGold()));
+    m_expendPropLabel->setString(StringUtils::format("%d",_G_U->getExpendPropNum()));
 }
 void GameShopScene::homeButtonFunc(cocos2d::Ref *pSender)
 {

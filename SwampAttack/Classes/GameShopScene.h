@@ -24,6 +24,7 @@ private:
 //    GameVerticalScrollHeadlerView * m_scrollView;
     std::vector<Sprite *> m_healthSprites;
     Label   * m_goldLabel;
+    Label   * m_expendPropLabel;
     
 private:
     void    visibelItemBg(int index);

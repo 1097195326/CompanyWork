@@ -81,17 +81,10 @@ void ShopAwardItemScrollHeadler::updateAwardView()
 void ShopAwardItemScrollHeadler::buy(cocos2d::Touch *touch, cocos2d::Event *event)
 {
     log("buy ...");
-}
-void ShopAwardItemScrollHeadler::showDiscView(cocos2d::Touch *touch, cocos2d::Event *event)
-{
-//    Sprite * icon = (Sprite *) event->getCurrentTarget();
-//    Vec2 iconPoint = convertToWorldSpace(icon->getPosition());
-//    
-//    DefenseBuilding * building = DefenseBuildingManager::getInstance()->getBuildingByIndex(m_index);
-//    std::string name = building->getModelId();
-//    std::string disc = building->getDefenceDescription();
-//    GameShowDiscLayer * showLayer = new GameShowDiscLayer(name,disc,iconPoint);
-//    showLayer->autorelease();
-//    m_shopScene->addChild(showLayer);
+    SpecialObject * specialobject = SpecialManager::getInstance()->getSpecialObjectByIndex(m_index);
+    
+    specialobject->buyEnd();
+    m_shopScene->updateGoldView();
+    
     
 }
