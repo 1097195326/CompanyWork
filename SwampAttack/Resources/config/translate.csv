@@ -106,6 +106,8 @@ tid#DefenceDescription4,小猴子操作的小炮，能够对陆行怪物造成�
 ,,
 ,,
 tid#HpDescription1,"角色死亡使角色复活补满体力",
+tid#HpDescription2,"角色死亡使角色复活补满体力",
+tid#HpDescription3,"角色死亡使角色复活补满体力",
 ,,
 ,,
 tid#MoneyDescription1,获得1万金币,

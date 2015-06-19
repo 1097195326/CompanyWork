@@ -28,12 +28,11 @@ private:
     
     GameShopScene * m_shopScene;
 private:
-    void    initDefenseView();
-    void    updateDefenseView();
+    void    initAwardView();
+    void    updateAwardView();
     
-    void    upGrade(Ref * pSender);
-    void    unLock(Ref * pSender);
-    void    buy(Ref * pSender);
+    void    buy(cocos2d::Touch *touch, cocos2d::Event *event);
+    void    showDiscView(Touch * touch, Event * event);
 public:
     void    setGameShopScene(GameShopScene * shopScene);
     ShopAwardItemScrollHeadler(int index);

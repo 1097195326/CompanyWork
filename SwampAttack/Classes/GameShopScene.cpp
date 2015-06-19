@@ -91,8 +91,7 @@ bool GameShopScene::init()
                 num = DefenseBuildingManager::getInstance()->getBuildingNum();
                 break;
             case 3:
-                SpecialManager::getInstance();
-                num = 3;
+                num = SpecialManager::getInstance()->getSpecialNum();
                 break;
         }
         m_scrollViews[i] = new GameVerticalScrollHeadlerView(800,400,750,210,num);

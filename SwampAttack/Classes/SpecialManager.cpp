@@ -69,3 +69,7 @@ ExpendObject * SpecialManager::getExpendObjectByIndex(int index)
 {
     return m_expendData[index];
 }
+int SpecialManager::getSpecialNum()
+{
+    return (int)m_specialData.size();
+}

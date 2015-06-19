@@ -17,10 +17,12 @@ ExpendObject::ExpendObject(std::string id)
     Json::Value d = data[id];
 //    log("expend object:%s",d.toStyledString().c_str());
     m_id        = d["ID"].asString();
-    m_name      = d["IDName"].asString();
+    string name = d["IDName"].asString();
+    m_name = _C_M->getTranslateById(name);
     m_modelId   = d["ModelID"].asString();
     m_effect    = atoi(d["Effec"].asString().c_str());
-    m_description= d["HpDescription"].asString();
+    string descri = d["HpDescription"].asString();
+    m_description = _C_M->getTranslateById(descri);
     m_type      = atoi(d["type"].asString().c_str());
     
 }

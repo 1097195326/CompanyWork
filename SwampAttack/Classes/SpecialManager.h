@@ -12,7 +12,7 @@
 #include "BaseCode.h"
 class MoneyObject;
 class ExpendObject;
-class SpecialObject;
+#include "SpecialObject.h"
 
 using namespace std;
 
@@ -35,6 +35,8 @@ public:
     SpecialObject * getSpecialObjectByIndex(int index);
     MoneyObject * getMoneyObjectByIndex(int index);
     ExpendObject * getExpendObjectByIndex(int index);
+    
+    int     getSpecialNum();
     
     void    addMoneyObjec(MoneyObject * object);
     void    addExpendObject(ExpendObject * object);
