@@ -123,13 +123,18 @@ m_reloadWiatingTime(0.0f)
     }
     
     if (m_id == defaultGunID) {
-        m_bullets = m_magazieSize;
         m_isDefaultGun = true;
         m_isCurrentGun = true;
         m_isUnlock = true;
         m_isTakeUp = true;
         m_takeUpIndex = 1;
-        m_totalBullets = 1;
+        if (m_totalBullets < 6)
+        {
+            m_totalBullets = 6;
+            _G_U->setGunBulletNumber(m_id, m_totalBullets);
+        }
+        m_bullets = m_magazieSize = m_totalBullets;
+        m_bulletPrice = 2000;
     }else
     {
         m_bullets = m_totalBullets >= m_magazieSize ? m_magazieSize : m_totalBullets % m_magazieSize;
@@ -341,7 +346,15 @@ bool Gun::buyBullet()
     {
         return false;
     }
-    m_totalBullets += m_magazieSize;
+    if (m_isDefaultGun)
+    {
+        m_totalBullets += 1;
+        m_bullets = m_magazieSize = m_totalBullets;
+    }else
+    {
+        m_totalBullets += m_magazieSize;
+    }
+    
     _G_U->setGunBulletNumber(m_id, m_totalBullets);
     
     userGold -= m_bulletPrice;
