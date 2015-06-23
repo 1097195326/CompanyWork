@@ -33,8 +33,13 @@ public:
     static SpecialManager * getInstance();
     
     SpecialObject * getSpecialObjectByIndex(int index);
+    SpecialObject * getSpecialObjectById(std::string _id);
+    SpecialObject * getSpecialObjectBySubId(std::string _id,int type);
     MoneyObject * getMoneyObjectByIndex(int index);
     ExpendObject * getExpendObjectByIndex(int index);
+    
+    std::map<int,MoneyObject *> getMoneyData();
+    std::map<int,ExpendObject *> getExpendData();
     
     int     getSpecialNum();
     

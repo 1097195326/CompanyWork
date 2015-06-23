@@ -154,6 +154,8 @@
 		8DDCC6741B32AFFB00F01D46 /* MoneyObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCC6721B32AFFB00F01D46 /* MoneyObject.cpp */; };
 		8DDCC6771B32B00B00F01D46 /* ExpendObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCC6751B32B00B00F01D46 /* ExpendObject.cpp */; };
 		8DDCC67A1B32B82500F01D46 /* SpecialObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCC6781B32B82500F01D46 /* SpecialObject.cpp */; };
+		8DE207341B39128E0052E738 /* ShopGoldShowLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE207321B39128E0052E738 /* ShopGoldShowLayer.cpp */; };
+		8DE207371B39508C0052E738 /* ShopExpendShowLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE207351B39508C0052E738 /* ShopExpendShowLayer.cpp */; };
 		8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3B4561AF0B36800938655 /* HouseSprite.cpp */; };
 		8DE3C38B1AFB0F9F00C61D89 /* GameScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3C3891AFB0F9F00C61D89 /* GameScrollHeadler.cpp */; };
 		8DE3C38E1AFB13F300C61D89 /* GameVerticalScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3C38C1AFB13F300C61D89 /* GameVerticalScrollView.cpp */; };
@@ -450,6 +452,10 @@
 		8DDCC6761B32B00B00F01D46 /* ExpendObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpendObject.h; sourceTree = "<group>"; };
 		8DDCC6781B32B82500F01D46 /* SpecialObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpecialObject.cpp; sourceTree = "<group>"; };
 		8DDCC6791B32B82500F01D46 /* SpecialObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialObject.h; sourceTree = "<group>"; };
+		8DE207321B39128E0052E738 /* ShopGoldShowLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopGoldShowLayer.cpp; sourceTree = "<group>"; };
+		8DE207331B39128E0052E738 /* ShopGoldShowLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopGoldShowLayer.h; sourceTree = "<group>"; };
+		8DE207351B39508C0052E738 /* ShopExpendShowLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopExpendShowLayer.cpp; sourceTree = "<group>"; };
+		8DE207361B39508C0052E738 /* ShopExpendShowLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopExpendShowLayer.h; sourceTree = "<group>"; };
 		8DE3B4561AF0B36800938655 /* HouseSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HouseSprite.cpp; sourceTree = "<group>"; };
 		8DE3B4571AF0B36800938655 /* HouseSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSprite.h; sourceTree = "<group>"; };
 		8DE3C3891AFB0F9F00C61D89 /* GameScrollHeadler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScrollHeadler.cpp; sourceTree = "<group>"; };
@@ -713,6 +719,10 @@
 				8DD2F25C1B213D9800A52B33 /* GameHomeScene.h */,
 				8DD5F2F31B27DE4800DC5DB9 /* GameShowDiscLayer.cpp */,
 				8DD5F2F41B27DE4800DC5DB9 /* GameShowDiscLayer.h */,
+				8DE207321B39128E0052E738 /* ShopGoldShowLayer.cpp */,
+				8DE207331B39128E0052E738 /* ShopGoldShowLayer.h */,
+				8DE207351B39508C0052E738 /* ShopExpendShowLayer.cpp */,
+				8DE207361B39508C0052E738 /* ShopExpendShowLayer.h */,
 				8DD5F2F61B2806B100DC5DB9 /* GameShowLevelupLayer.cpp */,
 				8DD5F2F71B2806B100DC5DB9 /* GameShowLevelupLayer.h */,
 				8DD08C901B2FC8E800BECE66 /* GameLoadingScene.cpp */,
@@ -1220,6 +1230,7 @@
 				8DE3C38B1AFB0F9F00C61D89 /* GameScrollHeadler.cpp in Sources */,
 				D8D673AC1B19F7DD004C463F /* MapGuanqiaButton.cpp in Sources */,
 				8DC6A5D11ADFD774002A6159 /* HumanShootState.cpp in Sources */,
+				8DE207371B39508C0052E738 /* ShopExpendShowLayer.cpp in Sources */,
 				8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */,
 				8DD8C1241AFC5D2000872AA2 /* GameObserver.cpp in Sources */,
 				8DC352761ADB66E100E6A9C2 /* House.cpp in Sources */,
@@ -1233,6 +1244,7 @@
 				8DD87E701B15A2B500FC073A /* ShopAwardItemScrollHeadler.cpp in Sources */,
 				D8D6781A1B1DB58C008C3BA6 /* PropSprite.cpp in Sources */,
 				8DD215681B16BA720090EEEB /* ShopPropIcon.cpp in Sources */,
+				8DE207341B39128E0052E738 /* ShopGoldShowLayer.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */,
 				8DD5F2F51B27DE4800DC5DB9 /* GameShowDiscLayer.cpp in Sources */,

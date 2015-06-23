@@ -61,6 +61,29 @@ SpecialObject * SpecialManager::getSpecialObjectByIndex(int index)
     string id = m_hashHead[index];
     return m_specialData[id];
 }
+SpecialObject * SpecialManager::getSpecialObjectById(std::string _id)
+{
+    if(_id == "")
+    {
+        return NULL;
+    }
+    return m_specialData[_id];
+}
+SpecialObject * SpecialManager::getSpecialObjectBySubId(std::string _id,int type)
+{
+    SpecialObject * specialObject = NULL;
+    std::map<string,SpecialObject *>::iterator iter;
+    for (iter = m_specialData.begin(); iter != m_specialData.end(); ++iter)
+    {
+        SpecialObject * object = iter->second;
+        if (object->getType() == type && object->getSubId() == _id)
+        {
+            specialObject = object;
+            break;
+        }
+    }
+    return specialObject;
+}
 MoneyObject * SpecialManager::getMoneyObjectByIndex(int index)
 {
     return m_moneyData[index];
@@ -68,6 +91,14 @@ MoneyObject * SpecialManager::getMoneyObjectByIndex(int index)
 ExpendObject * SpecialManager::getExpendObjectByIndex(int index)
 {
     return m_expendData[index];
+}
+std::map<int,MoneyObject *> SpecialManager::getMoneyData()
+{
+    return m_moneyData;
+}
+std::map<int,ExpendObject *> SpecialManager::getExpendData()
+{
+    return m_expendData;
 }
 int SpecialManager::getSpecialNum()
 {

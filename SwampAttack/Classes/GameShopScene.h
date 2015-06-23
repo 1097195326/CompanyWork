@@ -30,6 +30,8 @@ private:
     void    visibelItemBg(int index);
     void    setItemBgSprite();
     void    setGunIcon();
+    void    initShopView();
+    void    initScrollView();
 public:
     CREATE_SCENE_FUNC(GameShopScene);
     CREATE_FUNC(GameShopScene);
@@ -42,6 +44,9 @@ public:
     
     void    homeButtonFunc(Ref * pSender);
     void    backButtonFunc(Ref * pSender);
+    void    healthPlusFunc(Ref * pSender);
+    void    goldPlusFunc(Ref * pSender);
+    void    expendPlusFunc(Ref * pSender);
 public:
     void    updateGoldView();
     
