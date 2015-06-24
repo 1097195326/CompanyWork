@@ -55,6 +55,10 @@ PropSpriteView::~PropSpriteView()
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
     }
 }
+Vec2 PropSpriteView::getViewPosition()
+{
+    return m_blueBg->getPosition();
+}
 bool PropSpriteView::touchBegan(Touch *touch, Event *event)
 {
     Vec2 p = m_blueBg->convertToNodeSpace(touch->getLocation());

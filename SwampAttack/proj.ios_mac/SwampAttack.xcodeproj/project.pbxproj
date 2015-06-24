@@ -59,6 +59,11 @@
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
+		8D51DC551B3A816F0053EA8A /* DropModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC531B3A816F0053EA8A /* DropModel.cpp */; };
+		8D51DC581B3A817C0053EA8A /* DropManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC561B3A817C0053EA8A /* DropManager.cpp */; };
+		8D51DC5B1B3A907C0053EA8A /* MoneyManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC591B3A907C0053EA8A /* MoneyManager.cpp */; };
+		8D51DC5E1B3A99360053EA8A /* DropPropSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC5C1B3A99360053EA8A /* DropPropSprite.cpp */; };
+		8D51DC611B3A99630053EA8A /* DropMoneySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC5F1B3A99630053EA8A /* DropMoneySprite.cpp */; };
 		8DBB98891ACD520C008C804D /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB987F1ACD520C008C804D /* json_internalarray.inl */; };
 		8DBB988A1ACD520C008C804D /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB98801ACD520C008C804D /* json_internalmap.inl */; };
 		8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB98811ACD520C008C804D /* json_reader.cpp */; };
@@ -259,6 +264,16 @@
 		521A8E6219F0C34300D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		8D51DC531B3A816F0053EA8A /* DropModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropModel.cpp; sourceTree = "<group>"; };
+		8D51DC541B3A816F0053EA8A /* DropModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropModel.h; sourceTree = "<group>"; };
+		8D51DC561B3A817C0053EA8A /* DropManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropManager.cpp; sourceTree = "<group>"; };
+		8D51DC571B3A817C0053EA8A /* DropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropManager.h; sourceTree = "<group>"; };
+		8D51DC591B3A907C0053EA8A /* MoneyManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoneyManager.cpp; sourceTree = "<group>"; };
+		8D51DC5A1B3A907C0053EA8A /* MoneyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyManager.h; sourceTree = "<group>"; };
+		8D51DC5C1B3A99360053EA8A /* DropPropSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropPropSprite.cpp; sourceTree = "<group>"; };
+		8D51DC5D1B3A99360053EA8A /* DropPropSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropPropSprite.h; sourceTree = "<group>"; };
+		8D51DC5F1B3A99630053EA8A /* DropMoneySprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropMoneySprite.cpp; sourceTree = "<group>"; };
+		8D51DC601B3A99630053EA8A /* DropMoneySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropMoneySprite.h; sourceTree = "<group>"; };
 		8DBB98781ACD520C008C804D /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		8DBB98791ACD520C008C804D /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		8DBB987A1ACD520C008C804D /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
@@ -679,6 +694,17 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
+		8D51DC521B3A813A0053EA8A /* DropModels */ = {
+			isa = PBXGroup;
+			children = (
+				8D51DC531B3A816F0053EA8A /* DropModel.cpp */,
+				8D51DC541B3A816F0053EA8A /* DropModel.h */,
+				8D51DC561B3A817C0053EA8A /* DropManager.cpp */,
+				8D51DC571B3A817C0053EA8A /* DropManager.h */,
+			);
+			name = DropModels;
+			sourceTree = "<group>";
+		};
 		8DBB98771ACD520C008C804D /* json */ = {
 			isa = PBXGroup;
 			children = (
@@ -754,6 +780,7 @@
 				8DDCC66E1B32AF7900F01D46 /* SpecialModels */,
 				8DD7F1FC1AD376C600D86BC5 /* BulletModels */,
 				8DD7F1F81AD3768000D86BC5 /* EnemyModels */,
+				8D51DC521B3A813A0053EA8A /* DropModels */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -995,6 +1022,10 @@
 				8DD29D3F1B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.h */,
 				8DDA89331B0C7B2C00F9F74B /* GunSprite.cpp */,
 				8DDA89341B0C7B2C00F9F74B /* GunSprite.h */,
+				8D51DC5F1B3A99630053EA8A /* DropMoneySprite.cpp */,
+				8D51DC601B3A99630053EA8A /* DropMoneySprite.h */,
+				8D51DC5C1B3A99360053EA8A /* DropPropSprite.cpp */,
+				8D51DC5D1B3A99360053EA8A /* DropPropSprite.h */,
 				8DD3FA541B2036A40028DB92 /* PropSpriteView.cpp */,
 				8DD3FA551B2036A40028DB92 /* PropSpriteView.h */,
 				D8D678181B1DB58C008C3BA6 /* PropSprite.cpp */,
@@ -1044,6 +1075,8 @@
 				8DDCC6791B32B82500F01D46 /* SpecialObject.h */,
 				8DDCC6721B32AFFB00F01D46 /* MoneyObject.cpp */,
 				8DDCC6731B32AFFB00F01D46 /* MoneyObject.h */,
+				8D51DC591B3A907C0053EA8A /* MoneyManager.cpp */,
+				8D51DC5A1B3A907C0053EA8A /* MoneyManager.h */,
 				8DDCC6751B32B00B00F01D46 /* ExpendObject.cpp */,
 				8DDCC6761B32B00B00F01D46 /* ExpendObject.h */,
 			);
@@ -1275,6 +1308,7 @@
 				8DD494001B1307080024CE36 /* HumanChangeState.cpp in Sources */,
 				8DD8C12F1AFCB81C00872AA2 /* SelectMenuView.cpp in Sources */,
 				8DD88E7A1B2598240072688E /* DefenseBuilding3.cpp in Sources */,
+				8D51DC5B1B3A907C0053EA8A /* MoneyManager.cpp in Sources */,
 				8DD87E671B15A26900FC073A /* ShopGunItemScrollHeadler.cpp in Sources */,
 				8DD5D0B41B1419AF00AA2A07 /* EnemyProgressBar.cpp in Sources */,
 				8DC10AB91AC3D6E2004F7DE2 /* Bullet.cpp in Sources */,
@@ -1296,6 +1330,7 @@
 				8DDCC6711B32AFB900F01D46 /* SpecialManager.cpp in Sources */,
 				8DD88E771B2598150072688E /* DefenseBuilding2.cpp in Sources */,
 				8DC6A5D41ADFD788002A6159 /* HumanReloadState.cpp in Sources */,
+				8D51DC581B3A817C0053EA8A /* DropManager.cpp in Sources */,
 				8DDCC67A1B32B82500F01D46 /* SpecialObject.cpp in Sources */,
 				8DE3F7B11AF75109001E048F /* SelectMenuController.cpp in Sources */,
 				8DD4997C1B04869A0037CBAA /* DefenseBuildingManager.cpp in Sources */,
@@ -1304,9 +1339,11 @@
 				8DC3E1A61AE8CF7B00BE6CA4 /* FlyEnemySprite.cpp in Sources */,
 				8DC10ABC1AC3D6FD004F7DE2 /* BulletSprite.cpp in Sources */,
 				8DD8C12C1AFCB15F00872AA2 /* GameShopScene.cpp in Sources */,
+				8D51DC551B3A816F0053EA8A /* DropModel.cpp in Sources */,
 				8DD2F25D1B213D9800A52B33 /* GameHomeScene.cpp in Sources */,
 				8DC10AC21AC3D75F004F7DE2 /* Enemy.cpp in Sources */,
 				8DBB988E1ACD520C008C804D /* json_writer.cpp in Sources */,
+				8D51DC5E1B3A99360053EA8A /* DropPropSprite.cpp in Sources */,
 				8DDCC6771B32B00B00F01D46 /* ExpendObject.cpp in Sources */,
 				8DD3FA591B205B430028DB92 /* BuffSprite.cpp in Sources */,
 				8DC10AC81AC3D7B1004F7DE2 /* EnemySprite.cpp in Sources */,
@@ -1320,6 +1357,7 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				8DC6A5CB1ADFD64A002A6159 /* State.cpp in Sources */,
 				8DC34A9D1ADCF8DA00C6B657 /* GameMap5s.cpp in Sources */,
+				8D51DC611B3A99630053EA8A /* DropMoneySprite.cpp in Sources */,
 				8DD29D371B0B3B9A00ECB826 /* DefenseBuilding1_Sprite.cpp in Sources */,
 				8DC430A91AC92BD600AB1665 /* Gun.cpp in Sources */,
 			);

@@ -85,6 +85,7 @@ void GameShopScene::initShopView()
                                        35);
     m_goldLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.58,
                              m_visibleOrigin.y + m_visibleSize.height * 0.93);
+    m_goldLabel->enableOutline(Color4B(0, 0, 0, 255),2);
     addChild(m_goldLabel);
     Sprite * jinbiIcon = Sprite::create(ImagePath("jinbi_icon.png"));
     jinbiIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.49,

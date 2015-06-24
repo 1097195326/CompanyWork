@@ -67,6 +67,10 @@ Prop * PropManager::getPropByIndex(int index)
     string propId = m_hashHead[index];
     return m_propData[propId];
 }
+Prop * PropManager::getPropById(string id)
+{
+    return m_propData[id];
+}
 int PropManager::getPropNum()
 {
     return (int)m_propData.size();
@@ -168,4 +172,8 @@ void PropManager::checkUnlock()
         Prop * prop = iter->second;
         prop->checkUnlock();
     }
+}
+void PropManager::dropProp(string id,Vec2 point)
+{
+    
 }

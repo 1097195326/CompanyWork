@@ -39,6 +39,7 @@ private:
     
     PropState   m_state;
     Vec2        m_point;
+    Vec2        m_viewPoint;
 public:
     Prop(Json::Value value);
     ~Prop();

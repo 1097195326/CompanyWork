@@ -28,6 +28,7 @@ float GameLoading::loadFrames()
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("HumanThrow.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("explosion.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao2.plist"));
     
     std::map<std::string,Gun *>::iterator gunIter;
     std::map<std::string,Gun *> gunData = GunManager::getInstance()->getTakeUpGunData();

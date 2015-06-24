@@ -28,6 +28,7 @@ public:
     Prop *  addUsingProp(string propId);
     //---
     Prop *   getPropByIndex(int index);
+    Prop *   getPropById(string id);
     int     getPropNum();
     //---
     int     getTakeUpPropNum();
@@ -43,6 +44,7 @@ public:
     void    setFightView();
     
     void    checkUnlock();
+    void    dropProp(string id,Vec2 point);
 public:
     static PropManager * getInstance();
     PropManager();

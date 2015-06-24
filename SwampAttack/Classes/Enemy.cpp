@@ -11,6 +11,8 @@
 #include "EnemyInfo.h"
 #include "House.h"
 #include "BulletManager.h"
+#include "DropManager.h"
+
 
 Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false),m_isWeak(false)
 {
@@ -126,6 +128,7 @@ void Enemy::hurt(int damage,int index)
         m_status |= e_dieing;
         m_isShowHurt = false;
         removeAllBuffS();
+        DropManager::getInstance()->dropObject(m_drop, m_point);
     }else
     {
         hurtDlay = 0;
@@ -157,6 +160,7 @@ void Enemy::hurt(int damage)
         m_status |= e_dieing;
         m_isShowHurt = false;
         removeAllBuffS();
+        DropManager::getInstance()->dropObject(m_drop, m_point);
     }else
     {
         hurtDlay = 0;

@@ -30,6 +30,7 @@ public:
     ~PropSpriteView();
     
     void updateData();
+    Vec2    getViewPosition();
     
     bool    touchBegan(Touch * touch, Event * event);
     void    touchMove(Touch * touch, Event * event);

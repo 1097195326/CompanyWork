@@ -60,7 +60,7 @@ void Prop::setFightView()
     PropSpriteView * sprite = new PropSpriteView(this);
     sprite->setSubject(this);
     sprite->autorelease();
-    
+    m_viewPoint = sprite->getViewPosition();
 }
 void Prop::gameLoop(float data)
 {
