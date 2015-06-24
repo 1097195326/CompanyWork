@@ -27,7 +27,7 @@ DropModel::DropModel(Json::Value data)
         int percent = atoi(moneyData[i]["percent"].asString().c_str());
         m_moneyData[moneyid] = percent;
     }
-    m_random = atof(data["Randrom"].asString().c_str());
+    m_random = atof(data["Random"].asString().c_str());
     
 }
 DropModel::~DropModel()
@@ -38,9 +38,11 @@ DropData DropModel::getDropData()
 {
     DropData data;
     int rd = m_random;
-    
+//    int _r = random(1, 100);
+//    log("1111:%d,%d",_r,rd);
     if(random(1, 100) <= rd)
     {
+        
         std::map<string,int>::iterator iter;
         for (iter = m_itemData.begin(); iter != m_itemData.end(); ++iter)
         {
@@ -49,6 +51,7 @@ DropData DropModel::getDropData()
             {
                 data.id = iter->first;
                 data.type = 2;
+                break;
             }
             rd -= r;
         }
@@ -59,6 +62,7 @@ DropData DropModel::getDropData()
             {
                 data.id = iter->first;
                 data.type = 1;
+                break;
             }
             rd -= r;
         }

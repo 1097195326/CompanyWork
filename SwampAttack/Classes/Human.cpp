@@ -123,7 +123,7 @@ void Human::shootCall()
         }
     }
     m_status = _h_shooted;
-    log("shoot call");
+//    log("shoot call");
 }
 void Human::changeCall()
 {

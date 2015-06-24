@@ -9,6 +9,7 @@
 #include "PropManager.h"
 #include "ConfigManager.h"
 #include "ShopPropIcon.h"
+#include "DropPropSprite.h"
 
 
 PropManager::PropManager()
@@ -175,5 +176,18 @@ void PropManager::checkUnlock()
 }
 void PropManager::dropProp(string id,Vec2 point)
 {
-    
+    log("drop prop");
+    Prop * prop = m_propData[id];
+    if (prop->isUnlock())
+    {
+        
+    }
+    if (!prop->isTakeUp())
+    {
+        prop->setTakeUpIndex((int)m_takeUpPropData.size() + 1);
+        prop->setFightView();
+    }
+    DropPropSprite * spr = new DropPropSprite(prop);
+    spr->autorelease();
+    spr->setPosition(point);
 }

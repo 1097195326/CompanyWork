@@ -121,6 +121,10 @@ bool Enemy::isContainsPoint(cocos2d::Rect rect)
 }
 void Enemy::hurt(int damage,int index)
 {
+    if (isDieing() || isCanDelete())
+    {
+        return;
+    }
     m_health = m_health - damage;
     if (m_health <= 0)
     {
@@ -153,6 +157,10 @@ void Enemy::hurt(int damage,int index)
 }
 void Enemy::hurt(int damage)
 {
+    if (isDieing() || isCanDelete())
+    {
+        return;
+    }
     m_health = m_health - damage;
     if (m_health <= 0)
     {

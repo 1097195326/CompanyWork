@@ -8,6 +8,7 @@
 
 #include "MoneyManager.h"
 #include "ConfigManager.h"
+#include "DropMoneySprite.h"
 
 
 MoneyManager::MoneyManager()
@@ -38,5 +39,9 @@ MoneyObject * MoneyManager::getMoneyObjectById(string id)
 }
 void MoneyManager::dropMoney(string id,Vec2 point)
 {
-    
+    log("drop money");
+    MoneyObject * obj = m_moneyData[id];
+    DropMoneySprite * spr = new DropMoneySprite(obj);
+    spr->autorelease();
+    spr->setPosition(point);
 }

@@ -165,6 +165,10 @@ void Prop::takeDown()
     _G_U->setTakeUpPropIndex(m_id, 0);
     notify();
 }
+void Prop::setTakeUpIndex(int index)
+{
+    m_takeUpIndex = index;
+}
 int Prop::getTakeUpIndex()
 {
     return m_takeUpIndex;
@@ -213,6 +217,10 @@ void Prop::setPropPoint(cocos2d::Vec2 point)
 Vec2 Prop::getPropPoint()
 {
     return m_point;
+}
+Vec2 Prop::getPropViewPoint()
+{
+    return m_viewPoint;
 }
 bool Prop::isCanArrve()
 {

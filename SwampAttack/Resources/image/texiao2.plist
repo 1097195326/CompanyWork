@@ -7,54 +7,54 @@
             <key>item_flash0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{254,2},{250,250}}</string>
+                <string>{{124,124},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{250,250}}</string>
+                <string>{{0,0},{120,120}}</string>
                 <key>sourceSize</key>
-                <string>{250,250}</string>
+                <string>{120,120}</string>
             </dict>
             <key>item_flash0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,254},{250,250}}</string>
+                <string>{{124,2},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{250,250}}</string>
+                <string>{{0,0},{120,120}}</string>
                 <key>sourceSize</key>
-                <string>{250,250}</string>
+                <string>{120,120}</string>
             </dict>
             <key>item_flash0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{254,254},{250,248}}</string>
-                <key>offset</key>
-                <string>{0,-1}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,2},{250,248}}</string>
-                <key>sourceSize</key>
-                <string>{250,250}</string>
-            </dict>
-            <key>item_flash0004.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,2},{250,250}}</string>
+                <string>{{2,124},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{250,250}}</string>
+                <string>{{0,0},{120,120}}</string>
                 <key>sourceSize</key>
-                <string>{250,250}</string>
+                <string>{120,120}</string>
+            </dict>
+            <key>item_flash0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -64,9 +64,9 @@
             <key>realTextureFileName</key>
             <string>texiao2.png</string>
             <key>size</key>
-            <string>{512,512}</string>
+            <string>{256,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:2d3bad90d315dc3bb0c2ba8345030d80:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:71acc0aa205816b1b223090ac1c38cfd:1/1$</string>
             <key>textureFileName</key>
             <string>texiao2.png</string>
         </dict>

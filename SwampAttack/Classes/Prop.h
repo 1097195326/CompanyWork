@@ -51,6 +51,7 @@ public:
     //---
     void    takeUp(int index);
     void    takeDown();
+    void    setTakeUpIndex(int index);
     int     getTakeUpIndex();
     bool    isTakeUp();
     
@@ -63,6 +64,7 @@ public:
     //--- prop state ---
     void    setPropPoint(Vec2 point);
     Vec2    getPropPoint();
+    Vec2    getPropViewPoint();
     bool    isCanArrve();
     
     void    arrveCall();

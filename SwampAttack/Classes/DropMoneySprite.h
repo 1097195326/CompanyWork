@@ -14,8 +14,15 @@
 class DropMoneySprite : public Sprite {
 private:
     MoneyObject *  m_money;
+    Sprite * m_icon;
     
+    EventListenerTouchOneByOne * m_listener;
     
+    virtual bool    touchBegan(Touch * touch, Event * event);
+    virtual void    touchEnd(Touch * touch, Event * event);
+    
+    void    guangEnd(Node * pSender);
+    void    moveEnd(Node * pSender);
 public:
     DropMoneySprite(MoneyObject * money);
     ~DropMoneySprite();

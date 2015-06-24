@@ -25,7 +25,8 @@ m_moveJuli(0.0f)
     m_propIcon = NULL;
     
     m_iconScale = 0.6;
-    int iconIndex = PropManager::getInstance()->getTakeUpPropIndexByName(m_prop->getId());
+//    int iconIndex = PropManager::getInstance()->getTakeUpPropIndexByName(m_prop->getId());
+    int iconIndex = m_prop->getTakeUpIndex();
     m_blueBg = Sprite::create(ImagePath("fight_gun_blueBg.png"));
     Sprite * propIcon = Sprite::create(ImagePath(StringUtils::format("%s_icon.png",m_prop->getModelId().c_str())));
     addChild(m_blueBg);

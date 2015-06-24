@@ -37,6 +37,7 @@ DropManager * DropManager::getInstance()
 }
 void DropManager::dropObject(string objId,Vec2 point)
 {
+//    log("drop obj %s",objId.c_str());
     DropModel * model = m_dropData[objId];
     DropData dropData = model->getDropData();
     switch (dropData.type)

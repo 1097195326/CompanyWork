@@ -12,7 +12,6 @@
 
 #include "GameShowLevelupLayer.h"
 
-#include "DropManager.h"
 
 Scene * GameHomeScene::scene()
 {
@@ -28,7 +27,6 @@ bool GameHomeScene::init()
     {
         return false;
     }
-    DropManager::getInstance();
     
     Sprite * bg = Sprite::create(ImagePath("home_bg.png"));
     bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,

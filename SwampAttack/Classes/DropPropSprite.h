@@ -14,7 +14,15 @@
 class DropPropSprite : public Sprite {
 private:
     Prop *  m_prop;
+    Sprite * m_icon;
     
+    EventListenerTouchOneByOne * m_listener;
+    
+    virtual bool    touchBegan(Touch * touch, Event * event);
+    virtual void    touchEnd(Touch * touch, Event * event);
+    
+    void    guangEnd(Node * pSender);
+    void    moveEnd(Node * pSender);
     
 public:
     DropPropSprite(Prop * prop);
