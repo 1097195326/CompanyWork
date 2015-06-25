@@ -74,6 +74,8 @@ public:
     bool    isUnlockProp(string propId);
     void    setPropNum(string propId,int num);
     int     getPropNum(string propId);
+    void    setPropLevel(string propId,int level);
+    int     getPropLevel(string propId);
     
     void    setTakeUpProp(string propId,bool takeUp);
     bool    isTakeUpProp(string propId);

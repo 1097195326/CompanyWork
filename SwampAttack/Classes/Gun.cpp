@@ -322,6 +322,10 @@ bool Gun::addStrengthenLevel()
     {
         return false;
     }
+    if (m_strengthenLevel >= m_limitLevel)
+    {
+        return false;
+    }
     userGold -= m_strengthenGold;
     _G_U->setUserGold(userGold);
         

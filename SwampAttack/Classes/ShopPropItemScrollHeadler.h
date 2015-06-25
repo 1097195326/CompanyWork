@@ -20,6 +20,7 @@ private:
     Label   *   m_buyLabel;
     Label   *   m_upgradeLabel;
     Label   *   m_bulletsLabel;
+    Label   *   m_levelUpLabel;
     
     ProgressBar *   m_progressBar;
     
@@ -31,6 +32,8 @@ private:
     GameShopScene * m_shopScene;
 private:
     void    initDaojuView();
+    void    initUnlockView();
+    void    initLockView();
     void    updateDaojuView();
     
     void    upGrade(Ref * pSender);

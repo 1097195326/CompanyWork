@@ -28,12 +28,7 @@ Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal)
     m_unlockMission = data["UnlockMission"].asString();
     m_unlockGold = atoi(data["UnlockGold"].asString().c_str());
     m_itemPrice = atoi(data["ItemPrice"].asString().c_str());
-    m_damage =
-    data["Damage"].asString() == "" ?
-    0 : atof(data["Damage"].asString().c_str());
-    m_percentageDamage =
-    data["PercentageDamage"].asString() == "" ?
-    0 : atof(data["PercentageDamage"].asString().c_str());
+    m_limitLevel = 10;
     
     m_buffIds.reserve(4);
     Json::Value buffIds = data["BuffId"];
@@ -50,6 +45,20 @@ Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal)
     m_isUnlock = _G_U->isUnlockProp(m_id);
     m_isTakeUp = _G_U->isTakeUpProp(m_id);
     m_takeUpIndex = _G_U->getTakeUpPropIndex(m_id);
+    m_strengthenLevel = _G_U->getPropLevel(m_id);
+    
+    string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
+    Json::Value upgradeData = _C_M->getDataByTag("daojuUpgrade",upId);
+    m_damage = atof(upgradeData["Damage"].asString().c_str());
+    
+    if (m_limitLevel == m_strengthenLevel)
+    {
+        m_isMaxLevel = true;
+    }else
+    {
+        m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
+    }
+    
 }
 Prop::~Prop()
 {
@@ -92,6 +101,7 @@ void Prop::gameLoop(float data)
                     {
                         log("buff index:%s",m_buffIds[i].c_str());
                         GameBuff * buff = _G_B_F->addBuff(m_buffIds[i]);
+                        buff->setDamage(m_damage);
                         buff->setEnemyModel(enemy);
                         enemy->addBuff(buff);
                     }
@@ -133,6 +143,33 @@ bool Prop::checkCanToHurt()
         }
     }
     return false;
+}
+bool Prop::addStrengthenLevel()
+{
+    int userGold = _G_U->getUserGold();
+    if (userGold < m_strengthenGold)
+    {
+        return false;
+    }
+    if (m_strengthenLevel >= m_limitLevel) {
+        return false;
+    }
+    userGold -= m_strengthenGold;
+    _G_U->setUserGold(userGold);
+    
+    ++m_strengthenLevel;
+    _G_U->setPropLevel(m_id, m_strengthenLevel);
+    string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
+    Json::Value upgradeData = _C_M->getDataByTag("daojuUpgrade",upId);
+    m_damage = atof(upgradeData["Damage"].asString().c_str());
+    if (m_limitLevel == m_strengthenLevel)
+    {
+        m_isMaxLevel = true;
+    }else
+    {
+        m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
+    }
+    return true;
 }
 bool Prop::buyProp()
 {
@@ -327,7 +364,10 @@ bool Prop::isCanDelete()
 {
     return m_state == p_canDelete;
 }
-
+bool Prop::isMaxLevel()
+{
+    return m_isMaxLevel;
+}
 //--- get function ----
 string Prop::getId()
 {
@@ -349,10 +389,6 @@ float Prop::getDamage()
 {
     return m_damage;
 }
-float Prop::getPercentageDamage()
-{
-    return m_percentageDamage;
-}
 vector<string> Prop::getBuffId()
 {
     return m_buffIds;
@@ -372,4 +408,16 @@ int Prop::getPropPrice()
 string Prop::getItemDestription()
 {
     return m_itemDestription;
+}
+int Prop::getStrengthenGold()
+{
+    return m_strengthenGold;
+}
+int Prop::getStrengthenLevel()
+{
+    return m_strengthenLevel;
+}
+int Prop::getLimitLevel()
+{
+    return m_limitLevel;
 }

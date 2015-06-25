@@ -48,6 +48,7 @@ void WalkEnemy::gameLoop(float data)
             m_isShowHurt = false;
         }
     }
+//    Enemy::gameLoop(data);
     std::list<GameBuff *>::iterator iter;
     for (iter = m_buffData.begin(); iter != m_buffData.end();)
     {
@@ -57,7 +58,8 @@ void WalkEnemy::gameLoop(float data)
         {
 //            log("buff hurt enemy");
             buff->setStateWaiting();
-            hurt(buff->getDamage() + m_health * buff->getPercentageDamage());
+//            hurt(buff->getDamage() + m_health * buff->getPercentageDamage());
+            hurt(buff->getDamage());
         }
     }
 }

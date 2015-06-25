@@ -38,6 +38,7 @@ public:
     void    removeFromModel();
     void    enemyDieCall();
     
+    void    setDamage(float damage);
     void    setIsShow();
     void    setStateDie();
     void    setStateCanDelete();

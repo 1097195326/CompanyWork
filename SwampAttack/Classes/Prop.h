@@ -99,24 +99,33 @@ private:
     string      m_modelId;      //
     float       m_effectArea;   //
     float       m_damage;       //
-    float       m_percentageDamage;//
     std::vector<string>  m_buffIds;
     int         m_itemPrice;
     string      m_unlockMission;
     int         m_unlockGold;
     string      m_itemDestription;
+    int         m_limitLevel;
+    
+    int         m_strengthenGold;
+    int         m_strengthenLevel;
+    bool        m_isMaxLevel;
 public:
+    bool    isMaxLevel();
+    bool    addStrengthenLevel();
+    
     string      getId();
     string      getItemName();
     string      getModelId();
     float       getEffectArea();
     float       getDamage();
-    float       getPercentageDamage();
     vector<string> getBuffId();
     string      getUnlockMisstion();
     int         getUnlockGold();
     string      getItemDestription();
     int         getPropPrice();
+    int         getStrengthenGold();
+    int         getStrengthenLevel();
+    int         getLimitLevel();
     
 };
 

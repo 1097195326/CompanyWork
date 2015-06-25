@@ -126,7 +126,7 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
     addChild(levelBg);
     m_levelUpLabel = Label::createWithTTF("LV", "fonts/Arial Black.ttf", 20);
     m_levelUpLabel->setPosition(levelBg->getContentSize().width * 0.5, levelBg->getContentSize().height * 0.5);
-    levelBg->addChild(m_levelUpLabel);
+    levelBg->addChild(m_levelUpLabel,1);
     
     m_progressBar = new ProgressBar("shopItemTiao1.png","shopItemTiao2.png");
     m_progressBar->setBarRight();
@@ -192,14 +192,21 @@ void ShopGunItemScrollHeadler::updateGunView()
         int upgradeGold = gun->getStrengthenGold();
         int bullets = gun->getTotalBulletNum();
         
-        m_upgradeLabel->setString(StringUtils::format("%d",upgradeGold));
+        if (gun->isMaxLevel())
+        {
+            m_upgradeLabel->setString("MAX");
+        }else
+        {
+            m_upgradeLabel->setString(StringUtils::format("%d",upgradeGold));
+        }
+        
         m_levelUpLabel->setString(StringUtils::format("LV.%d",(int)level));
         m_progressBar->updatePercent(level/limitLevel * 100);
+        m_buyLabel->setString(StringUtils::format("%d",bulletPrice));
+        m_bulletsLabel->setString(StringUtils::format("%d",bullets));
         
         int userGold = GameUser::getInstance()->getUserGold();
         
-        m_buyLabel->setString(StringUtils::format("%d",bulletPrice));
-        m_bulletsLabel->setString(StringUtils::format("%d",bullets));
         if (userGold >= bulletPrice)
         {
             m_buyButton->setNormalImage(Sprite::create(ImagePath("shopItemButtonNormal.png")));
@@ -215,7 +222,7 @@ void ShopGunItemScrollHeadler::updateGunView()
             m_buyButton->setSelectedImage(Sprite::create(ImagePath("shopItemButtonDisable.png")));
             m_buyButton->setEnabled(false);
         }
-        if (userGold >= upgradeGold && level < limitLevel)
+        if (userGold >= upgradeGold && !gun->isMaxLevel())
         {
             m_upGradeButton->setNormalImage(Sprite::create(ImagePath("shopItemButtonNormal.png")));
             m_upGradeButton->setSelectedImage(Sprite::create(ImagePath("shopItemButtonNormal.png")));

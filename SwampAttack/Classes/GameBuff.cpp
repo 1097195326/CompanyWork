@@ -41,9 +41,9 @@ m_isShow(false)
     m_id = data["BuffId"].asString() ;
     m_modelId= data["ModelId"].asString() ;
     m_buffType = atoi(data["BuffType"].asString().c_str());
-    m_damage =
-    data["Damage"].asString() == "" ?
-    0 : atof(data["Damage"].asString().c_str());
+//    m_damage =
+//    data["Damage"].asString() == "" ?
+//    0 : atof(data["Damage"].asString().c_str());
     m_percentageDamage = atof(data["PercentageDamage"].asString().c_str());
     m_time = atof(data["Time"].asString().c_str());
     m_frames = GameBuffInfo::getInstance()->getFrameByName(m_modelId);
@@ -73,6 +73,10 @@ void GameBuff::gameLoop(float data)
 void GameBuff::setEnemyModel(Enemy *enemy)
 {
     m_enemy = enemy;
+}
+void GameBuff::setDamage(float damage)
+{
+    m_damage = damage;
 }
 void GameBuff::removeFromModel()
 {

@@ -190,6 +190,14 @@ int GameUser::getPropNum(string propId)
 {
     return getIntForKey(propId + "propNum");
 }
+void GameUser::setPropLevel(string propId, int level)
+{
+    setIntForKey(propId + "propLevel", level);
+}
+int GameUser::getPropLevel(string propId)
+{
+    return getIntForKey(propId + "propLevel");
+}
 void GameUser::setTakeUpProp(string propId, bool takeUp)
 {
     setBoolForKey(propId + "proptakeup", takeUp);
