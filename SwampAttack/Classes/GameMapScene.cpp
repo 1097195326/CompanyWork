@@ -20,6 +20,8 @@ bool GameMapScene::init()
     {
         return false;
     }
+    auto spriteFrameCache = SpriteFrameCache::getInstance();
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("yinying.plist"));
     
 //    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("map_bg1.mp3")).c_str());
     

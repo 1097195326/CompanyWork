@@ -28,7 +28,8 @@ Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal)
     m_unlockMission = data["UnlockMission"].asString();
     m_unlockGold = atoi(data["UnlockGold"].asString().c_str());
     m_itemPrice = atoi(data["ItemPrice"].asString().c_str());
-    m_limitLevel = 10;
+//    m_limitLevel = 10;
+    m_limitLevel = atoi(data["LimitLevel"].asString().c_str());
     
     m_buffIds.reserve(4);
     Json::Value buffIds = data["BuffId"];

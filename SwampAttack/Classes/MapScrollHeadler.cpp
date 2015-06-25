@@ -8,6 +8,7 @@
 
 #include "MapScrollHeadler.h"
 #include "MapGuanqiaButton.h"
+#include "GuanQiaManager.h"
 
 
 
@@ -17,13 +18,31 @@ MapScrollHeadler::MapScrollHeadler(int sceneIndex)
     Sprite * bg = Sprite::create(ImagePath("map_scene1.png"));
     addChild(bg);
     
+    Vec2 offVec = Vec2(m_visibleOrigin.x - m_visibleSize.width * 0.5,
+                   m_visibleOrigin.y - m_visibleSize.height * 0.5);
+    
     for (int i = 1; i <= 10; ++i)
     {
+        std::string guanqiaId = StringUtils::format("40000%d_%d",(m_index + 1),i);
+        GuanqiaModel * guanQia = GuanQiaManager::getInstance()->getGuanqiaById(guanqiaId);
+        
         MapGuanqiaButton * button = new MapGuanqiaButton(m_index,i);
-        button->setPosition(m_visibleOrigin.x - m_visibleSize.width * 0.5,
-                            m_visibleOrigin.y - m_visibleSize.height * 0.5);
+        button->setPosition(offVec);
         button->autorelease();
         addChild(button,3);
+        
+        std::string shadeName = guanQia->getShadeName();
+        if (shadeName.size() > 0)
+        {
+            
+            std::string imageName = StringUtils::format("%s.png",shadeName.c_str());
+            Vec2 yPoint = guanQia->getYinyingPoint();
+            
+            Sprite * yinying = Sprite::createWithSpriteFrameName(imageName);
+            yinying->setPosition(offVec + yPoint);
+            addChild(yinying);
+//            log("%s:%f",imageName.c_str(),yPoint.x);
+        }
     }
     
     

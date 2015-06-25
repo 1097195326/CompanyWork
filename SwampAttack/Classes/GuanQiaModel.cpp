@@ -22,20 +22,25 @@ m_isUnlock(false)
 //    m_costPower = atoi(m_data["CostPower"].asString().c_str());
     m_gold =  atoi(m_data["Gold"].asString().c_str());
     m_unlockMission = m_data["UnlockMission"].asString();
+    m_dropId = m_data["Drop"].asString();
+    m_shadeName = m_data["shade"].asString();
     
     
     m_isUnlock = _G_U->isUnlockGuanqia(m_id);
     
-    Json::Value point = _C_M->getDataByName("guanqiaPoint", m_id, "iphone5s");
+    Json::Value b_point = _C_M->getDataByName("guanqiaPoint", m_id, "iphone5s");
+    Json::Value y_point = _C_M->getDataByName("guanqiaPoint", m_id, "iphone5s_yy");
 //    log("point:%s",point.toStyledString().c_str());
-    for (int i = 0; i < point.size(); ++i)
+    for (int i = 0; i < b_point.size(); ++i)
     {
         switch (i) {
             case 0:
-                m_point.x = atoi(point[i].asString().c_str());
+                m_buttonPoint.x = atoi(b_point[i].asString().c_str());
+                m_yinyingPoint.x = atoi(y_point[i].asString().c_str());
                 break;
             case 1:
-                m_point.y = atoi(point[i].asString().c_str());
+                m_buttonPoint.y = atoi(b_point[i].asString().c_str());
+                m_yinyingPoint.y = atoi(y_point[i].asString().c_str());
                 break;
             default:
                 break;
@@ -57,7 +62,11 @@ bool GuanqiaModel::isUnlock()
 }
 Vec2 GuanqiaModel::getGuanqiaPoint()
 {
-    return m_point;
+    return m_buttonPoint;
+}
+Vec2 GuanqiaModel::getYinyingPoint()
+{
+    return m_yinyingPoint;
 }
 #pragma get function
 string GuanqiaModel::getId()
@@ -99,4 +108,12 @@ Json::Value GuanqiaModel::getMonsters()
 int  GuanqiaModel::getThroughGold()
 {
     return m_gold;
+}
+string GuanqiaModel::getDropId()
+{
+    return m_dropId;
+}
+string GuanqiaModel::getShadeName()
+{
+    return m_shadeName;
 }

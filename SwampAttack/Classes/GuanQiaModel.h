@@ -25,16 +25,21 @@ private:
 //    string  m_lastInstanceId;
 //    string  m_mapId;
 //    int     m_costPower;
+    
     string  m_unlockMission;
     int     m_gold;
+    string  m_shadeName;
+    string  m_dropId;
     
     bool    m_isUnlock;
-    Vec2    m_point;
+    Vec2    m_buttonPoint;
+    Vec2    m_yinyingPoint;
 public:
     
     bool    isUnlock();
     void    unlockGuanqia();
     Vec2    getGuanqiaPoint();
+    Vec2    getYinyingPoint();
 public:
     
     GuanqiaModel(Json::Value data);
@@ -50,6 +55,8 @@ public:
 //    int     getCostPower();
     int     getThroughGold();
     string  getUnlockMission();
+    string  getDropId();
+    string  getShadeName();
     Json::Value    getMonsters();
     
 };
