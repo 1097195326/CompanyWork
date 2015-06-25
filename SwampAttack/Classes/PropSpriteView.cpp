@@ -29,8 +29,13 @@ m_moveJuli(0.0f)
     int iconIndex = m_prop->getTakeUpIndex();
     m_blueBg = Sprite::create(ImagePath("fight_gun_blueBg.png"));
     Sprite * propIcon = Sprite::create(ImagePath(StringUtils::format("%s_icon.png",m_prop->getModelId().c_str())));
+    m_numLabel = Label::createWithTTF(StringUtils::format("%d",m_prop->getNum()),
+                                      "fonts/Arial Black.ttf",
+                                      20);
+    m_numLabel->enableOutline(Color4B(0, 0, 0, 255),2);
     addChild(m_blueBg);
     addChild(propIcon,5);
+    addChild(m_numLabel,5);
     
     m_blueBg->setScale(m_iconScale);
     propIcon->setScale(0.5);
@@ -39,6 +44,7 @@ m_moveJuli(0.0f)
     float iconWidth = m_blueBg->getContentSize().width;
     m_blueBg->setPosition(iconPoint - Vec2((iconWidth + 20) * (iconIndex - 1), 0) * m_iconScale);
     propIcon->setPosition(iconPoint - Vec2((iconWidth + 20) * (iconIndex - 1), 0) * m_iconScale);
+    m_numLabel->setPosition(iconPoint - Vec2((iconWidth + 20) * (iconIndex - 1), 0) * m_iconScale + Vec2(20, -20));
     
     m_listener = EventListenerTouchOneByOne::create();
     m_listener->setSwallowTouches(true);
@@ -64,7 +70,12 @@ bool PropSpriteView::touchBegan(Touch *touch, Event *event)
 {
     Vec2 p = m_blueBg->convertToNodeSpace(touch->getLocation());
     Rect r = Rect(0, 0, m_blueBg->getContentSize().width ,m_blueBg->getContentSize().height);
-    if (r.containsPoint(p)) {
+    if (r.containsPoint(p))
+    {
+        if (!m_prop->useProp())
+        {
+            return false;
+        }
         if (m_prop->getModelId() == "daoju1")
         {
             m_propIcon = new PropSprite_daoju1(m_prop->getId());
@@ -104,6 +115,6 @@ void PropSpriteView::touchEnd(Touch *touch, Event *event)
 void PropSpriteView::updateData()
 {
     
-    
+    m_numLabel->setString(StringUtils::format("%d",m_prop->getNum()));
     
 }

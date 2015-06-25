@@ -18,7 +18,7 @@ class GameFightScene : public cocos2d::Layer,public GameObserver
 {
 private:
     EventListenerTouchOneByOne * m_listener;
-    
+    Label  * m_goldNumLabel;
 public:
     static  Scene * scene();
     static  GameFightScene * getInstance();

@@ -63,7 +63,6 @@ bool DropPropSprite::touchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
 }
 void DropPropSprite::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 {
-    
     stopAllActions();
     Vec2 m_p = getPosition();
     Vec2 t_p = m_prop->getPropViewPoint();
@@ -82,6 +81,7 @@ void DropPropSprite::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 }
 void DropPropSprite::moveEnd(cocos2d::Node *pSender)
 {
+    m_prop->addProp();
     pSender->stopAllActions();
     removeFromParentAndCleanup(true);
 }

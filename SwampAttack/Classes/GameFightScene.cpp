@@ -85,6 +85,18 @@ bool GameFightScene::init()
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu,2);
     
+    m_goldNumLabel = Label::createWithTTF(StringUtils::format("%d",_G_D->getGoldNum()),
+                                          "fonts/Arial Black.ttf",
+                                          20);
+    m_goldNumLabel->setPosition(_G_M_M->fightScene_Gold_Position);
+    m_goldNumLabel->enableOutline(Color4B(0, 0, 0, 255),2);
+    addChild(m_goldNumLabel);
+    
+    Sprite * goldIcon = Sprite::create(ImagePath("jinbi_icon.png"));
+    goldIcon->setPosition(_G_M_M->fightScene_Gold_Position + Vec2(50, 0));
+    goldIcon->setScale(0.7);
+    addChild(goldIcon);
+    
     log("fight scene init");
     _G_D->initGameView();
     
@@ -95,9 +107,10 @@ bool GameFightScene::init()
 }
 void GameFightScene::updateData()
 {
-    log("game is over");
+    m_goldNumLabel->setString(StringUtils::format("%d",_G_D->getGoldNum()));
     if (_G_D->isOver())
     {
+        log("game is over");
         Director::getInstance()->getActionManager()->pauseAllRunningActions();
         
         RenderTexture * rt = getFightSceneTex();

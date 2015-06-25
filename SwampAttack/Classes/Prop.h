@@ -59,6 +59,8 @@ public:
     bool    unlockProp();
     int     getNum();
     bool    buyProp();
+    bool    useProp();
+    void    addProp();
     void    checkUnlock();
     
     //--- prop state ---

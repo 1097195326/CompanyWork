@@ -149,6 +149,23 @@ bool Prop::buyProp()
     notify();
     return true;
 }
+bool Prop::useProp()
+{
+    if (m_num > 0)
+    {
+        --m_num;
+        _G_U->setPropNum(m_id, m_num);
+        notify();
+        return true;
+    }
+    return false;
+}
+void Prop::addProp()
+{
+    ++m_num;
+    _G_U->setPropNum(m_id, m_num);
+    notify();
+}
 void Prop::takeUp(int index)
 {
     m_isTakeUp = true;

@@ -32,6 +32,7 @@ private:
     int     m_status = s_clear;
     GameMap * gameMap;
     GameOverStatus m_overStatus;
+    int     m_goldNum;
 private:
     void    checkCross();
 public:
@@ -50,6 +51,8 @@ public:
     bool    isOver();
     GameOverStatus getOverStatus();
     void    clearStatus();
+    void    addGold(int gold);
+    int     getGoldNum();
     void    gameLoop(float data);
 };
 

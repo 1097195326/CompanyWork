@@ -24,6 +24,7 @@ GameDirector::GameDirector()
     
     Director::getInstance()->getScheduler()->schedule(CC_SCHEDULE_SELECTOR(GameDirector::gameLoop), this, 1/30, false);
     
+    m_goldNum = 0;
     stopGame();
     
 }
@@ -46,6 +47,15 @@ void GameDirector::initGameView()
     PropManager::getInstance()->setFightView();
     EnemyManager::getInstance()->setView();
     
+}
+void GameDirector::addGold(int gold)
+{
+    m_goldNum += gold;
+    notify();
+}
+int GameDirector::getGoldNum()
+{
+    return m_goldNum;
 }
 void GameDirector::gameLoop(float data)
 {
@@ -141,12 +151,6 @@ void GameDirector::checkCross()
             
         }
     }
-    
-    
-    
-    
-    
-    
 }
 void GameDirector::resetGameData()
 {
@@ -157,6 +161,7 @@ void GameDirector::resetGameData()
     Human::getInstance()->resetData();
     
     EnemyManager::getInstance()->resetData();
+    m_goldNum = 0;
 }
 void GameDirector::startGame()
 {
