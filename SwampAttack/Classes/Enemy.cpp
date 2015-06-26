@@ -87,6 +87,8 @@ Enemy::~Enemy()
 }
 void Enemy::gameLoop(float data){}
 void Enemy::move(){}
+bool Enemy::computeIfWander(){return false;}
+void Enemy::wander(){}
 void Enemy::setView(){}
 void Enemy::effectAction(cocos2d::Vec2 point){}
 void Enemy::addBuff(GameBuff *buff)
@@ -197,6 +199,14 @@ bool Enemy::isWalk()
 {
     return m_status & e_walk;
 }
+bool Enemy::isWanderF()
+{
+    return m_status & e_wanderF;
+}
+bool Enemy::isWanderB()
+{
+    return m_status & e_wanderB;
+}
 bool Enemy::isHurt()
 {
     return m_status & e_hurt1 || m_status & e_hurt2 || m_status & e_hurt3;
@@ -279,6 +289,7 @@ void Enemy::attackCall()
                                m_targetPoint + Vec2(0,m_health * 0.7)
                                );
             BulletManager::getInstance()->fire(bp);
+            computeIfWander();
         }
             break;
         case 3:     // 陆地 自爆

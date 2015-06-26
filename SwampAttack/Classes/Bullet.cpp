@@ -61,7 +61,7 @@ void Bullet::gameLoop(float data)
     if (m_state == _b_arrive) {
         if (isFireHouse())
         {
-            House::getInstance()->hurt(m_damage);
+//            House::getInstance()->hurt(m_damage);
             return;
         }
         EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();

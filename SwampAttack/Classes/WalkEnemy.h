@@ -13,9 +13,13 @@
 
 class WalkEnemy : public Enemy {
 private:
+    Vec2    m_toPoint;
+    Vec2    m_perPoint;
     
+    bool    computeIfWander();
 protected:
-     virtual void    move();
+    virtual void    move();
+    void    wander();
 public:
     
     virtual void    setView();

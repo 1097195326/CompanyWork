@@ -15,6 +15,8 @@ class WalkEnemySprite : public EnemySprite {
 private:
     
 protected:
+    void    wanderFont();
+    void    wanderBack();
     void    move();
     void    attack();
     void    die();

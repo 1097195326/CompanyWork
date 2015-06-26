@@ -20,6 +20,8 @@ enum ActionStatus
 {
     normal,
     isMoving,
+    isWanderF,
+    isWanderB,
     isHurting,
     isAttacking,
     isDieing,

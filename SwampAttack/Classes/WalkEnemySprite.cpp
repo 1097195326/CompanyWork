@@ -18,6 +18,12 @@ WalkEnemySprite::WalkEnemySprite(Enemy * model):EnemySprite(model)
     Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_walk", info.walkFrames));
     walkAction->retain();
     m_map["walkAction"] = walkAction;
+    if (m_model->getAttackType() == 2)
+    {
+        Action * walkBackAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndexReverse(name + "_walk", info.walkFrames));
+        walkBackAction->retain();
+        m_map["walkBackAction"] = walkBackAction;
+    }
     Action * hurtHeavyAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_hurt_heavy", info.hurtHeavyFrames),
                                           CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::hurtCall, this)),
                                           NULL);
@@ -62,6 +68,12 @@ void WalkEnemySprite::update(float data)
     {
         setPosition(m_model->getPosition());
         move();
+    }else if(m_model->isWanderB())
+    {
+        wanderBack();
+    }else if(m_model->isWanderF())
+    {
+        wanderFont();
     }else if (m_model->isAttack())
     {
         attack();
@@ -122,6 +134,12 @@ void WalkEnemySprite::setArmorView()
         Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_walk", info.walkFrames));
         walkAction->retain();
         m_map["armorWalkAction"] = walkAction;
+        if (m_model->getAttackType() == 2)
+        {
+            Action * walkBackAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndexReverse(armorName + "_walk", info.walkFrames));
+            walkBackAction->retain();
+            m_map["armorWalkBackAction"] = walkBackAction;
+        }
         Action * hurtHeavyAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_hurt_heavy", info.hurtHeavyFrames),
                                                     NULL);
         hurtHeavyAction->retain();
@@ -211,6 +229,32 @@ void WalkEnemySprite::move()
     if (isHaveArmor) {
         armorSprite->stopAllActions();
         armorSprite->runAction(m_map["armorWalkAction"]);
+    }
+}
+void WalkEnemySprite::wanderFont()
+{
+    if (actionStatus == isWanderF) {
+        return;
+    }
+    actionStatus = isWanderF;
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["walkAction"]);
+    if (isHaveArmor) {
+        armorSprite->stopAllActions();
+        armorSprite->runAction(m_map["armorWalkAction"]);
+    }
+}
+void WalkEnemySprite::wanderBack()
+{
+    if (actionStatus == isWanderB) {
+        return;
+    }
+    actionStatus = isWanderB;
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["walkBackAction"]);
+    if (isHaveArmor) {
+        armorSprite->stopAllActions();
+        armorSprite->runAction(m_map["armorWalkBackAction"]);
     }
 }
 void WalkEnemySprite::attack()

@@ -14,7 +14,9 @@
 namespace BaseUtil
 {
     ActionInterval  *    makeAnimateWithNameAndIndex(const std::string & name, int count);
+    ActionInterval  *    makeAnimateWithNameAndIndexReverse(const std::string & name, int count);
     ActionInterval  *    makeAnimateWithSprite(const std::string & name, int count);
+    
     ActionInterval  *    makeAnimateWithNameIndexDelay(const std::string & name, int count, float delay);
     
     void addGray(Sprite* sp);

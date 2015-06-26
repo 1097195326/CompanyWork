@@ -35,9 +35,18 @@ void WalkEnemy::gameLoop(float data)
         move();
         if (m_targetPoint.x + m_range >= m_point.x)
         {
-            m_status &= e_clear;
-            m_status |= e_attack;
+            if(!computeIfWander())
+            {
+                m_status &= e_clear;
+                m_status |= e_attack;
+            }
         }
+    }else if (m_status & e_attack)
+    {
+//        computeIfWander();
+    }else if (m_status & e_wanderF || m_status & e_wanderB)
+    {
+        wander();
     }
     if (m_isShowHurt)
     {
@@ -63,9 +72,51 @@ void WalkEnemy::gameLoop(float data)
         }
     }
 }
+void WalkEnemy::wander()
+{
+    if (m_point.distanceSquared(m_perPoint) >= m_toPoint.distanceSquared(m_perPoint))
+    {
+        m_status &= e_clear;
+        m_status |= e_attack;
+    }
+    else
+    {
+        if (m_status & e_wanderB)
+        {
+            m_point += (Vec2(1, 0) * m_speedF);
+        }else if (m_status & e_wanderF)
+        {
+            m_point += (Vec2(-1, 0) * m_speedF);
+        }
+    }
+    
+}
 void WalkEnemy::move()
 {
     m_point = m_point + m_speedV;
+}
+bool WalkEnemy::computeIfWander()
+{
+    if(m_attackType == 2 && random(1, 100) < 10)
+    {
+        log("wander");
+        int distance = random(50, 100);
+        
+        if (m_point.x + distance >= m_targetPoint.x + m_range)
+        {
+            m_toPoint = m_point + Vec2(-distance, 0);
+            m_status &= e_clear;
+            m_status |= e_wanderF;
+        }else
+        {
+            m_toPoint = m_point + Vec2(distance, 0);
+            m_status &= e_clear;
+            m_status |= e_wanderB;
+        }
+        m_perPoint = m_point;
+        return true;
+    }
+    return false;
 }
 void WalkEnemy::setView()
 {

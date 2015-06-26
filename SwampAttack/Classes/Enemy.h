@@ -20,16 +20,18 @@ using namespace std;
 
 enum EnemyStatus
 {
-    e_clear   = 0b000000000,
-    e_waiting = 0b000000001,
-    e_dieing  = 0b000000010,
-    e_die     = 0b000000100,
-    e_walk    = 0b000001000,
-    e_hurt1   = 0b000010000,
-    e_hurt2   = 0b000100000,
-    e_hurt3   = 0b001000000,
-    e_attack  = 0b010000000,
-    e_canDel  = 0b100000000,
+    e_clear   = 0b00000000000,
+    e_waiting = 0b00000000001,
+    e_dieing  = 0b00000000010,
+    e_die     = 0b00000000100,
+    e_walk    = 0b00000001000,
+    e_wanderF = 0b00000010000,
+    e_wanderB = 0b00000100000,
+    e_hurt1   = 0b00001000000,
+    e_hurt2   = 0b00010000000,
+    e_hurt3   = 0b00100000000,
+    e_attack  = 0b01000000000,
+    e_canDel  = 0b10000000000,
 };
 
 class Enemy :public GameObject {
@@ -59,7 +61,8 @@ public:
     void    removeAllBuffS();
 protected:
     virtual void    move();
-    
+    virtual bool    computeIfWander();
+    virtual void    wander();
 protected:
     string  m_id;
     string  m_monsterName;
@@ -98,6 +101,8 @@ public:
     bool    isShowHurt();
     bool    isDieing();
     bool    isWalk();
+    bool    isWanderF();
+    bool    isWanderB();
     bool    isHurt();
     int     getHurtIndex();
     bool    isAttack();

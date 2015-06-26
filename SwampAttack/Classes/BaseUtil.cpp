@@ -35,6 +35,19 @@ ActionInterval * BaseUtil::makeAnimateWithNameAndIndex(const std::string & name,
     animation->setDelayPerUnit(0.08);
     return Animate::create(animation);
 }
+ActionInterval * BaseUtil::makeAnimateWithNameAndIndexReverse(const std::string & name, int count)
+{
+    auto spriteFrameCache = SpriteFrameCache::getInstance();
+    auto animation = Animation::create();
+    for (int i = count; i >= 1; --i)
+    {
+        SpriteFrame * frame = spriteFrameCache->getSpriteFrameByName(
+                                                                     StringUtils::format("%s%00004d.png",name.c_str(),i));
+        animation->addSpriteFrame(frame);
+    }
+    animation->setDelayPerUnit(0.08);
+    return Animate::create(animation);
+}
 ActionInterval * BaseUtil::makeAnimateWithNameIndexDelay(const std::string & name, int count, float delay)
 {
     auto spriteFrameCache = SpriteFrameCache::getInstance();
