@@ -62,14 +62,24 @@ void FlyEnemy::gameLoop(float data)
 
 void FlyEnemy::move()
 {
-    if (m_speedVec.x > 0 && m_point.x >= m_nextPoint.x)
-    {
-        randomPoint();
-    }else if (m_speedVec.x < 0 && m_point.x <= m_nextPoint.x)
+    if (m_point.distanceSquared(m_perPoint) >= m_nextPoint.distanceSquared(m_perPoint))
     {
         randomPoint();
     }
+    
+    if (m_point.y >= m_visibleOrigin.y + m_visibleSize.height - 80 ||
+        m_point.y <= m_visibleOrigin.y + 80) {
+        randomPoint();
+//        return;
+    }
     m_point = m_point + m_speedVec;
+}
+void FlyEnemy::effectAction(cocos2d::Vec2 point)
+{
+    Vec2 force = (m_point - point);
+//    log("effect force %f:%f",force.x,force.y);
+    force.normalize();
+    m_speedVec += (force * 3);
 }
 void FlyEnemy::setView()
 {
@@ -84,27 +94,26 @@ void FlyEnemy::randomPoint()
     Vec2 backForce, frontForce, buttomForce, upForce, normalForce;
     if (m_pointState & p_back)
     {
-        backForce = Vec2(-(random(0, 100)+100), 0);
+        backForce = Vec2(-(random(0, 100)+50), 0);
     }
     if (m_pointState & p_front)
     {
-        frontForce = Vec2(random(0, 100)+100, 0);
+        frontForce = Vec2(random(0, 100)+50, 0);
     }
     if (m_pointState & p_bottom)
     {
-        buttomForce = Vec2(0, random(0, 100)+100);
+        buttomForce = Vec2(0, random(0, 100)+50);
     }
     if (m_pointState & p_up)
     {
-        upForce = Vec2(0,-(random(0, 100)+100));
+        upForce = Vec2(0,-(random(0, 100)+50));
     }
     if (canMoveBack)
     {
-        log("can move back");
-         normalForce =Vec2(random(-150, 100), random(-150, 150));
+         normalForce =Vec2(random(-100, 50), random(-50, 50));
     }else
     {
-         normalForce =Vec2(random(-150, 0), random(-150, 150));
+         normalForce =Vec2(random(-100, 0), random(-50, 50));
     }
    
     m_nextPoint = m_point + normalForce + frontForce + backForce + buttomForce + upForce;
@@ -113,6 +122,7 @@ void FlyEnemy::randomPoint()
     {
         m_nextPoint.y = m_visibleOrigin.y + m_visibleSize.height;
     }
+    m_perPoint = m_point;
 //    log("move x ::%f",m_nextPoint.x - m_point.x);
 //    log("move y ::%f",m_nextPoint.y - m_point.y);
     m_speedVec = m_nextPoint - m_point;
@@ -125,34 +135,42 @@ void FlyEnemy::setPointState()
     float backLine = m_visibleOrigin.x + m_visibleSize.width * 0.8;
     float frontLine = m_visibleOrigin.x + m_visibleSize.width * 0.4;
     float bottomLine = m_visibleOrigin.y + m_visibleSize.height * 0.3;
-    float upLine = m_visibleOrigin.y + m_visibleSize.height * 0.7;
-    
+    float upLine = m_visibleOrigin.y + m_visibleSize.height * 0.68;
+//    log("x:y = %f:%f",m_point.x,m_point.y);
     if (m_point.x >= backLine)
     {
+//        log("back");
         m_pointState |= p_back;
     }else
     {
+//        log("no back");
         m_pointState &= (~p_back);
     }
     if (m_point.x <= frontLine)
     {
+//        log("font");
         m_pointState |= p_front;
     }else
     {
+//        log("no font");
         m_pointState &= (~p_front);
     }
     if (m_point.y <= bottomLine)
     {
+//        log("buttom");
         m_pointState |= p_bottom;
     }else
     {
+//        log("no buttom");
         m_pointState &= (~p_bottom);
     }
     if (m_point.y >= upLine)
     {
+//        log("up");
         m_pointState |= p_up;
     }else
     {
+//        log("no up");
         m_pointState &= (~p_up);
     }
 }

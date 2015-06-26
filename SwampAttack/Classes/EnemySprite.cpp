@@ -20,6 +20,10 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
     int w = m_model->getWidth();
     int h = m_model->getHeight();
     
+//    Sprite * s = Sprite::create("CloseSelected.png");
+//    s->setPosition(Vec2(0, h * 0.5));
+//    addChild(s);
+    
     healthBar = new ProgressBar("xuenei.png","xuewai.png");
     addChild(healthBar,1);
     healthBar->setBarLeft();

@@ -47,7 +47,7 @@ void House::hurt(float damage)
         m_state &= _h_clear;
         m_state |= _h_over;
     }
-//    log("house health :%f",m_health);
+    log("house health :%f",m_health);
 }
 void House::addHealth(int health)
 {

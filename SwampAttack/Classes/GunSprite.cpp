@@ -24,7 +24,7 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
         m_blueBg = Sprite::create(ImagePath("fight_gun_blueBg.png"));
         Sprite * gunIcon = Sprite::create(ImagePath(StringUtils::format("%s_icon.png",m_gun->getModelId().c_str())));
         m_bulletLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 15);
-//        m_bulletLabel->setColor(Color3B(0, 0, 0));
+        m_bulletLabel->enableOutline(Color4B(0, 0, 0, 255),1);
         
         addChild(m_greenBg);
         addChild(m_blueBg);
@@ -35,11 +35,11 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
         m_blueBg->setScale(m_iconScale);
         gunIcon->setScale(0.45);
         Vec2 iconPoint = _G_M_M->fightScene_gunIcon_Position;
-        float iconHeight = m_greenBg->getContentSize().height;
-        m_greenBg->setPosition(iconPoint - Vec2(0, (iconHeight + 10) * (3-iconIndex)) * m_iconScale);
-        m_blueBg->setPosition(iconPoint - Vec2(0, (iconHeight + 10) * (3-iconIndex)) * m_iconScale);
-        gunIcon->setPosition(iconPoint - Vec2(0, (iconHeight + 10) * (3-iconIndex)) * m_iconScale);
-        m_bulletLabel->setPosition(iconPoint - Vec2(0, (iconHeight + 10) * (3-iconIndex)) * m_iconScale + Vec2(20, -20));
+        float iconWidth = m_greenBg->getContentSize().width;
+        m_greenBg->setPosition(iconPoint + Vec2((iconWidth + 10) * (iconIndex - 1), 0) * m_iconScale);
+        m_blueBg->setPosition(iconPoint + Vec2((iconWidth + 10) * (iconIndex - 1), 0) * m_iconScale);
+        gunIcon->setPosition(iconPoint + Vec2((iconWidth + 10) * (iconIndex - 1), 0) * m_iconScale);
+        m_bulletLabel->setPosition(iconPoint + Vec2((iconWidth + 10) * (iconIndex - 1), 0) * m_iconScale + Vec2(20, -20));
         
         m_listener = EventListenerTouchOneByOne::create();
         m_listener->setSwallowTouches(true);

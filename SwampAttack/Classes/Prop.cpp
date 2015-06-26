@@ -18,7 +18,8 @@
 
 #include "PropSpriteView.h"
 
-Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal)
+Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal),
+m_isMaxLevel(false)
 {
     m_id = data["ItemId"].asString() ;
     string itemName = data["ItemName"].asString();
@@ -51,7 +52,7 @@ Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal)
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
     Json::Value upgradeData = _C_M->getDataByTag("daojuUpgrade",upId);
     m_damage = atof(upgradeData["Damage"].asString().c_str());
-    
+//    log("level:limitlevel = %d:%d",m_strengthenLevel,m_limitLevel);
     if (m_limitLevel == m_strengthenLevel)
     {
         m_isMaxLevel = true;

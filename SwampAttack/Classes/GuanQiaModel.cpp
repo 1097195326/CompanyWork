@@ -14,7 +14,8 @@ GuanqiaModel::GuanqiaModel(Json::Value data):m_data(data),
 m_isUnlock(false)
 {
     m_id = m_data["MissionId"].asString();
-    m_missionName = m_data["MissionName"].asString();
+    string missionName = m_data["MissionName"].asString();
+    m_missionName = _C_M->getTranslateById(missionName);
     m_modelId = m_data["ModelId"].asString();
     m_missionType = m_data["MissionType"].asString();
 //    m_lastInstanceId = m_data["LastInstanceId"].asString();

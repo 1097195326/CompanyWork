@@ -14,6 +14,7 @@
 #include "GameLoading.h"
 #include "GameDirector.h"
 #include "GameMapManager.h"
+#include "GuanQiaManager.h"
 #include "GamePauseScene.h"
 
 #include "GameMapScene.h"
@@ -97,11 +98,21 @@ bool GameFightScene::init()
     goldIcon->setScale(0.7);
     addChild(goldIcon);
     
+    string guanqiaName = GuanQiaManager::getInstance()->getCurrentGuanqia()->getGuanqiaName();
+    Label * showLabel = Label::createWithTTF(guanqiaName, "fonts/mimi.ttf", 30);
+    showLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                           m_visibleOrigin.y + m_visibleSize.height * 0.7);
+    addChild(showLabel);
+    showLabel->runAction(Sequence::create(DelayTime::create(3),
+                                          FadeOut::create(0.3),
+                                          NULL));
+    
     log("fight scene init");
     _G_D->initGameView();
     
     _G_D->startGame();
     setSubject(_G_D);
+    
     
     return true;
 }

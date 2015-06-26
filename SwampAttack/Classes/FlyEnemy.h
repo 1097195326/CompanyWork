@@ -22,6 +22,7 @@ enum PointState
 class FlyEnemy : public Enemy {
 private:
     int     m_pointState;
+    Vec2    m_perPoint;
     Vec2    m_nextPoint;
     Vec2    m_speedVec;
     
@@ -33,7 +34,7 @@ private:
 protected:
     virtual void    move();
 public:
-    
+    void    effectAction(Vec2 point);
     virtual void    setView();
 public:
     FlyEnemy(Json::Value data);

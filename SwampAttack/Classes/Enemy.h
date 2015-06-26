@@ -51,6 +51,7 @@ public:
     bool    isContainsPoint(Rect rect);
     void    hurt(int damage,int index);
     virtual void    hurt(int damage);
+    virtual void    effectAction(Vec2 point);
     void    addBuff(GameBuff * buff);
     void    moveBuff(GameBuff * buff);
     bool    isHaveBuff();
@@ -101,6 +102,7 @@ public:
     int     getHurtIndex();
     bool    isAttack();
     Vec2    getPosition();
+    Vec2    getEnemyCenterPoint();
     Vec2    getTargetPosition();
     void    dieingCall();
     void    diedCall();

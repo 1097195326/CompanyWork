@@ -16,12 +16,12 @@ class GameMap {
 public:
     
     int enemy_start_upline = 100;
-    Vec2 enemy_start_buttomPoint = {m_visibleOrigin.x + m_visibleSize.width, m_visibleOrigin.y + 50};
+    Vec2 enemy_start_buttomPoint = {m_visibleOrigin.x + m_visibleSize.width + 70, m_visibleOrigin.y + 50};
     int enemy_target_upline = 60;
     Vec2 enemy_target_buttomPoint = {m_visibleOrigin.x + 250, m_visibleOrigin.y + 50};
     
     int flyEnemy_start_upline = 100;
-    Vec2 flyEnemy_start_buttomPoint = {m_visibleOrigin.x + m_visibleSize.width, m_visibleOrigin.y + 250};
+    Vec2 flyEnemy_start_buttomPoint = {m_visibleOrigin.x + m_visibleSize.width + 70, m_visibleOrigin.y + 250};
     
     int flyEnemy_target_upLine = 250;
     int flyEnemy_target_rightLine = 150;
@@ -44,7 +44,7 @@ public:
     Vec2 fightScene_EnemyBar_Position = {m_visibleOrigin.x + m_visibleSize.width - 230 , m_visibleOrigin.y + m_visibleSize.height - 50};
     
     Vec2 fightScene_Bullet_Position = {m_visibleOrigin.x +510 ,m_visibleOrigin.y + m_visibleSize.height - 100};
-    Vec2 fightScene_gunIcon_Position = {m_visibleOrigin.x +40 ,m_visibleOrigin.y + m_visibleSize.height - 140};
+    Vec2 fightScene_gunIcon_Position = {m_visibleOrigin.x +40 ,m_visibleOrigin.y + 50};
     
     Vec2 fightScene_PropIcon_Position = {m_visibleOrigin.x + m_visibleSize.width -60,m_visibleOrigin.y + m_visibleSize.height - 120};
     

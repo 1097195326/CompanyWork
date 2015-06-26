@@ -88,6 +88,7 @@ Enemy::~Enemy()
 void Enemy::gameLoop(float data){}
 void Enemy::move(){}
 void Enemy::setView(){}
+void Enemy::effectAction(cocos2d::Vec2 point){}
 void Enemy::addBuff(GameBuff *buff)
 {
     m_buffData.push_back(buff);
@@ -233,6 +234,10 @@ Vec2 Enemy::getPosition()
 {
     return m_point;
 }
+Vec2 Enemy::getEnemyCenterPoint()
+{
+    return m_point + Vec2(0, m_height * 0.5);
+}
 Vec2 Enemy::getTargetPosition()
 {
     return m_targetPoint;
@@ -282,6 +287,7 @@ void Enemy::attackCall()
             break;
         case 4:     // 飞行 远程
         {
+//            log("fei xing:%f",m_damage);
             m_status &= e_clear;
             m_status |= e_walk;
             BulletParameter bp(m_damage,

@@ -80,6 +80,7 @@ private:
     Vec2    m_toPoint;
     Vec2    m_speed;
     float   m_angle;
+    float   m_effectDistance;
     
     BulletState m_state;
     Enemy   * m_enemy;

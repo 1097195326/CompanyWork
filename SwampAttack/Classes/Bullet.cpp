@@ -16,6 +16,7 @@
 
 Bullet::Bullet(BulletParameter bp):
 m_bp(bp),
+m_effectDistance(120),
 m_enemy(NULL)
 {
     m_damage = bp.m_damage;
@@ -58,6 +59,11 @@ void Bullet::gameLoop(float data)
         }
     }
     if (m_state == _b_arrive) {
+        if (isFireHouse())
+        {
+//            House::getInstance()->hurt(m_damage);
+            return;
+        }
         EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
         if (!enemyGroup) {
             return;
@@ -74,7 +80,6 @@ void Bullet::gameLoop(float data)
                     !enemy->isDied() &&
                     enemy->isContainsPoint(b_rect))
                 {
-//                    enemy->hurt(m_damage,m_bp.m_underAttackAction);
                     if (m_enemy && m_enemy->getPosition().y > enemy->getPosition().y)
                     {
                         m_enemy = enemy;
@@ -82,13 +87,22 @@ void Bullet::gameLoop(float data)
                     {
                         m_enemy = enemy;
                     }
-                }else if (isFireHouse())
+                }
+                if (enemy->getActionType() == 2 &&
+                    !enemy->isDied() &&
+                    m_Point.distance(enemy->getEnemyCenterPoint()) <= m_effectDistance
+                    )
                 {
-                    House::getInstance()->hurt(m_damage);
+                    enemy->effectAction(m_Point);
                 }
             }
             if (m_enemy)
             {
+                if (m_enemy->getActionType() == 2)
+                {
+                    return;
+                    m_enemy = NULL;
+                }
                 m_enemy->hurt(m_damage,m_bp.m_underAttackAction);
                 m_enemy = NULL;
             }
