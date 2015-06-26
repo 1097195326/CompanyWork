@@ -61,7 +61,7 @@ void Bullet::gameLoop(float data)
     if (m_state == _b_arrive) {
         if (isFireHouse())
         {
-//            House::getInstance()->hurt(m_damage);
+            House::getInstance()->hurt(m_damage);
             return;
         }
         EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
@@ -98,11 +98,11 @@ void Bullet::gameLoop(float data)
             }
             if (m_enemy)
             {
-                if (m_enemy->getActionType() == 2)
-                {
-                    return;
-                    m_enemy = NULL;
-                }
+//                if (m_enemy->getActionType() == 2)
+//                {
+//                    return;
+//                    m_enemy = NULL;
+//                }
                 m_enemy->hurt(m_damage,m_bp.m_underAttackAction);
                 m_enemy = NULL;
             }
