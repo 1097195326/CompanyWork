@@ -70,9 +70,11 @@ void WalkEnemySprite::update(float data)
         move();
     }else if(m_model->isWanderB())
     {
+        setPosition(m_model->getPosition());
         wanderBack();
     }else if(m_model->isWanderF())
     {
+        setPosition(m_model->getPosition());
         wanderFont();
     }else if (m_model->isAttack())
     {

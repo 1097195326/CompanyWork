@@ -76,6 +76,10 @@ void FlyEnemy::move()
 }
 void FlyEnemy::effectAction(cocos2d::Vec2 point)
 {
+    if (m_point.x >= m_visibleOrigin.x + m_visibleSize.width - 60)
+    {
+        return;
+    }
     Vec2 force = (m_point - point);
 //    log("effect force %f:%f",force.x,force.y);
     force.normalize();
