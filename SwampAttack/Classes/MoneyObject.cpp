@@ -8,6 +8,7 @@
 
 #include "MoneyObject.h"
 #include "ConfigManager.h"
+#include "GameDirector.h"
 
 
 MoneyObject::MoneyObject(std::string id)
@@ -57,4 +58,8 @@ string MoneyObject::getDescription()
 int MoneyObject::getType()
 {
     return m_type;
+}
+void MoneyObject::addGold()
+{
+    _G_D->addGold(m_effect);
 }

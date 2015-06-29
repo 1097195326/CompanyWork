@@ -32,6 +32,7 @@ public:
 public:
     MoneyObject(std::string id);
     ~MoneyObject();
+    void    addGold();
 };
 
 #endif /* defined(__SwampAttack__MoneyObject__) */

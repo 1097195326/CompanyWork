@@ -84,6 +84,7 @@ void DropMoneySprite::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 }
 void DropMoneySprite::moveEnd(cocos2d::Node *pSender)
 {
+    m_money->addGold();
     pSender->stopAllActions();
     removeFromParentAndCleanup(true);
 }
