@@ -26,6 +26,7 @@
 
 #include "ShopGoldShowLayer.h"
 #include "ShopExpendShowLayer.h"
+#include "ShopHealthShowLayer.h"
 
 
 bool GameShopScene::init()
@@ -337,7 +338,11 @@ void GameShopScene::backButtonFunc(cocos2d::Ref *pSender)
 }
 void GameShopScene::healthPlusFunc(cocos2d::Ref *pSender)
 {
-    
+    Node * pNode = (Node *)pSender;
+    shopHealthShowLayer * layer = new shopHealthShowLayer(pNode->getPosition());
+    layer->autorelease();
+    layer->setShopSceneLayer(this);
+    addChild(layer);
 }
 void GameShopScene::goldPlusFunc(cocos2d::Ref *pSender)
 {

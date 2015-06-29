@@ -13,6 +13,8 @@
 #include "GameLoading.h"
 #include "GuanQiaManager.h"
 #include "EnemyManager.h"
+#include "GameUser.h"
+
 
 
 Scene * GameLoadingScene::scene(std::string guanqiaId)
@@ -32,6 +34,8 @@ m_guanqiaId(guanqiaId)
     bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                     m_visibleOrigin.y + m_visibleSize.height * 0.5);
     addChild(bg);
+    
+    _G_U->useHealthTimes();
     
     scheduleOnce(CC_SCHEDULE_SELECTOR(GameLoadingScene::loadingData), 0.3);
     scheduleOnce(CC_SCHEDULE_SELECTOR(GameLoadingScene::gotoFightScene), 2);

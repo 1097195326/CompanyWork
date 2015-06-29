@@ -20,7 +20,7 @@ GameUser::GameUser():m_time(0)
         unlockGuanqia("400001_1");
     }
     setUserGold(900000);
-    m_userHealth = getUserHealth();
+    m_userHealth = getIntForKey("user_health");
     
     enterGame();
     
@@ -45,7 +45,9 @@ void GameUser::updateTime(float data)
         return;
     }
     ++m_time;
-    if (m_time >= 600) {
+//    log("time :%d",m_time);
+    if (m_time >= _G_AddTime) {
+        log("add health");
         ++m_userHealth;
         m_time = 0;
         setUserHealth(m_userHealth);
@@ -54,6 +56,7 @@ void GameUser::updateTime(float data)
 }
 void GameUser::enterGame()
 {
+    log("game user enter game");
     struct timeval now;
     gettimeofday(&now, NULL);
     
@@ -66,9 +69,11 @@ void GameUser::enterGame()
         m_userHealth = 5;
     }
     setUserHealth(m_userHealth);
+    
 }
 void GameUser::exitGame()
 {
+    log("game user exit game");
     setTimeSec();
 }
 double GameUser::getTimeSec()
@@ -81,13 +86,29 @@ void GameUser::setTimeSec()
     gettimeofday(&now, NULL);
     m_user->setDoubleForKey("user_time", now.tv_sec);
 }
+int GameUser::getTime()
+{
+    return m_time;
+}
 void GameUser::setUserHealth(int health)
 {
     setIntForKey("user_health", health);
+    setTimeSec();
 }
 int GameUser::getUserHealth()
 {
     return m_userHealth;
+}
+void GameUser::useHealthTimes()
+{
+    --m_userHealth;
+    setUserHealth(m_userHealth);
+}
+void GameUser::addHealthToFull()
+{
+    m_userHealth = 5;
+    setUserHealth(m_userHealth);
+    notify();
 }
 void GameUser::setUserGold(int gold)
 {
@@ -105,6 +126,16 @@ void GameUser::setExpendPropNum(int num)
 int GameUser::getExpendPropNum()
 {
     return getIntForKey("user_expend_prop");
+}
+bool GameUser::useExpendProp()
+{
+    int num = getExpendPropNum();
+    if (num > 0) {
+        --num;
+        setExpendPropNum(num);
+        return true;
+    }
+    return false;
 }
 //--- guan qia ---
 void GameUser::unlockGuanqia(string guanqiaId)

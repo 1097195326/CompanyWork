@@ -16,6 +16,8 @@ USING_NS_CC;
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
+
+extern int _G_AddTime;
 //-------------
 extern  Size    m_winSize;
 extern  Size    m_visibleSize;

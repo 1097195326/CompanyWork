@@ -26,6 +26,7 @@ private:
     ~GameUser();
     void    updateTime(float data);
     
+    
     void    setBoolForKey(string name,bool value);
     void    setIntForKey(string name,int value);
     void    setFloatForKey(string name,float value);
@@ -42,6 +43,10 @@ public:
     
     void    enterGame();
     void    exitGame();
+    
+    int     getTime();
+    void    useHealthTimes();
+    void    addHealthToFull();
     //--- guan qia ---
     void    unlockGuanqia(string guanqiaId);
     bool    isUnlockGuanqia(string guanqiaId);
@@ -53,6 +58,7 @@ public:
     //--- expend award ---
     void    setExpendPropNum(int num);
     int     getExpendPropNum();
+    bool    useExpendProp();
     //---  gun ----
     void    unlockGun(string gunId);
     bool    isUnlockGun(string gunId);

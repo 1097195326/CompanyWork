@@ -99,7 +99,7 @@ bool WalkEnemy::computeIfWander()
 {
     if(m_attackType == 2 && random(1, 100) < 30)
     {
-        log("wander");
+//        log("wander");
         int distance = random(50, 100);
         
         if (m_point.x + distance >= m_targetPoint.x + m_range)
