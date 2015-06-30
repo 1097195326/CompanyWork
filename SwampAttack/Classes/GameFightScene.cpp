@@ -19,6 +19,7 @@
 
 #include "GameMapScene.h"
 #include "GameOverScene.h"
+#include "GameReliveLayer.h"
 //---
 //#include "EnemyManager.h"
 //#include "ConfigManager.h"
@@ -122,14 +123,31 @@ void GameFightScene::updateData()
     if (_G_D->isOver())
     {
         log("game is over");
-        Director::getInstance()->getActionManager()->pauseAllRunningActions();
+        shopGameActions();
         
         RenderTexture * rt = getFightSceneTex();
-        GameOverScene * overScene = new GameOverScene(_G_D->getOverStatus(),rt);
-        overScene->init();
-        overScene->autorelease();
-        addChild(overScene,640);
+        GameReliveLayer * reliveLayer = new GameReliveLayer(rt);
+        reliveLayer->setFightLayer(this);
+        reliveLayer->autorelease();
+        addChild(reliveLayer,640);
     }
+}
+void GameFightScene::shopGameActions()
+{
+    m_actions = Director::getInstance()->getActionManager()->pauseAllRunningActions();
+}
+void GameFightScene::resumeGameActions()
+{
+    Director::getInstance()->getActionManager()->resumeTargets(m_actions);
+}
+void GameFightScene::showOverLayer()
+{
+    _G_D->resetGameData();
+    RenderTexture * rt = getFightSceneTex();
+    GameOverScene * overScene = new GameOverScene(_G_D->getOverStatus(),rt);
+    overScene->init();
+    overScene->autorelease();
+    addChild(overScene,640);
 }
 RenderTexture * GameFightScene::getFightSceneTex()
 {
@@ -142,10 +160,12 @@ RenderTexture * GameFightScene::getFightSceneTex()
 void GameFightScene::pauseGame(cocos2d::Ref *pSender)
 {
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-    RenderTexture * rt = getFightSceneTex();
+    shopGameActions();
     _G_D->stopGame();
+    RenderTexture * rt = getFightSceneTex();
     GamePauseScene * pauseScene = new GamePauseScene(rt);
     pauseScene->autorelease();
+    pauseScene->setFightLayer(this);
     addChild(pauseScene,640);
 }
 void GameFightScene::addBulletTexiao(cocos2d::Vec2 position)

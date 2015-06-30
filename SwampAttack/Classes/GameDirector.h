@@ -44,6 +44,7 @@ public:
     void    onTouchBegin(Touch * touch, Event * event);
     void    onTouchMove(Touch * touch, Event * event);
     void    onTouchEnd(Touch * touch, Event * event);
+    void    reliveGame();
     void    resetGameData();
     void    startGame();
     void    continueGame();

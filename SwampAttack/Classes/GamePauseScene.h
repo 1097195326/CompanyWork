@@ -10,16 +10,19 @@
 #define __SwampAttack__GamePauseScene__
 
 #include "BaseCode.h"
+#include "GameFightScene.h"
 
 class GamePauseScene : public Layer {
 private:
     EventListenerTouchOneByOne * m_listener;
+    GameFightScene * m_fightLayer;
 public:
 //    static Scene * scene(RenderTexture * rt);
 //    CREATE_FUNC(GamePauseScene);
     GamePauseScene(RenderTexture * rt);
     ~GamePauseScene();
     
+    void    setFightLayer(GameFightScene * layer);
     void    continueGame(Ref * pSender);
     void    restartGame(Ref * pSender);
     void    gotoMap(Ref * pSender);

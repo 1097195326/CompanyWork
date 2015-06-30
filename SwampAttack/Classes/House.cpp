@@ -67,3 +67,8 @@ void House::resetData()
     m_state &= _h_clear;
     m_health = m_totalHelath = m_baseHealth;
 }
+void House::reliveGame()
+{
+    m_state &= _h_clear;
+    m_health = m_totalHelath;
+}

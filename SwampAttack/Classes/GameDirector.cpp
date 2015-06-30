@@ -87,7 +87,7 @@ void GameDirector::gameLoop(float data)
             m_overStatus = o_win;
         }
         notify();
-        resetGameData();
+//        resetGameData();
 //        overGame();
     }
 }
@@ -162,6 +162,10 @@ void GameDirector::resetGameData()
     
     EnemyManager::getInstance()->resetData();
     m_goldNum = 0;
+}
+void GameDirector::reliveGame()
+{
+    House::getInstance()->reliveGame();
 }
 void GameDirector::startGame()
 {

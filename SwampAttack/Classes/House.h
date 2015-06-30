@@ -39,6 +39,7 @@ public:
     void    addHealth(int health);
     void    setView();
     void    resetData();
+    void    reliveGame();
 public:
     float   getHealthPercent();
     bool    isOver();

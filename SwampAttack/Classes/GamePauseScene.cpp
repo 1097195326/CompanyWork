@@ -90,9 +90,13 @@ GamePauseScene::GamePauseScene(RenderTexture * rt)
     
     GunManager::getInstance()->saveBullet();
 }
-
+void GamePauseScene::setFightLayer(GameFightScene *layer)
+{
+    m_fightLayer = layer;
+}
 void GamePauseScene::continueGame(cocos2d::Ref *pSender)
 {
+    m_fightLayer->resumeGameActions();
     removeFromParentAndCleanup(true);
     _G_D->continueGame();
 }
