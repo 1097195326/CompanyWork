@@ -125,11 +125,17 @@ void GameFightScene::updateData()
         log("game is over");
         shopGameActions();
         
-        RenderTexture * rt = getFightSceneTex();
-        GameReliveLayer * reliveLayer = new GameReliveLayer(rt);
-        reliveLayer->setFightLayer(this);
-        reliveLayer->autorelease();
-        addChild(reliveLayer,640);
+        if (_G_D->getOverStatus() == o_win)
+        {
+            showOverLayer();
+        }else
+        {
+            RenderTexture * rt = getFightSceneTex();
+            GameReliveLayer * reliveLayer = new GameReliveLayer(rt);
+            reliveLayer->setFightLayer(this);
+            reliveLayer->autorelease();
+            addChild(reliveLayer,640);
+        }
     }
 }
 void GameFightScene::shopGameActions()

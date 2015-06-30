@@ -135,8 +135,8 @@ void HumanSprite::shoot()
     stopAllActions();
     runAction(m_actionData["shootAction"]);
 
-    string yinxiao = StringUtils::format("%s_shoot.mp3",m_human->getGun()->getModelId().c_str());
-    SimpleAudioEngine::getInstance()->playEffect(MusicPath(yinxiao).c_str());
+//    string yinxiao = StringUtils::format("%s_shoot.mp3",m_human->getGun()->getModelId().c_str());
+//    SimpleAudioEngine::getInstance()->playEffect(MusicPath(yinxiao).c_str());
 }
 void HumanSprite::reload()
 {
@@ -224,9 +224,11 @@ void HumanSprite::runShotCall()
 }
 void HumanSprite::shootShotCall()
 {
-    
+    string yinxiao = StringUtils::format("%s_shoot.mp3",m_human->getGun()->getModelId().c_str());
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath(yinxiao).c_str());
     m_status = _normal;
     m_human->shootCall();
+    
 }
 void HumanSprite::waitShotCall()
 {

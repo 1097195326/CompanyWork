@@ -27,6 +27,7 @@ public:
     
     typedef std::function<void (Touch *, Event *)> TouchMeCall;
     TouchMeCall m_touchMeCall;
+    void    setCanSwallowTouches(bool can);
     
 };
 

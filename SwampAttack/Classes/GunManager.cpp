@@ -175,6 +175,7 @@ void GunManager::setShopView(Sprite * gunItemSprite)
     {
         Gun * gun = getTakeUpGunByIndex(i+1);
         ShopGunIcon * icon = new ShopGunIcon(i);
+        icon->autorelease();
         icon->reSetIcon(gun);
         gunItemSprite->addChild(icon);
         m_GunIcons[i] = icon;

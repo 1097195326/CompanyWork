@@ -13,7 +13,7 @@
 
 class ShopSelectMenuView : public SelectMenuView{
 private:
-    EventListenerTouchOneByOne * m_listener ;
+//    EventListenerTouchOneByOne * m_listener ;
 public:
     ShopSelectMenuView(int num);
     ~ShopSelectMenuView();
@@ -22,7 +22,7 @@ public:
     void    setIconSprite(std::string name);
     void    checkIndex();
 
-    bool    touchBegan(Touch * touch, Event * event);
+//    bool    touchBegan(Touch * touch, Event * event);
     void    touchEnd(Touch * touch, Event * event);
     
     

@@ -19,6 +19,8 @@ SelectMenuView::SelectMenuView(int num):m_num(num)
 }
 SelectMenuView::~SelectMenuView()
 {
+//    log("delete menu view");
+    delete m_controller;
     m_normalSprites.clear();
     m_selectSprites.clear();
 }

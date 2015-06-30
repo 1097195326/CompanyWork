@@ -15,7 +15,7 @@ SelectMenuController::SelectMenuController()
 }
 SelectMenuController::~SelectMenuController()
 {
-    
+    m_menus.clear();
 }
 void SelectMenuController::setControllerSize(int size)
 {

@@ -177,10 +177,9 @@ bool Gun::fire(Vec2 position)
     GameMap * map = GameMapManager::getInstance()->getGameMap();
     
     --m_bullets;
-    if (!m_isDefaultGun) {
-        --m_totalBullets;
-    }
-    
+//    if (!m_isDefaultGun) {
+//        --m_totalBullets;
+//    }
     
     BulletParameter bp(m_damage,
                        m_damageArea,
@@ -200,6 +199,9 @@ bool Gun::fire(Vec2 position)
     notify();
     if (m_isDefaultGun) {
         return m_bullets > 0;
+    }else
+    {
+        --m_totalBullets;
     }
     return m_totalBullets > 0;
 }

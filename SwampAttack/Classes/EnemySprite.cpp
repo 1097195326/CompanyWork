@@ -17,7 +17,7 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
     init();
     setAnchorPoint(Vec2(0.5,0));
     
-    int w = m_model->getWidth();
+//    int w = m_model->getWidth();
     int h = m_model->getHeight();
     
 //    Sprite * s = Sprite::create("CloseSelected.png");

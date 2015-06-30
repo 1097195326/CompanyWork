@@ -17,7 +17,7 @@ private:
 public:
     static Scene * scene();
     CREATE_FUNC(GameHomeScene);
-    
+    ~GameHomeScene();
     bool init();
     
     void    toMapScene(Ref * pSender);

@@ -17,9 +17,13 @@ Scene * GameHomeScene::scene()
 {
     Scene * scene = Scene::create();
     GameHomeScene * layer = GameHomeScene::create();
-    scene->addChild(layer,1);
+    scene->addChild(layer);
     
     return scene;
+}
+GameHomeScene::~GameHomeScene()
+{
+    log("home scene release");
 }
 bool GameHomeScene::init()
 {
@@ -50,8 +54,9 @@ bool GameHomeScene::init()
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu);
     
-    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
-    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
+    log("home scene init");
+//    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+//    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
     
     return true;
 }
@@ -63,6 +68,7 @@ void GameHomeScene::toMapScene(cocos2d::Ref *pSender)
 }
 void GameHomeScene::toShopScene(cocos2d::Ref *pSender)
 {
+    log("home scene to shop");
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Director::getInstance()->replaceScene(GameShopScene::scene());
 }

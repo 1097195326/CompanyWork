@@ -34,6 +34,7 @@ private:
     void    initScrollView();
 public:
     CREATE_SCENE_FUNC(GameShopScene);
+//    static Scene * scene();
     CREATE_FUNC(GameShopScene);
     ~GameShopScene();
     virtual bool    init();

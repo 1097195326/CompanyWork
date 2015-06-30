@@ -160,6 +160,7 @@ void PropManager::setShopView(Sprite * propItemSprite)
     {
         Prop * prop = getTakeUpPropByIndex(i+1);
         ShopPropIcon * icon = new ShopPropIcon(i);
+        icon->autorelease();
         icon->reSetIcon(prop);
         propItemSprite->addChild(icon);
         m_propIcons[i] = icon;

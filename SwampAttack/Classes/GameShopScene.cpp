@@ -28,28 +28,48 @@
 #include "ShopExpendShowLayer.h"
 #include "ShopHealthShowLayer.h"
 
-
+//Scene * GameShopScene::scene()
+//{
+//    Scene * scene = Scene::create();
+//    GameShopScene * layer = GameShopScene::create();
+//    scene->addChild(layer);
+//    
+//    return scene;
+//}
+GameShopScene::~GameShopScene()
+{
+    log("shop scene release");
+    Director::getInstance()->getTextureCache()->removeUnusedTextures();
+    m_healthSprites.clear();
+    m_scrollViews.clear();
+    _G_U->detach(this);
+}
 bool GameShopScene::init()
 {
     if (!Layer::init())
     {
         return false;
     }
-    PropManager::getInstance();
+//    MenuItemImage * homeButton = MenuItemImage::create(ImagePath("shopHomeButton.png"),
+//                                                       ImagePath("shopHomeButton.png"),
+//                                                       CC_CALLBACK_1(GameShopScene::homeButtonFunc, this));
+//    homeButton->setPosition(m_visibleOrigin.x + homeButton->getContentSize().width * 0.5,
+//                            m_visibleOrigin.y + m_visibleSize.height - homeButton->getContentSize().height * 0.5);
+//    Menu * buttonMenu = Menu::create(homeButton,
+//                                     NULL);
+//    buttonMenu->setPosition(Point::ZERO);
+//    addChild(buttonMenu);
     
     initShopView();
     initScrollView();
-    
-    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
-    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
+
+//    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+//    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
     
     _G_U->attach(this);
     return true;
 }
-GameShopScene::~GameShopScene()
-{
-    _G_U->detach(this);
-}
+
 void GameShopScene::initShopView()
 {
     Sprite * bg = Sprite::create(ImagePath("shopBg.png"));
@@ -92,12 +112,6 @@ void GameShopScene::initShopView()
     jinbiIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.49,
                            m_visibleOrigin.y + m_visibleSize.height * 0.935);
     addChild(jinbiIcon);
-    MenuItemImage * goldPlusButton = MenuItemImage::create(ImagePath("shop_plusIcon.png"),
-                                                       ImagePath("shop_plusIcon.png"),
-                                                       CC_CALLBACK_1(GameShopScene::goldPlusFunc, this));
-    goldPlusButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.66,
-                            m_visibleOrigin.y +  m_visibleSize.height * 0.935);
-    
     
     m_expendPropLabel = Label::createWithTTF(StringUtils::format("%d",_G_U->getExpendPropNum()),
                                              "fonts/Arial Black.ttf",
@@ -110,6 +124,12 @@ void GameShopScene::initShopView()
                            m_visibleOrigin.y + m_visibleSize.height * 0.935);
     hpIcon->setScale(0.5);
     addChild(hpIcon);
+    
+    MenuItemImage * goldPlusButton = MenuItemImage::create(ImagePath("shop_plusIcon.png"),
+                                                           ImagePath("shop_plusIcon.png"),
+                                                           CC_CALLBACK_1(GameShopScene::goldPlusFunc, this));
+    goldPlusButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.66,
+                                m_visibleOrigin.y +  m_visibleSize.height * 0.935);
     MenuItemImage * expendPlusButton = MenuItemImage::create(ImagePath("shop_plusIcon.png"),
                                                            ImagePath("shop_plusIcon.png"),
                                                            CC_CALLBACK_1(GameShopScene::expendPlusFunc, this));
@@ -215,17 +235,18 @@ void GameShopScene::updateData()
     int itemIndex = menuView->getSelectIndex();
     
     visibelItemBg(itemIndex);
+//
+//    for (int i = 0; i < 4 ; ++i)
+//    {
+//        if (itemIndex == i)
+//        {
+//            m_scrollViews[i]->setScale(1);
+//        }else
+//        {
+//             m_scrollViews[i]->setScale(0.0001);
+//        }
+//    }
     
-    for (int i = 0; i < 4 ; ++i)
-    {
-        if (itemIndex == i)
-        {
-            m_scrollViews[i]->setScale(1);
-        }else
-        {
-             m_scrollViews[i]->setScale(0.0001);
-        }
-    }
 //    int num = 0;
 //    switch (itemIndex) {
 //        case 0:
@@ -328,6 +349,7 @@ void GameShopScene::setItemBgSprite()
 }
 void GameShopScene::homeButtonFunc(cocos2d::Ref *pSender)
 {
+    log("shop scene to home");
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Director::getInstance()->replaceScene(GameHomeScene::scene());
 }

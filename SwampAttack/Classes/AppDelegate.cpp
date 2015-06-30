@@ -50,7 +50,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
     director->setContentScaleFactor(1.0f);
-    glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_WIDTH);
+    glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_HEIGHT);
     
     
     

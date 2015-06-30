@@ -30,7 +30,10 @@ GameSprite::~GameSprite()
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
     }
 }
-
+void GameSprite::setCanSwallowTouches(bool can)
+{
+    m_listener->setSwallowTouches(can);
+}
 
 bool GameSprite::touchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
 {
