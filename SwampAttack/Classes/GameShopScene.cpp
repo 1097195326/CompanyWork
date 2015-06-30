@@ -235,17 +235,17 @@ void GameShopScene::updateData()
     int itemIndex = menuView->getSelectIndex();
     
     visibelItemBg(itemIndex);
-//
-//    for (int i = 0; i < 4 ; ++i)
-//    {
-//        if (itemIndex == i)
-//        {
-//            m_scrollViews[i]->setScale(1);
-//        }else
-//        {
-//             m_scrollViews[i]->setScale(0.0001);
-//        }
-//    }
+
+    for (int i = 0; i < 4 ; ++i)
+    {
+        if (itemIndex == i)
+        {
+            m_scrollViews[i]->setScale(1);
+        }else
+        {
+             m_scrollViews[i]->setScale(0.0001);
+        }
+    }
     
 //    int num = 0;
 //    switch (itemIndex) {
