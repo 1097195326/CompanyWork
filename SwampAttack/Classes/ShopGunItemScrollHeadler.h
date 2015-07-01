@@ -13,13 +13,13 @@
 #include "ProgressBar.h"
 #include "GameShopScene.h"
 #include "GameObserver.h"
-
+#include "GameSprite.h"
 
 class ShopGunItemScrollHeadler : public GameScrollHeadler, public GameObserver {
 private:
-    MenuItemImage * m_upGradeButton;
-    MenuItemImage * m_unLockButton;
-    MenuItemImage * m_buyButton;
+    GameSprite * m_upGradeButton;
+    GameSprite * m_unLockButton;
+    GameSprite * m_buyButton;
     MenuItemImage * m_takeUpButton;
     
     ProgressBar *   m_progressBar;
@@ -36,9 +36,9 @@ private:
     void    initLockGunView();
     void    updateGunView();
     
-    void    upGrade(Ref * pSender);
-    void    unLock(Ref * pSender);
-    void    buy(Ref * pSender);
+    void    upGrade(Touch * touch, Event * event);
+    void    unLock(Touch * touch, Event * event);
+    void    buy(Touch * touch, Event * event);
     void    takeUp(Ref * pSender);
     void    showDiscView(Touch * touch, Event * event);
 public:

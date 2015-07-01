@@ -12,7 +12,7 @@
 #include "GameScrollHeadler.h"
 #include "ProgressBar.h"
 #include "GameShopScene.h"
-
+#include "GameSprite.h"
 
 class ShopBuildingItemScrollHeadler : public GameScrollHeadler {
 private:
@@ -23,18 +23,18 @@ private:
     
     ProgressBar *   m_progressBar;
     
-    MenuItemImage * m_upGradeButton;
-    MenuItemImage * m_unLockButton;
-    MenuItemImage * m_buyButton;
+    GameSprite * m_upGradeButton;
+    GameSprite * m_unLockButton;
+    GameSprite * m_buyButton;
     
     GameShopScene * m_shopScene;
 private:
     void    initDefenseView();
     void    updateDefenseView();
     
-    void    upGrade(Ref * pSender);
-    void    unLock(Ref * pSender);
-    void    buy(Ref * pSender);
+    void    upGrade(Touch * touch, Event * event);
+    void    unLock(Touch * touch, Event * event);
+    void    buy(Touch * touch, Event * event);
     void    showDiscView(Touch * touch, Event * event);
 
 public:

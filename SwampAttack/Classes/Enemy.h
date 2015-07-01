@@ -46,6 +46,8 @@ protected:
     float   tatolDlay;
     float   hurtDlay;       //受伤 记数
     
+    float   m_attackWaitTime;
+    
     std::list<GameBuff *>   m_buffData;
     
 public:
@@ -59,6 +61,7 @@ public:
     bool    isHaveBuff();
     std::list<GameBuff *>  getBuffData();
     void    removeAllBuffS();
+    float   getAttackWaitTime();
 protected:
     virtual void    move();
     virtual bool    computeIfWander();

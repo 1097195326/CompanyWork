@@ -37,12 +37,13 @@ protected:
     Sprite      *   texiaoSprite;
     Sprite      *   buffSprite;
     bool            isHaveArmor;
+    float   attackWaitTime;
     
     Action      *   texiaoAction;
     
 protected:
     virtual void    move();
-    virtual void    attack();
+    virtual void    attack(float data = 0.0f);
     virtual void    die();
     virtual void    hurt();
     

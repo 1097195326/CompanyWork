@@ -40,13 +40,13 @@ WalkEnemySprite::WalkEnemySprite(Enemy * model):EnemySprite(model)
     hurtOnAction->retain();
     m_map["hurtAction1"] = hurtOnAction;
     
-    Action * attackAction = RepeatForever::create(
+    Action * attackAction = Sequence::create(
                                   Spawn::create(
                                           Sequence::create(DelayTime::create(attackSpeed * info.attackFrame),
                                                            CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::attackCall, this)), NULL),
                                           BaseUtil::makeAnimateWithNameIndexDelay(name + "_attack", info.attackFrames,attackSpeed),
-                                          NULL)
-                                                  );
+                                          NULL),
+                                             NULL );
     attackAction->retain();
     m_map["attackAction"] = attackAction;
     Action * dieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_down", info.downFrames),
@@ -78,7 +78,7 @@ void WalkEnemySprite::update(float data)
         wanderFont();
     }else if (m_model->isAttack())
     {
-        attack();
+        attack(data);
     }else if (m_model->isDied())
     {
         m_model->diedCall();
@@ -259,17 +259,23 @@ void WalkEnemySprite::wanderBack()
         armorSprite->runAction(m_map["armorWalkBackAction"]);
     }
 }
-void WalkEnemySprite::attack()
+void WalkEnemySprite::attack(float data)
 {
     if (actionStatus == isAttacking) {
         return;
     }
-    actionStatus = isAttacking;
-    guaiwuSprite->stopAllActions();
-    guaiwuSprite->runAction(m_map["attackAction"]);
-    if (isHaveArmor) {
-        armorSprite->stopAllActions();
-        armorSprite->runAction(m_map["armorAttackAction"]);
+    dlay += data;
+    if (dlay >= attackWaitTime)
+    {
+        dlay = 0.0f;
+        
+        actionStatus = isAttacking;
+        guaiwuSprite->stopAllActions();
+        guaiwuSprite->runAction(m_map["attackAction"]);
+        if (isHaveArmor) {
+            armorSprite->stopAllActions();
+            armorSprite->runAction(m_map["armorAttackAction"]);
+        }
     }
 }
 void WalkEnemySprite::die()

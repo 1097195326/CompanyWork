@@ -13,6 +13,7 @@
 #include "ProgressBar.h"
 #include "GameShopScene.h"
 #include "GameObserver.h"
+#include "GameSprite.h"
 
 
 class ShopPropItemScrollHeadler : public GameScrollHeadler , public GameObserver{
@@ -24,9 +25,9 @@ private:
     
     ProgressBar *   m_progressBar;
     
-    MenuItemImage * m_upGradeButton;
-    MenuItemImage * m_unLockButton;
-    MenuItemImage * m_buyButton;
+    GameSprite * m_upGradeButton;
+    GameSprite * m_unLockButton;
+    GameSprite * m_buyButton;
     MenuItemImage * m_takeUpButton;
     
     GameShopScene * m_shopScene;
@@ -36,9 +37,9 @@ private:
     void    initLockView();
     void    updateDaojuView();
     
-    void    upGrade(Ref * pSender);
-    void    unLock(Ref * pSender);
-    void    buy(Ref * pSender);
+    void    upGrade(Touch * touch, Event * event);
+    void    unLock(Touch * touch, Event * event);
+    void    buy(Touch * touch, Event * event);
     void    takeUp(Ref * pSender);
     void    showDiscView(Touch * touch, Event * event);
 public:

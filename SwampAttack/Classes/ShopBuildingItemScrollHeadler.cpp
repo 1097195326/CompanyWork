@@ -47,49 +47,59 @@ void ShopBuildingItemScrollHeadler::initDefenseView()
         iconBg->m_touchMeCall = CC_CALLBACK_2(ShopBuildingItemScrollHeadler::showDiscView, this);
         
 //        Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
-        iconBg->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, 0);
+        iconBg->setPosition(iconBg->getContentSize().width * 0.75
+                            - itemBg->getContentSize().width * 0.5,
+                            0);
         addChild(iconBg);
         
         string buildingModelId = building->getModelId();
         string buildingIconStr = StringUtils::format("%s_icon.png",buildingModelId.c_str());
         string buildingNameStr = StringUtils::format("%s_name.png",buildingModelId.c_str());
         Sprite * icon = Sprite::create(ImagePath(buildingIconStr));
-        icon->setPosition(iconBg->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, 0);
+        icon->setPosition(iconBg->getContentSize().width * 0.75
+                          - itemBg->getContentSize().width * 0.5, 0);
         addChild(icon);
         
         Sprite * iconName = Sprite::create(ImagePath(buildingNameStr));
-        iconName->setPosition(-itemBg->getContentSize().width * 0.25 + iconName->getContentSize().width * 1, itemBg->getContentSize().height * 0.18);
+        iconName->setPosition(-itemBg->getContentSize().width * 0.25
+                              + iconName->getContentSize().width * 1,
+                              itemBg->getContentSize().height * 0.18);
         addChild(iconName);
         
-        m_upGradeButton = MenuItemImage::create(ImagePath("shopItemButtonNormal.png"),
-                                                ImagePath("shopItemButtonNormal.png"),
-                                                CC_CALLBACK_1(ShopBuildingItemScrollHeadler::upGrade, this));
-        
-        m_upGradeButton->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.15);
-        Menu * buttonMenu = Menu::create(m_upGradeButton, NULL);
-        buttonMenu->setPosition(Point::ZERO);
-        addChild(buttonMenu);
+        m_upGradeButton = new GameSprite(ImagePath("shopItemButtonNormal.png"));
+        m_upGradeButton->m_touchMeCall = CC_CALLBACK_2(ShopBuildingItemScrollHeadler::upGrade, this);
+        m_upGradeButton->setPosition(itemBg->getContentSize().width * 0.29,
+                                     -itemBg->getContentSize().height * 0.15);
+        m_upGradeButton->autorelease();
+        addChild(m_upGradeButton);
         
         Sprite * upgradeLabel = Sprite::create(ImagePath("shopItemLabel1.png"));
-        upgradeLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.1);
+        upgradeLabel->setPosition(itemBg->getContentSize().width * 0.29,
+                                  -itemBg->getContentSize().height * 0.1);
         addChild(upgradeLabel);
-        
-        Sprite * levelBg = Sprite::create(ImagePath("shopItemLevelBg.png"));
-        levelBg->setPosition(itemBg->getContentSize().width * 0.13, itemBg->getContentSize().height * 0.18);
-        addChild(levelBg);
-        m_levelUpLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 18);
-        m_levelUpLabel->setPosition(levelBg->getContentSize().width * 0.5, levelBg->getContentSize().height * 0.5);
-        levelBg->addChild(m_levelUpLabel);
         
         m_progressBar = new ProgressBar("shopItemTiao1.png","shopItemTiao2.png");
         m_progressBar->setBarRight();
-        m_progressBar->setPosition(itemBg->getContentSize().width * 0.29, itemBg->getContentSize().height * 0.18);
+        m_progressBar->setPosition(itemBg->getContentSize().width * 0.29,
+                                   itemBg->getContentSize().height * 0.18);
         addChild(m_progressBar);
+        
+        Sprite * levelBg = Sprite::create(ImagePath("shopItemLevelBg.png"));
+        levelBg->setPosition(itemBg->getContentSize().width * 0.13,
+                             itemBg->getContentSize().height * 0.18);
+        addChild(levelBg);
+        m_levelUpLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 18);
+        m_levelUpLabel->setPosition(levelBg->getContentSize().width * 0.5,
+                                    levelBg->getContentSize().height * 0.5);
+        levelBg->addChild(m_levelUpLabel);
+        
         m_upgradeLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 20);
-        m_upgradeLabel->setPosition(itemBg->getContentSize().width * 0.33, -itemBg->getContentSize().height * 0.25);
+        m_upgradeLabel->setPosition(itemBg->getContentSize().width * 0.33,
+                                    -itemBg->getContentSize().height * 0.25);
         addChild(m_upgradeLabel);
         Sprite * jinbi1 = Sprite::create(ImagePath("jinbi_icon.png"));
-        jinbi1->setPosition(itemBg->getContentSize().width * 0.4, -itemBg->getContentSize().height * 0.23);
+        jinbi1->setPosition(itemBg->getContentSize().width * 0.4,
+                            -itemBg->getContentSize().height * 0.23);
         addChild(jinbi1);
     }else
     {
@@ -100,32 +110,38 @@ void ShopBuildingItemScrollHeadler::initDefenseView()
         string buildingIconStr = StringUtils::format("%s_grayicon.png",buildingModelId.c_str());
         string buildingNameStr = StringUtils::format("%s_name.png",buildingModelId.c_str());
         Sprite * icon = Sprite::create(ImagePath(buildingIconStr));
-        icon->setPosition(icon->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, 0);
+        icon->setPosition(icon->getContentSize().width * 0.75
+                          - itemBg->getContentSize().width * 0.5,
+                          0);
         addChild(icon);
         Sprite * lockIcon = Sprite::create(ImagePath("shopItemLockIcon.png"));
-        lockIcon->setPosition(icon->getContentSize().width * 0.75 - itemBg->getContentSize().width * 0.5, 0);
+        lockIcon->setPosition(- itemBg->getContentSize().width * 0.3,
+                              - itemBg->getContentSize().height * 0.18);
         addChild(lockIcon);
         
         Sprite * iconName = Sprite::create(ImagePath(buildingNameStr));
-        iconName->setPosition(-itemBg->getContentSize().width * 0.25 + iconName->getContentSize().width * 1, itemBg->getContentSize().height * 0.18);
+        iconName->setPosition(-itemBg->getContentSize().width * 0.25
+                              + iconName->getContentSize().width * 1,
+                              itemBg->getContentSize().height * 0.18);
         addChild(iconName);
         //
-        m_unLockButton = MenuItemImage::create(ImagePath("shopItemButonUnclock.png"),
-                                               ImagePath("shopItemButonUnclock.png"),
-                                               CC_CALLBACK_1(ShopBuildingItemScrollHeadler::unLock, this));
+        m_unLockButton = new GameSprite(ImagePath("shopItemButonUnclock.png"));
+        m_unLockButton->m_touchMeCall = CC_CALLBACK_2(ShopBuildingItemScrollHeadler::unLock, this);
+        m_unLockButton->setPosition(itemBg->getContentSize().width * 0.29,
+                                    -itemBg->getContentSize().height * 0.15);
+        m_unLockButton->autorelease();
+        addChild(m_unLockButton);
         
-        m_unLockButton->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.15);
-        Menu * buttonMenu = Menu::create(m_unLockButton, NULL);
-        buttonMenu->setPosition(Point::ZERO);
-        addChild(buttonMenu);
         Sprite * unlockName = Sprite::create(ImagePath("shopItemUnlockName.png"));
-        unlockName->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.15);
+        unlockName->setPosition(itemBg->getContentSize().width * 0.29,
+                                -itemBg->getContentSize().height * 0.15);
         addChild(unlockName);
         
         Label * unlockLabel = Label::createWithTTF(StringUtils::format("%d",building->getUnlockGold()),
                                                    "fonts/American Typewriter.ttf",
                                                    20);
-        unlockLabel->setPosition(itemBg->getContentSize().width * 0.29, -itemBg->getContentSize().height * 0.28);
+        unlockLabel->setPosition(itemBg->getContentSize().width * 0.29,
+                                 -itemBg->getContentSize().height * 0.28);
         addChild(unlockLabel);
     }
     
@@ -148,19 +164,21 @@ void ShopBuildingItemScrollHeadler::updateDefenseView()
         int userGold = GameUser::getInstance()->getUserGold();
         if (userGold >= upgradeGold)
         {
-            m_upGradeButton->setNormalImage(Sprite::create(ImagePath("shopItemButtonNormal.png")));
-            m_upGradeButton->setSelectedImage(Sprite::create(ImagePath("shopItemButtonNormal.png")));
+            m_upGradeButton->setEnabled(true);
         }else
         {
-            m_upGradeButton->setNormalImage(Sprite::create(ImagePath("shopItemButtonDisable.png")));
-            m_upGradeButton->setSelectedImage(Sprite::create(ImagePath("shopItemButtonDisable.png")));
+            m_upGradeButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
         }
     }
     
 }
-void ShopBuildingItemScrollHeadler::upGrade(Ref * pSender)
+void ShopBuildingItemScrollHeadler::upGrade(Touch * touch, Event * event)
 {
-    
+    GameSprite * spr = (GameSprite *)event->getCurrentTarget();
+    if (!spr->isEnable())
+    {
+        return;
+    }
     DefenseBuilding * building = DefenseBuildingManager::getInstance()->getBuildingByIndex(m_index);
     int upgradeGold = building->getStrengthGold();
     int userGold = _G_U->getUserGold();
@@ -179,7 +197,7 @@ void ShopBuildingItemScrollHeadler::upGrade(Ref * pSender)
         
     }
 }
-void ShopBuildingItemScrollHeadler::unLock(Ref * pSender)
+void ShopBuildingItemScrollHeadler::unLock(Touch * touch, Event * event)
 {
     
     DefenseBuilding * building = DefenseBuildingManager::getInstance()->getBuildingByIndex(m_index);
@@ -197,7 +215,7 @@ void ShopBuildingItemScrollHeadler::unLock(Ref * pSender)
         log("no enough money for unlock");
     }
 }
-void ShopBuildingItemScrollHeadler::buy(Ref * pSender)
+void ShopBuildingItemScrollHeadler::buy(Touch * touch, Event * event)
 {
     
 }

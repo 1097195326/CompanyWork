@@ -20,6 +20,7 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
 //    int w = m_model->getWidth();
     int h = m_model->getHeight();
     
+    attackWaitTime = m_model->getAttackWaitTime();
 //    Sprite * s = Sprite::create("CloseSelected.png");
 //    s->setPosition(Vec2(0, h * 0.5));
 //    addChild(s);
@@ -70,7 +71,7 @@ EnemySprite::~EnemySprite()
 }
 void EnemySprite::move()
 {}
-void EnemySprite::attack()
+void EnemySprite::attack(float data)
 {}
 void EnemySprite::die()
 {}
@@ -82,6 +83,7 @@ void EnemySprite::texiaoCall()
 }
 void EnemySprite::attackCall()
 {
+    actionStatus = normal;
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("enemy_attack.mp3").c_str());
     m_model->attackCall();
 }

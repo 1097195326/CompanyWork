@@ -86,8 +86,8 @@ void GameShopScene::initShopView()
         Sprite * xinBg = Sprite::create(ImagePath("shopXinBg.png"));
         Sprite * xin = Sprite::create(ImagePath("shopXinIcon.png"));
         
-        Vec2 xinP = Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.16 + xinBg->getContentSize().width * 0.8 * i,
-                         m_visibleOrigin.y + m_visibleSize.height * 0.94);
+        Vec2 xinP = Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.15 + xinBg->getContentSize().width * 0.8 * i,
+                         m_visibleOrigin.y + m_visibleSize.height * 0.935);
         xinBg->setPosition(xinP);
         xin->setPosition(xinP);
         addChild(xinBg);
@@ -98,29 +98,29 @@ void GameShopScene::initShopView()
     MenuItemImage * healthPlusButton = MenuItemImage::create(ImagePath("shop_plusIcon.png"),
                                                              ImagePath("shop_plusIcon.png"),
                                                              CC_CALLBACK_1(GameShopScene::healthPlusFunc, this));
-    healthPlusButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.44,
+    healthPlusButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.39,
                                   m_visibleOrigin.y +  m_visibleSize.height * 0.935);
     
     m_goldLabel = Label::createWithTTF(StringUtils::format("%d",_G_U->getUserGold()),
                                        "fonts/Arial Black.ttf",
                                        35);
-    m_goldLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.58,
+    m_goldLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.57,
                              m_visibleOrigin.y + m_visibleSize.height * 0.93);
     m_goldLabel->enableOutline(Color4B(0, 0, 0, 255),2);
     addChild(m_goldLabel);
     Sprite * jinbiIcon = Sprite::create(ImagePath("jinbi_icon.png"));
-    jinbiIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.49,
+    jinbiIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.47,
                            m_visibleOrigin.y + m_visibleSize.height * 0.935);
     addChild(jinbiIcon);
     
     m_expendPropLabel = Label::createWithTTF(StringUtils::format("%d",_G_U->getExpendPropNum()),
                                              "fonts/Arial Black.ttf",
                                              35);
-    m_expendPropLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.75,
+    m_expendPropLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.77,
                                    m_visibleOrigin.y + m_visibleSize.height * 0.93);
     addChild(m_expendPropLabel);
     Sprite * hpIcon = Sprite::create(ImagePath("hp1_icon.png"));
-    hpIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.7,
+    hpIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.72,
                            m_visibleOrigin.y + m_visibleSize.height * 0.935);
     hpIcon->setScale(0.5);
     addChild(hpIcon);

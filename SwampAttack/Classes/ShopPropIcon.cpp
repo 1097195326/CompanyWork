@@ -59,7 +59,7 @@ void ShopPropIcon::reSetIcon(Prop * prop)
     m_icon->addChild(m_num);
     m_num->setString(StringUtils::format("%d",m_prop->getNum()));
     m_num->setPosition(Vec2(m_iconBg->getContentSize().width * 0.2, -m_iconBg->getContentSize().height * 0.3));
-    m_num->setColor(Color3B(0, 0, 0));
+    m_num->enableOutline(Color4B(0, 0, 0, 255),2);
 }
 bool ShopPropIcon::isHaveProp()
 {

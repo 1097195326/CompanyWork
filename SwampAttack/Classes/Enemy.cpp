@@ -15,7 +15,11 @@
 #include "GameDirector.h"
 
 
-Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false),m_isWeak(false)
+Enemy::Enemy(Json::Value data):
+m_data(data),
+m_isShowHurt(false),
+m_isWeak(false),
+m_attackWaitTime(0.0f)
 {
     m_actionType = atoi(m_data["ActionType"].asString().c_str());
     
@@ -72,6 +76,14 @@ Enemy::Enemy(Json::Value data):m_data(data),m_isShowHurt(false),m_isWeak(false)
     float as = atof(m_data["AttackSpeed"].asString().c_str()) ;
     float af = EnemyInfo::getInstance()->getInfoByName(m_modelId).attackFrames;
     m_attackSpeed = 1.0f / as / af ;
+    
+    if(m_attackSpeed > 0.08f)
+    {
+        float   cha = m_attackSpeed - 0.08f;
+        m_attackWaitTime = cha * af;
+        m_attackSpeed = 0.08f;
+    }
+    
     m_range = atof(m_data["Range"].asString().c_str());
     m_gold = atoi(m_data["Gold"].asString().c_str());
     m_drop = m_data["Drop"].asString();
@@ -117,6 +129,10 @@ void Enemy::removeAllBuffS()
         m_buffData.erase(iter++);
         
     }
+}
+float Enemy::getAttackWaitTime()
+{
+    return m_attackWaitTime;
 }
 bool Enemy::isContainsPoint(cocos2d::Rect rect)
 {

@@ -9,7 +9,9 @@
 #include "GameSprite.h"
 
 GameSprite::GameSprite(std::string name):
-m_isTouchMe(false)
+m_name(name),
+m_isTouchMe(false),
+m_isEnable(true)
 {
 //    init();
     initWithFile(name);
@@ -34,7 +36,24 @@ void GameSprite::setCanSwallowTouches(bool can)
 {
     m_listener->setSwallowTouches(can);
 }
-
+void GameSprite::setEnabled(bool enable,std::string name)
+{
+    m_isEnable = enable;
+    if (name.size() > 0)
+    {
+        if (m_isEnable)
+        {
+            setTexture(m_name);
+        }else
+        {
+            setTexture(name);
+        }
+    }
+}
+bool GameSprite::isEnable()
+{
+    return m_isEnable;
+}
 bool GameSprite::touchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
 {
     Vec2 point = this->convertToNodeSpace(touch->getLocation());

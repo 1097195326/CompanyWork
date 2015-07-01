@@ -13,12 +13,12 @@
 
 class WalkEnemySprite : public EnemySprite {
 private:
-    
+    float   dlay;
 protected:
     void    wanderFont();
     void    wanderBack();
     void    move();
-    void    attack();
+    void    attack(float data);
     void    die();
     void    hurt();
     void    setArmorView();

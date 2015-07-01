@@ -68,7 +68,7 @@ void ShopGunIcon::reSetIcon(Gun *gun)
         m_icon->addChild(m_bullets);
         m_bullets->setString(StringUtils::format("%d",m_gun->getTotalBulletNum()));
         m_bullets->setPosition(Vec2(m_iconBg->getContentSize().width * 0.2, -m_iconBg->getContentSize().height * 0.3));
-        m_bullets->setColor(Color3B(0, 0, 0));
+        m_bullets->enableOutline(Color4B(0, 0, 0, 255),2);
     }
 }
 bool ShopGunIcon::isHaveGun()

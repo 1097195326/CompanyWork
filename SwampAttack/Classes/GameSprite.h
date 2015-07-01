@@ -16,7 +16,8 @@ class GameSprite : public Sprite
 private:
     EventListenerTouchOneByOne * m_listener;
     bool    m_isTouchMe;
-    
+    bool    m_isEnable;
+    std::string m_name;
 public:
     GameSprite(std::string name);
     ~GameSprite();
@@ -28,6 +29,9 @@ public:
     typedef std::function<void (Touch *, Event *)> TouchMeCall;
     TouchMeCall m_touchMeCall;
     void    setCanSwallowTouches(bool can);
+    void    setEnabled(bool enable,std::string name = "");
+    
+    bool    isEnable();
     
 };
 
