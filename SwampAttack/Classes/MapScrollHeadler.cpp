@@ -15,7 +15,7 @@
 MapScrollHeadler::MapScrollHeadler(int sceneIndex)
 {
     setIndex(sceneIndex);
-    Sprite * bg = Sprite::create(ImagePath("map_scene1.png"));
+    Sprite * bg = Sprite::create(ImagePath(StringUtils::format("map_scene%d.png",(m_index + 1))));
     addChild(bg);
     
     Vec2 offVec = Vec2(m_visibleOrigin.x - m_visibleSize.width * 0.5,
@@ -29,15 +29,21 @@ MapScrollHeadler::MapScrollHeadler(int sceneIndex)
         MapGuanqiaButton * button = new MapGuanqiaButton(m_index,i);
         button->setPosition(offVec);
         button->autorelease();
-        addChild(button,3);
+        addChild(button);
         
         std::string shadeName = guanQia->getShadeName();
         if (shadeName.size() > 0)
         {
+            std::string imageName;
+            if (guanQia->isUnlock())
+            {
+                imageName = StringUtils::format("%s_light.png",shadeName.c_str());
+            }else
+            {
+                imageName = StringUtils::format("%s.png",shadeName.c_str());
+            }
             
-            std::string imageName = StringUtils::format("%s.png",shadeName.c_str());
             Vec2 yPoint = guanQia->getYinyingPoint();
-            
             Sprite * yinying = Sprite::createWithSpriteFrameName(imageName);
             yinying->setPosition(offVec + yPoint);
             addChild(yinying);
