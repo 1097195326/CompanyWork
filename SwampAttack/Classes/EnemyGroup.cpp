@@ -116,6 +116,30 @@ void EnemyGroup::gameLoop(float data)
     }
     
 }
+void EnemyGroup::stopGame()
+{
+    std::list<Enemy*>::iterator iter;
+    for (iter = show_enemyData.begin() ; iter != show_enemyData.end(); ++iter)
+    {
+        Enemy * enemy = *iter;
+        if (!enemy->isCanDelete())
+        {
+            enemy->stopGame();
+        }
+    }
+}
+void EnemyGroup::continueGame()
+{
+    std::list<Enemy*>::iterator iter;
+    for (iter = show_enemyData.begin() ; iter != show_enemyData.end(); ++iter)
+    {
+        Enemy * enemy = *iter;
+        if (!enemy->isCanDelete())
+        {
+            enemy->continueGame();
+        }
+    }
+}
 bool EnemyGroup::isDie()
 {
     return status == _isDie;

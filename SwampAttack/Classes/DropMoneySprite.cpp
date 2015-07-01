@@ -24,6 +24,7 @@ DropMoneySprite::DropMoneySprite(MoneyObject * money)
     addChild(m_icon,1);
     
     Action * guangAc = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("item_flash", 4),
+                                        DelayTime::create(1),
                                         CallFuncN::create(CC_CALLBACK_1(DropMoneySprite::guangEnd, this)),
                                         NULL);
     Sprite * texiao = Sprite::create();
@@ -38,6 +39,8 @@ DropMoneySprite::DropMoneySprite(MoneyObject * money)
     
     runAction(JumpBy::create(0.5, Vec2(0, 0), 50, 3));
     
+    scheduleOnce(CC_SCHEDULE_SELECTOR(DropMoneySprite::isTimeToEnd), 5);
+    
     _G_V->addChild(this,640);
 }
 DropMoneySprite::~DropMoneySprite()
@@ -47,10 +50,9 @@ DropMoneySprite::~DropMoneySprite()
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
     }
 }
-void DropMoneySprite::guangEnd(cocos2d::Node *pSender)
+void DropMoneySprite::isTimeToEnd(float data)
 {
-    pSender->stopAllActions();
-    pSender->removeFromParentAndCleanup(true);
+    touchEnd(NULL, NULL);
 }
 bool DropMoneySprite::touchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
 {
@@ -81,6 +83,11 @@ void DropMoneySprite::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
     runAction(ac);
     
     
+}
+void DropMoneySprite::guangEnd(cocos2d::Node *pSender)
+{
+    pSender->stopAllActions();
+    pSender->removeFromParentAndCleanup(true);
 }
 void DropMoneySprite::moveEnd(cocos2d::Node *pSender)
 {

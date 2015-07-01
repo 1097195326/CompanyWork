@@ -45,8 +45,6 @@ GamePauseScene::GamePauseScene(RenderTexture * rt)
     m_listener->setSwallowTouches(true);
     m_listener->onTouchBegan = CC_CALLBACK_2(GamePauseScene::touchBegan, this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener, this);
-
-    
     
     Sprite * scenebg = Sprite::createWithTexture(rt->getSprite()->getTexture());
     scenebg->setPosition(m_visibleSize.width * 0.5,m_visibleSize.height * 0.5);
@@ -120,5 +118,6 @@ void GamePauseScene::gotoMap(cocos2d::Ref *pSender)
 }
 bool GamePauseScene::touchBegan(Touch *touch, Event *event)
 {
+    log("------ ");
     return true;
 }

@@ -56,6 +56,10 @@ CrumpEnemySprite::CrumpEnemySprite(Enemy * model):EnemySprite(model)
 }
 void CrumpEnemySprite::update(float data)
 {
+    if (m_model->isStopGame())
+    {
+        return;
+    }
     if (m_model->isDieing())
     {
         die();

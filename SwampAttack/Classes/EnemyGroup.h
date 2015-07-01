@@ -38,6 +38,8 @@ public:
     
     void    clearData();
     void    gameLoop(float data);
+    void    stopGame();
+    void    continueGame();
 };
 
 #endif /* defined(__SwampAttack__EnemyGroup__) */

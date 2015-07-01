@@ -70,6 +70,20 @@ void EnemyManager::clearData()
         m_map.clear();
     }
 }
+void EnemyManager::stopGame()
+{
+    if (currentGroup)
+    {
+        currentGroup->stopGame();
+    }
+}
+void EnemyManager::continueGame()
+{
+    if (currentGroup)
+    {
+        currentGroup->continueGame();
+    }
+}
 static float dley = 0;
 void EnemyManager::gameLoop(float data)
 {

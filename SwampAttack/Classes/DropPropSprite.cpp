@@ -22,6 +22,7 @@ DropPropSprite::DropPropSprite(Prop * prop)
     addChild(m_icon,1);
     
     Action * guangAc = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("item_flash", 4),
+                                        DelayTime::create(1),
                                         CallFuncN::create(CC_CALLBACK_1(DropPropSprite::guangEnd, this)),
                                         NULL);
     Sprite * texiao = Sprite::create();
@@ -36,6 +37,8 @@ DropPropSprite::DropPropSprite(Prop * prop)
     
     runAction(JumpBy::create(0.5, Vec2(0, 0), 50, 3));
     
+    scheduleOnce(CC_SCHEDULE_SELECTOR(DropPropSprite::isTimeToEnd), 5);
+    
     _G_V->addChild(this,640);
 }
 DropPropSprite::~DropPropSprite()
@@ -44,6 +47,10 @@ DropPropSprite::~DropPropSprite()
     {
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
     }
+}
+void DropPropSprite::isTimeToEnd(float data)
+{
+    touchEnd(NULL, NULL);
 }
 void DropPropSprite::guangEnd(cocos2d::Node *pSender)
 {

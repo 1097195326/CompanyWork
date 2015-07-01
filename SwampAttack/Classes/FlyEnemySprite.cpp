@@ -40,6 +40,10 @@ FlyEnemySprite::FlyEnemySprite(Enemy * model):EnemySprite(model)
 }
 void FlyEnemySprite::update(float data)
 {
+    if (m_model->isStopGame())
+    {
+        return;
+    }
     if (m_model->isDieing())
     {
         die();

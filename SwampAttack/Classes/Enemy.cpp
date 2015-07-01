@@ -19,6 +19,7 @@ Enemy::Enemy(Json::Value data):
 m_data(data),
 m_isShowHurt(false),
 m_isWeak(false),
+m_isStop(false),
 m_attackWaitTime(0.0f)
 {
     m_actionType = atoi(m_data["ActionType"].asString().c_str());
@@ -103,6 +104,18 @@ bool Enemy::computeIfWander(){return false;}
 void Enemy::wander(){}
 void Enemy::setView(){}
 void Enemy::effectAction(cocos2d::Vec2 point){}
+void Enemy::stopGame()
+{
+    m_isStop = true;
+}
+void Enemy::continueGame()
+{
+    m_isStop = false;
+}
+bool Enemy::isStopGame()
+{
+    return m_isStop;
+}
 void Enemy::addBuff(GameBuff *buff)
 {
     m_buffData.push_back(buff);

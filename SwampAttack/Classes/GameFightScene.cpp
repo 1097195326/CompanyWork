@@ -81,8 +81,9 @@ bool GameFightScene::init()
     MenuItemImage * pauseButton = MenuItemImage::create(ImagePath("fight_pause_button.png"),
                                                         ImagePath("fight_pause_button.png"),
                                                         CC_CALLBACK_1( GameFightScene::pauseGame, this));
-    pauseButton->setPosition(m_visibleOrigin.x + pauseButton->getContentSize().width * 0.6,
-                             m_visibleOrigin.y + m_visibleSize.height - pauseButton->getContentSize().height * 0.6);
+    pauseButton->setPosition(m_visibleOrigin.x + pauseButton->getContentSize().width * 0.5,
+                             m_visibleOrigin.y + m_visibleSize.height
+                             - pauseButton->getContentSize().height * 0.6);
     Menu * buttonMenu = Menu::create(pauseButton, NULL);
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu,2);

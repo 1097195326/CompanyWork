@@ -38,7 +38,7 @@
 //}
 GameShopScene::~GameShopScene()
 {
-    log("shop scene release");
+//    log("shop scene release");
     Director::getInstance()->getTextureCache()->removeUnusedTextures();
     m_healthSprites.clear();
     m_scrollViews.clear();
@@ -349,7 +349,7 @@ void GameShopScene::setItemBgSprite()
 }
 void GameShopScene::homeButtonFunc(cocos2d::Ref *pSender)
 {
-    log("shop scene to home");
+//    log("shop scene to home");
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Director::getInstance()->replaceScene(GameHomeScene::scene());
 }

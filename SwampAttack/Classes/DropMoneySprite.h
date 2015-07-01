@@ -20,7 +20,7 @@ private:
     
     virtual bool    touchBegan(Touch * touch, Event * event);
     virtual void    touchEnd(Touch * touch, Event * event);
-    
+    void    isTimeToEnd(float data);
     void    guangEnd(Node * pSender);
     void    moveEnd(Node * pSender);
 public:

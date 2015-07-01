@@ -23,7 +23,7 @@ Scene * GameHomeScene::scene()
 }
 GameHomeScene::~GameHomeScene()
 {
-    log("home scene release");
+//    log("home scene release");
 }
 bool GameHomeScene::init()
 {
@@ -68,7 +68,7 @@ void GameHomeScene::toMapScene(cocos2d::Ref *pSender)
 }
 void GameHomeScene::toShopScene(cocos2d::Ref *pSender)
 {
-    log("home scene to shop");
+//    log("home scene to shop");
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Director::getInstance()->replaceScene(GameShopScene::scene());
 }

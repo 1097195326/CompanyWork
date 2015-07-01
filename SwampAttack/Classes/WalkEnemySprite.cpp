@@ -8,6 +8,7 @@
 
 #include "WalkEnemySprite.h"
 #include "BuffSprite.h"
+#include "GameDirector.h"
 
 WalkEnemySprite::WalkEnemySprite(Enemy * model):EnemySprite(model)
 {
@@ -61,6 +62,10 @@ WalkEnemySprite::WalkEnemySprite(Enemy * model):EnemySprite(model)
 }
 void WalkEnemySprite::update(float data)
 {
+    if (m_model->isStopGame())
+    {
+        return;
+    }
     if (m_model->isDieing())
     {
         die();

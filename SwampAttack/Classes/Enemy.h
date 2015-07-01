@@ -41,6 +41,7 @@ protected:
     Rect    m_rect;
     bool    m_isShowHurt;
     bool    m_isWeak;
+    bool    m_isStop;
     
     float   dlay;
     float   tatolDlay;
@@ -51,6 +52,9 @@ protected:
     std::list<GameBuff *>   m_buffData;
     
 public:
+    void    stopGame();
+    void    continueGame();
+    bool    isStopGame();
     virtual void    setView();
     bool    isContainsPoint(Rect rect);
     void    hurt(int damage,int index);

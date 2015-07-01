@@ -176,11 +176,13 @@ void GameDirector::continueGame()
 {
     clearStatus();
     m_status |= s_run;
+    EnemyManager::getInstance()->continueGame();
 }
 void GameDirector::stopGame()
 {
     clearStatus();
     m_status |= s_stop ;
+    EnemyManager::getInstance()->stopGame();
 }
 GameOverStatus GameDirector::getOverStatus()
 {

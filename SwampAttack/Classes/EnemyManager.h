@@ -36,7 +36,8 @@ public:
     void    clearData();
     bool    isOver();
     float   getEnemyProgress();
-    
+    void    stopGame();
+    void    continueGame();
     
     EnemyGroup * getCurrectGroup();
 };
