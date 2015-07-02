@@ -24,17 +24,17 @@ void PropSprite_daoju5::throwProp()
     m_state = p_s_throwing;
     
     
-    Vec2 tagetPoint = m_prop->getPropPoint();
+    Vec2 tagetPoint = m_prop->getPropPoint() + Vec2(0, 50);
     
     m_propTexiao = Sprite::create();
-    m_propTexiao->setPosition(Vec2(tagetPoint.x,800));
+    m_propTexiao->setPosition(Vec2(tagetPoint.x - 500,800));
     addChild(m_propTexiao,6);
     
     float tatolTime = (800 - tagetPoint.y) * 0.001;
     
     ActionInterval * a1 = Sequence::create(EaseBounceIn::create(MoveTo::create(tatolTime, tagetPoint)),NULL);
     
-    ActionInterval * a2 = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("daoju5", 10), NULL));
+    ActionInterval * a2 = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("daoju5", 5), NULL));
     Sprite * s2 =Sprite::create();
     m_propTexiao->addChild(s2);
     s2->runAction(a2);
@@ -43,7 +43,7 @@ void PropSprite_daoju5::throwProp()
 }
 void PropSprite_daoju5::spriteCall(Node * psender)
 {
-    ActionInterval * a2 = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("stones", 5), NULL);
+    ActionInterval * a2 = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("stones", 9), NULL);
 //    ActionInterval * a1 = Sequence::create(DelayTime::create(0.08 * 5),
 //                                           CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju5::propThrowCall, this)), NULL);
     Sprite * ss = (Sprite *)psender;

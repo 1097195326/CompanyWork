@@ -11,6 +11,8 @@
 
 #include "BaseCode.h"
 #include "GameObserver.h"
+#include "GameSprite.h"
+
 
 class MapGuanqiaButton : public Sprite, public GameObserver {
 private:
@@ -19,7 +21,7 @@ private:
     std::string  m_guanqiaId;
     
     
-    MenuItem * m_menuItem;
+    GameSprite * m_menuItem;
     Sprite  *   m_lockSprite;
     
 public:
@@ -27,7 +29,7 @@ public:
     MapGuanqiaButton(int sceneIndex, int index);
     ~MapGuanqiaButton();
     
-    void    pressGuanqiaButtonFunc(Ref * pSender);
+    void    pressGuanqiaButtonFunc(Touch * touch, Event * event);
     void    updateData();
 };
 

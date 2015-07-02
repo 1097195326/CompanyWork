@@ -59,10 +59,6 @@ void Bullet::gameLoop(float data)
         }
     }
     if (m_state == _b_arrive) {
-        if (m_Point.x > m_visibleOrigin.x + m_visibleSize.width)
-        {
-            return;
-        }
         if (isFireHouse())
         {
             House::getInstance()->hurt(m_damage);

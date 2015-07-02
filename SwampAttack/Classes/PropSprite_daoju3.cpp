@@ -62,7 +62,14 @@ void PropSprite_daoju3::throwProp()
     
     float tatolTime = (tagetPoint.x - startPoint.x) * 0.001;
     
-    ActionInterval * a1 = Sequence::create(MoveTo::create(tatolTime, tagetPoint),NULL);
+//    ActionInterval * a1 = Sequence::create(MoveTo::create(tatolTime, tagetPoint),NULL);
+    float topPoint = (tagetPoint.x - startPoint.x) * 0.4 * 0.3;
+    
+    ccBezierConfig conf;
+    conf.controlPoint_1 = Vec2(startPoint.x + (tagetPoint.x - startPoint.x) * 0.3, startPoint.y + topPoint);
+    conf.controlPoint_2 = Vec2(startPoint.x + (tagetPoint.x - startPoint.x) * 0.6, startPoint.y + topPoint);
+    conf.endPosition =tagetPoint;
+    ActionInterval * a1 = BezierTo::create(tatolTime, conf);
     
 //    ActionInterval * a2 = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("daoju2", 8), NULL));
 //    Sprite * s2 =Sprite::create();

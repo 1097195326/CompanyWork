@@ -96,7 +96,7 @@ void Prop::gameLoop(float data)
             Enemy * enemy = *e_iter;
             if (enemy->isContainsPoint(getPropRect()))
             {
-                enemy->hurt(m_damage);
+                enemy->hurt(m_damage,3);
                 if (!m_buffIds.empty())
                 {
                     for (int i = 0; i < m_buffIds.size(); ++i)
@@ -115,8 +115,8 @@ void Prop::gameLoop(float data)
 }
 Rect Prop::getPropRect()
 {
-    return Rect(m_point.x ,//- m_effectArea * 0.5,
-                m_point.y ,// - m_effectArea * 0.5,
+    return Rect(m_point.x - m_effectArea * 0.5,
+                m_point.y - m_effectArea * 0.5,
                 m_effectArea,
                 m_effectArea);
 }

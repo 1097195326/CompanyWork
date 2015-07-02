@@ -150,7 +150,7 @@ void ScrollController::updateVelocity(float ox, float oy)
     }
     m_isMoving = false;
     M_Vec2f m = M_Vec2f(ox,oy);
-    m.mult(50);
+    m.mult(100);
     m_velocity.add(m);
 }
 void ScrollController::moveToOffSet(float ox, float oy)

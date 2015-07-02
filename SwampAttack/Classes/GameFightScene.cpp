@@ -124,7 +124,9 @@ void GameFightScene::updateData()
     if (_G_D->isOver())
     {
         log("game is over");
+        _G_D->stopGame();
         shopGameActions();
+        
         
         if (_G_D->getOverStatus() == o_win)
         {

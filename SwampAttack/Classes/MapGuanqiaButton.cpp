@@ -28,13 +28,17 @@ m_index(index)
     GuanqiaModel * guanQia = GuanQiaManager::getInstance()->getGuanqiaById(m_guanqiaId);
     setSubject(guanQia);
     
-    m_menuItem = MenuItemImage::create(ImagePath("map_button.png"),
-                                       ImagePath("map_button.png"),
-                                       CC_CALLBACK_1(MapGuanqiaButton::pressGuanqiaButtonFunc, this));
+//    m_menuItem = MenuItemImage::create(ImagePath("map_button.png"),
+//                                       ImagePath("map_button.png"),
+//                                       CC_CALLBACK_1(MapGuanqiaButton::pressGuanqiaButtonFunc, this));
+    m_menuItem = new GameSprite(ImagePath("map_button.png"));
+    m_menuItem->m_touchMeCall =CC_CALLBACK_2(MapGuanqiaButton::pressGuanqiaButtonFunc, this);
+    m_menuItem->autorelease();
     m_menuItem->setPosition(guanQia->getGuanqiaPoint());
-    Menu * buttonMenu = Menu::create(m_menuItem, NULL);
-    buttonMenu->setPosition(Point::ZERO);
-    addChild(buttonMenu);
+    addChild(m_menuItem);
+//    Menu * buttonMenu = Menu::create(m_menuItem, NULL);
+//    buttonMenu->setPosition(Point::ZERO);
+//    addChild(buttonMenu);
     
     Sprite * label = Sprite::create(ImagePath(StringUtils::format("map_label%d.png",m_index)));
     label->setPosition(guanQia->getGuanqiaPoint() + Vec2(0, 6));
@@ -59,7 +63,7 @@ void MapGuanqiaButton::updateData()
 {
     
 }
-void MapGuanqiaButton::pressGuanqiaButtonFunc(cocos2d::Ref *pSender)
+void MapGuanqiaButton::pressGuanqiaButtonFunc(Touch * touch, Event * event)
 {
     log("enter guan qia  id : %s",m_guanqiaId.c_str());
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());

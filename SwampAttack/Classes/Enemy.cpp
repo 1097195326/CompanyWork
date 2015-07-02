@@ -158,6 +158,10 @@ void Enemy::hurt(int damage,int index)
     {
         return;
     }
+    if (m_point.x > m_visibleOrigin.x + m_visibleSize.width + 30)
+    {
+        return;
+    }
     m_health = m_health - damage;
     if (m_health <= 0)
     {
@@ -192,6 +196,10 @@ void Enemy::hurt(int damage,int index)
 void Enemy::hurt(int damage)
 {
     if (isDieing() || isCanDelete())
+    {
+        return;
+    }
+    if (m_point.x > m_visibleOrigin.x + m_visibleSize.width+ 30)
     {
         return;
     }
@@ -300,7 +308,7 @@ void Enemy::attackCall()
 {
     switch (m_attackType) {
         case 1:     // 陆地 近程
-//            House::getInstance()->hurt(m_damage);
+            House::getInstance()->hurt(m_damage);
             break;
         case 2:     // 陆地 远程
         {
