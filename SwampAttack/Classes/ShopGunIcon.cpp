@@ -23,6 +23,7 @@ ShopGunIcon::ShopGunIcon(int index):m_gun(NULL)
         m_iconBg = Sprite::create(ImagePath("fight_gun_blueBg.png"));
     }
     addChild(m_iconBg);
+    m_iconBg->setScale(0.65);
     
     m_icon = Sprite::create();
     addChild(m_icon);
@@ -61,13 +62,13 @@ void ShopGunIcon::reSetIcon(Gun *gun)
     if (!m_gun->isDefaultGun())
     {
         Sprite * noIcon = Sprite::create(ImagePath("shop_No_icon.png"));
-        noIcon->setPosition(Vec2(m_iconBg->getContentSize().width * 0.23, m_iconBg->getContentSize().height * 0.33));
+        noIcon->setPosition(Vec2(m_iconBg->getContentSize().width * 0.23, m_iconBg->getContentSize().height * 0.25));
         m_icon->addChild(noIcon);
         
         m_bullets = Label::createWithTTF("", "fonts/Arial Black.ttf", 17);
         m_icon->addChild(m_bullets);
         m_bullets->setString(StringUtils::format("%d",m_gun->getTotalBulletNum()));
-        m_bullets->setPosition(Vec2(m_iconBg->getContentSize().width * 0.2, -m_iconBg->getContentSize().height * 0.3));
+        m_bullets->setPosition(Vec2(m_iconBg->getContentSize().width * 0.15, -m_iconBg->getContentSize().height * 0.2));
         m_bullets->enableOutline(Color4B(0, 0, 0, 255),2);
     }
 }

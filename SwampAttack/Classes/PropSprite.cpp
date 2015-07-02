@@ -68,7 +68,7 @@ void PropSprite::propArrveCall(Node * pSender)
     m_prop->arrveCall();
     Sprite * sprite = (Sprite *)pSender;
     sprite->stopAllActions();
-//    sprite->removeFromParentAndCleanup(true);
+    sprite->removeFromParentAndCleanup(true);
 }
 void PropSprite::propThrowCall(Node * pSender)
 {

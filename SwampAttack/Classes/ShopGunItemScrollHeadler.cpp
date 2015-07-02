@@ -59,13 +59,12 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
     iconBg->m_touchMeCall = CC_CALLBACK_2(ShopGunItemScrollHeadler::showDiscView, this);
     
     //        Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
-    iconBg->setPosition(iconBg->getContentSize().width * 0.75
-                        - itemBgSize.width * 0.5,
+    iconBg->setPosition(- itemBgSize.width * 0.35,
                         0);
     addChild(iconBg);
     
     Sprite * biaoSign = Sprite::create(ImagePath("shop_icon_sign.png"));
-    biaoSign->setPosition(- itemBgSize.width * 0.38,
+    biaoSign->setPosition(- itemBgSize.width * 0.41,
                           itemBgSize.height * 0.2);
     addChild(biaoSign);
     
@@ -73,15 +72,14 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
     string gunIconStr = StringUtils::format("%s_icon.png",gunModelId.c_str());
     string gunNameStr = StringUtils::format("%s_name.png",gunModelId.c_str());
     Sprite * icon = Sprite::create(ImagePath(gunIconStr));
-    icon->setPosition(iconBg->getContentSize().width * 0.75
-                      - itemBgSize.width * 0.5,
+    icon->setPosition(- itemBgSize.width * 0.35,
                       0);
     addChild(icon);
     
     Sprite * iconName = Sprite::create(ImagePath(gunNameStr));
     iconName->setPosition(-itemBgSize.width * 0.25
                           + iconName->getContentSize().width * 1,
-                          itemBgSize.height * 0.18);
+                          itemBgSize.height * 0.2);
     addChild(iconName);
     
     m_upGradeButton = new GameSprite(ImagePath("shopItemButtonNormal.png"));
@@ -98,13 +96,13 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
     m_buyButton->autorelease();
     addChild(m_buyButton);
     
-    m_bulletsLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 20);
+    m_bulletsLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 25);
     m_bulletsLabel->enableOutline(Color4B(0, 0, 0, 255),2);
-    m_bulletsLabel->setPosition(- itemBgSize.width * 0.3,
+    m_bulletsLabel->setPosition(- itemBgSize.width * 0.32,
                                 -itemBgSize.height * 0.25);
     addChild(m_bulletsLabel,1);
     Sprite * bulletIcon = Sprite::create(ImagePath("shop_bullet_icon.png"));
-    bulletIcon->setPosition(- itemBgSize.width * 0.26,
+    bulletIcon->setPosition(- itemBgSize.width * 0.27,
                             -itemBgSize.height * 0.25);
     addChild(bulletIcon,1);
     
@@ -113,9 +111,9 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
                         -itemBgSize.height * 0.23);
     jinbi1->setScale(0.8);
     addChild(jinbi1,1);
-    m_buyLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 20);
-    m_buyLabel->enableOutline(Color4B(0, 0, 0, 255),2);
-    m_buyLabel->setPosition(itemBgSize.width * 0.01,
+    m_buyLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 30);
+    m_buyLabel->enableOutline(Color4B(0, 0, 0, 255),3);
+    m_buyLabel->setPosition(-itemBgSize.width * 0.01,
                             -itemBgSize.height * 0.23);
     addChild(m_buyLabel,1);
     Sprite * buyLabel = Sprite::create(ImagePath("shopItemLabel2.png"));
@@ -142,23 +140,19 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
     
     m_progressBar = new ProgressBar("shopItemTiao1.png","shopItemTiao2.png");
     m_progressBar->setBarRight();
-    m_progressBar->setPosition(itemBgSize.width * 0.29,
+    m_progressBar->setPosition(itemBgSize.width * 0.32,
                                itemBgSize.height * 0.18);
     addChild(m_progressBar);
     
-    Sprite * levelBg = Sprite::create(ImagePath("shopItemLevelBg.png"));
-    levelBg->setPosition(itemBgSize.width * 0.13,
-                         itemBgSize.height * 0.18);
-    addChild(levelBg);
-    m_levelUpLabel = Label::createWithTTF("LV", "fonts/Arial Black.ttf", 20);
-    m_levelUpLabel->enableOutline(Color4B(0, 0, 0, 255),2);
-    m_levelUpLabel->setPosition(levelBg->getContentSize().width * 0.5,
-                                levelBg->getContentSize().height * 0.5);
-    levelBg->addChild(m_levelUpLabel,1);
+    m_levelUpLabel = Label::createWithTTF("LV", "fonts/Arial Black.ttf", 24);
+    m_levelUpLabel->enableOutline(Color4B(0, 0, 0, 255),3);
+    m_levelUpLabel->setPosition(itemBgSize.width * 0.16,
+                                itemBgSize.height * 0.18);
+    addChild(m_levelUpLabel,1);
     
-    m_upgradeLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 20);
-    m_upgradeLabel->enableOutline(Color4B(0, 0, 0, 255),2);
-    m_upgradeLabel->setPosition(itemBgSize.width * 0.33,
+    m_upgradeLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 30);
+    m_upgradeLabel->enableOutline(Color4B(0, 0, 0, 255),3);
+    m_upgradeLabel->setPosition(itemBgSize.width * 0.3,
                                 -itemBgSize.height * 0.23);
     addChild(m_upgradeLabel,1);
     
@@ -181,8 +175,7 @@ void ShopGunItemScrollHeadler::initLockGunView()
     string gunIconStr = StringUtils::format("%s_grayicon.png",gunModelId.c_str());
     string gunNameStr = StringUtils::format("%s_name.png",gunModelId.c_str());
     Sprite * icon = Sprite::create(ImagePath(gunIconStr));
-    icon->setPosition(icon->getContentSize().width * 0.75
-                      - itemBgSize.width * 0.5,
+    icon->setPosition(- itemBgSize.width * 0.35,
                       0);
     addChild(icon);
     Sprite * lockIcon = Sprite::create(ImagePath("shopItemLockIcon.png"));
@@ -193,7 +186,7 @@ void ShopGunItemScrollHeadler::initLockGunView()
     Sprite * iconName = Sprite::create(ImagePath(gunNameStr));
     iconName->setPosition(-itemBgSize.width * 0.25
                           + iconName->getContentSize().width * 1,
-                          itemBgSize.height * 0.18);
+                          itemBgSize.height * 0.2);
     addChild(iconName);
     
     m_unLockButton = new GameSprite(ImagePath("shopItemButonUnclock.png"));

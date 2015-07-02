@@ -18,6 +18,7 @@ ShopPropIcon::ShopPropIcon(int index):m_prop(NULL)
     m_iconBg = Sprite::create(ImagePath("fight_gun_blueBg.png"));
     
     addChild(m_iconBg);
+    m_iconBg->setScale(0.65);
     
     m_icon = Sprite::create();
     addChild(m_icon);
@@ -48,7 +49,7 @@ void ShopPropIcon::reSetIcon(Prop * prop)
     setSubject(m_prop);
     
     Sprite * noIcon = Sprite::create(ImagePath("shop_No_icon.png"));
-    noIcon->setPosition(Vec2(m_iconBg->getContentSize().width * 0.23, m_iconBg->getContentSize().height * 0.33));
+    noIcon->setPosition(Vec2(m_iconBg->getContentSize().width * 0.23, m_iconBg->getContentSize().height * 0.25));
     m_icon->addChild(noIcon);
     
     string gunModelId = m_prop->getModelId();
@@ -58,7 +59,7 @@ void ShopPropIcon::reSetIcon(Prop * prop)
     m_num = Label::createWithTTF("", "fonts/Arial Black.ttf", 18);
     m_icon->addChild(m_num);
     m_num->setString(StringUtils::format("%d",m_prop->getNum()));
-    m_num->setPosition(Vec2(m_iconBg->getContentSize().width * 0.2, -m_iconBg->getContentSize().height * 0.3));
+    m_num->setPosition(Vec2(m_iconBg->getContentSize().width * 0.15, -m_iconBg->getContentSize().height * 0.2));
     m_num->enableOutline(Color4B(0, 0, 0, 255),2);
 }
 bool ShopPropIcon::isHaveProp()
