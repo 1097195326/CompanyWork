@@ -14,7 +14,7 @@ GameUser::GameUser():m_time(0)
     if (!m_user->getBoolForKey("first")) {
         setBoolForKey("first", true);
         
-        setUserGold(90000);
+        setUserGold(1000);
         m_userHealth = 5;
         setUserHealth(m_userHealth);
         unlockGuanqia("400001_1");

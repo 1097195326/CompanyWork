@@ -50,21 +50,12 @@ bool GameShopScene::init()
     {
         return false;
     }
-//    MenuItemImage * homeButton = MenuItemImage::create(ImagePath("shopHomeButton.png"),
-//                                                       ImagePath("shopHomeButton.png"),
-//                                                       CC_CALLBACK_1(GameShopScene::homeButtonFunc, this));
-//    homeButton->setPosition(m_visibleOrigin.x + homeButton->getContentSize().width * 0.5,
-//                            m_visibleOrigin.y + m_visibleSize.height - homeButton->getContentSize().height * 0.5);
-//    Menu * buttonMenu = Menu::create(homeButton,
-//                                     NULL);
-//    buttonMenu->setPosition(Point::ZERO);
-//    addChild(buttonMenu);
     
     initShopView();
     initScrollView();
 
-//    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
-//    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
+    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
     
     _G_U->attach(this);
     return true;

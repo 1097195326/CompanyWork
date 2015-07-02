@@ -300,7 +300,7 @@ void Enemy::attackCall()
 {
     switch (m_attackType) {
         case 1:     // 陆地 近程
-            House::getInstance()->hurt(m_damage);
+//            House::getInstance()->hurt(m_damage);
             break;
         case 2:     // 陆地 远程
         {

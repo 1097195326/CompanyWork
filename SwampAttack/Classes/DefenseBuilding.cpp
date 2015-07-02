@@ -48,8 +48,6 @@ m_index(0.0)
     
     m_isUnlock = _G_U->isUnlockBuilding(m_id);
     
-    m_state = d_wait;
-    
 }
 DefenseBuilding::~DefenseBuilding()
 {

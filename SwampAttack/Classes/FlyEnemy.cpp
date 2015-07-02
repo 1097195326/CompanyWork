@@ -46,7 +46,7 @@ void FlyEnemy::gameLoop(float data)
     {
         dlayToAttack += data;
     }
-    if (!canMoveBack && m_point.x <= m_visibleOrigin.x + m_visibleSize.width * 0.3) {
+    if (!canMoveBack && m_point.x <= m_targetPoint.x + m_range) {
         canMoveBack = true;
     }
     if (m_isShowHurt)

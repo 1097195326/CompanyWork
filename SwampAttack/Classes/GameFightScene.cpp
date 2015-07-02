@@ -101,7 +101,7 @@ bool GameFightScene::init()
     addChild(goldIcon);
     
     string guanqiaName = GuanQiaManager::getInstance()->getCurrentGuanqia()->getGuanqiaName();
-    Label * showLabel = Label::createWithTTF(guanqiaName, "fonts/mimi.ttf", 30);
+    Label * showLabel = Label::createWithTTF(guanqiaName, "fonts/mimi.ttf", 40);
     showLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                            m_visibleOrigin.y + m_visibleSize.height * 0.7);
     addChild(showLabel);
@@ -109,7 +109,7 @@ bool GameFightScene::init()
                                           FadeOut::create(0.3),
                                           NULL));
     
-    log("fight scene init");
+//    log("fight scene init");
     _G_D->initGameView();
     
     _G_D->startGame();

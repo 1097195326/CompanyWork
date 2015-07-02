@@ -75,7 +75,7 @@ void GameDirector::gameLoop(float data)
     DefenseBuildingManager::getInstance()->gameLoop(data);
     PropManager::getInstance()->gameLoop(data);
     
-    checkCross();
+//    checkCross();
     if (EnemyManager::getInstance()->isOver() || House::getInstance()->isOver()) {
         clearStatus();
         m_status |= s_over;
@@ -138,9 +138,6 @@ void GameDirector::checkCross()
                             case 2:
                             case 3:
                                 building->hurtEnemy(enemy);
-//                                 building->fire(Vec2(enemy->getPosition().x,
-//                                                     enemy->getPosition().y + enemy->getHeight() * 0.5));
-                                
                                 break;
                             default:
                                 break;

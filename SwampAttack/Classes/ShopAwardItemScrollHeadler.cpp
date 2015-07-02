@@ -42,9 +42,11 @@ void ShopAwardItemScrollHeadler::initAwardView()
     itemBg->m_touchMeCall = CC_CALLBACK_2(ShopAwardItemScrollHeadler::buy, this);
     addChild(itemBg);
     
+    Size itemBgSize = itemBg->getContentSize();
+    
     Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBlueBg.png"));
     iconBg->setPosition(iconBg->getContentSize().width * 0.75
-                        - itemBg->getContentSize().width * 0.5,
+                        - itemBgSize.width * 0.5,
                         0);
     addChild(iconBg);
     
@@ -52,31 +54,31 @@ void ShopAwardItemScrollHeadler::initAwardView()
     string specialIconStr = StringUtils::format("%s_icon.png",specialModelId.c_str());
     Sprite * icon = Sprite::create(ImagePath(specialIconStr));
     icon->setPosition(iconBg->getContentSize().width * 0.75
-                      - itemBg->getContentSize().width * 0.5,
+                      - itemBgSize.width * 0.5,
                       0);
     addChild(icon);
 //    log("name:%s",specialobject->getName().c_str());
     Label * nameLabel = Label::createWithTTF(specialobject->getName(), "fonts/mimi.ttf", 25);
-    nameLabel->setPosition(-itemBg->getContentSize().width * 0.08,
-                           itemBg->getContentSize().height * 0.18);
+    nameLabel->setPosition(-itemBgSize.width * 0.08,
+                           itemBgSize.height * 0.18);
 //    nameLabel->setColor(Color3B(0, 0, 0));
     addChild(nameLabel);
     
     Label * descLabel = Label::createWithTTF(specialobject->getDescription(), "fonts/mimi.ttf", 25);
-    descLabel->setPosition(-itemBg->getContentSize().width * 0.15
+    descLabel->setPosition(-itemBgSize.width * 0.15
                            + descLabel->getContentSize().width * 0.5,
-                           -itemBg->getContentSize().height * 0.1);
+                           -itemBgSize.height * 0.1);
 //    descLabel->setColor(Color3B(0, 0, 0));
     addChild(descLabel);
     
     Sprite * moneyBg = Sprite::create(ImagePath("shop_award_moneyBg.png"));
-    moneyBg->setPosition(itemBg->getContentSize().width * 0.48,
-                         -itemBg->getContentSize().height * 0.15);
+    moneyBg->setPosition(itemBgSize.width * 0.48,
+                         -itemBgSize.height * 0.15);
     addChild(moneyBg);
     string price = StringUtils::format("$%d",specialobject->getPrice());
     Label * moneyLabel = Label::createWithTTF(price, "fonts/Arial Black.ttf", 25);
-    moneyLabel->setPosition(itemBg->getContentSize().width * 0.48,
-                            -itemBg->getContentSize().height * 0.15);
+    moneyLabel->setPosition(itemBgSize.width * 0.48,
+                            -itemBgSize.height * 0.15);
     moneyLabel->enableOutline(Color4B(0, 0, 0, 255),3);
     addChild(moneyLabel);
     

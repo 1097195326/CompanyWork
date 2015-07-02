@@ -7,10 +7,10 @@
 //
 
 #include "DefenseBuilding3.h"
-#include "House.h"
 #include "DefenseBuilding3_Sprite.h"
 #include "BulletManager.h"
-#include "Enemy.h"
+#include "EnemyManager.h"
+
 
 DefenseBuilding3::DefenseBuilding3(Json::Value data):DefenseBuilding(data)
 {
@@ -23,6 +23,7 @@ void DefenseBuilding3::setView()
     }
     DefenseBuildingSprite * sprite = new DefenseBuilding3_Sprite(this);
     sprite->autorelease();
+    m_state = d_wait;
 }
 
 void DefenseBuilding3::gameLoop(float data)
@@ -40,6 +41,28 @@ void DefenseBuilding3::gameLoop(float data)
             {
                 m_index = 0;
                 m_state = d_canHurt;
+            }
+        }
+    }
+    EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
+    if (!enemyGroup) {
+        return;
+    }
+    std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
+    
+    if (!enemyData.empty())
+    {
+        std::list<Enemy*>::iterator e_iter;
+        
+        for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
+        {
+            Enemy * enemy = *e_iter;
+            
+            if (isCanHurt() &&
+                isInRange(enemy->getPosition()) &&
+                enemy->getActionType() == 1)
+            {
+                hurtEnemy(enemy);
             }
         }
     }
