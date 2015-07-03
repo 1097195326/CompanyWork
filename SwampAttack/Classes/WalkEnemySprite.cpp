@@ -292,6 +292,12 @@ void WalkEnemySprite::die()
     guaiwuSprite->stopAllActions();
     guaiwuSprite->runAction(m_map["dieAction"]);
     
+    if (isHaveArmor) {
+        isHaveArmor = false;
+        armorSprite->stopAllActions();
+        armorSprite->removeFromParentAndCleanup(true);
+    }
+    
     string name = m_model->getModelId();
     string yinxiao = StringUtils::format("%s_die.mp3",name.c_str());
     SimpleAudioEngine::getInstance()->playEffect(MusicPath(yinxiao).c_str());

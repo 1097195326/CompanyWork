@@ -67,7 +67,7 @@ void MapGuanqiaButton::pressGuanqiaButtonFunc(Touch * touch, Event * event)
 {
     log("enter guan qia  id : %s",m_guanqiaId.c_str());
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+//    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
     string musicName = StringUtils::format("sceneMusic%d.mp3",m_sceneIndex + 1);
     SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath(musicName)).c_str());
     

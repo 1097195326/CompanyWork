@@ -273,6 +273,7 @@ void ShopPropItemScrollHeadler::upGrade(Touch * touch, Event * event)
     {
         return;
     }
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
     bool sec = prop->addStrengthenLevel();
     if (sec)
@@ -294,6 +295,7 @@ void ShopPropItemScrollHeadler::unLock(Touch * touch, Event * event)
     {
         return;
     }
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
     bool sec = prop->unlockProp();
     if (sec)
@@ -312,6 +314,7 @@ void ShopPropItemScrollHeadler::buy(Touch * touch, Event * event)
     {
         return;
     }
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Prop * prop = PropManager::getInstance()->getPropByIndex(m_index);
     bool sec = prop->buyProp();
     if (sec)

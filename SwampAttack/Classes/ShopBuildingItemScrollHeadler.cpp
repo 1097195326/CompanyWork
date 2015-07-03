@@ -182,6 +182,7 @@ void ShopBuildingItemScrollHeadler::upGrade(Touch * touch, Event * event)
     {
         return;
     }
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     DefenseBuilding * building = DefenseBuildingManager::getInstance()->getBuildingByIndex(m_index);
     int upgradeGold = building->getStrengthGold();
     int userGold = _G_U->getUserGold();
@@ -208,6 +209,8 @@ void ShopBuildingItemScrollHeadler::unLock(Touch * touch, Event * event)
     int userGold = _G_U->getUserGold();
     if (userGold >= unlockGold)
     {
+        SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
+        
         userGold -= unlockGold;
         _G_U->setUserGold(userGold);
         m_shopScene->updateGoldView();

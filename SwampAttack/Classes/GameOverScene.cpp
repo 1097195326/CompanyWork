@@ -119,15 +119,18 @@ bool GameOverScene::init()
 }
 void GameOverScene::restartGame(cocos2d::Ref *pSender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
     Director::getInstance()->replaceScene(GameLoadingScene::scene(guanqia->getId()));
 }
 void GameOverScene::gotoMap(cocos2d::Ref *pSender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Director::getInstance()->replaceScene(GameMapScene::scene());
 }
 void GameOverScene::nextGuanqia(cocos2d::Ref *pSender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
     GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
     Director::getInstance()->replaceScene(GameLoadingScene::scene(nextGuanqia->getId()));

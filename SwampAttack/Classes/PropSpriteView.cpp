@@ -109,8 +109,18 @@ void PropSpriteView::touchMove(cocos2d::Touch *touch, cocos2d::Event *event)
 }
 void PropSpriteView::touchEnd(Touch *touch, Event *event)
 {
-    m_propIcon->moveEnd();
-    m_propIcon = NULL;
+    Vec2 p = m_blueBg->convertToNodeSpace(touch->getLocation());
+    Rect r = Rect(0, 0, m_blueBg->getContentSize().width ,m_blueBg->getContentSize().height);
+    if (r.containsPoint(p))
+    {
+        m_propIcon->removeFromParentAndCleanup(true);
+        m_propIcon = NULL;
+    }else
+    {
+        m_propIcon->moveEnd();
+        m_propIcon = NULL;
+    }
+    
 }
 void PropSpriteView::updateData()
 {

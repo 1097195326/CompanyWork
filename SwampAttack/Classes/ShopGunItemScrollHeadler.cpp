@@ -281,6 +281,7 @@ void ShopGunItemScrollHeadler::upGrade(Touch * touch, Event * event)
     {
         return;
     }
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
     bool sec = gun->addStrengthenLevel();
     if (sec)
@@ -302,6 +303,7 @@ void ShopGunItemScrollHeadler::unLock(Touch * touch, Event * event)
     {
         return;
     }
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
     bool sec = gun->unlockGun();
     if (sec)
@@ -320,6 +322,7 @@ void ShopGunItemScrollHeadler::buy(Touch * touch, Event * event)
     {
         return;
     }
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
     bool sec = gun->buyBullet();
     if (sec)

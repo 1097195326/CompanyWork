@@ -94,12 +94,14 @@ void GamePauseScene::setFightLayer(GameFightScene *layer)
 }
 void GamePauseScene::continueGame(cocos2d::Ref *pSender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     m_fightLayer->resumeGameActions();
     removeFromParentAndCleanup(true);
     _G_D->continueGame();
 }
 void GamePauseScene::restartGame(cocos2d::Ref *pSender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     SpriteFrameCache::getInstance()->removeSpriteFrames();
     Director::getInstance()->getTextureCache()->removeAllTextures();
     
@@ -110,6 +112,7 @@ void GamePauseScene::restartGame(cocos2d::Ref *pSender)
 }
 void GamePauseScene::gotoMap(cocos2d::Ref *pSender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     SpriteFrameCache::getInstance()->removeSpriteFrames();
     Director::getInstance()->getTextureCache()->removeAllTextures();
     

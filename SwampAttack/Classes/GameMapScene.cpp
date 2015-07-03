@@ -23,7 +23,7 @@ bool GameMapScene::init()
     auto spriteFrameCache = SpriteFrameCache::getInstance();
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("yinying.plist"));
     
-//    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("map_bg1.mp3")).c_str());
+    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
     
     MenuItem * houmItem = MenuItemImage::create(ImagePath("map_homeButton.png"),
                                                     ImagePath("map_homeButton.png"),
@@ -98,10 +98,12 @@ void GameMapScene::moveToEndCall()
 }
 void GameMapScene::homeButtonFuc(cocos2d::Ref *psender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Director::getInstance()->replaceScene(GameHomeScene::scene());
 }
 void GameMapScene::shopButtonFuc(cocos2d::Ref *psender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Director::getInstance()->replaceScene(GameShopScene::scene());
 }
 void GameMapScene::leftButtonFuc(cocos2d::Ref *psender)

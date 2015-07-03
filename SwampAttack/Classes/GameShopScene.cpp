@@ -54,7 +54,7 @@ bool GameShopScene::init()
     initShopView();
     initScrollView();
 
-    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+//    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
     SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
     
     _G_U->attach(this);
@@ -351,6 +351,7 @@ void GameShopScene::backButtonFunc(cocos2d::Ref *pSender)
 }
 void GameShopScene::healthPlusFunc(cocos2d::Ref *pSender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Node * pNode = (Node *)pSender;
     shopHealthShowLayer * layer = new shopHealthShowLayer(pNode->getPosition());
     layer->autorelease();
@@ -359,6 +360,7 @@ void GameShopScene::healthPlusFunc(cocos2d::Ref *pSender)
 }
 void GameShopScene::goldPlusFunc(cocos2d::Ref *pSender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Node * pNode = (Node *)pSender;
     ShopGoldShowLayer * layer = new ShopGoldShowLayer(pNode->getPosition());
     layer->autorelease();
@@ -368,6 +370,7 @@ void GameShopScene::goldPlusFunc(cocos2d::Ref *pSender)
 }
 void GameShopScene::expendPlusFunc(cocos2d::Ref *pSender)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Node * pNode = (Node *)pSender;
     ShopExpendShowLayer * layer = new ShopExpendShowLayer(pNode->getPosition());
     layer->autorelease();
