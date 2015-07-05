@@ -286,7 +286,7 @@ void ShopGunItemScrollHeadler::upGrade(Touch * touch, Event * event)
     bool sec = gun->addStrengthenLevel();
     if (sec)
     {
-        m_shopScene->updateGoldView();
+        m_shopScene->updateUserData();
         updateGunView();
         GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(gun->getModelId());
         showLayer->autorelease();
@@ -308,7 +308,7 @@ void ShopGunItemScrollHeadler::unLock(Touch * touch, Event * event)
     bool sec = gun->unlockGun();
     if (sec)
     {
-        m_shopScene->updateGoldView();
+        m_shopScene->updateUserData();
         initGunView();
     }else
     {
@@ -327,7 +327,7 @@ void ShopGunItemScrollHeadler::buy(Touch * touch, Event * event)
     bool sec = gun->buyBullet();
     if (sec)
     {
-        m_shopScene->updateGoldView();
+        m_shopScene->updateUserData();
         updateGunView();
     }else
     {

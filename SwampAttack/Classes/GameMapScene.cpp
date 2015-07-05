@@ -12,11 +12,9 @@
 #include "GameShopScene.h"
 #include "MapScrollHeadler.h"
 
-
-
 bool GameMapScene::init()
 {
-    if (!LayerColor::init())
+    if (!Layer::init())
     {
         return false;
     }
@@ -24,6 +22,7 @@ bool GameMapScene::init()
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("yinying.plist"));
     
     SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
+    
     
     MenuItem * houmItem = MenuItemImage::create(ImagePath("map_homeButton.png"),
                                                     ImagePath("map_homeButton.png"),
@@ -46,10 +45,10 @@ bool GameMapScene::init()
     m_rightItem->setPosition(m_visibleOrigin.x + m_visibleSize.width - 60,
                           m_visibleOrigin.y + 60);
     
-    
-    
-    
-    Menu * buttonMenu = Menu::create(houmItem,shopItem,m_leftItem,m_rightItem, NULL);
+    Menu * buttonMenu = Menu::create(houmItem,
+                                     shopItem,
+                                     m_leftItem,
+                                     m_rightItem, NULL);
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu,2);
     

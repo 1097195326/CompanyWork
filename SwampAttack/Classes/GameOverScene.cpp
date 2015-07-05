@@ -15,6 +15,9 @@
 #include "PropManager.h"
 #include "GunManager.h"
 
+#include "GameDirector.h"
+#include "GameUser.h"
+
 //#include "GameDirector.h"
 //#include "EnemyManager.h"
 //#include "GameLoading.h"
@@ -75,6 +78,22 @@ bool GameOverScene::init()
     MenuItemImage * restartButton = MenuItemImage::create(ImagePath("overScene_restart.png"),
                                                           ImagePath("overScene_restart.png"),
                                                           CC_CALLBACK_1( GameOverScene::restartGame, this));
+    
+    Label * goldLabel = Label::createWithTTF(StringUtils::format("%d",_G_D->getGoldNum()),
+                                             "fonts/Arial Black.ttf",
+                                             40);
+    goldLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                           m_visibleOrigin.y + m_visibleSize.height * 0.4);
+    addChild(goldLabel);
+    
+    Sprite * jinbiIcon = Sprite::create(ImagePath("jinbi_icon.png"));
+    jinbiIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.58,
+                           m_visibleOrigin.y + m_visibleSize.height * 0.4);
+    addChild(jinbiIcon);
+    
+    int userGold = _G_U->getUserGold() + _G_D->getGoldNum();
+    _G_U->setUserGold(userGold);
+    
     Menu * buttonMenu = NULL;
     if (m_overStatus == o_win)
     {
@@ -114,6 +133,7 @@ bool GameOverScene::init()
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu,200);
     
+    _G_D->resetGameData();
     
     return true;
 }

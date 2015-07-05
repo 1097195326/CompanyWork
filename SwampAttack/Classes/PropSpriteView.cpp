@@ -72,7 +72,7 @@ bool PropSpriteView::touchBegan(Touch *touch, Event *event)
     Rect r = Rect(0, 0, m_blueBg->getContentSize().width ,m_blueBg->getContentSize().height);
     if (r.containsPoint(p))
     {
-        if (!m_prop->useProp())
+        if (m_prop->getNum() <= 0)
         {
             return false;
         }

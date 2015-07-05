@@ -24,10 +24,6 @@
 #include "ShopBuildingItemScrollHeadler.h"
 #include "ShopAwardItemScrollHeadler.h"
 
-#include "ShopGoldShowLayer.h"
-#include "ShopExpendShowLayer.h"
-#include "ShopHealthShowLayer.h"
-
 //Scene * GameShopScene::scene()
 //{
 //    Scene * scene = Scene::create();
@@ -40,9 +36,8 @@ GameShopScene::~GameShopScene()
 {
 //    log("shop scene release");
     Director::getInstance()->getTextureCache()->removeUnusedTextures();
-    m_healthSprites.clear();
+
     m_scrollViews.clear();
-    _G_U->detach(this);
 }
 bool GameShopScene::init()
 {
@@ -57,7 +52,6 @@ bool GameShopScene::init()
 //    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
     SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
     
-    _G_U->attach(this);
     return true;
 }
 
@@ -67,83 +61,21 @@ void GameShopScene::initShopView()
     bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                     m_visibleOrigin.y + m_visibleSize.height * 0.5);
     addChild(bg);
-    Sprite * upBg = Sprite::create(ImagePath("shopUpBg.png"));
-    upBg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                      m_visibleOrigin.y + m_visibleSize.height - upBg->getContentSize().height * 0.5);
-    addChild(upBg);
-    
-    m_healthSprites.reserve(5);
-    for (int i = 0; i < 5; ++i) {
-        Sprite * xinBg = Sprite::create(ImagePath("shopXinBg.png"));
-        Sprite * xin = Sprite::create(ImagePath("shopXinIcon.png"));
-        
-        Vec2 xinP = Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.15 + xinBg->getContentSize().width * 0.8 * i,
-                         m_visibleOrigin.y + m_visibleSize.height * 0.935);
-        xinBg->setPosition(xinP);
-        xin->setPosition(xinP);
-        addChild(xinBg);
-        addChild(xin);
-        xin->setVisible(false);
-        m_healthSprites.push_back(xin);
-    }
-    MenuItemImage * healthPlusButton = MenuItemImage::create(ImagePath("shop_plusIcon.png"),
-                                                             ImagePath("shop_plusIcon.png"),
-                                                             CC_CALLBACK_1(GameShopScene::healthPlusFunc, this));
-    healthPlusButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.39,
-                                  m_visibleOrigin.y +  m_visibleSize.height * 0.935);
-    
-    m_goldLabel = Label::createWithTTF(StringUtils::format("%d",_G_U->getUserGold()),
-                                       "fonts/Arial Black.ttf",
-                                       35);
-    m_goldLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.57,
-                             m_visibleOrigin.y + m_visibleSize.height * 0.93);
-    m_goldLabel->enableOutline(Color4B(0, 0, 0, 255),2);
-    addChild(m_goldLabel);
-    Sprite * jinbiIcon = Sprite::create(ImagePath("jinbi_icon.png"));
-    jinbiIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.47,
-                           m_visibleOrigin.y + m_visibleSize.height * 0.935);
-    addChild(jinbiIcon);
-    
-    m_expendPropLabel = Label::createWithTTF(StringUtils::format("%d",_G_U->getExpendPropNum()),
-                                             "fonts/Arial Black.ttf",
-                                             35);
-    m_expendPropLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.77,
-                                   m_visibleOrigin.y + m_visibleSize.height * 0.93);
-    addChild(m_expendPropLabel);
-    Sprite * hpIcon = Sprite::create(ImagePath("hp1_icon.png"));
-    hpIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.72,
-                           m_visibleOrigin.y + m_visibleSize.height * 0.935);
-    hpIcon->setScale(0.5);
-    addChild(hpIcon);
-    
-    MenuItemImage * goldPlusButton = MenuItemImage::create(ImagePath("shop_plusIcon.png"),
-                                                           ImagePath("shop_plusIcon.png"),
-                                                           CC_CALLBACK_1(GameShopScene::goldPlusFunc, this));
-    goldPlusButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.66,
-                                m_visibleOrigin.y +  m_visibleSize.height * 0.935);
-    MenuItemImage * expendPlusButton = MenuItemImage::create(ImagePath("shop_plusIcon.png"),
-                                                           ImagePath("shop_plusIcon.png"),
-                                                           CC_CALLBACK_1(GameShopScene::expendPlusFunc, this));
-    expendPlusButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.85,
-                                m_visibleOrigin.y +  m_visibleSize.height * 0.935);
     
     setItemBgSprite();
     
     MenuItemImage * homeButton = MenuItemImage::create(ImagePath("shopHomeButton.png"),
                                                        ImagePath("shopHomeButton.png"),
                                                        CC_CALLBACK_1(GameShopScene::homeButtonFunc, this));
-    homeButton->setPosition(m_visibleOrigin.x + homeButton->getContentSize().width * 0.5,
-                            m_visibleOrigin.y + m_visibleSize.height - homeButton->getContentSize().height * 0.5);
+    homeButton->setPosition(m_visibleOrigin.x + 60,
+                            m_visibleOrigin.y + m_visibleSize.height - 60);
     MenuItemImage * backButton = MenuItemImage::create(ImagePath("shopBackButton.png"),
                                                        ImagePath("shopBackButton.png"),
                                                        CC_CALLBACK_1(GameShopScene::backButtonFunc, this));
-    backButton->setPosition(m_visibleOrigin.x + m_visibleSize.width - backButton->getContentSize().width * 0.5 ,
-                            m_visibleOrigin.y + m_visibleSize.height - backButton->getContentSize().height * 0.5);
+    backButton->setPosition(m_visibleOrigin.x + m_visibleSize.width - 60,
+                            m_visibleOrigin.y + m_visibleSize.height - 60);
     Menu * buttonMenu = Menu::create(homeButton,
                                      backButton,
-                                     healthPlusButton,
-                                     goldPlusButton,
-                                     expendPlusButton,
                                      NULL);
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu);
@@ -203,7 +135,7 @@ void GameShopScene::initScrollView()
     setSubject(menuView);
     menuView->setNormalSprite("shopItemNormal");
     menuView->setSelectSprite("shopItemSelect");
-    menuView->setIconSprite("shopItemIcon");
+//    menuView->setIconSprite("shopItemIcon");
     menuView->checkIndex();
     menuView->setPosition(bg2->getTextureRect().size.width * 0.5 -5,
                           bg2->getTextureRect().size.height * 0.8);
@@ -211,17 +143,6 @@ void GameShopScene::initScrollView()
 }
 void GameShopScene::updateData()
 {
-    int userHealth = _G_U->getUserHealth();
-    for (int i = 0; i < 5; ++i)
-    {
-        if (i < userHealth)
-        {
-            m_healthSprites[i]->setVisible(true);
-        }else
-        {
-            m_healthSprites[i]->setVisible(false);
-        }
-    }
     ShopSelectMenuView * menuView = (ShopSelectMenuView *) m_sub;
     int itemIndex = menuView->getSelectIndex();
     
@@ -313,11 +234,6 @@ void GameShopScene::visibelItemBg(int index)
             break;
     }
 }
-void GameShopScene::updateGoldView()
-{
-    m_goldLabel->setString(StringUtils::format("%d",_G_U->getUserGold()));
-    m_expendPropLabel->setString(StringUtils::format("%d",_G_U->getExpendPropNum()));
-}
 void GameShopScene::setItemBgSprite()
 {
     m_gunItembgSprite = Sprite::create();
@@ -348,32 +264,4 @@ void GameShopScene::backButtonFunc(cocos2d::Ref *pSender)
 {
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Director::getInstance()->replaceScene(GameMapScene::scene());
-}
-void GameShopScene::healthPlusFunc(cocos2d::Ref *pSender)
-{
-    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-    Node * pNode = (Node *)pSender;
-    shopHealthShowLayer * layer = new shopHealthShowLayer(pNode->getPosition());
-    layer->autorelease();
-    layer->setShopSceneLayer(this);
-    addChild(layer);
-}
-void GameShopScene::goldPlusFunc(cocos2d::Ref *pSender)
-{
-    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-    Node * pNode = (Node *)pSender;
-    ShopGoldShowLayer * layer = new ShopGoldShowLayer(pNode->getPosition());
-    layer->autorelease();
-    layer->setShopSceneLayer(this);
-    addChild(layer);
-    
-}
-void GameShopScene::expendPlusFunc(cocos2d::Ref *pSender)
-{
-    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-    Node * pNode = (Node *)pSender;
-    ShopExpendShowLayer * layer = new ShopExpendShowLayer(pNode->getPosition());
-    layer->autorelease();
-    layer->setShopSceneLayer(this);
-    addChild(layer);
 }

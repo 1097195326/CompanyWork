@@ -178,6 +178,7 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		D8B187641B49414300CB33CF /* UserDelegatLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8B187621B49414300CB33CF /* UserDelegatLayer.cpp */; };
 		D8D673A91B19DFD0004C463F /* GuanQiaManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D673A71B19DFD0004C463F /* GuanQiaManager.cpp */; };
 		D8D673AC1B19F7DD004C463F /* MapGuanqiaButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D673AA1B19F7DD004C463F /* MapGuanqiaButton.cpp */; };
 		D8D673AF1B1C098D004C463F /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D673AD1B1C098D004C463F /* GameOverScene.cpp */; };
@@ -501,6 +502,8 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		D8B187621B49414300CB33CF /* UserDelegatLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserDelegatLayer.cpp; sourceTree = "<group>"; };
+		D8B187631B49414300CB33CF /* UserDelegatLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDelegatLayer.h; sourceTree = "<group>"; };
 		D8D673A71B19DFD0004C463F /* GuanQiaManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuanQiaManager.cpp; sourceTree = "<group>"; };
 		D8D673A81B19DFD0004C463F /* GuanQiaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuanQiaManager.h; sourceTree = "<group>"; };
 		D8D673AA1B19F7DD004C463F /* MapGuanqiaButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapGuanqiaButton.cpp; sourceTree = "<group>"; };
@@ -741,6 +744,8 @@
 			children = (
 				8DC10AAE1AC3D629004F7DE2 /* GameFightScene.cpp */,
 				8DC10AAF1AC3D629004F7DE2 /* GameFightScene.h */,
+				D8B187621B49414300CB33CF /* UserDelegatLayer.cpp */,
+				D8B187631B49414300CB33CF /* UserDelegatLayer.h */,
 				8DE3E98C1AF8B5F900B1E8A6 /* GameMapScene.cpp */,
 				8DE3E98D1AF8B5F900B1E8A6 /* GameMapScene.h */,
 				8DD8C12A1AFCB15F00872AA2 /* GameShopScene.cpp */,
@@ -1283,6 +1288,7 @@
 				8DE207371B39508C0052E738 /* ShopExpendShowLayer.cpp in Sources */,
 				8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */,
 				8DD8C1241AFC5D2000872AA2 /* GameObserver.cpp in Sources */,
+				D8B187641B49414300CB33CF /* UserDelegatLayer.cpp in Sources */,
 				8DC352761ADB66E100E6A9C2 /* House.cpp in Sources */,
 				8DD5D0B71B144A1E00AA2A07 /* CrumpEnemySprite.cpp in Sources */,
 				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
@@ -1412,8 +1418,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hongxing zhang (237VJJ4EJS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hongxing zhang (237VJJ4EJS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1434,7 +1440,7 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "";
-				PROVISIONING_PROFILE = "d63a2b42-f25f-4a8e-954b-3a7c56b5564e";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1446,8 +1452,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hongxing zhang (ZAG6XVYQV4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hongxing zhang (ZAG6XVYQV4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1466,7 +1472,7 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "";
-				PROVISIONING_PROFILE = "ba2ec79b-3702-437d-859f-eea02f63bd61";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";

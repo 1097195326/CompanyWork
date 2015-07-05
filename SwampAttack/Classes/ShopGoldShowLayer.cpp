@@ -89,9 +89,9 @@ ShopGoldShowLayer::ShopGoldShowLayer(Vec2 position)
                                 NULL));
     
 }
-void ShopGoldShowLayer::setShopSceneLayer(GameShopScene * shopLayer)
+void ShopGoldShowLayer::setDelegateLayer(UserDelegateLayer * layer)
 {
-    m_shopLayer = shopLayer;
+    m_delegateLayer = layer;
 }
 void ShopGoldShowLayer::touchItemEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 {
@@ -100,7 +100,7 @@ void ShopGoldShowLayer::touchItemEnd(cocos2d::Touch *touch, cocos2d::Event *even
     MoneyObject * object = SpecialManager::getInstance()->getMoneyObjectByIndex(spr->getTag());
     SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectBySubId(object->getId(), object->getType());
     specialObject->buyEnd();
-    m_shopLayer->updateGoldView();
+    m_delegateLayer->updateUserData();
 }
 bool ShopGoldShowLayer::touchBegan(Touch *touch, Event *event)
 {

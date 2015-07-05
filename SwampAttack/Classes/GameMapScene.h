@@ -12,14 +12,18 @@
 #include "BaseCode.h"
 #include "GameScrollHeadlerTargetInterface.h"
 #include "GameHorizontalScrollHeadlerView.h"
+#include "UserDelegatLayer.h"
 
 
-class GameMapScene : public cocos2d::LayerColor,public GameScrollHeadlerTargetInterface
+class GameMapScene : public UserDelegateLayer,
+public GameScrollHeadlerTargetInterface
 {
 private:
     MenuItem * m_leftItem ;
     MenuItem * m_rightItem;
     GameHorizontalScrollHeadlerView * m_scrollView;
+    
+    
 public:
     CREATE_SCENE_FUNC(GameMapScene);
     CREATE_FUNC(GameMapScene);
@@ -27,6 +31,7 @@ public:
     virtual bool    init();
     
     GameScrollHeadler * getHeadlerByIndex(int index,int viewTag);
+    
     
     void    homeButtonFuc(Ref * psender);
     void    shopButtonFuc(Ref * psender);

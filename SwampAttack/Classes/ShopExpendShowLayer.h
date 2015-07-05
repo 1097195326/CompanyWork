@@ -10,7 +10,8 @@
 #define __SwampAttack__ShopExpendShowLayer__
 
 #include "BaseCode.h"
-#include "GameShopScene.h"
+#include "UserDelegatLayer.h"
+
 
 class ShopExpendShowLayer : public Layer {
 private:
@@ -19,12 +20,12 @@ private:
     Sprite * bg;
     LayerColor * layerColor;
     Vec2    m_point;
-    GameShopScene * m_shopLayer;
+    UserDelegateLayer * m_delegateLayer;
     
 public:
     ShopExpendShowLayer(Vec2 position);
     ~ShopExpendShowLayer();
-    void    setShopSceneLayer(GameShopScene * m_shopLayer);
+    void    setDelegateLayer(UserDelegateLayer * layer);
     
     
     bool    touchBegan(Touch * touch, Event * event);

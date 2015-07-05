@@ -18,7 +18,7 @@ public:
     int enemy_start_upline = 100;
     Vec2 enemy_start_buttomPoint = {m_visibleOrigin.x + m_visibleSize.width + 70, m_visibleOrigin.y + 50};
     int enemy_target_upline = 60;
-    Vec2 enemy_target_buttomPoint = {m_visibleOrigin.x + 250, m_visibleOrigin.y + 50};
+    Vec2 enemy_target_buttomPoint = {m_visibleOrigin.x + 255, m_visibleOrigin.y + 50};
     
     int flyEnemy_start_upline = 100;
     Vec2 flyEnemy_start_buttomPoint = {m_visibleOrigin.x + m_visibleSize.width + 70, m_visibleOrigin.y + 250};
@@ -38,7 +38,7 @@ public:
     Vec2 fightScene_zhalan_point2 = {m_visibleOrigin.x + 340,m_visibleOrigin.y + 150};
     float fightScene_zhalan_line = m_visibleOrigin.x + 330;
     
-    Vec2 fightScene_HouseSprite_Position = {m_visibleOrigin.x + 150 ,m_visibleOrigin.y + 240};
+    Vec2 fightScene_HouseSprite_Position = {m_visibleOrigin.x + 155 ,m_visibleOrigin.y + 260};
     Vec2 fightScene_HouseBar_Position = {m_visibleOrigin.x + 300 ,m_visibleOrigin.y + m_visibleSize.height - 50};
     Vec2 fightScene_Gold_Position = {m_visibleOrigin.x + 40 ,m_visibleOrigin.y + m_visibleSize.height - 130};
     Vec2 fightScene_EnemyBar_Position = {m_visibleOrigin.x + m_visibleSize.width - 230 , m_visibleOrigin.y + m_visibleSize.height - 50};

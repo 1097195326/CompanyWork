@@ -278,7 +278,7 @@ void ShopPropItemScrollHeadler::upGrade(Touch * touch, Event * event)
     bool sec = prop->addStrengthenLevel();
     if (sec)
     {
-        m_shopScene->updateGoldView();
+        m_shopScene->updateUserData();
         updateDaojuView();
         GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(prop->getModelId());
         showLayer->autorelease();
@@ -300,7 +300,7 @@ void ShopPropItemScrollHeadler::unLock(Touch * touch, Event * event)
     bool sec = prop->unlockProp();
     if (sec)
     {
-        m_shopScene->updateGoldView();
+        m_shopScene->updateUserData();
         initDaojuView();
     }else
     {
@@ -319,7 +319,7 @@ void ShopPropItemScrollHeadler::buy(Touch * touch, Event * event)
     bool sec = prop->buyProp();
     if (sec)
     {
-        m_shopScene->updateGoldView();
+        m_shopScene->updateUserData();
         updateDaojuView();
     }else
     {

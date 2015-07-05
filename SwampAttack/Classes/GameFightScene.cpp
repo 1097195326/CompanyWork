@@ -69,6 +69,11 @@ bool GameFightScene::init()
     bgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                                m_visibleOrigin.y + m_visibleSize.height * 0.5));
     
+    Sprite * fgSprite = Sprite::create(ImagePath("scene1_Fg.png"));
+    addChild(fgSprite,640);
+    fgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                               m_visibleOrigin.y + fgSprite->getContentSize().height * 0.5));
+    
     
     m_listener = EventListenerTouchOneByOne::create();
     m_listener->setSwallowTouches(true);
@@ -151,7 +156,6 @@ void GameFightScene::resumeGameActions()
 }
 void GameFightScene::showOverLayer()
 {
-    _G_D->resetGameData();
     RenderTexture * rt = getFightSceneTex();
     GameOverScene * overScene = new GameOverScene(_G_D->getOverStatus(),rt);
     overScene->init();

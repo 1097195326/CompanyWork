@@ -33,11 +33,16 @@ void ShopSelectMenuView::setNormalSprite(std::string name)
 //        Sprite * s = Sprite::create(ImagePath("shopItemNormal.png"));
         s->autorelease();
         s->setCanSwallowTouches(true);
-        s->setPosition(i * 205 - 310, 30);
+        s->setPosition(i * 205 - 310, 0);
         s->setTag(i);
 //        Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener->clone(), s);
         s->m_touchMeCall = CC_CALLBACK_2(ShopSelectMenuView::touchEnd, this);
         addChild(s,1);
+        Size size = s->getContentSize();
+        Sprite * s_i = Sprite::create(ImagePath(StringUtils::format("shopItemIcon%d.png",i+1)));
+        s_i->setPosition(size.width * 0.5,size.height * 0.5);
+        s->addChild(s_i);
+        
         m_normalSprites[i] = s;
     }
 }
@@ -47,6 +52,11 @@ void ShopSelectMenuView::setSelectSprite(std::string name)
     {
         Sprite * s = Sprite::create(ImagePath(StringUtils::format("%s%d.png",name.c_str(),i+1)));
         addChild(s,2);
+        Size size = s->getContentSize();
+        Sprite * s_i = Sprite::create(ImagePath(StringUtils::format("shopItemIcon%d.png",i+1)));
+        s_i->setPosition(size.width * 0.15 + size.width * 0.235 * i,size.height * 0.55);
+        s->addChild(s_i);
+        
         m_selectSprites[i] = s;
     }
 }

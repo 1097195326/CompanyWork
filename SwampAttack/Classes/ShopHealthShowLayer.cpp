@@ -140,9 +140,9 @@ void shopHealthShowLayer::update(float data)
         m_timeLabel->setString(StringUtils::format("%02d:%02d",fen,miao));
     }
 }
-void shopHealthShowLayer::setShopSceneLayer(GameShopScene * shopLayer)
+void shopHealthShowLayer::setDelegateLayer(UserDelegateLayer * layer)
 {
-    m_shopLayer = shopLayer;
+    m_delegateLayer = layer;
 }
 void shopHealthShowLayer::useToolToAddHealth(cocos2d::Touch *touch, cocos2d::Event *event)
 {
@@ -152,7 +152,7 @@ void shopHealthShowLayer::useToolToAddHealth(cocos2d::Touch *touch, cocos2d::Eve
     if (_G_U->useExpendProp())
     {
         _G_U->addHealthToFull();
-        m_shopLayer->updateGoldView();
+        m_delegateLayer->updateUserData();
     }
 }
 bool shopHealthShowLayer::touchBegan(Touch *touch, Event *event)

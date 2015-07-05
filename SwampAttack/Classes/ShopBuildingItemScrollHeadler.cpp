@@ -190,7 +190,7 @@ void ShopBuildingItemScrollHeadler::upGrade(Touch * touch, Event * event)
     {
         userGold -= upgradeGold;
         _G_U->setUserGold(userGold);
-        m_shopScene->updateGoldView();
+        m_shopScene->updateUserData();
         building->addStrengthenLevel();
         updateDefenseView();
         GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(building->getModelId());
@@ -213,7 +213,7 @@ void ShopBuildingItemScrollHeadler::unLock(Touch * touch, Event * event)
         
         userGold -= unlockGold;
         _G_U->setUserGold(userGold);
-        m_shopScene->updateGoldView();
+        m_shopScene->updateUserData();
         building->unlockBuilding();
         initDefenseView();
     }else

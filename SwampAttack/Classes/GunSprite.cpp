@@ -70,7 +70,7 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
     }
     
     updateData();
-    _G_V->addChild(this,5);
+    _G_V->addChild(this,640);
 }
 GunSprite::~GunSprite()
 {

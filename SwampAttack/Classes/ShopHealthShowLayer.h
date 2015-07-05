@@ -10,7 +10,7 @@
 #define __SwampAttack__ShopHealthShowLayer__
 
 #include "BaseCode.h"
-#include "GameShopScene.h"
+#include "UserDelegatLayer.h"
 #include "GameObserver.h"
 
 class shopHealthShowLayer : public Layer ,public GameObserver {
@@ -20,14 +20,14 @@ private:
     Sprite * bg;
     LayerColor * layerColor;
     Vec2    m_point;
-    GameShopScene * m_shopLayer;
+    UserDelegateLayer * m_delegateLayer;
     std::vector<Sprite *> m_healthSprites;
     Label * m_timeLabel;
     
 public:
     shopHealthShowLayer(Vec2 position);
     ~shopHealthShowLayer();
-    void    setShopSceneLayer(GameShopScene * m_shopLayer);
+    void    setDelegateLayer(UserDelegateLayer * layer);
     void    updateView();
     void    updateData();
     void    update(float data);

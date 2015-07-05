@@ -11,7 +11,8 @@
 GameSprite::GameSprite(std::string name):
 m_name(name),
 m_isTouchMe(false),
-m_isEnable(true)
+m_isEnable(true),
+m_isCanScale(true)
 {
 //    init();
     initWithFile(name);
@@ -35,6 +36,10 @@ GameSprite::~GameSprite()
 void GameSprite::setCanSwallowTouches(bool can)
 {
     m_listener->setSwallowTouches(can);
+}
+void GameSprite::setCanScale(bool canScale)
+{
+    m_isCanScale = canScale;
 }
 void GameSprite::setEnabled(bool enable,std::string name)
 {
@@ -61,6 +66,10 @@ bool GameSprite::touchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
     if (rect.containsPoint(point))
     {
 //        log("game sprite touch");
+        if (m_isCanScale)
+        {
+            runAction(ScaleTo::create(0.1, 0.95));
+        }
         m_isTouchMe = true;
         return true;
     }
@@ -72,6 +81,11 @@ void GameSprite::touchMoved(cocos2d::Touch *touch, cocos2d::Event *event)
 }
 void GameSprite::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 {
+    if (m_isCanScale)
+    {
+        runAction(ScaleTo::create(0.1, 1));
+    }
+    
     if (m_isTouchMe)
     {
         m_touchMeCall(touch,event);

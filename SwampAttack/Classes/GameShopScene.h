@@ -13,18 +13,16 @@
 #include "GameObserver.h"
 #include "GameScrollHeadlerTargetInterface.h"
 #include "GameVerticalScrollHeadlerView.h"
+#include "UserDelegatLayer.h"
 
 class Gun;
 
 
-class GameShopScene : public Layer, public GameObserver,public GameScrollHeadlerTargetInterface
+class GameShopScene : public UserDelegateLayer,public GameScrollHeadlerTargetInterface
 {
 private:
     std::vector< GameVerticalScrollHeadlerView * >m_scrollViews;
 //    GameVerticalScrollHeadlerView * m_scrollView;
-    std::vector<Sprite *> m_healthSprites;
-    Label   * m_goldLabel;
-    Label   * m_expendPropLabel;
     
 private:
     void    visibelItemBg(int index);
@@ -45,11 +43,7 @@ public:
     
     void    homeButtonFunc(Ref * pSender);
     void    backButtonFunc(Ref * pSender);
-    void    healthPlusFunc(Ref * pSender);
-    void    goldPlusFunc(Ref * pSender);
-    void    expendPlusFunc(Ref * pSender);
 public:
-    void    updateGoldView();
     
     Sprite  * m_gunItembgSprite;
     Sprite  * m_propItembgSprite;

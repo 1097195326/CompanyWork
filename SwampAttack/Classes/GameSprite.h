@@ -17,6 +17,7 @@ private:
     EventListenerTouchOneByOne * m_listener;
     bool    m_isTouchMe;
     bool    m_isEnable;
+    bool    m_isCanScale;
     std::string m_name;
 public:
     GameSprite(std::string name);
@@ -32,6 +33,7 @@ public:
     void    setEnabled(bool enable,std::string name = "");
     
     bool    isEnable();
+    void    setCanScale(bool canScale);
     
 };
 
