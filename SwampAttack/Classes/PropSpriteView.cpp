@@ -117,6 +117,7 @@ void PropSpriteView::touchEnd(Touch *touch, Event *event)
         m_propIcon = NULL;
     }else
     {
+        m_prop->useProp();
         m_propIcon->moveEnd();
         m_propIcon = NULL;
     }

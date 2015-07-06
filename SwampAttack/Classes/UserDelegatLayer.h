@@ -22,7 +22,7 @@ private:
     
 public:
     UserDelegateLayer();
-    ~UserDelegateLayer();
+    virtual ~UserDelegateLayer();
     
     
     void    healthPlusFunc(Ref * pSender);

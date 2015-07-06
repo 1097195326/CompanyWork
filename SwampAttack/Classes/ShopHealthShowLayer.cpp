@@ -106,7 +106,7 @@ void shopHealthShowLayer::updateView()
         hpIcon->setPosition(bgSize.width * 0.63,
                             bgSize.height * 0.3);
         bg->addChild(hpIcon);
-        Label * buttonTex = Label::createWithTTF("added  1x",
+        Label * buttonTex = Label::createWithTTF(StringUtils::format("added %dx",_G_U->getExpendPropNum()),
                                                  "fonts/Arial Black.ttf",
                                                  40);
         buttonTex->enableOutline(Color4B(0, 0, 0, 255),4);

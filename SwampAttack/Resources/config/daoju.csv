@@ -3,7 +3,6 @@ ItemId[string],ItemName[string],,ModelId[string],EffectArea[string],LimitLevel[s
 500001,tid#ItemName1,雷管,daoju1,50,10,,200,400001_1,20000,tid#ItemDescription1,对小范围内目标造成群体伤害。
 500002,tid#ItemName2,燃烧瓶,daoju2,50,10,600001,300,400001_2,40000,tid#ItemDescription2,使小范围内目标燃烧，持续造成伤害。
 500003,tid#ItemName3,地雷,daoju3,50,10,,400,400001_3,60000,tid#ItemDescription3,在地面随机产生3枚地雷。
-500004,tid#ItemName4,暴风雪,daoju4,1136,10,600002;600003,500,400001_4,80000,tid#ItemDescription4,寒冰刺骨的冷风，对全体怪物造成伤害并减速。
 500005,tid#ItemName5,陨石,daoju5,200,10,,600,400001_5,100000,tid#ItemDescription5,对较大范围内所有怪物造成较大伤害。
 500006,tid#ItemName6,原子弹,daoju6,1136,10,,700,400001_6,120000,tid#ItemDescription6,对所有怪物造成致命伤害。
 ,,,,,,,,,,,

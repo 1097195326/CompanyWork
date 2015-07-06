@@ -87,13 +87,14 @@ UserDelegateLayer::UserDelegateLayer()
     addChild(buttonMenu,2);
     
     updateData();
-    _G_U->attach(this);
+//    _G_U->attach(this);
+    setSubject(_G_U);
     
 }
 UserDelegateLayer::~UserDelegateLayer()
 {
     m_healthSprites.clear();
-    
+//    _G_U->detach(this);
 }
 void UserDelegateLayer::updateData()
 {
