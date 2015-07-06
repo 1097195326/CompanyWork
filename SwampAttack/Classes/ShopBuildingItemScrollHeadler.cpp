@@ -188,6 +188,7 @@ void ShopBuildingItemScrollHeadler::upGrade(Touch * touch, Event * event)
     int userGold = _G_U->getUserGold();
     if (userGold >= upgradeGold)
     {
+        SimpleAudioEngine::getInstance()->playEffect(MusicPath("propUpgrade.mp3").c_str());
         userGold -= upgradeGold;
         _G_U->setUserGold(userGold);
         m_shopScene->updateUserData();

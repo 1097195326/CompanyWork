@@ -135,9 +135,11 @@ void GameFightScene::updateData()
         
         if (_G_D->getOverStatus() == o_win)
         {
+            SimpleAudioEngine::getInstance()->playEffect(MusicPath("gameWin.mp3").c_str());
             showOverLayer();
         }else
         {
+            SimpleAudioEngine::getInstance()->playEffect(MusicPath("gamelose.mp3").c_str());
             RenderTexture * rt = getFightSceneTex();
             GameReliveLayer * reliveLayer = new GameReliveLayer(rt);
             reliveLayer->setFightLayer(this);

@@ -95,6 +95,7 @@ void ShopExpendShowLayer::setDelegateLayer(UserDelegateLayer * layer)
 }
 void ShopExpendShowLayer::touchItemEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buyGold.mp3").c_str());
     Sprite * spr = (Sprite *)event->getCurrentTarget();
     //    log("touch item %d",spr->getTag());
     ExpendObject * object = SpecialManager::getInstance()->getExpendObjectByIndex(spr->getTag());

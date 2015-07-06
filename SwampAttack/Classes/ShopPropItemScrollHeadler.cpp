@@ -278,6 +278,7 @@ void ShopPropItemScrollHeadler::upGrade(Touch * touch, Event * event)
     bool sec = prop->addStrengthenLevel();
     if (sec)
     {
+        SimpleAudioEngine::getInstance()->playEffect(MusicPath("propUpgrade.mp3").c_str());
         m_shopScene->updateUserData();
         updateDaojuView();
         GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(prop->getModelId());

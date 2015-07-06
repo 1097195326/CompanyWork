@@ -95,6 +95,7 @@ void ShopGoldShowLayer::setDelegateLayer(UserDelegateLayer * layer)
 }
 void ShopGoldShowLayer::touchItemEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 {
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buyGold.mp3").c_str());
     Sprite * spr = (Sprite *)event->getCurrentTarget();
 //    log("touch item %d",spr->getTag());
     MoneyObject * object = SpecialManager::getInstance()->getMoneyObjectByIndex(spr->getTag());

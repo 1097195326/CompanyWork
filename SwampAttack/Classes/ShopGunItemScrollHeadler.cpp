@@ -286,6 +286,7 @@ void ShopGunItemScrollHeadler::upGrade(Touch * touch, Event * event)
     bool sec = gun->addStrengthenLevel();
     if (sec)
     {
+        SimpleAudioEngine::getInstance()->playEffect(MusicPath("propUpgrade.mp3").c_str());
         m_shopScene->updateUserData();
         updateGunView();
         GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(gun->getModelId());

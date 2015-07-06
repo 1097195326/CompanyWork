@@ -45,17 +45,14 @@ void ShopAwardItemScrollHeadler::initAwardView()
     Size itemBgSize = itemBg->getContentSize();
     
     Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBlueBg.png"));
-    iconBg->setPosition(iconBg->getContentSize().width * 0.75
-                        - itemBgSize.width * 0.5,
+    iconBg->setPosition(- itemBgSize.width * 0.35,
                         0);
     addChild(iconBg);
     
     string specialModelId = specialobject->getModelId();
     string specialIconStr = StringUtils::format("%s_icon.png",specialModelId.c_str());
     Sprite * icon = Sprite::create(ImagePath(specialIconStr));
-    icon->setPosition(iconBg->getContentSize().width * 0.75
-                      - itemBgSize.width * 0.5,
-                      0);
+    icon->setPosition(- itemBgSize.width * 0.35, 0);
     addChild(icon);
 //    log("name:%s",specialobject->getName().c_str());
     Label * nameLabel = Label::createWithTTF(specialobject->getName(), "fonts/mimi.ttf", 25);
@@ -91,6 +88,7 @@ void ShopAwardItemScrollHeadler::updateAwardView()
 void ShopAwardItemScrollHeadler::buy(cocos2d::Touch *touch, cocos2d::Event *event)
 {
     log("buy ...");
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buyGold.mp3").c_str());
     SpecialObject * specialobject = SpecialManager::getInstance()->getSpecialObjectByIndex(m_index);
     
     specialobject->buyEnd();
