@@ -42,9 +42,9 @@ m_moveJuli(0.0f)
     
     Vec2 iconPoint = _G_M_M->fightScene_PropIcon_Position;
     float iconWidth = m_blueBg->getContentSize().width;
-    m_blueBg->setPosition(iconPoint - Vec2((iconWidth + 20) * (iconIndex - 1), 0) * m_iconScale);
-    propIcon->setPosition(iconPoint - Vec2((iconWidth + 20) * (iconIndex - 1), 0) * m_iconScale);
-    m_numLabel->setPosition(iconPoint - Vec2((iconWidth + 20) * (iconIndex - 1), 0) * m_iconScale + Vec2(20, -20));
+    m_blueBg->setPosition(iconPoint - Vec2((iconWidth + 0) * (iconIndex - 1), 0) * m_iconScale);
+    propIcon->setPosition(iconPoint - Vec2((iconWidth + 0) * (iconIndex - 1), 0) * m_iconScale);
+    m_numLabel->setPosition(iconPoint - Vec2((iconWidth + 0) * (iconIndex - 1), 0) * m_iconScale + Vec2(20, -20));
     
     m_listener = EventListenerTouchOneByOne::create();
     m_listener->setSwallowTouches(true);

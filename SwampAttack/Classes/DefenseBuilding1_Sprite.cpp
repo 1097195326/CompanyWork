@@ -7,6 +7,7 @@
 //
 
 #include "DefenseBuilding1_Sprite.h"
+#include "GameFightScene.h"
 
 DefenseBuilding1_Sprite::DefenseBuilding1_Sprite(DefenseBuilding * building):
 DefenseBuildingSprite(building)
@@ -19,10 +20,11 @@ DefenseBuildingSprite(building)
         
         Sprite * buildingS = Sprite::create(ImagePath("fight_building1.png"));
         addChild(buildingS);
-        buildingS->setPosition(m_visibleOrigin.x + 20,m_visibleOrigin.y + 240);
+        buildingS->setPosition(m_visibleOrigin.x + 20,m_visibleOrigin.y + 260);
         Sprite * buildingS2 = Sprite::create(ImagePath("fight_building1.png"));
         addChild(buildingS2);
-        buildingS2->setPosition(m_visibleOrigin.x + 90,m_visibleOrigin.y + 240);
+        buildingS2->setPosition(m_visibleOrigin.x + 90,m_visibleOrigin.y + 260);
+        _G_V->addChild(this,3);
     }
     
     

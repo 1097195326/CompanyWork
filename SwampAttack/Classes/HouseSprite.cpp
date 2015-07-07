@@ -25,7 +25,7 @@ HouseSprite::HouseSprite()
     m_healthBar->setBarRight();
     m_healthBar->setPosition(_G_M_M->fightScene_HouseBar_Position);
     log("house bar :%f",_G_M_M->fightScene_HouseBar_Position.y);
-    _G_V->addChild(this,1);
+    _G_V->addChild(this);
     scheduleUpdate();
 }
 HouseSprite::~HouseSprite()

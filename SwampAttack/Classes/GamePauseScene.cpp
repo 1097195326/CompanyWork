@@ -62,7 +62,7 @@ GamePauseScene::GamePauseScene(RenderTexture * rt)
     pauseSpr->setPosition(bgSize.width * 0.5,bgSize.height * 0.5);
     bg->addChild(pauseSpr);
     
-    int widthOffset = 100;
+    int widthOffset = 120;
     
     MenuItemImage * gotoMapButton = MenuItemImage::create(ImagePath("overScene_tomap.png"),
                                                           ImagePath("overScene_tomap.png"),

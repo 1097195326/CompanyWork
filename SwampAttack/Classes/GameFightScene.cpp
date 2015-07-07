@@ -69,10 +69,10 @@ bool GameFightScene::init()
     bgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                                m_visibleOrigin.y + m_visibleSize.height * 0.5));
     
-//    Sprite * fgSprite = Sprite::create(ImagePath("scene1_Fg.png"));
-//    addChild(fgSprite,640);
-//    fgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-//                               m_visibleOrigin.y + fgSprite->getContentSize().height * 0.5));
+    Sprite * fgSprite = Sprite::create(ImagePath("scene1_Fg.png"));
+    addChild(fgSprite,640);
+    fgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                               m_visibleOrigin.y + fgSprite->getContentSize().height * 0.5));
     
     
     m_listener = EventListenerTouchOneByOne::create();
@@ -117,7 +117,12 @@ bool GameFightScene::init()
 //    log("fight scene init");
     _G_D->initGameView();
     
+    Sprite * cheDeng = Sprite::create(ImagePath("house_deng.png"));
+    cheDeng->setPosition(_G_M_M->fightScene_HouseDeng_Position);
+    addChild(cheDeng,4);
+    
     _G_D->startGame();
+    
     setSubject(_G_D);
     
     

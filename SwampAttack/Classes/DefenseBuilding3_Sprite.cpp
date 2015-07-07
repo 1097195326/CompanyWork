@@ -9,7 +9,7 @@
 #include "DefenseBuilding3_Sprite.h"
 #include "BaseUtil.h"
 #include "GameMapManager.h"
-
+#include "GameFightScene.h"
 
 DefenseBuilding3_Sprite::DefenseBuilding3_Sprite(DefenseBuilding * building):
 DefenseBuildingSprite(building)
@@ -29,7 +29,7 @@ DefenseBuildingSprite(building)
     
     waitAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("monkey_wait" ,7));
     waitAction->retain();
-    
+    _G_V->addChild(this,1);
     scheduleUpdate();
 }
 DefenseBuilding3_Sprite::~DefenseBuilding3_Sprite()
