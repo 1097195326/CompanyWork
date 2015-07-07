@@ -33,7 +33,7 @@ ShopExpendShowLayer::ShopExpendShowLayer(Vec2 position)
     
     layerColor = LayerColor::create(Color4B(0, 0, 0, 0));
     addChild(layerColor);
-    layerColor->runAction(FadeTo::create(0.3, 120));
+    layerColor->runAction(FadeTo::create(0.3, 200));
     
     bg = Sprite::create(ImagePath("goldShowBg.png"));
     bg->setPosition(position);

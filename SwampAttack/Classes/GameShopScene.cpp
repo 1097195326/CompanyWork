@@ -111,14 +111,14 @@ void GameShopScene::initScrollView()
                 num = SpecialManager::getInstance()->getSpecialNum();
                 break;
         }
-        m_scrollViews[i] = new GameVerticalScrollHeadlerView(800,400,750,210,num);
-        m_scrollViews[i]->setScrollControllerContentWidth(800);
+        m_scrollViews[i] = new GameVerticalScrollHeadlerView(820,400,750,210,num);
+        m_scrollViews[i]->setScrollControllerContentWidth(820);
         m_scrollViews[i]->setScrollControllerContentHeight(210 * num);
         m_scrollViews[i]->setGetHeadlerTarget(this);
         m_scrollViews[i]->setTag(i);
         m_scrollViews[i]->initView();
         m_scrollViews[i]->autorelease();
-        m_scrollViews[i]->setPosition(bg2->getBoundingBox().origin.x, bg2->getBoundingBox().origin.y);
+        m_scrollViews[i]->setPosition(bg2->getBoundingBox().origin.x - 20, bg2->getBoundingBox().origin.y);
         bg2->addChild(m_scrollViews[i],2);
         m_scrollViews[i]->setScale(0.0001);
     }
@@ -181,41 +181,43 @@ void GameShopScene::updateData()
 }
 GameScrollHeadler * GameShopScene::getHeadlerByIndex(int index,int viewTag)
 {
+    Vec2 v_p;
+    v_p = Vec2(750 * 0.5, 0.0 - 210 * (index + 1) + 400 + 210 * 0.5);
+    GameScrollHeadler * r_headler = NULL;
+    
     switch (viewTag) {
         case 0:
         {
             ShopGunItemScrollHeadler * headler = new ShopGunItemScrollHeadler(index);
             headler->setGameShopScene(this);
-            headler->autorelease();
-            return headler;
+            r_headler = headler;
         }
             break;
         case 1:
         {
             ShopPropItemScrollHeadler * headler = new ShopPropItemScrollHeadler(index);
             headler->setGameShopScene(this);
-            headler->autorelease();
-            return headler;
+            r_headler = headler;
         }
             break;
         case 2:
         {
             ShopBuildingItemScrollHeadler * headler = new ShopBuildingItemScrollHeadler(index);
             headler->setGameShopScene(this);
-            headler->autorelease();
-            return headler;
+            r_headler = headler;
         }
             break;
         case 3:
         {
             ShopAwardItemScrollHeadler * headler = new ShopAwardItemScrollHeadler(index);
             headler->setGameShopScene(this);
-            headler->autorelease();
-            return headler;
+            r_headler = headler;
         }
             break;
     }
-    return NULL;
+    r_headler->autorelease();
+    r_headler->setPosition(v_p);
+    return r_headler;
 }
 void GameShopScene::visibelItemBg(int index)
 {
@@ -237,7 +239,7 @@ void GameShopScene::visibelItemBg(int index)
 void GameShopScene::setItemBgSprite()
 {
     m_gunItembgSprite = Sprite::create();
-    m_gunItembgSprite->setPosition(m_visibleOrigin.x + m_visibleSize.width - 60,
+    m_gunItembgSprite->setPosition(m_visibleOrigin.x + m_visibleSize.width - 65,
                                    m_visibleOrigin.y + m_visibleSize.height * 0.4);
     addChild(m_gunItembgSprite);
     
@@ -246,7 +248,7 @@ void GameShopScene::setItemBgSprite()
     m_gunItembgSprite->setVisible(false);
     //---
     m_propItembgSprite = Sprite::create();
-    m_propItembgSprite->setPosition(m_visibleOrigin.x + m_visibleSize.width - 60,
+    m_propItembgSprite->setPosition(m_visibleOrigin.x + m_visibleSize.width - 65,
                                    m_visibleOrigin.y + m_visibleSize.height * 0.5);
     addChild(m_propItembgSprite);
     

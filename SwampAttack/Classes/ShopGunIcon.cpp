@@ -62,7 +62,7 @@ void ShopGunIcon::reSetIcon(Gun *gun)
     if (!m_gun->isDefaultGun())
     {
         Sprite * noIcon = Sprite::create(ImagePath("shop_No_icon.png"));
-        noIcon->setPosition(Vec2(m_iconBg->getContentSize().width * 0.23, m_iconBg->getContentSize().height * 0.25));
+        noIcon->setPosition(Vec2(m_iconBg->getContentSize().width * 0.22, m_iconBg->getContentSize().height * 0.25));
         m_icon->addChild(noIcon);
         
         m_bullets = Label::createWithTTF("", "fonts/Arial Black.ttf", 17);

@@ -62,6 +62,7 @@ void ShopBuildingItemScrollHeadler::initDefenseView()
         string buildingNameStr = StringUtils::format("%s_name.png",buildingModelId.c_str());
         Sprite * icon = Sprite::create(ImagePath(buildingIconStr));
         icon->setPosition(- itemBgSize.width * 0.35, 0);
+        icon->setScale(0.85);
         addChild(icon);
         
         Sprite * iconName = Sprite::create(ImagePath(buildingNameStr));
@@ -77,10 +78,16 @@ void ShopBuildingItemScrollHeadler::initDefenseView()
         m_upGradeButton->autorelease();
         addChild(m_upGradeButton);
         
-        Sprite * upgradeLabel = Sprite::create(ImagePath("shopItemLabel1.png"));
-        upgradeLabel->setPosition(itemBgSize.width * 0.29,
+        Label * upgradeLabel = Label::createWithTTF("LEVEL UP", "fonts/Arial Black.ttf", 30);
+        upgradeLabel->setPosition(itemBgSize.width * 0.295,
                                   -itemBgSize.height * 0.04);
+        upgradeLabel->enableOutline(Color4B(0, 0, 0, 255),3);
+        upgradeLabel->setAdditionalKerning(-3);
         addChild(upgradeLabel);
+//        Sprite * upgradeLabel = Sprite::create(ImagePath("shopItemLabel1.png"));
+//        upgradeLabel->setPosition(itemBgSize.width * 0.29,
+//                                  -itemBgSize.height * 0.04);
+//        addChild(upgradeLabel);
         
         m_progressBar = new ProgressBar("shopItemTiao1.png","shopItemTiao2.png");
         m_progressBar->setBarRight();
@@ -92,17 +99,19 @@ void ShopBuildingItemScrollHeadler::initDefenseView()
         m_levelUpLabel->enableOutline(Color4B(0, 0, 0, 255),3);
         m_levelUpLabel->setPosition(itemBgSize.width * 0.16,
                                     itemBgSize.height * 0.18);
+        m_levelUpLabel->setAdditionalKerning(-3);
         addChild(m_levelUpLabel,1);
         
         m_upgradeLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 30);
         m_upgradeLabel->enableOutline(Color4B(0, 0, 0, 255),3);
         m_upgradeLabel->setPosition(itemBgSize.width * 0.3,
-                                    -itemBgSize.height * 0.23);
+                                    -itemBgSize.height * 0.21);
+        m_upgradeLabel->setAdditionalKerning(-3);
         addChild(m_upgradeLabel);
         Sprite * jinbi1 = Sprite::create(ImagePath("jinbi_icon.png"));
         jinbi1->setPosition(itemBgSize.width * 0.4,
-                            -itemBgSize.height * 0.23);
-        jinbi1->setScale(0.8);
+                            -itemBgSize.height * 0.21);
+        jinbi1->setScale(0.75);
         addChild(jinbi1);
     }else
     {
@@ -135,17 +144,30 @@ void ShopBuildingItemScrollHeadler::initDefenseView()
         m_unLockButton->autorelease();
         addChild(m_unLockButton);
         
-        Sprite * unlockName = Sprite::create(ImagePath("shopItemUnlockName.png"));
-        unlockName->setPosition(itemBgSize.width * 0.29,
-                                -itemBgSize.height * 0.15);
+        Label * unlockName = Label::createWithTTF("UNLOCK", "fonts/Arial Black.ttf", 30);
+        unlockName->setPosition(itemBgSize.width * 0.295,
+                                -itemBgSize.height * 0.04);
+        unlockName->enableOutline(Color4B(0, 0, 0, 255),3);
+        unlockName->setAdditionalKerning(-3);
         addChild(unlockName);
+//        Sprite * unlockName = Sprite::create(ImagePath("shopItemUnlockName.png"));
+//        unlockName->setPosition(itemBgSize.width * 0.29,
+//                                -itemBgSize.height * 0.15);
+//        addChild(unlockName);
         
         Label * unlockLabel = Label::createWithTTF(StringUtils::format("%d",building->getUnlockGold()),
-                                                   "fonts/American Typewriter.ttf",
-                                                   20);
-        unlockLabel->setPosition(itemBgSize.width * 0.29,
-                                 -itemBgSize.height * 0.28);
+                                                   "fonts/Arial Black.ttf",
+                                                   30);
+        unlockLabel->setPosition(itemBgSize.width * 0.3,
+                                 -itemBgSize.height * 0.21);
+        unlockLabel->enableOutline(Color4B(0, 0, 0, 255),3);
+        unlockLabel->setAdditionalKerning(-3);
         addChild(unlockLabel);
+        Sprite * jinbi2 = Sprite::create(ImagePath("jinbi_icon.png"));
+        jinbi2->setPosition(itemBgSize.width * 0.4,
+                            -itemBgSize.height * 0.21);
+        jinbi2->setScale(0.75);
+        addChild(jinbi2);
     }
     
     updateDefenseView();
@@ -196,7 +218,7 @@ void ShopBuildingItemScrollHeadler::upGrade(Touch * touch, Event * event)
         updateDefenseView();
         GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(building->getModelId());
         showLayer->autorelease();
-        m_shopScene->addChild(showLayer);
+        m_shopScene->addChild(showLayer,10);
     }else
     {
         

@@ -73,8 +73,11 @@ bool GameMapScene::init()
 }
 GameScrollHeadler * GameMapScene::getHeadlerByIndex(int index,int viewTag)
 {
+    Vec2 v_p = Vec2(1136 * (index + 1) - 1136 * 0.5, 640 * 0.5);
+
     MapScrollHeadler * headler = new MapScrollHeadler(index);
     headler->autorelease();
+    headler->setPosition(v_p);
     return headler;
 }
 void GameMapScene::moveToEndCall()

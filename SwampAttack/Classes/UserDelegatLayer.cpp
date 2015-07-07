@@ -39,24 +39,27 @@ UserDelegateLayer::UserDelegateLayer()
     
     m_goldLabel = Label::createWithTTF(StringUtils::format("%d",_G_U->getUserGold()),
                                        "fonts/Arial Black.ttf",
-                                       35);
+                                       27);
     m_goldLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.57,
                              m_visibleOrigin.y + m_visibleSize.height * 0.93);
-    m_goldLabel->enableOutline(Color4B(0, 0, 0, 255),2);
+    m_goldLabel->enableOutline(Color4B(0, 0, 0, 255),3);
+    m_goldLabel->setAdditionalKerning(-3);
     addChild(m_goldLabel,3);
     Sprite * jinbiIcon = Sprite::create(ImagePath("jinbi_icon.png"));
     jinbiIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.47,
-                           m_visibleOrigin.y + m_visibleSize.height * 0.935);
+                           m_visibleOrigin.y + m_visibleSize.height * 0.934);
     addChild(jinbiIcon,3);
     
     m_expendPropLabel = Label::createWithTTF(StringUtils::format("%d",_G_U->getExpendPropNum()),
                                              "fonts/Arial Black.ttf",
-                                             35);
-    m_expendPropLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.77,
+                                             27);
+    m_expendPropLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.78,
                                    m_visibleOrigin.y + m_visibleSize.height * 0.93);
+    m_expendPropLabel->enableOutline(Color4B(0, 0, 0, 255),3);
+    m_expendPropLabel->setAdditionalKerning(-3);
     addChild(m_expendPropLabel,3);
     Sprite * hpIcon = Sprite::create(ImagePath("hp1_icon.png"));
-    hpIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.72,
+    hpIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.73,
                         m_visibleOrigin.y + m_visibleSize.height * 0.935);
     hpIcon->setScale(0.5);
     addChild(hpIcon,3);
@@ -87,14 +90,14 @@ UserDelegateLayer::UserDelegateLayer()
     addChild(buttonMenu,2);
     
     updateData();
-//    _G_U->attach(this);
-    setSubject(_G_U);
+    _G_U->attach(this);
+//    setSubject(_G_U);
     
 }
 UserDelegateLayer::~UserDelegateLayer()
 {
     m_healthSprites.clear();
-//    _G_U->detach(this);
+    _G_U->detach(this);
 }
 void UserDelegateLayer::updateData()
 {

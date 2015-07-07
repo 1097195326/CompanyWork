@@ -49,9 +49,9 @@ GameShowLevelupLayer::GameShowLevelupLayer(std::string name)
     Size bgSize = bg->getContentSize();
     iconSpr->setPosition(bgSize.width * 0.5,bgSize.height * 0.43);
     nameSpr->setPosition(bgSize.width * 0.5,bgSize.height * 0.63);
-    levelupLabel->setPosition(bgSize.width * 0.5,bgSize.height * 0.23);
+    levelupLabel->setPosition(bgSize.width * 0.5,bgSize.height * 0.2);
     
-    iconSpr->setScale(1.2);
+    iconSpr->setScale(1.0);
     bg->addChild(iconSpr);
     bg->addChild(nameSpr);
     bg->addChild(levelupLabel);
@@ -69,7 +69,7 @@ void GameShowLevelupLayer::addBackLayer(cocos2d::Node *pSender)
 {
     LayerColor * layerColor = LayerColor::create(Color4B(0, 0, 0, 0));
     addChild(layerColor);
-    layerColor->runAction(Sequence::create(FadeTo::create(0.3, 150),
+    layerColor->runAction(Sequence::create(FadeTo::create(0.3, 200),
                                            DelayTime::create(1.4),
                                            FadeTo::create(0.3, 0),
                                            NULL) );

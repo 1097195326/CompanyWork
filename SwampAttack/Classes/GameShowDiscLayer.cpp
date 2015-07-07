@@ -31,7 +31,7 @@ GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 posi
     
     layerColor = LayerColor::create(Color4B(0, 0, 0, 0));
     addChild(layerColor);
-    layerColor->runAction(FadeTo::create(0.5, 120));
+    layerColor->runAction(FadeTo::create(0.5, 200));
     
     bg = Sprite::create(ImagePath("shop_show_discbg.png"));
     bg->setPosition(position);

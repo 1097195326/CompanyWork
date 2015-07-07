@@ -36,12 +36,16 @@ m_time(4)
     scenebg->setColor(Color3B::GRAY);
     addChild(scenebg);
     
-    Sprite * bg = Sprite::create(ImagePath("healthShowBg.png"));
+    LayerColor * layerColor = LayerColor::create(Color4B(0, 0, 0, 0));
+    addChild(layerColor);
+    layerColor->runAction(FadeTo::create(0.3, 200));
+    
+    Sprite * bg = Sprite::create(ImagePath("fight_relive_bg.png"));
     bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                    m_visibleOrigin.y + m_visibleSize.height * 0.5);
+                    m_visibleOrigin.y + m_visibleSize.height * 0.6);
     
     addChild(bg);
-    bg->setScale(0.8);
+//    bg->setScale(0.8);
     
     Size bgSize = bg->getContentSize();
     
@@ -49,22 +53,23 @@ m_time(4)
                                              "fonts/Arial Black.ttf",
                                              40);
     titleTex->enableOutline(Color4B(0, 0, 0, 255),3);
+    titleTex->setAdditionalKerning(-3);
     titleTex->setPosition(bgSize.width * 0.5,
-                           bgSize.height * 0.65);
+                           bgSize.height * 0.6);
     bg->addChild(titleTex);
     
     m_timeLabel = Label::createWithTTF(StringUtils::format("%d",m_time),
                                   "fonts/Arial Black.ttf",
-                                  100);
+                                  110);
     m_timeLabel->enableOutline(Color4B(0, 0, 0, 255),4);
-    m_timeLabel->setPosition(bgSize.width * 0.5, bgSize.height * 0.45);
+    m_timeLabel->setPosition(bgSize.width * 0.5, bgSize.height * 0.4);
     bg->addChild(m_timeLabel);
     
     MenuItemImage * continueButton = MenuItemImage::create(ImagePath("fight_relive_button.png"),
                                                            ImagePath("fight_relive_button.png"),
                                                            CC_CALLBACK_1( GameReliveLayer::continueGame, this));
     continueButton->setPosition(bgSize.width * 0.5,
-                                bgSize.height * 0.2);
+                                bgSize.height * 0.18);
     
     Menu * buttonMenu = Menu::create(continueButton, NULL);
     buttonMenu->setPosition(Point::ZERO);
@@ -75,13 +80,14 @@ m_time(4)
                                             "fonts/Arial Black.ttf",
                                             30);
     buttonTex->enableOutline(Color4B(0, 0, 0, 255),3);
+    buttonTex->setAdditionalKerning(-3);
     buttonTex->setPosition(bgSize.width * 0.48,
-                          bgSize.height * 0.2);
+                          bgSize.height * 0.18);
     bg->addChild(buttonTex);
     
     Sprite * hpIcon = Sprite::create(ImagePath("hp1_icon.png"));
-    hpIcon->setPosition(bgSize.width * 0.57,
-                        bgSize.height * 0.2);
+    hpIcon->setPosition(bgSize.width * 0.6,
+                        bgSize.height * 0.18);
     hpIcon->setScale(0.5);
     bg->addChild(hpIcon);
     

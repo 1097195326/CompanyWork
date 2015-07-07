@@ -218,24 +218,24 @@ void GameScrollHeadlerView::addHeadlerByIndex(int index)
 {
     GameScrollHeadler * headler = getHeadlerWithIndex(index);
     
-    Vec2 v_p;
-    
-    switch (m_oritation) {
-        case s_vertical:
-        {
-            v_p = Vec2(m_itemWidth * 0.5, 0.0 - m_itemHeight * (index + 1) + m_viewHeight + m_itemHeight * 0.5);
-        }
-            break;
-        case s_horizontal:
-        {
-            v_p = Vec2(m_itemWidth * (index + 1) - m_itemWidth * 0.5, m_itemHeight * 0.5);
-        }
-            break;
-        default:
-            break;
-    }
+//    Vec2 v_p;
+//    
+//    switch (m_oritation) {
+//        case s_vertical:
+//        {
+//            v_p = Vec2(m_itemWidth * 0.5, 0.0 - m_itemHeight * (index + 1) + m_viewHeight + m_itemHeight * 0.5);
+//        }
+//            break;
+//        case s_horizontal:
+//        {
+//            v_p = Vec2(m_itemWidth * (index + 1) - m_itemWidth * 0.5, m_itemHeight * 0.5);
+//        }
+//            break;
+//        default:
+//            break;
+//    }
     addChildToScrollView(headler);
-    headler->setPosition(v_p);
+//    headler->setPosition(v_p);
     m_headlerData[index] = headler;
 }
 GameScrollHeadler * GameScrollHeadlerView::getHeadlerWithIndex(int index)

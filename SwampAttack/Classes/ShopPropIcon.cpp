@@ -49,7 +49,8 @@ void ShopPropIcon::reSetIcon(Prop * prop)
     setSubject(m_prop);
     
     Sprite * noIcon = Sprite::create(ImagePath("shop_No_icon.png"));
-    noIcon->setPosition(Vec2(m_iconBg->getContentSize().width * 0.23, m_iconBg->getContentSize().height * 0.25));
+    noIcon->setPosition(Vec2(m_iconBg->getContentSize().width * 0.22,
+                             m_iconBg->getContentSize().height * 0.25));
     m_icon->addChild(noIcon);
     
     string gunModelId = m_prop->getModelId();

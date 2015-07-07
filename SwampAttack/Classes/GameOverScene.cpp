@@ -64,6 +64,10 @@ bool GameOverScene::init()
     SpriteFrameCache::getInstance()->removeSpriteFrames();
     Director::getInstance()->getTextureCache()->removeAllTextures();
     
+    LayerColor * layerColor = LayerColor::create(Color4B(0, 0, 0, 200));
+    addChild(layerColor);
+//    layerColor->runAction(FadeTo::create(0.3, 200));
+    
     Sprite * bg = Sprite::create(ImagePath("overScene_bg.png"));
     bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                     m_visibleOrigin.y + m_visibleSize.height * 0.5);
@@ -78,16 +82,22 @@ bool GameOverScene::init()
     MenuItemImage * restartButton = MenuItemImage::create(ImagePath("overScene_restart.png"),
                                                           ImagePath("overScene_restart.png"),
                                                           CC_CALLBACK_1( GameOverScene::restartGame, this));
+    Sprite * getIcon = Sprite::create(ImagePath("over_get_icon.png"));
+    getIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.42,
+                           m_visibleOrigin.y + m_visibleSize.height * 0.4);
+    addChild(getIcon);
     
     Label * goldLabel = Label::createWithTTF(StringUtils::format("%d",_G_D->getGoldNum()),
                                              "fonts/Arial Black.ttf",
-                                             40);
-    goldLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                                             30);
+    goldLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.52,
                            m_visibleOrigin.y + m_visibleSize.height * 0.4);
+    goldLabel->setAdditionalKerning(-3);
+    goldLabel->enableOutline(Color4B(0, 0, 0, 255),3);
     addChild(goldLabel);
     
     Sprite * jinbiIcon = Sprite::create(ImagePath("jinbi_icon.png"));
-    jinbiIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.58,
+    jinbiIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.6,
                            m_visibleOrigin.y + m_visibleSize.height * 0.4);
     addChild(jinbiIcon);
     
@@ -110,6 +120,10 @@ bool GameOverScene::init()
                                    m_visibleOrigin.y + m_visibleSize.height * 0.22);
         nextButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset,
                                 m_visibleOrigin.y + m_visibleSize.height * 0.22);
+        
+        gotoMapButton->setScale(0.9);
+        restartButton->setScale(0.9);
+        nextButton->setScale(0.9);
         buttonMenu = Menu::create(gotoMapButton,restartButton,nextButton, NULL);
         
         GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
@@ -128,6 +142,8 @@ bool GameOverScene::init()
                                    m_visibleOrigin.y + m_visibleSize.height * 0.22);
         restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset * 0.7,
                                    m_visibleOrigin.y + m_visibleSize.height * 0.22);
+        gotoMapButton->setScale(0.9);
+        restartButton->setScale(0.9);
         buttonMenu = Menu::create(gotoMapButton,restartButton, NULL);
     }
     buttonMenu->setPosition(Point::ZERO);
