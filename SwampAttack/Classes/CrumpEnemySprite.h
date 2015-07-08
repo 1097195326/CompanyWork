@@ -20,6 +20,7 @@ protected:
     void    die();
     void    hurt();
     void    setArmorView();
+    void    showBuff();
 public:
     void        update(float data);
     CrumpEnemySprite(Enemy * model);

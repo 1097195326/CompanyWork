@@ -7,7 +7,7 @@
 //
 
 #include "CrumpEnemySprite.h"
-
+#include "BuffSprite.h"
 
 CrumpEnemySprite::CrumpEnemySprite(Enemy * model):EnemySprite(model)
 {
@@ -80,6 +80,10 @@ void CrumpEnemySprite::update(float data)
     {
         hurt();
     }
+    if (m_model->isHaveBuff())
+    {
+        showBuff();
+    }
     if (m_model->isShowHurt())
     {
         healthBar->setVisible(true);
@@ -134,6 +138,26 @@ void CrumpEnemySprite::setArmorView()
                                                  NULL);
         hurtOnAction->retain();
         m_map["armorHurtAction1"] = hurtOnAction;
+    }
+}
+void CrumpEnemySprite::showBuff()
+{
+    std::list<GameBuff *> buffs = m_model->getBuffData();
+    std::list<GameBuff *>::iterator iter;
+    for (iter = buffs.begin(); iter != buffs.end();iter++)
+    {
+        GameBuff * buff = *iter;
+        if (buff->isShow()) {
+            
+        }else
+        {
+            log("sprite add buff ");
+            buff->setIsShow();
+            
+            BuffSprite * buffS = new BuffSprite(buff);
+            buffS->autorelease();
+            buffSprite->addChild(buffS);
+        }
     }
 }
 void CrumpEnemySprite::hurt()

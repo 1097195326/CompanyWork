@@ -22,6 +22,8 @@ protected:
     float       m_viewHeight;
     float       m_scrollContentWidth;
     float       m_scrollContentHeight;
+    Vec2        m_moveV;
+    bool        m_isMove;
 private:
     EventListenerTouchOneByOne * m_listener;
 public:

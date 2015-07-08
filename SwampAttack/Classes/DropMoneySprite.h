@@ -24,7 +24,7 @@ private:
     void    guangEnd(Node * pSender);
     void    moveEnd(Node * pSender);
 public:
-    DropMoneySprite(MoneyObject * money);
+    DropMoneySprite(MoneyObject * money, Vec2 point);
     ~DropMoneySprite();
 };
 

@@ -9,8 +9,11 @@
 #include "GameScrollView.h"
 
 
-GameScrollView::GameScrollView(float width, float height):m_viewWidth(width),
-m_viewHeight(height)
+GameScrollView::GameScrollView(float width, float height):
+m_viewWidth(width),
+m_viewHeight(height),
+m_moveV(Vec2(0, 0)),
+m_isMove(false)
 {
     init();
     
@@ -65,14 +68,27 @@ void GameScrollView::touchMoved(Touch *touch, Event *event)
     Vec2 perPoint = touch->getPreviousLocation();
     Vec2 currPoint = touch->getLocation();
     Vec2 c = currPoint - perPoint;
+//    m_moveV += c;
+//    log("scroll move :%f",m_moveV.length());
+//    if (m_moveV.length() < 5)
+//    {
+//        return;
+//    }
     m_scrollController->updateOffSet(c.x, c.y);
+    
+    m_isMove = true;
 }
 void GameScrollView::touchEnd(Touch *touch, Event *event)
 {
-    Vec2 perPoint = touch->getPreviousLocation();
-    Vec2 currPoint = touch->getLocation();
-    Vec2 c = currPoint - perPoint;
-    m_scrollController->updateVelocity(c.x, c.y);
+//    m_moveV = Vec2::ZERO;
+    if (m_isMove)
+    {
+        Vec2 perPoint = touch->getPreviousLocation();
+        Vec2 currPoint = touch->getLocation();
+        Vec2 c = currPoint - perPoint;
+        m_scrollController->updateVelocity(c.x, c.y);
+        m_isMove = false;
+    }
 }
 void GameScrollView::addChildToScrollView(cocos2d::Node *node,int zOrder)
 {

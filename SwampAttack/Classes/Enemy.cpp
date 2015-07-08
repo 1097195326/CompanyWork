@@ -163,12 +163,17 @@ void Enemy::hurt(int damage,int index)
         return;
     }
     m_health = m_health - damage;
+    
+    if (!m_isWeak && m_health < m_totalHealth * 0.5) {
+        m_isWeak =true;
+    }
+    
     if (m_health <= 0)
     {
+        removeAllBuffS();
         m_status &= e_clear;
         m_status |= e_dieing;
         m_isShowHurt = false;
-        removeAllBuffS();
         DropManager::getInstance()->dropObject(m_drop, m_point);
         _G_D->addGold(m_gold);
     }else
@@ -187,9 +192,6 @@ void Enemy::hurt(int damage,int index)
                 m_status |= e_hurt3;
                 break;
         }
-        if (!m_isWeak && m_health < m_totalHealth * 0.5) {
-            m_isWeak =true;
-        }
     }
 //    log("enemy health :%f",m_health);
 }
@@ -206,10 +208,10 @@ void Enemy::hurt(int damage)
     m_health = m_health - damage;
     if (m_health <= 0)
     {
+        removeAllBuffS();
         m_status &= e_clear;
         m_status |= e_dieing;
         m_isShowHurt = false;
-        removeAllBuffS();
         DropManager::getInstance()->dropObject(m_drop, m_point);
         _G_D->addGold(m_gold);
     }else

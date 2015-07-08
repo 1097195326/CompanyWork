@@ -13,9 +13,11 @@
 
 
 
-DropMoneySprite::DropMoneySprite(MoneyObject * money)
+DropMoneySprite::DropMoneySprite(MoneyObject * money, Vec2 point)
 {
     init();
+    setPosition(point);
+    
     m_money = money;
     string modelId = m_money->getModelId();
     
@@ -37,7 +39,19 @@ DropMoneySprite::DropMoneySprite(MoneyObject * money)
     m_listener->onTouchEnded = CC_CALLBACK_2(DropMoneySprite::touchEnd, this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener, this);
     
-    runAction(JumpBy::create(0.5, Vec2(0, 0), 50, 3));
+//    runAction(JumpBy::create(0.5, Vec2(0, 0), 50, 3));
+    
+    float p_y = getPositionY();
+    if (p_y > 150)
+    {
+        runAction(Sequence::create(EaseSineIn::create(MoveBy::create(0.3, Vec2(0,170 - p_y))),
+                                   JumpBy::create(0.5, Vec2(0, 0), 50, 3),
+                                   NULL));
+    }else
+    {
+        runAction(JumpBy::create(0.5, Vec2(0, 0), 50, 3));
+    }
+    
     
     scheduleOnce(CC_SCHEDULE_SELECTOR(DropMoneySprite::isTimeToEnd), 5);
     

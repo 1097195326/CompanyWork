@@ -138,30 +138,36 @@ void WalkEnemySprite::setArmorView()
         armorSprite->setPosition(0,info.height);
         
         float attackSpeed = m_model->getAttackSpeed();
-        Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_walk", info.walkFrames));
+        Action * walkAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_walk",
+                                                                                          info.walkFrames));
         walkAction->retain();
         m_map["armorWalkAction"] = walkAction;
         if (m_model->getAttackType() == 2)
         {
-            Action * walkBackAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndexReverse(armorName + "_walk", info.walkFrames));
+            Action * walkBackAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndexReverse(armorName + "_walk",
+                                                                                                         info.walkFrames));
             walkBackAction->retain();
             m_map["armorWalkBackAction"] = walkBackAction;
         }
-        Action * hurtHeavyAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_hurt_heavy", info.hurtHeavyFrames),
+        Action * hurtHeavyAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_hurt_heavy",
+                                                                                          info.hurtHeavyFrames),
                                                     NULL);
         hurtHeavyAction->retain();
         m_map["armorHurtAction3"] = hurtHeavyAction;
-        Action * hurtLightAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_hurt_light", info.hurtLightFrames),
+        Action * hurtLightAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_hurt_light",
+                                                                                          info.hurtLightFrames),
                                                     NULL);
         hurtLightAction->retain();
         m_map["armorHurtAction2"] = hurtLightAction;
-        Action * hurtOnAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_hurt_on", info.hurtOnFrames),
+        Action * hurtOnAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(armorName + "_hurt_on",
+                                                                                       info.hurtOnFrames),
                                                  NULL);
         hurtOnAction->retain();
         m_map["armorHurtAction1"] = hurtOnAction;
         
         Action * attackAction = RepeatForever::create(
-                                                      BaseUtil::makeAnimateWithNameIndexDelay(armorName + "_attack", info.attackFrames,attackSpeed)
+                                                      BaseUtil::makeAnimateWithNameIndexDelay(armorName + "_attack",
+                                                                                              info.attackFrames,attackSpeed)
                                                       );
         attackAction->retain();
         m_map["armorAttackAction"] = attackAction;
@@ -292,11 +298,11 @@ void WalkEnemySprite::die()
     guaiwuSprite->stopAllActions();
     guaiwuSprite->runAction(m_map["dieAction"]);
     
-    if (isHaveArmor) {
-        isHaveArmor = false;
-        armorSprite->stopAllActions();
-        armorSprite->removeFromParentAndCleanup(true);
-    }
+//    if (isHaveArmor) {
+//        isHaveArmor = false;
+//        armorSprite->stopAllActions();
+//        armorSprite->removeFromParentAndCleanup(true);
+//    }
     
     string name = m_model->getModelId();
     string yinxiao = StringUtils::format("%s_die.mp3",name.c_str());

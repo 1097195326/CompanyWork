@@ -115,6 +115,19 @@ EnemyInfo::EnemyInfo()
     scarecrow.height = 190;
     scarecrow.widthOffSet = 0;
     m_data["scarecrow"] = scarecrow;
+    // scarecrowArmor 草人
+    EnemyInfoData scarecrowArmor;
+    scarecrowArmor.attackFrame = 7;
+    scarecrowArmor.attackFrames = 11;
+    scarecrowArmor.hurtHeavyFrames = 9;
+    scarecrowArmor.hurtLightFrames = 5;
+    scarecrowArmor.hurtOnFrames = 5;
+    scarecrowArmor.walkFrames = 14;
+    scarecrowArmor.downFrames = 13;
+    scarecrowArmor.width = 230;
+    scarecrowArmor.height = 95;
+    scarecrowArmor.widthOffSet = 0;
+    m_data["scarecrow_armor"] = scarecrowArmor;
     // scareking 草人王
     EnemyInfoData scareking;
     scareking.attackFrame = 7;
@@ -128,19 +141,6 @@ EnemyInfo::EnemyInfo()
     scareking.height = 250;
     scareking.widthOffSet = 0;
     m_data["scareking"] = scareking;
-    // scarecrowArmor 草人
-    EnemyInfoData scarecrowArmor;
-    scarecrowArmor.attackFrame = 7;
-    scarecrowArmor.attackFrames = 11;
-    scarecrowArmor.hurtHeavyFrames = 9;
-    scarecrowArmor.hurtLightFrames = 5;
-    scarecrowArmor.hurtOnFrames = 5;
-    scarecrowArmor.walkFrames = 14;
-    scarecrowArmor.downFrames = 13;
-    scarecrowArmor.width = 230;
-    scarecrowArmor.height = 190;
-    scarecrowArmor.widthOffSet = 0;
-    m_data["scarecrow_armor"] = scarecrowArmor;
     // Pumpkin 南瓜头
     EnemyInfoData pumpkin;
     pumpkin.attackFrame = 7;

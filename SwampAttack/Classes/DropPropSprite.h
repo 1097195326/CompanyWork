@@ -26,7 +26,7 @@ private:
     void    moveEnd(Node * pSender);
     
 public:
-    DropPropSprite(Prop * prop);
+    DropPropSprite(Prop * prop, Vec2 point);
     ~DropPropSprite();
 };
 

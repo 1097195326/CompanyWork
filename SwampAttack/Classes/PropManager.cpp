@@ -181,14 +181,14 @@ void PropManager::dropProp(string id,Vec2 point)
     Prop * prop = m_propData[id];
     if (prop->isUnlock())
     {
-        
+        if (!prop->isTakeUp())
+        {
+            prop->setTakeUpIndex((int)m_takeUpPropData.size() + 1);
+            prop->setFightView();
+        }
+        DropPropSprite * spr = new DropPropSprite(prop,point);
+        spr->autorelease();
+//        spr->setPosition(point);
     }
-    if (!prop->isTakeUp())
-    {
-        prop->setTakeUpIndex((int)m_takeUpPropData.size() + 1);
-        prop->setFightView();
-    }
-    DropPropSprite * spr = new DropPropSprite(prop);
-    spr->autorelease();
-    spr->setPosition(point);
+    
 }

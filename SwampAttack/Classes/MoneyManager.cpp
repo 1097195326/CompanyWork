@@ -41,7 +41,7 @@ void MoneyManager::dropMoney(string id,Vec2 point)
 {
     log("drop money");
     MoneyObject * obj = m_moneyData[id];
-    DropMoneySprite * spr = new DropMoneySprite(obj);
+    DropMoneySprite * spr = new DropMoneySprite(obj,point);
     spr->autorelease();
-    spr->setPosition(point);
+//    spr->setPosition(point);
 }

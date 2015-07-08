@@ -17,7 +17,7 @@ WalkEnemy::WalkEnemy(Json::Value data):Enemy(data)
 }
 void WalkEnemy::gameLoop(float data)
 {
-    if (m_status & e_die || m_status & e_dieing)
+    if ((m_status & e_dieing || m_status & e_die))
     {
         return;
     }
@@ -59,15 +59,22 @@ void WalkEnemy::gameLoop(float data)
     }
 //    Enemy::gameLoop(data);
     std::list<GameBuff *>::iterator iter;
+
     for (iter = m_buffData.begin(); iter != m_buffData.end();)
     {
+//        log("buff size :%d",(int)m_buffData.size());
+//        log("state :%d",m_status);
+        if ((m_status & e_dieing || m_status & e_die))
+        {
+            return;
+        }
         GameBuff * buff = *iter;
         iter++;
         if (buff->isCanHurt())
         {
-//            log("buff hurt enemy");
+            //            log("buff hurt enemy");
             buff->setStateWaiting();
-//            hurt(buff->getDamage() + m_health * buff->getPercentageDamage());
+            //            hurt(buff->getDamage() + m_health * buff->getPercentageDamage());
             hurt(buff->getDamage());
         }
     }

@@ -162,6 +162,7 @@ void FlyEnemySprite::die()
     guaiwuSprite->stopAllActions();
     guaiwuSprite->runAction(m_map["dieAction"]);
     if (isHaveArmor && armorSprite) {
+        isHaveArmor = false;
         armorSprite->stopAllActions();
         armorSprite->setVisible(false);
     }
