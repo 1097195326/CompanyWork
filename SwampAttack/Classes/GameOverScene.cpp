@@ -122,8 +122,8 @@ bool GameOverScene::init()
         gotoShopButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset,
                                 m_visibleOrigin.y + m_visibleSize.height * 0.22);
         
-        gotoMapButton->setScale(0.9);
-        restartButton->setScale(0.9);
+//        gotoMapButton->setScale(0.9);
+//        restartButton->setScale(0.9);
 //        gotoShopButton->setScale(0.9);
         buttonMenu = Menu::create(gotoMapButton,restartButton,gotoShopButton, NULL);
         

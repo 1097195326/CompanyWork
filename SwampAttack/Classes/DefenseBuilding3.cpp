@@ -48,7 +48,7 @@ void DefenseBuilding3::gameLoop(float data)
     if (!enemyGroup) {
         return;
     }
-    std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
+    std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
     
     if (!enemyData.empty())
     {
@@ -59,10 +59,12 @@ void DefenseBuilding3::gameLoop(float data)
             Enemy * enemy = *e_iter;
             
             if (isCanHurt() &&
+                !(enemy->isDieing() || enemy->isDied() || enemy->isCanDelete()) &&
                 isInRange(enemy->getPosition()) &&
                 enemy->getActionType() == 1)
             {
                 hurtEnemy(enemy);
+                break;
             }
         }
     }
@@ -78,6 +80,7 @@ void DefenseBuilding3::hurtCall()
     if (!fireEnemy ) { // || fireEnemy->isDied() || fireEnemy->isCanDelete()
         return;
     }
+//    log("fire enemy x:%f",fireEnemy->getPosition().x);
     GameMap * map = GameMapManager::getInstance()->getGameMap();
     BulletParameter bp(m_damage,
                        0,

@@ -22,6 +22,10 @@ EnemyProgressBar::EnemyProgressBar():m_progress(0),m_enemyProgress(0)
     m_progressBar->updatePercent(0);
     setPosition(_G_M_M->fightScene_EnemyBar_Position);
     
+    m_headSpr = Sprite::create(ImagePath("enemy_head.png"));
+    m_headSpr->setPosition(170, 0);
+    addChild(m_headSpr);
+    
     schedule(CC_SCHEDULE_SELECTOR(EnemyProgressBar::update), 1/30);
     _G_V->addChild(this,1);
 }
@@ -35,8 +39,11 @@ void EnemyProgressBar::update(float data)
     {
         return;
     }
+    
     m_progress += data * 4;
     m_progressBar->updatePercent(m_progress);
+//    log("enemy progress:%f",m_progress);
+    m_headSpr->setPosition(170 -  (m_progress / 100.0f) * 340, 0);
 }
 void EnemyProgressBar::updateData()
 {

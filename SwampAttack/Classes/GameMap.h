@@ -29,10 +29,11 @@ public:
     
     
     Vec2 m_BulletStartPoint = {m_visibleOrigin.x + 230, m_visibleOrigin.y + 240};
-    Vec2 gangpao_BulletStartPoint = {m_visibleOrigin.x + 150, m_visibleOrigin.y + 320};
+    
     
     Vec2 fightScene_human_Point = {m_visibleOrigin.x + 240, m_visibleOrigin.y + 180};
     Vec2 fightScene_gangpao_Point = {m_visibleOrigin.x + 110,m_visibleOrigin.y + 385};
+    Vec2 gangpao_BulletStartPoint = {m_visibleOrigin.x + 170, m_visibleOrigin.y + 370};
     
     Vec2 fightScene_zhalan_point1 = {m_visibleOrigin.x + 320,m_visibleOrigin.y + 70};
     Vec2 fightScene_zhalan_point2 = {m_visibleOrigin.x + 340,m_visibleOrigin.y + 150};

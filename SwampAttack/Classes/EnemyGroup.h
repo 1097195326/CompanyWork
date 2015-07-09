@@ -35,6 +35,7 @@ public:
     void    setData(Json::Value data);
     bool    isDie();
     std::list<Enemy*> getEnemyData();
+    std::list<Enemy*> getShowEnemyData();
     
     void    clearData();
     void    gameLoop(float data);

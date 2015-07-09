@@ -57,6 +57,10 @@ std::list<Enemy*> EnemyGroup::getEnemyData()
 {
     return enemyData;
 }
+std::list<Enemy *> EnemyGroup::getShowEnemyData()
+{
+    return show_enemyData;
+}
 void EnemyGroup::clearData()
 {
     std::list<Enemy*>::iterator iter;

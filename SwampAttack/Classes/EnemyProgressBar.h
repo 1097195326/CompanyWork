@@ -16,6 +16,7 @@
 class EnemyProgressBar :public Sprite,  public GameObserver {
 private:
     ProgressBar *   m_progressBar;
+    Sprite  *       m_headSpr;
     float           m_enemyProgress;
     float           m_progress;
 public:
