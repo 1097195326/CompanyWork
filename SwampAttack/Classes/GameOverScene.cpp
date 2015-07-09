@@ -8,6 +8,7 @@
 
 #include "GameOverScene.h"
 #include "GameMapScene.h"
+#include "GameShopScene.h"
 #include "GameLoadingScene.h"
 
 #include "GuanQiaManager.h"
@@ -105,26 +106,26 @@ bool GameOverScene::init()
     _G_U->setUserGold(userGold);
     
     Menu * buttonMenu = NULL;
-    if (m_overStatus == o_win)
-    {
+//    if (m_overStatus == o_win)
+//    {
         Sprite * title = Sprite::create(ImagePath("overScene_win.png"));
         title->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                            m_visibleOrigin.y + m_visibleSize.height * 0.58);
         addChild(title);
-        MenuItemImage * nextButton = MenuItemImage::create(ImagePath("overScene_next.png"),
-                                                           ImagePath("overScene_next.png"),
-                                                           CC_CALLBACK_1( GameOverScene::nextGuanqia, this));
+        MenuItemImage * gotoShopButton = MenuItemImage::create(ImagePath("overScene_toShop.png"),
+                                                           ImagePath("overScene_toShop.png"),
+                                                           CC_CALLBACK_1( GameOverScene::gotoShop, this));
         gotoMapButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 - widthOffset,
                                    m_visibleOrigin.y + m_visibleSize.height * 0.22);
         restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                                    m_visibleOrigin.y + m_visibleSize.height * 0.22);
-        nextButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset,
+        gotoShopButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset,
                                 m_visibleOrigin.y + m_visibleSize.height * 0.22);
         
         gotoMapButton->setScale(0.9);
         restartButton->setScale(0.9);
-        nextButton->setScale(0.9);
-        buttonMenu = Menu::create(gotoMapButton,restartButton,nextButton, NULL);
+//        gotoShopButton->setScale(0.9);
+        buttonMenu = Menu::create(gotoMapButton,restartButton,gotoShopButton, NULL);
         
         GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
         GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
@@ -132,20 +133,20 @@ bool GameOverScene::init()
         GunManager::getInstance()->checkUnlock();
         PropManager::getInstance()->checkUnlock();
         GunManager::getInstance()->saveBullet();
-    }else
-    {
-        Sprite * title = Sprite::create(ImagePath("overScene_title.png"));
-        title->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                           m_visibleOrigin.y + m_visibleSize.height * 0.58);
-        addChild(title);
-        gotoMapButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 - widthOffset * 0.7,
-                                   m_visibleOrigin.y + m_visibleSize.height * 0.22);
-        restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset * 0.7,
-                                   m_visibleOrigin.y + m_visibleSize.height * 0.22);
-        gotoMapButton->setScale(0.9);
-        restartButton->setScale(0.9);
-        buttonMenu = Menu::create(gotoMapButton,restartButton, NULL);
-    }
+//    }else
+//    {
+//        Sprite * title = Sprite::create(ImagePath("overScene_title.png"));
+//        title->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+//                           m_visibleOrigin.y + m_visibleSize.height * 0.58);
+//        addChild(title);
+//        gotoMapButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 - widthOffset * 0.7,
+//                                   m_visibleOrigin.y + m_visibleSize.height * 0.22);
+//        restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset * 0.7,
+//                                   m_visibleOrigin.y + m_visibleSize.height * 0.22);
+//        gotoMapButton->setScale(0.9);
+//        restartButton->setScale(0.9);
+//        buttonMenu = Menu::create(gotoMapButton,restartButton, NULL);
+//    }
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu,200);
     
@@ -164,13 +165,19 @@ void GameOverScene::gotoMap(cocos2d::Ref *pSender)
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Director::getInstance()->replaceScene(GameMapScene::scene());
 }
-void GameOverScene::nextGuanqia(cocos2d::Ref *pSender)
+void GameOverScene::gotoShop(cocos2d::Ref *pSender)
 {
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-    GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
-    GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
-    Director::getInstance()->replaceScene(GameLoadingScene::scene(nextGuanqia->getId()));
+    Director::getInstance()->replaceScene(GameShopScene::scene());
 }
+//void GameOverScene::nextGuanqia(cocos2d::Ref *pSender)
+//{
+//    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
+//    GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
+//    GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
+//    Director::getInstance()->replaceScene(GameLoadingScene::scene(nextGuanqia->getId()));
+//}
+
 bool GameOverScene::touchBegan(Touch *touch, Event *event)
 {
     return true;

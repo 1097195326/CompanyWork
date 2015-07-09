@@ -4,198 +4,198 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>scareking_hurt_on0002.png</key>
+            <key>scareking_hurt_heavy0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{232,270},{230,262}}</string>
+                <string>{{2,2},{224,278}}</string>
                 <key>offset</key>
-                <string>{33,-4}</string>
+                <string>{12,2}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{128,48},{230,262}}</string>
+                <string>{{110,34},{224,278}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
-            <key>scareking_walk0001.png</key>
+            <key>scareking_hurt_heavy0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{228,280}}</string>
+                <string>{{424,408},{192,276}}</string>
                 <key>offset</key>
-                <string>{-20,3}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{76,32},{228,280}}</string>
-                <key>sourceSize</key>
-                <string>{420,350}</string>
-            </dict>
-            <key>scareking_walk0002.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,284},{228,274}}</string>
-                <key>offset</key>
-                <string>{-9,-1}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{87,39},{228,274}}</string>
-                <key>sourceSize</key>
-                <string>{420,350}</string>
-            </dict>
-            <key>scareking_walk0003.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{692,222},{226,266}}</string>
-                <key>offset</key>
-                <string>{2,-4}</string>
+                <string>{58,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{99,46},{226,266}}</string>
+                <string>{{172,37},{192,276}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
-            <key>scareking_walk0004.png</key>
+            <key>scareking_hurt_heavy0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{234,798},{224,260}}</string>
+                <string>{{748,204},{206,268}}</string>
                 <key>offset</key>
-                <string>{14,-7}</string>
+                <string>{25,-3}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{112,52},{224,260}}</string>
+                <string>{{132,44},{206,268}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
-            <key>scareking_walk0005.png</key>
+            <key>scareking_hurt_heavy0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{234,534},{226,262}}</string>
+                <string>{{420,602},{206,264}}</string>
                 <key>offset</key>
-                <string>{11,-8}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{108,52},{226,262}}</string>
-                <key>sourceSize</key>
-                <string>{420,350}</string>
-            </dict>
-            <key>scareking_walk0006.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{462,2},{228,264}}</string>
-                <key>offset</key>
-                <string>{7,-9}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{103,52},{228,264}}</string>
-                <key>sourceSize</key>
-                <string>{420,350}</string>
-            </dict>
-            <key>scareking_walk0007.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{232,2},{228,266}}</string>
-                <key>offset</key>
-                <string>{4,-10}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{100,52},{228,266}}</string>
-                <key>sourceSize</key>
-                <string>{420,350}</string>
-            </dict>
-            <key>scareking_walk0008.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,560},{230,266}}</string>
-                <key>offset</key>
-                <string>{1,-11}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{96,53},{230,266}}</string>
-                <key>sourceSize</key>
-                <string>{420,350}</string>
-            </dict>
-            <key>scareking_walk0009.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{464,268},{224,266}}</string>
-                <key>offset</key>
-                <string>{-13,-10}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{85,52},{224,266}}</string>
-                <key>sourceSize</key>
-                <string>{420,350}</string>
-            </dict>
-            <key>scareking_walk0010.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{462,536},{216,268}}</string>
-                <key>offset</key>
-                <string>{-28,-7}</string>
+                <string>{-1,-5}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{74,48},{216,268}}</string>
+                <string>{{106,48},{206,264}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
-            <key>scareking_walk0011.png</key>
+            <key>scareking_hurt_heavy0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{732,450},{208,270}}</string>
+                <string>{{420,810},{200,258}}</string>
                 <key>offset</key>
-                <string>{-42,-5}</string>
+                <string>{-17,-8}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{64,45},{208,270}}</string>
+                <string>{{93,54},{200,258}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
-            <key>scareking_walk0012.png</key>
+            <key>scareking_hurt_heavy0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{772,660},{202,270}}</string>
+                <string>{{686,614},{200,264}}</string>
                 <key>offset</key>
-                <string>{-53,-3}</string>
+                <string>{-19,-5}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{91,48},{200,264}}</string>
+                <key>sourceSize</key>
+                <string>{420,350}</string>
+            </dict>
+            <key>scareking_hurt_heavy0007.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{702,412},{200,270}}</string>
+                <key>offset</key>
+                <string>{-21,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{89,42},{200,270}}</string>
+                <key>sourceSize</key>
+                <string>{420,350}</string>
+            </dict>
+            <key>scareking_hurt_heavy0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{748,2},{200,274}}</string>
+                <key>offset</key>
+                <string>{-23,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{87,38},{200,274}}</string>
+                <key>sourceSize</key>
+                <string>{420,350}</string>
+            </dict>
+            <key>scareking_hurt_heavy0009.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{216,568},{202,278}}</string>
+                <key>offset</key>
+                <string>{-29,2}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{56,43},{202,270}}</string>
+                <string>{{80,34},{202,278}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
-            <key>scareking_walk0013.png</key>
+            <key>scareking_hurt_light0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{496,754},{208,274}}</string>
+                <string>{{2,282},{216,282}}</string>
                 <key>offset</key>
-                <string>{-43,-1}</string>
+                <string>{-2,4}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{63,39},{208,274}}</string>
+                <string>{{100,30},{216,282}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
-            <key>scareking_walk0014.png</key>
+            <key>scareking_hurt_light0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{692,2},{218,276}}</string>
+                <string>{{220,282},{202,284}}</string>
                 <key>offset</key>
-                <string>{-31,1}</string>
+                <string>{16,6}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{125,27},{202,284}}</string>
+                <key>sourceSize</key>
+                <string>{420,350}</string>
+            </dict>
+            <key>scareking_hurt_light0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{462,206},{200,284}}</string>
+                <key>offset</key>
+                <string>{-12,4}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{70,36},{218,276}}</string>
+                <string>{{98,29},{200,284}}</string>
+                <key>sourceSize</key>
+                <string>{420,350}</string>
+            </dict>
+            <key>scareking_hurt_light0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{462,2},{202,284}}</string>
+                <key>offset</key>
+                <string>{-33,5}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{76,28},{202,284}}</string>
+                <key>sourceSize</key>
+                <string>{420,350}</string>
+            </dict>
+            <key>scareking_hurt_light0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,566},{212,282}}</string>
+                <key>offset</key>
+                <string>{-28,4}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{76,30},{212,282}}</string>
+                <key>sourceSize</key>
+                <string>{420,350}</string>
+            </dict>
+            <key>scareking_hurt_on0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{228,2},{232,266}}</string>
+                <key>offset</key>
+                <string>{52,-1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{146,43},{232,266}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
@@ -205,13 +205,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>scareking1.png</string>
+            <string>scareking4.png</string>
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:ecf8de2536cbedabe739cc7bed92d971:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:407f43fd85073b40ebd9e95cdc42f3f8:1/1$</string>
             <key>textureFileName</key>
-            <string>scareking1.png</string>
+            <string>scareking4.png</string>
         </dict>
     </dict>
 </plist>

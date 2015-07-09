@@ -181,20 +181,27 @@ float GameLoading::loadFrames()
                 case 200001:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking3.plist"));
                     break;
                 case 200002:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking2.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking3.plist"));
                     break;
                 case 200003:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking2.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking3.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking4.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking5.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking6.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking7.plist"));
                     break;
                 case 200004:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking2.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking3.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking4.plist"));
                     break;
                 default:
                     break;

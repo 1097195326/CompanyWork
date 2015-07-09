@@ -24,9 +24,10 @@ public:
     bool init();
     bool    touchBegan(Touch * touch, Event * event);
     
-    void    nextGuanqia(Ref * pSender);
+//    void    nextGuanqia(Ref * pSender);
     void    restartGame(Ref * pSender);
     void    gotoMap(Ref * pSender);
+    void    gotoShop(Ref * pSender);
 };
 
 #endif /* defined(__SwampAttack__GameOverScene__) */

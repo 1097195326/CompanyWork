@@ -33,8 +33,8 @@ EnemyInfo::EnemyInfo()
     zombieking.hurtOnFrames = 5;
     zombieking.walkFrames = 14;
     zombieking.downFrames = 13;
-    zombieking.width = 240;
-    zombieking.height = 230;
+    zombieking.width = 330;
+    zombieking.height = 330;
     zombieking.widthOffSet = 0;
     m_data["zombieking"] = zombieking;
     // wolf 狼人
@@ -59,8 +59,8 @@ EnemyInfo::EnemyInfo()
     wolfking.hurtOnFrames = 5;
     wolfking.walkFrames = 14;
     wolfking.downFrames = 13;
-    wolfking.width = 350;
-    wolfking.height = 350;
+    wolfking.width = 470;
+    wolfking.height = 470;
     wolfking.widthOffSet = 0;
     m_data["wolfking"] = wolfking;
     // skull 骷髅
@@ -85,8 +85,8 @@ EnemyInfo::EnemyInfo()
     skullking.hurtOnFrames = 5;
     skullking.walkFrames = 14;
     skullking.downFrames = 13;
-    skullking.width = 270;
-    skullking.height = 270;
+    skullking.width = 380;
+    skullking.height = 350;
     skullking.widthOffSet = 0;
     m_data["skullking"] = skullking;
     // skullArmor
@@ -137,8 +137,8 @@ EnemyInfo::EnemyInfo()
     scareking.hurtOnFrames = 5;
     scareking.walkFrames = 14;
     scareking.downFrames = 13;
-    scareking.width = 310;
-    scareking.height = 250;
+    scareking.width = 420;
+    scareking.height = 350;
     scareking.widthOffSet = 0;
     m_data["scareking"] = scareking;
     // Pumpkin 南瓜头

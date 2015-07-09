@@ -4,161 +4,161 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>wolfking_attack0001.png</key>
+            <key>wolfking_down0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{214,792},{236,214}}</string>
+                <string>{{2,546},{294,288}}</string>
                 <key>offset</key>
-                <string>{9,-28}</string>
+                <string>{11,-26}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{66,96},{236,214}}</string>
+                <string>{{99,117},{294,288}}</string>
                 <key>sourceSize</key>
-                <string>{350,350}</string>
+                <string>{470,470}</string>
             </dict>
-            <key>wolfking_attack0002.png</key>
+            <key>wolfking_down0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{296,410},{208,260}}</string>
+                <string>{{2,2},{348,298}}</string>
                 <key>offset</key>
-                <string>{37,-5}</string>
+                <string>{-8,-25}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{53,111},{348,298}}</string>
+                <key>sourceSize</key>
+                <string>{470,470}</string>
+            </dict>
+            <key>wolfking_down0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{688,244},{324,262}}</string>
+                <key>offset</key>
+                <string>{4,-37}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{77,141},{324,262}}</string>
+                <key>sourceSize</key>
+                <string>{470,470}</string>
+            </dict>
+            <key>wolfking_down0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{352,210},{334,230}}</string>
+                <key>offset</key>
+                <string>{33,-47}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{101,167},{334,230}}</string>
+                <key>sourceSize</key>
+                <string>{470,470}</string>
+            </dict>
+            <key>wolfking_down0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{352,2},{338,206}}</string>
+                <key>offset</key>
+                <string>{61,-52}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{127,184},{338,206}}</string>
+                <key>sourceSize</key>
+                <string>{470,470}</string>
+            </dict>
+            <key>wolfking_down0006.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{532,682},{290,220}}</string>
+                <key>offset</key>
+                <string>{72,-50}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{108,50},{208,260}}</string>
+                <string>{{162,175},{290,220}}</string>
                 <key>sourceSize</key>
-                <string>{350,350}</string>
+                <string>{470,470}</string>
             </dict>
-            <key>wolfking_attack0003.png</key>
+            <key>wolfking_down0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{316,194},{214,302}}</string>
+                <string>{{754,770},{262,238}}</string>
                 <key>offset</key>
-                <string>{49,16}</string>
+                <string>{70,-57}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{174,173},{262,238}}</string>
+                <key>sourceSize</key>
+                <string>{470,470}</string>
+            </dict>
+            <key>wolfking_down0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{754,508},{262,260}}</string>
+                <key>offset</key>
+                <string>{59,-71}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{163,176},{262,260}}</string>
+                <key>sourceSize</key>
+                <string>{470,470}</string>
+            </dict>
+            <key>wolfking_down0009.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{298,682},{294,232}}</string>
+                <key>offset</key>
+                <string>{42,-92}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{117,8},{214,302}}</string>
+                <string>{{130,211},{294,232}}</string>
                 <key>sourceSize</key>
-                <string>{350,350}</string>
+                <string>{470,470}</string>
             </dict>
-            <key>wolfking_attack0004.png</key>
+            <key>wolfking_down0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{624,2},{234,302}}</string>
+                <string>{{328,442},{316,238}}</string>
                 <key>offset</key>
-                <string>{20,16}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{78,8},{234,302}}</string>
-                <key>sourceSize</key>
-                <string>{350,350}</string>
-            </dict>
-            <key>wolfking_attack0005.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{620,238},{282,272}}</string>
-                <key>offset</key>
-                <string>{-10,1}</string>
+                <string>{31,-96}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{24,38},{282,272}}</string>
+                <string>{{108,212},{316,238}}</string>
                 <key>sourceSize</key>
-                <string>{350,350}</string>
+                <string>{470,470}</string>
             </dict>
-            <key>wolfking_attack0006.png</key>
+            <key>wolfking_down0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{312,198}}</string>
+                <string>{{2,302},{324,242}}</string>
                 <key>offset</key>
-                <string>{-12,-50}</string>
+                <string>{27,-99}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{7,126},{312,198}}</string>
+                <string>{{100,213},{324,242}}</string>
                 <key>sourceSize</key>
-                <string>{350,350}</string>
+                <string>{470,470}</string>
             </dict>
-            <key>wolfking_attack0007.png</key>
+            <key>wolfking_down0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{316,2},{306,190}}</string>
+                <string>{{692,2},{326,240}}</string>
                 <key>offset</key>
-                <string>{-12,-49}</string>
+                <string>{25,-101}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{10,129},{306,190}}</string>
+                <string>{{97,216},{326,240}}</string>
                 <key>sourceSize</key>
-                <string>{350,350}</string>
-            </dict>
-            <key>wolfking_attack0008.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,202},{302,190}}</string>
-                <key>offset</key>
-                <string>{-14,-43}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{10,123},{302,190}}</string>
-                <key>sourceSize</key>
-                <string>{350,350}</string>
-            </dict>
-            <key>wolfking_attack0009.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,394},{292,194}}</string>
-                <key>offset</key>
-                <string>{-12,-38}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{17,116},{292,194}}</string>
-                <key>sourceSize</key>
-                <string>{350,350}</string>
-            </dict>
-            <key>wolfking_attack0010.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,590},{242,200}}</string>
-                <key>offset</key>
-                <string>{-10,-35}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{44,110},{242,200}}</string>
-                <key>sourceSize</key>
-                <string>{350,350}</string>
-            </dict>
-            <key>wolfking_attack0011.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{452,620},{210,206}}</string>
-                <key>offset</key>
-                <string>{1,-32}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{71,104},{210,206}}</string>
-                <key>sourceSize</key>
-                <string>{350,350}</string>
-            </dict>
-            <key>wolfking_hurt_heavy0005.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,792},{210,220}}</string>
-                <key>offset</key>
-                <string>{42,-25}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{112,90},{210,220}}</string>
-                <key>sourceSize</key>
-                <string>{350,350}</string>
+                <string>{470,470}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -170,7 +170,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:a29bcadc7a75779751ebc9bf22518bc2:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:66f6b0f81f2e0743c1ec26aaf86ec89d:1/1$</string>
             <key>textureFileName</key>
             <string>wolfking3.png</string>
         </dict>
