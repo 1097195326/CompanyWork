@@ -347,26 +347,29 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/GameOverScene.o: \
  jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
- jni/../../Classes/GameFightScene.h jni/../../Classes/GameMapScene.h \
+ jni/../../Classes/GameMapScene.h \
  jni/../../Classes/GameScrollHeadlerTargetInterface.h \
  jni/../../Classes/GameScrollHeadler.h \
  jni/../../Classes/GameHorizontalScrollHeadlerView.h \
  jni/../../Classes/GameScrollHeadlerView.h \
  jni/../../Classes/GameScrollView.h jni/../../Classes/ScrollController.h \
- jni/../../Classes/GameDirector.h jni/../../Classes/GameObject.h \
- jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
- jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
- jni/../../Classes/EnemyManager.h jni/../../Classes/EnemyGroup.h \
- jni/../../Classes/Enemy.h jni/../../Classes/json/json.h \
- jni/../../Classes/json/autolink.h jni/../../Classes/json/config.h \
- jni/../../Classes/json/value.h jni/../../Classes/json/forwards.h \
- jni/../../Classes/json/reader.h jni/../../Classes/json/features.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
- jni/../../Classes/json/writer.h jni/../../Classes/GameSubject.h \
- jni/../../Classes/GameObserver.h jni/../../Classes/GuanQiaManager.h \
+ jni/../../Classes/UserDelegatLayer.h jni/../../Classes/GameObserver.h \
+ jni/../../Classes/GameShopScene.h \
+ jni/../../Classes/GameVerticalScrollHeadlerView.h \
+ jni/../../Classes/GameLoadingScene.h jni/../../Classes/GuanQiaManager.h \
  jni/../../Classes/GuanQiaModel.h jni/../../Classes/ConfigManager.h \
- jni/../../Classes/CCCsvHelper.h jni/../../Classes/GameLoading.h \
- jni/../../Classes/GunManager.h jni/../../Classes/Gun.h
+ jni/../../Classes/json/json.h jni/../../Classes/json/autolink.h \
+ jni/../../Classes/json/config.h jni/../../Classes/json/value.h \
+ jni/../../Classes/json/forwards.h jni/../../Classes/json/reader.h \
+ jni/../../Classes/json/features.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
+ jni/../../Classes/json/writer.h jni/../../Classes/CCCsvHelper.h \
+ jni/../../Classes/GameSubject.h jni/../../Classes/GunManager.h \
+ jni/../../Classes/GameObject.h jni/../../Classes/Gun.h \
+ jni/../../Classes/PropManager.h jni/../../Classes/Prop.h \
+ jni/../../Classes/GameDirector.h jni/../../Classes/GameMapManager.h \
+ jni/../../Classes/GameMap.h jni/../../Classes/GameMap6.h \
+ jni/../../Classes/GameMap5s.h jni/../../Classes/GameUser.h
 
 jni/../../Classes/GameOverScene.h:
 
@@ -1066,8 +1069,6 @@ jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
 
 jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 
-jni/../../Classes/GameFightScene.h:
-
 jni/../../Classes/GameMapScene.h:
 
 jni/../../Classes/GameScrollHeadlerTargetInterface.h:
@@ -1082,23 +1083,21 @@ jni/../../Classes/GameScrollView.h:
 
 jni/../../Classes/ScrollController.h:
 
-jni/../../Classes/GameDirector.h:
+jni/../../Classes/UserDelegatLayer.h:
 
-jni/../../Classes/GameObject.h:
+jni/../../Classes/GameObserver.h:
 
-jni/../../Classes/GameMapManager.h:
+jni/../../Classes/GameShopScene.h:
 
-jni/../../Classes/GameMap.h:
+jni/../../Classes/GameVerticalScrollHeadlerView.h:
 
-jni/../../Classes/GameMap6.h:
+jni/../../Classes/GameLoadingScene.h:
 
-jni/../../Classes/GameMap5s.h:
+jni/../../Classes/GuanQiaManager.h:
 
-jni/../../Classes/EnemyManager.h:
+jni/../../Classes/GuanQiaModel.h:
 
-jni/../../Classes/EnemyGroup.h:
-
-jni/../../Classes/Enemy.h:
+jni/../../Classes/ConfigManager.h:
 
 jni/../../Classes/json/json.h:
 
@@ -1118,20 +1117,28 @@ jni/../../Classes/json/features.h:
 
 jni/../../Classes/json/writer.h:
 
-jni/../../Classes/GameSubject.h:
-
-jni/../../Classes/GameObserver.h:
-
-jni/../../Classes/GuanQiaManager.h:
-
-jni/../../Classes/GuanQiaModel.h:
-
-jni/../../Classes/ConfigManager.h:
-
 jni/../../Classes/CCCsvHelper.h:
 
-jni/../../Classes/GameLoading.h:
+jni/../../Classes/GameSubject.h:
 
 jni/../../Classes/GunManager.h:
 
+jni/../../Classes/GameObject.h:
+
 jni/../../Classes/Gun.h:
+
+jni/../../Classes/PropManager.h:
+
+jni/../../Classes/Prop.h:
+
+jni/../../Classes/GameDirector.h:
+
+jni/../../Classes/GameMapManager.h:
+
+jni/../../Classes/GameMap.h:
+
+jni/../../Classes/GameMap6.h:
+
+jni/../../Classes/GameMap5s.h:
+
+jni/../../Classes/GameUser.h:

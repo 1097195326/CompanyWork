@@ -326,6 +326,7 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/GunManager.o: \
  jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h \
  jni/../../Classes/ConfigManager.h jni/../../Classes/CCCsvHelper.h \
  jni/../../Classes/Human.h jni/../../Classes/State.h \
+ jni/../../Classes/PropManager.h jni/../../Classes/Prop.h \
  jni/../../Classes/ShopGunIcon.h
 
 jni/../../Classes/GunManager.h:
@@ -997,5 +998,9 @@ jni/../../Classes/CCCsvHelper.h:
 jni/../../Classes/Human.h:
 
 jni/../../Classes/State.h:
+
+jni/../../Classes/PropManager.h:
+
+jni/../../Classes/Prop.h:
 
 jni/../../Classes/ShopGunIcon.h:

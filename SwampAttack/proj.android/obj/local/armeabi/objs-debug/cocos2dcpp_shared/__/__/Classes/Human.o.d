@@ -356,11 +356,13 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/Human.o: \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameSubject.h \
  jni/../../Classes/GameObserver.h jni/../../Classes/State.h \
+ jni/../../Classes/PropManager.h jni/../../Classes/Prop.h \
  jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
  jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
  jni/../../Classes/HumanSprite.h jni/../../Classes/HumanWaitState.h \
  jni/../../Classes/HumanShootState.h jni/../../Classes/HumanReloadState.h \
- jni/../../Classes/HumanChangeState.h
+ jni/../../Classes/HumanChangeState.h \
+ jni/../../Classes/HumanThrowPropState.h
 
 jni/../../Classes/Human.h:
 
@@ -1090,6 +1092,10 @@ jni/../../Classes/GameObserver.h:
 
 jni/../../Classes/State.h:
 
+jni/../../Classes/PropManager.h:
+
+jni/../../Classes/Prop.h:
+
 jni/../../Classes/GameMapManager.h:
 
 jni/../../Classes/GameMap.h:
@@ -1107,3 +1113,5 @@ jni/../../Classes/HumanShootState.h:
 jni/../../Classes/HumanReloadState.h:
 
 jni/../../Classes/HumanChangeState.h:
+
+jni/../../Classes/HumanThrowPropState.h:

@@ -356,6 +356,7 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/HumanSprite.o: \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameSubject.h \
  jni/../../Classes/GameObserver.h jni/../../Classes/State.h \
+ jni/../../Classes/PropManager.h jni/../../Classes/Prop.h \
  jni/../../Classes/BaseUtil.h jni/../../Classes/GameFightScene.h
 
 jni/../../Classes/HumanSprite.h:
@@ -1087,6 +1088,10 @@ jni/../../Classes/GameSubject.h:
 jni/../../Classes/GameObserver.h:
 
 jni/../../Classes/State.h:
+
+jni/../../Classes/PropManager.h:
+
+jni/../../Classes/Prop.h:
 
 jni/../../Classes/BaseUtil.h:
 

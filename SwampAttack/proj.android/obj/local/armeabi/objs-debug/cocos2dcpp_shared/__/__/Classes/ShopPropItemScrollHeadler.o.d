@@ -355,6 +355,7 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/ShopPropItemScrollH
  jni/../../Classes/GameVerticalScrollHeadlerView.h \
  jni/../../Classes/GameScrollHeadlerView.h \
  jni/../../Classes/GameScrollView.h jni/../../Classes/ScrollController.h \
+ jni/../../Classes/UserDelegatLayer.h jni/../../Classes/GameSprite.h \
  jni/../../Classes/PropManager.h jni/../../Classes/Prop.h \
  jni/../../Classes/json/json.h jni/../../Classes/json/autolink.h \
  jni/../../Classes/json/config.h jni/../../Classes/json/value.h \
@@ -362,9 +363,9 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/ShopPropItemScrollH
  jni/../../Classes/json/features.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameSubject.h \
- jni/../../Classes/DefenseBuildingManager.h \
- jni/../../Classes/DefenseBuilding.h jni/../../Classes/GameObject.h \
- jni/../../Classes/GameUser.h
+ jni/../../Classes/GameObject.h jni/../../Classes/GameUser.h \
+ jni/../../Classes/GameShowDiscLayer.h \
+ jni/../../Classes/GameShowLevelupLayer.h
 
 jni/../../Classes/ShopPropItemScrollHeadler.h:
 
@@ -1082,6 +1083,10 @@ jni/../../Classes/GameScrollView.h:
 
 jni/../../Classes/ScrollController.h:
 
+jni/../../Classes/UserDelegatLayer.h:
+
+jni/../../Classes/GameSprite.h:
+
 jni/../../Classes/PropManager.h:
 
 jni/../../Classes/Prop.h:
@@ -1106,10 +1111,10 @@ jni/../../Classes/json/writer.h:
 
 jni/../../Classes/GameSubject.h:
 
-jni/../../Classes/DefenseBuildingManager.h:
-
-jni/../../Classes/DefenseBuilding.h:
-
 jni/../../Classes/GameObject.h:
 
 jni/../../Classes/GameUser.h:
+
+jni/../../Classes/GameShowDiscLayer.h:
+
+jni/../../Classes/GameShowLevelupLayer.h:

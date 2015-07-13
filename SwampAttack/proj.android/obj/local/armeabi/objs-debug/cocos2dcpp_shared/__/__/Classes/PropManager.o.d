@@ -323,8 +323,9 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/PropManager.o: \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h \
- jni/../../Classes/ConfigManager.h jni/../../Classes/CCCsvHelper.h \
- jni/../../Classes/ShopPropIcon.h
+ jni/../../Classes/GameObject.h jni/../../Classes/ConfigManager.h \
+ jni/../../Classes/CCCsvHelper.h jni/../../Classes/ShopPropIcon.h \
+ jni/../../Classes/DropPropSprite.h
 
 jni/../../Classes/PropManager.h:
 
@@ -986,8 +987,12 @@ jni/../../Classes/GameSubject.h:
 
 jni/../../Classes/GameObserver.h:
 
+jni/../../Classes/GameObject.h:
+
 jni/../../Classes/ConfigManager.h:
 
 jni/../../Classes/CCCsvHelper.h:
 
 jni/../../Classes/ShopPropIcon.h:
+
+jni/../../Classes/DropPropSprite.h:

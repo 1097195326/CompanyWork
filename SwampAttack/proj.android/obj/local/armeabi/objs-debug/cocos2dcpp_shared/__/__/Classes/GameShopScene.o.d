@@ -353,6 +353,7 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/GameShopScene.o: \
  jni/../../Classes/GameVerticalScrollHeadlerView.h \
  jni/../../Classes/GameScrollHeadlerView.h \
  jni/../../Classes/GameScrollView.h jni/../../Classes/ScrollController.h \
+ jni/../../Classes/UserDelegatLayer.h jni/../../Classes/GameHomeScene.h \
  jni/../../Classes/ShopSelectMenuView.h \
  jni/../../Classes/SelectMenuView.h \
  jni/../../Classes/SelectMenuController.h jni/../../Classes/GameSubject.h \
@@ -364,12 +365,14 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/GameShopScene.o: \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/PropManager.h \
  jni/../../Classes/Prop.h jni/../../Classes/DefenseBuildingManager.h \
- jni/../../Classes/DefenseBuilding.h jni/../../Classes/GameUser.h \
+ jni/../../Classes/DefenseBuilding.h jni/../../Classes/SpecialManager.h \
+ jni/../../Classes/SpecialObject.h jni/../../Classes/MoneyObject.h \
+ jni/../../Classes/ExpendObject.h jni/../../Classes/GameUser.h \
  jni/../../Classes/GameMapScene.h \
  jni/../../Classes/GameHorizontalScrollHeadlerView.h \
  jni/../../Classes/ShopGunIcon.h \
  jni/../../Classes/ShopGunItemScrollHeadler.h \
- jni/../../Classes/ProgressBar.h \
+ jni/../../Classes/ProgressBar.h jni/../../Classes/GameSprite.h \
  jni/../../Classes/ShopPropItemScrollHeadler.h \
  jni/../../Classes/ShopBuildingItemScrollHeadler.h \
  jni/../../Classes/ShopAwardItemScrollHeadler.h
@@ -1086,6 +1089,10 @@ jni/../../Classes/GameScrollView.h:
 
 jni/../../Classes/ScrollController.h:
 
+jni/../../Classes/UserDelegatLayer.h:
+
+jni/../../Classes/GameHomeScene.h:
+
 jni/../../Classes/ShopSelectMenuView.h:
 
 jni/../../Classes/SelectMenuView.h:
@@ -1126,6 +1133,14 @@ jni/../../Classes/DefenseBuildingManager.h:
 
 jni/../../Classes/DefenseBuilding.h:
 
+jni/../../Classes/SpecialManager.h:
+
+jni/../../Classes/SpecialObject.h:
+
+jni/../../Classes/MoneyObject.h:
+
+jni/../../Classes/ExpendObject.h:
+
 jni/../../Classes/GameUser.h:
 
 jni/../../Classes/GameMapScene.h:
@@ -1137,6 +1152,8 @@ jni/../../Classes/ShopGunIcon.h:
 jni/../../Classes/ShopGunItemScrollHeadler.h:
 
 jni/../../Classes/ProgressBar.h:
+
+jni/../../Classes/GameSprite.h:
 
 jni/../../Classes/ShopPropItemScrollHeadler.h:
 

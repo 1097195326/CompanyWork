@@ -354,8 +354,9 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/CrumpEnemySprite.o:
  jni/../../Classes/json/forwards.h jni/../../Classes/json/reader.h \
  jni/../../Classes/json/features.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
- jni/../../Classes/json/writer.h jni/../../Classes/ProgressBar.h \
- jni/../../Classes/EnemyInfo.h jni/../../Classes/BaseUtil.h
+ jni/../../Classes/json/writer.h jni/../../Classes/GameBuff.h \
+ jni/../../Classes/ProgressBar.h jni/../../Classes/EnemyInfo.h \
+ jni/../../Classes/BaseUtil.h jni/../../Classes/BuffSprite.h
 
 jni/../../Classes/CrumpEnemySprite.h:
 
@@ -1079,8 +1080,12 @@ jni/../../Classes/json/features.h:
 
 jni/../../Classes/json/writer.h:
 
+jni/../../Classes/GameBuff.h:
+
 jni/../../Classes/ProgressBar.h:
 
 jni/../../Classes/EnemyInfo.h:
 
 jni/../../Classes/BaseUtil.h:
+
+jni/../../Classes/BuffSprite.h:

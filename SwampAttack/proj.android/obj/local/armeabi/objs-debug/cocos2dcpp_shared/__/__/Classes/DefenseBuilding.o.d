@@ -328,11 +328,7 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/DefenseBuilding.o: 
  jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
  jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
  jni/../../Classes/House.h jni/../../Classes/BulletManager.h \
- jni/../../Classes/Bullet.h jni/../../Classes/DefenseBuilding1_Sprite.h \
- jni/../../Classes/DefenseBuildingSprite.h \
- jni/../../Classes/DefenseBuilding2_Sprite.h \
- jni/../../Classes/DefenseBuilding3_Sprite.h \
- jni/../../Classes/DefenseBuilding4_Sprite.h
+ jni/../../Classes/Bullet.h
 
 jni/../../Classes/DefenseBuilding.h:
 
@@ -1015,13 +1011,3 @@ jni/../../Classes/House.h:
 jni/../../Classes/BulletManager.h:
 
 jni/../../Classes/Bullet.h:
-
-jni/../../Classes/DefenseBuilding1_Sprite.h:
-
-jni/../../Classes/DefenseBuildingSprite.h:
-
-jni/../../Classes/DefenseBuilding2_Sprite.h:
-
-jni/../../Classes/DefenseBuilding3_Sprite.h:
-
-jni/../../Classes/DefenseBuilding4_Sprite.h:

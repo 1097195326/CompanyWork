@@ -356,7 +356,9 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/DefenseBuilding3_Sp
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameObject.h \
  jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
- jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h
+ jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
+ jni/../../Classes/BaseUtil.h jni/../../Classes/GameFightScene.h \
+ jni/../../Classes/GameObserver.h
 
 jni/../../Classes/DefenseBuilding3_Sprite.h:
 
@@ -1087,3 +1089,9 @@ jni/../../Classes/GameMap.h:
 jni/../../Classes/GameMap6.h:
 
 jni/../../Classes/GameMap5s.h:
+
+jni/../../Classes/BaseUtil.h:
+
+jni/../../Classes/GameFightScene.h:
+
+jni/../../Classes/GameObserver.h:

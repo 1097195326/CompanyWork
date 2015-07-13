@@ -356,7 +356,8 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/HumanReloadState.o:
  jni/../../Classes/json/features.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameSubject.h \
- jni/../../Classes/GameObserver.h jni/../../Classes/HumanShootState.h \
+ jni/../../Classes/GameObserver.h jni/../../Classes/PropManager.h \
+ jni/../../Classes/Prop.h jni/../../Classes/HumanShootState.h \
  jni/../../Classes/HumanWaitState.h
 
 jni/../../Classes/HumanReloadState.h:
@@ -1088,6 +1089,10 @@ jni/../../Classes/json/writer.h:
 jni/../../Classes/GameSubject.h:
 
 jni/../../Classes/GameObserver.h:
+
+jni/../../Classes/PropManager.h:
+
+jni/../../Classes/Prop.h:
 
 jni/../../Classes/HumanShootState.h:
 

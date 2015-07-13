@@ -1,0 +1,11 @@
+道具编号,道具名称编号,模型,道具名称,作用,道具描述编号,道具描述,道具类型
+ID[string],IDName[string],ModelID[string],,Effec[string],MoneyDescription[string],,type[string]
+100001,tid#money1,money1,金钱,10000,tid#MoneyDescription1,获得1万金钱,1
+100002,tid#money2,money2,金钱,50000,tid#MoneyDescription2,获得5万金钱,1
+100003,tid#money3,money3,金钱,80000,tid#MoneyDescription3,获得8万金钱,1
+100004,tid#money4,money4,金钱,200000,tid#MoneyDescription4,获得20万金钱,1
+100005,tid#money5,money5,金钱,1500000,tid#MoneyDescription5,获得150万金钱,1
+100006,tid#money6,money1,金钱,50,tid#MoneyDescription6,获得50金钱,1
+100007,tid#money7,money1,金钱,100,tid#MoneyDescription7,获得100金钱,1
+100008,tid#money8,money4,金钱,500,tid#MoneyDescription8,获得500金钱,1
+100009,tid#money9,money4,金钱,1000,tid#MoneyDescription9,获得1000金钱,1

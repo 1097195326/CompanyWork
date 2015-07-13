@@ -352,8 +352,9 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/GameMapScene.o: \
  jni/../../Classes/GameHorizontalScrollHeadlerView.h \
  jni/../../Classes/GameScrollHeadlerView.h \
  jni/../../Classes/GameScrollView.h jni/../../Classes/ScrollController.h \
- jni/../../Classes/GameFightScene.h jni/../../Classes/GameShopScene.h \
- jni/../../Classes/GameObserver.h \
+ jni/../../Classes/UserDelegatLayer.h jni/../../Classes/GameObserver.h \
+ jni/../../Classes/GameHomeScene.h jni/../../Classes/GameFightScene.h \
+ jni/../../Classes/GameShopScene.h \
  jni/../../Classes/GameVerticalScrollHeadlerView.h \
  jni/../../Classes/MapScrollHeadler.h
 
@@ -1067,11 +1068,15 @@ jni/../../Classes/GameScrollView.h:
 
 jni/../../Classes/ScrollController.h:
 
+jni/../../Classes/UserDelegatLayer.h:
+
+jni/../../Classes/GameObserver.h:
+
+jni/../../Classes/GameHomeScene.h:
+
 jni/../../Classes/GameFightScene.h:
 
 jni/../../Classes/GameShopScene.h:
-
-jni/../../Classes/GameObserver.h:
 
 jni/../../Classes/GameVerticalScrollHeadlerView.h:
 

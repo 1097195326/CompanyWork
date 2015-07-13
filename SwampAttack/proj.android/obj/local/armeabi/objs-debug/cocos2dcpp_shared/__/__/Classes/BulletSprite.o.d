@@ -348,7 +348,7 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/BulletSprite.o: \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  jni/../../Classes/Bullet.h jni/../../Classes/GameObject.h \
- jni/../../Classes/GameFightScene.h
+ jni/../../Classes/GameFightScene.h jni/../../Classes/GameObserver.h
 
 jni/../../Classes/BulletSprite.h:
 
@@ -1053,3 +1053,5 @@ jni/../../Classes/Bullet.h:
 jni/../../Classes/GameObject.h:
 
 jni/../../Classes/GameFightScene.h:
+
+jni/../../Classes/GameObserver.h:

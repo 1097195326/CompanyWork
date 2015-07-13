@@ -353,9 +353,9 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/EnemyGroup.o: \
  jni/../../Classes/json/forwards.h jni/../../Classes/json/reader.h \
  jni/../../Classes/json/features.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
- jni/../../Classes/json/writer.h jni/../../Classes/ConfigManager.h \
- jni/../../Classes/CCCsvHelper.h jni/../../Classes/FlyEnemy.h \
- jni/../../Classes/WalkEnemy.h
+ jni/../../Classes/json/writer.h jni/../../Classes/GameBuff.h \
+ jni/../../Classes/ConfigManager.h jni/../../Classes/CCCsvHelper.h \
+ jni/../../Classes/FlyEnemy.h jni/../../Classes/WalkEnemy.h
 
 jni/../../Classes/EnemyGroup.h:
 
@@ -1076,6 +1076,8 @@ jni/../../Classes/json/features.h:
 /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
 
 jni/../../Classes/json/writer.h:
+
+jni/../../Classes/GameBuff.h:
 
 jni/../../Classes/ConfigManager.h:
 

@@ -350,7 +350,8 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/HouseSprite.o: \
  jni/../../Classes/ProgressBar.h jni/../../Classes/House.h \
  jni/../../Classes/GameObject.h jni/../../Classes/GameMapManager.h \
  jni/../../Classes/GameMap.h jni/../../Classes/GameMap6.h \
- jni/../../Classes/GameMap5s.h jni/../../Classes/GameFightScene.h
+ jni/../../Classes/GameMap5s.h jni/../../Classes/GameFightScene.h \
+ jni/../../Classes/GameObserver.h
 
 jni/../../Classes/HouseSprite.h:
 
@@ -1065,3 +1066,5 @@ jni/../../Classes/GameMap6.h:
 jni/../../Classes/GameMap5s.h:
 
 jni/../../Classes/GameFightScene.h:
+
+jni/../../Classes/GameObserver.h:

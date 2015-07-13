@@ -65,7 +65,7 @@ bool GameSprite::touchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
     Rect rect = Rect(0, 0, getContentSize().width, getContentSize().height);
     if (rect.containsPoint(point))
     {
-//        log("game sprite touch");
+        log("game sprite touch began");
         if (m_isCanScale)
         {
             runAction(ScaleTo::create(0.1, 0.95));
@@ -77,10 +77,12 @@ bool GameSprite::touchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
 }
 void GameSprite::touchMoved(cocos2d::Touch *touch, cocos2d::Event *event)
 {
+    log("game sprite move");
     m_isTouchMe = false;
 }
 void GameSprite::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 {
+    log("game sprite touch end");
     if (m_isCanScale)
     {
         runAction(ScaleTo::create(0.1, 1));

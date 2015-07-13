@@ -353,12 +353,13 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/FlyEnemy.o: \
  jni/../../Classes/json/value.h jni/../../Classes/json/forwards.h \
  jni/../../Classes/json/reader.h jni/../../Classes/json/features.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
- jni/../../Classes/json/writer.h jni/../../Classes/FlyEnemySprite.h \
- jni/../../Classes/EnemySprite.h jni/../../Classes/ProgressBar.h \
- jni/../../Classes/EnemyInfo.h jni/../../Classes/BaseUtil.h \
- jni/../../Classes/GameDirector.h jni/../../Classes/GameMapManager.h \
- jni/../../Classes/GameMap.h jni/../../Classes/GameMap6.h \
- jni/../../Classes/GameMap5s.h
+ jni/../../Classes/json/writer.h jni/../../Classes/GameBuff.h \
+ jni/../../Classes/FlyEnemySprite.h jni/../../Classes/EnemySprite.h \
+ jni/../../Classes/ProgressBar.h jni/../../Classes/EnemyInfo.h \
+ jni/../../Classes/BaseUtil.h jni/../../Classes/GameDirector.h \
+ jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h \
+ jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
+ jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h
 
 jni/../../Classes/FlyEnemy.h:
 
@@ -1080,6 +1081,8 @@ jni/../../Classes/json/features.h:
 
 jni/../../Classes/json/writer.h:
 
+jni/../../Classes/GameBuff.h:
+
 jni/../../Classes/FlyEnemySprite.h:
 
 jni/../../Classes/EnemySprite.h:
@@ -1091,6 +1094,10 @@ jni/../../Classes/EnemyInfo.h:
 jni/../../Classes/BaseUtil.h:
 
 jni/../../Classes/GameDirector.h:
+
+jni/../../Classes/GameSubject.h:
+
+jni/../../Classes/GameObserver.h:
 
 jni/../../Classes/GameMapManager.h:
 

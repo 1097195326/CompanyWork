@@ -28,7 +28,6 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/DefenseBuilding3_Sprite.cpp \
 				   ../../Classes/DefenseBuilding3.cpp \
 				   ../../Classes/DefenseBuilding4_Sprite.cpp \
-				   ../../Classes/DefenseBuilding4.cpp \
 				   ../../Classes/DefenseBuildingManager.cpp \
 				   ../../Classes/DefenseBuildingSprite.cpp \
 				   ../../Classes/DropManager.cpp \

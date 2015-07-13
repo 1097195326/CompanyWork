@@ -350,7 +350,8 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/ShopSelectMenuView.
  jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
- jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h
+ jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h \
+ jni/../../Classes/GameSprite.h
 
 jni/../../Classes/ShopSelectMenuView.h:
 
@@ -1057,3 +1058,5 @@ jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 jni/../../Classes/GameSubject.h:
 
 jni/../../Classes/GameObserver.h:
+
+jni/../../Classes/GameSprite.h:

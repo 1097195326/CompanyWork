@@ -349,16 +349,16 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/AppDelegate.o: \
  jni/../../Classes/BaseCode.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
- jni/../../Classes/GameMapScene.h \
+ jni/../../Classes/GameObserver.h jni/../../Classes/GameMapScene.h \
  jni/../../Classes/GameScrollHeadlerTargetInterface.h \
  jni/../../Classes/GameScrollHeadler.h \
  jni/../../Classes/GameHorizontalScrollHeadlerView.h \
  jni/../../Classes/GameScrollHeadlerView.h \
  jni/../../Classes/GameScrollView.h jni/../../Classes/ScrollController.h \
- jni/../../Classes/GameShopScene.h jni/../../Classes/GameObserver.h \
+ jni/../../Classes/UserDelegatLayer.h jni/../../Classes/GameShopScene.h \
  jni/../../Classes/GameVerticalScrollHeadlerView.h \
- jni/../../Classes/GameOverScene.h jni/../../Classes/GameUser.h \
- jni/../../Classes/GameSubject.h
+ jni/../../Classes/GameOverScene.h jni/../../Classes/GameHomeScene.h \
+ jni/../../Classes/GameUser.h jni/../../Classes/GameSubject.h
 
 jni/../../Classes/AppDelegate.h:
 
@@ -1062,6 +1062,8 @@ jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
 
 jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 
+jni/../../Classes/GameObserver.h:
+
 jni/../../Classes/GameMapScene.h:
 
 jni/../../Classes/GameScrollHeadlerTargetInterface.h:
@@ -1076,13 +1078,15 @@ jni/../../Classes/GameScrollView.h:
 
 jni/../../Classes/ScrollController.h:
 
-jni/../../Classes/GameShopScene.h:
+jni/../../Classes/UserDelegatLayer.h:
 
-jni/../../Classes/GameObserver.h:
+jni/../../Classes/GameShopScene.h:
 
 jni/../../Classes/GameVerticalScrollHeadlerView.h:
 
 jni/../../Classes/GameOverScene.h:
+
+jni/../../Classes/GameHomeScene.h:
 
 jni/../../Classes/GameUser.h:
 

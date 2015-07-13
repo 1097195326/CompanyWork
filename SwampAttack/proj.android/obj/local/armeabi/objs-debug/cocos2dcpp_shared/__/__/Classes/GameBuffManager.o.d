@@ -323,7 +323,8 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/GameBuffManager.o: 
  jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
- jni/../../Classes/GameObject.h
+ jni/../../Classes/GameObject.h jni/../../Classes/ConfigManager.h \
+ jni/../../Classes/CCCsvHelper.h
 
 jni/../../Classes/GameBuffManager.h:
 
@@ -982,3 +983,7 @@ jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
 jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 
 jni/../../Classes/GameObject.h:
+
+jni/../../Classes/ConfigManager.h:
+
+jni/../../Classes/CCCsvHelper.h:
