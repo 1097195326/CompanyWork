@@ -152,14 +152,16 @@ bool GCCsvHelper::openAndResolveFile(const std::string fileName)
 	rowSplit(line, pBuffer, '\n');
 	for (unsigned int i = 0; i < line.size(); ++i)
     {
+//        log("line str1:%s",line[i].c_str());
 		std::vector<std::string> fieldVector;
 		fieldSplit(fieldVector, line[i]);
 		data.push_back(fieldVector);
+//        log("line str2:%s",line[i].c_str());
 		m_colLength = std::max(m_colLength, (int)fieldVector.size());
 	}
 //    m_rowLength = line.size() - 2;
     createJsonData(data);
-
+//    log("create json data");
 	return true;
 }
 Json::Value GCCsvHelper::getJsonData()
@@ -169,16 +171,20 @@ Json::Value GCCsvHelper::getJsonData()
 void GCCsvHelper::createJsonData(std::vector<std::vector<std::string> > & data)
 {
     //----------生成 json
-    
+//    log("data size :%d",(int)data.size());
     std::vector<std::string> headLine = data[1];
     for (int i = 2; i < data.size(); ++i) {
+        
         std::vector<std::string> line = data[i];
+        
         Json::Value lineArray;
+//        log("s:%s",line[0].c_str());
         for (int i = 0; i < headLine.size(); ++i)
         {
             string head = headLine[i];
             string str = line[i];
-            
+//            log("head:%s",head.c_str());
+//            log("str:%s",str.c_str());
             if ("" != head && "" != line[0])
             {
                 string tag = findTag(head);
@@ -221,6 +227,7 @@ void GCCsvHelper::createJsonData(std::vector<std::vector<std::string> > & data)
 //        Json::Value lineObject;
 //        lineObject[line[0].c_str()] = lineArray;
 //        root.append(lineObject);
+//        log("line array:%s",lineArray.toStyledString().c_str());
         root[line[0].c_str()] = lineArray;
         if ("" != line[0]) {
             m_hashHead[m_rowLength] = line[0];
@@ -250,16 +257,22 @@ void GCCsvHelper::fieldSplit(std::vector<std::string> &fields, std::string line)
 	}
 	std::string field;
 	unsigned int i = 0, j = 0;
-	while (j < line.length()) {
+//    log("lenght:%d",(int)line.length());
+	while (j < line.length() && i <= line.length()) {
 		if (line[i] == '"') {
 			//有引号
+//            log("有引号");
 			j = getFieldWithQuoted(line, field, i);
             i = j + 2;
 		} else {
+//            log("无引号");
 			j = getFieldNoQuoted(line, field, i);
             i = j + 1;
 		}
-		fields.push_back(field);
+        fields.push_back(field);
+//        log("field:%s",field.c_str());
+//        log("j:%d",j);
+        
 //		i = j + 1; //解析下一个field， ＋1为了跳过当前的分隔符
 	}
 }
@@ -274,12 +287,13 @@ int GCCsvHelper::getFieldWithQuoted(const std::string &line, std::string &field,
 		return -1;
 	}
 
-	for (j = i + 1; j < line.length() - 1; ++j) {
+	for (j = i + 1; j < line.length(); ++j) {
 		if (line[j] != '"') {
 			//当前char不为引号，则是field内容(包括逗号)
 			field += line[j];
 		} else {
 			//遇到field结束时的引号，可以返回
+//            log("---->>");
 			return j;
 			break;
 		}

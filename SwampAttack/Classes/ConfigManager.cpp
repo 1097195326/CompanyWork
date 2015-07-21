@@ -35,6 +35,7 @@ void ConfigManager::addConfigData(std::string confName, GCCsvHelper *csvHelper)
 }
 GCCsvHelper * ConfigManager::getCsvHelperByName(const std::string &cofName)
 {
+//    log("get cofName:%s",cofName.c_str());
     if (m_dataMap.size() > 0 && m_dataMap[cofName]) {
         return m_dataMap[cofName];
     }

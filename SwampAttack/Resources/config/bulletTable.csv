@@ -1,0 +1,10 @@
+道具编号,道具名称编号,模型编号,附加人物编号,道具描述编号,道具描述
+BulletId[string],BulletName[string],ModelId[string],BuffId[vector<string>],UnlockGold[string],ItemDescription[string]
+100001,Bullet1,BulletModelId1,效果-人物枪,Bullet#ItemDescription1,人物子弹
+100002,Bullet2,BulletModelId2,效果-远程怪,Bullet#ItemDescription2,远程怪物子弹
+100003,Bullet3,BulletModelId3,效果-飞行怪,Bullet#ItemDescription3,飞行怪物子弹
+100004,Bullet4,BulletModelId4,效果-猴子,Bullet#ItemDescription4,猴子炮弹
+100005,Bullet5,BulletModelId5,效果-人物弩,Bullet#ItemDescription5,人物弩
+100006,Bullet6,BulletModelId6,效果-狙击枪,Bullet#ItemDescription6,狙击枪子弹
+100007,Bullet7,BulletModelId7,加农炮,Bullet#ItemDescription7,加农炮子弹
+100008,Bullet8,BulletModelId8,火焰发射器,Bullet#ItemDescription8,火焰发射器子弹

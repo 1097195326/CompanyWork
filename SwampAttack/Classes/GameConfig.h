@@ -10,6 +10,6 @@
 #define SwampAttack_GameConfig_h
 
 #define GameLanguage "zh_CN"
-//#define Language "zh_EN"
+//#define GameLanguage "zh_EN"
 
 #endif
