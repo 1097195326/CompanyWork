@@ -25,6 +25,7 @@ m_index(0.0)
     string defenceName = data["DefenceName"].asString();
     m_defenceName = _C_M->getTranslateById(defenceName);
     m_modelId = data["ModelId"].asString();
+    m_bulletModelId = data["BulletModelId"].asString();
     m_defenceType = atoi(data["DefenceType"].asString().c_str());
     m_damageArea = atof(data["DamageArea"].asString().c_str());
     m_unlockMission = data["UnlockMission"].asString();

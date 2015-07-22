@@ -11,6 +11,7 @@
 #include "BulletSprite.h"
 #include "EnemyManager.h"
 #include "House.h"
+#include "BulletManager.h"
 
 #define PAI 3.1415f
 
@@ -42,17 +43,21 @@ m_enemy(NULL)
     
     m_state = _b_moving;
     
+    m_bulletModel = BulletManager::getInstance()->getBulletModelById(m_bp.m_modelId);
+    
     setView();
 }
 Bullet::~Bullet()
 {
     
 }
+void Bullet::move(){}
 void Bullet::gameLoop(float data)
 {
     if (m_state == _b_moving)
     {
         m_Point = m_Point + m_speed * 1;
+        move();
         if (m_Point.distanceSquared(m_StartPoint) >= m_toPoint.distanceSquared(m_StartPoint))
         {
             m_state = _b_arrive;

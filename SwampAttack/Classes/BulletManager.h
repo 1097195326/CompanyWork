@@ -13,9 +13,11 @@
 #include "Bullet.h"
 
 
-
 class BulletManager : public GameObject {
 private:
+    std::map<std::string,BulletModel *> m_bulletModelData;
+    std::map<int,std::string> m_hashHead;
+    
     std::list<Bullet*> bullets;
     
 public:
@@ -27,6 +29,8 @@ public:
     BulletManager();
     ~BulletManager();
     static BulletManager * getInstance();
+    
+    BulletModel * getBulletModelById(std::string _id);
     
     void    gameLoop(float data);
 };

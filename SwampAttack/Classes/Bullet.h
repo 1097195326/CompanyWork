@@ -11,6 +11,8 @@
 
 #include "BaseCode.h"
 #include "GameObject.h"
+#include "BulletModel.h"
+
 enum BulletTarget
 {
     t_enemy,
@@ -43,7 +45,7 @@ struct BulletParameter
                     BulletTarget target,
                     Vec2    startPoint,
                     Vec2    targetPoint,
-                    std::string modelId = "dandao.png"
+                    std::string modelId
                     ):
     m_damage(damage),
     m_damageArea(damageArea),
@@ -84,7 +86,7 @@ private:
     
     BulletState m_state;
     Enemy   * m_enemy;
-    
+    BulletModel * m_bulletModel;
 private:
     void    setView();
     
@@ -105,9 +107,10 @@ public:
     
 public:
     Bullet(BulletParameter bp);
-    ~Bullet();
+    virtual ~Bullet();
     
     void    gameLoop(float data);
+    virtual void move();
 };
 
 #endif /* defined(__SwampAttack__Bullet__) */

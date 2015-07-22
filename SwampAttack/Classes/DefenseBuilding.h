@@ -50,6 +50,7 @@ protected:
     string      m_id;
     string      m_defenceName;
     string      m_modelId;
+    string      m_bulletModelId;
     int         m_defenceType;
     float       m_damageArea;
     string      m_unlockMission;

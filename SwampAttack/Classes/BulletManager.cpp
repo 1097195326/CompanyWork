@@ -7,10 +7,24 @@
 //
 
 #include "BulletManager.h"
+#include "ConfigManager.h"
+
+#include "StraightBullet.h"
+#include "CurveBullet.h"
+
 
 BulletManager::BulletManager()
 {
+    GCCsvHelper * propHelper = _C_M->getCsvHelperByName("bulletTable");
+    m_hashHead = propHelper->getHashHead();
+    Json::Value data = propHelper->getJsonData();
     
+    std::map<int,std::string>::iterator iter;
+    for (iter = m_hashHead.begin(); iter != m_hashHead.end(); ++iter) {
+        string bulletId = iter->second;
+        BulletModel * bulletModel = new BulletModel(data[bulletId]);
+        m_bulletModelData[bulletId] = bulletModel;
+    }
 }
 BulletManager::~BulletManager()
 {
@@ -21,11 +35,28 @@ BulletManager * BulletManager::getInstance()
     static BulletManager _bulletManager;
     return &_bulletManager;
 }
+BulletModel * BulletManager::getBulletModelById(std::string _id)
+{
+    return m_bulletModelData[_id];
+}
 void BulletManager::fire(BulletParameter bp)
 {
 //    bp.m_num = 1;
+    BulletModel * model = getBulletModelById(bp.m_modelId);
+    
     for (int i = 0; i < bp.m_num; ++i) {
-        Bullet * bullet = new Bullet(bp);
+        Bullet * bullet = NULL;
+        switch (model->getFlyType())
+        {
+            case 1:
+                bullet = new StraightBullet(bp);
+                break;
+            case 2:
+                bullet = new CurveBullet(bp);
+                break;
+            default:
+                break;
+        }
         bullets.push_back(bullet);
     }
 }

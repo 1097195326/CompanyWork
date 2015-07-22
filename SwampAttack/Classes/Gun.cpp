@@ -66,7 +66,7 @@ m_reloadWiatingTime(0.0f)
     string weaponId = data["WeaponName"].asString();
     m_weaponName = _C_M->getTranslateById(weaponId);
     m_modelId = data["ModelId"].asString();
-    m_bulletModelId = data["BulletModelId"].asString();
+    m_bulletModelId = data["Bullet"].asString();
     m_underAttackAction = atoi(data["UnderAttackAction"].asString().c_str());
     m_weaponType = data["WeaponType"].asString();
     m_limitLevel = atoi(data["LimitLevel"].asString().c_str());
@@ -192,7 +192,8 @@ bool Gun::fire(Vec2 position)
                        m_underAttackAction,
                        t_enemy,
                        map->m_BulletStartPoint,
-                       position
+                       position,
+                       m_bulletModelId
                        );
     BulletManager::getInstance()->fire(bp);
     

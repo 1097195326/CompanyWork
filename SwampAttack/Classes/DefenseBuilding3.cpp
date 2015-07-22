@@ -94,7 +94,7 @@ void DefenseBuilding3::hurtCall()
                        t_enemy,
                        map->gangpao_BulletStartPoint,
                        (fireEnemy->getPosition() + Vec2(0,fireEnemy->getHeight() * 0.4)),
-                       "monkeyShell.png"
+                       m_bulletModelId
                        );
     BulletManager::getInstance()->fire(bp);
 
