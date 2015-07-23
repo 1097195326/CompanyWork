@@ -28,7 +28,7 @@ void BulletSprite::setModel(Bullet *bullet)
     m_model = bullet;
     std::string dandao = m_model->getModelId();
     
-    initWithFile(ImagePath(dandao));
+    initWithFile(ImagePath(StringUtils::format("%s.png",dandao.c_str())));
     
 }
 void BulletSprite::update(float data)

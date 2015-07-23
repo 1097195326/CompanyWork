@@ -1,8 +1,8 @@
 道具编号,模型编号,附加人物编号,爆炸效果,飞行弹道,道具描述编号,道具描述
 BulletId[string],ModelId[string],BuffId[vector<string>],explode[string],fly[string],ItemDescription[string],
 100001,BulletModelId1,,,1,Bullet#ItemDescription1,人物子弹
-100002,BulletModelId2,,,1,Bullet#ItemDescription2,远程怪物子弹
-100003,BulletModelId3,,,1,Bullet#ItemDescription3,飞行怪物子弹
+100002,BulletModelId1,,,1,Bullet#ItemDescription2,远程怪物子弹
+100003,BulletModelId1,,,1,Bullet#ItemDescription3,飞行怪物子弹
 100004,BulletModelId4,,,2,Bullet#ItemDescription4,猴子炮弹
 100005,BulletModelId5,,,1,Bullet#ItemDescription5,人物弩
 100006,BulletModelId6,,,1,Bullet#ItemDescription6,狙击枪子弹

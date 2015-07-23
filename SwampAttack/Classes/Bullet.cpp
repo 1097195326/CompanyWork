@@ -127,7 +127,7 @@ int Bullet::getAttackIndex()
 }
 std::string Bullet::getModelId()
 {
-    return m_bp.m_modelId;
+    return m_bulletModel->getModelId();
 }
 Vec2 Bullet::getPosition()
 {
