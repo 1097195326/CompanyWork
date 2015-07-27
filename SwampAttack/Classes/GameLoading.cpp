@@ -46,6 +46,21 @@ float GameLoading::loadFrames()
         }else if ("qiang7" == modelId)
         {
             spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang7.plist"));
+        }else if ("qiang8" == modelId)
+        {
+//            spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang8.plist"));
+        }else if ("qiang9" == modelId)
+        {
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang9.plist"));
+        }else if ("qiang10" == modelId)
+        {
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang10.plist"));
+        }else if ("qiang11" == modelId)
+        {
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang11.plist"));
+        }else if ("qiang12" == modelId)
+        {
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang12.plist"));
         }
     }
     
