@@ -23,6 +23,7 @@ BulletModel::BulletModel(Json::Value data)
     }
     m_explode = data["explode"].asString();
     m_flyType = atoi(data["fly"].asString().c_str());
+    m_weaponType = atoi(data["WeaponType"].asString().c_str());
     m_description = data["ItemDescription"].asString();
 }
 BulletModel::~BulletModel()
@@ -49,6 +50,10 @@ string BulletModel::getExplode()
 int BulletModel::getFlyType()
 {
     return m_flyType;
+}
+int BulletModel::getWeaponType()
+{
+    return m_weaponType;
 }
 string BulletModel::getDescription()
 {

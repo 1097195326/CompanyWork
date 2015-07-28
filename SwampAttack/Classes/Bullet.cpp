@@ -51,12 +51,15 @@ Bullet::~Bullet()
 {
     
 }
-void Bullet::move(){}
+void Bullet::move()
+{
+    m_Point = m_Point + m_speed * 1;
+}
 void Bullet::gameLoop(float data)
 {
     if (m_state == _b_moving)
     {
-        m_Point = m_Point + m_speed * 1;
+        
         move();
         if (m_Point.distanceSquared(m_StartPoint) >= m_toPoint.distanceSquared(m_StartPoint))
         {
@@ -73,7 +76,7 @@ void Bullet::gameLoop(float data)
         if (!enemyGroup) {
             return;
         }
-        std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
+        std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
         if (!enemyData.empty())
         {
             std::list<Enemy*>::iterator e_iter;
@@ -85,12 +88,18 @@ void Bullet::gameLoop(float data)
                     !enemy->isDied() &&
                     enemy->isContainsPoint(b_rect))
                 {
-                    if (m_enemy && m_enemy->getPosition().y > enemy->getPosition().y)
+                    if (m_bp.m_damageArea > 0)
                     {
-                        m_enemy = enemy;
+                        enemy->hurt(m_damage,m_bp.m_underAttackAction);
                     }else
                     {
-                        m_enemy = enemy;
+                        if (m_enemy && m_enemy->getPosition().y > enemy->getPosition().y)
+                        {
+                            m_enemy = enemy;
+                        }else
+                        {
+                            m_enemy = enemy;
+                        }
                     }
                 }
                 if (enemy->getActionType() == 2 &&

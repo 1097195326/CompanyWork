@@ -133,7 +133,8 @@ Gun * GunManager::getCurrentGun()
 }
 void GunManager::changeGun(string gunId)
 {
-    if(m_takeUpGunData[gunId]->getTotalBulletNum() < 1)
+    if(m_takeUpGunData[gunId]->getTotalBulletNum() < 1 &&
+       m_takeUpGunData[gunId]->getWeaponType() != 1)
     {
         return;
     }

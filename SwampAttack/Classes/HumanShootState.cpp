@@ -22,6 +22,7 @@ void HumanShootState::Enter(Human * human)
 }
 void HumanShootState::Execute(Human * human)
 {
+//    log("shoot");
     if (human->getWaitingTime() > 0.0f)
     {
         human->changeState(HumanWaitState::getInstance());

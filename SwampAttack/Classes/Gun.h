@@ -77,10 +77,12 @@ private:
     string  m_modelId;              //  模型编号
     string  m_bulletModelId;        //  子弹模型编号
     int     m_underAttackAction;    //  受击动作
-    string  m_weaponType;           //  武器类型
+    int     m_weaponType;           //  武器类型
     int     m_limitLevel;           //  强化等级上限
     float   m_damageArea;           //  伤害范围
+    int     m_influence;            //  伤害怪物个数
     int     m_shrapnelNumber;       //  弹片数量
+    int     m_bulletshow;
     float   m_critRate;             //  暴击率
     float   m_critDamageRate;       //  暴击伤害倍率
     float   m_accuracy;             //  精度
@@ -115,12 +117,15 @@ public:
     string  getModelId();
     string  getBulletModelId();
     int     getUnderAttackAction();
+    int     getWeaponType();
     int     getLimitLevel();
     int     getStrengthenLevel();
     int     getStrengthenGold();
     float   getDamage();
     float   getDamageArea();
+    int     getInfluence();
     int     getShrapnelNumber();
+    int     getBulletshowType();
     float   getCritRate();
     float   getCritDamageRate();
     float   getAccuracy();

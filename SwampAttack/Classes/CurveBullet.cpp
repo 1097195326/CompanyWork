@@ -16,7 +16,7 @@ CurveBullet::~CurveBullet()
 {
     
 }
-void CurveBullet::move()
-{
-    
-}
+//void CurveBullet::move()
+//{
+//    
+//}

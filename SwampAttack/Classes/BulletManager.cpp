@@ -9,7 +9,7 @@
 #include "BulletManager.h"
 #include "ConfigManager.h"
 
-#include "StraightBullet.h"
+#include "PunctureBullet.h"
 #include "CurveBullet.h"
 
 
@@ -46,12 +46,17 @@ void BulletManager::fire(BulletParameter bp)
     
     for (int i = 0; i < bp.m_num; ++i) {
         Bullet * bullet = NULL;
-        switch (model->getFlyType())
+        switch (model->getWeaponType())
         {
-            case 1:
-                bullet = new StraightBullet(bp);
-                break;
             case 2:
+                bullet = new Bullet(bp);
+                break;
+            case 3:
+                bullet = new PunctureBullet(bp);
+                break;
+            case 5:
+                
+            case 6:
                 bullet = new CurveBullet(bp);
                 break;
             default:
@@ -70,7 +75,7 @@ void BulletManager::gameLoop(float data)
             delete bullet;
         }else
         {
-            ++itr;
+            itr++;
             bullet->gameLoop(data);
         }
     }

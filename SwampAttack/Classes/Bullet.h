@@ -74,7 +74,7 @@ enum BulletState
 class Enemy;
 
 class Bullet : public GameObject {
-private:
+protected:
     BulletParameter m_bp;
     float   m_damage;
     Vec2    m_StartPoint;
@@ -87,7 +87,7 @@ private:
     BulletState m_state;
     Enemy   * m_enemy;
     BulletModel * m_bulletModel;
-private:
+protected:
     void    setView();
     
 public:

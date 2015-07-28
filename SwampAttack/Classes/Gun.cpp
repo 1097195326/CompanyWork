@@ -41,6 +41,45 @@ GunActionInfo::GunActionInfo()
     qiang7.waitFrames = 10;
     m_infoData["qiang7"] = qiang7;
     
+    GunActionData qiang8;
+    qiang8.attackFrame = 8;
+    qiang8.attackFrames = 13;
+    qiang8.changeFrames = 0;
+    qiang8.reloadFrames = 0;
+    qiang8.waitFrames = 10;
+    m_infoData["qiang8"] = qiang8;
+    
+    GunActionData qiang9;
+    qiang9.attackFrame = 2;
+    qiang9.attackFrames = 3;
+    qiang9.changeFrames = 11;
+    qiang9.reloadFrames = 11;
+    qiang9.waitFrames = 10;
+    m_infoData["qiang9"] = qiang9;
+    
+    GunActionData qiang10;
+    qiang10.attackFrame = 5;
+    qiang10.attackFrames = 10;
+    qiang10.changeFrames = 12;
+    qiang10.reloadFrames = 12;
+    qiang10.waitFrames = 10;
+    m_infoData["qiang10"] = qiang10;
+    
+    GunActionData qiang11;
+    qiang11.attackFrame = 11;
+    qiang11.attackFrames = 17;
+    qiang11.changeFrames = 12;
+    qiang11.reloadFrames = 12;
+    qiang11.waitFrames = 10;
+    m_infoData["qiang11"] = qiang11;
+    
+    GunActionData qiang12;
+    qiang12.attackFrame = 2;
+    qiang12.attackFrames = 3;
+    qiang12.changeFrames = 13;
+    qiang12.reloadFrames = 13;
+    qiang12.waitFrames = 10;
+    m_infoData["qiang12"] = qiang12;
 }
 GunActionInfo * GunActionInfo::getInstance()
 {
@@ -62,31 +101,34 @@ m_fireWaitingTime(0.0f),
 m_reloadWiatingTime(0.0f)
 {
     
-    m_id = data["Id"].asString() ;
-    string weaponId = data["WeaponName"].asString();
-    m_weaponName = _C_M->getTranslateById(weaponId);
-    m_modelId = data["ModelId"].asString();
-    m_bulletModelId = data["Bullet"].asString();
+    m_id                = data["Id"].asString() ;
+    string weaponId     = data["WeaponName"].asString();
+    m_weaponName        = _C_M->getTranslateById(weaponId);
+    m_modelId           = data["ModelId"].asString();
+    m_bulletModelId     = data["Bullet"].asString();
     m_underAttackAction = atoi(data["UnderAttackAction"].asString().c_str());
-    m_weaponType = data["WeaponType"].asString();
-    m_limitLevel = atoi(data["LimitLevel"].asString().c_str());
-    m_damageArea = atof(data["DamageArea"].asString().c_str());
-    m_shrapnelNumber = atoi(data["ShrapnelNumber"].asString().c_str());
-    m_critRate = atof(data["CritRate"].asString().c_str());
-    m_critDamageRate = atof(data["CritDamageRate"].asString().c_str());
-    m_accuracy = atof(data["Accuracy"].asString().c_str());
-    m_fireRate = atof(data["FireRate"].asString().c_str());
-    m_range = atof(data["Range"].asString().c_str());
-    m_bulletSpeed = atof(data["BulletSpeed"].asString().c_str());
-    m_reloadType = atoi(data["ReloadType"].asString().c_str());
-    m_reloadSpeed = atof(data["ReloadSpeed"].asString().c_str());
-    m_switchSpeed = atof(data["SwitchSpeed"].asString().c_str());
-    m_ammunltionLimit = atoi(data["AmmunitionLimit"].asString().c_str());
-    m_magazieSize = atoi(data["MagazineSize"].asString().c_str());
-    m_bulletPrice = atoi(data["BulletPrice"].asString().c_str());
+    m_weaponType        = atoi(data["WeaponType"].asString().c_str());
+    m_limitLevel        = atoi(data["LimitLevel"].asString().c_str());
+    m_damageArea        = atof(data["DamageArea"].asString().c_str());
+    m_influence         = atoi(data["Influence"].asString().c_str());
+    m_shrapnelNumber    = atoi(data["ShrapnelNumber"].asString().c_str());
+    m_bulletshow        = atoi(data["Bulletshow"].asString().c_str());
+    m_critRate          = atof(data["CritRate"].asString().c_str());
+    m_critDamageRate    = atof(data["CritDamageRate"].asString().c_str());
+    m_accuracy          = atof(data["Accuracy"].asString().c_str());
+    m_fireRate          = atof(data["FireRate"].asString().c_str());
+    m_range             = atof(data["Range"].asString().c_str());
+    m_bulletSpeed       = atof(data["BulletSpeed"].asString().c_str());
+    m_reloadType        = atoi(data["ReloadType"].asString().c_str());
+    m_reloadSpeed       = atof(data["ReloadSpeed"].asString().c_str());
+    m_switchSpeed       = atof(data["SwitchSpeed"].asString().c_str());
+    m_ammunltionLimit   = atoi(data["AmmunitionLimit"].asString().c_str());
+    m_magazieSize       = atoi(data["MagazineSize"].asString().c_str());
+    m_bulletPrice       = atoi(data["BulletPrice"].asString().c_str());
     
-    m_unlockMission = data["UnlockMission"].asString();
-    m_unlockGold = atoi(data["UnlockGold"].asString().c_str());
+    m_unlockMission     = data["UnlockMission"].asString();
+    m_unlockGold        = atoi(data["UnlockGold"].asString().c_str());
+    
     
     m_weaponDescription = _C_M->getTranslateById( data["WeaponDescription"].asString());
     //--- gun info
@@ -95,6 +137,7 @@ m_reloadWiatingTime(0.0f)
     m_reloadSpeed =  1.0f/ m_reloadSpeed / (float)actionData.reloadFrames;
     m_switchSpeed =  1.0f/ m_switchSpeed / (float)actionData.changeFrames;
     
+//    log("fire rate:%f",m_fireRate);
     if(m_fireRate > 0.08f)
     {
         float   cha = m_fireRate - 0.08f;
@@ -173,7 +216,12 @@ void Gun::saveBullet()
 }
 bool Gun::fire(Vec2 position)
 {
-    
+    if (m_weaponType == 1)
+    {
+        
+        
+        return true;
+    }
     GameMap * map = GameMapManager::getInstance()->getGameMap();
     
     --m_bullets;
@@ -296,6 +344,10 @@ bool Gun::isMaxLevel()
 }
 bool Gun::isFull()
 {
+    if (m_weaponType == 1)
+    {
+        return true;
+    }
     if (m_isDefaultGun)
     {
         return m_bullets == m_magazieSize;
@@ -316,6 +368,10 @@ bool Gun::isFull()
 }
 bool Gun::isHaveBullet()
 {
+    if (m_weaponType == 1)
+    {
+        return true;
+    }
     return m_bullets > 0;
 }
 bool Gun::addStrengthenLevel()
@@ -405,6 +461,10 @@ int Gun::getUnderAttackAction()
 {
     return m_underAttackAction;
 }
+int Gun::getWeaponType()
+{
+    return m_weaponType;
+}
 int Gun::getLimitLevel()
 {
     return m_limitLevel;
@@ -425,9 +485,17 @@ float Gun::getDamageArea()
 {
     return m_damageArea;
 }
+int Gun::getInfluence()
+{
+    return m_influence;
+}
 int Gun::getShrapnelNumber()
 {
     return m_shrapnelNumber;
+}
+int Gun::getBulletshowType()
+{
+    return m_bulletshow;
 }
 float Gun::getCritRate()
 {

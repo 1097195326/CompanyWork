@@ -150,9 +150,9 @@
 		8DD8C12F1AFCB81C00872AA2 /* SelectMenuView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C12D1AFCB81C00872AA2 /* SelectMenuView.cpp */; };
 		8DD8C1321AFCBF6300872AA2 /* ShopSelectMenuView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8C1301AFCBF6300872AA2 /* ShopSelectMenuView.cpp */; };
 		8DD925721AF9BFB00075E9F5 /* GameScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD925701AF9BFB00075E9F5 /* GameScrollView.cpp */; };
+		8DD984171B676E1200B8F280 /* PunctureBullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD984151B676E1200B8F280 /* PunctureBullet.cpp */; };
 		8DD9D7EC1B40F8BF005F015B /* ShopHealthShowLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9D7EA1B40F8BF005F015B /* ShopHealthShowLayer.cpp */; };
 		8DDA89351B0C7B2C00F9F74B /* GunSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DDA89331B0C7B2C00F9F74B /* GunSprite.cpp */; };
-		8DDACECF1B5F86DE003E83C8 /* StraightBullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DDACECD1B5F86DE003E83C8 /* StraightBullet.cpp */; };
 		8DDACED21B5F86F1003E83C8 /* CurveBullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DDACED01B5F86F1003E83C8 /* CurveBullet.cpp */; };
 		8DDC27BC1B1EDD9E00A4FD8D /* HumanThrowPropState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC27BA1B1EDD9E00A4FD8D /* HumanThrowPropState.cpp */; };
 		8DDC27BF1B1EEDE600A4FD8D /* PropSprite_daoju1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC27BD1B1EEDE600A4FD8D /* PropSprite_daoju1.cpp */; };
@@ -455,13 +455,13 @@
 		8DD8C1311AFCBF6300872AA2 /* ShopSelectMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopSelectMenuView.h; sourceTree = "<group>"; };
 		8DD925701AF9BFB00075E9F5 /* GameScrollView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScrollView.cpp; sourceTree = "<group>"; };
 		8DD925711AF9BFB00075E9F5 /* GameScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScrollView.h; sourceTree = "<group>"; };
+		8DD984151B676E1200B8F280 /* PunctureBullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PunctureBullet.cpp; sourceTree = "<group>"; };
+		8DD984161B676E1200B8F280 /* PunctureBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunctureBullet.h; sourceTree = "<group>"; };
 		8DD9D7EA1B40F8BF005F015B /* ShopHealthShowLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopHealthShowLayer.cpp; sourceTree = "<group>"; };
 		8DD9D7EB1B40F8BF005F015B /* ShopHealthShowLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopHealthShowLayer.h; sourceTree = "<group>"; };
 		8DD9EF6F1B4671B300646BE3 /* GameCC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GameCC.entitlements; sourceTree = "<group>"; };
 		8DDA89331B0C7B2C00F9F74B /* GunSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GunSprite.cpp; sourceTree = "<group>"; };
 		8DDA89341B0C7B2C00F9F74B /* GunSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GunSprite.h; sourceTree = "<group>"; };
-		8DDACECD1B5F86DE003E83C8 /* StraightBullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StraightBullet.cpp; sourceTree = "<group>"; };
-		8DDACECE1B5F86DE003E83C8 /* StraightBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StraightBullet.h; sourceTree = "<group>"; };
 		8DDACED01B5F86F1003E83C8 /* CurveBullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurveBullet.cpp; sourceTree = "<group>"; };
 		8DDACED11B5F86F1003E83C8 /* CurveBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurveBullet.h; sourceTree = "<group>"; };
 		8DDC27BA1B1EDD9E00A4FD8D /* HumanThrowPropState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HumanThrowPropState.cpp; sourceTree = "<group>"; };
@@ -992,8 +992,8 @@
 				8DE2268E1B5F466600944493 /* BulletModel.h */,
 				8DC10AB71AC3D6E2004F7DE2 /* Bullet.cpp */,
 				8DC10AB81AC3D6E2004F7DE2 /* Bullet.h */,
-				8DDACECD1B5F86DE003E83C8 /* StraightBullet.cpp */,
-				8DDACECE1B5F86DE003E83C8 /* StraightBullet.h */,
+				8DD984151B676E1200B8F280 /* PunctureBullet.cpp */,
+				8DD984161B676E1200B8F280 /* PunctureBullet.h */,
 				8DDACED01B5F86F1003E83C8 /* CurveBullet.cpp */,
 				8DDACED11B5F86F1003E83C8 /* CurveBullet.h */,
 				8DC10ACC1AC40233004F7DE2 /* BulletManager.cpp */,
@@ -1293,6 +1293,7 @@
 				8DD8C1211AFC5D0E00872AA2 /* GameSubject.cpp in Sources */,
 				8DD5F2F81B2806B100DC5DB9 /* GameShowLevelupLayer.cpp in Sources */,
 				8DD2F2601B21492800A52B33 /* PropSprite_daoju6.cpp in Sources */,
+				8DD984171B676E1200B8F280 /* PunctureBullet.cpp in Sources */,
 				8DC430B21AC930E400AB1665 /* PropManager.cpp in Sources */,
 				8DD925721AF9BFB00075E9F5 /* GameScrollView.cpp in Sources */,
 				8DD29D3A1B0B3BDA00ECB826 /* DefenseBuilding2_Sprite.cpp in Sources */,
@@ -1362,7 +1363,6 @@
 				8DD9D7EC1B40F8BF005F015B /* ShopHealthShowLayer.cpp in Sources */,
 				8DD88E741B2598050072688E /* DefenseBuilding1.cpp in Sources */,
 				8DDC27C51B1EEE1000A4FD8D /* PropSprite_daoju5.cpp in Sources */,
-				8DDACECF1B5F86DE003E83C8 /* StraightBullet.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				8DC10AB01AC3D629004F7DE2 /* GameFightScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,

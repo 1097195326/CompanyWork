@@ -48,7 +48,7 @@ float GameLoading::loadFrames()
             spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang7.plist"));
         }else if ("qiang8" == modelId)
         {
-//            spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang8.plist"));
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang8.plist"));
         }else if ("qiang9" == modelId)
         {
             spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang9.plist"));

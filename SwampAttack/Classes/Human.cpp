@@ -113,6 +113,7 @@ void Human::shootCall()
         //  枪 有子弹 可以继续使用
 //        log("shoot call have bullet");
         m_waitingTime = m_gun->getFireWaitingTime();
+//        log("wait time :%f",m_waitingTime);
     }else
     {
         // 枪 没有子弹了，请切换到 默认 枪

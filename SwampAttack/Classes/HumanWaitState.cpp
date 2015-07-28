@@ -22,6 +22,7 @@ void HumanWaitState::Enter(Human * human)
 }
 void HumanWaitState::Execute(Human * human)
 {
+//    log("wait :%f",human->getWaitingTime());
     if (human->getWaitingTime() > 0.0f) {
         human->minusWaitingTime();
     }else if (human->isTouching())

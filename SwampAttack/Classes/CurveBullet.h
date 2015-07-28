@@ -19,7 +19,7 @@ public:
     CurveBullet(BulletParameter bp);
     ~CurveBullet();
     
-    void move();
+//    void move();
     
     
 };

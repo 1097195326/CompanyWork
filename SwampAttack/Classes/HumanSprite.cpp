@@ -42,15 +42,29 @@ void HumanSprite::setModel(Human *human)
                                              CallFunc::create(CC_CALLBACK_0(HumanSprite::reloadShotCall, this)),
                                              NULL);
     reloadAction->retain();
+    Action * shootAction = NULL;
+    if (gun->getWeaponType() == 1)
+    {
+        shootAction = Spawn::create(
+                                    Sequence::create(DelayTime::create(gun->getFireRate() * actionData.attackFrame),
+                                                     CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)), NULL),
+                                    BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("attack_%s",gun->getModelId().c_str()),
+                                                                            actionData.attackFrames,
+                                                                            gun->getFireRate()),
+                                    NULL);
+        shootAction->retain();
+    }else
+    {
+        shootAction = Spawn::create(
+                                    Sequence::create(DelayTime::create(gun->getFireRate() * actionData.attackFrame),
+                                                     CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)), NULL),
+                                    BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("shoot_%s",gun->getModelId().c_str()),
+                                                                            actionData.attackFrames,
+                                                                            gun->getFireRate()),
+                                    NULL);
+        shootAction->retain();
+    }
     
-    Action * shootAction = Spawn::create(
-                                         Sequence::create(DelayTime::create(gun->getFireRate() * actionData.attackFrame),
-                                                          CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)), NULL),
-                                         BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("shoot_%s",gun->getModelId().c_str()),
-                                                                                 actionData.attackFrames,
-                                                                                 gun->getFireRate()),
-                                         NULL);
-    shootAction->retain();
     
     Action * waitAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(StringUtils::format("wait_%s",gun->getModelId().c_str()),
                                                                                       actionData.waitFrames));
@@ -187,14 +201,28 @@ void HumanSprite::changeActions()
                                              NULL);
     reloadAction->retain();
     
-    Action * shootAction = Spawn::create(
-                                         Sequence::create(DelayTime::create(gun->getFireRate() * actionData.attackFrame),
-                                                          CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)), NULL),
-                                         BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("shoot_%s",gun->getModelId().c_str()),
-                                                                                 actionData.attackFrames,
-                                                                                 gun->getFireRate()),
-                                         NULL);
-    shootAction->retain();
+    Action * shootAction = NULL;
+    if (gun->getWeaponType() == 1)
+    {
+        shootAction = Spawn::create(
+                                    Sequence::create(DelayTime::create(gun->getFireRate() * actionData.attackFrame),
+                                                     CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)), NULL),
+                                    BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("attack_%s",gun->getModelId().c_str()),
+                                                                            actionData.attackFrames,
+                                                                            gun->getFireRate()),
+                                    NULL);
+        shootAction->retain();
+    }else
+    {
+        shootAction = Spawn::create(
+                                    Sequence::create(DelayTime::create(gun->getFireRate() * actionData.attackFrame),
+                                                     CallFunc::create(CC_CALLBACK_0(HumanSprite::shootShotCall, this)), NULL),
+                                    BaseUtil::makeAnimateWithNameIndexDelay(StringUtils::format("shoot_%s",gun->getModelId().c_str()),
+                                                                            actionData.attackFrames,
+                                                                            gun->getFireRate()),
+                                    NULL);
+        shootAction->retain();
+    }
     
     Action * waitAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(StringUtils::format("wait_%s",gun->getModelId().c_str()),
                                                                                       actionData.waitFrames));
