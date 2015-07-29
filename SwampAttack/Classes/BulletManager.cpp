@@ -55,7 +55,8 @@ void BulletManager::fire(BulletParameter bp)
                 bullet = new PunctureBullet(bp);
                 break;
             case 5:
-                
+                bullet = new Bullet(bp);
+                break;
             case 6:
                 bullet = new CurveBullet(bp);
                 break;

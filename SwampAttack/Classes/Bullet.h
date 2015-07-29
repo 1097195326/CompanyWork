@@ -73,6 +73,12 @@ enum BulletState
 
 class Enemy;
 
+struct BulletInfoData
+{
+    std::string name;
+    int         frames;
+};
+
 class Bullet : public GameObject {
 protected:
     BulletParameter m_bp;
@@ -92,6 +98,8 @@ protected:
     
 public:
     std::string getModelId();
+    Vec2    getStartPosition();
+    Vec2    getToPosition();
     Vec2    getPosition();
     Rect    getRect();
     int     getDamage();
@@ -108,6 +116,11 @@ public:
 public:
     Bullet(BulletParameter bp);
     virtual ~Bullet();
+    
+    BulletInfoData getDandaoInfo();
+    BulletInfoData getBaozhaTexiaoInfo();
+    
+    bool    isHaveExplode();
     
     void    gameLoop(float data);
     virtual void move();

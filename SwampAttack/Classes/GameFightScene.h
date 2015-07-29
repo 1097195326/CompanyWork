@@ -38,7 +38,7 @@ public:
     
     
     void    pauseGame(Ref * pSender);
-    void    addBulletTexiao(Vec2 position);
+    void    addBulletTexiao(Vec2 position,std::string name, int frames);
     void    removeBulletTexiao(Node * pSender);
     RenderTexture * getFightSceneTex();
 };

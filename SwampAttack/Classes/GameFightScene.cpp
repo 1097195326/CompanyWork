@@ -188,12 +188,12 @@ void GameFightScene::pauseGame(cocos2d::Ref *pSender)
     pauseScene->setFightLayer(this);
     addChild(pauseScene,640);
 }
-void GameFightScene::addBulletTexiao(cocos2d::Vec2 position)
+void GameFightScene::addBulletTexiao(cocos2d::Vec2 position, std::string name, int frames)
 {
     Sprite * tx = Sprite::create();
     tx->setPosition(position);
     addChild(tx,640);
-    ActionInterval * ac = BaseUtil::makeAnimateWithNameAndIndex("bullet_hit", 6);
+    ActionInterval * ac = BaseUtil::makeAnimateWithNameAndIndex(name, frames);
     tx->runAction(Sequence::create(ac,
                                    CallFuncN::create(CC_CALLBACK_1(GameFightScene::removeBulletTexiao, this)),
                                    NULL));

@@ -1,17 +1,17 @@
 //
-//  BulletSprite.cpp
+//  FireBulletSprite.cpp
 //  SwampAttack
 //
-//  Created by oceantech02 on 15/3/26.
+//  Created by oceantech02 on 15/7/29.
 //
 //
 
-#include "BulletSprite.h"
+#include "FireBulletSprite.h"
 #include "GameFightScene.h"
 #include "BaseUtil.h"
 
 
-BulletSprite::BulletSprite()
+FireBulletSprite::FireBulletSprite()
 {
     init();
     
@@ -20,16 +20,15 @@ BulletSprite::BulletSprite()
     scheduleUpdate();
     _G_V->addChild(this,2);
 }
-BulletSprite::~BulletSprite()
+FireBulletSprite::~FireBulletSprite()
 {
     
 }
-void BulletSprite::setModel(Bullet *bullet)
+void FireBulletSprite::setModel(Bullet *bullet)
 {
     m_model = bullet;
     std::string dandao = m_model->getModelId();
     
-
     
     BulletInfoData infoData = m_model->getDandaoInfo();
     if (infoData.frames == 1)
@@ -40,20 +39,19 @@ void BulletSprite::setModel(Bullet *bullet)
         Action * ac = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(infoData.name, infoData.frames));
         runAction(ac);
     }
+    setScale(0);
     
 }
-void BulletSprite::update(float data)
+void FireBulletSprite::update(float data)
 {
     if (m_model->isMoving()) {
-        setPosition(m_model->getPosition());
+        float s_x = m_model->getPosition().x - m_model->getStartPosition().x;
+        setScale(s_x/450.0f);
+        setPosition(m_model->getPosition().x / 2, m_model->getPosition().y);
+        
     }else if (m_model->isArrive())
     {
         m_model->arriveCall();
-        if (m_model->isHaveExplode())
-        {
-            BulletInfoData infoData = m_model->getBaozhaTexiaoInfo();
-            _G_V->addBulletTexiao(m_model->getPosition(), infoData.name, infoData.frames);
-        }
         
     }else if (m_model->isDie())
     {

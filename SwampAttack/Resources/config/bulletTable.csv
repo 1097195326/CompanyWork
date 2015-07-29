@@ -5,6 +5,6 @@ BulletId[string],ModelId[string],BuffId[vector<string>],WeaponType[string],explo
 100003,BulletModelId1,,2,,1,Bullet#ItemDescription3,飞行怪物子弹
 100004,BulletModelId4,,6,blast2,2,Bullet#ItemDescription4,猴子炮弹
 100005,BulletModelId5,,3,,1,Bullet#ItemDescription5,人物弩
-100006,BulletModelId6,,3,,1,Bullet#ItemDescription6,狙击枪子弹
+100006,BulletModelId1,,3,,1,Bullet#ItemDescription6,狙击枪子弹
 100007,BulletModelId7,,2,blast2,1,Bullet#ItemDescription7,加农炮子弹
 100008,BulletModelId8,600001,5,,1,Bullet#ItemDescription8,火焰发射器子弹

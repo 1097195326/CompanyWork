@@ -138,6 +138,14 @@ std::string Bullet::getModelId()
 {
     return m_bulletModel->getModelId();
 }
+Vec2 Bullet::getStartPosition()
+{
+    return m_StartPoint;
+}
+Vec2 Bullet::getToPosition()
+{
+    return m_toPoint;
+}
 Vec2 Bullet::getPosition()
 {
     return m_Point;
@@ -184,4 +192,57 @@ bool Bullet::isFireEnemy()
 bool Bullet::isFireHouse()
 {
     return m_bp.m_target == t_house;
+}
+bool Bullet::isHaveExplode()
+{
+    return m_bulletModel->isHaveExplode();
+}
+BulletInfoData Bullet::getDandaoInfo()
+{
+    BulletInfoData data;
+    string modelId = m_bulletModel->getModelId();
+    
+    if ("BulletModelId1" == modelId)
+    {
+        data.name = "BulletModelId1";
+        data.frames = 1;
+    }else if ("BulletModelId4" == modelId)
+    {
+        data.name = "BulletModelId4";
+        data.frames = 1;
+    }else if ("BulletModelId5" == modelId)
+    {
+        data.name = "BulletModelId5";
+        data.frames = 1;
+    }else if ("BulletModelId7" == modelId)
+    {
+        data.name = "bullet_qiang";
+        data.frames = 4;
+    }else if ("BulletModelId8" == modelId)
+    {
+        data.name = "bullet_qiang12";
+        data.frames = 6;
+    }else
+    {
+        data.name = "";
+        data.frames = 0;
+    }
+    return data;
+}
+BulletInfoData Bullet::getBaozhaTexiaoInfo()
+{
+    BulletInfoData data;
+    string ex = m_bulletModel->getExplode();
+    
+    if ("blast1" == ex)
+    {
+        data.name = "bullet_hit";
+        data.frames = 6;
+    }else if ("blast2" == ex)
+    {
+        data.name = "explosion";
+        data.frames = 14;
+    }
+    
+    return data;
 }

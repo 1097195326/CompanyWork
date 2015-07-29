@@ -24,6 +24,8 @@ private:
     int     m_weaponType;
     string  m_description;
     
+    bool    m_isHaveExplode;
+    
 public:
     BulletModel(Json::Value data);
     ~BulletModel();
@@ -35,6 +37,8 @@ public:
     int     getFlyType();
     int     getWeaponType();
     string  getDescription();
+    
+    bool    isHaveExplode();
     
 };
 

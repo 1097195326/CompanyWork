@@ -9,7 +9,8 @@
 #include "BulletModel.h"
 
 
-BulletModel::BulletModel(Json::Value data)
+BulletModel::BulletModel(Json::Value data):
+m_isHaveExplode(false)
 {
     m_id = data["BulletId"].asString();
     m_modelId = data["ModelId"].asString();
@@ -22,6 +23,10 @@ BulletModel::BulletModel(Json::Value data)
         }
     }
     m_explode = data["explode"].asString();
+    if (m_explode.size() > 1)
+    {
+        m_isHaveExplode = true;
+    }
     m_flyType = atoi(data["fly"].asString().c_str());
     m_weaponType = atoi(data["WeaponType"].asString().c_str());
     m_description = data["ItemDescription"].asString();
@@ -58,4 +63,9 @@ int BulletModel::getWeaponType()
 string BulletModel::getDescription()
 {
     return m_description;
+}
+
+bool BulletModel::isHaveExplode()
+{
+    return m_isHaveExplode;
 }
