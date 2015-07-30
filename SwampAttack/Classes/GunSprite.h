@@ -12,12 +12,14 @@
 #include "BaseCode.h"
 #include "Gun.h"
 #include "GameObserver.h"
+#include "ProgressBar.h"
 
 class GunSprite : public Sprite,public GameObserver{
 private:
     Gun * m_gun;
     std::vector<Sprite * > m_bullets;
     std::vector<Sprite * > m_bulletsBg;
+    ProgressBar * m_bulletProBar;
     Sprite  *   m_greenBg;
     Sprite  *   m_blueBg;
     Label   *   m_bulletLabel;

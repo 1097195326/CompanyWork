@@ -28,7 +28,7 @@ public:
     Vec2 flyEnemy_target_buttomPoint = {m_visibleOrigin.x + 30, m_visibleOrigin.y + 80};
     
     
-    Vec2 m_BulletStartPoint = {m_visibleOrigin.x + 230, m_visibleOrigin.y + 240};
+    Vec2 m_BulletStartPoint = {m_visibleOrigin.x + 290, m_visibleOrigin.y + 270};
     
     
     Vec2 fightScene_human_Point = {m_visibleOrigin.x + 240, m_visibleOrigin.y + 180};

@@ -94,7 +94,7 @@ protected:
     Enemy   * m_enemy;
     BulletModel * m_bulletModel;
 protected:
-    void    setView();
+    
     
 public:
     std::string getModelId();
@@ -121,6 +121,8 @@ public:
     BulletInfoData getBaozhaTexiaoInfo();
     
     bool    isHaveExplode();
+    
+    virtual void    setView();
     
     void    gameLoop(float data);
     virtual void move();

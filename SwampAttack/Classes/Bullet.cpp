@@ -45,7 +45,7 @@ m_enemy(NULL)
     
     m_bulletModel = BulletManager::getInstance()->getBulletModelById(m_bp.m_modelId);
     
-    setView();
+//    setView();
 }
 Bullet::~Bullet()
 {
@@ -216,7 +216,7 @@ BulletInfoData Bullet::getDandaoInfo()
         data.frames = 1;
     }else if ("BulletModelId7" == modelId)
     {
-        data.name = "bullet_qiang";
+        data.name = "bullet_qiang11";
         data.frames = 4;
     }else if ("BulletModelId8" == modelId)
     {

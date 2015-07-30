@@ -11,7 +11,7 @@
 
 #include "PunctureBullet.h"
 #include "CurveBullet.h"
-
+#include "LiquidBullet.h"
 
 BulletManager::BulletManager()
 {
@@ -55,14 +55,16 @@ void BulletManager::fire(BulletParameter bp)
                 bullet = new PunctureBullet(bp);
                 break;
             case 5:
-                bullet = new Bullet(bp);
+                bullet = new LiquidBullet(bp);
                 break;
             case 6:
                 bullet = new CurveBullet(bp);
                 break;
             default:
+                bullet = new Bullet(bp);
                 break;
         }
+        bullet->setView();
         bullets.push_back(bullet);
     }
 }

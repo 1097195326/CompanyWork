@@ -40,14 +40,15 @@ void FireBulletSprite::setModel(Bullet *bullet)
         runAction(ac);
     }
     setScale(0);
-    
+    setAnchorPoint(Vec2(0, 0.3));
+    setPosition(m_model->getStartPosition());
 }
 void FireBulletSprite::update(float data)
 {
     if (m_model->isMoving()) {
         float s_x = m_model->getPosition().x - m_model->getStartPosition().x;
         setScale(s_x/450.0f);
-        setPosition(m_model->getPosition().x / 2, m_model->getPosition().y);
+        setPositionX(m_model->getStartPosition().x);
         
     }else if (m_model->isArrive())
     {

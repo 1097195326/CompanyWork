@@ -48,26 +48,40 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
         Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener, m_greenBg);
     }
     
-    int size = m_gun->getMagazieSize();
+    
     Vec2 point = _G_M_M->fightScene_Bullet_Position;
-    m_bullets.reserve(size);
     
-    
+    int bulletShowType = m_gun->getBulletshowType();
     string gunModelId = m_gun->getModelId();
     
-    for (int i = 0; i < size; ++i)
+    if (bulletShowType == 2)
     {
-        Sprite * b_g = Sprite::create(ImagePath(gunModelId + "_bulletBg.png"));
-        Sprite * b_i = Sprite::create(ImagePath(gunModelId + "_bulletIcon.png"));
+        m_bulletProBar = new ProgressBar((gunModelId + "_bulletIcon.png"),
+                                         (gunModelId + "_bulletBg.png"));
+        m_bulletProBar->autorelease();
+        addChild(m_bulletProBar);
+        m_bulletProBar->setBarLeft();
+        m_bulletProBar->setPosition(point);
+    }else
+    {
+        int size = m_gun->getMagazieSize();
+        m_bullets.reserve(size);
         
-        point.x = point.x - b_g->getContentSize().width * 0.7;
-        b_g->setPosition(point);
-        b_i->setPosition(point);
-        addChild(b_g);
-        addChild(b_i);
-        m_bullets.push_back(b_i);
-        m_bulletsBg.push_back(b_g);
+        for (int i = 0; i < size; ++i)
+        {
+            Sprite * b_g = Sprite::create(ImagePath(gunModelId + "_bulletBg.png"));
+            Sprite * b_i = Sprite::create(ImagePath(gunModelId + "_bulletIcon.png"));
+            
+            point.x = point.x - b_g->getContentSize().width * 0.7;
+            b_g->setPosition(point);
+            b_i->setPosition(point);
+            addChild(b_g);
+            addChild(b_i);
+            m_bullets.push_back(b_i);
+            m_bulletsBg.push_back(b_g);
+        }
     }
+    
     
     updateData();
     _G_V->addChild(this,640);
@@ -94,21 +108,28 @@ void GunSprite::touchEnd(Touch *touch, Event *event)
 }
 void GunSprite::updateData()
 {
+    int bulletShowType = m_gun->getBulletshowType();
     int bulletNum = m_gun->getBulletNum();
     int size = m_gun->getMagazieSize();
     
     if (m_gun->isCurrentGun())
     {
-        for (int i = size-1; i >= 0; --i)
+        if (bulletShowType == 2) {
+            m_bulletProBar->setVisible(true);
+            m_bulletProBar->updatePercent((float)bulletNum/(float)size * 100);
+        }else
         {
-            if (i > bulletNum-1)
+            for (int i = size-1; i >= 0; --i)
             {
-                m_bullets[i]->setVisible(false);
-            }else
-            {
-                m_bullets[i]->setVisible(true);
+                if (i > bulletNum-1)
+                {
+                    m_bullets[i]->setVisible(false);
+                }else
+                {
+                    m_bullets[i]->setVisible(true);
+                }
+                m_bulletsBg[i]->setVisible(true);
             }
-            m_bulletsBg[i]->setVisible(true);
         }
         if (GunManager::getInstance()->getTakeUpGunNum() > 1)
         {
@@ -122,10 +143,15 @@ void GunSprite::updateData()
         }
     }else
     {
-        for (int i = size-1; i >= 0; --i)
+        if (bulletShowType == 2) {
+            m_bulletProBar->setVisible(false);
+        }else
         {
-            m_bullets[i]->setVisible(false);
-            m_bulletsBg[i]->setVisible(false);
+            for (int i = size-1; i >= 0; --i)
+            {
+                m_bullets[i]->setVisible(false);
+                m_bulletsBg[i]->setVisible(false);
+            }
         }
         if (GunManager::getInstance()->getTakeUpGunNum() > 1)
         {
