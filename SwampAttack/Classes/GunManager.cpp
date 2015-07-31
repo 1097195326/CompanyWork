@@ -199,6 +199,7 @@ void GunManager::resetData()
         Gun * _gun = iter->second;
         _gun->resetData();
     }
+    changeGun(defaultGunID);
 }
 void GunManager::saveBullet()
 {

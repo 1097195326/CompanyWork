@@ -24,6 +24,7 @@ HumanSprite::~HumanSprite()
     for (itr = m_actionData.begin(); itr != m_actionData.end(); itr++) {
         Action * ac = itr->second;
         ac->release();
+        log("ac retain:%d",ac->getReferenceCount());
     }
     m_actionData.clear();
 //    log("human deleate");

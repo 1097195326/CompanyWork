@@ -39,7 +39,7 @@ m_enemy(NULL)
     Vec2 jizhunXian = m_bp.m_target == t_enemy ? Vec2(1, 0) : Vec2(-1, 0);
     m_angle = m_speed.getAngle(jizhunXian) * (180.0f / PAI);
     
-    m_speed = m_speed * m_bp.m_bulletSpeed * 0.1;
+    m_speed = m_speed * m_bp.m_bulletSpeed * 1;
     
     m_state = _b_moving;
     
@@ -53,7 +53,7 @@ Bullet::~Bullet()
 }
 void Bullet::move()
 {
-    m_Point = m_Point + m_speed * 1;
+    m_Point = m_Point + m_speed * 0.1;
 }
 void Bullet::gameLoop(float data)
 {

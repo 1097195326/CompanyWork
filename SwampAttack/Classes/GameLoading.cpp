@@ -23,7 +23,8 @@ float GameLoading::loadFrames()
 {
     auto spriteFrameCache = SpriteFrameCache::getInstance();
     
-    
+    SpriteFrameCache::getInstance()->removeSpriteFrames();
+    Director::getInstance()->getTextureCache()->removeAllTextures();
     
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("HumanThrow.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("explosion.plist"));
@@ -40,6 +41,7 @@ float GameLoading::loadFrames()
         {
             spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang3.plist"));
             spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang3_2.plist"));
+            log("add qiang3");
         }else if ("qiang5" == modelId)
         {
             spriteFrameCache->addSpriteFramesWithFile(ImagePath("qiang5.plist"));
