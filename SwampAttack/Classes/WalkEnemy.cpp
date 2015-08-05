@@ -100,7 +100,8 @@ void WalkEnemy::wander()
 }
 void WalkEnemy::move()
 {
-    m_point = m_point + m_speedV;
+    m_point = m_point + m_speedV + m_effectSpeedV;
+    m_effectSpeedV = Vec2::ZERO;
 }
 bool WalkEnemy::computeIfWander()
 {

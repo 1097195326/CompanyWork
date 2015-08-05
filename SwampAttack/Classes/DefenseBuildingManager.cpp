@@ -33,6 +33,7 @@ DefenseBuildingManager::DefenseBuildingManager()
                 m_buildingData[propId] = new DefenseBuilding3(data[propId]);
                 break;
             default:
+                m_buildingData[propId] = new DefenseBuilding(data[propId]);
                 break;
         }
         

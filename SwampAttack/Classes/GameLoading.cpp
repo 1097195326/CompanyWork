@@ -83,6 +83,15 @@ float GameLoading::loadFrames()
             spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear1.plist"));
             spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear2.plist"));
             spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear3.plist"));
+        }else if ("daoju7" == modelId)
+        {
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju7.plist"));
+        }else if ("daoju8" == modelId)
+        {
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju8.plist"));
+        }else if ("daoju9" == modelId)
+        {
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju9.plist"));
         }
     }
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("burn.plist"));
@@ -112,26 +121,16 @@ float GameLoading::loadFrames()
             switch (monsterId) {
                 case 100001:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull2.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull3.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull4.plist"));
                     break;
                 case 100002:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull2.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull3.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull4.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullArmor.plist"));
                     break;
                 case 100003:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie2.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie3.plist"));
                     break;
                 case 100004:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie2.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie3.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieArmor.plist"));
                     break;
                 case 100005:
@@ -148,51 +147,31 @@ float GameLoading::loadFrames()
                     
                     break;
                 case 100009:
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind2.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind.plist"));
                     break;
                 case 100010:
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind2.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("blindArmor.plist"));
                     break;
                 case 100011:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea2.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea3.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea4.plist"));
                     break;
                 case 100012:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea2.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea3.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea4.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("muroideaArmor.plist"));
                     break;
                 case 100013:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin2.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin3.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin4.plist"));
                     break;
                 case 100014:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin2.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin3.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin4.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("pumpkinArmor.plist"));
                     break;
                 case 100015:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow2.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow3.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow4.plist"));
                     break;
                 case 100016:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow2.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow3.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow4.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrowArmor.plist"));
                     break;
                 case 200001:

@@ -221,7 +221,23 @@ void Enemy::hurt(int damage)
     }
 //    log("enemy health2 :%f",m_health);
 }
+void Enemy::hurtYun(float dlay)
+{
+    m_status &= e_clear;
+    m_status |= e_s_yun;
+    m_yunDlay = dlay;
+}
+void Enemy::hurtJiansu(float su)
+{
+    m_effectSpeedV = m_speedV;
+    m_effectSpeedV.normalize();
+    m_effectSpeedV *= -su;
+}
 //--- view 接口
+bool Enemy::isYun()
+{
+    return m_status & e_s_yun;
+}
 bool Enemy::isWeak()
 {
     return m_isWeak;

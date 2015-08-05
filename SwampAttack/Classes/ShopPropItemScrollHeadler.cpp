@@ -209,6 +209,14 @@ void ShopPropItemScrollHeadler::initLockView()
                           + iconName->getContentSize().width * 1,
                           itemBgSize.height * 0.2);
     addChild(iconName);
+//    log("item name:%s",prop->getItemName().c_str());
+//    Label * iconName = Label::createWithTTF(prop->getItemName(), "fonts/Arial Black.ttf", 30);
+//    iconName->setPosition(-itemBgSize.width * 0.25
+//                            + iconName->getContentSize().width * 0.5,
+//                            itemBgSize.height * 0.2);
+//    iconName->enableOutline(Color4B(0, 0, 0, 255),3);
+//    iconName->setAdditionalKerning(-3);
+//    addChild(iconName);
     
     m_unLockButton = new GameSprite(ImagePath("shopItemButonUnclock.png"));
     m_unLockButton->m_touchMeCall =CC_CALLBACK_2(ShopPropItemScrollHeadler::unLock, this);

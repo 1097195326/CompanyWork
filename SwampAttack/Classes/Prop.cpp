@@ -291,7 +291,7 @@ void Prop::arrveCall()  // 3
 void Prop::throwCall()  //5
 {
     log("throw call");
-    if (m_modelId == "daoju3") {
+    if (m_modelId == "daoju3" || m_modelId == "daoju9") {
         setStateReadyToHurt();
     }else
     {

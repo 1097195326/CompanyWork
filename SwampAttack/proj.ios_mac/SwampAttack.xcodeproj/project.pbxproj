@@ -167,6 +167,9 @@
 		8DE207341B39128E0052E738 /* ShopGoldShowLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE207321B39128E0052E738 /* ShopGoldShowLayer.cpp */; };
 		8DE207371B39508C0052E738 /* ShopExpendShowLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE207351B39508C0052E738 /* ShopExpendShowLayer.cpp */; };
 		8DE2268F1B5F466600944493 /* BulletModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2268D1B5F466600944493 /* BulletModel.cpp */; };
+		8DE2B73E1B71DE0500F5D2BE /* PropSprite_daoju7.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2B73C1B71DE0500F5D2BE /* PropSprite_daoju7.cpp */; };
+		8DE2B7411B71DE1900F5D2BE /* PropSprite_daoju8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2B73F1B71DE1900F5D2BE /* PropSprite_daoju8.cpp */; };
+		8DE2B7441B71DE2700F5D2BE /* PropSprite_daoju9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2B7421B71DE2700F5D2BE /* PropSprite_daoju9.cpp */; };
 		8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3B4561AF0B36800938655 /* HouseSprite.cpp */; };
 		8DE3C38B1AFB0F9F00C61D89 /* GameScrollHeadler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3C3891AFB0F9F00C61D89 /* GameScrollHeadler.cpp */; };
 		8DE3C38E1AFB13F300C61D89 /* GameVerticalScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3C38C1AFB13F300C61D89 /* GameVerticalScrollView.cpp */; };
@@ -492,6 +495,12 @@
 		8DE207361B39508C0052E738 /* ShopExpendShowLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopExpendShowLayer.h; sourceTree = "<group>"; };
 		8DE2268D1B5F466600944493 /* BulletModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BulletModel.cpp; sourceTree = "<group>"; };
 		8DE2268E1B5F466600944493 /* BulletModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletModel.h; sourceTree = "<group>"; };
+		8DE2B73C1B71DE0500F5D2BE /* PropSprite_daoju7.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropSprite_daoju7.cpp; sourceTree = "<group>"; };
+		8DE2B73D1B71DE0500F5D2BE /* PropSprite_daoju7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropSprite_daoju7.h; sourceTree = "<group>"; };
+		8DE2B73F1B71DE1900F5D2BE /* PropSprite_daoju8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropSprite_daoju8.cpp; sourceTree = "<group>"; };
+		8DE2B7401B71DE1900F5D2BE /* PropSprite_daoju8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropSprite_daoju8.h; sourceTree = "<group>"; };
+		8DE2B7421B71DE2700F5D2BE /* PropSprite_daoju9.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropSprite_daoju9.cpp; sourceTree = "<group>"; };
+		8DE2B7431B71DE2700F5D2BE /* PropSprite_daoju9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropSprite_daoju9.h; sourceTree = "<group>"; };
 		8DE3B4561AF0B36800938655 /* HouseSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HouseSprite.cpp; sourceTree = "<group>"; };
 		8DE3B4571AF0B36800938655 /* HouseSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSprite.h; sourceTree = "<group>"; };
 		8DE3C3891AFB0F9F00C61D89 /* GameScrollHeadler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScrollHeadler.cpp; sourceTree = "<group>"; };
@@ -1082,6 +1091,12 @@
 				8DDC27C41B1EEE1000A4FD8D /* PropSprite_daoju5.h */,
 				8DD2F25E1B21492800A52B33 /* PropSprite_daoju6.cpp */,
 				8DD2F25F1B21492800A52B33 /* PropSprite_daoju6.h */,
+				8DE2B73C1B71DE0500F5D2BE /* PropSprite_daoju7.cpp */,
+				8DE2B73D1B71DE0500F5D2BE /* PropSprite_daoju7.h */,
+				8DE2B73F1B71DE1900F5D2BE /* PropSprite_daoju8.cpp */,
+				8DE2B7401B71DE1900F5D2BE /* PropSprite_daoju8.h */,
+				8DE2B7421B71DE2700F5D2BE /* PropSprite_daoju9.cpp */,
+				8DE2B7431B71DE2700F5D2BE /* PropSprite_daoju9.h */,
 				8DD5D0B21B1419AF00AA2A07 /* EnemyProgressBar.cpp */,
 				8DD5D0B31B1419AF00AA2A07 /* EnemyProgressBar.h */,
 			);
@@ -1311,6 +1326,7 @@
 				8DD8C1281AFC642F00872AA2 /* GameUser.cpp in Sources */,
 				8DE3C38B1AFB0F9F00C61D89 /* GameScrollHeadler.cpp in Sources */,
 				D8D673AC1B19F7DD004C463F /* MapGuanqiaButton.cpp in Sources */,
+				8DE2B73E1B71DE0500F5D2BE /* PropSprite_daoju7.cpp in Sources */,
 				8DC6A5D11ADFD774002A6159 /* HumanShootState.cpp in Sources */,
 				8DE207371B39508C0052E738 /* ShopExpendShowLayer.cpp in Sources */,
 				8DC2ACDA1AC56A77004F3C1B /* HumanSprite.cpp in Sources */,
@@ -1371,6 +1387,7 @@
 				8DD499731B0450000037CBAA /* GameBuff.cpp in Sources */,
 				8DD2156B1B16E7160090EEEB /* GameScrollHeadlerView.cpp in Sources */,
 				8DC10ACB1AC40222004F7DE2 /* EnemyManager.cpp in Sources */,
+				8DE2B7411B71DE1900F5D2BE /* PropSprite_daoju8.cpp in Sources */,
 				8DD29D401B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.cpp in Sources */,
 				8DD9D7EC1B40F8BF005F015B /* ShopHealthShowLayer.cpp in Sources */,
 				8DD88E741B2598050072688E /* DefenseBuilding1.cpp in Sources */,
@@ -1409,6 +1426,7 @@
 				8DE3F7B41AF75AB5001E048F /* ScrollController.cpp in Sources */,
 				8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				8DE2B7441B71DE2700F5D2BE /* PropSprite_daoju9.cpp in Sources */,
 				8DC6A5CB1ADFD64A002A6159 /* State.cpp in Sources */,
 				8DD841DA1B42321C002E522B /* GameReliveLayer.cpp in Sources */,
 				8DC34A9D1ADCF8DA00C6B657 /* GameMap5s.cpp in Sources */,
