@@ -77,6 +77,8 @@ void EnemySprite::die()
 {}
 void EnemySprite::hurt()
 {}
+void EnemySprite::dianji()
+{}
 void EnemySprite::texiaoCall()
 {
     texiaoSprite->setVisible(false);
@@ -89,6 +91,7 @@ void EnemySprite::attackCall()
 }
 void EnemySprite::dieCall()
 {
+//    log("----- die");
     m_model->dieingCall();
 }
 void EnemySprite::hurtCall()

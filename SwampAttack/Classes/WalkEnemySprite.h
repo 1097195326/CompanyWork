@@ -21,6 +21,8 @@ protected:
     void    attack(float data);
     void    die();
     void    hurt();
+    void    dianji();
+    void    tanfei();
     void    setArmorView();
 public:
     void        update(float data);

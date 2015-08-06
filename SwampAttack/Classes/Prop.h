@@ -40,6 +40,8 @@ private:
     PropState   m_state;
     Vec2        m_point;
     Vec2        m_viewPoint;
+    
+    float       m_decelerationDlay;
 public:
     Prop(Json::Value value);
     ~Prop();
@@ -99,7 +101,11 @@ private:
     string      m_modelId;      //
     float       m_effectArea;   //
     float       m_damage;       //
+    float       m_vertigo;
+    float       m_deceleration ;
+    
     std::vector<string>  m_buffIds;
+    float       m_time;
     int         m_itemPrice;
     string      m_unlockMission;
     int         m_unlockGold;

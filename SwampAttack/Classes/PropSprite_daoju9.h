@@ -24,6 +24,7 @@ public:
     
     void    hurtCall(Node * psender);
     void    spriteCall2(Node * psender);
+    void    spriteCall3(Node * psender);
 };
 
 #endif /* defined(__SwampAttack__PropSprite_daoju9__) */

@@ -56,21 +56,32 @@ void PropSprite_daoju8::spriteCall(Node * psender)
 {
     ActionInterval * a2 = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("daoju8_broken", 5), NULL);
     ActionInterval * a1 = Sequence::create(DelayTime::create(0.08 * 1),
-                                           CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju8::propThrowCall, this)), NULL);
+                                           CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju8::spriteCall2, this)), NULL);
     Sprite * ss = (Sprite *)psender;
     ss->stopAllActions();
     ss->removeAllChildrenWithCleanup(true);
     ss->runAction(Sequence::create(
                                    Spawn::create(a1,a2, NULL),
-                                   CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju8::spriteCall2, this)),
+                                   CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju8::spriteCall3, this)),
                                    NULL) );
     string modelId = m_prop->getModelId();
     SimpleAudioEngine::getInstance()->playEffect(MusicPath(modelId + ".mp3").c_str());
 }
 void PropSprite_daoju8::spriteCall2(Node * psender)
 {
-    m_prop->setStateDie();
+    Sprite * ss = (Sprite *)psender;
+    
+    Sprite * s = Sprite::create(ImagePath("daoju8_youzi.png"));
+    s->setPosition(ss->getPosition());
+    addChild(s);
+    runAction(FadeIn::create(0.3));
+    
+    
+}
+void PropSprite_daoju8::spriteCall3(cocos2d::Node *psender)
+{
     Sprite * ss = (Sprite *)psender;
     ss->stopAllActions();
     ss->removeFromParentAndCleanup(true);
+    propThrowCall(NULL);
 }

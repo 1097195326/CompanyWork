@@ -30,6 +30,15 @@ void WalkEnemy::gameLoop(float data)
             m_status &= e_clear;
             m_status |= e_walk;
         }
+    }else if (m_status & e_dianji)
+    {
+        m_dianjiDlay += data;
+        if (m_dianjiDlay >= m_dianjiCount)
+        {
+            m_status &= e_clear;
+            m_status |= e_walk;
+            m_dianjiDlay = 0.0f;
+        }
     }else if (m_status & e_walk)
     {
         move();

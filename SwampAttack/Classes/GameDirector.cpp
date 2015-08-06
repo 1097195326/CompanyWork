@@ -68,12 +68,13 @@ void GameDirector::gameLoop(float data)
     {
         return;
     }
+    PropManager::getInstance()->gameLoop(data);
     GameBuffManager::getInstance()->gameLoop(data);
     EnemyManager::getInstance()->gameLoop(data);
     Human::getInstance()->gameLoop(data);
     BulletManager::getInstance()->gameLoop(data);
     DefenseBuildingManager::getInstance()->gameLoop(data);
-    PropManager::getInstance()->gameLoop(data);
+    
     
 //    checkCross();
     if (EnemyManager::getInstance()->isOver() || House::getInstance()->isOver()) {

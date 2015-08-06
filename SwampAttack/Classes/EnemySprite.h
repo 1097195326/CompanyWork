@@ -24,7 +24,10 @@ enum ActionStatus
     isWanderB,
     isHurting,
     isAttacking,
+    isDianji,
+    isTanfei,
     isDieing,
+    
 };
 class EnemySprite :public Sprite {
 protected:
@@ -46,7 +49,7 @@ protected:
     virtual void    attack(float data = 0.0f);
     virtual void    die();
     virtual void    hurt();
-    
+    virtual void    dianji();
     void    attackCall();
     void    dieCall();
     void    hurtCall();

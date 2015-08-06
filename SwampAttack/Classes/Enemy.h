@@ -32,7 +32,8 @@ enum EnemyStatus
     e_hurt3   = 0b00100000000,
     e_attack  = 0b01000000000,
     e_canDel  = 0b10000000000,
-    e_s_yun   = 0b100000000000,
+    e_dianji  = 0b100000000000,
+    e_tanfei  = 0b1000000000000,
     
 };
 
@@ -49,7 +50,8 @@ protected:
     float   tatolDlay;
     float   hurtDlay;       //受伤 记数
     
-    float   m_yunDlay;      // 震荡弹 记数
+    float   m_dianjiDlay;      // 震荡弹 记数
+    float   m_dianjiCount;
     Vec2    m_effectSpeedV;  //
     
     float   m_attackWaitTime;
@@ -67,6 +69,7 @@ public:
     virtual void    effectAction(Vec2 point);
     void    hurtYun(float dlay);
     void    hurtJiansu(float su);
+    void    hurtTanfei();
     void    addBuff(GameBuff * buff);
     void    moveBuff(GameBuff * buff);
     bool    isHaveBuff();
@@ -111,7 +114,8 @@ public:
     void    gameLoop(float data);
 public:
     //--- view 接口
-    bool    isYun();
+    bool    isTanfei();
+    bool    isDianji();
     bool    isWeak();
     bool    isShowHurt();
     bool    isDieing();
@@ -128,6 +132,7 @@ public:
     void    diedCall();
     void    attackCall();
     void    hurtCall();
+//    void    hurtTanfeiCall();
     bool    isCanDelete();
     //--- interface for
     bool    isDied();

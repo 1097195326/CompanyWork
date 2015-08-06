@@ -78,8 +78,17 @@ void PropSprite_daoju9::throwProp()
     m_propTexiao->addChild(s2);
     s2->runAction(a2);
     
-    m_propTexiao->runAction(Sequence::create(a1,CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju9::propThrowCall, this)),NULL));
+    m_propTexiao->runAction(Sequence::create(a1,CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju9::spriteCall3, this)),NULL));
     
+}
+void PropSprite_daoju9::spriteCall3(Node * psender)
+{
+    m_state = p_s_normal;
+    Sprite * ss = (Sprite *)psender;
+    ss->stopAllActions();
+    ss->removeAllChildrenWithCleanup(true);
+    ss->setSpriteFrame("daoju9_springs0001.png");
+    propThrowCall(NULL);
 }
 void PropSprite_daoju9::hurtCall(Node * psender)
 {

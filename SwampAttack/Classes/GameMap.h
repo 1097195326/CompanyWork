@@ -52,6 +52,7 @@ public:
     
     float fightScene_PropArrve_line = m_visibleOrigin.y + 120;
     
+    Vec2 enemy_tanfei_targetPoint = {m_visibleOrigin.x + 1156, m_visibleOrigin.y + 0};
 };
 
 #endif /* defined(__SwampAttack__GameMap__) */

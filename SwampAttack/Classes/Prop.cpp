@@ -19,7 +19,8 @@
 #include "PropSpriteView.h"
 
 Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal),
-m_isMaxLevel(false)
+m_isMaxLevel(false),
+m_decelerationDlay(0.0f)
 {
     m_id = data["ItemId"].asString() ;
     string itemName = data["ItemName"].asString();
@@ -40,6 +41,7 @@ m_isMaxLevel(false)
             m_buffIds.push_back(buffIds[i].asString());
         }
     }
+    m_time = atof(data["Time"].asString().c_str());
     string itemDescription = data["ItemDescription"].asString();
     m_itemDestription = _C_M->getTranslateById(itemDescription);
     
@@ -52,6 +54,8 @@ m_isMaxLevel(false)
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
     Json::Value upgradeData = _C_M->getDataByTag("daojuUpgrade",upId);
     m_damage = atof(upgradeData["Damage"].asString().c_str());
+    m_vertigo = atof(upgradeData["Vertigo"].asString().c_str());
+    m_deceleration = atof(upgradeData["Deceleration"].asString().c_str());
 //    log("level:limitlevel = %d:%d",m_strengthenLevel,m_limitLevel);
     if (m_limitLevel == m_strengthenLevel)
     {
@@ -96,7 +100,20 @@ void Prop::gameLoop(float data)
             Enemy * enemy = *e_iter;
             if (enemy->isContainsPoint(getPropRect()))
             {
-                enemy->hurt(m_damage,3);
+                if (m_modelId == "daoju7")
+                {
+                    enemy->hurtYun(m_vertigo);
+                }else if (m_modelId == "daoju8")
+                {
+                    enemy->hurtJiansu(m_deceleration);
+                }else if (m_modelId == "daoju9")
+                {
+                    enemy->hurtTanfei();
+                }else
+                {
+                    enemy->hurt(m_damage,3);
+                }
+                
                 if (!m_buffIds.empty())
                 {
                     for (int i = 0; i < m_buffIds.size(); ++i)
@@ -110,7 +127,18 @@ void Prop::gameLoop(float data)
                 }
             }
         }
-        setStateDieing();
+        if (m_modelId == "daoju8")
+        {
+            m_decelerationDlay += data;
+            if (m_decelerationDlay >= m_time)
+            {
+                m_decelerationDlay = 0.0f;
+                setStateDie();
+            }
+        }else
+        {
+            setStateDieing();
+        }
     }
 }
 Rect Prop::getPropRect()

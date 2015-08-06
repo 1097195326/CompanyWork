@@ -20,7 +20,8 @@ m_data(data),
 m_isShowHurt(false),
 m_isWeak(false),
 m_isStop(false),
-m_attackWaitTime(0.0f)
+m_attackWaitTime(0.0f),
+m_dianjiDlay(0.0f)
 {
     m_actionType = atoi(m_data["ActionType"].asString().c_str());
     
@@ -224,8 +225,8 @@ void Enemy::hurt(int damage)
 void Enemy::hurtYun(float dlay)
 {
     m_status &= e_clear;
-    m_status |= e_s_yun;
-    m_yunDlay = dlay;
+    m_status |= e_dianji;
+    m_dianjiCount = dlay;
 }
 void Enemy::hurtJiansu(float su)
 {
@@ -233,10 +234,19 @@ void Enemy::hurtJiansu(float su)
     m_effectSpeedV.normalize();
     m_effectSpeedV *= -su;
 }
-//--- view 接口
-bool Enemy::isYun()
+void Enemy::hurtTanfei()
 {
-    return m_status & e_s_yun;
+    m_status &= e_clear;
+    m_status |= e_tanfei;
+}
+//--- view 接口
+bool Enemy::isTanfei()
+{
+    return m_status & e_tanfei;
+}
+bool Enemy::isDianji()
+{
+    return m_status & e_dianji;
 }
 bool Enemy::isWeak()
 {
@@ -322,6 +332,10 @@ void Enemy::hurtCall()
     m_status &= e_clear;
     m_status |= e_walk;
 }
+//void Enemy::hurtTanfeiCall()
+//{
+//    
+//}
 void Enemy::attackCall()
 {
     switch (m_attackType) {
