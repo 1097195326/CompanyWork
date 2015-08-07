@@ -106,49 +106,35 @@ bool GameOverScene::init()
     _G_U->setUserGold(userGold);
     
     Menu * buttonMenu = NULL;
-//    if (m_overStatus == o_win)
-//    {
-        Sprite * title = Sprite::create(ImagePath("overScene_win.png"));
-        title->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                           m_visibleOrigin.y + m_visibleSize.height * 0.58);
-        addChild(title);
-        MenuItemImage * gotoShopButton = MenuItemImage::create(ImagePath("overScene_toShop.png"),
-                                                           ImagePath("overScene_toShop.png"),
-                                                           CC_CALLBACK_1( GameOverScene::gotoShop, this));
-        gotoMapButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 - widthOffset,
-                                   m_visibleOrigin.y + m_visibleSize.height * 0.22);
-        restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                                   m_visibleOrigin.y + m_visibleSize.height * 0.22);
-        gotoShopButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset,
-                                m_visibleOrigin.y + m_visibleSize.height * 0.22);
-        
-//        gotoMapButton->setScale(0.9);
-//        restartButton->setScale(0.9);
-//        gotoShopButton->setScale(0.9);
-        buttonMenu = Menu::create(gotoMapButton,restartButton,gotoShopButton, NULL);
-        
+    Sprite * title = Sprite::create(ImagePath("overScene_win.png"));
+    title->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                       m_visibleOrigin.y + m_visibleSize.height * 0.58);
+    addChild(title);
+    MenuItemImage * gotoShopButton = MenuItemImage::create(ImagePath("overScene_toShop.png"),
+                                                       ImagePath("overScene_toShop.png"),
+                                                       CC_CALLBACK_1( GameOverScene::gotoShop, this));
+    gotoMapButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 - widthOffset,
+                               m_visibleOrigin.y + m_visibleSize.height * 0.22);
+    restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                               m_visibleOrigin.y + m_visibleSize.height * 0.22);
+    gotoShopButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset,
+                            m_visibleOrigin.y + m_visibleSize.height * 0.22);
+
+    buttonMenu = Menu::create(gotoMapButton,restartButton,gotoShopButton, NULL);
+    
+    buttonMenu->setPosition(Point::ZERO);
+    addChild(buttonMenu,200);
+    
+    if (m_overStatus == o_win)
+    {
         GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
         GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
         nextGuanqia->unlockGuanqia();
-        GunManager::getInstance()->checkUnlock();
-        PropManager::getInstance()->checkUnlock();
-        GunManager::getInstance()->saveBullet();
-//    }else
-//    {
-//        Sprite * title = Sprite::create(ImagePath("overScene_title.png"));
-//        title->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-//                           m_visibleOrigin.y + m_visibleSize.height * 0.58);
-//        addChild(title);
-//        gotoMapButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 - widthOffset * 0.7,
-//                                   m_visibleOrigin.y + m_visibleSize.height * 0.22);
-//        restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset * 0.7,
-//                                   m_visibleOrigin.y + m_visibleSize.height * 0.22);
-//        gotoMapButton->setScale(0.9);
-//        restartButton->setScale(0.9);
-//        buttonMenu = Menu::create(gotoMapButton,restartButton, NULL);
-//    }
-    buttonMenu->setPosition(Point::ZERO);
-    addChild(buttonMenu,200);
+        GunManager::getInstance()->checkUnlock(this);
+        PropManager::getInstance()->checkUnlock(this);
+        
+    }
+    GunManager::getInstance()->saveBullet();
     
     _G_D->resetGameData();
     

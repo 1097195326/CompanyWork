@@ -17,6 +17,8 @@
 #include "GuanQiaManager.h"
 
 #include "PropSpriteView.h"
+#include "GameShowDiscLayer.h"
+
 
 Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal),
 m_isMaxLevel(false),
@@ -280,13 +282,21 @@ bool Prop::unlockProp()
     
     return true;
 }
-void Prop::checkUnlock()
+void Prop::checkUnlock(Layer * layer)
 {
     GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getGuanqiaById(m_unlockMission);
-    if (guanqia->isUnlock())
+    if (guanqia->isUnlock() && !m_isUnlock)
     {
         m_isUnlock = true;
         _G_U->unlockProp(m_id);
+        
+//        GameShowDiscLayer * showLayer = new GameShowDiscLayer(m_modelId,
+//                                                              m_itemDestription,
+//                                                              Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+//                                                                   m_visibleOrigin.y + m_visibleSize.height * 0.5),
+//                                                              true);
+//        showLayer->autorelease();
+//        layer->addChild(showLayer,201);
     }
 }
 int Prop::getNum()

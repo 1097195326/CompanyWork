@@ -43,7 +43,7 @@ public:
     void    setFightView();
     void    setShopView(Sprite * shopScene);
     
-    void    checkUnlock();
+    void    checkUnlock(Layer * layer);
     void    resetData();
     void    saveBullet();
 public:

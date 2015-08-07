@@ -63,7 +63,7 @@ public:
     bool    buyProp();
     bool    useProp();
     void    addProp();
-    void    checkUnlock();
+    void    checkUnlock(Layer * layer);
     
     //--- prop state ---
     void    setPropPoint(Vec2 point);

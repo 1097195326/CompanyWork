@@ -57,6 +57,7 @@ public:
     void    setIsCurrentGun(bool is);
     void    reloadBullet();
     bool    fire(Vec2 position);
+    void    hurtEnemy();
     void    setFightView();
     
     bool    isDefaultGun();
@@ -68,9 +69,10 @@ public:
     bool    isMaxLevel();
     
     int     getTakeUpIndex();
-    void    checkUnlock();
+    void    checkUnlock(Layer * layer);
     void    resetData();
     void    saveBullet();
+    
 private:
     string  m_id;
     string  m_weaponName;           //  武器名称

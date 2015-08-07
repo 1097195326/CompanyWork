@@ -7,6 +7,7 @@
 //
 
 #include "GameShowDiscLayer.h"
+#include "GameShopScene.h"
 
 
 GameShowDiscLayer::~GameShowDiscLayer()
@@ -16,7 +17,7 @@ GameShowDiscLayer::~GameShowDiscLayer()
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
     }
 }
-GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 position)
+GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 position,bool isUnlock)
 {
     init();
     m_point = position;
@@ -46,14 +47,28 @@ GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 posi
     Label  * discLabel = Label::createWithTTF(disc, "fonts/mimi.ttf", 30);
     discLabel->setColor(Color3B(0, 0, 0));
     
+    MenuItemImage * gotoShopButton = MenuItemImage::create(ImagePath("overScene_toShop.png"),
+                                                           ImagePath("overScene_toShop.png"),
+                                                           CC_CALLBACK_1( GameShowDiscLayer::gotoShop, this));
+    
     Size bgSize = bg->getContentSize();
     iconSpr->setPosition(bgSize.width * 0.21, bgSize.height * 0.75);
     nameSpr->setPosition(bgSize.width * 0.68, bgSize.height * 0.58);
     discLabel->setPosition(bgSize.width * 0.5, bgSize.height * 0.37);
+    gotoShopButton->setPosition(bgSize.width * 0.5, bgSize.height * 0.15);
+    
+    Menu * gotoShopMenu = Menu::create(gotoShopButton, NULL);
+    gotoShopMenu->setPosition(Vec2::ZERO);
     
     bg->addChild(iconSpr);
     bg->addChild(nameSpr);
     bg->addChild(discLabel);
+    
+    if (isUnlock)
+    {
+        bg->addChild(gotoShopMenu);
+    }
+    
     
     bg->setScale(0.001);
     bg->runAction(Spawn::create(MoveTo::create(0.5,Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
@@ -85,4 +100,9 @@ void GameShowDiscLayer::actionEndCall()
     layerColor->stopAllActions();
     bg->stopAllActions();
     removeFromParentAndCleanup(true);
+}
+void GameShowDiscLayer::gotoShop(cocos2d::Ref *pSender)
+{
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
+    Director::getInstance()->replaceScene(GameShopScene::scene());
 }

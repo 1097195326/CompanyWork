@@ -14,6 +14,9 @@
 #include "GunSprite.h"
 #include "GameDirector.h"
 #include "GuanQiaManager.h"
+#include "EnemyManager.h"
+
+#include "GameShowDiscLayer.h"
 
 GunActionInfo::GunActionInfo()
 {
@@ -191,13 +194,21 @@ Gun::~Gun()
 {
     
 }
-void Gun::checkUnlock()
+void Gun::checkUnlock(Layer * layer)
 {
     GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getGuanqiaById(m_unlockMission);
-    if (guanqia->isUnlock())
+    if (guanqia->isUnlock() && !m_isUnlock)
     {
         m_isUnlock = true;
         _G_U->unlockGun(m_id);
+        
+//        GameShowDiscLayer * showLayer = new GameShowDiscLayer(m_modelId,
+//                                                              m_weaponDescription,
+//                                                              Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+//                                                                   m_visibleOrigin.y + m_visibleSize.height * 0.5),
+//                                                              true);
+//        showLayer->autorelease();
+//        layer->addChild(showLayer,201);
     }
 }
 void Gun::resetData()
@@ -218,8 +229,7 @@ bool Gun::fire(Vec2 position)
 {
     if (m_weaponType == 1)
     {
-        
-        
+        hurtEnemy();
         return true;
     }
     GameMap * map = GameMapManager::getInstance()->getGameMap();
@@ -253,6 +263,27 @@ bool Gun::fire(Vec2 position)
         --m_totalBullets;
     }
     return m_totalBullets > 0;
+}
+void Gun::hurtEnemy()
+{
+    EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
+    if (!enemyGroup) {
+        return;
+    }
+    std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
+    if (!enemyData.empty())
+    {
+        std::list<Enemy*>::iterator e_iter;
+        for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
+        {
+            Enemy * enemy = *e_iter;
+            if (!enemy->isDied() &&
+                enemy->getPosition().x <= _G_M_M->fightScene_human_Point.x + m_range)
+            {
+                    enemy->hurt(m_damage,m_underAttackAction);
+            }
+        }
+    }
 }
 void Gun::setFightView()
 {
