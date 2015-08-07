@@ -39,6 +39,7 @@ m_index(0.0)
     Json::Value upgradeData = _C_M->getDataByTag("buildingUpgrade",upId);
     m_damage = atof(upgradeData["Damage"].asString().c_str());
     m_hp = atoi(upgradeData["Hp"].asString().c_str());
+    m_deceleration = atof(upgradeData["Deceleration"].asString().c_str());
     if (m_limitLevel == m_strengthenLevel)
     {
         m_isMaxLevel = true;
@@ -113,6 +114,11 @@ bool DefenseBuilding::isInRange(cocos2d::Vec2 point)
             break;
         case 3:
             if (point.x < _G_M_M->fightScene_gangpao_Point.x + m_damageArea)
+            {
+                return true;
+            }
+        case 4:
+            if (point.x < _G_M_M->fightScene_tengman_point.x + m_damageArea)
             {
                 return true;
             }

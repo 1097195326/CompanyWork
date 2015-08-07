@@ -39,6 +39,13 @@ public:
     Vec2 fightScene_zhalan_point2 = {m_visibleOrigin.x + 340,m_visibleOrigin.y + 150};
     float fightScene_zhalan_line = m_visibleOrigin.x + 330;
     
+    Vec2 fightScene_tieban_point1 = {m_visibleOrigin.x + 170,m_visibleOrigin.y + 145};
+    Vec2 fightScene_tieban_point2 = {m_visibleOrigin.x + 245,m_visibleOrigin.y + 155};
+    
+    Vec2 fightScene_shadai_point = {m_visibleOrigin.x + 450,m_visibleOrigin.y + 130};
+    
+    Vec2 fightScene_tengman_point = {m_visibleOrigin.x + 320,m_visibleOrigin.y + 130};
+    
     Vec2 fightScene_HouseDeng_Position = {m_visibleOrigin.x + 171 ,m_visibleOrigin.y + 296};
     Vec2 fightScene_HouseSprite_Position = {m_visibleOrigin.x + 155 ,m_visibleOrigin.y + 275};
     Vec2 fightScene_HouseBar_Position = {m_visibleOrigin.x + 300 ,m_visibleOrigin.y + m_visibleSize.height - 50};

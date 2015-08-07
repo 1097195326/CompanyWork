@@ -241,7 +241,7 @@ void WalkEnemySprite::tanfei()
     conf.endPosition =tagetPoint;
     ActionInterval * a1 = BezierTo::create(tatolTime, conf);
     
-    ActionInterval * a2 = RepeatForever::create(RotateBy::create(0.3, 90));
+    ActionInterval * a2 = RotateTo::create(0.3, 180);
     
     runAction(Sequence::create(Spawn::create(a1,a2, NULL),
                                            CallFuncN::create(CC_CALLBACK_0(WalkEnemySprite::dieCall, this)),NULL));

@@ -61,6 +61,7 @@ protected:
     int         m_strengthenLevel;
     int         m_hp;
     int         m_damage;
+    float       m_deceleration;
     int         m_strengthenGold;
     
     bool        m_isUnlock;

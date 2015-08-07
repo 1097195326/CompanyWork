@@ -230,9 +230,11 @@ void Enemy::hurtYun(float dlay)
 }
 void Enemy::hurtJiansu(float su)
 {
-    m_effectSpeedV = m_speedV;
-    m_effectSpeedV.normalize();
-    m_effectSpeedV *= -su;
+    Vec2 effectSpeedV = m_speedV;
+    effectSpeedV.normalize();
+    effectSpeedV *= -su;
+    
+    m_effectSpeedV += effectSpeedV;
 }
 void Enemy::hurtTanfei()
 {

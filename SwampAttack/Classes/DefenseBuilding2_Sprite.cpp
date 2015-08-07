@@ -7,6 +7,7 @@
 //
 
 #include "DefenseBuilding2_Sprite.h"
+#include "GameFightScene.h"
 
 
 DefenseBuilding2_Sprite::DefenseBuilding2_Sprite(DefenseBuilding * building):
@@ -19,6 +20,7 @@ DefenseBuildingSprite(building)
     addChild(buildingS1);
     buildingS1->setPosition(_G_M_M->fightScene_zhalan_point1);
     
+    _G_V->addChild(this,3);
 //    scheduleUpdate();
 }
 void DefenseBuilding2_Sprite::update(float data)

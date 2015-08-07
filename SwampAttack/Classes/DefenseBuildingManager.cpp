@@ -11,6 +11,7 @@
 #include "DefenseBuilding1.h"
 #include "DefenseBuilding2.h"
 #include "DefenseBuilding3.h"
+#include "DefenseBuilding4.h"
 
 DefenseBuildingManager::DefenseBuildingManager()
 {
@@ -31,6 +32,9 @@ DefenseBuildingManager::DefenseBuildingManager()
                 break;
             case 3:
                 m_buildingData[propId] = new DefenseBuilding3(data[propId]);
+                break;
+            case 4:
+                m_buildingData[propId] = new DefenseBuilding4(data[propId]);
                 break;
             default:
                 m_buildingData[propId] = new DefenseBuilding(data[propId]);

@@ -166,6 +166,9 @@
 		8DDCC67A1B32B82500F01D46 /* SpecialObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCC6781B32B82500F01D46 /* SpecialObject.cpp */; };
 		8DE207341B39128E0052E738 /* ShopGoldShowLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE207321B39128E0052E738 /* ShopGoldShowLayer.cpp */; };
 		8DE207371B39508C0052E738 /* ShopExpendShowLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE207351B39508C0052E738 /* ShopExpendShowLayer.cpp */; };
+		8DE20A8E1B74852F00B3E59F /* DefenseBuilding4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE20A8C1B74852F00B3E59F /* DefenseBuilding4.cpp */; };
+		8DE20A911B7486A700B3E59F /* DefenseBuilding6_Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE20A8F1B7486A700B3E59F /* DefenseBuilding6_Sprite.cpp */; };
+		8DE20A941B7486C200B3E59F /* DefenseBuilding7_Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE20A921B7486C200B3E59F /* DefenseBuilding7_Sprite.cpp */; };
 		8DE2268F1B5F466600944493 /* BulletModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2268D1B5F466600944493 /* BulletModel.cpp */; };
 		8DE2B73E1B71DE0500F5D2BE /* PropSprite_daoju7.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2B73C1B71DE0500F5D2BE /* PropSprite_daoju7.cpp */; };
 		8DE2B7411B71DE1900F5D2BE /* PropSprite_daoju8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2B73F1B71DE1900F5D2BE /* PropSprite_daoju8.cpp */; };
@@ -493,6 +496,12 @@
 		8DE207331B39128E0052E738 /* ShopGoldShowLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopGoldShowLayer.h; sourceTree = "<group>"; };
 		8DE207351B39508C0052E738 /* ShopExpendShowLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopExpendShowLayer.cpp; sourceTree = "<group>"; };
 		8DE207361B39508C0052E738 /* ShopExpendShowLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopExpendShowLayer.h; sourceTree = "<group>"; };
+		8DE20A8C1B74852F00B3E59F /* DefenseBuilding4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DefenseBuilding4.cpp; sourceTree = "<group>"; };
+		8DE20A8D1B74852F00B3E59F /* DefenseBuilding4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefenseBuilding4.h; sourceTree = "<group>"; };
+		8DE20A8F1B7486A700B3E59F /* DefenseBuilding6_Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DefenseBuilding6_Sprite.cpp; sourceTree = "<group>"; };
+		8DE20A901B7486A700B3E59F /* DefenseBuilding6_Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefenseBuilding6_Sprite.h; sourceTree = "<group>"; };
+		8DE20A921B7486C200B3E59F /* DefenseBuilding7_Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DefenseBuilding7_Sprite.cpp; sourceTree = "<group>"; };
+		8DE20A931B7486C200B3E59F /* DefenseBuilding7_Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefenseBuilding7_Sprite.h; sourceTree = "<group>"; };
 		8DE2268D1B5F466600944493 /* BulletModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BulletModel.cpp; sourceTree = "<group>"; };
 		8DE2268E1B5F466600944493 /* BulletModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletModel.h; sourceTree = "<group>"; };
 		8DE2B73C1B71DE0500F5D2BE /* PropSprite_daoju7.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropSprite_daoju7.cpp; sourceTree = "<group>"; };
@@ -881,6 +890,8 @@
 				8DD88E761B2598150072688E /* DefenseBuilding2.h */,
 				8DD88E781B2598240072688E /* DefenseBuilding3.cpp */,
 				8DD88E791B2598240072688E /* DefenseBuilding3.h */,
+				8DE20A8C1B74852F00B3E59F /* DefenseBuilding4.cpp */,
+				8DE20A8D1B74852F00B3E59F /* DefenseBuilding4.h */,
 				8DD4997A1B04869A0037CBAA /* DefenseBuildingManager.cpp */,
 				8DD4997B1B04869A0037CBAA /* DefenseBuildingManager.h */,
 			);
@@ -1071,6 +1082,10 @@
 				8DD29D3C1B0B3C1400ECB826 /* DefenseBuilding3_Sprite.h */,
 				8DD29D3E1B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.cpp */,
 				8DD29D3F1B0B3C6E00ECB826 /* DefenseBuilding4_Sprite.h */,
+				8DE20A8F1B7486A700B3E59F /* DefenseBuilding6_Sprite.cpp */,
+				8DE20A901B7486A700B3E59F /* DefenseBuilding6_Sprite.h */,
+				8DE20A921B7486C200B3E59F /* DefenseBuilding7_Sprite.cpp */,
+				8DE20A931B7486C200B3E59F /* DefenseBuilding7_Sprite.h */,
 				8DDA89331B0C7B2C00F9F74B /* GunSprite.cpp */,
 				8DDA89341B0C7B2C00F9F74B /* GunSprite.h */,
 				8D51DC5F1B3A99630053EA8A /* DropMoneySprite.cpp */,
@@ -1309,6 +1324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE20A911B7486A700B3E59F /* DefenseBuilding6_Sprite.cpp in Sources */,
 				D8D673A91B19DFD0004C463F /* GuanQiaManager.cpp in Sources */,
 				8DE2268F1B5F466600944493 /* BulletModel.cpp in Sources */,
 				8DC3E19D1AE89C5C00BE6CA4 /* EnemyInfo.cpp in Sources */,
@@ -1336,6 +1352,7 @@
 				8DD5D0B71B144A1E00AA2A07 /* CrumpEnemySprite.cpp in Sources */,
 				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
 				8DDC27C81B1EEE4500A4FD8D /* PropSprite_daoju3.cpp in Sources */,
+				8DE20A8E1B74852F00B3E59F /* DefenseBuilding4.cpp in Sources */,
 				8DD87E6A1B15A28000FC073A /* ShopPropItemScrollHeadler.cpp in Sources */,
 				8DDACED21B5F86F1003E83C8 /* CurveBullet.cpp in Sources */,
 				8DDCC6741B32AFFB00F01D46 /* MoneyObject.cpp in Sources */,
@@ -1426,6 +1443,7 @@
 				8DE3F7B41AF75AB5001E048F /* ScrollController.cpp in Sources */,
 				8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				8DE20A941B7486C200B3E59F /* DefenseBuilding7_Sprite.cpp in Sources */,
 				8DE2B7441B71DE2700F5D2BE /* PropSprite_daoju9.cpp in Sources */,
 				8DC6A5CB1ADFD64A002A6159 /* State.cpp in Sources */,
 				8DD841DA1B42321C002E522B /* GameReliveLayer.cpp in Sources */,
