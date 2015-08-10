@@ -9,6 +9,7 @@
 #include "GuanQiaManager.h"
 
 #include "ConfigManager.h"
+#include "GameUser.h"
 
 
 GuanQiaManager::GuanQiaManager()
@@ -24,6 +25,9 @@ GuanQiaManager::GuanQiaManager()
         m_guanQiaData[guanqiaId] = guanqia;
         
     }
+    
+    m_currentSceneIndex = _G_U->getCurrentSceneIndex();
+    m_currentGuanqiaIndex = _G_U->getCurrentGuanqiaIndex();
     
 }
 GuanQiaManager::~GuanQiaManager()
@@ -55,4 +59,21 @@ void GuanQiaManager::setCurrentGuanqiaId(string guanqiaId)
 GuanqiaModel * GuanQiaManager::getCurrentGuanqia()
 {
     return m_guanQiaData[m_currentGuanqiaId];
+}
+void GuanQiaManager::setCurrentSceneIndex(int index)
+{
+    m_currentSceneIndex = index;
+    _G_U->setCurrentSceneIndex(m_currentSceneIndex);
+}
+int GuanQiaManager::getCurrentSceneIndex()
+{
+    return m_currentSceneIndex;
+}
+void GuanQiaManager::setCurrentGuanqiaIndex(int index)
+{
+    m_currentGuanqiaIndex = index;
+}
+int GuanQiaManager::getCurrentGuanqiaIndex()
+{
+    return m_currentGuanqiaIndex;
 }

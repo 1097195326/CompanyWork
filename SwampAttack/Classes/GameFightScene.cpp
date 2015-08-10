@@ -64,12 +64,17 @@ bool GameFightScene::init()
     }
     g_f_layer = this;
     
-    Sprite * bgSprite = Sprite::create(ImagePath("scene1_Bg.png"));
+    int sceneIndex = GuanQiaManager::getInstance()->getCurrentSceneIndex();
+    ++sceneIndex;
+    std::string bgName = StringUtils::format("scene%d_Bg.png",sceneIndex);
+    std::string fgName = StringUtils::format("scene%d_Fg.png",sceneIndex);
+    
+    Sprite * bgSprite = Sprite::create(ImagePath(bgName));
     addChild(bgSprite);
     bgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                                m_visibleOrigin.y + m_visibleSize.height * 0.5));
     
-    Sprite * fgSprite = Sprite::create(ImagePath("scene1_Fg.png"));
+    Sprite * fgSprite = Sprite::create(ImagePath(fgName));
     addChild(fgSprite,640);
     fgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                                m_visibleOrigin.y + fgSprite->getContentSize().height * 0.5));

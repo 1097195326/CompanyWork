@@ -18,7 +18,8 @@ private:
     std::map<int,std::string> m_hashHead;
     
     string  m_currentGuanqiaId;
-    
+    int     m_currentSceneIndex;
+    int     m_currentGuanqiaIndex;
 public:
     GuanqiaModel *   getGuanqiaByIndex(int index);
     GuanqiaModel *   getGuanqiaById(string guanqiaId);
@@ -27,6 +28,10 @@ public:
     
     void    setCurrentGuanqiaId(string guanqiaId);
     GuanqiaModel * getCurrentGuanqia();
+    void    setCurrentSceneIndex(int index);
+    int     getCurrentSceneIndex();
+    void    setCurrentGuanqiaIndex(int index);
+    int     getCurrentGuanqiaIndex();
 public:
     static GuanQiaManager * getInstance();
     GuanQiaManager();

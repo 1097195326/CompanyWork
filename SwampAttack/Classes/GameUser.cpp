@@ -146,6 +146,22 @@ bool GameUser::isUnlockGuanqia(string guanqiaId)
 {
     return getBoolForKey(guanqiaId + "guanqia");
 }
+void GameUser::setCurrentSceneIndex(int index)
+{
+    setIntForKey("CurrentSceneIndex", index);
+}
+int GameUser::getCurrentSceneIndex()
+{
+    return getIntForKey("CurrentSceneIndex");
+}
+void GameUser::setCurrentGuanqiaIndex(int index)
+{
+    setIntForKey("CurrentGuanqiaIndex", index);
+}
+int GameUser::getCurrentGuanqiaIndex()
+{
+    return getIntForKey("CurrentGuanqiaIndex");
+}
 //--- gun ---
 void GameUser::unlockGun(string gunId)
 {

@@ -50,6 +50,10 @@ public:
     //--- guan qia ---
     void    unlockGuanqia(string guanqiaId);
     bool    isUnlockGuanqia(string guanqiaId);
+    void    setCurrentSceneIndex(int index);
+    int     getCurrentSceneIndex();
+    void    setCurrentGuanqiaIndex(int index);
+    int     getCurrentGuanqiaIndex();
     //--- health ----
     int     getUserHealth();
     void    setUserHealth(int health);
