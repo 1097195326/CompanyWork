@@ -202,13 +202,13 @@ void Gun::checkUnlock(Layer * layer)
         m_isUnlock = true;
         _G_U->unlockGun(m_id);
         
-//        GameShowDiscLayer * showLayer = new GameShowDiscLayer(m_modelId,
-//                                                              m_weaponDescription,
-//                                                              Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-//                                                                   m_visibleOrigin.y + m_visibleSize.height * 0.5),
-//                                                              true);
-//        showLayer->autorelease();
-//        layer->addChild(showLayer,201);
+        GameShowDiscLayer * showLayer = new GameShowDiscLayer(m_modelId,
+                                                              m_weaponDescription,
+                                                              Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                                                                   m_visibleOrigin.y + m_visibleSize.height * 0.5),
+                                                              true);
+        showLayer->autorelease();
+        layer->addChild(showLayer,201);
     }
 }
 void Gun::resetData()
