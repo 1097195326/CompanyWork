@@ -29,6 +29,7 @@ struct BulletParameter
     float   m_range;          // 射程
     float   m_bulletSpeed;    // 弹道速度
     int     m_underAttackAction;// 受击动作
+    int     m_hurtNum;
     BulletTarget m_target;      // 射击 对象
     Vec2    m_startPoint;       // 起始点
     Vec2    m_targetPoint;        // 目标点
@@ -42,6 +43,7 @@ struct BulletParameter
                     float range,
                     float bulletSpeed,
                     int underAttackAction,
+                    int hurtNum,
                     BulletTarget target,
                     Vec2    startPoint,
                     Vec2    targetPoint,
@@ -56,6 +58,7 @@ struct BulletParameter
     m_range(range),
     m_bulletSpeed(bulletSpeed),
     m_underAttackAction(underAttackAction),
+    m_hurtNum(hurtNum),
     m_target(target),
     m_startPoint(startPoint),
     m_targetPoint(targetPoint),

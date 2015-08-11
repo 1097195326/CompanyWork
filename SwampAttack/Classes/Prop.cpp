@@ -110,7 +110,17 @@ void Prop::gameLoop(float data)
                     enemy->hurtJiansu(m_deceleration);
                 }else if (m_modelId == "daoju9")
                 {
-                    enemy->hurtTanfei();
+                    string eId = enemy->getId();
+                    if (eId == "200001" ||
+                        eId == "200002" ||
+                        eId == "200003" ||
+                        eId == "200004")
+                    {
+                        
+                    }else
+                    {
+                        enemy->hurtTanfei();
+                    }
                 }else
                 {
                     enemy->hurt(m_damage,3);
@@ -284,8 +294,11 @@ bool Prop::unlockProp()
 }
 void Prop::checkUnlock(Layer * layer)
 {
+    if (!(m_unlockMission.size() > 0)) {
+        return;
+    }
     GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getGuanqiaById(m_unlockMission);
-    if (guanqia->isUnlock() && !m_isUnlock)
+    if (guanqia && guanqia->isUnlock() && !m_isUnlock)
     {
         m_isUnlock = true;
         _G_U->unlockProp(m_id);

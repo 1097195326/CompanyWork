@@ -196,8 +196,11 @@ Gun::~Gun()
 }
 void Gun::checkUnlock(Layer * layer)
 {
+    if (!(m_unlockMission.size() > 0)) {
+        return;
+    }
     GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getGuanqiaById(m_unlockMission);
-    if (guanqia->isUnlock() && !m_isUnlock)
+    if (guanqia && guanqia->isUnlock() && !m_isUnlock)
     {
         m_isUnlock = true;
         _G_U->unlockGun(m_id);
@@ -248,6 +251,7 @@ bool Gun::fire(Vec2 position)
                        m_range,
                        m_bulletSpeed,
                        m_underAttackAction,
+                       m_influence,
                        t_enemy,
                        map->m_BulletStartPoint,
                        position,

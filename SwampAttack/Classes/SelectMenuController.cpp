@@ -44,7 +44,7 @@ void SelectMenuController::selectMenu(int index)
 }
 int SelectMenuController::getSelectIndex()
 {
-    int index;
+    int index = 0;
     for (int i = 0; i < m_menus.size(); ++i) {
         if (m_menus[i].status == s_m_select) {
             index = i;

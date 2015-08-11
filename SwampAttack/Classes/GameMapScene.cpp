@@ -21,7 +21,7 @@ bool GameMapScene::init()
     auto spriteFrameCache = SpriteFrameCache::getInstance();
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("yinying.plist"));
     
-    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
+    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str(),true);
     
     
     MenuItem * houmItem = MenuItemImage::create(ImagePath("map_homeButton.png"),

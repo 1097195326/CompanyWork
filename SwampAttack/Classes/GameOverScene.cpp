@@ -129,9 +129,10 @@ bool GameOverScene::init()
     {
         GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
         GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
-        nextGuanqia->unlockGuanqia();
         GunManager::getInstance()->checkUnlock(this);
         PropManager::getInstance()->checkUnlock(this);
+        nextGuanqia->unlockGuanqia();
+        
         
     }
     GunManager::getInstance()->saveBullet();

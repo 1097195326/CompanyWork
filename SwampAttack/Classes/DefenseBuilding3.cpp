@@ -91,6 +91,7 @@ void DefenseBuilding3::hurtCall()
                        m_damageArea,
                        120,
                        1,
+                       1,
                        t_enemy,
                        map->gangpao_BulletStartPoint,
                        (fireEnemy->getPosition() + Vec2(0,fireEnemy->getHeight() * 0.4)),

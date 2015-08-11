@@ -19,6 +19,8 @@ protected:
     void    attack();
     void    die();
     void    hurt();
+    void    dianji();
+    void    tanfei();
     void    setArmorView();
     void    showBuff();
 public:

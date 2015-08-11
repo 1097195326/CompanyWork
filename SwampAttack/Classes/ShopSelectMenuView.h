@@ -21,7 +21,7 @@ public:
     void    setSelectSprite(std::string name);
     void    setIconSprite(std::string name);
     void    checkIndex();
-
+    void    setSelectIndex(int index);
 //    bool    touchBegan(Touch * touch, Event * event);
     void    touchEnd(Touch * touch, Event * event);
     

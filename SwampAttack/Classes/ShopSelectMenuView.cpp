@@ -106,3 +106,8 @@ void ShopSelectMenuView::touchEnd(Touch *touch, Event *event)
     m_controller->selectMenu(tag);
     checkIndex();
 }
+void ShopSelectMenuView::setSelectIndex(int index)
+{
+    m_controller->selectMenu(index);
+    checkIndex();
+}

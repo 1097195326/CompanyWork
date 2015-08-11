@@ -51,11 +51,15 @@ GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 posi
                                                            ImagePath("overScene_toShop.png"),
                                                            CC_CALLBACK_1( GameShowDiscLayer::gotoShop, this));
     
+    Label  * jiesuo = Label::createWithTTF("已解锁", "fonts/mimi.ttf", 30);
+    jiesuo->setColor(Color3B(0, 0, 0));
+    
     Size bgSize = bg->getContentSize();
     iconSpr->setPosition(bgSize.width * 0.21, bgSize.height * 0.75);
     nameSpr->setPosition(bgSize.width * 0.68, bgSize.height * 0.58);
     discLabel->setPosition(bgSize.width * 0.5, bgSize.height * 0.37);
     gotoShopButton->setPosition(bgSize.width * 0.5, bgSize.height * 0.15);
+    jiesuo->setPosition(bgSize.width * 0.35, bgSize.height * 0.15);
     
     Menu * gotoShopMenu = Menu::create(gotoShopButton, NULL);
     gotoShopMenu->setPosition(Vec2::ZERO);
@@ -66,6 +70,7 @@ GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 posi
     
     if (isUnlock)
     {
+        bg->addChild(jiesuo);
         bg->addChild(gotoShopMenu);
     }
     

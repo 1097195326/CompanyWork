@@ -8,6 +8,8 @@
 
 #include "CrumpEnemySprite.h"
 #include "BuffSprite.h"
+#include "GameMapManager.h"
+
 
 CrumpEnemySprite::CrumpEnemySprite(Enemy * model):EnemySprite(model)
 {
@@ -50,6 +52,10 @@ CrumpEnemySprite::CrumpEnemySprite(Enemy * model):EnemySprite(model)
     dieAction->retain();
     m_map["dieAction"] = dieAction;
     
+    Action * dianjiAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_Electric", 2));
+    dianjiAction->retain();
+    m_map["dianjiAction"] = dianjiAction;
+    
     setArmorView();
     
     scheduleUpdate();
@@ -67,6 +73,12 @@ void CrumpEnemySprite::update(float data)
     {
         setPosition(m_model->getPosition());
         move();
+    }else if (m_model->isDianji())
+    {
+        dianji();
+    }else if (m_model->isTanfei())
+    {
+        tanfei();
     }else if (m_model->isAttack())
     {
         attack();
@@ -209,6 +221,48 @@ void CrumpEnemySprite::move()
         armorSprite->stopAllActions();
         armorSprite->runAction(m_map["armorWalkAction"]);
     }
+}
+void CrumpEnemySprite::dianji()
+{
+    if (actionStatus == isDianji) {
+        return;
+    }
+    actionStatus = isDianji;
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["dianjiAction"]);
+    if (isHaveArmor) {
+        //        armorSprite->stopAllActions();
+        //        armorSprite->runAction(m_map["armorWalkAction"]);
+    }
+}
+void CrumpEnemySprite::tanfei()
+{
+    if (actionStatus == isTanfei) {
+        return;
+    }
+    actionStatus = isTanfei;
+    
+    guaiwuSprite->stopAllActions();
+    if (isHaveArmor) {
+        armorSprite->stopAllActions();
+    }
+    Vec2 startPoint = m_model->getPosition();
+    Vec2 tagetPoint = _G_M_M->enemy_tanfei_targetPoint;
+    tagetPoint.y = startPoint.y;
+    
+    float tatolTime = (tagetPoint.x - startPoint.x) * 0.001;
+    float topPoint = (tagetPoint.x - startPoint.x) * 0.5 * 1;
+    
+    ccBezierConfig conf;
+    conf.controlPoint_1 = Vec2(startPoint.x + (tagetPoint.x - startPoint.x) * 0.3, startPoint.y + topPoint);
+    conf.controlPoint_2 = Vec2(startPoint.x + (tagetPoint.x - startPoint.x) * 0.6, startPoint.y + topPoint);
+    conf.endPosition =tagetPoint;
+    ActionInterval * a1 = BezierTo::create(tatolTime, conf);
+    
+    ActionInterval * a2 = RotateTo::create(0.3, 180);
+    
+    runAction(Sequence::create(Spawn::create(a1,a2, NULL),
+                               CallFuncN::create(CC_CALLBACK_0(CrumpEnemySprite::dieCall, this)),NULL));
 }
 void CrumpEnemySprite::attack()
 {

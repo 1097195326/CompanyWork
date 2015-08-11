@@ -50,7 +50,9 @@ bool GameShopScene::init()
     initScrollView();
 
 //    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
-    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str());
+//    if(SimpleAudioEngine::getInstance()->isBackgroundMusicPlaying())
+    
+    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str(),true);
     
     return true;
 }

@@ -37,9 +37,11 @@ void PunctureBullet::gameLoop(float data)
         if (!enemyGroup) {
             return;
         }
+        
         std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
         if (!enemyData.empty())
         {
+            int num = 0;
             std::list<Enemy*>::iterator e_iter;
             for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
             {
@@ -50,6 +52,10 @@ void PunctureBullet::gameLoop(float data)
                     enemy->isContainsPoint(b_rect)
                     )
                 {
+                    if (num >= m_bp.m_hurtNum) {
+                        break;
+                    }
+                    ++num;
                     enemy->hurt(m_damage,m_bp.m_underAttackAction);
                 }
             }
