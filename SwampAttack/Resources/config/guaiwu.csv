@@ -10,8 +10,8 @@ Id[string],MonsterName[string],,ModelId[string],CapId[string],ActionType[int],At
 100008,tid#MonsterName8,锅盖乌鸦,crow,crow_armor,2,5,168,1.5,,1,30,,,17,100010,tid#MonsterDescription8,乌鸦升级版本
 100009,tid#MonsterName9,鼠人自爆兵,blind,,1,3,96,2,100,1,30,,,10,100010,tid#MonsterDescription9,移动较快，自杀攻击
 100010,tid#MonsterName10,锅盖鼠人自爆兵,blind,blind_armor,1,3,192,2,100,1,30,,,19,100010,tid#MonsterDescription10,鼠人自爆兵升级版本
-100011,tid#MonsterName11,鼠人火枪兵,Muroidea,,1,2,144,1,30,0.5,650,,100,14,100010,tid#MonsterDescription11,陆行远程兵种
-100012,tid#MonsterName12,锅盖鼠人火枪兵,Muroidea,Muroidea_armor,1,2,216,1,30,0.5,650,,100,22,100010,tid#MonsterDescription12,鼠人火枪兵升级版本
+100011,tid#MonsterName11,鼠人火枪兵,Muroidea,,1,2,144,1,30,0.5,650,100002,100,14,100010,tid#MonsterDescription11,陆行远程兵种
+100012,tid#MonsterName12,锅盖鼠人火枪兵,Muroidea,Muroidea_armor,1,2,216,1,30,0.5,650,100002,100,22,100010,tid#MonsterDescription12,鼠人火枪兵升级版本
 100013,tid#MonsterName13,南瓜头,Pumpkin,,1,2,216,0.8,30,0.5,650,100002,100,22,100010,tid#MonsterDescription13,陆地远程兵种
 100014,tid#MonsterName14,带帽子的南瓜头,Pumpkin,Pumpkin_armor,1,2,324,0.8,30,0.5,650,100002,100,32,100010,tid#MonsterDescription14,南瓜头升级版
 100015,tid#MonsterName15,稻草人,scarecrow,,1,1,270,0.6,70,1,30,,,27,100010,tid#MonsterDescription15,行动缓慢，血量较厚，高额伤害

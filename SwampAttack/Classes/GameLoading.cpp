@@ -174,6 +174,36 @@ float GameLoading::loadFrames()
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrowArmor.plist"));
                     break;
+                case 100019:
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf1.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf2.plist"));
+                    break;
+                case 100020:
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf1.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf2.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfArmor1.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfArmor2.plist"));
+                    break;
+                case 100021:
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowman1.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowman2.plist"));
+                    break;
+                case 100022:
+                    
+                    break;
+                case 100023:
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("vampire1.plist"));
+                    break;
+                case 100024:
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("bee.plist"));
+                    break;
+                case 100025:
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullA.plist"));
+                    break;
+                case 100026:
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcher1.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcher2.plist"));
+                    break;
                 case 200001:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2.plist"));
