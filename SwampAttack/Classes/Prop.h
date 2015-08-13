@@ -62,7 +62,7 @@ public:
     int     getNum();
     bool    buyProp();
     bool    useProp();
-    void    addProp();
+    void    addProp(int num);
     void    checkUnlock(Layer * layer);
     
     //--- prop state ---

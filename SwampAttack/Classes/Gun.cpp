@@ -462,6 +462,18 @@ bool Gun::buyBullet()
     notify();
     return true;
 }
+void Gun::addBullet(int num)
+{
+    if (m_isDefaultGun)
+    {
+        m_totalBullets += 1;
+        m_bullets = m_magazieSize = m_totalBullets;
+    }else
+    {
+        m_totalBullets += m_magazieSize;
+    }
+    _G_U->setGunBulletNumber(m_id, m_totalBullets);
+}
 float Gun::getFireWaitingTime()
 {
     return m_fireWaitingTime;

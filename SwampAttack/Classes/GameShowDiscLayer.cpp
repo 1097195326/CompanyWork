@@ -14,13 +14,15 @@
 
 GameShowDiscLayer::~GameShowDiscLayer()
 {
-    if(m_listener)
+//    if(m_listener)
     {
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
     }
 }
 GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 position,bool isUnlock,void * obj,int type):
-m_obj(obj),m_type(type)
+m_obj(obj),
+m_type(type),
+m_isMove(false)
 {
     init();
     m_point = position;
@@ -89,6 +91,10 @@ m_obj(obj),m_type(type)
 
 bool GameShowDiscLayer::touchBegan(Touch *touch, Event *event)
 {
+    if (m_isMove) {
+        return false;
+    }
+    m_isMove = true;
     return true;
 }
 void GameShowDiscLayer::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
@@ -105,6 +111,7 @@ void GameShowDiscLayer::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 }
 void GameShowDiscLayer::actionEndCall()
 {
+    m_isMove = false;
     layerColor->stopAllActions();
     bg->stopAllActions();
     removeFromParentAndCleanup(true);
@@ -113,10 +120,12 @@ void GameShowDiscLayer::gotoShop(cocos2d::Ref *pSender)
 {
     if (m_type == 1) {
         Gun * gun = (Gun *)m_obj;
+        gun->addBullet(0);
         GunManager::getInstance()->setWillTakeUpGun(gun->getId());
     }else if (m_type == 2)
     {
         Prop * prop = (Prop *)m_obj;
+        prop->addProp(3);
         PropManager::getInstance()->setWillTakeUpProp(prop->getId());
     }else
     {

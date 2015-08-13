@@ -21,6 +21,7 @@ private:
     
     void    *       m_obj;
     int             m_type;
+    bool            m_isMove;
 public:
     //    static Scene * scene(RenderTexture * rt);
     //    CREATE_FUNC(GamePauseScene);

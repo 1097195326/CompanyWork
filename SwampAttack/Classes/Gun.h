@@ -109,6 +109,7 @@ public:
     //--- set function --
     bool    addStrengthenLevel();
     bool    buyBullet();
+    void    addBullet(int num);
     float   getFireWaitingTime();
     float   getReloadWaitingTime();
     //--- get function ---

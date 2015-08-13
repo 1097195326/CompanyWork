@@ -2,7 +2,7 @@
 DefenceId[string],DefenceName[string],,ModelId[string],BulletModelId[string],DefenceType[string],StrengthenLevel[int],LimitLevel[string],Hp[int],Damage[int],DamageArea[float],UnlockMission[string],UnlockGold[string],DefenceDescription[string],
 700001,tid#DefenceName1,木板,building1,,1,0,20,10,,,400002_2,20000,tid#DefenceDescription1,能够增加一定的防御能力。
 700003,tid#DefenceName3,小钢炮,building3,100004,3,0,20,,20,650,400002_5,60000,tid#DefenceDescription3,小猴子操作的小炮，能够对陆行怪物造成群体伤害。
+700004,tid#DefenceName4,藤蔓,building4,,4,0,5,,,300,400004_8,40000,tid#DefenceDescription4,可以对马车周围目标减速
 700005,tid#DefenceName5,尖刺,building2,,2,0,10,,,,400004_2,60000,tid#DefenceDescription5,对路过的敌人减速
-700004,tid#DefenceName4,藤蔓,building4,,4,0,10,,,300,400004_8,40000,tid#DefenceDescription4,可以对马车周围目标减速
 700006,tid#DefenceName6,铁板,building6,,1,0,10,,,,400005_2,30000,tid#DefenceDescription6,增加生命值
 700007,tid#DefenceName7,沙袋,building7,,1,0,10,,,,400005_5,50000,tid#DefenceDescription7,增加生命值

@@ -239,9 +239,9 @@ bool Prop::useProp()
     }
     return false;
 }
-void Prop::addProp()
+void Prop::addProp(int num)
 {
-    ++m_num;
+    m_num += num;
     _G_U->setPropNum(m_id, m_num);
     notify();
 }

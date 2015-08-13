@@ -100,7 +100,7 @@ void DropPropSprite::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 }
 void DropPropSprite::moveEnd(cocos2d::Node *pSender)
 {
-    m_prop->addProp();
+    m_prop->addProp(1);
     pSender->stopAllActions();
     removeFromParentAndCleanup(true);
 }

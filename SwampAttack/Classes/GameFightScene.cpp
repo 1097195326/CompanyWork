@@ -75,10 +75,11 @@ bool GameFightScene::init()
                                m_visibleOrigin.y + m_visibleSize.height * 0.5));
     
     Sprite * fgSprite = Sprite::create(ImagePath(fgName));
-    addChild(fgSprite,640);
-    fgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                               m_visibleOrigin.y + fgSprite->getContentSize().height * 0.5));
-    
+    if (fgSprite) {
+        addChild(fgSprite,640);
+        fgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                                   m_visibleOrigin.y + fgSprite->getContentSize().height * 0.5));
+    }
     
     m_listener = EventListenerTouchOneByOne::create();
     m_listener->setSwallowTouches(true);
@@ -86,6 +87,7 @@ bool GameFightScene::init()
     m_listener->onTouchBegan = CC_CALLBACK_2(GameFightScene::touchBegan, this);
     m_listener->onTouchMoved = CC_CALLBACK_2(GameFightScene::touchMoved, this);
     m_listener->onTouchEnded = CC_CALLBACK_2(GameFightScene::touchEnd, this);
+    m_listener->onTouchCancelled = CC_CALLBACK_2(GameFightScene::touchCancelled, this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener, this);
     
     MenuItemImage * pauseButton = MenuItemImage::create(ImagePath("fight_pause_button.png"),
@@ -220,6 +222,10 @@ void GameFightScene::touchMoved(Touch *touch, Event *event)
     _G_D->onTouchMove(touch, event);
 }
 void GameFightScene::touchEnd(Touch *touch, Event *event)
+{
+    _G_D->onTouchEnd(touch, event);
+}
+void GameFightScene::touchCancelled(cocos2d::Touch *touch, cocos2d::Event *event)
 {
     _G_D->onTouchEnd(touch, event);
 }

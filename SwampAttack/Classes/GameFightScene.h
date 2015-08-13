@@ -35,7 +35,7 @@ public:
     bool    touchBegan(Touch * touch, Event * event);
     void    touchMoved(Touch * touch, Event * event);
     void    touchEnd(Touch * touch, Event * event);
-    
+    void    touchCancelled(Touch * touch, Event * event);
     
     void    pauseGame(Ref * pSender);
     void    addBulletTexiao(Vec2 position,std::string name, int frames);
