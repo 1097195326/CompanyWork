@@ -209,7 +209,9 @@ void Gun::checkUnlock(Layer * layer)
                                                               m_weaponDescription,
                                                               Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                                                                    m_visibleOrigin.y + m_visibleSize.height * 0.5),
-                                                              true);
+                                                              true,
+                                                              this,
+                                                              1);
         showLayer->autorelease();
         layer->addChild(showLayer,201);
     }

@@ -53,7 +53,8 @@ void PunctureBullet::gameLoop(float data)
                     )
                 {
                     if (num >= m_bp.m_hurtNum) {
-                        break;
+                        m_state = _b_arrive;
+                        return;
                     }
                     ++num;
                     enemy->hurt(m_damage,m_bp.m_underAttackAction);

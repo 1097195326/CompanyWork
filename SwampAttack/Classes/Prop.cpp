@@ -307,7 +307,9 @@ void Prop::checkUnlock(Layer * layer)
                                                               m_itemDestription,
                                                               Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                                                                    m_visibleOrigin.y + m_visibleSize.height * 0.5),
-                                                              true);
+                                                              true,
+                                                              this,
+                                                              2);
         showLayer->autorelease();
         layer->addChild(showLayer,201);
     }

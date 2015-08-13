@@ -12,7 +12,8 @@
 #include "ShopGunIcon.h"
 
 
-GunManager::GunManager()
+GunManager::GunManager():
+m_willTakeUpGun("")
 {
     GCCsvHelper * gunHelper = _C_M->getCsvHelperByName("wuqi");
     m_hashHead = gunHelper->getHashHead();
@@ -126,6 +127,19 @@ void GunManager::takeDownGun(string gunId)
 {
     m_gunData[gunId]->takeDown();
     m_takeUpGunData.erase(gunId);
+}
+void GunManager::setWillTakeUpGun(string gunId)
+{
+    m_willTakeUpGun = gunId;
+}
+string GunManager::getWillTakeUpGun()
+{
+    return m_willTakeUpGun;
+}
+void GunManager::takeUpWillGun()
+{
+    takeUpGun(m_willTakeUpGun);
+    m_willTakeUpGun = "";
 }
 Gun * GunManager::getCurrentGun()
 {

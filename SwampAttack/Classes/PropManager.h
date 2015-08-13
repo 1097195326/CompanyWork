@@ -22,7 +22,7 @@ private:
     std::list<Prop *> m_usingPropDta;
     
     std::vector<ShopPropIcon *>   m_propIcons;
-    
+    std::string m_willTakeUpProp;
 public:
     //---
     Prop *  addUsingProp(string propId);
@@ -39,6 +39,9 @@ public:
     void    takeUpProp(string propId);
     void    takeDownProp(string propId);
     
+    void    setWillTakeUpProp(string propId);
+    string  getWillTakeUpProp();
+    void    takeUpWillProp();
     //---
     void    setShopView(Sprite * shopScene);
     void    setFightView();

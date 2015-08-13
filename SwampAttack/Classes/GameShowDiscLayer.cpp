@@ -8,6 +8,8 @@
 
 #include "GameShowDiscLayer.h"
 #include "GameShopScene.h"
+#include "GunManager.h"
+#include "PropManager.h"
 
 
 GameShowDiscLayer::~GameShowDiscLayer()
@@ -17,7 +19,8 @@ GameShowDiscLayer::~GameShowDiscLayer()
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
     }
 }
-GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 position,bool isUnlock)
+GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 position,bool isUnlock,void * obj,int type):
+m_obj(obj),m_type(type)
 {
     init();
     m_point = position;
@@ -47,8 +50,8 @@ GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 posi
     Label  * discLabel = Label::createWithTTF(disc, "fonts/mimi.ttf", 30);
     discLabel->setColor(Color3B(0, 0, 0));
     
-    MenuItemImage * gotoShopButton = MenuItemImage::create(ImagePath("overScene_toShop.png"),
-                                                           ImagePath("overScene_toShop.png"),
+    MenuItemImage * gotoShopButton = MenuItemImage::create(ImagePath("yijianzhuangbei.png"),
+                                                           ImagePath("yijianzhuangbei.png"),
                                                            CC_CALLBACK_1( GameShowDiscLayer::gotoShop, this));
     
     Label  * jiesuo = Label::createWithTTF("已解锁", "fonts/mimi.ttf", 30);
@@ -59,7 +62,7 @@ GameShowDiscLayer::GameShowDiscLayer(std::string name,std::string disc,Vec2 posi
     nameSpr->setPosition(bgSize.width * 0.68, bgSize.height * 0.58);
     discLabel->setPosition(bgSize.width * 0.5, bgSize.height * 0.37);
     gotoShopButton->setPosition(bgSize.width * 0.5, bgSize.height * 0.15);
-    jiesuo->setPosition(bgSize.width * 0.35, bgSize.height * 0.15);
+    jiesuo->setPosition(bgSize.width * 0.25, bgSize.height * 0.15);
     
     Menu * gotoShopMenu = Menu::create(gotoShopButton, NULL);
     gotoShopMenu->setPosition(Vec2::ZERO);
@@ -108,6 +111,17 @@ void GameShowDiscLayer::actionEndCall()
 }
 void GameShowDiscLayer::gotoShop(cocos2d::Ref *pSender)
 {
+    if (m_type == 1) {
+        Gun * gun = (Gun *)m_obj;
+        GunManager::getInstance()->setWillTakeUpGun(gun->getId());
+    }else if (m_type == 2)
+    {
+        Prop * prop = (Prop *)m_obj;
+        PropManager::getInstance()->setWillTakeUpProp(prop->getId());
+    }else
+    {
+        
+    }
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     Director::getInstance()->replaceScene(GameShopScene::scene());
 }

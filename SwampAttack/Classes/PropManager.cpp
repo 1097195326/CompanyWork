@@ -12,7 +12,8 @@
 #include "DropPropSprite.h"
 
 
-PropManager::PropManager()
+PropManager::PropManager():
+m_willTakeUpProp("")
 {
     GCCsvHelper * propHelper = _C_M->getCsvHelperByName("daoju");
     m_hashHead = propHelper->getHashHead();
@@ -144,6 +145,19 @@ void PropManager::takeDownProp(string propId)
 {
     m_propData[propId]->takeDown();
     m_takeUpPropData.erase(propId);
+}
+void PropManager::setWillTakeUpProp(string propId)
+{
+    m_willTakeUpProp = propId;
+}
+string PropManager::getWillTakeUpProp()
+{
+    return m_willTakeUpProp;
+}
+void PropManager::takeUpWillProp()
+{
+    takeUpProp(m_willTakeUpProp);
+    m_willTakeUpProp = "";
 }
 void PropManager::setFightView()
 {

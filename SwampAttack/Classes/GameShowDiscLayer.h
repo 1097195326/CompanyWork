@@ -15,14 +15,16 @@ class GameShowDiscLayer : public Layer {
 private:
     EventListenerTouchOneByOne * m_listener;
     
-    Sprite * bg;
-    LayerColor * layerColor;
-    Vec2    m_point;
+    Sprite  *       bg;
+    LayerColor  *   layerColor;
+    Vec2            m_point;
     
+    void    *       m_obj;
+    int             m_type;
 public:
     //    static Scene * scene(RenderTexture * rt);
     //    CREATE_FUNC(GamePauseScene);
-    GameShowDiscLayer(std::string name,std::string disc,Vec2 position, bool isUnlock = false);
+    GameShowDiscLayer(std::string name,std::string disc,Vec2 position, bool isUnlock = false,void * obj = NULL,int type = 0);
     ~GameShowDiscLayer();
     
 //    void    continueGame(Ref * pSender);

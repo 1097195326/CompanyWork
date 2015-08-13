@@ -49,6 +49,15 @@ bool GameShopScene::init()
     initShopView();
     initScrollView();
 
+    string gunId = GunManager::getInstance()->getWillTakeUpGun();
+    if (gunId.size() > 0)
+    {
+        GunManager::getInstance()->takeUpWillGun();
+    }
+    string propId = PropManager::getInstance()->getWillTakeUpProp();
+    if (propId.size() > 0) {
+        PropManager::getInstance()->takeUpWillProp();
+    }
 //    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
 //    if(SimpleAudioEngine::getInstance()->isBackgroundMusicPlaying())
     

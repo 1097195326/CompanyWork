@@ -23,6 +23,8 @@ private:
     
     Gun *   currentGun;
     std::vector<ShopGunIcon *>   m_GunIcons;
+    
+    std::string  m_willTakeUpGun;
 private:
     
     
@@ -39,6 +41,10 @@ public:
     std::map<string,Gun *> getTakeUpGunData();
     void    takeUpGun(string gunId);
     void    takeDownGun(string gunId);
+    
+    void    setWillTakeUpGun(string gunId);
+    string  getWillTakeUpGun();
+    void    takeUpWillGun();
     
     void    setFightView();
     void    setShopView(Sprite * shopScene);
