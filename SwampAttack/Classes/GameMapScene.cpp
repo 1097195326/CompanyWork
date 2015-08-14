@@ -11,6 +11,8 @@
 #include "GameFightScene.h"
 #include "GameShopScene.h"
 #include "MapScrollHeadler.h"
+#include "GuanQiaManager.h"
+
 
 bool GameMapScene::init()
 {
@@ -52,7 +54,8 @@ bool GameMapScene::init()
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu,2);
     
-    
+    int toIndex = GuanQiaManager::getInstance()->getCurrentSceneIndex();
+    log("map to index :%d",toIndex);
     int num = 4;
     m_scrollView = new GameHorizontalScrollHeadlerView(1136,640,1136,640,num);
     m_scrollView->setScrollControllerContentWidth(1136 * num);
@@ -62,6 +65,7 @@ bool GameMapScene::init()
 //    m_scrollView->setScrollHorizontal(false);
     
     m_scrollView->initView();
+    m_scrollView->moveToViewAtIndex(toIndex);
     m_scrollView->autorelease();
     m_scrollView->setPosition(0,0);
     addChild(m_scrollView);

@@ -66,7 +66,7 @@ void GameScrollHeadlerView::moveToViewAtIndex(int index)
     if ((m_oritation == s_horizontal && m_viewWidth == m_itemWidth) ||
         (m_oritation == s_vertical && m_viewHeight == m_itemHeight))
     {
-        if (index < 0 || index >= m_totalCount)
+        if (index < 0 || index > m_totalCount)
         {
             return;
         }
@@ -96,22 +96,24 @@ void GameScrollHeadlerView::moveToViewAtIndex(int index)
 //            }
             break;
     }
-//    log("---:%f",toX);
+    log("---:%f",toX);
     m_scrollController->moveToOffSet(toX, toY);
 }
 void GameScrollHeadlerView::moveAddView()
 {
+    log("add view:%d",m_currentIndex);
     int index = m_currentIndex + 1;
     moveToViewAtIndex(index);
 }
 void GameScrollHeadlerView::moveMinusView()
 {
+    log("minu view:%d",m_currentIndex);
     int index = m_currentIndex - 1;
     moveToViewAtIndex(index);
 }
 bool GameScrollHeadlerView::canMoveAddView()
 {
-    log("add view:%d",m_currentIndex);
+    log("can add view:%d",m_currentIndex);
     if ((m_oritation == s_horizontal && m_viewWidth == m_itemWidth) ||
         (m_oritation == s_vertical && m_viewHeight == m_itemHeight))
     {
@@ -121,14 +123,14 @@ bool GameScrollHeadlerView::canMoveAddView()
 }
 bool GameScrollHeadlerView::canMoveMinusView()
 {
-    log("minus view:%d",m_currentIndex);
+    log("can minus view:%d",m_currentIndex);
     return m_currentIndex > 0;
 }
 void GameScrollHeadlerView::updateItems(float data)
 {
     M_Vec2f offSet = m_scrollController->getOffSet();
     Vec2 offSetV = {offSet.x,offSet.y};
-    
+//    log("off set:%f:::%d",offSet.x,m_currentIndex);
     int index = m_currentIndex;
     
     switch (m_oritation) {
@@ -143,11 +145,21 @@ void GameScrollHeadlerView::updateItems(float data)
             break;
         case s_horizontal:
         {
-            int i = ((int)m_perOffSet.x - (int)offSetV.x)/(int)m_itemWidth;
-            if (std::abs(i) >= 1)
+//            int i = (int)((m_perOffSet.x - offSetV.x)/m_itemWidth);
+//            if (std::abs(i) >= 1)
+//            {
+//                index += i;
+//            }
+            int i = ((int)(-offSetV.x) / m_itemWidth) - m_currentIndex;
+            
+            if (i > 0)
+            {
+                index += i;
+            }else if (i < 0)
             {
                 index += i;
             }
+            
         }
             break;
         default:

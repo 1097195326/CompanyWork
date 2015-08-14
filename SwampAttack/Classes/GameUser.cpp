@@ -18,6 +18,7 @@ GameUser::GameUser():m_time(0)
         m_userHealth = 5;
         setUserHealth(m_userHealth);
         unlockGuanqia("400001_1");
+        setLastGuanqiaIndex(1);
     }
     setUserGold(900000);
     m_userHealth = getIntForKey("user_health");
@@ -146,19 +147,19 @@ bool GameUser::isUnlockGuanqia(string guanqiaId)
 {
     return getBoolForKey(guanqiaId + "guanqia");
 }
-void GameUser::setCurrentSceneIndex(int index)
+void GameUser::setLastSceneIndex(int index)
 {
     setIntForKey("CurrentSceneIndex", index);
 }
-int GameUser::getCurrentSceneIndex()
+int GameUser::getLastSceneIndex()
 {
     return getIntForKey("CurrentSceneIndex");
 }
-void GameUser::setCurrentGuanqiaIndex(int index)
+void GameUser::setLastGuanqiaIndex(int index)
 {
     setIntForKey("CurrentGuanqiaIndex", index);
 }
-int GameUser::getCurrentGuanqiaIndex()
+int GameUser::getLastGuanqiaIndex()
 {
     return getIntForKey("CurrentGuanqiaIndex");
 }

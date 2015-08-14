@@ -67,21 +67,17 @@ void MapGuanqiaButton::pressGuanqiaButtonFunc(Touch * touch, Event * event)
 {
     log("enter guan qia  id : %s",m_guanqiaId.c_str());
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-//    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
     
     GuanqiaModel * guanQia = GuanQiaManager::getInstance()->getGuanqiaById(m_guanqiaId);
     if (guanQia->isUnlock())
     {
         string musicName = StringUtils::format("sceneMusic%d.mp3",m_sceneIndex + 1);
         SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath(musicName)).c_str(),true);
+        
         GuanQiaManager::getInstance()->setCurrentSceneIndex(m_sceneIndex);
         GuanQiaManager::getInstance()->setCurrentGuanqiaIndex(m_index);
         
         Director::getInstance()->replaceScene(GameLoadingScene::scene(m_guanqiaId));
-//        GameLoading::loadFrames();
-//        GuanQiaManager::getInstance()->setCurrentGuanqiaId(guanQia->getId());
-//        EnemyManager::getInstance()->setData(guanQia->getMonsters());
-//        Director::getInstance()->replaceScene(GameFightScene::scene());
     }else
     {
         log("this guan qia is lcok");

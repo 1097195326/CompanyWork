@@ -42,7 +42,7 @@ void WalkEnemy::gameLoop(float data)
     }else if (m_status & e_walk)
     {
         move();
-        if (m_targetPoint.x + m_range >= m_point.x)
+        if (m_targetPoint.x + m_range > m_point.x)
         {
             if(!computeIfWander())
             {
@@ -90,7 +90,7 @@ void WalkEnemy::gameLoop(float data)
 }
 void WalkEnemy::wander()
 {
-    if (m_point.distanceSquared(m_perPoint) >= m_toPoint.distanceSquared(m_perPoint))
+    if (m_point.distanceSquared(m_perPoint) > m_toPoint.distanceSquared(m_perPoint))
     {
         m_status &= e_clear;
         m_status |= e_attack;

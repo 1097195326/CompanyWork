@@ -925,6 +925,8 @@
 				8DE3C38A1AFB0F9F00C61D89 /* GameScrollHeadler.h */,
 				8DD925701AF9BFB00075E9F5 /* GameScrollView.cpp */,
 				8DD925711AF9BFB00075E9F5 /* GameScrollView.h */,
+				8DD215691B16E7160090EEEB /* GameScrollHeadlerView.cpp */,
+				8DD2156A1B16E7160090EEEB /* GameScrollHeadlerView.h */,
 				8DE3C38C1AFB13F300C61D89 /* GameVerticalScrollView.cpp */,
 				8DE3C38D1AFB13F300C61D89 /* GameVerticalScrollView.h */,
 				8DE3C38F1AFB14F900C61D89 /* GameHorizontalScrollView.cpp */,
@@ -933,8 +935,6 @@
 				8DE3C3931AFB15A800C61D89 /* GameVerticalScrollHeadlerView.h */,
 				8DD2156C1B16F4480090EEEB /* GameHorizontalScrollHeadlerView.cpp */,
 				8DD2156D1B16F4480090EEEB /* GameHorizontalScrollHeadlerView.h */,
-				8DD215691B16E7160090EEEB /* GameScrollHeadlerView.cpp */,
-				8DD2156A1B16E7160090EEEB /* GameScrollHeadlerView.h */,
 				8DD5F2F91B283FE500DC5DB9 /* GameSprite.cpp */,
 				8DD5F2FA1B283FE500DC5DB9 /* GameSprite.h */,
 			);
