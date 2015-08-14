@@ -213,7 +213,7 @@ BulletInfoData Bullet::getDandaoInfo()
     }else if ("BulletModelId5" == modelId)
     {
         data.name = "BulletModelId5";
-        data.frames = 1;
+        data.frames = 3;
     }else if ("BulletModelId7" == modelId)
     {
         data.name = "bullet_qiang11";

@@ -76,7 +76,7 @@ public:
     void    updateVelocity(float ox, float oy);
     void    updateOffSet(float ox, float oy);
     void    moveToOffSet(float ox, float oy);
-    
+    void    toOffSet(float ox, float oy);
 private:
     inline  M_Vec2f addMV(M_Vec2f a, M_Vec2f b)
     {

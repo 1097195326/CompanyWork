@@ -4,10 +4,49 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>BulletModelId50001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1000},{79,22}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{79,22}}</string>
+                <key>sourceSize</key>
+                <string>{79,22}</string>
+            </dict>
+            <key>BulletModelId50002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{494,982},{93,32}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{93,32}}</string>
+                <key>sourceSize</key>
+                <string>{93,32}</string>
+            </dict>
+            <key>BulletModelId50003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{406,982},{86,38}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{86,38}}</string>
+                <key>sourceSize</key>
+                <string>{86,38}</string>
+            </dict>
             <key>bullet_qiang9.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,1000},{67,5}}</string>
+                <string>{{83,1000},{67,5}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -469,7 +508,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:d33b54568dbff496eca82ea5bdb928a0:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:c4a0030414488e3195128d0dfe6b1a19:1/1$</string>
             <key>textureFileName</key>
             <string>qiang9.png</string>
         </dict>

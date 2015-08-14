@@ -40,10 +40,10 @@ private:
     GameScrollHeadler * getHeadlerWithIndex(int index);
 public:
     void    setGetHeadlerTarget(GameScrollHeadlerTargetInterface * getHeadlerTarget);
-    void    initView();
+    void    initView(int index = 0);
     void    reSetView();
     void    reSetTotalCount(int num);
-    void    moveToViewAtIndex(int index);
+    void    moveToViewAtIndex(int index,bool direct = false);
     void    moveAddView();
     void    moveMinusView();
     bool    canMoveAddView();

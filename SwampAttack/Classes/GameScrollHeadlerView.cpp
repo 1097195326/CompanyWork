@@ -34,13 +34,23 @@ GameScrollHeadlerView::~GameScrollHeadlerView()
 {
     
 }
-void GameScrollHeadlerView::initView()
+void GameScrollHeadlerView::initView(int index)
 {
-    
+//    if (index < 0)
+//    {
+//        index = 0;
+//    }
+//    if (index >= m_viewCount)
+//    {
+//        index = m_viewCount - 1;
+//    }
     for (int i = 0; i < m_viewCount; ++i)
     {
         addHeadlerByIndex(i);
     }
+//    m_currentIndex = index;
+//    moveToViewAtIndex(m_currentIndex,true);
+
 }
 void GameScrollHeadlerView::reSetView()
 {
@@ -59,7 +69,7 @@ void GameScrollHeadlerView::reSetTotalCount(int num)
 {
     m_totalCount = num;
 }
-void GameScrollHeadlerView::moveToViewAtIndex(int index)
+void GameScrollHeadlerView::moveToViewAtIndex(int index, bool direct)
 {
 //    log("m_currentIndex index :%d",m_currentIndex);
 //    log("move to index :%d",index);
@@ -96,18 +106,25 @@ void GameScrollHeadlerView::moveToViewAtIndex(int index)
 //            }
             break;
     }
-    log("---:%f",toX);
-    m_scrollController->moveToOffSet(toX, toY);
+//    log("---:%f",toX);
+    if (direct)
+    {
+        m_scrollController->toOffSet(toX, toY);
+    }else
+    {
+        m_scrollController->moveToOffSet(toX, toY);
+    }
+    
 }
 void GameScrollHeadlerView::moveAddView()
 {
-    log("add view:%d",m_currentIndex);
+//    log("add view:%d",m_currentIndex);
     int index = m_currentIndex + 1;
     moveToViewAtIndex(index);
 }
 void GameScrollHeadlerView::moveMinusView()
 {
-    log("minu view:%d",m_currentIndex);
+//    log("minu view:%d",m_currentIndex);
     int index = m_currentIndex - 1;
     moveToViewAtIndex(index);
 }

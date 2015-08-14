@@ -174,6 +174,11 @@ void ScrollController::moveToOffSet(float ox, float oy)
 //    m_velocity = juli;
     
 }
+void ScrollController::toOffSet(float ox, float oy)
+{
+    m_offSet.x = ox;
+    m_offSet.y = oy;
+}
 M_Vec2f ScrollController::getOffSet()
 {
     return m_offSet;
