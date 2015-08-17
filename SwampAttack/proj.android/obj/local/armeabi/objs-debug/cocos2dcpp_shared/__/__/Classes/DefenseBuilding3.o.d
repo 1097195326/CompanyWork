@@ -328,9 +328,10 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/DefenseBuilding3.o:
  jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
  jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
  jni/../../Classes/BulletManager.h jni/../../Classes/Bullet.h \
- jni/../../Classes/EnemyManager.h jni/../../Classes/EnemyGroup.h \
- jni/../../Classes/Enemy.h jni/../../Classes/GameBuff.h \
- jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h
+ jni/../../Classes/BulletModel.h jni/../../Classes/EnemyManager.h \
+ jni/../../Classes/EnemyGroup.h jni/../../Classes/Enemy.h \
+ jni/../../Classes/GameBuff.h jni/../../Classes/GameSubject.h \
+ jni/../../Classes/GameObserver.h
 
 jni/../../Classes/DefenseBuilding3.h:
 
@@ -1005,6 +1006,8 @@ jni/../../Classes/GameMap5s.h:
 jni/../../Classes/BulletManager.h:
 
 jni/../../Classes/Bullet.h:
+
+jni/../../Classes/BulletModel.h:
 
 jni/../../Classes/EnemyManager.h:
 

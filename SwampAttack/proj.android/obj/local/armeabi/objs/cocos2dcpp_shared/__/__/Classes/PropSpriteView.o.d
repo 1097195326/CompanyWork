@@ -361,7 +361,10 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/PropSpriteView.o: \
  jni/../../Classes/PropSprite_daoju2.h \
  jni/../../Classes/PropSprite_daoju3.h \
  jni/../../Classes/PropSprite_daoju5.h \
- jni/../../Classes/PropSprite_daoju6.h
+ jni/../../Classes/PropSprite_daoju6.h \
+ jni/../../Classes/PropSprite_daoju7.h \
+ jni/../../Classes/PropSprite_daoju8.h \
+ jni/../../Classes/PropSprite_daoju9.h
 
 jni/../../Classes/PropSpriteView.h:
 
@@ -1110,3 +1113,9 @@ jni/../../Classes/PropSprite_daoju3.h:
 jni/../../Classes/PropSprite_daoju5.h:
 
 jni/../../Classes/PropSprite_daoju6.h:
+
+jni/../../Classes/PropSprite_daoju7.h:
+
+jni/../../Classes/PropSprite_daoju8.h:
+
+jni/../../Classes/PropSprite_daoju9.h:

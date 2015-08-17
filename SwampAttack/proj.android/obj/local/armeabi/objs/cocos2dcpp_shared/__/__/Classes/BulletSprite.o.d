@@ -348,7 +348,13 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/BulletSprite.o: \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  jni/../../Classes/Bullet.h jni/../../Classes/GameObject.h \
- jni/../../Classes/GameFightScene.h jni/../../Classes/GameObserver.h
+ jni/../../Classes/BulletModel.h jni/../../Classes/json/json.h \
+ jni/../../Classes/json/autolink.h jni/../../Classes/json/config.h \
+ jni/../../Classes/json/value.h jni/../../Classes/json/forwards.h \
+ jni/../../Classes/json/reader.h jni/../../Classes/json/features.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
+ jni/../../Classes/json/writer.h jni/../../Classes/GameFightScene.h \
+ jni/../../Classes/GameObserver.h jni/../../Classes/BaseUtil.h
 
 jni/../../Classes/BulletSprite.h:
 
@@ -1052,6 +1058,28 @@ jni/../../Classes/Bullet.h:
 
 jni/../../Classes/GameObject.h:
 
+jni/../../Classes/BulletModel.h:
+
+jni/../../Classes/json/json.h:
+
+jni/../../Classes/json/autolink.h:
+
+jni/../../Classes/json/config.h:
+
+jni/../../Classes/json/value.h:
+
+jni/../../Classes/json/forwards.h:
+
+jni/../../Classes/json/reader.h:
+
+jni/../../Classes/json/features.h:
+
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
+
+jni/../../Classes/json/writer.h:
+
 jni/../../Classes/GameFightScene.h:
 
 jni/../../Classes/GameObserver.h:
+
+jni/../../Classes/BaseUtil.h:

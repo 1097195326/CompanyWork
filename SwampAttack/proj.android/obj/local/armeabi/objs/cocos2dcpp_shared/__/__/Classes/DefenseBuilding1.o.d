@@ -327,7 +327,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/DefenseBuilding1.o: \
  jni/../../Classes/DefenseBuildingSprite.h \
  jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
  jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
- jni/../../Classes/House.h
+ jni/../../Classes/DefenseBuilding6_Sprite.h \
+ jni/../../Classes/DefenseBuilding7_Sprite.h jni/../../Classes/House.h
 
 jni/../../Classes/DefenseBuilding1.h:
 
@@ -998,5 +999,9 @@ jni/../../Classes/GameMap.h:
 jni/../../Classes/GameMap6.h:
 
 jni/../../Classes/GameMap5s.h:
+
+jni/../../Classes/DefenseBuilding6_Sprite.h:
+
+jni/../../Classes/DefenseBuilding7_Sprite.h:
 
 jni/../../Classes/House.h:

@@ -356,7 +356,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/CrumpEnemySprite.o: \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameBuff.h \
  jni/../../Classes/ProgressBar.h jni/../../Classes/EnemyInfo.h \
- jni/../../Classes/BaseUtil.h jni/../../Classes/BuffSprite.h
+ jni/../../Classes/BaseUtil.h jni/../../Classes/BuffSprite.h \
+ jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
+ jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h
 
 jni/../../Classes/CrumpEnemySprite.h:
 
@@ -1089,3 +1091,11 @@ jni/../../Classes/EnemyInfo.h:
 jni/../../Classes/BaseUtil.h:
 
 jni/../../Classes/BuffSprite.h:
+
+jni/../../Classes/GameMapManager.h:
+
+jni/../../Classes/GameMap.h:
+
+jni/../../Classes/GameMap6.h:
+
+jni/../../Classes/GameMap5s.h:

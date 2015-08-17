@@ -19,6 +19,7 @@ private:
     bool    m_isEnable;
     bool    m_isCanScale;
     std::string m_name;
+    Vec2    m_moveLength;
 public:
     GameSprite(std::string name);
     ~GameSprite();

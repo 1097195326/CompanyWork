@@ -4,6 +4,32 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>scareking_Electric0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{682,2},{206,268}}</string>
+                <key>offset</key>
+                <string>{25,-3}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{132,44},{206,268}}</string>
+                <key>sourceSize</key>
+                <string>{420,350}</string>
+            </dict>
+            <key>scareking_Electric0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{440,274},{206,268}}</string>
+                <key>offset</key>
+                <string>{25,-3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{132,44},{206,268}}</string>
+                <key>sourceSize</key>
+                <string>{420,350}</string>
+            </dict>
             <key>scareking_attack0001.png</key>
             <dict>
                 <key>frame</key>
@@ -85,11 +111,11 @@
             <key>scareking_attack0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{440,274},{266,260}}</string>
+                <string>{{682,210},{266,260}}</string>
                 <key>offset</key>
                 <string>{-73,-7}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{4,52},{266,260}}</string>
                 <key>sourceSize</key>
@@ -98,11 +124,11 @@
             <key>scareking_attack0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{682,2},{264,262}}</string>
+                <string>{{648,472},{264,262}}</string>
                 <key>offset</key>
                 <string>{-72,-6}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{6,50},{264,262}}</string>
                 <key>sourceSize</key>
@@ -111,7 +137,7 @@
             <key>scareking_attack0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{702,530},{262,262}}</string>
+                <string>{{708,736},{262,262}}</string>
                 <key>offset</key>
                 <string>{-71,-6}</string>
                 <key>rotated</key>
@@ -124,11 +150,11 @@
             <key>scareking_attack0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{702,268},{260,264}}</string>
+                <string>{{446,736},{260,264}}</string>
                 <key>offset</key>
                 <string>{-70,-5}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{10,48},{260,264}}</string>
                 <key>sourceSize</key>
@@ -157,7 +183,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:782921b9420eb2dee47fa6c55ee6be9f:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:798b185aeff48e75649ebfbf3fe91dc9:1/1$</string>
             <key>textureFileName</key>
             <string>scareking3.png</string>
         </dict>

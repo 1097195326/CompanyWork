@@ -347,7 +347,22 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/GameShowDiscLayer.o
  jni/../../cocos2d/cocos/3d/../deprecated/CCNotificationCenter.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
- jni/../../cocos2d/cocos/audio/android/../include/Export.h
+ jni/../../cocos2d/cocos/audio/android/../include/Export.h \
+ jni/../../Classes/GameShopScene.h jni/../../Classes/GameObserver.h \
+ jni/../../Classes/GameScrollHeadlerTargetInterface.h \
+ jni/../../Classes/GameScrollHeadler.h \
+ jni/../../Classes/GameVerticalScrollHeadlerView.h \
+ jni/../../Classes/GameScrollHeadlerView.h \
+ jni/../../Classes/GameScrollView.h jni/../../Classes/ScrollController.h \
+ jni/../../Classes/UserDelegatLayer.h jni/../../Classes/GunManager.h \
+ jni/../../Classes/GameObject.h jni/../../Classes/Gun.h \
+ jni/../../Classes/json/json.h jni/../../Classes/json/autolink.h \
+ jni/../../Classes/json/config.h jni/../../Classes/json/value.h \
+ jni/../../Classes/json/forwards.h jni/../../Classes/json/reader.h \
+ jni/../../Classes/json/features.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
+ jni/../../Classes/json/writer.h jni/../../Classes/GameSubject.h \
+ jni/../../Classes/PropManager.h jni/../../Classes/Prop.h
 
 jni/../../Classes/GameShowDiscLayer.h:
 
@@ -1046,3 +1061,51 @@ jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h:
 jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
 
 jni/../../cocos2d/cocos/audio/android/../include/Export.h:
+
+jni/../../Classes/GameShopScene.h:
+
+jni/../../Classes/GameObserver.h:
+
+jni/../../Classes/GameScrollHeadlerTargetInterface.h:
+
+jni/../../Classes/GameScrollHeadler.h:
+
+jni/../../Classes/GameVerticalScrollHeadlerView.h:
+
+jni/../../Classes/GameScrollHeadlerView.h:
+
+jni/../../Classes/GameScrollView.h:
+
+jni/../../Classes/ScrollController.h:
+
+jni/../../Classes/UserDelegatLayer.h:
+
+jni/../../Classes/GunManager.h:
+
+jni/../../Classes/GameObject.h:
+
+jni/../../Classes/Gun.h:
+
+jni/../../Classes/json/json.h:
+
+jni/../../Classes/json/autolink.h:
+
+jni/../../Classes/json/config.h:
+
+jni/../../Classes/json/value.h:
+
+jni/../../Classes/json/forwards.h:
+
+jni/../../Classes/json/reader.h:
+
+jni/../../Classes/json/features.h:
+
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
+
+jni/../../Classes/json/writer.h:
+
+jni/../../Classes/GameSubject.h:
+
+jni/../../Classes/PropManager.h:
+
+jni/../../Classes/Prop.h:

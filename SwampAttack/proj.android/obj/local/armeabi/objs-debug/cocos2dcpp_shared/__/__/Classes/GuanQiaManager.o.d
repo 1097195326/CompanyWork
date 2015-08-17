@@ -324,7 +324,8 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/GuanQiaManager.o: \
  jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h \
  jni/../../Classes/BaseCode.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
- jni/../../cocos2d/cocos/audio/android/../include/Export.h
+ jni/../../cocos2d/cocos/audio/android/../include/Export.h \
+ jni/../../Classes/GameUser.h
 
 jni/../../Classes/GuanQiaManager.h:
 
@@ -989,3 +990,5 @@ jni/../../Classes/BaseCode.h:
 jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
 
 jni/../../cocos2d/cocos/audio/android/../include/Export.h:
+
+jni/../../Classes/GameUser.h:

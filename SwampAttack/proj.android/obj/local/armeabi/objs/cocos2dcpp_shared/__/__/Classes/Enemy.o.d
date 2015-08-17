@@ -357,9 +357,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Enemy.o: \
  jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
  jni/../../Classes/EnemyInfo.h jni/../../Classes/House.h \
  jni/../../Classes/BulletManager.h jni/../../Classes/Bullet.h \
- jni/../../Classes/DropManager.h jni/../../Classes/DropModel.h \
- jni/../../Classes/GameDirector.h jni/../../Classes/GameSubject.h \
- jni/../../Classes/GameObserver.h
+ jni/../../Classes/BulletModel.h jni/../../Classes/DropManager.h \
+ jni/../../Classes/DropModel.h jni/../../Classes/GameDirector.h \
+ jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h
 
 jni/../../Classes/Enemy.h:
 
@@ -1096,6 +1096,8 @@ jni/../../Classes/House.h:
 jni/../../Classes/BulletManager.h:
 
 jni/../../Classes/Bullet.h:
+
+jni/../../Classes/BulletModel.h:
 
 jni/../../Classes/DropManager.h:
 

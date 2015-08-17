@@ -4,10 +4,36 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>skullking_Electric0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{398,2},{202,242}}</string>
+                <key>offset</key>
+                <string>{22,-10}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{111,64},{202,242}}</string>
+                <key>sourceSize</key>
+                <string>{380,350}</string>
+            </dict>
+            <key>skullking_Electric0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{194,2},{202,242}}</string>
+                <key>offset</key>
+                <string>{22,-10}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{111,64},{202,242}}</string>
+                <key>sourceSize</key>
+                <string>{380,350}</string>
+            </dict>
             <key>skullking_hurt_light0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{668,248},{186,242}}</string>
+                <string>{{384,246},{186,242}}</string>
                 <key>offset</key>
                 <string>{0,-10}</string>
                 <key>rotated</key>
@@ -20,7 +46,7 @@
             <key>skullking_hurt_on0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{534,744},{186,236}}</string>
+                <string>{{814,2},{186,236}}</string>
                 <key>offset</key>
                 <string>{14,-12}</string>
                 <key>rotated</key>
@@ -33,7 +59,7 @@
             <key>skullking_hurt_on0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{538,2},{164,244}}</string>
+                <string>{{572,246},{164,244}}</string>
                 <key>offset</key>
                 <string>{10,-5}</string>
                 <key>rotated</key>
@@ -46,7 +72,7 @@
             <key>skullking_hurt_on0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{856,2},{166,230}}</string>
+                <string>{{680,742},{166,230}}</string>
                 <key>offset</key>
                 <string>{-14,-14}</string>
                 <key>rotated</key>
@@ -59,7 +85,7 @@
             <key>skullking_hurt_on0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{676,492},{210,232}}</string>
+                <string>{{602,2},{210,232}}</string>
                 <key>offset</key>
                 <string>{-25,-14}</string>
                 <key>rotated</key>
@@ -72,7 +98,7 @@
             <key>skullking_hurt_on0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{722,726},{186,232}}</string>
+                <string>{{500,492},{186,232}}</string>
                 <key>offset</key>
                 <string>{-13,-14}</string>
                 <key>rotated</key>
@@ -85,7 +111,7 @@
             <key>skullking_walk0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{194,2},{178,248}}</string>
+                <string>{{738,240},{178,248}}</string>
                 <key>offset</key>
                 <string>{-8,-11}</string>
                 <key>rotated</key>
@@ -98,7 +124,7 @@
             <key>skullking_walk0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{348,762},{184,246}}</string>
+                <string>{{2,758},{184,246}}</string>
                 <key>offset</key>
                 <string>{-10,-10}</string>
                 <key>rotated</key>
@@ -111,7 +137,7 @@
             <key>skullking_walk0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{478,252},{188,244}}</string>
+                <string>{{194,246},{188,244}}</string>
                 <key>offset</key>
                 <string>{-11,-10}</string>
                 <key>rotated</key>
@@ -124,7 +150,7 @@
             <key>skullking_walk0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{350,502},{162,246}}</string>
+                <string>{{188,764},{162,246}}</string>
                 <key>offset</key>
                 <string>{0,-10}</string>
                 <key>rotated</key>
@@ -137,7 +163,7 @@
             <key>skullking_walk0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,514},{154,252}}</string>
+                <string>{{344,492},{154,252}}</string>
                 <key>offset</key>
                 <string>{5,-7}</string>
                 <key>rotated</key>
@@ -150,7 +176,7 @@
             <key>skullking_walk0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,260},{154,252}}</string>
+                <string>{{188,510},{154,252}}</string>
                 <key>offset</key>
                 <string>{3,-8}</string>
                 <key>rotated</key>
@@ -163,7 +189,7 @@
             <key>skullking_walk0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,768},{158,250}}</string>
+                <string>{{352,746},{158,250}}</string>
                 <key>offset</key>
                 <string>{2,-10}</string>
                 <key>rotated</key>
@@ -176,7 +202,7 @@
             <key>skullking_walk0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{310,252},{166,248}}</string>
+                <string>{{512,726},{166,248}}</string>
                 <key>offset</key>
                 <string>{3,-11}</string>
                 <key>rotated</key>
@@ -189,7 +215,7 @@
             <key>skullking_walk0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{374,2},{162,248}}</string>
+                <string>{{688,492},{162,248}}</string>
                 <key>offset</key>
                 <string>{7,-11}</string>
                 <key>rotated</key>
@@ -202,7 +228,7 @@
             <key>skullking_walk0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{514,498},{160,244}}</string>
+                <string>{{848,742},{160,244}}</string>
                 <key>offset</key>
                 <string>{9,-11}</string>
                 <key>rotated</key>
@@ -215,7 +241,7 @@
             <key>skullking_walk0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{158,260},{150,250}}</string>
+                <string>{{852,490},{150,250}}</string>
                 <key>offset</key>
                 <string>{6,-11}</string>
                 <key>rotated</key>
@@ -241,7 +267,7 @@
             <key>skullking_walk0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{158,512},{190,248}}</string>
+                <string>{{2,260},{190,248}}</string>
                 <key>offset</key>
                 <string>{-15,-7}</string>
                 <key>rotated</key>
@@ -254,7 +280,7 @@
             <key>skullking_walk0014.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{162,762},{184,246}}</string>
+                <string>{{2,510},{184,246}}</string>
                 <key>offset</key>
                 <string>{-14,-8}</string>
                 <key>rotated</key>
@@ -274,7 +300,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:1afcf7d232eb62886b83f165c5bb5207:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:361b3ee5dca056aedaadb724d41cf296:1/1$</string>
             <key>textureFileName</key>
             <string>skullking3.png</string>
         </dict>

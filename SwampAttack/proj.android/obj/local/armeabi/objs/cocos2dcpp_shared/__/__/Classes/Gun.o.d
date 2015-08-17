@@ -324,12 +324,16 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Gun.o: \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  jni/../../Classes/GameObject.h jni/../../Classes/GameSubject.h \
  jni/../../Classes/GameObserver.h jni/../../Classes/BulletManager.h \
- jni/../../Classes/Bullet.h jni/../../Classes/GameMapManager.h \
- jni/../../Classes/GameMap.h jni/../../Classes/GameMap6.h \
- jni/../../Classes/GameMap5s.h jni/../../Classes/ConfigManager.h \
- jni/../../Classes/CCCsvHelper.h jni/../../Classes/GameUser.h \
- jni/../../Classes/GunSprite.h jni/../../Classes/GameDirector.h \
- jni/../../Classes/GuanQiaManager.h jni/../../Classes/GuanQiaModel.h
+ jni/../../Classes/Bullet.h jni/../../Classes/BulletModel.h \
+ jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
+ jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
+ jni/../../Classes/ConfigManager.h jni/../../Classes/CCCsvHelper.h \
+ jni/../../Classes/GameUser.h jni/../../Classes/GunSprite.h \
+ jni/../../Classes/ProgressBar.h jni/../../Classes/GameDirector.h \
+ jni/../../Classes/GuanQiaManager.h jni/../../Classes/GuanQiaModel.h \
+ jni/../../Classes/EnemyManager.h jni/../../Classes/EnemyGroup.h \
+ jni/../../Classes/Enemy.h jni/../../Classes/GameBuff.h \
+ jni/../../Classes/GameShowDiscLayer.h
 
 jni/../../Classes/Gun.h:
 
@@ -995,6 +999,8 @@ jni/../../Classes/BulletManager.h:
 
 jni/../../Classes/Bullet.h:
 
+jni/../../Classes/BulletModel.h:
+
 jni/../../Classes/GameMapManager.h:
 
 jni/../../Classes/GameMap.h:
@@ -1011,8 +1017,20 @@ jni/../../Classes/GameUser.h:
 
 jni/../../Classes/GunSprite.h:
 
+jni/../../Classes/ProgressBar.h:
+
 jni/../../Classes/GameDirector.h:
 
 jni/../../Classes/GuanQiaManager.h:
 
 jni/../../Classes/GuanQiaModel.h:
+
+jni/../../Classes/EnemyManager.h:
+
+jni/../../Classes/EnemyGroup.h:
+
+jni/../../Classes/Enemy.h:
+
+jni/../../Classes/GameBuff.h:
+
+jni/../../Classes/GameShowDiscLayer.h:
