@@ -69,12 +69,12 @@ void ShopAwardItemScrollHeadler::initAwardView()
     addChild(descLabel);
     
     Sprite * moneyBg = Sprite::create(ImagePath("shop_award_moneyBg.png"));
-    moneyBg->setPosition(itemBgSize.width * 0.52,
+    moneyBg->setPosition(itemBgSize.width * 0.5,
                          -itemBgSize.height * 0.15);
     addChild(moneyBg);
     string price = StringUtils::format("$%d",specialobject->getPrice());
     Label * moneyLabel = Label::createWithTTF(price, "fonts/Arial Black.ttf", 20);
-    moneyLabel->setPosition(itemBgSize.width * 0.52,
+    moneyLabel->setPosition(itemBgSize.width * 0.5,
                             -itemBgSize.height * 0.15);
     moneyLabel->enableOutline(Color4B(0, 0, 0, 255),3);
     moneyLabel->setAdditionalKerning(-3);

@@ -1,132 +1,136 @@
 翻译数据编号,中文,英文
 Id[string],zh_CN[string],zh_EN[string]
-tid#monstername1,骷髅兵,
-tid#monstername2,锅盖骷髅兵,
-tid#monstername3,僵尸,
-tid#monstername4,锅盖僵尸,
-tid#monstername5,蝙蝠,
-tid#monstername6,锅盖蝙蝠,
-tid#monstername7,乌鸦,
-tid#monstername8,锅盖乌鸦,
-tid#monstername9,鼠人自爆兵,
-tid#monstername10,锅盖鼠人自爆兵,
-tid#monstername11,鼠人火枪兵,
-tid#monstername12,锅盖鼠人火枪兵,
-tid#monstername13,树人,
-tid#monstername14,锅盖树人,
+tid#monstername1,骷髅兵,Skeleton soldiers
+tid#monstername2,锅盖骷髅兵,The cover of skeletons
+tid#monstername3,僵尸,Corpse
+tid#monstername4,锅盖僵尸,Pot zombies
+tid#monstername5,蝙蝠,Bat
+tid#monstername6,锅盖蝙蝠,Lid bat
+tid#monstername7,乌鸦,Crow
+tid#monstername8,锅盖乌鸦,Cover crow
+tid#monstername9,鼠人自爆兵,Blew the mouse
+tid#monstername10,锅盖鼠人自爆兵,The lid rats blew the soldier
+tid#monstername11,鼠人火枪兵,Skaven Gunners
+tid#monstername12,锅盖鼠人火枪兵,Lid mouse gunmen
+tid#monstername13,南瓜头,Pumpkin head
+tid#monstername14,带帽子的南瓜头,Pumpkin head with hat
+tid#monstername15,稻草人,scarecrow
+tid#monstername16,带帽子的稻草人,Pumpkin head with hat
+tid#monstername17,小恶魔,Little devil
+tid#monstername18,恶魔,Devil
+tid#monstername19,狼人,Werewolf
+tid#monstername20,铁面狼人,The werewolf
+tid#monstername21,骷髅王,Skeleton King
+tid#monstername22,僵尸王,Zombie King
+tid#monstername23,狼王,Wolf king
+tid#monstername24,稻草王,Straw King
 ,,
-,,
-tid#MonsterDescription1,基本兵种，能力均衡,
-tid#MonsterDescription2,骷髅兵升级版本,
-tid#MonsterDescription3,移动速度极慢，血厚,
-tid#MonsterDescription4,僵尸升级版本,
-tid#MonsterDescription5,远程飞行兵种，声波攻击,
-tid#MonsterDescription6,蝙蝠升级版本,
+tid#MonsterDescription1,基本兵种，能力均衡,The basic units，Capacity
+tid#MonsterDescription2,骷髅兵升级版本,Skeletal upgraded version
+tid#MonsterDescription3,移动速度极慢，血厚,Moving speed is very slow，Thick blood
+tid#MonsterDescription4,僵尸升级版本,Zombie upgrade version
+tid#MonsterDescription5,远程飞行兵种，声波攻击,Long range flight，Sonic attack
+tid#MonsterDescription6,蝙蝠升级版本,Bat upgraded version
 tid#MonsterDescription7,飞行兵种，吞噬道具,
 tid#MonsterDescription8,乌鸦升级版本,
-tid#MonsterDescription9,移动较快，自杀攻击,
-tid#MonsterDescription10,鼠人自爆兵升级版本,
-tid#MonsterDescription11,陆行远程兵种,
-tid#MonsterDescription12,鼠人火枪兵升级版本,
-tid#MonsterDescription13,移动非常慢，血非常厚,
-tid#MonsterDescription14,树人升级版本,
+tid#MonsterDescription9,移动较快，自杀攻击,"Move faster，suicide attack"
+tid#MonsterDescription10,鼠人自爆兵升级版本,The soldiers blew rats upgrade
+tid#MonsterDescription11,陆地远程兵种,Land remote units
+tid#MonsterDescription12,南瓜头升级版,Pumpkin head upgrade
+tid#MonsterDescription13,行动缓慢，血量较厚，高额伤害,"The action is slow, the blood is thick, high damage"
+tid#MonsterDescription14,稻草人升级版,The upgraded version of the Scarecrow
+tid#MonsterDescription15,飞行兵种，近战攻击,"Flight, melee attack"
+tid#MonsterDescription16,小恶魔升级版,Little demon upgraded version
+tid#MonsterDescription17,移动非常慢，血非常厚,"Move very slowly, blood is very thick"
+tid#MonsterDescription18,狼人升级版本,The upgraded version of the wolf.
+tid#MonsterDescription19,骷髅BOOS,Skeleton King
+tid#MonsterDescription20,僵尸BOOS,Zombie King
+tid#MonsterDescription21,狼人BOOS,Wolf king
+tid#MonsterDescription22,稻草人BOOS,Straw King
 ,,
 ,,
-tid#WeaponName1,M617,
-tid#WeaponName2,柯尔特巨蟒,
-tid#WeaponName3,线膛燧发枪,
-tid#WeaponName4,伯恩塞德卡宾枪,
-tid#WeaponName5,UZI,
-tid#WeaponName6,汤姆逊冲锋枪,
-tid#WeaponName7,AK47,
-tid#WeaponName8,M4A1,
-tid#WeaponName9,斥候步枪,
-tid#WeaponName10,L115A3,
+,,
+tid#WeaponName3,线膛燧发枪,Shotgun
+tid#WeaponName5,UZI,UZI
+tid#WeaponName7,AK47,AK47
 ,,
 ,,
-tid#WeaponDescription1,基本左轮手枪,
-tid#WeaponDescription2,强化版本左轮手枪,
-tid#WeaponDescription3,基本散弹枪,
-tid#WeaponDescription4,强化版散弹枪,
-tid#WeaponDescription5,基本冲锋枪,
-tid#WeaponDescription6,强化版冲锋枪,
-tid#WeaponDescription7,基本步枪,
-tid#WeaponDescription8,强化版步枪,
-tid#WeaponDescription9,基本狙击枪,
-tid#WeaponDescription10,强化版狙击枪,
+tid#WeaponDescription3,基本散弹枪,Basic shotgun
+tid#WeaponDescription5,基本冲锋枪,Basic assault rifle
+tid#WeaponDescription7,基本步枪,Basic rifle
 ,,
 ,,
-tid#MissionName1,远方而来的朋友,
-tid#MissionName2,摇摆的身影,
-tid#MissionName3,一大片尸兄,
-tid#MissionName4,没完没了？,
-tid#MissionName5,陵墓中的怒吼,
-tid#MissionName6,夜空突袭,
-tid#MissionName7,那是什么？,
-tid#MissionName8,小心脚下,
-tid#MissionName9,快速消灭他们,
-tid#MissionName10,沼泽地的恐怖,
-tid#MissionName11,锅盖的力量,
-tid#MissionName12,被包围了,
-tid#MissionName13,啪！啪！啪！,
-tid#MissionName14,火力全开,
-tid#MissionName15,森林之王,
-tid#MissionName16,在希望的田野上,
-tid#MissionName17,恐怖来袭,
-tid#MissionName18,不平静的夜,
-tid#MissionName19,胜利就在前方,
-tid#MissionName20,月光下的笑声,
+tid#MissionName1,远方而来的朋友,Friends from afar
+tid#MissionName2,摇摆的身影,Swing figure
+tid#MissionName3,一大片尸兄,A large body of dead brother
+tid#MissionName4,没完没了？,Endless?
+tid#MissionName5,陵墓中的怒吼,The roar of the mausoleum
+tid#MissionName6,夜空突袭,Night raid
+tid#MissionName7,那是什么？,What is that?
+tid#MissionName8,小心脚下,Mind Your Step
+tid#MissionName9,快速消灭他们,Quickly destroy them
+tid#MissionName10,沼泽地的恐怖,The horror of the swamp
+tid#MissionName11,锅盖的力量,Power of equipment
+tid#MissionName12,被包围了,Surrounded by
+tid#MissionName13,啪！啪！啪！,Pa! Pa! Pa!
+tid#MissionName14,火力全开,Firepower
+tid#MissionName15,森林之王,King of the forest
+tid#MissionName16,在希望的田野上,In the field of hope
+tid#MissionName17,恐怖来袭,Terrorist attack
+tid#MissionName18,不平静的夜,Restless night
+tid#MissionName19,胜利就在前方,Victory is ahead
+tid#MissionName20,月光下的笑声,Laughter in the moonlight
 ,,
 ,,
-tid#ItemName1,雷管,
-tid#ItemName2,燃烧瓶,
-tid#ItemName3,地雷,
-tid#ItemName4,暴风雪,
-tid#ItemName5,陨石,
-tid#ItemName6,原子弹,
+tid#ItemName1,雷管,Detonator
+tid#ItemName2,燃烧瓶,Combustion bomb
+tid#ItemName3,地雷,Mine
+tid#ItemName4,暴风雪,Snowstorm
+tid#ItemName5,陨石,Meteorite
+tid#ItemName6,原子弹,Atomic bomb
 ,,
 ,,
-tid#ItemDescription1,对小范围内目标造成群体伤害。,
-tid#ItemDescription2,使小范围内目标燃烧，持续造成伤害。,
-tid#ItemDescription3,在地面随机产生3枚地雷。,
-tid#ItemDescription4,寒冰刺骨的冷风，对全体怪物造成伤害并减速。,
-tid#ItemDescription5,对较大范围内所有怪物造成较大伤害。,
-tid#ItemDescription6,对所有怪物造成致命伤害。,
+tid#ItemDescription1,对小范围内目标造成群体伤害。,Cause group damage to the small range.
+tid#ItemDescription2,使小范围内目标燃烧，持续造成伤害。,"To make a small range of target burning, sustained damage."
+tid#ItemDescription3,在地面产生1枚地雷。,1 mines on the ground.
+tid#ItemDescription4,寒冰刺骨的冷风，对全体怪物造成伤害并减速。,"Icy cold, damaging and slowing of the monster."
+tid#ItemDescription5,对较大范围内所有怪物造成较大伤害。,To the larger range of all the monsters cause more damage.
+tid#ItemDescription6,对所有怪物造成致命伤害。,Fatal damage to all the monsters.
 ,,
 ,,
-tid#DefenceName1,木板,
-tid#DefenceName2,木栅栏,
-tid#DefenceName3,小钢炮,
+tid#DefenceName1,木板,Board
+tid#DefenceName2,木栅栏,Wood fence
+tid#DefenceName3,小钢炮,Cannon
 ,,
 ,,
-tid#DefenceDescription1,能够增加一定的防御能力。,
-tid#DefenceDescription2,能够增加一定的防御能力。,
-tid#DefenceDescription3,对接近的怪物持续造成伤害。,
-tid#DefenceDescription4,小猴子操作的小炮，能够对陆行怪物造成群体伤害。,
+tid#DefenceDescription1,能够增加一定的防御能力。,Ability to increase a certain defense
+tid#DefenceDescription2,能够增加一定的防御能力。,Ability to increase a certain defense
+tid#DefenceDescription3,对接近的怪物持续造成伤害。,To the close of the monster continued to cause damage
+tid#DefenceDescription4,小猴子操作的小炮，能够对陆行怪物造成群体伤害。,"The little monkey operation of small, can cause damage to the land for the monster group."
 ,,
 ,,
-tid#HpDescription1,角色死亡使角色复活补满体力,
-tid#HpDescription2,角色死亡使角色复活补满体力,
-tid#HpDescription3,角色死亡使角色复活补满体力,
+tid#HpDescription1,角色死亡使角色复活补满体力,The role of death makes the role of life full of physical strength
+tid#HpDescription2,角色死亡使角色复活补满体力,The role of death makes the role of life full of physical strength
+tid#HpDescription3,角色死亡使角色复活补满体力,The role of death makes the role of life full of physical strength
 ,,
 ,,
-tid#MoneyDescription1,获得1万金币,
-tid#MoneyDescription2,获得5万金币,
-tid#MoneyDescription3,获得8万金币,
-tid#MoneyDescription4,获得20万金币,
-tid#MoneyDescription5,获得150万金币,
+tid#MoneyDescription1,获得1万金币,Get 10000 gold coins
+tid#MoneyDescription2,获得5万金币,Get 50000 gold coins
+tid#MoneyDescription3,获得8万金币,Get 80000 gold coins
+tid#MoneyDescription4,获得20万金币,Get 200000 gold coins
+tid#MoneyDescription5,获得150万金币,Get 1500000 gold coins
 ,,
 ,,
-tid#money1,1万金币,
-tid#money2,5万金币,
-tid#money3,8万金币,
-tid#money4,20万金币,
-tid#money5,150万金币,
-tid#money6,获得50金钱,
-tid#money7,获得100金钱,
-tid#money8,获得500金钱,
-tid#money9,获得1000金钱,
+tid#money1,1万金币,10000 gold coins
+tid#money2,5万金币,50000 gold coins
+tid#money3,8万金币,80000 gold coins
+tid#money4,20万金币,200000 gold coins
+tid#money5,150万金币,1500000 gold coins
+tid#money6,获得50金钱,Get 50 money
+tid#money7,获得100金钱,Get 100 money
+tid#money8,获得500金钱,Get 500 money
+tid#money9,获得1000金钱,Get 1000 money
 ,,
-tid#HP1,5瓶体力药剂,
-tid#HP2,15瓶体力药剂,
-tid#HP3,50瓶体力药剂,
+tid#HP1,5瓶体力药剂,5 bottles of Medicine
+tid#HP2,15瓶体力药剂,15 bottles of Medicine
+tid#HP3,50瓶体力药剂,50 bottles of Medicine

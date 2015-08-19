@@ -14,7 +14,11 @@ org.eclipse.cdt.codan.internal.checkers.AssignmentInConditionProblem.params={lau
 org.eclipse.cdt.codan.internal.checkers.AssignmentToItselfProblem=-Error
 org.eclipse.cdt.codan.internal.checkers.AssignmentToItselfProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true}}
 org.eclipse.cdt.codan.internal.checkers.CaseBreakProblem=Warning
+<<<<<<< HEAD
 org.eclipse.cdt.codan.internal.checkers.CaseBreakProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true},no_break_comment\=>"no break",last_case_param\=>true,empty_case_param\=>false}
+=======
+org.eclipse.cdt.codan.internal.checkers.CaseBreakProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},no_break_comment\=>"no break",last_case_param\=>true,empty_case_param\=>false}
+>>>>>>> 124361be60e983348f8af07d6e399ab1d04338be
 org.eclipse.cdt.codan.internal.checkers.CatchByReference=Warning
 org.eclipse.cdt.codan.internal.checkers.CatchByReference.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true},unknown\=>false,exceptions\=>()}
 org.eclipse.cdt.codan.internal.checkers.CircularReferenceProblem=-Error

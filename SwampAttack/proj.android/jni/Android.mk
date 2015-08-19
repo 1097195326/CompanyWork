@@ -16,10 +16,12 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/BuffSprite.cpp \
 				   ../../Classes/Bullet.cpp \
 				   ../../Classes/BulletManager.cpp \
+				   ../../Classes/BulletModel.cpp \
 				   ../../Classes/BulletSprite.cpp \
 				   ../../Classes/CCCsvHelper.cpp \
 				   ../../Classes/ConfigManager.cpp \
 				   ../../Classes/CrumpEnemySprite.cpp \
+				   ../../Classes/CurveBullet.cpp \
 				   ../../Classes/DefenseBuilding.cpp \
 				   ../../Classes/DefenseBuilding1_Sprite.cpp \
 				   ../../Classes/DefenseBuilding1.cpp \
@@ -28,6 +30,9 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/DefenseBuilding3_Sprite.cpp \
 				   ../../Classes/DefenseBuilding3.cpp \
 				   ../../Classes/DefenseBuilding4_Sprite.cpp \
+				   ../../Classes/DefenseBuilding4.cpp \
+				   ../../Classes/DefenseBuilding6_Sprite.cpp \
+				   ../../Classes/DefenseBuilding7_Sprite.cpp \
 				   ../../Classes/DefenseBuildingManager.cpp \
 				   ../../Classes/DefenseBuildingSprite.cpp \
 				   ../../Classes/DropManager.cpp \
@@ -41,10 +46,12 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/EnemyProgressBar.cpp \
 				   ../../Classes/EnemySprite.cpp \
 				   ../../Classes/ExpendObject.cpp \
+				   ../../Classes/FireBulletSprite.cpp \
 				   ../../Classes/FlyEnemy.cpp \
 				   ../../Classes/FlyEnemySprite.cpp \
 				   ../../Classes/GameBuff.cpp \
 				   ../../Classes/GameBuffManager.cpp \
+				   ../../Classes/GameCgShowScene.cpp \
 				   ../../Classes/GameDirector.cpp \
 				   ../../Classes/GameFightScene.cpp \
 				   ../../Classes/GameHomeScene.cpp \
@@ -87,6 +94,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/HumanSprite.cpp \
 				   ../../Classes/HumanThrowPropState.cpp \
 				   ../../Classes/HumanWaitState.cpp \
+				   ../../Classes/LiquidBullet.cpp \
 				   ../../Classes/MapGuanqiaButton.cpp \
 				   ../../Classes/MapScrollHeadler.cpp \
 				   ../../Classes/MoneyManager.cpp \
@@ -99,8 +107,12 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/PropSprite_daoju3.cpp \
 				   ../../Classes/PropSprite_daoju5.cpp \
 				   ../../Classes/PropSprite_daoju6.cpp \
+				   ../../Classes/PropSprite_daoju7.cpp \
+				   ../../Classes/PropSprite_daoju8.cpp \
+				   ../../Classes/PropSprite_daoju9.cpp \
 				   ../../Classes/PropSprite.cpp \
 				   ../../Classes/PropSpriteView.cpp \
+				   ../../Classes/PunctureBullet.cpp \
 				   ../../Classes/ScrollController.cpp \
 				   ../../Classes/SelectMenuController.cpp \
 				   ../../Classes/SelectMenuView.cpp \

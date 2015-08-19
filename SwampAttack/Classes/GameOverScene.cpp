@@ -69,14 +69,21 @@ bool GameOverScene::init()
     addChild(layerColor);
 //    layerColor->runAction(FadeTo::create(0.3, 200));
     
-    Sprite * bg = Sprite::create(ImagePath("overScene_bg.png"));
+    Sprite * bg =  NULL;
+    if (m_overStatus == o_win)
+    {
+        bg = Sprite::create(ImagePath("overScene_winbg.png"));
+    }else
+    {
+        bg = Sprite::create(ImagePath("overScene_losebg.png"));
+    }
     bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                     m_visibleOrigin.y + m_visibleSize.height * 0.5);
     addChild(bg);
     
     
     
-    int widthOffset = 100;
+    int widthOffset = 120;
     MenuItemImage * gotoMapButton = MenuItemImage::create(ImagePath("overScene_tomap.png"),
                                                        ImagePath("overScene_tomap.png"),
                                                        CC_CALLBACK_1( GameOverScene::gotoMap, this));
@@ -84,13 +91,13 @@ bool GameOverScene::init()
                                                           ImagePath("overScene_restart.png"),
                                                           CC_CALLBACK_1( GameOverScene::restartGame, this));
     Sprite * getIcon = Sprite::create(ImagePath("over_get_icon.png"));
-    getIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.42,
+    getIcon->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.41,
                            m_visibleOrigin.y + m_visibleSize.height * 0.4);
     addChild(getIcon);
     
     Label * goldLabel = Label::createWithTTF(StringUtils::format("%d",_G_D->getGoldNum()),
                                              "fonts/Arial Black.ttf",
-                                             30);
+                                             40);
     goldLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.52,
                            m_visibleOrigin.y + m_visibleSize.height * 0.4);
     goldLabel->setAdditionalKerning(-3);
@@ -106,10 +113,10 @@ bool GameOverScene::init()
     _G_U->setUserGold(userGold);
     
     Menu * buttonMenu = NULL;
-    Sprite * title = Sprite::create(ImagePath("overScene_win.png"));
-    title->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                       m_visibleOrigin.y + m_visibleSize.height * 0.58);
-    addChild(title);
+//    Sprite * title = Sprite::create(ImagePath("overScene_win.png"));
+//    title->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+//                       m_visibleOrigin.y + m_visibleSize.height * 0.58);
+//    addChild(title);
     MenuItemImage * gotoShopButton = MenuItemImage::create(ImagePath("overScene_toShop.png"),
                                                        ImagePath("overScene_toShop.png"),
                                                        CC_CALLBACK_1( GameOverScene::gotoShop, this));
@@ -118,7 +125,7 @@ bool GameOverScene::init()
     restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                                m_visibleOrigin.y + m_visibleSize.height * 0.22);
     gotoShopButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset,
-                            m_visibleOrigin.y + m_visibleSize.height * 0.22);
+                            m_visibleOrigin.y + m_visibleSize.height * 0.24);
 
     buttonMenu = Menu::create(gotoMapButton,restartButton,gotoShopButton, NULL);
     

@@ -1,11 +1,11 @@
 怪物编号,怪物名称编号,怪物名称,模型编号,帽子模型编号,行动类型,攻击类型,生命,移动速度,伤害,攻击速度,射程,子弹模型编号,弹道速度,击杀获得金币,掉落,怪物描述编号,怪物描述
 Id[string],MonsterName[string],,ModelId[string],CapId[string],ActionType[int],AttackType[int],Hp[int],Speed[float],Damage[int],AttackSpeed[float],Range[float],BulletModelId[string],BulletSpeed[float],Gold[int],Drop[string],MonsterDescription[sting],
-100001,tid#MonsterName1,骷髅兵,skull,,1,1,80,1,35,1,30,,,10,100010,tid#MonsterDescription1,基本兵种，能力均衡
-100002,tid#MonsterName2,锅盖骷髅兵,skull,skull_armor,1,1,160,1,35,1,30,,,20,100010,tid#MonsterDescription2,骷髅兵升级版本
+100001,tid#MonsterName1,骷髅兵,skull,,1,1,80,1,35,1,30,,,8,100010,tid#MonsterDescription1,基本兵种，能力均衡
+100002,tid#MonsterName2,锅盖骷髅兵,skull,skull_armor,1,1,160,1,35,1,30,,,16,100010,tid#MonsterDescription2,骷髅兵升级版本
 100003,tid#MonsterName3,僵尸,zombie,,1,1,120,0.8,35,1,30,,,12,100010,tid#MonsterDescription3,移动速度极慢，血厚
 100004,tid#MonsterName4,锅盖僵尸,zombie,zombie_armor,1,1,240,0.8,35,1,30,,,24,100010,tid#MonsterDescription4,僵尸升级版本
 100005,tid#MonsterName5,蝙蝠,bat,,2,4,56,1.5,25,1,650,100003,100,6,100010,tid#MonsterDescription5,远程飞行兵种，声波攻击
-100006,tid#MonsterName6,锅盖蝙蝠,bat,bat_armor,2,4,112,1.5,25,1,650,100003,100,12,100010,tid#MonsterDescription6,蝙蝠升级版本
+100006,tid#MonsterName6,锅盖蝙蝠,bat,bat_armor,2,4,112,1.5,25,1,650,100003,100,11,100010,tid#MonsterDescription6,蝙蝠升级版本
 100007,tid#MonsterName7,乌鸦,crow,,2,5,84,1.5,,1,30,,,8,100010,tid#MonsterDescription7,飞行兵种，吞噬道具
 100008,tid#MonsterName8,锅盖乌鸦,crow,crow_armor,2,5,168,1.5,,1,30,,,17,100010,tid#MonsterDescription8,乌鸦升级版本
 100009,tid#MonsterName9,鼠人自爆兵,blind,,1,3,96,2,100,1,30,,,10,100010,tid#MonsterDescription9,移动较快，自杀攻击
@@ -18,8 +18,8 @@ Id[string],MonsterName[string],,ModelId[string],CapId[string],ActionType[int],At
 100016,tid#MonsterName16,带帽子的稻草人,scarecrow,scarecrow_armor,1,1,540,0.6,70,1,30,,,54,100010,tid#MonsterDescription16,稻草人升级版
 100017,tid#MonsterName17,小恶魔,,,1,5,168,1.2,,1,30,,,17,100010,tid#MonsterDescription17,飞行兵种，近战攻击
 100018,tid#MonsterName18,恶魔,,,1,5,252,1.2,,1,30,,,25,100010,tid#MonsterDescription18,小恶魔升级版
-100019,tid#MonsterName19,狼人,wolf,,1,1,607,0.7,200,1,30,,,50,100010,tid#MonsterDescription19,移动非常慢，血非常厚
-100020,tid#MonsterName20,铁面狼人,wolf,wolf_armor,1,1,1215,0.7,200,1,30,,,100,100010,tid#MonsterDescription20,狼人升级版本
+100019,tid#MonsterName19,狼人,wolf,,1,1,607,0.7,200,1,30,,,61,100010,tid#MonsterDescription19,移动非常慢，血非常厚
+100020,tid#MonsterName20,铁面狼人,wolf,wolf_armor,1,1,1215,0.7,200,1,30,,,122,100010,tid#MonsterDescription20,狼人升级版本
 200001,tid#MonsterName21,骷髅王,skullking,,1,1,1750,0.5,200,1,30,,,175,100011,tid#MonsterDescription21,BOOS
 200002,tid#MonsterName22,僵尸王,zombieking,,1,1,2100,0.5,200,1,30,,,210,100011,tid#MonsterDescription22,BOOS
 200003,tid#MonsterName23,狼王,wolfking,,1,1,3150,0.5,200,1,30,,,315,100011,tid#MonsterDescription23,BOOS

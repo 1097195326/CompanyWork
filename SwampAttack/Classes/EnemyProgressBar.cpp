@@ -17,6 +17,7 @@ EnemyProgressBar::EnemyProgressBar():m_progress(0),m_enemyProgress(0)
     init();
     
     m_progressBar = new ProgressBar("fight_enemy_bar.png","fight_enemy_barbg.png");
+    m_progressBar->autorelease();
     addChild(m_progressBar);
     m_progressBar->setBarLeft();
     m_progressBar->updatePercent(0);
@@ -31,7 +32,7 @@ EnemyProgressBar::EnemyProgressBar():m_progress(0),m_enemyProgress(0)
 }
 EnemyProgressBar::~EnemyProgressBar()
 {
-    delete m_progressBar;
+//    delete m_progressBar;
 }
 void EnemyProgressBar::update(float data)
 {
