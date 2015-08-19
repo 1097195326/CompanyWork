@@ -69,10 +69,20 @@ bool GameOverScene::init()
     addChild(layerColor);
 //    layerColor->runAction(FadeTo::create(0.3, 200));
     
+    int canGetGold = _G_D->getGoldNum();;
+    
     Sprite * bg =  NULL;
     if (m_overStatus == o_win)
     {
         bg = Sprite::create(ImagePath("overScene_winbg.png"));
+        
+        GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
+        GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
+        GunManager::getInstance()->checkUnlock(this);
+        PropManager::getInstance()->checkUnlock(this);
+        nextGuanqia->unlockGuanqia();
+        
+        canGetGold += curGuanqia->getThroughGold();
     }else
     {
         bg = Sprite::create(ImagePath("overScene_losebg.png"));
@@ -80,8 +90,6 @@ bool GameOverScene::init()
     bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                     m_visibleOrigin.y + m_visibleSize.height * 0.5);
     addChild(bg);
-    
-    
     
     int widthOffset = 120;
     MenuItemImage * gotoMapButton = MenuItemImage::create(ImagePath("overScene_tomap.png"),
@@ -95,7 +103,7 @@ bool GameOverScene::init()
                            m_visibleOrigin.y + m_visibleSize.height * 0.4);
     addChild(getIcon);
     
-    Label * goldLabel = Label::createWithTTF(StringUtils::format("%d",_G_D->getGoldNum()),
+    Label * goldLabel = Label::createWithTTF(StringUtils::format("%d",canGetGold),
                                              "fonts/Arial Black.ttf",
                                              40);
     goldLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.52,
@@ -109,7 +117,7 @@ bool GameOverScene::init()
                            m_visibleOrigin.y + m_visibleSize.height * 0.4);
     addChild(jinbiIcon);
     
-    int userGold = _G_U->getUserGold() + _G_D->getGoldNum();
+    int userGold = _G_U->getUserGold() + canGetGold;
     _G_U->setUserGold(userGold);
     
     Menu * buttonMenu = NULL;
@@ -132,16 +140,7 @@ bool GameOverScene::init()
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu,200);
     
-    if (m_overStatus == o_win)
-    {
-        GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
-        GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
-        GunManager::getInstance()->checkUnlock(this);
-        PropManager::getInstance()->checkUnlock(this);
-        nextGuanqia->unlockGuanqia();
-        
-        
-    }
+    
     GunManager::getInstance()->saveBullet();
     
     _G_D->resetGameData();

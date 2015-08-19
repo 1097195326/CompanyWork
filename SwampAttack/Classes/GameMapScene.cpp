@@ -65,7 +65,10 @@ bool GameMapScene::init()
 //    m_scrollView->setScrollHorizontal(false);
     
     m_scrollView->initView(toIndex);
-//    m_scrollView->moveToViewAtIndex(toIndex);
+    if (toIndex >= 1) {
+        m_scrollView->moveToViewAtIndex(toIndex);
+    }
+    
     m_scrollView->autorelease();
     m_scrollView->setPosition(0,0);
     addChild(m_scrollView);
