@@ -54,7 +54,7 @@ GamePauseScene::GamePauseScene(RenderTexture * rt)
     
     Sprite * bg = Sprite::create(ImagePath("pauseScene_bg.png"));
     bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                    m_visibleOrigin.y + m_visibleSize.height * 0.5);
+                    m_visibleOrigin.y + m_visibleSize.height * 0.53);
     addChild(bg);
     
     Sprite * pauseSpr = Sprite::create(ImagePath("pause_title.png"));
