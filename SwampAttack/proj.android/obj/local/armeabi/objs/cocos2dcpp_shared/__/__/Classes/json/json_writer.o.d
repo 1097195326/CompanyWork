@@ -6,7 +6,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/json/json_writer.o: \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/assert.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/assert.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iomanip
 
@@ -26,7 +26,7 @@ jni/../../Classes/json/config.h:
 
 /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/assert.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/assert.h:
 
 /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream:
 

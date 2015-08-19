@@ -96,7 +96,7 @@ void GameSprite::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 //    {
 //        m_touchMeCall(touch,event);
 //    }
-    if(m_moveLength.length() < 0.001)
+    if(m_moveLength.length() < 3)
     {
     	m_touchMeCall(touch,event);
     }

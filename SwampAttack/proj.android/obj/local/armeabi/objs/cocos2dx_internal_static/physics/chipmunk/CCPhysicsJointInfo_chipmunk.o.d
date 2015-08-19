@@ -6,7 +6,7 @@ obj/local/armeabi/objs/cocos2dx_internal_static/physics/chipmunk/CCPhysicsJointI
  jni/../../cocos2d/cocos/./platform/CCPlatformMacros.h \
  jni/../../cocos2d/cocos/./platform/CCPlatformDefine.h \
  jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine-android.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/android/log.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
@@ -44,7 +44,7 @@ jni/../../cocos2d/cocos/./platform/CCPlatformDefine.h:
 
 jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine-android.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/android/log.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
 
 /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
 

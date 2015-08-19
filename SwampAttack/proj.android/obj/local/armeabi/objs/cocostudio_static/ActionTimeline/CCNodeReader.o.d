@@ -8,7 +8,7 @@ obj/local/armeabi/objs/cocostudio_static/ActionTimeline/CCNodeReader.o: \
  jni/../../cocos2d/external/flatbuffers/../json/rapidjson.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdlib \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cstring \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/inttypes.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert \
  jni/../../cocos2d/external/flatbuffers/../json/internal/pow10.h \
  jni/../../cocos2d/external/flatbuffers/../json/internal/stack.h \
@@ -18,7 +18,7 @@ obj/local/armeabi/objs/cocostudio_static/ActionTimeline/CCNodeReader.o: \
  jni/../../cocos2d/cocos/./2d/CCNode.h \
  jni/../../cocos2d/cocos/./base/ccMacros.h \
  jni/../../cocos2d/cocos/./base/CCConsole.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/sys/select.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
@@ -29,10 +29,10 @@ obj/local/armeabi/objs/cocostudio_static/ActionTimeline/CCNodeReader.o: \
  jni/../../cocos2d/cocos/./platform/CCPlatformConfig.h \
  jni/../../cocos2d/cocos/./platform/CCPlatformDefine.h \
  jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine-android.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/android/log.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
  jni/../../cocos2d/cocos/./platform/CCStdC.h \
  jni/../../cocos2d/cocos/./platform/android/CCStdC-android.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/math.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h \
  jni/../../cocos2d/cocos/./base/ccRandom.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random \
  jni/../../cocos2d/cocos/./base/CCVector.h \
@@ -58,10 +58,10 @@ obj/local/armeabi/objs/cocostudio_static/ActionTimeline/CCNodeReader.o: \
  jni/../../cocos2d/cocos/./math/Quaternion.inl \
  jni/../../cocos2d/cocos/./platform/CCGL.h \
  jni/../../cocos2d/cocos/./platform/android/CCGL-android.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
  jni/../../cocos2d/cocos/./renderer/CCTexture2D.h \
  jni/../../cocos2d/cocos/./base/CCScriptSupport.h \
  jni/../../cocos2d/cocos/./platform/CCCommon.h \
@@ -122,8 +122,8 @@ obj/local/armeabi/objs/cocostudio_static/ActionTimeline/CCNodeReader.o: \
  jni/../../cocos2d/cocos/./platform/android/CCFileUtils-android.h \
  jni/../../cocos2d/cocos/./platform/CCFileUtils.h \
  jni/../../cocos2d/cocos/./base/CCData.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/jni.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/android/asset_manager.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h \
  jni/../../cocos2d/cocos/./base/CCProfiling.h \
  jni/../../cocos2d/cocos/./base/CCConsole.h \
  jni/../../cocos2d/cocos/./base/ccUTF8.h \
@@ -351,7 +351,7 @@ jni/../../cocos2d/external/flatbuffers/../json/rapidjson.h:
 
 /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cstring:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/inttypes.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h:
 
 /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert:
 
@@ -371,7 +371,7 @@ jni/../../cocos2d/cocos/./base/ccMacros.h:
 
 jni/../../cocos2d/cocos/./base/CCConsole.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/sys/select.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h:
 
 /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
 
@@ -393,13 +393,13 @@ jni/../../cocos2d/cocos/./platform/CCPlatformDefine.h:
 
 jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine-android.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/android/log.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
 
 jni/../../cocos2d/cocos/./platform/CCStdC.h:
 
 jni/../../cocos2d/cocos/./platform/android/CCStdC-android.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/math.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h:
 
 jni/../../cocos2d/cocos/./base/ccRandom.h:
 
@@ -451,13 +451,13 @@ jni/../../cocos2d/cocos/./platform/CCGL.h:
 
 jni/../../cocos2d/cocos/./platform/android/CCGL-android.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
 
 jni/../../cocos2d/cocos/./renderer/CCTexture2D.h:
 
@@ -579,9 +579,9 @@ jni/../../cocos2d/cocos/./platform/CCFileUtils.h:
 
 jni/../../cocos2d/cocos/./base/CCData.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/jni.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/android/asset_manager.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h:
 
 jni/../../cocos2d/cocos/./base/CCProfiling.h:
 

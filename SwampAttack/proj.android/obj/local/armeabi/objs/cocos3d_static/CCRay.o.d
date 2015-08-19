@@ -11,7 +11,7 @@ obj/local/armeabi/objs/cocos3d_static/CCRay.o: \
  jni/../../cocos2d/cocos/3d/../platform/CCPlatformConfig.h \
  jni/../../cocos2d/cocos/3d/../platform/CCPlatformDefine.h \
  jni/../../cocos2d/cocos/3d/../platform/android/CCPlatformDefine-android.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/android/log.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
  jni/../../cocos2d/cocos/3d/../math/Vec2.inl \
  jni/../../cocos2d/cocos/3d/../math/Vec2.h \
  jni/../../cocos2d/cocos/3d/../math/Vec3.h \
@@ -20,7 +20,7 @@ obj/local/armeabi/objs/cocos3d_static/CCRay.o: \
  jni/../../cocos2d/cocos/3d/../math/Mat4.h \
  jni/../../cocos2d/cocos/3d/../base/ccMacros.h \
  jni/../../cocos2d/cocos/3d/../base/CCConsole.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/sys/select.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
  /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
@@ -62,7 +62,7 @@ jni/../../cocos2d/cocos/3d/../platform/CCPlatformDefine.h:
 
 jni/../../cocos2d/cocos/3d/../platform/android/CCPlatformDefine-android.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/android/log.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
 
 jni/../../cocos2d/cocos/3d/../math/Vec2.inl:
 
@@ -80,7 +80,7 @@ jni/../../cocos2d/cocos/3d/../base/ccMacros.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCConsole.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-9/arch-arm/usr/include/sys/select.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h:
 
 /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
 

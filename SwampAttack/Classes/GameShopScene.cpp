@@ -89,7 +89,7 @@ void GameShopScene::initShopView()
                                      backButton,
                                      NULL);
     buttonMenu->setPosition(Point::ZERO);
-    addChild(buttonMenu);
+    addChild(buttonMenu,1);
 }
 void GameShopScene::initScrollView()
 {
@@ -97,6 +97,7 @@ void GameShopScene::initScrollView()
     bg2->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                      m_visibleOrigin.y + m_visibleSize.height * 0.46);
     addChild(bg2);
+    m_bg2 = bg2;
     Sprite * scrollBg = Sprite::create(ImagePath("shopScrollBg.png"));
     scrollBg->setPosition(bg2->getTextureRect().size.width * 0.5,
                           bg2->getTextureRect().size.height * 0.36 - 15);
@@ -193,7 +194,10 @@ void GameShopScene::updateData()
 GameScrollHeadler * GameShopScene::getHeadlerByIndex(int index,int viewTag)
 {
     Vec2 v_p;
-    v_p = Vec2(750 * 0.5, 0.0 - 210 * (index + 1) + 400 + 210 * 0.5);
+//    v_p = Vec2(750 * 0.5, 0.0 - 210 * (index + 1) + 400 + 210 * 0.5);
+    v_p = Vec2(m_visibleSize.width * 0.5 - m_bg2->getPositionX() * 0.4 + 40,
+               0.0 - 210 * (index + 1) + 400 + 210 * 0.5);
+    
     GameScrollHeadler * r_headler = NULL;
     
     switch (viewTag) {
@@ -252,7 +256,7 @@ void GameShopScene::setItemBgSprite()
     m_gunItembgSprite = Sprite::create();
     m_gunItembgSprite->setPosition(m_visibleOrigin.x + m_visibleSize.width - 65,
                                    m_visibleOrigin.y + m_visibleSize.height * 0.4);
-    addChild(m_gunItembgSprite);
+    addChild(m_gunItembgSprite,1);
     
     GunManager::getInstance()->setShopView(m_gunItembgSprite);
     
@@ -261,7 +265,7 @@ void GameShopScene::setItemBgSprite()
     m_propItembgSprite = Sprite::create();
     m_propItembgSprite->setPosition(m_visibleOrigin.x + m_visibleSize.width - 65,
                                    m_visibleOrigin.y + m_visibleSize.height * 0.5);
-    addChild(m_propItembgSprite);
+    addChild(m_propItembgSprite,1);
     
     PropManager::getInstance()->setShopView(m_propItembgSprite);
     

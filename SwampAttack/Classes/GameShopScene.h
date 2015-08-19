@@ -23,6 +23,7 @@ class GameShopScene : public UserDelegateLayer,public GameScrollHeadlerTargetInt
 private:
     std::vector< GameVerticalScrollHeadlerView * >m_scrollViews;
 //    GameVerticalScrollHeadlerView * m_scrollView;
+    Sprite  * m_bg2;
     
 private:
     void    visibelItemBg(int index);
