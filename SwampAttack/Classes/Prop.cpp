@@ -104,6 +104,7 @@ void Prop::gameLoop(float data)
             {
                 if (m_modelId == "daoju7")
                 {
+                    enemy->hurt(m_damage);
                     enemy->hurtYun(m_vertigo);
                 }else if (m_modelId == "daoju8")
                 {

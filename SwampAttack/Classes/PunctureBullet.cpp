@@ -16,7 +16,7 @@ PunctureBullet::PunctureBullet(BulletParameter bp):Bullet(bp)
 }
 PunctureBullet::~PunctureBullet()
 {
-    
+    m_enemySet.clear();
 }
 void PunctureBullet::gameLoop(float data)
 {
@@ -41,7 +41,6 @@ void PunctureBullet::gameLoop(float data)
         std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
         if (!enemyData.empty())
         {
-            int num = 0;
             std::list<Enemy*>::iterator e_iter;
             for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
             {
@@ -52,12 +51,18 @@ void PunctureBullet::gameLoop(float data)
                     enemy->isContainsPoint(b_rect)
                     )
                 {
-                    if (num >= m_bp.m_hurtNum) {
+//                    log("size:%d",(int)m_enemySet.size());
+                    if (m_enemySet.size() >= m_bp.m_hurtNum) {
                         m_state = _b_arrive;
                         return;
                     }
-                    ++num;
-                    enemy->hurt(m_damage,m_bp.m_underAttackAction);
+                    std::set<Enemy *>::iterator iter = m_enemySet.find(enemy);
+                    if (*iter != enemy) {
+                        m_enemySet.insert(enemy);
+                        enemy->hurt(m_damage,m_bp.m_underAttackAction);
+                    }
+//                    log("size2:%d",(int)m_enemySet.size());
+                    
                 }
             }
         }

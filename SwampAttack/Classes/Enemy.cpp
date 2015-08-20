@@ -177,6 +177,10 @@ void Enemy::hurt(int damage,int index)
         m_isShowHurt = false;
         DropManager::getInstance()->dropObject(m_drop, m_point);
         _G_D->addGold(m_gold);
+    }else if (m_status & e_dianji)
+    {
+        hurtDlay = 0;
+        m_isShowHurt = true;
     }else
     {
         hurtDlay = 0;

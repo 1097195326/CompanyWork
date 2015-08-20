@@ -49,85 +49,41 @@ bool AppDelegate::applicationDidFinishLaunching() {
         glview = GLViewImpl::create("My Game");
         director->setOpenGLView(glview);
     }
+    Size sreenSize = glview->getFrameSize();
+    Size sourceSize = {1136, 640};
+    Size designSize = {1136.0f, 640.0f};
     
+//    director->setContentScaleFactor(1.0f);
+//    glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_HEIGHT);
     
+    switch (CC_TARGET_PLATFORM) {
+        case CC_PLATFORM_IOS:
+        {
+            director->setContentScaleFactor(1.0f);
+            glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_HEIGHT);
+        }
+            break;
+        case CC_PLATFORM_ANDROID:
+        {
+            director->setContentScaleFactor(1.0f);
+            glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_HEIGHT);
+        }
+            break;
+        default:
+        {
+            director->setContentScaleFactor(1.0f);
+            glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_HEIGHT);
+        }
+            break;
+    }
     
     m_winSize = Director::getInstance()->getWinSize();
     m_visibleSize = Director::getInstance()->getVisibleSize();
     m_visibleOrigin = Director::getInstance()->getVisibleOrigin();
     
-    log("win size w:%f,h:%f",m_winSize.width,m_winSize.height);
+    log("sreenSize size w:%f,h:%f",sreenSize.width,sreenSize.height);
     log("visible size w:%f,h:%f",m_visibleSize.width,m_visibleSize.height);
     log("visible origin w:%f,h:%f",m_visibleOrigin.x,m_visibleOrigin.y);
-    
-    log("bili:%f,%f",m_winSize.width/m_winSize.height,1136.0f/640.0f);
-    if (m_visibleSize.width / m_visibleSize.height >= 1136.0f / 640.0f)
-    {
-        director->setContentScaleFactor(1136.0f / m_winSize.width);
-        glview->setDesignResolutionSize(m_winSize.width, m_winSize.height, ResolutionPolicy::FIXED_WIDTH);
-
-    }else
-    {
-        director->setContentScaleFactor(640.0f / m_winSize.height);
-        glview->setDesignResolutionSize(m_winSize.width, m_winSize.height, ResolutionPolicy::FIXED_HEIGHT);
-    }
-    
-    
-//    switch (CC_TARGET_PLATFORM) {
-//        case CC_PLATFORM_IOS:
-//        {
-//            switch ((int)m_winSize.width)
-//            {
-//                case 960:
-//                {
-//                    log("device is ihpone4s");
-//                    director->setContentScaleFactor(1136.0f / m_winSize.width);
-//                    glview->setDesignResolutionSize(m_winSize.width, m_winSize.height, ResolutionPolicy::FIXED_HEIGHT);
-//                }
-//                    break;
-//                case 1136:
-//                {
-//                    log("device is ihpone5s");
-//                    director->setContentScaleFactor(1);
-//                    glview->setDesignResolutionSize(m_winSize.width, m_winSize.height, ResolutionPolicy::FIXED_HEIGHT);
-//                }
-//                    break;
-//                case 1334:
-//                {
-//                    log("device is ihpone6");
-//                    director->setContentScaleFactor(1136.0f / m_winSize.width);
-//                    glview->setDesignResolutionSize(m_winSize.width, m_winSize.height, ResolutionPolicy::FIXED_WIDTH);
-//                }
-//                    break;
-//                case 2208:
-//                {
-//                    log("device is ihpone6 plus");
-//                    director->setContentScaleFactor(1136.0f / m_winSize.width);
-//                    glview->setDesignResolutionSize(m_winSize.width, m_winSize.height, ResolutionPolicy::FIXED_WIDTH);
-//                }
-//                    break;
-//                default:
-//                {
-//                    director->setContentScaleFactor(1136.0f / m_winSize.width);
-//                    glview->setDesignResolutionSize(m_winSize.width, m_winSize.height, ResolutionPolicy::NO_BORDER);
-//                }
-//                    break;
-//            }
-//        }
-//            break;
-//        case CC_PLATFORM_ANDROID:
-//        {
-//            director->setContentScaleFactor(1);
-//            glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_HEIGHT);
-//        }
-//            break;
-//        default:
-//        {
-//            director->setContentScaleFactor(1);
-//            glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_HEIGHT);
-//        }
-//            break;
-//    }
     
 //    Application::getInstance()->getTargetPlatform();
 //    CC_TARGET_PLATFORM
