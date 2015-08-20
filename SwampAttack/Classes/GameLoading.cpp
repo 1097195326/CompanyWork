@@ -73,12 +73,16 @@ float GameLoading::loadFrames()
     {
         Prop * prop = propIter->second;
         std::string modelId = prop->getModelId();
-        if ("daoju1" == modelId || "daoju2" == modelId)
+        if ("daoju1" == modelId)
         {
-            spriteFrameCache->addSpriteFramesWithFile(ImagePath("Daoju12.plist"));
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju1.plist"));
+        }else if ("daoju2" == modelId)
+        {
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju2.plist"));
         }else if ("daoju5" == modelId)
         {
-            spriteFrameCache->addSpriteFramesWithFile(ImagePath("Daoju5.plist"));
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("Daoju5_1.plist"));
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("Daoju5_2.plist"));
         }else if ("daoju6" == modelId)
         {
             spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear1.plist"));

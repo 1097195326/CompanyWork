@@ -33,7 +33,7 @@ tid#MonsterDescription5,远程飞行兵种，声波攻击,Long range flight，So
 tid#MonsterDescription6,蝙蝠升级版本,Bat upgraded version
 tid#MonsterDescription7,飞行兵种，吞噬道具,
 tid#MonsterDescription8,乌鸦升级版本,
-tid#MonsterDescription9,移动较快，自杀攻击,"Move faster，suicide attack"
+tid#MonsterDescription9,移动较快，自杀攻击,"Move faster, suicide attack"
 tid#MonsterDescription10,鼠人自爆兵升级版本,The soldiers blew rats upgrade
 tid#MonsterDescription11,陆地远程兵种,Land remote units
 tid#MonsterDescription12,南瓜头升级版,Pumpkin head upgrade
@@ -48,17 +48,22 @@ tid#MonsterDescription20,僵尸BOOS,Zombie King
 tid#MonsterDescription21,狼人BOOS,Wolf king
 tid#MonsterDescription22,稻草人BOOS,Straw King
 ,,
+tid#WeaponName3,线膛燧发枪,
+tid#WeaponName8,纳米电锯       ,
+tid#WeaponName7,AK47,
+tid#WeaponName9,十字弩,
+tid#WeaponName11,加农炮,
+tid#WeaponName10,死神,
+tid#WeaponName12,火焰发射器,
 ,,
-,,
-tid#WeaponName3,线膛燧发枪,Shotgun
-tid#WeaponName5,UZI,UZI
-tid#WeaponName7,AK47,AK47
-,,
-,,
-tid#WeaponDescription3,基本散弹枪,Basic shotgun
+tid#WeaponDescription3,基础散弹枪，可对小范围敌人造成伤害,Basic shotgun
 tid#WeaponDescription5,基本冲锋枪,Basic assault rifle
-tid#WeaponDescription7,基本步枪,Basic rifle
-,,
+tid#WeaponDescription7,单体高杀伤性武器，适合针对单体高血量怪物,Basic rifle
+tid#WeaponDescription8,近战高伤害武器，攻击频率较慢,
+tid#WeaponDescription9,基础穿刺武器，可进行针对3个目标的穿刺攻击,
+tid#WeaponDescription10,高伤害穿刺武器，可以同时穿透一条线的敌人,
+tid#WeaponDescription11,范围爆破武器，可有效杀伤群怪,
+tid#WeaponDescription12,范围烧伤性武器，可对群体怪物造成持续伤害,
 ,,
 tid#MissionName1,远方而来的朋友,Friends from afar
 tid#MissionName2,摇摆的身影,Swing figure
@@ -88,6 +93,9 @@ tid#ItemName3,地雷,Mine
 tid#ItemName4,暴风雪,Snowstorm
 tid#ItemName5,陨石,Meteorite
 tid#ItemName6,原子弹,Atomic bomb
+tid#ItemName9,强力弹簧,
+tid#ItemName7,震荡弹,
+tid#ItemName8,润滑油,
 ,,
 ,,
 tid#ItemDescription1,对小范围内目标造成群体伤害。,Cause group damage to the small range.
@@ -96,18 +104,24 @@ tid#ItemDescription3,在地面产生1枚地雷。,1 mines on the ground.
 tid#ItemDescription4,寒冰刺骨的冷风，对全体怪物造成伤害并减速。,"Icy cold, damaging and slowing of the monster."
 tid#ItemDescription5,对较大范围内所有怪物造成较大伤害。,To the larger range of all the monsters cause more damage.
 tid#ItemDescription6,对所有怪物造成致命伤害。,Fatal damage to all the monsters.
-,,
+tid#ItemDescription7,对小范围怪物造成眩晕,
+tid#ItemDescription8,对小范围怪物进行减速,
+tid#ItemDescription9,可以弹飞单个非BOSS的单位,
+tid#ItemDescription10,对所有怪物造成致命伤害,
 ,,
 tid#DefenceName1,木板,Board
-tid#DefenceName2,木栅栏,Wood fence
 tid#DefenceName3,小钢炮,Cannon
+tid#DefenceName4,藤蔓,
+tid#DefenceName5,尖刺,
+tid#DefenceName6,铁板,
+tid#DefenceName7,沙袋,
 ,,
-,,
-tid#DefenceDescription1,能够增加一定的防御能力。,Ability to increase a certain defense
-tid#DefenceDescription2,能够增加一定的防御能力。,Ability to increase a certain defense
-tid#DefenceDescription3,对接近的怪物持续造成伤害。,To the close of the monster continued to cause damage
-tid#DefenceDescription4,小猴子操作的小炮，能够对陆行怪物造成群体伤害。,"The little monkey operation of small, can cause damage to the land for the monster group."
-,,
+tid#DefenceDescription1,为马车增加挡板防御,
+tid#DefenceDescription3,小猴子操作的小炮，能够对陆行怪物造成群体伤害。,"The little monkey operation of small, can cause damage to the land for the monster group."
+tid#DefenceDescription4,可以对马车周围目标减速,Ability to increase a certain defense
+tid#DefenceDescription5,对路过的敌人造成持续伤害,To the close of the monster continued to cause damage
+tid#DefenceDescription6,为马车增加一套铁板防御,
+tid#DefenceDescription7,为马车增加一堆沙袋防御,
 ,,
 tid#HpDescription1,角色死亡使角色复活补满体力,The role of death makes the role of life full of physical strength
 tid#HpDescription2,角色死亡使角色复活补满体力,The role of death makes the role of life full of physical strength
