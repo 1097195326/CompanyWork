@@ -135,7 +135,7 @@ void GunSprite::updateData()
         {
             m_blueBg->setLocalZOrder(3);
             m_greenBg->setLocalZOrder(4);
-            if (!m_gun->isDefaultGun())
+            if (!m_gun->isDefaultGun() && m_gun->getWeaponType() != 1)
             {
                 string ss= StringUtils::format("%d",m_gun->getTotalBulletNum());
                 m_bulletLabel->setString(ss);
@@ -157,7 +157,7 @@ void GunSprite::updateData()
         {
             m_blueBg->setLocalZOrder(4);
             m_greenBg->setLocalZOrder(3);
-            if (!m_gun->isDefaultGun())
+            if (!m_gun->isDefaultGun() && m_gun->getWeaponType() != 1)
             {
                 string ss= StringUtils::format("%d",m_gun->getTotalBulletNum());
                 m_bulletLabel->setString(ss);

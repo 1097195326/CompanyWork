@@ -23,7 +23,7 @@ DropMoneySprite::DropMoneySprite(MoneyObject * money, Vec2 point)
     string modelId = m_money->getModelId();
     
     m_icon = Sprite::create(ImagePath(StringUtils::format("%s_icon.png",modelId.c_str())));
-    m_icon->setScale(0.5);
+    m_icon->setScale(0.7);
     addChild(m_icon,1);
     
     Action * guangAc = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("item_flash", 4),

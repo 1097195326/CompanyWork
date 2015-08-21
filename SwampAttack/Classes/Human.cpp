@@ -89,8 +89,10 @@ Gun * Human::getGun()
 }
 void Human::throwProp(Prop *prop)
 {
-    changeState(HumanThrowPropState::getInstance());
-    m_throwProp = prop;
+    if (! isChange()) {
+        changeState(HumanThrowPropState::getInstance());
+    }
+    m_throwPropStack.push(prop);
 }
 void Human::setView()
 {
@@ -132,12 +134,13 @@ void Human::changeCall()
 }
 void Human::throwPropCall()
 {
-    m_status = _h_throwed;
-    if (m_throwProp) {
-        log("set state throwing");
-        m_throwProp->setStateThrowing();
+    Prop * throwProp = m_throwPropStack.front();
+    m_throwPropStack.pop();
+    if (m_throwPropStack.empty())
+    {
+        m_status = _h_throwed;
     }
-    m_throwProp = NULL;
+    throwProp->setStateThrowing();
 }
 //---- interface for state
 float Human::getWaitingTime()

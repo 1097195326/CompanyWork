@@ -45,7 +45,7 @@ private:
     
     Vec2    m_point;
     Gun *   m_gun;
-    Prop *  m_throwProp;
+    std::queue<Prop *> m_throwPropStack;
     
     Vec2    m_fireToPoint;
     float   m_waitingTime;

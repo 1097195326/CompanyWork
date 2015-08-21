@@ -65,11 +65,14 @@ void ShopGunIcon::reSetIcon(Gun *gun)
         noIcon->setPosition(Vec2(m_iconBg->getContentSize().width * 0.22, m_iconBg->getContentSize().height * 0.25));
         m_icon->addChild(noIcon);
         
-        m_bullets = Label::createWithTTF("", "fonts/Arial Black.ttf", 17);
-        m_icon->addChild(m_bullets);
-        m_bullets->setString(StringUtils::format("%d",m_gun->getTotalBulletNum()));
-        m_bullets->setPosition(Vec2(m_iconBg->getContentSize().width * 0.15, -m_iconBg->getContentSize().height * 0.2));
-        m_bullets->enableOutline(Color4B(0, 0, 0, 255),2);
+        if (m_gun->getWeaponType() != 1)
+        {
+            m_bullets = Label::createWithTTF("", "fonts/Arial Black.ttf", 17);
+            m_icon->addChild(m_bullets);
+            m_bullets->setString(StringUtils::format("%d",m_gun->getTotalBulletNum()));
+            m_bullets->setPosition(Vec2(m_iconBg->getContentSize().width * 0.15, -m_iconBg->getContentSize().height * 0.2));
+            m_bullets->enableOutline(Color4B(0, 0, 0, 255),2);
+        }
     }
 }
 bool ShopGunIcon::isHaveGun()
@@ -81,7 +84,7 @@ bool ShopGunIcon::isHaveGun()
 }
 void ShopGunIcon::updateData()
 {
-    if (!m_gun->isDefaultGun())
+    if (!m_gun->isDefaultGun() && m_gun->getWeaponType() != 1)
     {
         m_bullets->setString(StringUtils::format("%d",m_gun->getTotalBulletNum()));
     }

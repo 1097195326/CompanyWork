@@ -15,6 +15,7 @@
 #include "GunManager.h"
 #include "PropManager.h"
 #include "GunManager.h"
+#include "DefenseBuildingManager.h"
 
 #include "GameDirector.h"
 #include "GameUser.h"
@@ -80,6 +81,7 @@ bool GameOverScene::init()
         GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
         GunManager::getInstance()->checkUnlock(this);
         PropManager::getInstance()->checkUnlock(this);
+        DefenseBuildingManager::getInstance()->checkUnlock(this);
         nextGuanqia->unlockGuanqia();
         
         canGetGold += curGuanqia->getThroughGold();

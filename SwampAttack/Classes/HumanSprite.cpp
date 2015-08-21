@@ -82,11 +82,13 @@ void HumanSprite::setModel(Human *human)
                                              NULL);
     changeAction->retain();
     
-    Action * throwAction = Spawn::create(
+    Action * throwAction = RepeatForever::create(
+                                                 Spawn::create(
                                          Sequence::create(DelayTime::create(0.08 * 7),
                                                           CallFunc::create(CC_CALLBACK_0(HumanSprite::throwEndCall, this)), NULL),
                                          BaseUtil::makeAnimateWithNameIndexDelay("throw", 9,0.08),
-                                         NULL);
+                                         NULL)
+                                                 );
 //    Action * throwAction = RepeatForever::create(BaseUtil::makeAnimateWithNameIndexDelay("throw", 9,0.08));
     throwAction->retain();
     

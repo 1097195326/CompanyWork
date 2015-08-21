@@ -52,9 +52,18 @@ m_isMove(false)
     Label  * discLabel = Label::createWithTTF(disc, "fonts/mimi.ttf", 30);
     discLabel->setColor(Color3B(0, 0, 0));
     
-    MenuItemImage * gotoShopButton = MenuItemImage::create(ImagePath("yijianzhuangbei.png"),
-                                                           ImagePath("yijianzhuangbei.png"),
-                                                           CC_CALLBACK_1( GameShowDiscLayer::gotoShop, this));
+    MenuItemImage * gotoShopButton = NULL;
+    if (m_type == 3)
+    {
+        gotoShopButton = MenuItemImage::create(ImagePath("overScene_toShop.png"),
+                                               ImagePath("overScene_toShop.png"),
+                                               CC_CALLBACK_1( GameShowDiscLayer::gotoShop, this));
+    }else
+    {
+        gotoShopButton = MenuItemImage::create(ImagePath("yijianzhuangbei.png"),
+                                               ImagePath("yijianzhuangbei.png"),
+                                               CC_CALLBACK_1( GameShowDiscLayer::gotoShop, this));
+    }
     
     Label  * jiesuo = Label::createWithTTF("已解锁", "fonts/mimi.ttf", 30);
     jiesuo->setColor(Color3B(0, 0, 0));

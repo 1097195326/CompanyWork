@@ -83,7 +83,7 @@ void DefenseBuilding::checkUnlock(Layer * layer)
                                                                    m_visibleOrigin.y + m_visibleSize.height * 0.5),
                                                               true,
                                                               this,
-                                                              1);
+                                                              3);
         showLayer->autorelease();
         layer->addChild(showLayer,201);
     }
