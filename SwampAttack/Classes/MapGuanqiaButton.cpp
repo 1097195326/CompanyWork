@@ -9,6 +9,7 @@
 #include "MapGuanqiaButton.h"
 #include "GuanQiaManager.h"
 #include "GameLoadingScene.h"
+#include "BaseUtil.h"
 //#include "GameFightScene.h"
 //#include "EnemyManager.h"
 //#include "GameLoading.h"
@@ -31,6 +32,21 @@ m_index(index)
 //    m_menuItem = MenuItemImage::create(ImagePath("map_button.png"),
 //                                       ImagePath("map_button.png"),
 //                                       CC_CALLBACK_1(MapGuanqiaButton::pressGuanqiaButtonFunc, this));
+    
+    int s_Indx = GuanQiaManager::getInstance()->getCurrentSceneIndex();
+    int g_Indx = GuanQiaManager::getInstance()->getCurrentGuanqiaIndex();
+    
+    if (s_Indx == m_sceneIndex && g_Indx == m_index)
+    {
+        auto spriteFrameCache = SpriteFrameCache::getInstance();
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao2.plist"));
+        Action * buttonAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("button_flash",6));
+        Sprite * boSpr = Sprite::create();
+        boSpr->setPosition(guanQia->getGuanqiaPoint());
+        addChild(boSpr);
+        boSpr->runAction(buttonAction);
+    }
+    
     m_menuItem = new GameSprite(ImagePath("map_button.png"));
     m_menuItem->m_touchMeCall =CC_CALLBACK_2(MapGuanqiaButton::pressGuanqiaButtonFunc, this);
     m_menuItem->autorelease();

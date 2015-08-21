@@ -101,8 +101,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 //    auto scene = GameMapScene::scene();
 //    auto scene = GameShopScene::scene();
 //    auto scene = GameOverScene::scene(o_loss,NULL);
-    auto scene = GameHomeScene::scene();
-//    auto scene = GameCgShowScene::scene();
+//    auto scene = GameHomeScene::scene();
+    auto scene = GameCgShowScene::scene();
     // run
     director->runWithScene(scene);
     return true;
