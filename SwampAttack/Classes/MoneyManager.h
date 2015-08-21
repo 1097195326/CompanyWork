@@ -23,7 +23,7 @@ private:
 public:
     static MoneyManager * getInstance();
     MoneyObject * getMoneyObjectById(string id);
-    void    dropMoney(string id,Vec2 point);
+    bool    dropMoney(string id,Vec2 point);
 };
 
 #endif /* defined(__SwampAttack__MoneyManager__) */

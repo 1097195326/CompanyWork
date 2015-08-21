@@ -10,6 +10,7 @@
 #include "GameFightScene.h"
 #include "BaseUtil.h"
 
+#include "DropManager.h"
 
 DropPropSprite::DropPropSprite(Prop * prop, Vec2 point)
 {
@@ -51,7 +52,7 @@ DropPropSprite::DropPropSprite(Prop * prop, Vec2 point)
     
     scheduleOnce(CC_SCHEDULE_SELECTOR(DropPropSprite::isTimeToEnd), 5);
     
-    _G_V->addChild(this,640);
+    _G_V->addChild(this,650);
 }
 DropPropSprite::~DropPropSprite()
 {
@@ -101,6 +102,7 @@ void DropPropSprite::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 void DropPropSprite::moveEnd(cocos2d::Node *pSender)
 {
     m_prop->addProp(1);
+    DropManager::getInstance()->minusDropNum();
     pSender->stopAllActions();
     removeFromParentAndCleanup(true);
 }

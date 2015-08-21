@@ -47,7 +47,7 @@ public:
     void    setFightView();
     
     void    checkUnlock(Layer * layer);
-    void    dropProp(string id,Vec2 point);
+    bool    dropProp(string id,Vec2 point);
 public:
     static PropManager * getInstance();
     PropManager();

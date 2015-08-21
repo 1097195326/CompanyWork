@@ -56,7 +56,7 @@ m_moveJuli(0.0f)
     m_listener->onTouchEnded = CC_CALLBACK_2(PropSpriteView::touchEnd, this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener, m_blueBg);
     
-    _G_V->addChild(this,1);
+    _G_V->addChild(this,640);
 }
 PropSpriteView::~PropSpriteView()
 {

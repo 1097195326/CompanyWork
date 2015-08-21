@@ -13,7 +13,8 @@
 #include "PropManager.h"
 
 
-DropManager::DropManager()
+DropManager::DropManager():
+m_dropNum(0)
 {
     GCCsvHelper * propHelper = _C_M->getCsvHelperByName("dropTable");
     m_hashHead = propHelper->getHashHead();
@@ -38,19 +39,37 @@ DropManager * DropManager::getInstance()
 void DropManager::dropObject(string objId,Vec2 point)
 {
 //    log("drop obj %s",objId.c_str());
+    bool res = false;
     DropModel * model = m_dropData[objId];
     DropData dropData = model->getDropData();
     switch (dropData.type)
     {
         case 1:
         {
-            MoneyManager::getInstance()->dropMoney(dropData.id,point);
+            res = MoneyManager::getInstance()->dropMoney(dropData.id,point);
         }
             break;
         case 2:
         {
-            PropManager::getInstance()->dropProp(dropData.id,point);
+            res = PropManager::getInstance()->dropProp(dropData.id,point);
         }
             break;
     }
+    if (res)
+    {
+        addDropNum();
+    }
+}
+void DropManager::addDropNum()
+{
+    ++m_dropNum;
+}
+void DropManager::minusDropNum()
+{
+    --m_dropNum;
+    m_dropNum = m_dropNum < 0 ? 0 : m_dropNum;
+}
+int DropManager::getDropNum()
+{
+    return m_dropNum;
 }

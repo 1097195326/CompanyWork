@@ -189,9 +189,10 @@ void PropManager::checkUnlock(Layer * layer)
         prop->checkUnlock(layer);
     }
 }
-void PropManager::dropProp(string id,Vec2 point)
+bool PropManager::dropProp(string id,Vec2 point)
 {
     log("drop prop");
+    bool res = false;
     Prop * prop = m_propData[id];
     if (prop->isUnlock())
     {
@@ -202,7 +203,8 @@ void PropManager::dropProp(string id,Vec2 point)
         }
         DropPropSprite * spr = new DropPropSprite(prop,point);
         spr->autorelease();
+        res = true;
 //        spr->setPosition(point);
     }
-    
+    return res;
 }

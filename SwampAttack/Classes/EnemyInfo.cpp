@@ -167,6 +167,19 @@ EnemyInfo::EnemyInfo()
     muroidea.height = 180;
     muroidea.widthOffSet = 0;
     m_data["Muroidea"] = muroidea;
+    // Muroidea 老鼠兵
+    EnemyInfoData muroideaArmor;
+    muroideaArmor.attackFrame = 5;
+    muroideaArmor.attackFrames = 11;
+    muroideaArmor.hurtHeavyFrames = 9;
+    muroideaArmor.hurtLightFrames = 5;
+    muroideaArmor.hurtOnFrames = 5;
+    muroideaArmor.walkFrames = 14;
+    muroideaArmor.downFrames = 13;
+    muroideaArmor.width = 180;
+    muroideaArmor.height = 90;
+    muroideaArmor.widthOffSet = 0;
+    m_data["Muroidea_armor"] = muroideaArmor;
     // bat 蝙蝠
     EnemyInfoData bat;
     bat.attackFrame = 7;

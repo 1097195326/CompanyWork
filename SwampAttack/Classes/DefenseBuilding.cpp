@@ -13,6 +13,8 @@
 #include "House.h"
 #include "BulletManager.h"
 
+#include "GuanQiaManager.h"
+#include "GameShowDiscLayer.h"
 
 
 DefenseBuilding::DefenseBuilding(Json::Value data):
@@ -62,6 +64,28 @@ void DefenseBuilding::setView()
 {
     if (!m_isUnlock) {
         return;
+    }
+}
+void DefenseBuilding::checkUnlock(Layer * layer)
+{
+    if (!(m_unlockMission.size() > 0)) {
+        return;
+    }
+    GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getGuanqiaById(m_unlockMission);
+    if (guanqia && guanqia->isUnlock() && !m_isUnlock)
+    {
+        m_isUnlock = true;
+        _G_U->unlockBuilding(m_id);
+        
+        GameShowDiscLayer * showLayer = new GameShowDiscLayer(m_modelId,
+                                                              m_defenceDescription,
+                                                              Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                                                                   m_visibleOrigin.y + m_visibleSize.height * 0.5),
+                                                              true,
+                                                              this,
+                                                              1);
+        showLayer->autorelease();
+        layer->addChild(showLayer,201);
     }
 }
 void DefenseBuilding::addStrengthenLevel()

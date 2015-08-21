@@ -15,6 +15,7 @@
 #include "PropManager.h"
 #include "GameOverScene.h"
 #include "GameBuffManager.h"
+#include "DropManager.h"
 
 #include "GameFightScene.h"
 
@@ -77,19 +78,21 @@ void GameDirector::gameLoop(float data)
     
     
 //    checkCross();
-    if (EnemyManager::getInstance()->isOver() || House::getInstance()->isOver()) {
+    if (House::getInstance()->isOver()) {
         clearStatus();
         m_status |= s_over;
-        
-        if (House::getInstance()->isOver()) {
-            m_overStatus = o_loss;
-        }else
-        {
-            m_overStatus = o_win;
-        }
+        m_overStatus = o_loss;
+
         notify();
 //        resetGameData();
 //        overGame();
+    }else if(EnemyManager::getInstance()->isOver() &&
+             DropManager::getInstance()->getDropNum() <= 0)
+    {
+        clearStatus();
+        m_status |= s_over;
+        m_overStatus = o_win;
+        notify();
     }
 }
 void GameDirector::onTouchBegin(cocos2d::Touch *touch, cocos2d::Event *event)

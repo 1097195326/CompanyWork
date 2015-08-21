@@ -11,6 +11,7 @@
 #include "BaseUtil.h"
 #include "GameMapManager.h"
 
+#include "DropManager.h"
 
 
 DropMoneySprite::DropMoneySprite(MoneyObject * money, Vec2 point)
@@ -55,7 +56,7 @@ DropMoneySprite::DropMoneySprite(MoneyObject * money, Vec2 point)
     
     scheduleOnce(CC_SCHEDULE_SELECTOR(DropMoneySprite::isTimeToEnd), 5);
     
-    _G_V->addChild(this,640);
+    _G_V->addChild(this,650);
 }
 DropMoneySprite::~DropMoneySprite()
 {
@@ -106,6 +107,7 @@ void DropMoneySprite::guangEnd(cocos2d::Node *pSender)
 void DropMoneySprite::moveEnd(cocos2d::Node *pSender)
 {
     m_money->addGold();
+    DropManager::getInstance()->minusDropNum();
     pSender->stopAllActions();
     removeFromParentAndCleanup(true);
 }

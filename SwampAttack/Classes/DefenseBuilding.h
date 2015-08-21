@@ -39,7 +39,7 @@ public:
     
     void    setStateWait();
     
-    
+    void    checkUnlock(Layer * layer);
     
     bool    isInRange(Vec2 point);
 protected:

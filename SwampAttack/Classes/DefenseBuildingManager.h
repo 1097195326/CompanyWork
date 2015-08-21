@@ -22,6 +22,7 @@ public:
     DefenseBuilding *   getBuildingByIndex(int index);
     int     getBuildingNum();
     void    setView();
+    void    checkUnlock(Layer * layer);
     std::map<string,DefenseBuilding *> getBuildingData();
 public:
     DefenseBuildingManager();

@@ -16,6 +16,7 @@ private:
     std::map<string,DropModel *>    m_dropData;
     std::map<int,std::string> m_hashHead;
     
+    int     m_dropNum;
     
     DropManager();
     ~DropManager();
@@ -23,6 +24,9 @@ public:
     static DropManager * getInstance();
     
     void    dropObject(string objId,Vec2 point);
+    void    addDropNum();
+    void    minusDropNum();
+    int     getDropNum();
     
 };
 

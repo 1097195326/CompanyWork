@@ -103,7 +103,7 @@ void ShopPropItemScrollHeadler::initUnlockView()
                                            CC_CALLBACK_1(ShopPropItemScrollHeadler::takeUp, this));
     
     m_takeUpButton->setPosition(itemBgSize.width * 0.5,
-                                -itemBgSize.height * 0.15);
+                                -itemBgSize.height * 0.1);
     Menu * takeUpMenu = Menu::create(m_takeUpButton, NULL);
     takeUpMenu->setPosition(Point::ZERO);
     addChild(takeUpMenu);

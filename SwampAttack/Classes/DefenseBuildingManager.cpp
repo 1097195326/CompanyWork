@@ -68,6 +68,14 @@ void DefenseBuildingManager::setView()
         building->setView();
     }
 }
+void DefenseBuildingManager::checkUnlock(Layer * layer)
+{
+    std::map<string,DefenseBuilding *>::iterator iter;
+    for (iter = m_buildingData.begin(); iter != m_buildingData.end(); ++iter) {
+        DefenseBuilding * building = iter->second;
+        building->checkUnlock(layer);
+    }
+}
 std::map<string,DefenseBuilding *> DefenseBuildingManager::getBuildingData()
 {
     return m_buildingData;
