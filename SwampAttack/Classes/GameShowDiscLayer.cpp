@@ -49,7 +49,13 @@ m_isMove(false)
     
     Sprite * iconSpr = Sprite::create(ImagePath(iconName));
     Sprite * nameSpr = Sprite::create(ImagePath(textName));
+    
+//    if (disc.size() > 30) {
+//        disc = disc.insert(30, "\n",1);
+//    }
+    
     Label  * discLabel = Label::createWithTTF(disc, "fonts/mimi.ttf", 30);
+    discLabel->setDimensions(400, 100);
     discLabel->setColor(Color3B(0, 0, 0));
     
     MenuItemImage * gotoShopButton = NULL;
@@ -71,7 +77,7 @@ m_isMove(false)
     Size bgSize = bg->getContentSize();
     iconSpr->setPosition(bgSize.width * 0.21, bgSize.height * 0.75);
     nameSpr->setPosition(bgSize.width * 0.68, bgSize.height * 0.58);
-    discLabel->setPosition(bgSize.width * 0.5, bgSize.height * 0.37);
+    discLabel->setPosition(bgSize.width * 0.5, bgSize.height * 0.34);
     gotoShopButton->setPosition(bgSize.width * 0.5, bgSize.height * 0.15);
     jiesuo->setPosition(bgSize.width * 0.25, bgSize.height * 0.15);
     

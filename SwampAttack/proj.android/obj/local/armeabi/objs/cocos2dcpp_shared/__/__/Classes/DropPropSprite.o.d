@@ -324,7 +324,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/DropPropSprite.o: \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h \
  jni/../../Classes/GameObject.h jni/../../Classes/GameFightScene.h \
- jni/../../Classes/BaseUtil.h
+ jni/../../Classes/BaseUtil.h jni/../../Classes/DropManager.h \
+ jni/../../Classes/DropModel.h
 
 jni/../../Classes/DropPropSprite.h:
 
@@ -991,3 +992,7 @@ jni/../../Classes/GameObject.h:
 jni/../../Classes/GameFightScene.h:
 
 jni/../../Classes/BaseUtil.h:
+
+jni/../../Classes/DropManager.h:
+
+jni/../../Classes/DropModel.h:

@@ -367,9 +367,11 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameOverScene.o: \
  jni/../../Classes/GameSubject.h jni/../../Classes/GunManager.h \
  jni/../../Classes/GameObject.h jni/../../Classes/Gun.h \
  jni/../../Classes/PropManager.h jni/../../Classes/Prop.h \
- jni/../../Classes/GameDirector.h jni/../../Classes/GameMapManager.h \
- jni/../../Classes/GameMap.h jni/../../Classes/GameMap6.h \
- jni/../../Classes/GameMap5s.h jni/../../Classes/GameUser.h
+ jni/../../Classes/DefenseBuildingManager.h \
+ jni/../../Classes/DefenseBuilding.h jni/../../Classes/GameDirector.h \
+ jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
+ jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
+ jni/../../Classes/GameUser.h
 
 jni/../../Classes/GameOverScene.h:
 
@@ -1130,6 +1132,10 @@ jni/../../Classes/Gun.h:
 jni/../../Classes/PropManager.h:
 
 jni/../../Classes/Prop.h:
+
+jni/../../Classes/DefenseBuildingManager.h:
+
+jni/../../Classes/DefenseBuilding.h:
 
 jni/../../Classes/GameDirector.h:
 

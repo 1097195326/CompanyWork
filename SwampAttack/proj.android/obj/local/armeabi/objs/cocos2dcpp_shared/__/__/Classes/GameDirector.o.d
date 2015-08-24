@@ -365,7 +365,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameDirector.o: \
  jni/../../Classes/BulletModel.h jni/../../Classes/House.h \
  jni/../../Classes/DefenseBuildingManager.h \
  jni/../../Classes/DefenseBuilding.h jni/../../Classes/GameOverScene.h \
- jni/../../Classes/GameBuffManager.h jni/../../Classes/GameFightScene.h
+ jni/../../Classes/GameBuffManager.h jni/../../Classes/DropManager.h \
+ jni/../../Classes/DropModel.h jni/../../Classes/GameFightScene.h
 
 jni/../../Classes/GameDirector.h:
 
@@ -1132,5 +1133,9 @@ jni/../../Classes/DefenseBuilding.h:
 jni/../../Classes/GameOverScene.h:
 
 jni/../../Classes/GameBuffManager.h:
+
+jni/../../Classes/DropManager.h:
+
+jni/../../Classes/DropModel.h:
 
 jni/../../Classes/GameFightScene.h:

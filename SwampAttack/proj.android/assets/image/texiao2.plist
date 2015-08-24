@@ -4,6 +4,84 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>button_flash0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{246,2},{1,1}}</string>
+                <key>offset</key>
+                <string>{-54.5,54.5}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1,1}}</string>
+                <key>sourceSize</key>
+                <string>{110,110}</string>
+            </dict>
+            <key>button_flash0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,338},{74,64}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,25},{74,64}}</string>
+                <key>sourceSize</key>
+                <string>{110,110}</string>
+            </dict>
+            <key>button_flash0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,412},{82,72}}</string>
+                <key>offset</key>
+                <string>{0,-3}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{14,22},{82,72}}</string>
+                <key>sourceSize</key>
+                <string>{110,110}</string>
+            </dict>
+            <key>button_flash0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{108,332},{90,78}}</string>
+                <key>offset</key>
+                <string>{0,-5}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{10,21},{90,78}}</string>
+                <key>sourceSize</key>
+                <string>{110,110}</string>
+            </dict>
+            <key>button_flash0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{108,246},{96,84}}</string>
+                <key>offset</key>
+                <string>{0,-6}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{7,19},{96,84}}</string>
+                <key>sourceSize</key>
+                <string>{110,110}</string>
+            </dict>
+            <key>button_flash0006.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,246},{104,90}}</string>
+                <key>offset</key>
+                <string>{0,-8}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{3,18},{104,90}}</string>
+                <key>sourceSize</key>
+                <string>{110,110}</string>
+            </dict>
             <key>item_flash0001.png</key>
             <dict>
                 <key>frame</key>
@@ -20,7 +98,7 @@
             <key>item_flash0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{124,2},{120,120}}</string>
+                <string>{{2,124},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +111,7 @@
             <key>item_flash0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,124},{120,120}}</string>
+                <string>{{124,2},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -64,9 +142,9 @@
             <key>realTextureFileName</key>
             <string>texiao2.png</string>
             <key>size</key>
-            <string>{256,256}</string>
+            <string>{256,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:71acc0aa205816b1b223090ac1c38cfd:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:eabf05257d417c090fbe148b5393e09e:1/1$</string>
             <key>textureFileName</key>
             <string>texiao2.png</string>
         </dict>

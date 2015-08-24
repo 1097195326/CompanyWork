@@ -328,7 +328,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/DefenseBuilding.o: \
  jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
  jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
  jni/../../Classes/House.h jni/../../Classes/BulletManager.h \
- jni/../../Classes/Bullet.h jni/../../Classes/BulletModel.h
+ jni/../../Classes/Bullet.h jni/../../Classes/BulletModel.h \
+ jni/../../Classes/GuanQiaManager.h jni/../../Classes/GuanQiaModel.h \
+ jni/../../Classes/GameShowDiscLayer.h
 
 jni/../../Classes/DefenseBuilding.h:
 
@@ -1013,3 +1015,9 @@ jni/../../Classes/BulletManager.h:
 jni/../../Classes/Bullet.h:
 
 jni/../../Classes/BulletModel.h:
+
+jni/../../Classes/GuanQiaManager.h:
+
+jni/../../Classes/GuanQiaModel.h:
+
+jni/../../Classes/GameShowDiscLayer.h:

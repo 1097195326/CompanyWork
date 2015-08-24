@@ -7,132 +7,132 @@
             <key>burn0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{356,2},{90,148}}</string>
+                <string>{{132,208},{122,178}}</string>
                 <key>offset</key>
-                <string>{7,-22}</string>
+                <string>{9,-23}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{42,48},{90,148}}</string>
+                <string>{{38,54},{122,178}}</string>
                 <key>sourceSize</key>
-                <string>{160,200}</string>
+                <string>{180,240}</string>
             </dict>
             <key>burn0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,178},{94,162}}</string>
+                <string>{{124,628},{114,180}}</string>
+                <key>offset</key>
+                <string>{7,-14}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{40,44},{114,180}}</string>
+                <key>sourceSize</key>
+                <string>{180,240}</string>
+            </dict>
+            <key>burn0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,426},{134,200}}</string>
+                <key>offset</key>
+                <string>{7,-11}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{30,31},{134,200}}</string>
+                <key>sourceSize</key>
+                <string>{180,240}</string>
+            </dict>
+            <key>burn0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,220},{128,204}}</string>
+                <key>offset</key>
+                <string>{7,-6}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{33,24},{128,204}}</string>
+                <key>sourceSize</key>
+                <string>{180,240}</string>
+            </dict>
+            <key>burn0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{126,216}}</string>
+                <key>offset</key>
+                <string>{4,3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{31,9},{126,216}}</string>
+                <key>sourceSize</key>
+                <string>{180,240}</string>
+            </dict>
+            <key>burn0006.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{130,2},{122,204}}</string>
+                <key>offset</key>
+                <string>{1,-5}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{30,23},{122,204}}</string>
+                <key>sourceSize</key>
+                <string>{180,240}</string>
+            </dict>
+            <key>burn0007.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,628},{120,184}}</string>
+                <key>offset</key>
+                <string>{3,-17}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{33,45},{120,184}}</string>
+                <key>sourceSize</key>
+                <string>{180,240}</string>
+            </dict>
+            <key>burn0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{138,388},{114,182}}</string>
+                <key>offset</key>
+                <string>{4,-16}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{37,45},{114,182}}</string>
+                <key>sourceSize</key>
+                <string>{180,240}</string>
+            </dict>
+            <key>burn0009.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,814},{118,186}}</string>
                 <key>offset</key>
                 <string>{6,-13}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{39,32},{94,162}}</string>
+                <string>{{37,40},{118,186}}</string>
                 <key>sourceSize</key>
-                <string>{160,200}</string>
-            </dict>
-            <key>burn0003.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{90,364},{102,170}}</string>
-                <key>offset</key>
-                <string>{5,-10}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{34,25},{102,170}}</string>
-                <key>sourceSize</key>
-                <string>{160,200}</string>
-            </dict>
-            <key>burn0004.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,188},{96,174}}</string>
-                <key>offset</key>
-                <string>{5,-4}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{37,17},{96,174}}</string>
-                <key>sourceSize</key>
-                <string>{160,200}</string>
-            </dict>
-            <key>burn0005.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,2},{92,184}}</string>
-                <key>offset</key>
-                <string>{2,3}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{36,5},{92,184}}</string>
-                <key>sourceSize</key>
-                <string>{160,200}</string>
-            </dict>
-            <key>burn0006.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{96,2},{88,174}}</string>
-                <key>offset</key>
-                <string>{-1,-4}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{35,17},{88,174}}</string>
-                <key>sourceSize</key>
-                <string>{160,200}</string>
-            </dict>
-            <key>burn0007.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{196,160},{88,154}}</string>
-                <key>offset</key>
-                <string>{1,-16}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{37,39},{88,154}}</string>
-                <key>sourceSize</key>
-                <string>{160,200}</string>
-            </dict>
-            <key>burn0008.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{274,2},{80,152}}</string>
-                <key>offset</key>
-                <string>{2,-15}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{42,39},{80,152}}</string>
-                <key>sourceSize</key>
-                <string>{160,200}</string>
-            </dict>
-            <key>burn0009.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{186,2},{86,156}}</string>
-                <key>offset</key>
-                <string>{4,-12}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{41,34},{86,156}}</string>
-                <key>sourceSize</key>
-                <string>{160,200}</string>
+                <string>{180,240}</string>
             </dict>
             <key>burn0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,364},{86,146}}</string>
+                <string>{{122,814},{118,176}}</string>
                 <key>offset</key>
-                <string>{5,-19}</string>
+                <string>{7,-20}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{42,46},{86,146}}</string>
+                <string>{{38,52},{118,176}}</string>
                 <key>sourceSize</key>
-                <string>{160,200}</string>
+                <string>{180,240}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -142,9 +142,9 @@
             <key>realTextureFileName</key>
             <string>burn.png</string>
             <key>size</key>
-            <string>{512,512}</string>
+            <string>{256,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:5b758c4dc25953cc7b7626be0531630d:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:3e752f2912829582c9150e7c87a0069c:1/1$</string>
             <key>textureFileName</key>
             <string>burn.png</string>
         </dict>

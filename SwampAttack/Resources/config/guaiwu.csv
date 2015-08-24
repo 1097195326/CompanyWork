@@ -19,11 +19,11 @@ Id[string],MonsterName[string],,ModelId[string],CapId[string],ActionType[int],At
 100017,tid#MonsterName17,小恶魔,,,1,5,168,1.2,,1,30,,,17,100010,tid#MonsterDescription17,飞行兵种，近战攻击
 100018,tid#MonsterName18,恶魔,,,1,5,252,1.2,,1,30,,,25,100010,tid#MonsterDescription18,小恶魔升级版
 100019,tid#MonsterName19,狼人,wolf,,1,1,607,0.7,200,1,30,,,61,100010,tid#MonsterDescription19,移动非常慢，血非常厚
-100020,tid#MonsterName20,铁面狼人,wolf,wolf_armor,1,1,1215,0.7,200,1,30,,,122,100010,tid#MonsterDescription20,狼人升级版本
-200001,tid#MonsterName21,骷髅王,skullking,,1,1,1750,0.5,200,1,30,,,175,100011,tid#MonsterDescription21,BOOS
-200002,tid#MonsterName22,僵尸王,zombieking,,1,1,2100,0.5,200,1,30,,,210,100011,tid#MonsterDescription22,BOOS
-200003,tid#MonsterName23,狼王,wolfking,,1,1,3150,0.5,200,1,30,,,315,100011,tid#MonsterDescription23,BOOS
-200004,tid#MonsterName24,稻草王,scareking,,1,1,3780,0.5,200,1,30,,,378,100011,tid#MonsterDescription24,BOOS
+100020,tid#MonsterName20,铁面狼人,wolf,wolf_armor,1,1,2100,0.7,200,1,30,,,#REF!,100010,tid#MonsterDescription20,狼人升级版本
+200001,tid#MonsterName21,骷髅王,skullking,,1,1,3150,0.5,200,1,30,,,#REF!,100011,tid#MonsterDescription21,BOOS
+200002,tid#MonsterName22,僵尸王,zombieking,,1,1,3780,0.5,200,1,30,,,210,100011,tid#MonsterDescription22,BOOS
+200003,tid#MonsterName23,狼王,wolfking,,1,1,4536,0.5,200,1,30,,,315,100011,tid#MonsterDescription23,BOOS
+200004,tid#MonsterName24,稻草王,scareking,,1,1,7560,0.5,200,1,30,,,378,100011,tid#MonsterDescription24,BOOS
 100021,tid#MonsterName21,雪人,snowman,,1,1,1579,0.6,70,1,30,,,158,100010,tid#MonsterDescription25,极高的血量，高额的伤害能力
 100022,tid#MonsterName22,骷髅盾兵,skull_shield,,1,1,810,0.6,30,1,30,,,81,100010,tid#MonsterDescription26,极高的血量，行动迟缓
 100023,tid#MonsterName23,吸血鬼,vampire,,1,1,3159,1.2,30,1,30,,,316,100010,tid#MonsterDescription27,较为敏捷的移动速度
