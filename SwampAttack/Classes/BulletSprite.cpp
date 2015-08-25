@@ -29,7 +29,6 @@ void BulletSprite::setModel(Bullet *bullet)
     m_model = bullet;
     std::string dandao = m_model->getModelId();
     
-
     
     BulletInfoData infoData = m_model->getDandaoInfo();
     if (infoData.frames == 1)
@@ -39,6 +38,14 @@ void BulletSprite::setModel(Bullet *bullet)
     {
         Action * ac = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(infoData.name, infoData.frames));
         runAction(ac);
+//        if (m_model->getFlyActionType() == 3)
+//        {
+//            Action * ac = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(infoData.name, infoData.frames),NULL);
+//            runAction(ac);
+//        }else
+//        {
+//            
+//        }
     }
     
 }

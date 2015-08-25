@@ -21,6 +21,7 @@ private:
     std::vector<string> m_buffIds;
     string  m_explode;
     int     m_flyType;
+    int     m_acEffect;
     int     m_weaponType;
     string  m_description;
     
@@ -35,6 +36,7 @@ public:
     std::vector<string> getBuffVector();
     string  getExplode();
     int     getFlyType();
+    int     getEffect();
     int     getWeaponType();
     string  getDescription();
     

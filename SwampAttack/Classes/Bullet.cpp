@@ -134,6 +134,10 @@ int Bullet::getAttackIndex()
 {
     return m_bp.m_underAttackAction;
 }
+int Bullet::getFlyActionType()
+{
+    return m_bulletModel->getEffect();
+}
 std::string Bullet::getModelId()
 {
     return m_bulletModel->getModelId();

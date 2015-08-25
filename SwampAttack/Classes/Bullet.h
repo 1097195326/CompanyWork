@@ -100,6 +100,7 @@ protected:
     
     
 public:
+    int     getFlyActionType();
     std::string getModelId();
     Vec2    getStartPosition();
     Vec2    getToPosition();

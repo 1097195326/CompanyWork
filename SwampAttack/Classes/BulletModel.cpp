@@ -28,6 +28,7 @@ m_isHaveExplode(false)
         m_isHaveExplode = true;
     }
     m_flyType = atoi(data["fly"].asString().c_str());
+    m_acEffect = atoi(data["Effect"].asString().c_str());
     m_weaponType = atoi(data["WeaponType"].asString().c_str());
     m_description = data["ItemDescription"].asString();
 }
@@ -55,6 +56,10 @@ string BulletModel::getExplode()
 int BulletModel::getFlyType()
 {
     return m_flyType;
+}
+int BulletModel::getEffect()
+{
+    return m_acEffect;
 }
 int BulletModel::getWeaponType()
 {
