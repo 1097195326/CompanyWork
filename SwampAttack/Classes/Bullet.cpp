@@ -210,6 +210,14 @@ BulletInfoData Bullet::getDandaoInfo()
     {
         data.name = "BulletModelId1";
         data.frames = 1;
+    }else if ("BulletModelId2" == modelId)
+    {
+        data.name = "enemy_bullet";
+        data.frames = 3;
+    }else if ("BulletModelId3" == modelId)
+    {
+        data.name = "bat_bullet";
+        data.frames = 4;
     }else if ("BulletModelId4" == modelId)
     {
         data.name = "BulletModelId4";
@@ -217,6 +225,10 @@ BulletInfoData Bullet::getDandaoInfo()
     }else if ("BulletModelId5" == modelId)
     {
         data.name = "BulletModelId5";
+        data.frames = 3;
+    }else if ("BulletModelId6" == modelId)
+    {
+        data.name = "qiang10_bullet";
         data.frames = 3;
     }else if ("BulletModelId7" == modelId)
     {

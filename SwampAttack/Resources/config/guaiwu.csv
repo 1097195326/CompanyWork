@@ -19,8 +19,8 @@ Id[string],MonsterName[string],,ModelId[string],CapId[string],ActionType[int],At
 100017,tid#MonsterName17,小恶魔,,,1,5,168,1.2,,1,30,,,17,100010,tid#MonsterDescription17,飞行兵种，近战攻击
 100018,tid#MonsterName18,恶魔,,,1,5,252,1.2,,1,30,,,25,100010,tid#MonsterDescription18,小恶魔升级版
 100019,tid#MonsterName19,狼人,wolf,,1,1,607,0.7,200,1,30,,,61,100010,tid#MonsterDescription19,移动非常慢，血非常厚
-100020,tid#MonsterName20,铁面狼人,wolf,wolf_armor,1,1,2100,0.7,200,1,30,,,#REF!,100010,tid#MonsterDescription20,狼人升级版本
-200001,tid#MonsterName21,骷髅王,skullking,,1,1,3150,0.5,200,1,30,,,#REF!,100011,tid#MonsterDescription21,BOOS
+100020,tid#MonsterName20,铁面狼人,wolf,wolf_armor,1,1,2100,0.7,200,1,30,,,210,100010,tid#MonsterDescription20,狼人升级版本
+200001,tid#MonsterName21,骷髅王,skullking,,1,1,3150,0.5,200,1,30,,,315,100011,tid#MonsterDescription21,BOOS
 200002,tid#MonsterName22,僵尸王,zombieking,,1,1,3780,0.5,200,1,30,,,210,100011,tid#MonsterDescription22,BOOS
 200003,tid#MonsterName23,狼王,wolfking,,1,1,4536,0.5,200,1,30,,,315,100011,tid#MonsterDescription23,BOOS
 200004,tid#MonsterName24,稻草王,scareking,,1,1,7560,0.5,200,1,30,,,378,100011,tid#MonsterDescription24,BOOS

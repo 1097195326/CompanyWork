@@ -36,16 +36,15 @@ void BulletSprite::setModel(Bullet *bullet)
         initWithFile(ImagePath(StringUtils::format("%s.png",infoData.name.c_str())));
     }else
     {
-        Action * ac = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(infoData.name, infoData.frames));
-        runAction(ac);
-//        if (m_model->getFlyActionType() == 3)
-//        {
-//            Action * ac = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(infoData.name, infoData.frames),NULL);
-//            runAction(ac);
-//        }else
-//        {
-//            
-//        }
+        if (m_model->getFlyActionType() == 3)
+        {
+            Action * ac = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(infoData.name, infoData.frames),NULL);
+            runAction(ac);
+        }else
+        {
+            Action * ac = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(infoData.name, infoData.frames));
+            runAction(ac);
+        }
     }
     
 }

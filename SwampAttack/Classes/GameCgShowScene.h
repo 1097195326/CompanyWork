@@ -17,6 +17,9 @@ private:
     int     m_index;
     Sprite  *   m_spr1;
     Sprite  *   m_spr2;
+    Label   *   m_text;
+    
+    std::vector<std::string> cgText;
     
 public:
     static Scene * scene();

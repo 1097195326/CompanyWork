@@ -2,7 +2,7 @@
 BulletId[string],ModelId[string],BuffId[vector<string>],WeaponType[string],explode[string],fly[string],Effect[string],ItemDescription[string],
 100001,BulletModelId1,,2,blast1,1,1,Bullet#ItemDescription1,人物子弹
 100002,BulletModelId2,,2,blast1,1,3,Bullet#ItemDescription2,远程怪物子弹
-100003,BulletModelId3,,2,,1,3,Bullet#ItemDescription3,飞行怪物子弹
+100003,BulletModelId3,,2,blast1,1,3,Bullet#ItemDescription3,飞行怪物子弹
 100004,BulletModelId4,,6,blast2,2,1,Bullet#ItemDescription4,猴子炮弹
 100005,BulletModelId5,,3,,1,3,Bullet#ItemDescription5,人物弩
 100006,BulletModelId6,,3,,1,3,Bullet#ItemDescription6,狙击枪子弹

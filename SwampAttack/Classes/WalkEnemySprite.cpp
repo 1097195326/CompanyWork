@@ -230,18 +230,20 @@ void WalkEnemySprite::tanfei()
     }
     Vec2 startPoint = m_model->getPosition();
     Vec2 tagetPoint = _G_M_M->enemy_tanfei_targetPoint;
-    tagetPoint.y = startPoint.y;
+    tagetPoint.y = (tagetPoint.x - startPoint.x) * 0.8;
     
     float tatolTime = (tagetPoint.x - startPoint.x) * 0.001;
-    float topPoint = (tagetPoint.x - startPoint.x) * 0.5 * 1;
+//    float topPoint = (tagetPoint.x - startPoint.x) * 0.5 * 1;
     
     ccBezierConfig conf;
-    conf.controlPoint_1 = Vec2(startPoint.x + (tagetPoint.x - startPoint.x) * 0.3, startPoint.y + topPoint);
-    conf.controlPoint_2 = Vec2(startPoint.x + (tagetPoint.x - startPoint.x) * 0.6, startPoint.y + topPoint);
+    conf.controlPoint_1 = Vec2(startPoint.x + (tagetPoint.x - startPoint.x) * 0.4,
+                               startPoint.y + (tagetPoint.x - startPoint.x) * 0.4);
+    conf.controlPoint_2 = Vec2(startPoint.x + (tagetPoint.x - startPoint.x) * 0.6,
+                               startPoint.y + (tagetPoint.x - startPoint.x) * 0.6);
     conf.endPosition =tagetPoint;
     ActionInterval * a1 = BezierTo::create(tatolTime, conf);
     
-    ActionInterval * a2 = RotateTo::create(0.3, 180);
+    ActionInterval * a2 = RotateTo::create(tatolTime, 270);
     
     runAction(Sequence::create(Spawn::create(a1,a2, NULL),
                                            CallFuncN::create(CC_CALLBACK_0(WalkEnemySprite::dieCall, this)),NULL));

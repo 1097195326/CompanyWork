@@ -9,6 +9,8 @@
 #include "GameCgShowScene.h"
 #include "GameHomeScene.h"
 
+#include "ConfigManager.h"
+
 
 Scene * GameCgShowScene::scene()
 {
@@ -29,6 +31,19 @@ bool GameCgShowScene::init()
     {
         return false;
     }
+    GCCsvHelper * cgHelper = _C_M->getCsvHelperByName("cgText");
+    std::map<int,std::string> m_hashHead = cgHelper->getHashHead();
+    Json::Value data = cgHelper->getJsonData();
+    std::map<int,std::string>::iterator iter;
+    for (iter = m_hashHead.begin(); iter != m_hashHead.end(); ++iter) {
+        std::string cgId = iter->second;
+        Json::Value d1 = data[cgId];
+        std::string cgStrId = d1["SceneID"].asString();
+        std::string cgStr = _C_M->getTranslateById(cgStrId);
+//        log("cg str:%s",cgStr.c_str());
+        cgText.push_back(cgStr);
+    }
+    
     m_index = 2;
     
     m_spr1 = Sprite::create(ImagePath("CG01.jpg"));
@@ -36,6 +51,12 @@ bool GameCgShowScene::init()
                     m_visibleOrigin.y + m_visibleSize.height * 0.5 - 40);
     addChild(m_spr1);
     m_spr1->setScale(1.35);
+    
+    m_text = Label::createWithTTF(cgText[0], "fonts/mimi.ttf", 30);
+    m_text->setDimensions(m_visibleSize.width * 0.8, m_visibleSize.height * 0.1);
+    m_text->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                        m_visibleOrigin.y + m_visibleSize.height * 0.15);
+    addChild(m_text);
     
 //    MenuItem * toMapItem = MenuItemImage::create(ImagePath("home_toMap.png"), ImagePath("home_toMap.png"), CC_CALLBACK_1(GameCgShowScene::skipToHomeScene, this));
 //    
@@ -46,6 +67,8 @@ bool GameCgShowScene::init()
 //    addChild(buttonMenu);
     
     schedule(CC_SCHEDULE_SELECTOR(GameCgShowScene::updateCg), 2.5, 4, 2.5);
+    
+    SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("cgSceneMus.mp3")).c_str(),true);
     
     return true;
 }
@@ -62,6 +85,7 @@ void GameCgShowScene::updateCg(float data)
     }else
     {
         m_spr1->setTexture(ImagePath(StringUtils::format("CG%002d.jpg",m_index)));
+        m_text->setString(cgText[m_index-1]);
         ++m_index;
     }
     

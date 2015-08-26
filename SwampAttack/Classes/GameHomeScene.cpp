@@ -55,7 +55,7 @@ bool GameHomeScene::init()
     addChild(buttonMenu);
     
     SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str(),true);
-    SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.5);
+//    SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.5);
     return true;
 }
 

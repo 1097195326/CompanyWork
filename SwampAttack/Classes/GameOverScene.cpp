@@ -84,6 +84,9 @@ bool GameOverScene::init()
         DefenseBuildingManager::getInstance()->checkUnlock(this);
         nextGuanqia->unlockGuanqia();
         
+        int guanqiaIndex = GuanQiaManager::getInstance()->getCurrentGuanqiaIndex();
+        GuanQiaManager::getInstance()->setCurrentGuanqiaIndex(++guanqiaIndex);
+        
         canGetGold += curGuanqia->getThroughGold();
     }else
     {
