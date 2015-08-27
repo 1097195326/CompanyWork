@@ -18,6 +18,12 @@ m_isUnlock(false)
     m_missionName = _C_M->getTranslateById(missionName);
     m_modelId = m_data["ModelId"].asString();
     m_missionType = m_data["MissionType"].asString();
+    
+    m_sceneIndex =  atoi(m_data["Scene"].asString().c_str());
+    m_checkPoint =  atoi(m_data["Checkpoint"].asString().c_str());
+    
+//    log("m_sceneIndex:%d",m_sceneIndex);
+//    log("m_checkPoint:%d",m_checkPoint);
 //    m_lastInstanceId = m_data["LastInstanceId"].asString();
 //    m_mapId = m_data["MapId"].asString();
 //    m_costPower = atoi(m_data["CostPower"].asString().c_str());
@@ -85,6 +91,14 @@ string GuanqiaModel::getModelId()
 string GuanqiaModel::getMissionType()
 {
     return m_missionType;
+}
+int GuanqiaModel::getSceneIndex()
+{
+    return m_sceneIndex;
+}
+int GuanqiaModel::getCheckPoint()
+{
+    return m_checkPoint;
 }
 //string GuanqiaModel::getLastInstanceId()
 //{

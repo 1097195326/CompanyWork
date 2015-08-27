@@ -22,6 +22,9 @@ private:
     string  m_missionName;
     string  m_modelId;
     string  m_missionType;
+    
+    int     m_sceneIndex;
+    int     m_checkPoint;
 //    string  m_lastInstanceId;
 //    string  m_mapId;
 //    int     m_costPower;
@@ -50,6 +53,8 @@ public:
     string  getGuanqiaName();
     string  getModelId();
     string  getMissionType();
+    int     getSceneIndex();
+    int     getCheckPoint();
 //    string  getLastInstanceId();
 //    string  getMapId();
 //    int     getCostPower();

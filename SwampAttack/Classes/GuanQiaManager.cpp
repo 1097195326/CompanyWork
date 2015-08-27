@@ -62,10 +62,10 @@ GuanqiaModel * GuanQiaManager::getCurrentGuanqia()
 }
 void GuanQiaManager::setCurrentSceneIndex(int index)
 {
-    if (index > m_currentSceneIndex)
-    {
-        _G_U->setLastSceneIndex(index);
-    }
+//    if (index > m_currentSceneIndex)
+//    {
+//        _G_U->setLastSceneIndex(index);
+//    }
     m_currentSceneIndex = index;
     
 }
@@ -73,12 +73,12 @@ int GuanQiaManager::getCurrentSceneIndex()
 {
     return m_currentSceneIndex;
 }
-void GuanQiaManager::setCurrentGuanqiaIndex(int index)
+void GuanQiaManager::setCurrentGuanqiaIndex(int sceneIndex, int index)
 {
-    if (index > m_currentGuanqiaIndex)
-    {
-        _G_U->setLastGuanqiaIndex(index);
-    }
+//    if (sceneIndex > m_currentSceneIndex && index > m_currentGuanqiaIndex)
+//    {
+//        _G_U->setLastGuanqiaIndex(index);
+//    }
     m_currentGuanqiaIndex = index;
     
 }

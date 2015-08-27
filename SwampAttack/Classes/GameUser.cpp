@@ -19,6 +19,7 @@ GameUser::GameUser():m_time(0)
         setUserHealth(m_userHealth);
         unlockGuanqia("400001_1");
         setLastGuanqiaIndex(1);
+        setLastSceneIndex(1);
     }
 //    setUserGold(900000);
     m_userHealth = getIntForKey("user_health");
@@ -114,6 +115,7 @@ void GameUser::addHealthToFull()
 void GameUser::setUserGold(int gold)
 {
     setIntForKey("user_gold", gold);
+    notify();
 }
 int GameUser::getUserGold()
 {
@@ -123,6 +125,7 @@ int GameUser::getUserGold()
 void GameUser::setExpendPropNum(int num)
 {
     setIntForKey("user_expend_prop", num);
+    notify();
 }
 int GameUser::getExpendPropNum()
 {

@@ -65,7 +65,7 @@ bool GameFightScene::init()
     g_f_layer = this;
     
     int sceneIndex = GuanQiaManager::getInstance()->getCurrentSceneIndex();
-    ++sceneIndex;
+    
     std::string bgName = StringUtils::format("scene%d_Bg.png",sceneIndex);
     std::string fgName = StringUtils::format("scene%d_Fg.png",sceneIndex);
     

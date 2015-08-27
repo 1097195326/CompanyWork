@@ -18,12 +18,13 @@
 ShopGunItemScrollHeadler::ShopGunItemScrollHeadler(int index)
 {
     setIndex(index);
-    
+    _G_U->attach(this);
     initGunView();
     
 }
 ShopGunItemScrollHeadler::~ShopGunItemScrollHeadler()
 {
+    _G_U->detach(this);
     //    log("shop item scroll headler remove");
 }
 void ShopGunItemScrollHeadler::setGameShopScene(GameShopScene *shopScene)
@@ -36,6 +37,7 @@ void ShopGunItemScrollHeadler::initGunView()
     
     Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
     setSubject(gun);
+    
     if (gun->isUnlock())
     {
         initUnlockGunView();
@@ -275,7 +277,7 @@ void ShopGunItemScrollHeadler::updateGunView()
         {
             if (gun->getWeaponType() != 1)
             {
-                m_buyButton->setEnabled(true);
+                m_buyButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
             }
         }else
         {
@@ -293,7 +295,7 @@ void ShopGunItemScrollHeadler::updateGunView()
         }
         if (userGold >= upgradeGold && !gun->isMaxLevel())
         {
-            m_upGradeButton->setEnabled(true);
+            m_upGradeButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
         }else
         {
             m_upGradeButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
@@ -307,6 +309,7 @@ void ShopGunItemScrollHeadler::updateGunView()
 }
 void ShopGunItemScrollHeadler::updateData()
 {
+//    log("gun scroll headler update data");
     Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
     if (gun->isUnlock())
     {
@@ -318,6 +321,7 @@ void ShopGunItemScrollHeadler::updateData()
             m_takeUpButton->setVisible(true);
         }
     }
+    updateGunView();
 }
 void ShopGunItemScrollHeadler::upGrade(Touch * touch, Event * event)
 {
@@ -332,8 +336,8 @@ void ShopGunItemScrollHeadler::upGrade(Touch * touch, Event * event)
     if (sec)
     {
         SimpleAudioEngine::getInstance()->playEffect(MusicPath("propUpgrade.mp3").c_str());
-        m_shopScene->updateUserData();
-        updateGunView();
+//        m_shopScene->updateUserData();
+//        updateGunView();
         GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(gun->getModelId());
         showLayer->autorelease();
         m_shopScene->addChild(showLayer,10);
@@ -354,7 +358,7 @@ void ShopGunItemScrollHeadler::unLock(Touch * touch, Event * event)
     bool sec = gun->unlockGun();
     if (sec)
     {
-        m_shopScene->updateUserData();
+//        m_shopScene->updateUserData();
         initGunView();
     }else
     {
@@ -373,8 +377,8 @@ void ShopGunItemScrollHeadler::buy(Touch * touch, Event * event)
     bool sec = gun->buyBullet();
     if (sec)
     {
-        m_shopScene->updateUserData();
-        updateGunView();
+//        m_shopScene->updateUserData();
+//        updateGunView();
     }else
     {
         

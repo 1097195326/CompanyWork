@@ -117,6 +117,9 @@ void WalkEnemySprite::update(float data)
     {
         healthBar->setVisible(false);
     }
+    if (!m_model->isDianji() && isHaveArmor && armorSprite->getOpacity() == 0) {
+        armorSprite->setOpacity(255);
+    }
     if (isHaveArmor && m_model->isWeak() && armorSprite) {
         isHaveArmor = false;
         string armorName = m_model->getCapId();
@@ -213,8 +216,7 @@ void WalkEnemySprite::dianji()
     guaiwuSprite->stopAllActions();
     guaiwuSprite->runAction(m_map["dianjiAction"]);
     if (isHaveArmor) {
-//        armorSprite->stopAllActions();
-//        armorSprite->runAction(m_map["armorWalkAction"]);
+        armorSprite->setOpacity(0);
     }
 }
 void WalkEnemySprite::tanfei()
@@ -352,6 +354,10 @@ void WalkEnemySprite::die()
     actionStatus = isDieing;
     guaiwuSprite->stopAllActions();
     guaiwuSprite->runAction(m_map["dieAction"]);
+    
+    texiaoSprite->stopAllActions();
+    texiaoSprite->setVisible(true);
+    texiaoSprite->runAction(texiaoAction);
     
 //    if (isHaveArmor) {
 //        isHaveArmor = false;

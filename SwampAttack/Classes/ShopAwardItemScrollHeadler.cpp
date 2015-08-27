@@ -93,7 +93,7 @@ void ShopAwardItemScrollHeadler::buy(cocos2d::Touch *touch, cocos2d::Event *even
     SpecialObject * specialobject = SpecialManager::getInstance()->getSpecialObjectByIndex(m_index);
     
     specialobject->buyEnd();
-    m_shopScene->updateUserData();
+//    m_shopScene->updateUserData();
     
     
 }

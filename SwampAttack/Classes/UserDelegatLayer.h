@@ -29,7 +29,7 @@ public:
     void    goldPlusFunc(Ref * pSender);
     void    expendPlusFunc(Ref * pSender);
     
-    void updateUserData();
+    virtual void updateUserData();
     
     void    updateData();
 };

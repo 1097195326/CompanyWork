@@ -10,6 +10,7 @@
 #include "GuanQiaManager.h"
 #include "GameLoadingScene.h"
 #include "BaseUtil.h"
+#include "GameUser.h"
 //#include "GameFightScene.h"
 //#include "EnemyManager.h"
 //#include "GameLoading.h"
@@ -23,7 +24,7 @@ m_index(index)
 {
     init();
     //400001_1
-    m_guanqiaId = StringUtils::format("40000%d_%d",(m_sceneIndex + 1),m_index);
+    m_guanqiaId = StringUtils::format("40000%d_%d",(m_sceneIndex),m_index);
 //    log("guan qia id:%s",guanqiaId.c_str());
     
     GuanqiaModel * guanQia = GuanQiaManager::getInstance()->getGuanqiaById(m_guanqiaId);
@@ -33,8 +34,11 @@ m_index(index)
 //                                       ImagePath("map_button.png"),
 //                                       CC_CALLBACK_1(MapGuanqiaButton::pressGuanqiaButtonFunc, this));
     
-    int s_Indx = GuanQiaManager::getInstance()->getCurrentSceneIndex();
-    int g_Indx = GuanQiaManager::getInstance()->getCurrentGuanqiaIndex();
+    int s_Indx = _G_U->getLastSceneIndex();
+    int g_Indx = _G_U->getLastGuanqiaIndex();
+    
+//    log("s_i:%d",s_Indx);
+//    log("g_i:%d",g_Indx);
     
     if (s_Indx == m_sceneIndex && g_Indx == m_index)
     {
@@ -87,11 +91,11 @@ void MapGuanqiaButton::pressGuanqiaButtonFunc(Touch * touch, Event * event)
     GuanqiaModel * guanQia = GuanQiaManager::getInstance()->getGuanqiaById(m_guanqiaId);
     if (guanQia->isUnlock())
     {
-        string musicName = StringUtils::format("sceneMusic%d.mp3",m_sceneIndex + 1);
+        string musicName = StringUtils::format("sceneMusic%d.mp3",m_sceneIndex);
         SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath(musicName)).c_str(),true);
         
         GuanQiaManager::getInstance()->setCurrentSceneIndex(m_sceneIndex);
-        GuanQiaManager::getInstance()->setCurrentGuanqiaIndex(m_index);
+        GuanQiaManager::getInstance()->setCurrentGuanqiaIndex(m_sceneIndex,m_index);
         
         Director::getInstance()->replaceScene(GameLoadingScene::scene(m_guanqiaId));
     }else

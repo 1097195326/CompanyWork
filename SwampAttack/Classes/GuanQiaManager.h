@@ -30,7 +30,7 @@ public:
     GuanqiaModel * getCurrentGuanqia();
     void    setCurrentSceneIndex(int index);
     int     getCurrentSceneIndex();
-    void    setCurrentGuanqiaIndex(int index);
+    void    setCurrentGuanqiaIndex(int sceneIndex, int index);
     int     getCurrentGuanqiaIndex();
 public:
     static GuanQiaManager * getInstance();

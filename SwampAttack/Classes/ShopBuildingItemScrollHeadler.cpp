@@ -19,13 +19,14 @@ ShopBuildingItemScrollHeadler::ShopBuildingItemScrollHeadler(int index)
 {
     setIndex(index);
     
-    
+    _G_U->attach(this);
     initDefenseView();
     
     
 }
 ShopBuildingItemScrollHeadler::~ShopBuildingItemScrollHeadler()
 {
+    _G_U->detach(this);
     //    log("shop item scroll headler remove");
 }
 void ShopBuildingItemScrollHeadler::setGameShopScene(GameShopScene *shopScene)
@@ -189,13 +190,17 @@ void ShopBuildingItemScrollHeadler::updateDefenseView()
         int userGold = GameUser::getInstance()->getUserGold();
         if (userGold >= upgradeGold)
         {
-            m_upGradeButton->setEnabled(true);
+            m_upGradeButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
         }else
         {
             m_upGradeButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
         }
     }
     
+}
+void ShopBuildingItemScrollHeadler::updateData()
+{
+    updateDefenseView();
 }
 void ShopBuildingItemScrollHeadler::upGrade(Touch * touch, Event * event)
 {
@@ -213,9 +218,9 @@ void ShopBuildingItemScrollHeadler::upGrade(Touch * touch, Event * event)
         SimpleAudioEngine::getInstance()->playEffect(MusicPath("propUpgrade.mp3").c_str());
         userGold -= upgradeGold;
         _G_U->setUserGold(userGold);
-        m_shopScene->updateUserData();
+//        m_shopScene->updateUserData();
         building->addStrengthenLevel();
-        updateDefenseView();
+//        updateDefenseView();
         GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(building->getModelId());
         showLayer->autorelease();
         m_shopScene->addChild(showLayer,10);
@@ -236,7 +241,7 @@ void ShopBuildingItemScrollHeadler::unLock(Touch * touch, Event * event)
         
         userGold -= unlockGold;
         _G_U->setUserGold(userGold);
-        m_shopScene->updateUserData();
+//        m_shopScene->updateUserData();
         building->unlockBuilding();
         initDefenseView();
     }else

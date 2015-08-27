@@ -53,20 +53,23 @@ bool GameCgShowScene::init()
     m_spr1->setScale(1.35);
     
     m_text = Label::createWithTTF(cgText[0], "fonts/mimi.ttf", 30);
-    m_text->setDimensions(m_visibleSize.width * 0.8, m_visibleSize.height * 0.1);
+    m_text->setLineHeight(35);
+    m_text->setDimensions(m_visibleSize.width * 0.8, m_visibleSize.height * 0.18);
     m_text->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                         m_visibleOrigin.y + m_visibleSize.height * 0.15);
     addChild(m_text);
     
-//    MenuItem * toMapItem = MenuItemImage::create(ImagePath("home_toMap.png"), ImagePath("home_toMap.png"), CC_CALLBACK_1(GameCgShowScene::skipToHomeScene, this));
-//    
-//    toMapItem->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-//                           m_visibleOrigin.y + m_visibleSize.height * 0.4 + 90);
-//    Menu * buttonMenu = Menu::create(toMapItem, NULL);
-//    buttonMenu->setPosition(Point::ZERO);
-//    addChild(buttonMenu);
+    MenuItem * toHomeItem = MenuItemImage::create(ImagePath("cgSkip.png"),
+                                                 ImagePath("cgSkip.png"),
+                                                 CC_CALLBACK_1(GameCgShowScene::skipToHomeScene, this));
     
-    schedule(CC_SCHEDULE_SELECTOR(GameCgShowScene::updateCg), 2.5, 4, 2.5);
+    toHomeItem->setPosition(m_visibleOrigin.x + m_visibleSize.width - 150,
+                           m_visibleOrigin.y + 60);
+    Menu * buttonMenu = Menu::create(toHomeItem, NULL);
+    buttonMenu->setPosition(Point::ZERO);
+    addChild(buttonMenu);
+    
+    schedule(CC_SCHEDULE_SELECTOR(GameCgShowScene::updateCg), 3, 4, 3);
     
     SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("cgSceneMus.mp3")).c_str(),true);
     

@@ -101,6 +101,7 @@ UserDelegateLayer::~UserDelegateLayer()
 }
 void UserDelegateLayer::updateData()
 {
+//    log("user delegate layer update data");
     int userHealth = _G_U->getUserHealth();
     for (int i = 0; i < 5; ++i)
     {
@@ -113,11 +114,14 @@ void UserDelegateLayer::updateData()
         }
     }
     
+    m_goldLabel->setString(StringUtils::format("%d",_G_U->getUserGold()));
+    m_expendPropLabel->setString(StringUtils::format("%d",_G_U->getExpendPropNum()));
+    
 }
 void UserDelegateLayer::updateUserData()
 {
-    m_goldLabel->setString(StringUtils::format("%d",_G_U->getUserGold()));
-    m_expendPropLabel->setString(StringUtils::format("%d",_G_U->getExpendPropNum()));
+//    m_goldLabel->setString(StringUtils::format("%d",_G_U->getUserGold()));
+//    m_expendPropLabel->setString(StringUtils::format("%d",_G_U->getExpendPropNum()));
 
     updateData();
 }

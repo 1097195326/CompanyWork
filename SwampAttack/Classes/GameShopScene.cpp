@@ -155,6 +155,8 @@ void GameShopScene::initScrollView()
 }
 void GameShopScene::updateData()
 {
+    UserDelegateLayer::updateData();
+    
     ShopSelectMenuView * menuView = (ShopSelectMenuView *) m_sub;
     int itemIndex = menuView->getSelectIndex();
     

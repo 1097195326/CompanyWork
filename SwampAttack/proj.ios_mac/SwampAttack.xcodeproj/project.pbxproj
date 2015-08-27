@@ -778,10 +778,10 @@
 		8DC10ACF1AC40463004F7DE2 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
-				8DC10AAE1AC3D629004F7DE2 /* GameFightScene.cpp */,
-				8DC10AAF1AC3D629004F7DE2 /* GameFightScene.h */,
 				D8B187621B49414300CB33CF /* UserDelegatLayer.cpp */,
 				D8B187631B49414300CB33CF /* UserDelegatLayer.h */,
+				8DC10AAE1AC3D629004F7DE2 /* GameFightScene.cpp */,
+				8DC10AAF1AC3D629004F7DE2 /* GameFightScene.h */,
 				8DE3E98C1AF8B5F900B1E8A6 /* GameMapScene.cpp */,
 				8DE3E98D1AF8B5F900B1E8A6 /* GameMapScene.h */,
 				8DD8C12A1AFCB15F00872AA2 /* GameShopScene.cpp */,

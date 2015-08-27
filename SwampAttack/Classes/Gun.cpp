@@ -457,9 +457,11 @@ bool Gun::buyBullet()
     
     _G_U->setGunBulletNumber(m_id, m_totalBullets);
     
+    notify();
+    
     userGold -= m_bulletPrice;
     _G_U->setUserGold(userGold);
-    notify();
+    
     return true;
 }
 void Gun::addBullet(int num)

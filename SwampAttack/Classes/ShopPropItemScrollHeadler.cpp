@@ -18,12 +18,13 @@
 ShopPropItemScrollHeadler::ShopPropItemScrollHeadler(int index)
 {
     setIndex(index);
-    
+    _G_U->attach(this);
     initDaojuView();
     
 }
 ShopPropItemScrollHeadler::~ShopPropItemScrollHeadler()
 {
+    _G_U->detach(this);
     //    log("shop item scroll headler remove");
 }
 void ShopPropItemScrollHeadler::setGameShopScene(GameShopScene *shopScene)
@@ -277,14 +278,14 @@ void ShopPropItemScrollHeadler::updateDaojuView()
         
         if (userGold >= propPrice)
         {
-            m_buyButton->setEnabled(true);
+            m_buyButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
         }else
         {
             m_buyButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
         }
         if (userGold >= upgradeGold && !prop->isMaxLevel())
         {
-            m_upGradeButton->setEnabled(true);
+            m_upGradeButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
         }else
         {
             m_upGradeButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
@@ -304,6 +305,7 @@ void ShopPropItemScrollHeadler::updateData()
             m_takeUpButton->setVisible(true);
         }
     }
+    updateDaojuView();
 }
 void ShopPropItemScrollHeadler::upGrade(Touch * touch, Event * event)
 {
@@ -318,8 +320,8 @@ void ShopPropItemScrollHeadler::upGrade(Touch * touch, Event * event)
     if (sec)
     {
         SimpleAudioEngine::getInstance()->playEffect(MusicPath("propUpgrade.mp3").c_str());
-        m_shopScene->updateUserData();
-        updateDaojuView();
+//        m_shopScene->updateUserData();
+//        updateDaojuView();
         GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(prop->getModelId());
         showLayer->autorelease();
         m_shopScene->addChild(showLayer,10);
@@ -340,7 +342,7 @@ void ShopPropItemScrollHeadler::unLock(Touch * touch, Event * event)
     bool sec = prop->unlockProp();
     if (sec)
     {
-        m_shopScene->updateUserData();
+//        m_shopScene->updateUserData();
         initDaojuView();
     }else
     {
@@ -359,8 +361,8 @@ void ShopPropItemScrollHeadler::buy(Touch * touch, Event * event)
     bool sec = prop->buyProp();
     if (sec)
     {
-        m_shopScene->updateUserData();
-        updateDaojuView();
+//        m_shopScene->updateUserData();
+//        updateDaojuView();
     }else
     {
         

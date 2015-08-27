@@ -79,13 +79,22 @@ bool GameOverScene::init()
         
         GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
         GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
+        
         GunManager::getInstance()->checkUnlock(this);
         PropManager::getInstance()->checkUnlock(this);
         DefenseBuildingManager::getInstance()->checkUnlock(this);
+        
+        if (!nextGuanqia->isUnlock())
+        {
+//            log("scene index:%d",nextGuanqia->getSceneIndex());
+//            log(" index:%d",nextGuanqia->getCheckPoint());
+            
+            _G_U->setLastSceneIndex(nextGuanqia->getSceneIndex());
+            _G_U->setLastGuanqiaIndex(nextGuanqia->getCheckPoint());
+        }
         nextGuanqia->unlockGuanqia();
         
-        int guanqiaIndex = GuanQiaManager::getInstance()->getCurrentGuanqiaIndex();
-        GuanQiaManager::getInstance()->setCurrentGuanqiaIndex(++guanqiaIndex);
+//        GuanQiaManager::getInstance()->set(++guanqiaIndex);
         
         canGetGold += curGuanqia->getThroughGold();
     }else

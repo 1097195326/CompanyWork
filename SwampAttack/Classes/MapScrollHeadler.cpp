@@ -26,7 +26,7 @@ MapScrollHeadler::MapScrollHeadler(int sceneIndex)
         std::string guanqiaId = StringUtils::format("40000%d_%d",(m_index + 1),i);
         GuanqiaModel * guanQia = GuanQiaManager::getInstance()->getGuanqiaById(guanqiaId);
         
-        MapGuanqiaButton * button = new MapGuanqiaButton(m_index,i);
+        MapGuanqiaButton * button = new MapGuanqiaButton(m_index + 1,i);
         button->setPosition(offVec);
         button->autorelease();
         addChild(button);

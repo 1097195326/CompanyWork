@@ -55,6 +55,7 @@ bool GameMapScene::init()
     addChild(buttonMenu,2);
     
     int toIndex = GuanQiaManager::getInstance()->getCurrentSceneIndex();
+    --toIndex;
     log("map to index :%d",toIndex);
     int num = 3;
     m_scrollView = new GameHorizontalScrollHeadlerView(1136,640,1136,640,num);

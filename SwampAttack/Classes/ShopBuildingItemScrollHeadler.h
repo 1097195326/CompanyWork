@@ -13,8 +13,10 @@
 #include "ProgressBar.h"
 #include "GameShopScene.h"
 #include "GameSprite.h"
+#include "GameObserver.h"
 
-class ShopBuildingItemScrollHeadler : public GameScrollHeadler {
+class ShopBuildingItemScrollHeadler : public GameScrollHeadler,
+public GameObserver{
 private:
     Label   *   m_buyLabel;
     Label   *   m_upgradeLabel;
@@ -41,7 +43,7 @@ public:
     void    setGameShopScene(GameShopScene * shopScene);
     ShopBuildingItemScrollHeadler(int index);
     ~ShopBuildingItemScrollHeadler();
-    
+    void    updateData();
 };
 
 #endif /* defined(__SwampAttack__ShopBuildingItemScrollHeadler__) */
