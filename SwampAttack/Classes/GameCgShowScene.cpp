@@ -44,7 +44,7 @@ bool GameCgShowScene::init()
         cgText.push_back(cgStr);
     }
     
-    m_index = 1;
+    m_index = 2;
     
     m_spr1 = Sprite::create(ImagePath("CG01.jpg"));
     m_spr1->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,

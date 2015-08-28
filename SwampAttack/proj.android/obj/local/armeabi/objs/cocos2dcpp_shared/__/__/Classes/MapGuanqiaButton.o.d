@@ -357,7 +357,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/MapGuanqiaButton.o: \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/CCCsvHelper.h \
  jni/../../Classes/GameSubject.h jni/../../Classes/GameLoadingScene.h \
- jni/../../Classes/BaseUtil.h
+ jni/../../Classes/BaseUtil.h jni/../../Classes/GameUser.h
 
 jni/../../Classes/MapGuanqiaButton.h:
 
@@ -1092,3 +1092,5 @@ jni/../../Classes/GameSubject.h:
 jni/../../Classes/GameLoadingScene.h:
 
 jni/../../Classes/BaseUtil.h:
+
+jni/../../Classes/GameUser.h:

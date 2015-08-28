@@ -29,6 +29,9 @@ FlyEnemySprite::FlyEnemySprite(Enemy * model):EnemySprite(model)
                                           CallFunc::create(CC_CALLBACK_0(FlyEnemySprite::dieCall, this)),
                                           NULL);
     dieAction->retain();
+    Action * dianjiAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_Electric", 2));
+    dianjiAction->retain();
+    m_map["dianjiAction"] = dianjiAction;
     
     m_map["walkAction"] = walkAction;
     m_map["attackAction"] = attackAction;
@@ -50,6 +53,9 @@ void FlyEnemySprite::update(float data)
     }else if (m_model->isAttack())
     {
         attack();
+    }else if (m_model->isDianji())
+    {
+        dianji();
     }else if (m_model->isWalk())
     {
         move();
@@ -68,6 +74,10 @@ void FlyEnemySprite::update(float data)
         healthBar->setVisible(false);
     }
     setPosition(m_model->getPosition());
+    
+    if (!m_model->isDianji() && isHaveArmor && armorSprite->getOpacity() == 0) {
+        armorSprite->setOpacity(255);
+    }
     
     if (isHaveArmor && m_model->isWeak() && armorSprite) {
         isHaveArmor = false;
@@ -150,6 +160,18 @@ void FlyEnemySprite::attack()
     if (isHaveArmor) {
         armorSprite->stopAllActions();
         armorSprite->runAction(m_map["armorAttackAction"]);
+    }
+}
+void FlyEnemySprite::dianji()
+{
+    if (actionStatus == isDianji) {
+        return;
+    }
+    actionStatus = isDianji;
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["dianjiAction"]);
+    if (isHaveArmor) {
+        armorSprite->setOpacity(0);
     }
 }
 void FlyEnemySprite::die()

@@ -18,6 +18,7 @@ protected:
     void    move();
     void    attack();
     void    die();
+    void    dianji();
 //    void    hurt();
     void    setArmorView();
 public:

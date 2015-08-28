@@ -57,6 +57,9 @@ void PropSprite_daoju7::spriteCall(Node * psender)
     ActionInterval * a2 = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("lighting", 6), NULL);
     ActionInterval * a1 = Sequence::create(DelayTime::create(0.08 * 1),
                                            CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju7::propThrowCall, this)), NULL);
+    
+//    ActionInterval * a3 = BaseUtil::makeAnimateWithNameAndIndex("lighting", 6);
+    
     Sprite * ss = (Sprite *)psender;
     ss->stopAllActions();
     ss->removeAllChildrenWithCleanup(true);

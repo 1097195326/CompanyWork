@@ -455,6 +455,7 @@ bool Gun::buyBullet()
     }else
     {
         m_totalBullets += m_magazieSize;
+        m_bullets = m_magazieSize;
     }
     
     _G_U->setGunBulletNumber(m_id, m_totalBullets);

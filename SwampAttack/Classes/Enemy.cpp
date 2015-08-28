@@ -228,9 +228,12 @@ void Enemy::hurt(int damage)
 }
 void Enemy::hurtYun(float dlay)
 {
-    m_status &= e_clear;
-    m_status |= e_dianji;
-    m_dianjiCount = dlay;
+    if (!(m_status & e_die || m_status & e_dieing))
+    {
+        m_status &= e_clear;
+        m_status |= e_dianji;
+        m_dianjiCount = dlay;
+    }
 }
 void Enemy::hurtJiansu(float su)
 {

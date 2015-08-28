@@ -82,9 +82,9 @@ tid#MissionName14,火力全开,Firepower
 tid#MissionName15,森林之王,King of the forest
 tid#MissionName16,在希望的田野上,In the field of hope
 tid#MissionName17,恐怖来袭,Terrorist attack
-tid#MissionName18,不平静的夜,Restless night
+tid#MissionName18,不平静的一天,A quiet day
 tid#MissionName19,胜利就在前方,Victory is ahead
-tid#MissionName20,月光下的笑声,Laughter in the moonlight
+tid#MissionName20,让我们一起摇摆,Let us swing together
 tid#MissionName21,埋骨之地,The place of burial
 tid#MissionName22,身后的追击者,Behind the chase
 tid#MissionName23,深林中的猎手,A hunter in a deep forest
@@ -178,3 +178,9 @@ tid#money9,获得1000金钱,Get 1000 money
 tid#HP1,5瓶体力药剂,5 bottles of Medicine
 tid#HP2,15瓶体力药剂,15 bottles of Medicine
 tid#HP3,50瓶体力药剂,50 bottles of Medicine
+,,
+,,
+tid#Scene1,执著的怨恨让沉睡千年的恶魔再次苏醒，大恶魔率领的暗黑军队已经逼近城镇,
+tid#Scene2,教皇针对全世界发布召唤，号召英雄们对抗魔军,
+tid#Scene3,悬赏令传到了恶魔猎人的故乡，他决心再次终结恶魔的野心,
+tid#Scene4,宿命的对抗即将开始。,

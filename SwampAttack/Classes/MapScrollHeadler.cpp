@@ -48,12 +48,12 @@ MapScrollHeadler::MapScrollHeadler(int sceneIndex)
             yinying->setPosition(offVec + yPoint);
             
             addChild(yinying,1);
-            if (guanQia->isUnlock())
-            {
-                Sprite * diying = Sprite::create(ImagePath("map_yinying.png"));
-                diying->setPosition(yinying->getPosition() + Vec2(0, -yinying->getContentSize().height * 0.5));
-                addChild(diying);
-            }
+//            if (guanQia->isUnlock())
+//            {
+//                Sprite * diying = Sprite::create(ImagePath("map_yinying.png"));
+//                diying->setPosition(yinying->getPosition() + Vec2(0, -yinying->getContentSize().height * 0.5));
+//                addChild(diying);
+//            }
 //            log("%s:%f",imageName.c_str(),yPoint.x);
         }
     }

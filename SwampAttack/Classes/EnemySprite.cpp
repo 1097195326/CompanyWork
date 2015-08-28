@@ -28,7 +28,9 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
     if (m_model->getActionType() != 2 && !m_model->isBoss())
     {
         diyingSprite = Sprite::create(ImagePath("enemy_yinying.png"));
-        diyingSprite->setPosition(w * 0.15, 0);
+        diyingSprite->setOpacity(170);
+        diyingSprite->setPosition(w * 0.15, h * 0.05);
+        diyingSprite->setScale(0.8);
         addChild(diyingSprite);
     }
     
