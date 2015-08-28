@@ -423,9 +423,11 @@ bool Gun::addStrengthenLevel()
         return false;
     }
     userGold -= m_strengthenGold;
+    ++m_strengthenLevel;
+    
     _G_U->setUserGold(userGold);
         
-    m_strengthenLevel += 1;
+    
     _G_U->setGunLevel(m_id, m_strengthenLevel);
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
     Json::Value upgradeData = _C_M->getDataByTag("wuqiUpgrade",upId);

@@ -17,7 +17,7 @@ DefenseBuildingSprite(building)
     addChild(buildingS2);
     buildingS2->setPosition(_G_M_M->fightScene_tengman_point);
     
-    _G_V->addChild(this,3);
+    _G_V->addChild(this);
 }
 void DefenseBuilding4_Sprite::update(float data)
 {

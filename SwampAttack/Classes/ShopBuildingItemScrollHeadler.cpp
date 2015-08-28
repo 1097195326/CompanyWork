@@ -217,10 +217,11 @@ void ShopBuildingItemScrollHeadler::upGrade(Touch * touch, Event * event)
     {
         SimpleAudioEngine::getInstance()->playEffect(MusicPath("propUpgrade.mp3").c_str());
         userGold -= upgradeGold;
-        _G_U->setUserGold(userGold);
+        
 //        m_shopScene->updateUserData();
         building->addStrengthenLevel();
 //        updateDefenseView();
+        _G_U->setUserGold(userGold);
         GameShowLevelupLayer * showLayer = new GameShowLevelupLayer(building->getModelId());
         showLayer->autorelease();
         m_shopScene->addChild(showLayer,10);

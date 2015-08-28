@@ -7,7 +7,7 @@
             <key>Muroidea_Electric0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{342,902},{96,118}}</string>
+                <string>{{672,694},{96,118}}</string>
                 <key>offset</key>
                 <string>{16,-21}</string>
                 <key>rotated</key>
@@ -20,11 +20,11 @@
             <key>Muroidea_Electric0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{122,926},{96,118}}</string>
+                <string>{{580,824},{96,118}}</string>
                 <key>offset</key>
                 <string>{16,-21}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{58,52},{96,118}}</string>
                 <key>sourceSize</key>
@@ -33,7 +33,7 @@
             <key>Muroidea_attack0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{258,356},{114,124}}</string>
+                <string>{{396,252},{114,124}}</string>
                 <key>offset</key>
                 <string>{14,-20}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>Muroidea_attack0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{892,358},{116,122}}</string>
+                <string>{{256,449},{116,122}}</string>
                 <key>offset</key>
                 <string>{13,-20}</string>
                 <key>rotated</key>
@@ -59,11 +59,11 @@
             <key>Muroidea_attack0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{246,684},{112,120}}</string>
+                <string>{{362,657},{112,120}}</string>
                 <key>offset</key>
                 <string>{12,-21}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{46,51},{112,120}}</string>
                 <key>sourceSize</key>
@@ -72,7 +72,7 @@
             <key>Muroidea_attack0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,478},{108,124}}</string>
+                <string>{{130,377},{108,124}}</string>
                 <key>offset</key>
                 <string>{11,-19}</string>
                 <key>rotated</key>
@@ -85,7 +85,7 @@
             <key>Muroidea_attack0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,108},{164,126}}</string>
+                <string>{{2,14},{164,126}}</string>
                 <key>offset</key>
                 <string>{-5,-18}</string>
                 <key>rotated</key>
@@ -98,7 +98,7 @@
             <key>Muroidea_attack0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{442,2},{160,126}}</string>
+                <string>{{410,2},{160,126}}</string>
                 <key>offset</key>
                 <string>{-2,-18}</string>
                 <key>rotated</key>
@@ -111,11 +111,11 @@
             <key>Muroidea_attack0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{661,216},{102,126}}</string>
+                <string>{{306,93},{102,126}}</string>
                 <key>offset</key>
                 <string>{24,-18}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{63,45},{102,126}}</string>
                 <key>sourceSize</key>
@@ -124,7 +124,7 @@
             <key>Muroidea_attack0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{512,412},{104,124}}</string>
+                <string>{{664,364},{104,124}}</string>
                 <key>offset</key>
                 <string>{20,-19}</string>
                 <key>rotated</key>
@@ -137,7 +137,7 @@
             <key>Muroidea_attack0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{640,320},{104,124}}</string>
+                <string>{{826,292},{104,124}}</string>
                 <key>offset</key>
                 <string>{16,-19}</string>
                 <key>rotated</key>
@@ -150,7 +150,7 @@
             <key>Muroidea_attack0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{403,130},{106,128}}</string>
+                <string>{{832,2},{106,128}}</string>
                 <key>offset</key>
                 <string>{16,-18}</string>
                 <key>rotated</key>
@@ -163,7 +163,7 @@
             <key>Muroidea_attack0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{866,124},{108,128}}</string>
+                <string>{{702,2},{108,128}}</string>
                 <key>offset</key>
                 <string>{16,-18}</string>
                 <key>rotated</key>
@@ -176,7 +176,7 @@
             <key>Muroidea_down0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{766,342},{98,124}}</string>
+                <string>{{522,366},{98,124}}</string>
                 <key>offset</key>
                 <string>{8,-18}</string>
                 <key>rotated</key>
@@ -189,7 +189,7 @@
             <key>Muroidea_down0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{256,472},{92,122}}</string>
+                <string>{{380,490},{92,122}}</string>
                 <key>offset</key>
                 <string>{10,-17}</string>
                 <key>rotated</key>
@@ -202,7 +202,7 @@
             <key>Muroidea_down0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{128,543},{88,122}}</string>
+                <string>{{252,567},{88,122}}</string>
                 <key>offset</key>
                 <string>{15,-18}</string>
                 <key>rotated</key>
@@ -215,7 +215,7 @@
             <key>Muroidea_down0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{746,554},{90,118}}</string>
+                <string>{{844,398},{90,118}}</string>
                 <key>offset</key>
                 <string>{19,-20}</string>
                 <key>rotated</key>
@@ -228,7 +228,7 @@
             <key>Muroidea_down0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{366,800},{98,114}}</string>
+                <string>{{728,470},{98,114}}</string>
                 <key>offset</key>
                 <string>{23,-22}</string>
                 <key>rotated</key>
@@ -241,11 +241,11 @@
             <key>Muroidea_down0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{482,800},{102,92}}</string>
+                <string>{{634,470},{102,92}}</string>
                 <key>offset</key>
                 <string>{18,-30}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{57,74},{102,92}}</string>
                 <key>sourceSize</key>
@@ -254,11 +254,11 @@
             <key>Muroidea_down0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{177,63},{118,80}}</string>
+                <string>{{124,717},{118,80}}</string>
                 <key>offset</key>
                 <string>{18,-36}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{49,86},{118,80}}</string>
                 <key>sourceSize</key>
@@ -267,11 +267,11 @@
             <key>Muroidea_down0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{168,183},{126,88}}</string>
+                <string>{{830,202},{126,88}}</string>
                 <key>offset</key>
                 <string>{18,-44}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{45,90},{126,88}}</string>
                 <key>sourceSize</key>
@@ -280,7 +280,7 @@
             <key>Muroidea_down0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{604,80},{130,88}}</string>
+                <string>{{136,171},{130,88}}</string>
                 <key>offset</key>
                 <string>{15,-43}</string>
                 <key>rotated</key>
@@ -293,7 +293,7 @@
             <key>Muroidea_down0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{259,138},{128,90}}</string>
+                <string>{{832,110},{128,90}}</string>
                 <key>offset</key>
                 <string>{12,-43}</string>
                 <key>rotated</key>
@@ -306,7 +306,7 @@
             <key>Muroidea_down0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{742,2},{132,90}}</string>
+                <string>{{2,142},{132,90}}</string>
                 <key>offset</key>
                 <string>{11,-42}</string>
                 <key>rotated</key>
@@ -319,7 +319,7 @@
             <key>Muroidea_down0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{604,2},{136,76}}</string>
+                <string>{{168,93},{136,76}}</string>
                 <key>offset</key>
                 <string>{11,-48}</string>
                 <key>rotated</key>
@@ -332,7 +332,7 @@
             <key>Muroidea_down0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{259,64},{142,72}}</string>
+                <string>{{237,19},{142,72}}</string>
                 <key>offset</key>
                 <string>{10,-53}</string>
                 <key>rotated</key>
@@ -345,7 +345,7 @@
             <key>Muroidea_hurt_heavy0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{789,234},{106,124}}</string>
+                <string>{{2,472},{106,124}}</string>
                 <key>offset</key>
                 <string>{14,-18}</string>
                 <key>rotated</key>
@@ -358,7 +358,7 @@
             <key>Muroidea_hurt_heavy0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{534,894},{90,118}}</string>
+                <string>{{678,574},{90,118}}</string>
                 <key>offset</key>
                 <string>{18,-19}</string>
                 <key>rotated</key>
@@ -371,11 +371,11 @@
             <key>Muroidea_hurt_heavy0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,926},{96,118}}</string>
+                <string>{{580,574},{96,118}}</string>
                 <key>offset</key>
                 <string>{16,-21}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{58,52},{96,118}}</string>
                 <key>sourceSize</key>
@@ -384,11 +384,11 @@
             <key>Muroidea_hurt_heavy0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{624,548},{102,120}}</string>
+                <string>{{476,901},{102,120}}</string>
                 <key>offset</key>
                 <string>{14,-21}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{53,51},{102,120}}</string>
                 <key>sourceSize</key>
@@ -397,7 +397,7 @@
             <key>Muroidea_hurt_heavy0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{762,442},{110,122}}</string>
+                <string>{{128,487},{110,122}}</string>
                 <key>offset</key>
                 <string>{9,-22}</string>
                 <key>rotated</key>
@@ -410,11 +410,11 @@
             <key>Muroidea_hurt_heavy0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{252,566},{120,116}}</string>
+                <string>{{120,806},{120,116}}</string>
                 <key>offset</key>
                 <string>{2,-25}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{32,57},{120,116}}</string>
                 <key>sourceSize</key>
@@ -423,7 +423,7 @@
             <key>Muroidea_hurt_heavy0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{638,426},{122,120}}</string>
+                <string>{{386,368},{122,120}}</string>
                 <key>offset</key>
                 <string>{-1,-23}</string>
                 <key>rotated</key>
@@ -436,11 +436,11 @@
             <key>Muroidea_hurt_heavy0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,706},{114,120}}</string>
+                <string>{{238,799},{114,120}}</string>
                 <key>offset</key>
                 <string>{0,-23}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{33,53},{114,120}}</string>
                 <key>sourceSize</key>
@@ -449,7 +449,7 @@
             <key>Muroidea_hurt_heavy0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,360},{116,126}}</string>
+                <string>{{268,221},{116,126}}</string>
                 <key>offset</key>
                 <string>{6,-20}</string>
                 <key>rotated</key>
@@ -462,7 +462,7 @@
             <key>Muroidea_hurt_light0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{130,433},{108,124}}</string>
+                <string>{{260,339},{108,124}}</string>
                 <key>offset</key>
                 <string>{19,-19}</string>
                 <key>rotated</key>
@@ -475,7 +475,7 @@
             <key>Muroidea_hurt_light0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{886,476},{106,122}}</string>
+                <string>{{510,466},{106,122}}</string>
                 <key>offset</key>
                 <string>{22,-19}</string>
                 <key>rotated</key>
@@ -488,11 +488,11 @@
             <key>Muroidea_hurt_light0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,822},{102,120}}</string>
+                <string>{{468,779},{102,120}}</string>
                 <key>offset</key>
                 <string>{15,-21}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{54,51},{102,120}}</string>
                 <key>sourceSize</key>
@@ -501,7 +501,7 @@
             <key>Muroidea_hurt_light0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{368,704},{94,120}}</string>
+                <string>{{2,928},{94,120}}</string>
                 <key>offset</key>
                 <string>{10,-21}</string>
                 <key>rotated</key>
@@ -514,11 +514,11 @@
             <key>Muroidea_hurt_light0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{915,234},{106,122}}</string>
+                <string>{{2,580},{106,122}}</string>
                 <key>offset</key>
                 <string>{11,-21}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{48,50},{106,122}}</string>
                 <key>sourceSize</key>
@@ -527,11 +527,11 @@
             <key>Muroidea_hurt_on0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{440,900},{92,118}}</string>
+                <string>{{124,928},{92,118}}</string>
                 <key>offset</key>
                 <string>{18,-22}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{62,53},{92,118}}</string>
                 <key>sourceSize</key>
@@ -540,11 +540,11 @@
             <key>Muroidea_hurt_on0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{246,798},{102,118}}</string>
+                <string>{{476,584},{102,118}}</string>
                 <key>offset</key>
                 <string>{18,-22}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{57,53},{102,118}}</string>
                 <key>sourceSize</key>
@@ -553,11 +553,11 @@
             <key>Muroidea_hurt_on0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{124,751},{108,120}}</string>
+                <string>{{366,901},{108,120}}</string>
                 <key>offset</key>
                 <string>{16,-21}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{52,51},{108,120}}</string>
                 <key>sourceSize</key>
@@ -566,7 +566,7 @@
             <key>Muroidea_hurt_on0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{496,632},{100,120}}</string>
+                <string>{{244,921},{100,120}}</string>
                 <key>offset</key>
                 <string>{15,-21}</string>
                 <key>rotated</key>
@@ -579,7 +579,7 @@
             <key>Muroidea_hurt_on0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{242,902},{98,118}}</string>
+                <string>{{572,704},{98,118}}</string>
                 <key>offset</key>
                 <string>{16,-22}</string>
                 <key>rotated</key>
@@ -592,11 +592,11 @@
             <key>Muroidea_walk0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{374,590},{112,120}}</string>
+                <string>{{354,779},{112,120}}</string>
                 <key>offset</key>
                 <string>{2,-22}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{36,52},{112,120}}</string>
                 <key>sourceSize</key>
@@ -605,7 +605,7 @@
             <key>Muroidea_walk0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{380,472},{120,116}}</string>
+                <string>{{2,688},{120,116}}</string>
                 <key>offset</key>
                 <string>{4,-25}</string>
                 <key>rotated</key>
@@ -618,7 +618,7 @@
             <key>Muroidea_walk0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{386,238},{126,114}}</string>
+                <string>{{2,356},{126,114}}</string>
                 <key>offset</key>
                 <string>{4,-27}</string>
                 <key>rotated</key>
@@ -631,7 +631,7 @@
             <key>Muroidea_walk0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{130,311},{126,120}}</string>
+                <string>{{410,130},{126,120}}</string>
                 <key>offset</key>
                 <string>{4,-23}</string>
                 <key>rotated</key>
@@ -644,7 +644,7 @@
             <key>Muroidea_walk0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{514,286},{124,124}}</string>
+                <string>{{700,238},{124,124}}</string>
                 <key>offset</key>
                 <string>{6,-18}</string>
                 <key>rotated</key>
@@ -657,7 +657,7 @@
             <key>Muroidea_walk0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{736,94},{120,128}}</string>
+                <string>{{572,2},{120,128}}</string>
                 <key>offset</key>
                 <string>{5,-22}</string>
                 <key>rotated</key>
@@ -670,7 +670,7 @@
             <key>Muroidea_walk0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{386,354},{116,124}}</string>
+                <string>{{538,248},{116,124}}</string>
                 <key>offset</key>
                 <string>{4,-22}</string>
                 <key>rotated</key>
@@ -683,11 +683,11 @@
             <key>Muroidea_walk0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{502,518},{112,120}}</string>
+                <string>{{248,657},{112,120}}</string>
                 <key>offset</key>
                 <string>{2,-23}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{36,53},{112,120}}</string>
                 <key>sourceSize</key>
@@ -696,7 +696,7 @@
             <key>Muroidea_walk0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,588},{120,116}}</string>
+                <string>{{126,599},{120,116}}</string>
                 <key>offset</key>
                 <string>{4,-25}</string>
                 <key>rotated</key>
@@ -709,7 +709,7 @@
             <key>Muroidea_walk0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{533,170},{126,114}}</string>
+                <string>{{132,261},{126,114}}</string>
                 <key>offset</key>
                 <string>{4,-27}</string>
                 <key>rotated</key>
@@ -722,7 +722,7 @@
             <key>Muroidea_walk0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,236},{126,122}}</string>
+                <string>{{572,124},{126,122}}</string>
                 <key>offset</key>
                 <string>{4,-23}</string>
                 <key>rotated</key>
@@ -735,7 +735,7 @@
             <key>Muroidea_walk0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{258,230},{124,126}}</string>
+                <string>{{702,112},{124,126}}</string>
                 <key>offset</key>
                 <string>{6,-18}</string>
                 <key>rotated</key>
@@ -748,7 +748,7 @@
             <key>Muroidea_walk0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{876,2},{120,128}}</string>
+                <string>{{2,234},{120,128}}</string>
                 <key>offset</key>
                 <string>{5,-21}</string>
                 <key>rotated</key>
@@ -761,11 +761,11 @@
             <key>Muroidea_walk0014.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{124,633},{116,120}}</string>
+                <string>{{2,806},{116,120}}</string>
                 <key>offset</key>
                 <string>{4,-21}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{36,51},{116,120}}</string>
                 <key>sourceSize</key>
@@ -774,41 +774,41 @@
             <key>enemy_bullet0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{260,59}}</string>
+                <string>{{168,14},{67,28}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{260,59}}</string>
+                <string>{{41,7},{67,28}}</string>
                 <key>sourceSize</key>
-                <string>{260,59}</string>
+                <string>{149,42}</string>
             </dict>
             <key>enemy_bullet0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,63},{173,43}}</string>
+                <string>{{240,2},{168,15}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{173,43}}</string>
+                <string>{{39,3},{168,15}}</string>
                 <key>sourceSize</key>
-                <string>{175,43}</string>
+                <string>{248,21}</string>
             </dict>
             <key>enemy_bullet0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{264,2},{176,60}}</string>
+                <string>{{2,2},{236,10}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-1,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{176,60}}</string>
+                <string>{{181,12},{236,10}}</string>
                 <key>sourceSize</key>
-                <string>{176,60}</string>
+                <string>{600,34}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -820,7 +820,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:dfcfb5f3beff80eeac60ac829317ca97:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:8f718fbee51da0c3df01c955c7e70f2a:1/1$</string>
             <key>textureFileName</key>
             <string>Muroidea1.png</string>
         </dict>

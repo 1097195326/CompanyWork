@@ -27,7 +27,8 @@ void PropSprite_daoju6::throwProp()
     Vec2 tagetPoint = m_prop->getPropPoint() + Vec2(0, 50);
     
     m_propTexiao = Sprite::create(ImagePath("daoju6.png"));
-    m_propTexiao->setPosition(Vec2(tagetPoint.x,800));
+    m_propTexiao->setPosition(Vec2(tagetPoint.x,1000));
+    m_propTexiao->setScale(1.5);
     addChild(m_propTexiao,6);
     
     float tatolTime = (800 - tagetPoint.y) * 0.001;

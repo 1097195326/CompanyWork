@@ -299,6 +299,25 @@ int Enemy::getHurtIndex()
             break;
     }
 }
+bool Enemy::isBoss()
+{
+    bool isB = false;
+    
+    if (m_id == "200001") {
+        isB = true;
+    }else if (m_id == "200002")
+    {
+        isB = true;
+    }else if (m_id == "200003")
+    {
+        isB = true;
+    }else if (m_id == "200004")
+    {
+        isB = true;
+    }
+    
+    return isB;
+}
 bool Enemy::isAttack()
 {
     return m_status & e_attack;

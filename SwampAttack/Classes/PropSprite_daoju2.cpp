@@ -55,7 +55,7 @@ void PropSprite_daoju2::throwProp()
 void PropSprite_daoju2::spriteCall(Node * psender)
 {
     ActionInterval * a2 = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("explosion", 14), NULL);
-    ActionInterval * a1 = Sequence::create(DelayTime::create(0.08 * 5),
+    ActionInterval * a1 = Sequence::create(DelayTime::create(0.08 * 2),
                                            CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju2::propThrowCall, this)), NULL);
     Sprite * ss = (Sprite *)psender;
     ss->stopAllActions();

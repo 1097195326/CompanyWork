@@ -52,6 +52,8 @@ WalkEnemySprite::WalkEnemySprite(Enemy * model):EnemySprite(model)
     attackAction->retain();
     m_map["attackAction"] = attackAction;
     Action * dieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_down", info.downFrames),
+                                          DelayTime::create(2),
+                                          FadeOut::create(0.5),
                                           CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::dieCall, this)),
                                           NULL);
     dieAction->retain();
@@ -245,7 +247,7 @@ void WalkEnemySprite::tanfei()
     conf.endPosition =tagetPoint;
     ActionInterval * a1 = BezierTo::create(tatolTime, conf);
     
-    ActionInterval * a2 = RotateTo::create(tatolTime, 270);
+    ActionInterval * a2 = RotateTo::create(tatolTime, 300);
     
     runAction(Sequence::create(Spawn::create(a1,a2, NULL),
                                            CallFuncN::create(CC_CALLBACK_0(WalkEnemySprite::dieCall, this)),NULL));

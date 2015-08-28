@@ -103,7 +103,7 @@ void EnemyManager::gameLoop(float data)
     }else
     {
         dley+=data;
-        if (dley > 2)
+        if (dley > 1.5)
         {
             dley = 0;
             if (currentIndex < m_map.size())

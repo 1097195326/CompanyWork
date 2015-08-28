@@ -72,6 +72,7 @@ void PropSprite_daoju8::spriteCall2(Node * psender)
     Sprite * ss = (Sprite *)psender;
     
     Sprite * s = Sprite::create(ImagePath("daoju8_youzi.png"));
+    s->setScale(1.5);
     s->setPosition(ss->getPosition());
     addChild(s);
     runAction(FadeIn::create(0.3));

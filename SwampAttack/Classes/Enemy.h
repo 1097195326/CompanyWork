@@ -125,6 +125,7 @@ public:
     bool    isHurt();
     int     getHurtIndex();
     bool    isAttack();
+    bool    isBoss();
     Vec2    getPosition();
     Vec2    getEnemyCenterPoint();
     Vec2    getTargetPosition();

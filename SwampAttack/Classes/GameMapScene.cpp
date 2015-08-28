@@ -35,7 +35,7 @@ bool GameMapScene::init()
                                                 ImagePath("map_shopButton.png"),
                                                 CC_CALLBACK_1(GameMapScene::shopButtonFuc, this));
     shopItem->setPosition(m_visibleOrigin.x + m_visibleSize.width - 60,
-                          m_visibleOrigin.y + m_visibleSize.height - 60);
+                          m_visibleOrigin.y + m_visibleSize.height - 40);
     m_leftItem = MenuItemImage::create(ImagePath("map_leftButton.png"),
                                                 ImagePath("map_leftButton.png"),
                                                 CC_CALLBACK_1(GameMapScene::leftButtonFuc, this));

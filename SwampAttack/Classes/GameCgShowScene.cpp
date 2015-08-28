@@ -44,7 +44,7 @@ bool GameCgShowScene::init()
         cgText.push_back(cgStr);
     }
     
-    m_index = 2;
+    m_index = 1;
     
     m_spr1 = Sprite::create(ImagePath("CG01.jpg"));
     m_spr1->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
@@ -88,7 +88,14 @@ void GameCgShowScene::updateCg(float data)
     }else
     {
         m_spr1->setTexture(ImagePath(StringUtils::format("CG%002d.jpg",m_index)));
+        m_spr1->setOpacity(0);
+        m_spr1->runAction(FadeIn::create(0.5));
         m_text->setString(cgText[m_index-1]);
+        m_text->setOpacity(0);
+        m_text->runAction(Sequence::create(DelayTime::create(0.5),
+                                           FadeIn::create(0.5),
+                                           NULL));
+        
         ++m_index;
     }
     

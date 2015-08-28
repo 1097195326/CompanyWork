@@ -93,6 +93,7 @@ void MapGuanqiaButton::pressGuanqiaButtonFunc(Touch * touch, Event * event)
     {
         string musicName = StringUtils::format("sceneMusic%d.mp3",m_sceneIndex);
         SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath(musicName)).c_str(),true);
+        SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.5);
         
         GuanQiaManager::getInstance()->setCurrentSceneIndex(m_sceneIndex);
         GuanQiaManager::getInstance()->setCurrentGuanqiaIndex(m_sceneIndex,m_index);

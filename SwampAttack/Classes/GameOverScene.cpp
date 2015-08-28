@@ -146,8 +146,8 @@ bool GameOverScene::init()
                                m_visibleOrigin.y + m_visibleSize.height * 0.22);
     restartButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                                m_visibleOrigin.y + m_visibleSize.height * 0.22);
-    gotoShopButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset,
-                            m_visibleOrigin.y + m_visibleSize.height * 0.24);
+    gotoShopButton->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5 + widthOffset + 10,
+                            m_visibleOrigin.y + m_visibleSize.height * 0.24 - 13);
 
     buttonMenu = Menu::create(gotoMapButton,restartButton,gotoShopButton, NULL);
     

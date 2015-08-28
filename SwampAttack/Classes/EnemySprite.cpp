@@ -17,13 +17,20 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
     init();
     setAnchorPoint(Vec2(0.5,0));
     
-//    int w = m_model->getWidth();
+    int w = m_model->getWidth();
     int h = m_model->getHeight();
     
     attackWaitTime = m_model->getAttackWaitTime();
 //    Sprite * s = Sprite::create("CloseSelected.png");
 //    s->setPosition(Vec2(0, h * 0.5));
 //    addChild(s);
+    
+    if (m_model->getActionType() != 2 && !m_model->isBoss())
+    {
+        diyingSprite = Sprite::create(ImagePath("enemy_yinying.png"));
+        diyingSprite->setPosition(w * 0.15, 0);
+        addChild(diyingSprite);
+    }
     
     healthBar = new ProgressBar("xuenei.png","xuewai.png");
     addChild(healthBar,1);

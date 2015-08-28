@@ -152,7 +152,7 @@ void GunManager::changeGun(string gunId)
     {
         return;
     }
-    if (Human::getInstance()->isChange())
+    if (Human::getInstance()->isChange() || Human::getInstance()->isThrowing())
     {
         return;
     }

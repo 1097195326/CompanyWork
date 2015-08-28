@@ -35,6 +35,7 @@ protected:
     ActionStatus    actionStatus = normal;
     std::map<std::string, Action *> m_map;
     ProgressBar *   healthBar;
+    Sprite      *   diyingSprite;
     Sprite      *   guaiwuSprite;
     Sprite      *   armorSprite;
     Sprite      *   texiaoSprite;
