@@ -258,6 +258,10 @@ BulletInfoData Bullet::getBaozhaTexiaoInfo()
     {
         data.name = "explosion";
         data.frames = 14;
+    }else if ("blast3" == ex)
+    {
+        data.name = "hit";
+        data.frames = 4;
     }
     
     return data;

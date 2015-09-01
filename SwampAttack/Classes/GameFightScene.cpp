@@ -69,9 +69,9 @@ bool GameFightScene::init()
     std::string bgName = StringUtils::format("scene%d_Bg.png",sceneIndex);
     std::string fgName = StringUtils::format("scene%d_Fg.png",sceneIndex);
     
-    Sprite * bgSprite = Sprite::create(ImagePath(bgName));
-    addChild(bgSprite);
-    bgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+    m_bgSprite = Sprite::create(ImagePath(bgName));
+    addChild(m_bgSprite);
+    m_bgSprite->setPosition(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                                m_visibleOrigin.y + m_visibleSize.height * 0.5));
     
     Sprite * fgSprite = Sprite::create(ImagePath(fgName));
@@ -186,14 +186,16 @@ RenderTexture * GameFightScene::getFightSceneTex()
 }
 void GameFightScene::pauseGame(cocos2d::Ref *pSender)
 {
-    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-    shopGameActions();
-    _G_D->stopGame();
-    RenderTexture * rt = getFightSceneTex();
-    GamePauseScene * pauseScene = new GamePauseScene(rt);
-    pauseScene->autorelease();
-    pauseScene->setFightLayer(this);
-    addChild(pauseScene,640);
+//    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
+//    shopGameActions();
+//    _G_D->stopGame();
+//    RenderTexture * rt = getFightSceneTex();
+//    GamePauseScene * pauseScene = new GamePauseScene(rt);
+//    pauseScene->autorelease();
+//    pauseScene->setFightLayer(this);
+//    addChild(pauseScene,640);
+    zhenPingUpDown();
+    
 }
 void GameFightScene::addBulletTexiao(cocos2d::Vec2 position, std::string name, int frames)
 {
@@ -228,4 +230,30 @@ void GameFightScene::touchEnd(Touch *touch, Event *event)
 void GameFightScene::touchCancelled(cocos2d::Touch *touch, cocos2d::Event *event)
 {
     _G_D->onTouchEnd(touch, event);
+}
+void GameFightScene::zhenPingUpDown()
+{
+    ActionInterval * s1 = ScaleTo::create(0.05f, 1.02);
+    ActionInterval * s2 = ScaleTo::create(0.05f, 1);
+    ActionInterval * m1 = MoveBy::create(0.05f, Vec2(10, -20));
+    ActionInterval * m2 = MoveBy::create(0.05f, Vec2(0, 40));
+    ActionInterval * m3 = MoveBy::create(0.05f, Vec2(-20, -40));
+    ActionInterval * m4 = MoveBy::create(0.05f, Vec2(0, 40));
+    ActionInterval * m5 = MoveBy::create(0.05f, Vec2(10, -20));
+    
+    m_bgSprite->runAction(Sequence::create(Spawn::create(m1,s1, NULL),
+                                           m2,
+                                           m3,
+                                           m4,
+                                           Spawn::create(m5,s2, NULL),
+                                           NULL));
+}
+void GameFightScene::shanBai()
+{
+    LayerColor * baiLayer = LayerColor::create(Color4B(255, 255, 255, 255));
+    addChild(baiLayer,660);
+    baiLayer->runAction(Sequence::create(FadeIn::create(0.05f),
+                                         FadeOut::create(0.05f),
+                                         CallFuncN::create(CC_CALLBACK_1(GameFightScene::removeBulletTexiao, this)),
+                                         NULL));
 }

@@ -48,7 +48,7 @@ bool GameCgShowScene::init()
     
     m_spr1 = Sprite::create(ImagePath("CG01.jpg"));
     m_spr1->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                    m_visibleOrigin.y + m_visibleSize.height * 0.5 - 40);
+                    m_visibleOrigin.y + m_visibleSize.height * 0.62);
     addChild(m_spr1);
     m_spr1->setScale(1.35);
     

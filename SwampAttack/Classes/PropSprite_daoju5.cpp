@@ -10,6 +10,7 @@
 #include "GameMapManager.h"
 #include "BaseUtil.h"
 
+#include "GameFightScene.h"
 
 PropSprite_daoju5::PropSprite_daoju5(string propId):PropSprite(propId)
 {
@@ -50,6 +51,7 @@ void PropSprite_daoju5::spriteCall(Node * psender)
     Sprite * ss = (Sprite *)psender;
     ss->stopAllActions();
     ss->removeAllChildrenWithCleanup(true);
+    _G_V->zhenPingUpDown();
     ss->runAction(Sequence::create(CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju5::propThrowCall, this)),
                                    a2,
                                    CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju5::spriteCall2, this)),

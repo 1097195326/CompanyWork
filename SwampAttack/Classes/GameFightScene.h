@@ -20,6 +20,7 @@ private:
     EventListenerTouchOneByOne * m_listener;
     Label  * m_goldNumLabel;
     Vector<Node*>  m_actions;
+    Sprite * m_bgSprite;
 public:
     static  Scene * scene();
     static  GameFightScene * getInstance();
@@ -41,6 +42,11 @@ public:
     void    addBulletTexiao(Vec2 position,std::string name, int frames);
     void    removeBulletTexiao(Node * pSender);
     RenderTexture * getFightSceneTex();
+    
+    void    zhenPingUpDown();
+    
+    void    shanBai();
+    
 };
 
 #endif /* defined(__SwampAttack__GameFightScene__) */
