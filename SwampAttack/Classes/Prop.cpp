@@ -446,6 +446,14 @@ float Prop::getDamage()
 {
     return m_damage;
 }
+float Prop::getVertigo()
+{
+    return m_vertigo;
+}
+float Prop::getDeceleration()
+{
+    return m_deceleration;
+}
 vector<string> Prop::getBuffId()
 {
     return m_buffIds;

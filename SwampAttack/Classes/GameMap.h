@@ -60,6 +60,15 @@ public:
     float fightScene_PropArrve_line = m_visibleOrigin.y + 120;
     
     Vec2 enemy_tanfei_targetPoint = {m_visibleOrigin.x + 1156, m_visibleOrigin.y + 0};
+    
+    Vec2 welcomeJiangbeiPoint_flash = {m_visibleOrigin.x + 110, m_visibleOrigin.y + 125};
+    Vec2 welcomeDengleftPoint_flash = {m_visibleOrigin.x + 172, m_visibleOrigin.y + 480};
+    Vec2 welcomeDengrightPoint_flash = {m_visibleOrigin.x + 946, m_visibleOrigin.y + 480};
+    Vec2 welcomeDanyanSmokePoint_flash = {m_visibleOrigin.x + 700, m_visibleOrigin.y + 512};
+    Vec2 welcomeQiangSmokepoint_flash = {m_visibleOrigin.x + 750, m_visibleOrigin.y + 435};
+    Vec2 welcomeZuiSmokePoint_flash = {m_visibleOrigin.x + 897, m_visibleOrigin.y + 248};
+    Vec2 welcomeQiangXingSmokePoint_flash = {m_visibleOrigin.x + 768, m_visibleOrigin.y + 230};
+    
 };
 
 #endif /* defined(__SwampAttack__GameMap__) */

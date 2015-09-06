@@ -124,6 +124,8 @@ public:
     string      getModelId();
     float       getEffectArea();
     float       getDamage();
+    float       getVertigo();
+    float       getDeceleration();
     vector<string> getBuffId();
     string      getUnlockMisstion();
     int         getUnlockGold();

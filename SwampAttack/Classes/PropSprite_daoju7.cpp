@@ -60,6 +60,8 @@ void PropSprite_daoju7::spriteCall(Node * psender)
     
 //    ActionInterval * a3 = BaseUtil::makeAnimateWithNameAndIndex("lighting", 6);
     
+    float delayTime = m_prop->getVertigo();
+    
     Sprite * ss = (Sprite *)psender;
     ss->stopAllActions();
     ss->removeAllChildrenWithCleanup(true);
@@ -67,10 +69,36 @@ void PropSprite_daoju7::spriteCall(Node * psender)
                                    Spawn::create(a1,a2, NULL),
                                    CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju7::spriteCall2, this)),
                                    NULL) );
+    
+    Vec2 p_point = m_prop->getPropPoint();
+    Rect p_rect = m_prop->getPropRect();
+    float width = p_rect.size.width;
+    
+    Sprite * dian1 = Sprite::create();
+    dian1->setPosition(p_point + Vec2(width * 0.25, 0));
+    addChild(dian1);
+    dian1->runAction(RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("daoju7_dian", 6)));
+    Sprite * dian2 = Sprite::create();
+    dian2->setPosition(p_point + Vec2(-width * 0.25, 0));
+    addChild(dian2);
+    dian2->runAction(RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndexReverse("daoju7_dian", 6)));
+    
+    Sprite * delaySprite = Sprite::create();
+    addChild(delaySprite);
+    delaySprite->runAction(Sequence::create(DelayTime::create(delayTime),
+                                            CallFuncN::create(CC_CALLBACK_1(PropSprite_daoju7::spriteCall3, this)),
+                                            NULL));
+    
     string modelId = m_prop->getModelId();
     SimpleAudioEngine::getInstance()->playEffect(MusicPath(modelId + ".mp3").c_str());
 }
 void PropSprite_daoju7::spriteCall2(Node * psender)
+{
+    Sprite * ss = (Sprite *)psender;
+    ss->stopAllActions();
+    ss->removeFromParentAndCleanup(true);
+}
+void PropSprite_daoju7::spriteCall3(Node * psender)
 {
     m_prop->setStateDie();
     Sprite * ss = (Sprite *)psender;

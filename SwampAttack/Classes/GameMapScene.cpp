@@ -12,6 +12,8 @@
 #include "GameShopScene.h"
 #include "MapScrollHeadler.h"
 #include "GuanQiaManager.h"
+#include "GameSprite.h"
+#include "BaseUtil.h"
 
 
 bool GameMapScene::init()
@@ -22,6 +24,7 @@ bool GameMapScene::init()
     }
     auto spriteFrameCache = SpriteFrameCache::getInstance();
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("yinying.plist"));
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("shopButtonTexiao.plist"));
     
     SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath("shopMusic.mp3")).c_str(),true);
     
@@ -31,11 +34,19 @@ bool GameMapScene::init()
                                                     CC_CALLBACK_1(GameMapScene::homeButtonFuc, this));
     houmItem->setPosition(m_visibleOrigin.x + 60,
                     m_visibleOrigin.y + m_visibleSize.height - 60);
-    MenuItem * shopItem = MenuItemImage::create(ImagePath("map_shopButton.png"),
-                                                ImagePath("map_shopButton.png"),
-                                                CC_CALLBACK_1(GameMapScene::shopButtonFuc, this));
+//    MenuItem * shopItem = MenuItemImage::create(ImagePath("map_shopButton.png"),
+//                                                ImagePath("map_shopButton.png"),
+//                                                CC_CALLBACK_1(GameMapScene::shopButtonFuc, this));
+    GameSprite * shopItem = new GameSprite(ImagePath("map_shopButton.png"));
+    shopItem->autorelease();
+    shopItem->setCanScale(false);
+    shopItem->m_touchMeCall = CC_CALLBACK_1(GameMapScene::shopButtonFuc, this);
     shopItem->setPosition(m_visibleOrigin.x + m_visibleSize.width - 60,
                           m_visibleOrigin.y + m_visibleSize.height - 40);
+    addChild(shopItem,2);
+    shopItem->runAction(RepeatForever::create(BaseUtil::makeAnimateWithNameIndexDelay("shopButton", 12, 0.08)));
+    
+    
     m_leftItem = MenuItemImage::create(ImagePath("map_leftButton.png"),
                                                 ImagePath("map_leftButton.png"),
                                                 CC_CALLBACK_1(GameMapScene::leftButtonFuc, this));
@@ -48,7 +59,6 @@ bool GameMapScene::init()
                           m_visibleOrigin.y + 60);
     
     Menu * buttonMenu = Menu::create(houmItem,
-                                     shopItem,
                                      m_leftItem,
                                      m_rightItem, NULL);
     buttonMenu->setPosition(Point::ZERO);
