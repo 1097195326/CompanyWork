@@ -24,19 +24,6 @@ EnemyInfo::EnemyInfo()
     zombie.height = 170;
     zombie.widthOffSet = 0;
     m_data["zombie"] = zombie;
-    // zombieking 僵尸王
-    EnemyInfoData zombieking;
-    zombieking.attackFrame = 8;
-    zombieking.attackFrames = 11;
-    zombieking.hurtHeavyFrames = 9;
-    zombieking.hurtLightFrames = 5;
-    zombieking.hurtOnFrames = 5;
-    zombieking.walkFrames = 14;
-    zombieking.downFrames = 13;
-    zombieking.width = 330;
-    zombieking.height = 330;
-    zombieking.widthOffSet = 0;
-    m_data["zombieking"] = zombieking;
     // wolf 狼人
     EnemyInfoData wolf;
     wolf.attackFrame = 8;
@@ -50,19 +37,6 @@ EnemyInfo::EnemyInfo()
     wolf.height = 260;
     wolf.widthOffSet = 0;
     m_data["wolf"] = wolf;
-    // wolfking 狼王
-    EnemyInfoData wolfking;
-    wolfking.attackFrame = 8;
-    wolfking.attackFrames = 11;
-    wolfking.hurtHeavyFrames = 9;
-    wolfking.hurtLightFrames = 5;
-    wolfking.hurtOnFrames = 5;
-    wolfking.walkFrames = 14;
-    wolfking.downFrames = 13;
-    wolfking.width = 470;
-    wolfking.height = 470;
-    wolfking.widthOffSet = 0;
-    m_data["wolfking"] = wolfking;
     // skull 骷髅
     EnemyInfoData skull;
     skull.attackFrame = 8;
@@ -76,19 +50,6 @@ EnemyInfo::EnemyInfo()
     skull.height = 180;
     skull.widthOffSet = 0;
     m_data["skull"] = skull;
-    // skullking 骷髅王
-    EnemyInfoData skullking;
-    skullking.attackFrame = 8;
-    skullking.attackFrames = 11;
-    skullking.hurtHeavyFrames = 9;
-    skullking.hurtLightFrames = 5;
-    skullking.hurtOnFrames = 5;
-    skullking.walkFrames = 14;
-    skullking.downFrames = 13;
-    skullking.width = 380;
-    skullking.height = 350;
-    skullking.widthOffSet = 0;
-    m_data["skullking"] = skullking;
     // skullArmor
     EnemyInfoData skullArmor;
     skullArmor.attackFrame = 8;
@@ -128,19 +89,6 @@ EnemyInfo::EnemyInfo()
     scarecrowArmor.height = 95;
     scarecrowArmor.widthOffSet = 0;
     m_data["scarecrow_armor"] = scarecrowArmor;
-    // scareking 草人王
-    EnemyInfoData scareking;
-    scareking.attackFrame = 7;
-    scareking.attackFrames = 11;
-    scareking.hurtHeavyFrames = 9;
-    scareking.hurtLightFrames = 5;
-    scareking.hurtOnFrames = 5;
-    scareking.walkFrames = 14;
-    scareking.downFrames = 13;
-    scareking.width = 420;
-    scareking.height = 350;
-    scareking.widthOffSet = 0;
-    m_data["scareking"] = scareking;
     // Pumpkin 南瓜头
     EnemyInfoData pumpkin;
     pumpkin.attackFrame = 7;
@@ -233,7 +181,58 @@ EnemyInfo::EnemyInfo()
     blindArmor.height = 80;
     blindArmor.widthOffSet = 0;
     m_data["blind_armor"] = blindArmor;
-    
+    // zombieking 僵尸王
+    EnemyInfoData zombieking;
+    zombieking.attackFrame = 8;
+    zombieking.attackFrames = 11;
+    zombieking.hurtHeavyFrames = 9;
+    zombieking.hurtLightFrames = 5;
+    zombieking.hurtOnFrames = 5;
+    zombieking.walkFrames = 14;
+    zombieking.downFrames = 13;
+    zombieking.width = 330;
+    zombieking.height = 330;
+    zombieking.widthOffSet = 0;
+    m_data["zombieking"] = zombieking;
+    // scareking 草人王
+    EnemyInfoData scareking;
+    scareking.attackFrame = 7;
+    scareking.attackFrames = 11;
+    scareking.hurtHeavyFrames = 9;
+    scareking.hurtLightFrames = 5;
+    scareking.hurtOnFrames = 5;
+    scareking.walkFrames = 14;
+    scareking.downFrames = 13;
+    scareking.width = 420;
+    scareking.height = 350;
+    scareking.widthOffSet = 0;
+    m_data["scareking"] = scareking;
+    // skullking 骷髅王
+    EnemyInfoData skullking;
+    skullking.attackFrame = 8;
+    skullking.attackFrames = 11;
+    skullking.hurtHeavyFrames = 9;
+    skullking.hurtLightFrames = 5;
+    skullking.hurtOnFrames = 5;
+    skullking.walkFrames = 14;
+    skullking.downFrames = 13;
+    skullking.width = 380;
+    skullking.height = 350;
+    skullking.widthOffSet = 0;
+    m_data["skullking"] = skullking;
+    // wolfking 狼王
+    EnemyInfoData wolfking;
+    wolfking.attackFrame = 8;
+    wolfking.attackFrames = 11;
+    wolfking.hurtHeavyFrames = 9;
+    wolfking.hurtLightFrames = 5;
+    wolfking.hurtOnFrames = 5;
+    wolfking.walkFrames = 14;
+    wolfking.downFrames = 13;
+    wolfking.width = 470;
+    wolfking.height = 470;
+    wolfking.widthOffSet = 0;
+    m_data["wolfking"] = wolfking;
     
 }
 EnemyInfo * EnemyInfo::getInstance()

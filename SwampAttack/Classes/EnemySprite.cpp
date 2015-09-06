@@ -64,6 +64,7 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
         log("game fight layer is null");
     }
     _G_V->addChild(this,640 - m_model->getPosition().y);
+    setPosition(m_model->getPosition());
 }
 EnemySprite::~EnemySprite()
 {
