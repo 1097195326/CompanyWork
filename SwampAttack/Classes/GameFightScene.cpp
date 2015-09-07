@@ -163,7 +163,7 @@ void GameFightScene::updateData()
             GameReliveLayer * reliveLayer = new GameReliveLayer(rt);
             reliveLayer->setFightLayer(this);
             reliveLayer->autorelease();
-            addChild(reliveLayer,640);
+            addChild(reliveLayer,642);
         }
     }
 }
@@ -181,7 +181,7 @@ void GameFightScene::showOverLayer()
     GameOverScene * overScene = new GameOverScene(_G_D->getOverStatus(),rt);
     overScene->init();
     overScene->autorelease();
-    addChild(overScene,640);
+    addChild(overScene,642);
 }
 RenderTexture * GameFightScene::getFightSceneTex()
 {
@@ -193,16 +193,14 @@ RenderTexture * GameFightScene::getFightSceneTex()
 }
 void GameFightScene::pauseGame(cocos2d::Ref *pSender)
 {
-//    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-//    shopGameActions();
-//    _G_D->stopGame();
-//    RenderTexture * rt = getFightSceneTex();
-//    GamePauseScene * pauseScene = new GamePauseScene(rt);
-//    pauseScene->autorelease();
-//    pauseScene->setFightLayer(this);
-//    addChild(pauseScene,640);
-    zhenPingUpDown();
-    
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
+    shopGameActions();
+    _G_D->stopGame();
+    RenderTexture * rt = getFightSceneTex();
+    GamePauseScene * pauseScene = new GamePauseScene(rt);
+    pauseScene->autorelease();
+    pauseScene->setFightLayer(this);
+    addChild(pauseScene,642);
 }
 void GameFightScene::addBulletTexiao(cocos2d::Vec2 position, std::string name, int frames)
 {

@@ -364,7 +364,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameMapScene.o: \
  jni/../../Classes/json/features.h \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/CCCsvHelper.h \
- jni/../../Classes/GameSubject.h
+ jni/../../Classes/GameSubject.h jni/../../Classes/GameSprite.h \
+ jni/../../Classes/BaseUtil.h
 
 jni/../../Classes/GameMapScene.h:
 
@@ -1117,3 +1118,7 @@ jni/../../Classes/json/writer.h:
 jni/../../Classes/CCCsvHelper.h:
 
 jni/../../Classes/GameSubject.h:
+
+jni/../../Classes/GameSprite.h:
+
+jni/../../Classes/BaseUtil.h:

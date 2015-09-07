@@ -356,7 +356,10 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameHomeScene.o: \
  jni/../../Classes/UserDelegatLayer.h jni/../../Classes/GameObserver.h \
  jni/../../Classes/GameShopScene.h \
  jni/../../Classes/GameVerticalScrollHeadlerView.h \
- jni/../../Classes/GameReliveLayer.h jni/../../Classes/GameFightScene.h
+ jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
+ jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
+ jni/../../Classes/GameReliveLayer.h jni/../../Classes/GameFightScene.h \
+ jni/../../Classes/BaseUtil.h
 
 jni/../../Classes/GameHomeScene.h:
 
@@ -1078,6 +1081,16 @@ jni/../../Classes/GameShopScene.h:
 
 jni/../../Classes/GameVerticalScrollHeadlerView.h:
 
+jni/../../Classes/GameMapManager.h:
+
+jni/../../Classes/GameMap.h:
+
+jni/../../Classes/GameMap6.h:
+
+jni/../../Classes/GameMap5s.h:
+
 jni/../../Classes/GameReliveLayer.h:
 
 jni/../../Classes/GameFightScene.h:
+
+jni/../../Classes/BaseUtil.h:

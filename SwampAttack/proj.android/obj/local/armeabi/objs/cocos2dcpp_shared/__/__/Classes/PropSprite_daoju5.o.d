@@ -357,7 +357,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/PropSprite_daoju5.o: \
  jni/../../Classes/GameObserver.h jni/../../Classes/GameObject.h \
  jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
  jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
- jni/../../Classes/BaseUtil.h
+ jni/../../Classes/BaseUtil.h jni/../../Classes/GameFightScene.h
 
 jni/../../Classes/PropSprite_daoju5.h:
 
@@ -1094,3 +1094,5 @@ jni/../../Classes/GameMap6.h:
 jni/../../Classes/GameMap5s.h:
 
 jni/../../Classes/BaseUtil.h:
+
+jni/../../Classes/GameFightScene.h:
