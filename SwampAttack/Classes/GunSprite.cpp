@@ -59,6 +59,7 @@ GunSprite::GunSprite(Gun * gun):m_gun(gun)
         m_bulletProBar = new ProgressBar((gunModelId + "_bulletIcon.png"),
                                          (gunModelId + "_bulletBg.png"));
         m_bulletProBar->autorelease();
+        m_bulletProBar->setBarPositon(Vec2(8, 0));
         addChild(m_bulletProBar);
         m_bulletProBar->setBarLeft();
         m_bulletProBar->setPosition(point);

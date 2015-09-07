@@ -32,6 +32,7 @@ DropMoneySprite::DropMoneySprite(MoneyObject * money, Vec2 point)
                                         NULL);
     Sprite * texiao = Sprite::create();
     addChild(texiao);
+    texiao->setScale(1.3);
     texiao->runAction(guangAc);
     
     m_listener = EventListenerTouchOneByOne::create();

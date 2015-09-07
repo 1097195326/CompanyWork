@@ -188,7 +188,7 @@ EnemyInfo::EnemyInfo()
     zombieking.hurtHeavyFrames = 9;
     zombieking.hurtLightFrames = 5;
     zombieking.hurtOnFrames = 5;
-    zombieking.walkFrames = 14;
+    zombieking.walkFrames = 13;
     zombieking.downFrames = 13;
     zombieking.width = 330;
     zombieking.height = 330;

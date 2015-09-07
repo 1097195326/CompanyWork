@@ -213,11 +213,13 @@ float GameLoading::loadFrames()
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking3.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking4.plist"));
                     break;
                 case 200002:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking2.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking3.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking4.plist"));
                     break;
                 case 200003:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking1.plist"));
@@ -227,12 +229,14 @@ float GameLoading::loadFrames()
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking5.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking6.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking7.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking8.plist"));
                     break;
                 case 200004:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking2.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking3.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking4.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking5.plist"));
                     break;
                 default:
                     break;

@@ -279,6 +279,7 @@ void CrumpEnemySprite::attack()
         armorSprite->stopAllActions();
         armorSprite->setVisible(false);
     }
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("boom.mp3").c_str());
 }
 void CrumpEnemySprite::die()
 {
@@ -292,4 +293,6 @@ void CrumpEnemySprite::die()
     texiaoSprite->stopAllActions();
     texiaoSprite->setVisible(true);
     texiaoSprite->runAction(texiaoAction);
+    
+    SimpleAudioEngine::getInstance()->playEffect(MusicPath("boom.mp3").c_str());
 }

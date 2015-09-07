@@ -200,6 +200,7 @@ bool PropManager::dropProp(string id,Vec2 point)
         {
             prop->setTakeUpIndex((int)m_takeUpPropData.size() + 1);
             prop->setFightView();
+            prop->loadResource();
         }
         DropPropSprite * spr = new DropPropSprite(prop,point);
         spr->autorelease();

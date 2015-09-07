@@ -316,6 +316,42 @@ void Prop::checkUnlock(Layer * layer)
         layer->addChild(showLayer,201);
     }
 }
+void Prop::loadResource()
+{
+    auto spriteFrameCache = SpriteFrameCache::getInstance();
+    
+    if (m_modelId == "daoju1")
+    {
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju1.plist"));
+    }else if (m_modelId == "daoju2")
+    {
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju2.plist"));
+    }else if (m_modelId == "daoju3")
+    {
+        
+    }else if (m_modelId == "daoju4")
+    {
+        
+    }else if (m_modelId == "daoju5")
+    {
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju5_1.plist"));
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju5_2.plist"));
+    }else if (m_modelId == "daoju6")
+    {
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear1.plist"));
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear2.plist"));
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("nulear3.plist"));
+    }else if (m_modelId == "daoju7")
+    {
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju7.plist"));
+    }else if (m_modelId == "daoju8")
+    {
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju8.plist"));
+    }else if (m_modelId == "daoju9")
+    {
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("daoju9.plist"));
+    }
+}
 int Prop::getNum()
 {
     return m_num;

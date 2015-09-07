@@ -64,7 +64,7 @@ public:
     bool    useProp();
     void    addProp(int num);
     void    checkUnlock(Layer * layer);
-    
+    void    loadResource();
     //--- prop state ---
     void    setPropPoint(Vec2 point);
     Vec2    getPropPoint();

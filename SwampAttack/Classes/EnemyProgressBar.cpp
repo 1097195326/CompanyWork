@@ -28,7 +28,7 @@ EnemyProgressBar::EnemyProgressBar():m_progress(0),m_enemyProgress(0)
     addChild(m_headSpr);
     
     schedule(CC_SCHEDULE_SELECTOR(EnemyProgressBar::update), 1/30);
-    _G_V->addChild(this,1);
+    _G_V->addChild(this,641);
 }
 EnemyProgressBar::~EnemyProgressBar()
 {

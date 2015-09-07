@@ -108,7 +108,7 @@ bool PropSpriteView::touchBegan(Touch *touch, Event *event)
             m_propIcon = new PropSprite(m_prop->getId());
         }
         m_propIcon->autorelease();
-        _G_V->addChild(m_propIcon,5);
+        _G_V->addChild(m_propIcon,640);
          m_propIcon->moveIng(m_blueBg->getPosition());
         return true;
     }

@@ -4,172 +4,146 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>scareking_Electric0001.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{682,2},{206,268}}</string>
-                <key>offset</key>
-                <string>{25,-3}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{132,44},{206,268}}</string>
-                <key>sourceSize</key>
-                <string>{420,350}</string>
-            </dict>
-            <key>scareking_Electric0002.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{440,274},{206,268}}</string>
-                <key>offset</key>
-                <string>{25,-3}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{132,44},{206,268}}</string>
-                <key>sourceSize</key>
-                <string>{420,350}</string>
-            </dict>
             <key>scareking_attack0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{218,284}}</string>
+                <string>{{330,292},{218,306}}</string>
                 <key>offset</key>
-                <string>{-12,1}</string>
+                <string>{-12,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{89,32},{218,284}}</string>
+                <string>{{89,33},{218,306}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
             <key>scareking_attack0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,288},{208,280}}</string>
+                <string>{{638,294},{208,306}}</string>
                 <key>offset</key>
-                <string>{-5,3}</string>
+                <string>{-4,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{101,32},{208,280}}</string>
+                <string>{{102,33},{208,306}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
             <key>scareking_attack0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,570},{200,280}}</string>
+                <string>{{638,504},{198,306}}</string>
                 <key>offset</key>
-                <string>{4,3}</string>
+                <string>{5,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{114,32},{200,280}}</string>
+                <string>{{116,33},{198,306}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
             <key>scareking_attack0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{222,2},{212,274}}</string>
+                <string>{{330,512},{216,302}}</string>
                 <key>offset</key>
-                <string>{-17,0}</string>
+                <string>{-16,-13}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{87,38},{212,274}}</string>
+                <string>{{86,37},{216,302}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
             <key>scareking_attack0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{212,288},{226,274}}</string>
+                <string>{{634,704},{250,298}}</string>
                 <key>offset</key>
-                <string>{-37,-3}</string>
+                <string>{-25,-15}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{60,41},{226,274}}</string>
+                <string>{{60,41},{250,298}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
             <key>scareking_attack0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{436,2},{244,270}}</string>
+                <string>{{2,730},{300,292}}</string>
                 <key>offset</key>
-                <string>{-58,-7}</string>
+                <string>{-28,-18}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{30,47},{244,270}}</string>
+                <string>{{32,47},{300,292}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
             <key>scareking_attack0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{682,210},{266,260}}</string>
+                <string>{{2,2},{338,288}}</string>
                 <key>offset</key>
-                <string>{-73,-7}</string>
+                <string>{-41,-20}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{4,52},{266,260}}</string>
+                <string>{{0,51},{338,288}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
             <key>scareking_attack0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{648,472},{264,262}}</string>
+                <string>{{342,2},{332,288}}</string>
                 <key>offset</key>
-                <string>{-72,-6}</string>
+                <string>{-39,-20}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{6,50},{264,262}}</string>
+                <string>{{5,51},{332,288}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
             <key>scareking_attack0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{708,736},{262,262}}</string>
+                <string>{{676,2},{328,290}}</string>
                 <key>offset</key>
-                <string>{-71,-6}</string>
+                <string>{-37,-19}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{8,50},{262,262}}</string>
+                <string>{{9,49},{328,290}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
             <key>scareking_attack0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{446,736},{260,264}}</string>
+                <string>{{2,292},{326,290}}</string>
                 <key>offset</key>
-                <string>{-70,-5}</string>
+                <string>{-36,-19}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{10,48},{260,264}}</string>
+                <string>{{11,49},{326,290}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
             <key>scareking_attack0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{204,570},{240,274}}</string>
+                <string>{{304,730},{274,298}}</string>
                 <key>offset</key>
-                <string>{-47,-2}</string>
+                <string>{-30,-15}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{43,40},{240,274}}</string>
+                <string>{{43,41},{274,298}}</string>
                 <key>sourceSize</key>
                 <string>{420,350}</string>
             </dict>
@@ -183,7 +157,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:798b185aeff48e75649ebfbf3fe91dc9:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:18d8d752ea651edc2367321093b2615a:1/1$</string>
             <key>textureFileName</key>
             <string>scareking3.png</string>
         </dict>
