@@ -37,6 +37,19 @@ EnemyInfo::EnemyInfo()
     wolf.height = 260;
     wolf.widthOffSet = 0;
     m_data["wolf"] = wolf;
+    // wolfArmor 狼人
+    EnemyInfoData wolfArmor;
+    wolfArmor.attackFrame = 8;
+    wolfArmor.attackFrames = 11;
+    wolfArmor.hurtHeavyFrames = 9;
+    wolfArmor.hurtLightFrames = 5;
+    wolfArmor.hurtOnFrames = 5;
+    wolfArmor.walkFrames = 14;
+    wolfArmor.downFrames = 13;
+    wolfArmor.width = 260;
+    wolfArmor.height = 130;
+    wolfArmor.widthOffSet = 0;
+    m_data["wolf_armor"] = wolfArmor;
     // skull 骷髅
     EnemyInfoData skull;
     skull.attackFrame = 8;
