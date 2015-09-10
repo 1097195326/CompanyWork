@@ -113,7 +113,7 @@ bool GameFightScene::init()
     addChild(goldIcon);
     
     LayerColor * heiLayer = LayerColor::create(Color4B(0, 0, 0, 180));
-    addChild(heiLayer,700);
+    addChild(heiLayer,641);
     heiLayer->runAction(Sequence::create(DelayTime::create(2),
                                          FadeOut::create(0.3f),
                                          CallFuncN::create(CC_CALLBACK_1(GameFightScene::removeBulletTexiao, this)),
@@ -123,7 +123,7 @@ bool GameFightScene::init()
     Label * showLabel = Label::createWithTTF(guanqiaName, "fonts/mimi.ttf", 100);
     showLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                            m_visibleOrigin.y + m_visibleSize.height * 0.55);
-    addChild(showLabel,700);
+    addChild(showLabel,641);
     showLabel->runAction(Sequence::create(DelayTime::create(2),
                                           FadeOut::create(0.3),
                                           CallFuncN::create(CC_CALLBACK_1(GameFightScene::removeBulletTexiao, this)),

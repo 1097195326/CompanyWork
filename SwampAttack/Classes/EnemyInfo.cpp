@@ -45,7 +45,7 @@ EnemyInfo::EnemyInfo()
     wolfArmor.hurtLightFrames = 5;
     wolfArmor.hurtOnFrames = 5;
     wolfArmor.walkFrames = 14;
-    wolfArmor.downFrames = 13;
+    wolfArmor.downFrames = 0;
     wolfArmor.width = 260;
     wolfArmor.height = 130;
     wolfArmor.widthOffSet = 0;

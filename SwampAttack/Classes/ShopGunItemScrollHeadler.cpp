@@ -159,6 +159,7 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
     addChild(upgradeLabel);
     
     m_progressBar = new ProgressBar("shopItemTiao1.png","shopItemTiao2.png");
+    m_progressBar->autorelease();
     m_progressBar->setBarRight();
     m_progressBar->setPosition(itemBgSize.width * 0.32,
                                itemBgSize.height * 0.18);
