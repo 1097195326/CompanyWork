@@ -11,6 +11,7 @@
 #include "GameLoadingScene.h"
 #include "BaseUtil.h"
 #include "GameUser.h"
+#include "AlertTextTool.h"
 //#include "GameFightScene.h"
 //#include "EnemyManager.h"
 //#include "GameLoading.h"
@@ -89,6 +90,11 @@ void MapGuanqiaButton::pressGuanqiaButtonFunc(Touch * touch, Event * event)
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
     
     GuanqiaModel * guanQia = GuanQiaManager::getInstance()->getGuanqiaById(m_guanqiaId);
+    if (_G_U->getUserHealth() < 1)
+    {
+        AlertText(healthNoEnough, 40);
+        return;
+    }
     if (guanQia->isUnlock())
     {
         string musicName = StringUtils::format("sceneMusic%d.mp3",m_sceneIndex);
@@ -101,6 +107,7 @@ void MapGuanqiaButton::pressGuanqiaButtonFunc(Touch * touch, Event * event)
         Director::getInstance()->replaceScene(GameLoadingScene::scene(m_guanqiaId));
     }else
     {
-        log("this guan qia is lcok");
+//        log("this guan qia is lcok");
+        AlertText(guanqiaIslock, 40);
     }
 }

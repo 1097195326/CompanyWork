@@ -120,7 +120,7 @@ bool GameFightScene::init()
                                          NULL));
     
     string guanqiaName = GuanQiaManager::getInstance()->getCurrentGuanqia()->getGuanqiaName();
-    Label * showLabel = Label::createWithTTF(guanqiaName, "fonts/mimi.ttf", 100);
+    Label * showLabel = Label::createWithTTF(guanqiaName, FontPath, 100);
     showLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                            m_visibleOrigin.y + m_visibleSize.height * 0.55);
     addChild(showLabel,641);

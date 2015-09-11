@@ -77,7 +77,7 @@ ShopGoldShowLayer::ShopGoldShowLayer(Vec2 position)
         price->setPosition(itemSize.width * 0.9, itemSize.height * 0.5);
         itemBg->addChild(price);
         
-        Label  * discLabel = Label::createWithTTF(object->getDescription(), "fonts/mimi.ttf", 30);
+        Label  * discLabel = Label::createWithTTF(object->getDescription(), FontPath, 30);
         discLabel->setPosition(itemSize.width * 0.5, itemSize.height * 0.5);
         itemBg->addChild(discLabel);
     }

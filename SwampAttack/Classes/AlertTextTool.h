@@ -11,21 +11,21 @@
 
 #include "BaseCode.h"
 
-#define AlertText(node, text ,size) AlertTextTool::getInstance()->alertText(node, text ,size)
+#define AlertText(text ,size) AlertTextTool::getInstance()->alertText(text ,size)
 
 using namespace std;
 
 struct AlertData
 {
-    Node *  node;
+//    Node *  node;
     string  text;
     int     size;
 };
 
 class AlertTextTool {
 private:
-    queue<AlertData>  m_alertData;
-    
+    queue<AlertData>    m_alertData;
+    queue<Label *>      m_showLabels;
     
     
     AlertTextTool();
@@ -35,7 +35,7 @@ private:
     void removeText(Node * pSender);
 public:
     static AlertTextTool * getInstance();
-    void alertText(Node * node, string text, int size = 20);
+    void alertText(string text, int size = 20);
     
 };
 
