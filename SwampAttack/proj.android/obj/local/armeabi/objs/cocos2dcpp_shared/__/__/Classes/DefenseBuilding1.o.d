@@ -321,6 +321,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/DefenseBuilding1.o: \
  jni/../../cocos2d/cocos/3d/../deprecated/CCString.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCNotificationCenter.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h \
+ jni/../../Classes/GameConfig.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  jni/../../Classes/DefenseBuilding1_Sprite.h \
@@ -983,6 +984,8 @@ jni/../../cocos2d/cocos/3d/../deprecated/CCString.h:
 jni/../../cocos2d/cocos/3d/../deprecated/CCNotificationCenter.h:
 
 jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h:
+
+jni/../../Classes/GameConfig.h:
 
 jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
 

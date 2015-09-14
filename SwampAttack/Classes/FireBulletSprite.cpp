@@ -39,17 +39,24 @@ void FireBulletSprite::setModel(Bullet *bullet)
         Action * ac = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(infoData.name, infoData.frames));
         runAction(ac);
     }
-    setScale(0);
+    setScale(0.2);
     setAnchorPoint(Vec2(0, 0.3));
     setPosition(m_model->getStartPosition());
 }
 void FireBulletSprite::update(float data)
 {
     if (m_model->isMoving()) {
-        float s_x = m_model->getPosition().x - m_model->getStartPosition().x;
-        setScale(s_x/450.0f);
-        setPositionX(m_model->getStartPosition().x);
-        
+//        float s_x = m_model->getPosition().x - m_model->getStartPosition().x;
+//        setScale(s_x/450.0f);
+//        setPositionX(m_model->getStartPosition().x);
+        float m_s = getScale();
+        m_s += data * 5;
+        if (m_s > 1.0f)
+        {
+            m_s = 1.0f;
+        }
+        setScale(m_s);
+        setPosition(m_model->getPosition());
     }else if (m_model->isArrive())
     {
         m_model->arriveCall();

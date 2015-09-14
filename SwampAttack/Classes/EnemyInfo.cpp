@@ -233,6 +233,19 @@ EnemyInfo::EnemyInfo()
     skullking.height = 350;
     skullking.widthOffSet = 0;
     m_data["skullking"] = skullking;
+    // skullking 骷髅王2
+    EnemyInfoData skullking2;
+    skullking2.attackFrame = 8;
+    skullking2.attackFrames = 12;
+    skullking2.hurtHeavyFrames = 10;
+    skullking2.hurtLightFrames = 6;
+    skullking2.hurtOnFrames = 5;
+    skullking2.walkFrames = 14;
+    skullking2.downFrames = 14;
+    skullking2.width = 380;
+    skullking2.height = 350;
+    skullking2.widthOffSet = 0;
+    m_data["skullking2"] = skullking2;
     // wolfking 狼王
     EnemyInfoData wolfking;
     wolfking.attackFrame = 8;
@@ -246,6 +259,19 @@ EnemyInfo::EnemyInfo()
     wolfking.height = 470;
     wolfking.widthOffSet = 0;
     m_data["wolfking"] = wolfking;
+    // wolfking 狼王
+    EnemyInfoData wolfking2;
+    wolfking2.attackFrame = 8;
+    wolfking2.attackFrames = 12;
+    wolfking2.hurtHeavyFrames = 10;
+    wolfking2.hurtLightFrames = 6;
+    wolfking2.hurtOnFrames = 5;
+    wolfking2.walkFrames = 14;
+    wolfking2.downFrames = 14;
+    wolfking2.width = 470;
+    wolfking2.height = 470;
+    wolfking2.widthOffSet = 0;
+    m_data["wolfking2"] = wolfking2;
     
 }
 EnemyInfo * EnemyInfo::getInstance()
