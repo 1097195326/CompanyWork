@@ -113,17 +113,17 @@ bool GameFightScene::init()
     addChild(goldIcon);
     
     LayerColor * heiLayer = LayerColor::create(Color4B(0, 0, 0, 180));
-    addChild(heiLayer,700);
+    addChild(heiLayer,642);
     heiLayer->runAction(Sequence::create(DelayTime::create(2),
                                          FadeOut::create(0.3f),
                                          CallFuncN::create(CC_CALLBACK_1(GameFightScene::removeBulletTexiao, this)),
                                          NULL));
     
     string guanqiaName = GuanQiaManager::getInstance()->getCurrentGuanqia()->getGuanqiaName();
-    Label * showLabel = Label::createWithTTF(guanqiaName, "fonts/mimi.ttf", 100);
+    Label * showLabel = Label::createWithTTF(guanqiaName, FontPath, 100);
     showLabel->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
                            m_visibleOrigin.y + m_visibleSize.height * 0.55);
-    addChild(showLabel,700);
+    addChild(showLabel,642);
     showLabel->runAction(Sequence::create(DelayTime::create(2),
                                           FadeOut::create(0.3),
                                           CallFuncN::create(CC_CALLBACK_1(GameFightScene::removeBulletTexiao, this)),
@@ -163,7 +163,7 @@ void GameFightScene::updateData()
             GameReliveLayer * reliveLayer = new GameReliveLayer(rt);
             reliveLayer->setFightLayer(this);
             reliveLayer->autorelease();
-            addChild(reliveLayer,642);
+            addChild(reliveLayer,643);
         }
     }
 }
@@ -181,7 +181,7 @@ void GameFightScene::showOverLayer()
     GameOverScene * overScene = new GameOverScene(_G_D->getOverStatus(),rt);
     overScene->init();
     overScene->autorelease();
-    addChild(overScene,642);
+    addChild(overScene,643);
 }
 RenderTexture * GameFightScene::getFightSceneTex()
 {
@@ -200,7 +200,7 @@ void GameFightScene::pauseGame(cocos2d::Ref *pSender)
     GamePauseScene * pauseScene = new GamePauseScene(rt);
     pauseScene->autorelease();
     pauseScene->setFightLayer(this);
-    addChild(pauseScene,642);
+    addChild(pauseScene,643);
 }
 void GameFightScene::addBulletTexiao(cocos2d::Vec2 position, std::string name, int frames)
 {

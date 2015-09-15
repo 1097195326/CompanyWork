@@ -54,7 +54,7 @@ m_isMove(false)
 //        disc = disc.insert(30, "\n",1);
 //    }
     
-    Label  * discLabel = Label::createWithTTF(disc, "fonts/mimi.ttf", 30);
+    Label  * discLabel = Label::createWithTTF(disc, FontPath, 30);
     discLabel->setDimensions(400, 100);
     discLabel->setColor(Color3B(0, 0, 0));
     
@@ -71,7 +71,7 @@ m_isMove(false)
                                                CC_CALLBACK_1( GameShowDiscLayer::gotoShop, this));
     }
     
-    Label  * jiesuo = Label::createWithTTF("已解锁", "fonts/mimi.ttf", 30);
+    Label  * jiesuo = Label::createWithTTF("已解锁", FontPath, 30);
     jiesuo->setColor(Color3B(0, 0, 0));
     
     Size bgSize = bg->getContentSize();

@@ -60,7 +60,14 @@ bool AppDelegate::applicationDidFinishLaunching() {
         case CC_PLATFORM_IOS:
         {
             director->setContentScaleFactor(1.0f);
-            glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_HEIGHT);
+//            glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_HEIGHT);
+            if (sreenSize.width == 960)
+            {
+                glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_WIDTH);
+            }else
+            {
+                glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_HEIGHT);
+            }
         }
             break;
         case CC_PLATFORM_ANDROID:

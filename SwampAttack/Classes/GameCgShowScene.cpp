@@ -52,7 +52,7 @@ bool GameCgShowScene::init()
     addChild(m_spr1);
     m_spr1->setScale(1.35);
     
-    m_text = Label::createWithTTF(cgText[0], "fonts/mimi.ttf", 30);
+    m_text = Label::createWithTTF(cgText[0], FontPath, 30);
     m_text->setLineHeight(35);
     m_text->setDimensions(m_visibleSize.width * 0.8, m_visibleSize.height * 0.18);
     m_text->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,

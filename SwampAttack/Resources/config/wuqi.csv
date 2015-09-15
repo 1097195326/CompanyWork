@@ -1,10 +1,10 @@
 武器编号,武器名称编号,武器名称,模型编号,弹药,受击动作,武器类型,强化等级,强化等级上限,伤害,伤害范围,穿刺怪物个数,弹片数量,子弹显示类型,暴击率,暴击伤害倍率,精度,射速,射程,弹道速度,装填类型,装填速度,切换武器速度,弹药上限,弹夹容量,弹药价格,解锁关卡,解锁介绍,解锁价格,武器描述编号,武器描述
 Id[string],WeaponName[string],,ModelId[string],Bullet[string],UnderAttackAction[int],WeaponType[string],StrengthenLevel[int],LimitLevel[string],Damage[int],DamageArea[float],Influence[string],ShrapnelNumber[int],Bulletshow[string],CritRate[float],CritDamageRate[float],Accuracy[float],FireRate[float],Range[float],BulletSpeed[float],ReloadType[string],ReloadSpeed[float],SwitchSpeed[float],AmmunitionLimit[int],MagazineSize[int],BulletPrice[string],UnlockMission[string],Unlock[string],UnlockGold[string],WeaponDescription[string],
-200003,tid#WeaponName3,线膛燧发枪,qiang3,100001,3,2,0,20,30,0,1,5,1,0.03,2,0.5,2,1136,500,1,0.7,1,12,12,0,,,0,tid#WeaponDescription3,基础散弹枪，可对小范围敌人造成伤害
-200008,tid#WeaponName8,纳米电锯       ,qiang8,,2,1,0,20,50,0,1,,1,0.03,2,0.8,0.2,110,500,,,1,,,,400001_5,第5关解锁,10000,tid#WeaponDescription8,近战高伤害防身武器，可有效对付近身怪物
+200003,tid#WeaponName3,线膛燧发枪,qiang3,100001,1,2,0,20,30,0,1,5,1,0.03,2,0.5,2,1136,500,1,0.7,1,12,12,0,,,0,tid#WeaponDescription3,基础散弹枪，可对小范围敌人造成伤害
+200008,tid#WeaponName8,纳米电锯       ,qiang8,,2,1,0,20,50,0,1,,1,0.03,2,0.8,0.3,110,500,,,1,,,,400001_5,第5关解锁,10000,tid#WeaponDescription8,近战高伤害防身武器，可有效对付近身怪物
 200007,tid#WeaponName7,AK47,qiang7,100001,2,3,0,20,20,0,1,1,1,0.05,2,0.85,10,1136,500,2,0.7,1,300,30,300,400001_10,第10关解锁,10000,tid#WeaponDescription7,单体高杀伤性武器，适合针对单体高血量怪物
 200009,tid#WeaponName9,十字弩,qiang9,100005,2,4,0,20,50,0,5,1,1,0.05,2,0.9,0.5,1136,500,2,0.7,1,100,5,300,400002_5,第15关解锁,20000,tid#WeaponDescription9,基础穿刺武器，可进行针对3个目标的穿刺攻击
 200011,tid#WeaponName11,加农炮,qiang11,100007,2,5,0,20,200,50,30,1,1,0.05,2,0.8,0.5,1136,500,1,0.7,1,20,4,400,400002_10,第20关解锁,50000,tid#WeaponDescription11,范围爆破武器，可有效杀伤群怪
 200010,tid#WeaponName10,死神,qiang10,100006,3,4,0,20,100,0,30,1,1,0.05,2,0.9,0.5,1136,500,2,0.7,1,50,2,600,400003_5,第25关解锁,20000,tid#WeaponDescription10,高伤害穿刺武器，可以同时穿透一条线的敌人
-200012,tid#WeaponName12,火焰发射器,qiang12,100008,2,6,0,20,300,0,30,1,2,0.05,2,0.8,5,650,500,2,0.7,1,20,50,800,400003_10,第30关解锁,50000,tid#WeaponDescription12,范围烧伤性武器，可对群体怪物造成持续伤害
+200012,tid#WeaponName12,火焰发射器,qiang12,100008,2,6,0,20,300,0,30,1,2,0.05,2,0.8,8,650,50,2,0.7,1,20,50,800,400003_10,第30关解锁,50000,tid#WeaponDescription12,范围烧伤性武器，可对群体怪物造成持续伤害
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

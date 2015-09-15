@@ -55,13 +55,13 @@ void ShopAwardItemScrollHeadler::initAwardView()
     icon->setPosition(- itemBgSize.width * 0.35, 0);
     addChild(icon);
 //    log("name:%s",specialobject->getName().c_str());
-    Label * nameLabel = Label::createWithTTF(specialobject->getName(), "fonts/mimi.ttf", 25);
+    Label * nameLabel = Label::createWithTTF(specialobject->getName(), FontPath, 25);
     nameLabel->setPosition(-itemBgSize.width * 0.08,
                            itemBgSize.height * 0.18);
 //    nameLabel->setColor(Color3B(0, 0, 0));
     addChild(nameLabel);
     
-    Label * descLabel = Label::createWithTTF(specialobject->getDescription(), "fonts/mimi.ttf", 25);
+    Label * descLabel = Label::createWithTTF(specialobject->getDescription(), FontPath, 25);
     descLabel->setPosition(-itemBgSize.width * 0.15
                            + descLabel->getContentSize().width * 0.5,
                            -itemBgSize.height * 0.1);

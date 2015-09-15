@@ -183,6 +183,7 @@
 		8DE3F7B41AF75AB5001E048F /* ScrollController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3F7B21AF75AB5001E048F /* ScrollController.cpp */; };
 		8DE637DB1B68B6AA00AD0784 /* FireBulletSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE637D91B68B6AA00AD0784 /* FireBulletSprite.cpp */; };
 		8DE8A2BA1B78814900E9D158 /* GameCgShowScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE8A2B81B78814900E9D158 /* GameCgShowScene.cpp */; };
+		8DF2EA0D1BA0359700315F14 /* AlertTextTool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2EA0B1BA0359700315F14 /* AlertTextTool.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -531,6 +532,8 @@
 		8DE637DA1B68B6AA00AD0784 /* FireBulletSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireBulletSprite.h; sourceTree = "<group>"; };
 		8DE8A2B81B78814900E9D158 /* GameCgShowScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameCgShowScene.cpp; sourceTree = "<group>"; };
 		8DE8A2B91B78814900E9D158 /* GameCgShowScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCgShowScene.h; sourceTree = "<group>"; };
+		8DF2EA0B1BA0359700315F14 /* AlertTextTool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AlertTextTool.cpp; sourceTree = "<group>"; };
+		8DF2EA0C1BA0359700315F14 /* AlertTextTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertTextTool.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -1167,6 +1170,8 @@
 				8DE3F7B01AF75109001E048F /* SelectMenuController.h */,
 				8DE3F7B21AF75AB5001E048F /* ScrollController.cpp */,
 				8DE3F7B31AF75AB5001E048F /* ScrollController.h */,
+				8DF2EA0B1BA0359700315F14 /* AlertTextTool.cpp */,
+				8DF2EA0C1BA0359700315F14 /* AlertTextTool.h */,
 			);
 			name = UIModel;
 			sourceTree = "<group>";
@@ -1437,6 +1442,7 @@
 				8DD2F25D1B213D9800A52B33 /* GameHomeScene.cpp in Sources */,
 				8DC10AC21AC3D75F004F7DE2 /* Enemy.cpp in Sources */,
 				8DBB988E1ACD520C008C804D /* json_writer.cpp in Sources */,
+				8DF2EA0D1BA0359700315F14 /* AlertTextTool.cpp in Sources */,
 				8D51DC5E1B3A99360053EA8A /* DropPropSprite.cpp in Sources */,
 				8DDCC6771B32B00B00F01D46 /* ExpendObject.cpp in Sources */,
 				8DD3FA591B205B430028DB92 /* BuffSprite.cpp in Sources */,
@@ -1513,7 +1519,7 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d2408297-1403-407e-ad32-3c158f45deb8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1546,7 +1552,7 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d2408297-1403-407e-ad32-3c158f45deb8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";

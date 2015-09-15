@@ -14,6 +14,7 @@
 #include "GameShowLevelupLayer.h"
 #include "GameSprite.h"
 #include "GameShowDiscLayer.h"
+#include "AlertTextTool.h"
 
 ShopGunItemScrollHeadler::ShopGunItemScrollHeadler(int index)
 {
@@ -159,6 +160,7 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
     addChild(upgradeLabel);
     
     m_progressBar = new ProgressBar("shopItemTiao1.png","shopItemTiao2.png");
+    m_progressBar->autorelease();
     m_progressBar->setBarRight();
     m_progressBar->setPosition(itemBgSize.width * 0.32,
                                itemBgSize.height * 0.18);
@@ -343,7 +345,7 @@ void ShopGunItemScrollHeadler::upGrade(Touch * touch, Event * event)
         m_shopScene->addChild(showLayer,10);
     }else
     {
-        
+        AlertText(goldNoEnough, 40);
     }
 }
 void ShopGunItemScrollHeadler::unLock(Touch * touch, Event * event)
@@ -362,7 +364,8 @@ void ShopGunItemScrollHeadler::unLock(Touch * touch, Event * event)
         initGunView();
     }else
     {
-        log("no enough money for unlock");
+//        log("no enough money for unlock");
+        AlertText(goldNoEnough, 40);
     }
 }
 void ShopGunItemScrollHeadler::buy(Touch * touch, Event * event)
@@ -381,7 +384,7 @@ void ShopGunItemScrollHeadler::buy(Touch * touch, Event * event)
 //        updateGunView();
     }else
     {
-        
+        AlertText(goldNoEnough, 40);
     }
 }
 void ShopGunItemScrollHeadler::takeUp(cocos2d::Ref *pSender)

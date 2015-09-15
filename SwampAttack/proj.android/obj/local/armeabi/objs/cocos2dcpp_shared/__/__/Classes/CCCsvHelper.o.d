@@ -318,6 +318,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/CCCsvHelper.o: \
  jni/../../Classes/json/forwards.h jni/../../Classes/json/reader.h \
  jni/../../Classes/json/features.h jni/../../Classes/json/writer.h \
  jni/../../Classes/ConfigManager.h jni/../../Classes/BaseCode.h \
+ jni/../../Classes/GameConfig.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h
 
@@ -968,6 +969,8 @@ jni/../../Classes/json/writer.h:
 jni/../../Classes/ConfigManager.h:
 
 jni/../../Classes/BaseCode.h:
+
+jni/../../Classes/GameConfig.h:
 
 jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
 

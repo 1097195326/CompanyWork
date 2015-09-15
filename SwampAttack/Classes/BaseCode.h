@@ -10,6 +10,7 @@
 #define SwampAttack_BaseCode_h
 
 #include "cocos2d.h"
+#include "GameConfig.h"
 
 USING_NS_CC;
 
@@ -22,10 +23,6 @@ extern int _G_AddTime;
 extern  Size    m_winSize;
 extern  Size    m_visibleSize;
 extern  Vec2    m_visibleOrigin;
-
-//Size winSize;
-//Size visibleSize;
-//Vec2 visibleOrigin;
 
 // get GameDirector
 enum GameOverStatus

@@ -22,6 +22,7 @@ GameUser::GameUser():m_time(0)
         setLastSceneIndex(1);
     }
 //    setUserGold(900000);
+//    unlockGuanqia("400003_7");
     m_userHealth = getIntForKey("user_health");
     
     enterGame();

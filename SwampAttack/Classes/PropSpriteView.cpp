@@ -123,7 +123,7 @@ void PropSpriteView::touchEnd(Touch *touch, Event *event)
 {
     Vec2 p = m_blueBg->convertToNodeSpace(touch->getLocation());
     Rect r = Rect(0, 0, m_blueBg->getContentSize().width ,m_blueBg->getContentSize().height);
-    if (r.containsPoint(p))
+    if (r.containsPoint(p) || touch->getLocation().x <= _G_M_M->m_BulletStartPoint.x)
     {
         m_propIcon->removeFromParentAndCleanup(true);
         m_propIcon = NULL;

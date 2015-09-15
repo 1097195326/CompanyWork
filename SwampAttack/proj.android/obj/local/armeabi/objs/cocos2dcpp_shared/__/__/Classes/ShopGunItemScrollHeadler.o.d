@@ -347,6 +347,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/ShopGunItemScrollHeadler.
  jni/../../cocos2d/cocos/3d/../deprecated/CCString.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCNotificationCenter.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h \
+ jni/../../Classes/GameConfig.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  jni/../../Classes/ProgressBar.h jni/../../Classes/GameShopScene.h \
@@ -364,7 +365,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/ShopGunItemScrollHeadler.
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameSubject.h \
  jni/../../Classes/GameUser.h jni/../../Classes/GameShowLevelupLayer.h \
- jni/../../Classes/GameShowDiscLayer.h
+ jni/../../Classes/GameShowDiscLayer.h jni/../../Classes/AlertTextTool.h
 
 jni/../../Classes/ShopGunItemScrollHeadler.h:
 
@@ -1062,6 +1063,8 @@ jni/../../cocos2d/cocos/3d/../deprecated/CCNotificationCenter.h:
 
 jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h:
 
+jni/../../Classes/GameConfig.h:
+
 jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
 
 jni/../../cocos2d/cocos/audio/android/../include/Export.h:
@@ -1117,3 +1120,5 @@ jni/../../Classes/GameUser.h:
 jni/../../Classes/GameShowLevelupLayer.h:
 
 jni/../../Classes/GameShowDiscLayer.h:
+
+jni/../../Classes/AlertTextTool.h:
