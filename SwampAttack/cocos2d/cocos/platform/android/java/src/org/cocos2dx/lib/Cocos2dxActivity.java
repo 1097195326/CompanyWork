@@ -43,7 +43,6 @@ import android.preference.PreferenceManager.OnActivityResultListener;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.opengl.GLSurfaceView;
 
 public abstract class Cocos2dxActivity extends Activity implements Cocos2dxHelperListener {
     // ===========================================================

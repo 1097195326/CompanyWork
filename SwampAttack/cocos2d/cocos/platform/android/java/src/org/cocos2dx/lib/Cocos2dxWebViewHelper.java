@@ -1,14 +1,14 @@
 package org.cocos2dx.lib;
 
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
+
 import android.os.Handler;
 import android.os.Looper;
 import android.util.SparseArray;
 import android.view.View;
 import android.widget.FrameLayout;
-
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
 
 
 public class Cocos2dxWebViewHelper {
