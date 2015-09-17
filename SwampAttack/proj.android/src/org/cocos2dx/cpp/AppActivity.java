@@ -30,11 +30,16 @@ import org.cocos2dx.lib.Cocos2dxActivity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.cmcc.security.nativeC;
 
+
+
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Application;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
@@ -68,7 +73,73 @@ public class AppActivity extends Cocos2dxActivity {
 	public final static int HANDLER_HIDE_LOADING = 19;// 隐藏加载
 	private TextView textView;
 	
-	private boolean firstTime = true;
+	static private boolean firstTime = true;
+	static private Activity ucsdkActivity;
+	
+	static public native void payGameObjectEnd(String core);
+	
+	static public void payGameObject(int amount)
+	{
+		Log.i("hongxing", "pay game object");
+		payGameObjectEnd("123");
+		
+		
+//		Intent payIntent = new Intent();
+////		payIntent.putExtra(SDKProtocolKeys.CP_ORDER_ID, "" + System.currentTimeMillis());
+//		payIntent.putExtra(SDKProtocolKeys.APP_NAME, "Diamond");
+//		payIntent.putExtra(SDKProtocolKeys.PRODUCT_NAME, "product_name1");
+//		payIntent.putExtra(SDKProtocolKeys.AMOUNT, "2"); // 计费点价格
+//		// 如果需要设置服务端通知，可以在此设置订单的通知地址
+//		// payIntent.putExtra(SDKProtocolKeys.NOTIFY_URL,"http://10.1.84.183/receiveNotify.jsp");
+//		payIntent.putExtra(SDKProtocolKeys.DEBUG_MODE, true);
+//		//payIntent.putExtra(SDKProtocolKeys.ATTACH_INFO, "ATTACHINFOtest");
+//		//如果支持运营商sdk短代支付，那么需要先判断用户手机号，然后传入相对应的paycode
+////		payIntent.putExtra(SDKProtocolKeys.PAY_CODE, getPaycode(getApplicationContext())); // demo现在是写死的paycode，实际需要cp传计费点
+//		try {
+//			SDKCore.pay(ucsdkActivity, payIntent, new SDKCallbackListener() {
+//				@Override
+//				public void onSuccessful(int status, Response response) {
+//					if (response.getType() == Response.LISTENER_TYPE_INIT) {
+//						firstTime = false;
+//						Message msg = new Message();
+//						msg.what = FlashMsg.HANDLER_END_LOGO_MSG1;
+//						handler.sendMessageDelayed(msg, 3000);
+//					} else if (response.getType() == Response.LISTENER_TYPE_PAY) {
+//					    /*重要：CP必须设置确认结果，告诉CP是否成功收到，不然SDK会不断回调通知CP*/
+//                        response.setMessage(Response.OPERATE_SUCCESS_MSG); 
+//                        /*重要：CP必须设置确认结果，告诉CP是否成功收到，不然SDK会不断回调通知CP*/
+//						Message msg = new Message();
+//						msg.what = HANDLER_SDK_CALLBACK;
+//						String s = response.getData();
+//						if (s != null) {
+//							msg.obj = response.getData();
+//						}
+//						msg.arg1 = response.getStatus();
+//						handler.sendMessage(msg);
+//					}
+//				}
+//
+//				@Override
+//				public void onErrorResponse(SDKError error) {
+//					String errorMsg = error.getMessage();
+//					if (TextUtils.isEmpty(errorMsg))
+//						errorMsg = "SDK occur error!";
+//					Message msg = new Message();
+//					msg.what = HANDLER_SHOW_ERRORDIALOG;
+//					msg.obj = errorMsg;
+//					handler.sendMessage(msg);
+//					if (firstTime) {
+//						firstTime = false;
+//						msg = new Message();
+//						msg.what = FlashMsg.HANDLER_END_LOGO_MSG1;
+//						handler.sendMessageDelayed(msg, 3000);
+//					}
+//				}
+//			});
+//		} catch (Exception ex) {
+//			ex.printStackTrace();
+//		}
+	}
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -77,6 +148,8 @@ public class AppActivity extends Cocos2dxActivity {
 		Application application = this.getApplication();
 		SDKCore.registerEnvironment(application);
 		Log.i("hongxing", "app activity onCreate");
+		
+		ucsdkActivity = this;
 		
 		initHandler();
 		initSdk();

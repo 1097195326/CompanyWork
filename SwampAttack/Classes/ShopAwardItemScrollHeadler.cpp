@@ -15,6 +15,9 @@
 #include "GameSprite.h"
 #include "SpecialManager.h"
 
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+#include "../proj.android/jni/hellocpp/UCSdkJniHelper.h"
+#endif
 
 ShopAwardItemScrollHeadler::ShopAwardItemScrollHeadler(int index)
 {
@@ -90,10 +93,12 @@ void ShopAwardItemScrollHeadler::buy(cocos2d::Touch *touch, cocos2d::Event *even
 {
     log("buy ...");
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buyGold.mp3").c_str());
-    SpecialObject * specialobject = SpecialManager::getInstance()->getSpecialObjectByIndex(m_index);
+    SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectByIndex(m_index);
     
-    specialobject->buyEnd();
-//    m_shopScene->updateUserData();
+//    specialObject->buyEnd();
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+    payForBuyGameObject(specialObject);
+#endif
     
     
 }

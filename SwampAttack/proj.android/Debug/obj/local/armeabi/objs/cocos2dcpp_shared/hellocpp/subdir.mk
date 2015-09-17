@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 O_SRCS += \
+../obj/local/armeabi/objs/cocos2dcpp_shared/hellocpp/UCSdkJniHelper.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/hellocpp/main.o 
 
 

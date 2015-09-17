@@ -8,11 +8,14 @@
 #ifndef UCSDKJNIHELPER_H_
 #define UCSDKJNIHELPER_H_
 
+#include "../../Classes/SpecialObject.h"
+
 extern "C"
 {
 
+	static SpecialObject * _isBuying_object;
 
-	void payForBuyGamemoney();
+	void payForBuyGameObject(SpecialObject * object);
 
 
 

@@ -10,6 +10,9 @@
 #include "SpecialManager.h"
 #include "GameSprite.h"
 
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+#include "../proj.android/jni/hellocpp/UCSdkJniHelper.h"
+#endif
 
 ShopExpendShowLayer::~ShopExpendShowLayer()
 {
@@ -100,8 +103,11 @@ void ShopExpendShowLayer::touchItemEnd(cocos2d::Touch *touch, cocos2d::Event *ev
     //    log("touch item %d",spr->getTag());
     ExpendObject * object = SpecialManager::getInstance()->getExpendObjectByIndex(spr->getTag());
     SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectBySubId(object->getId(), object->getType());
-    specialObject->buyEnd();
-    m_delegateLayer->updateUserData();
+//    specialObject->buyEnd();
+//    m_delegateLayer->updateUserData();
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+    payForBuyGameObject(specialObject);
+#endif
 }
 bool ShopExpendShowLayer::touchBegan(Touch *touch, Event *event)
 {
