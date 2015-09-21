@@ -238,6 +238,10 @@ BulletInfoData Bullet::getDandaoInfo()
     {
         data.name = "bullet_qiang12";
         data.frames = 6;
+    }else if ("BulletModelId9" == modelId)
+    {
+        data.name = "arrow";
+        data.frames = 1;
     }else
     {
         data.name = "";

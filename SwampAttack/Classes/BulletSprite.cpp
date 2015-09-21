@@ -66,6 +66,7 @@ void BulletSprite::update(float data)
         m_model->setCanDelete();
         unscheduleUpdate();
         stopAllActions();
+        removeAllChildrenWithCleanup(true);
         removeFromParentAndCleanup(true);
         return;
     }

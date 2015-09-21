@@ -8,3 +8,4 @@ BulletId[string],ModelId[string],BuffId[vector<string>],WeaponType[string],explo
 100006,BulletModelId6,,3,,1,3,Bullet#ItemDescription6,狙击枪子弹
 100007,BulletModelId7,,2,blast2,1,3,Bullet#ItemDescription7,加农炮子弹
 100008,BulletModelId8,600001,5,,1,2,Bullet#ItemDescription8,火焰发射器子弹
+100009,BulletModelId9,,7,blast1,1,1,Bullet#ItemDescription5,远程怪物子弹

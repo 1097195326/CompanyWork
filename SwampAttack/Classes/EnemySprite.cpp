@@ -103,10 +103,6 @@ void EnemySprite::dieCall()
 {
 //    log("----- die");
     m_model->dieingCall();
-    stopAllActions();
-    removeAllChildrenWithCleanup(true);
-    removeFromParentAndCleanup(true);
-
 }
 void EnemySprite::hurtCall()
 {

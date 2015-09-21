@@ -86,6 +86,8 @@ void CrumpEnemySprite::update(float data)
     {
         m_model->diedCall();
         unscheduleUpdate();
+        stopAllActions();
+        removeAllChildrenWithCleanup(true);
         removeFromParentAndCleanup(true);
         return;
     }else if (m_model->isHurt())
