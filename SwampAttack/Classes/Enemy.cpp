@@ -317,6 +317,24 @@ bool Enemy::isBoss()
     }else if (m_id == "200004")
     {
         isB = true;
+    }else if (m_id == "200005")
+    {
+        isB = true;
+    }else if (m_id == "200006")
+    {
+        isB = true;
+    }else if (m_id == "200007")
+    {
+        isB = true;
+    }else if (m_id == "200008")
+    {
+        isB = true;
+    }else if (m_id == "200009")
+    {
+        isB = true;
+    }else if (m_id == "200010")
+    {
+        isB = true;
     }
     
     return isB;

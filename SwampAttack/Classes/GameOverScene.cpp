@@ -84,7 +84,7 @@ bool GameOverScene::init()
         PropManager::getInstance()->checkUnlock(this);
         DefenseBuildingManager::getInstance()->checkUnlock(this);
         
-        if (!nextGuanqia->isUnlock())
+        if (nextGuanqia && !nextGuanqia->isUnlock())
         {
 //            log("scene index:%d",nextGuanqia->getSceneIndex());
 //            log(" index:%d",nextGuanqia->getCheckPoint());
@@ -92,7 +92,10 @@ bool GameOverScene::init()
             _G_U->setLastSceneIndex(nextGuanqia->getSceneIndex());
             _G_U->setLastGuanqiaIndex(nextGuanqia->getCheckPoint());
         }
-        nextGuanqia->unlockGuanqia();
+        if (nextGuanqia)
+        {
+            nextGuanqia->unlockGuanqia();
+        }
         
 //        GuanQiaManager::getInstance()->set(++guanqiaIndex);
         

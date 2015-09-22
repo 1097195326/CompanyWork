@@ -180,6 +180,32 @@ EnemyInfo::EnemyInfo()
     muroideaArmor.height = 90;
     muroideaArmor.widthOffSet = 0;
     m_data["Muroidea_armor"] = muroideaArmor;
+    //恶僧
+    EnemyInfoData butcher;
+    butcher.attackFrame = 5;
+    butcher.attackFrames = 11;
+    butcher.hurtHeavyFrames = 9;
+    butcher.hurtLightFrames = 5;
+    butcher.hurtOnFrames = 5;
+    butcher.walkFrames = 14;
+    butcher.downFrames = 13;
+    butcher.width = 201;
+    butcher.height = 154;
+    butcher.widthOffSet = 0;
+    m_data["butcher"] = butcher;
+    //吸血鬼
+    EnemyInfoData vampire;
+    vampire.attackFrame = 5;
+    vampire.attackFrames = 11;
+    vampire.hurtHeavyFrames = 10;
+    vampire.hurtLightFrames = 5;
+    vampire.hurtOnFrames = 5;
+    vampire.walkFrames = 14;
+    vampire.downFrames = 13;
+    vampire.width = 250;
+    vampire.height = 200;
+    vampire.widthOffSet = 0;
+    m_data["vampire"] = vampire;
     // bat 蝙蝠
     EnemyInfoData bat;
     bat.attackFrame = 7;
@@ -199,6 +225,16 @@ EnemyInfo::EnemyInfo()
     batArmor.height = 70;
     batArmor.widthOffSet = 0;
     m_data["bat_armor"] = batArmor;
+    // bat 蝙蝠
+    EnemyInfoData bee;
+    bee.attackFrame = 7;
+    bee.attackFrames = 10;
+    bee.walkFrames = 4;
+    bee.downFrames = 13;
+    bee.width = 150;
+    bee.height = 150;
+    bee.widthOffSet = 0;
+    m_data["bee"] = bee;
     // demon 蝙蝠
     EnemyInfoData demon;
     demon.attackFrame = 7;

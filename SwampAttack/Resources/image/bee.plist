@@ -4,10 +4,62 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>bat_bullet0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{198,57},{162,60}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{162,60}}</string>
+                <key>sourceSize</key>
+                <string>{164,60}</string>
+            </dict>
+            <key>bat_bullet0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,33},{194,55}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{194,55}}</string>
+                <key>sourceSize</key>
+                <string>{196,55}</string>
+            </dict>
+            <key>bat_bullet0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{204,2},{197,53}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{1,0},{197,53}}</string>
+                <key>sourceSize</key>
+                <string>{199,53}</string>
+            </dict>
+            <key>bat_bullet0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{200,29}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{200,29}}</string>
+                <key>sourceSize</key>
+                <string>{202,29}</string>
+            </dict>
             <key>bee_Electric0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,352},{96,102}}</string>
+                <string>{{210,301},{96,102}}</string>
                 <key>offset</key>
                 <string>{4,12}</string>
                 <key>rotated</key>
@@ -20,7 +72,7 @@
             <key>bee_Electric0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,352},{96,102}}</string>
+                <string>{{208,406},{96,102}}</string>
                 <key>offset</key>
                 <string>{4,12}</string>
                 <key>rotated</key>
@@ -33,7 +85,7 @@
             <key>bee_attack0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{108,170},{102,102}}</string>
+                <string>{{106,302},{102,102}}</string>
                 <key>offset</key>
                 <string>{7,8}</string>
                 <key>rotated</key>
@@ -46,7 +98,7 @@
             <key>bee_attack0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,168},{104,80}}</string>
+                <string>{{194,119},{104,80}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -59,7 +111,7 @@
             <key>bee_attack0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{320,186},{100,100}}</string>
+                <string>{{306,405},{100,100}}</string>
                 <key>offset</key>
                 <string>{8,8}</string>
                 <key>rotated</key>
@@ -72,7 +124,7 @@
             <key>bee_attack0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,86},{104,80}}</string>
+                <string>{{2,192},{104,80}}</string>
                 <key>offset</key>
                 <string>{10,-2}</string>
                 <key>rotated</key>
@@ -85,11 +137,11 @@
             <key>bee_attack0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,250},{100,102}}</string>
+                <string>{{106,406},{100,102}}</string>
                 <key>offset</key>
                 <string>{8,9}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{33,15},{100,102}}</string>
                 <key>sourceSize</key>
@@ -98,11 +150,11 @@
             <key>bee_attack0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{324,2},{104,78}}</string>
+                <string>{{108,196},{104,78}}</string>
                 <key>offset</key>
                 <string>{11,2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{34,34},{104,78}}</string>
                 <key>sourceSize</key>
@@ -111,11 +163,11 @@
             <key>bee_attack0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{212,208},{98,92}}</string>
+                <string>{{188,201},{98,92}}</string>
                 <key>offset</key>
                 <string>{11,9}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{37,20},{98,92}}</string>
                 <key>sourceSize</key>
@@ -124,11 +176,11 @@
             <key>bee_attack0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{110,84},{104,84}}</string>
+                <string>{{108,90},{104,84}}</string>
                 <key>offset</key>
                 <string>{11,-6}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{34,39},{104,84}}</string>
                 <key>sourceSize</key>
@@ -137,7 +189,7 @@
             <key>bee_attack0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{218,2},{100,104}}</string>
+                <string>{{2,90},{100,104}}</string>
                 <key>offset</key>
                 <string>{9,5}</string>
                 <key>rotated</key>
@@ -150,7 +202,7 @@
             <key>bee_attack0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{106,82}}</string>
+                <string>{{403,2},{106,82}}</string>
                 <key>offset</key>
                 <string>{9,-4}</string>
                 <key>rotated</key>
@@ -163,7 +215,7 @@
             <key>bee_fly0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{216,104},{102,102}}</string>
+                <string>{{2,378},{102,102}}</string>
                 <key>offset</key>
                 <string>{7,8}</string>
                 <key>rotated</key>
@@ -176,7 +228,7 @@
             <key>bee_fly0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{110,2},{106,80}}</string>
+                <string>{{362,86},{106,80}}</string>
                 <key>offset</key>
                 <string>{8,-1}</string>
                 <key>rotated</key>
@@ -189,7 +241,7 @@
             <key>bee_fly0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{324,82},{102,102}}</string>
+                <string>{{2,274},{102,102}}</string>
                 <key>offset</key>
                 <string>{7,12}</string>
                 <key>rotated</key>
@@ -202,7 +254,7 @@
             <key>bee_fly0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{110,2},{106,80}}</string>
+                <string>{{362,86},{106,80}}</string>
                 <key>offset</key>
                 <string>{8,-1}</string>
                 <key>rotated</key>
@@ -222,7 +274,7 @@
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:d4ff0a56c517466f0d6866a5ea3b61a6:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:3f46a233432d3a224dd6c546e2ee80b1:1/1$</string>
             <key>textureFileName</key>
             <string>bee.png</string>
         </dict>
