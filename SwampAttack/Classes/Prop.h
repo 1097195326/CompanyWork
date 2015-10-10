@@ -95,7 +95,7 @@ public:
     bool    isCanDelete();
     
 private:
-    
+    int         m_index;
     string      m_id;           //
     string      m_itemName;         //
     string      m_modelId;      //
@@ -134,7 +134,10 @@ public:
     int         getStrengthenGold();
     int         getStrengthenLevel();
     int         getLimitLevel();
+    int         getIndex();
     
+    //
+    void        setIndex(int index);
 };
 
 #endif /* defined(__SwampAttack__Prop__) */

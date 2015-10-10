@@ -44,7 +44,7 @@ public:
     bool    isInRange(Vec2 point);
 protected:
     DefenseState m_state;
-    float       m_index;
+    int        m_index;
     Vec2        m_point;
     //--- ---
     string      m_id;
@@ -88,6 +88,11 @@ public:
     int     getHp();
     int     getDamage();
     int     getStrengthGold();
+    int     getIndex();
+    //---
+    
+    void    setIndex(int index);
+    
     
 };
 

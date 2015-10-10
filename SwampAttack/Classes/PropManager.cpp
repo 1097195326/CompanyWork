@@ -19,6 +19,7 @@ m_willTakeUpProp("")
     m_hashHead = propHelper->getHashHead();
     Json::Value data = propHelper->getJsonData();
     
+    int index = 0;
     std::map<int,std::string>::iterator iter;
     for (iter = m_hashHead.begin(); iter != m_hashHead.end(); ++iter) {
         string propId = iter->second;
@@ -28,6 +29,8 @@ m_willTakeUpProp("")
 //            log("prop take up index :%d",prop->getTakeUpIndex());
             m_takeUpPropData[propId] = prop;
         }
+        prop->setIndex(index);
+        ++index;
     }
     
 }

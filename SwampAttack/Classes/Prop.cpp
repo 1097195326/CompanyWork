@@ -522,3 +522,11 @@ int Prop::getLimitLevel()
 {
     return m_limitLevel;
 }
+int Prop::getIndex()
+{
+    return m_index;
+}
+void Prop::setIndex(int index)
+{
+    m_index = index;
+}

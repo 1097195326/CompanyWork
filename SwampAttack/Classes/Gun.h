@@ -74,6 +74,7 @@ public:
     void    saveBullet();
     
 private:
+    int     m_index;
     string  m_id;
     string  m_weaponName;           //  武器名称
     string  m_modelId;              //  模型编号
@@ -145,6 +146,8 @@ public:
     int     getUnlockGold();
     string  getWeaponDescription();
     
+    int     getIndex();
+    void    setIndex(int index);
 public:
     Gun(Json::Value data);
     ~Gun();

@@ -20,8 +20,7 @@
 DefenseBuilding::DefenseBuilding(Json::Value data):
 m_isMaxLevel(false),
 m_isUnlock(false),
-m_state(d_normal),
-m_index(0.0)
+m_state(d_normal)
 {
     m_id = data["DefenceId"].asString() ;
     string defenceName = data["DefenceName"].asString();
@@ -218,4 +217,12 @@ int DefenseBuilding::getDamage()
 int DefenseBuilding::getStrengthGold()
 {
     return m_strengthenGold;
+}
+int DefenseBuilding::getIndex()
+{
+    return m_index;
+}
+void DefenseBuilding::setIndex(int index)
+{
+    m_index = index;
 }

@@ -611,4 +611,11 @@ string Gun::getWeaponDescription()
 {
     return m_weaponDescription;
 }
-
+int Gun::getIndex()
+{
+    return m_index;
+}
+void Gun::setIndex(int index)
+{
+    m_index = index;
+}
