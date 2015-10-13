@@ -56,6 +56,7 @@ protected:
     string      m_unlockMission;
     int         m_unlockGold;
     string      m_defenceDescription;
+    string      m_unlockStr;
     int         m_limitLevel;
     //
     int         m_strengthenLevel;
@@ -82,6 +83,7 @@ public:
     string  getUnlockMission();
     int     getUnlockGold();
     string  getDefenceDescription();
+    string  getUnlockStr();
     int     getLimitLevel();
     //
     int     getStrengthLevel();

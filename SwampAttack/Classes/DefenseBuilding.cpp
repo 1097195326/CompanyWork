@@ -34,6 +34,7 @@ m_state(d_normal)
     string defenceDescription = data["DefenceDescription"].asString();
     m_defenceDescription = _C_M->getTranslateById(defenceDescription);
     m_limitLevel = atoi(data["LimitLevel"].asString().c_str());
+    m_unlockStr = _C_M->getTranslateById( data["Unlock"].asString());
     //
     m_strengthenLevel = _G_U->getBuildingLevel(m_id);
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
@@ -196,6 +197,10 @@ int DefenseBuilding::getUnlockGold()
 string DefenseBuilding::getDefenceDescription()
 {
     return m_defenceDescription;
+}
+string DefenseBuilding::getUnlockStr()
+{
+    return m_unlockStr;
 }
 int DefenseBuilding::getLimitLevel()
 {

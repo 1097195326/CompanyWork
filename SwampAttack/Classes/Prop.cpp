@@ -46,6 +46,7 @@ m_decelerationDlay(0.0f)
     m_time = atof(data["Time"].asString().c_str());
     string itemDescription = data["ItemDescription"].asString();
     m_itemDestription = _C_M->getTranslateById(itemDescription);
+    m_unlockStr = _C_M->getTranslateById( data["Unlock"].asString());
     
     m_num = _G_U->getPropNum(m_id);
     m_isUnlock = _G_U->isUnlockProp(m_id);
@@ -525,6 +526,10 @@ int Prop::getLimitLevel()
 int Prop::getIndex()
 {
     return m_index;
+}
+string Prop::getUnlockStr()
+{
+    return m_unlockStr;
 }
 void Prop::setIndex(int index)
 {

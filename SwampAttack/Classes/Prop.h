@@ -115,6 +115,7 @@ private:
     int         m_strengthenGold;
     int         m_strengthenLevel;
     bool        m_isMaxLevel;
+    string      m_unlockStr;
 public:
     bool    isMaxLevel();
     bool    addStrengthenLevel();
@@ -135,6 +136,7 @@ public:
     int         getStrengthenLevel();
     int         getLimitLevel();
     int         getIndex();
+    string      getUnlockStr();
     
     //
     void        setIndex(int index);

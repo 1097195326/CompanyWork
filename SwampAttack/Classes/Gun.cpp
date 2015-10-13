@@ -134,6 +134,7 @@ m_reloadWiatingTime(0.0f)
     
     
     m_weaponDescription = _C_M->getTranslateById( data["WeaponDescription"].asString());
+    m_unlockStr = _C_M->getTranslateById( data["Unlock"].asString());
     //--- gun info
     GunActionData actionData = GunActionInfo::getInstance()->getInfoByName(m_modelId);
     m_fireRate =  1.0f/ m_fireRate / (float)actionData.attackFrames;
@@ -610,6 +611,10 @@ int Gun::getUnlockGold()
 string Gun::getWeaponDescription()
 {
     return m_weaponDescription;
+}
+string Gun::getUnlockStr()
+{
+    return m_unlockStr;
 }
 int Gun::getIndex()
 {
