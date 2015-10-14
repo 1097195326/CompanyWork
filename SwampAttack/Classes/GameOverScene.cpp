@@ -20,6 +20,8 @@
 #include "GameDirector.h"
 #include "GameUser.h"
 
+#include "MobClickCpp.h"
+
 //#include "GameDirector.h"
 //#include "EnemyManager.h"
 //#include "GameLoading.h"
@@ -73,11 +75,14 @@ bool GameOverScene::init()
     int canGetGold = _G_D->getGoldNum();;
     
     Sprite * bg =  NULL;
+    GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
+    
     if (m_overStatus == o_win)
     {
+        umeng::MobClickCpp::finishLevel(curGuanqia->getId().c_str());
+        
         bg = Sprite::create(ImagePath("overScene_winbg.png"));
         
-        GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
         GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
         
         GunManager::getInstance()->checkUnlock(this);
@@ -102,6 +107,8 @@ bool GameOverScene::init()
         canGetGold += curGuanqia->getThroughGold();
     }else
     {
+        umeng::MobClickCpp::failLevel(curGuanqia->getId().c_str());
+        
         bg = Sprite::create(ImagePath("overScene_losebg.png"));
     }
     bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,

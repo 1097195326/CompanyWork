@@ -18,7 +18,7 @@
 
 #include "PropSpriteView.h"
 #include "GameShowDiscLayer.h"
-
+#include "MobClickCpp.h"
 
 Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal),
 m_isMaxLevel(false),
@@ -235,6 +235,8 @@ bool Prop::useProp()
 {
     if (m_num > 0)
     {
+        umeng::MobClickCpp::use(m_itemName.c_str(), 1, m_itemPrice);
+        
         --m_num;
         _G_U->setPropNum(m_id, m_num);
         notify();

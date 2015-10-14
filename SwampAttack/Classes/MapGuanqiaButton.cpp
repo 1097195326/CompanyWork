@@ -17,7 +17,7 @@
 //#include "GameLoading.h"
 //#include "GameDirector.h"
 
-
+#include "MobClickCpp.h"
 
 MapGuanqiaButton::MapGuanqiaButton(int sceneIndex, int index):
 m_sceneIndex(sceneIndex),
@@ -97,6 +97,8 @@ void MapGuanqiaButton::pressGuanqiaButtonFunc(Touch * touch, Event * event)
     }
     if (guanQia->isUnlock())
     {
+        umeng::MobClickCpp::startLevel(m_guanqiaId.c_str());
+        
         string musicName = StringUtils::format("sceneMusic%d.mp3",m_sceneIndex);
         SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath(musicName)).c_str(),true);
         SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.5);
