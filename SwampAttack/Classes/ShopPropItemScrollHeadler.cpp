@@ -14,6 +14,7 @@
 #include "GameSprite.h"
 #include "GameShowDiscLayer.h"
 #include "GameShowLevelupLayer.h"
+#include "BaseUtil.h"
 
 ShopPropItemScrollHeadler::ShopPropItemScrollHeadler(int index)
 {
@@ -56,21 +57,21 @@ void ShopPropItemScrollHeadler::initUnlockView()
     
     Size itemBgSize = itemBg->getContentSize();
     
-    GameSprite * iconBg = new GameSprite(ImagePath("shopItemIconBg.png"));
-    iconBg->autorelease();
-    iconBg->m_touchMeCall = CC_CALLBACK_2(ShopPropItemScrollHeadler::showDiscView, this);
+    m_iconBg = new GameSprite(ImagePath("shopItemIconBg.png"));
+    m_iconBg->autorelease();
+    m_iconBg->m_touchMeCall = CC_CALLBACK_2(ShopPropItemScrollHeadler::showDiscView, this);
     
     //        Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
-    iconBg->setPosition(- itemBgSize.width * 0.35,
+    m_iconBg->setPosition(- itemBgSize.width * 0.35,
                         0);
-    addChild(iconBg);
+    addChild(m_iconBg);
     
-    Size iconBgSize = iconBg->getContentSize();
+    Size iconBgSize = m_iconBg->getContentSize();
     
     Sprite * biaoSign = Sprite::create(ImagePath("shop_icon_sign.png"));
     biaoSign->setPosition(iconBgSize.width * 0.25,
                           iconBgSize.height * 0.71);
-    iconBg->addChild(biaoSign);
+    m_iconBg->addChild(biaoSign);
     
     string propModelId = prop->getModelId();
     string propIconStr = StringUtils::format("%s_icon.png",propModelId.c_str());
@@ -79,7 +80,7 @@ void ShopPropItemScrollHeadler::initUnlockView()
     icon->setPosition(iconBgSize.width * 0.5,
                       iconBgSize.height * 0.5);
     icon->setScale(0.85);
-    iconBg->addChild(icon);
+    m_iconBg->addChild(icon,1);
     
     Sprite * iconName = Sprite::create(ImagePath(propNameStr));
     iconName->setPosition(-itemBgSize.width * 0.25
@@ -124,11 +125,11 @@ void ShopPropItemScrollHeadler::initUnlockView()
     m_bulletsLabel->setPosition(iconBgSize.width * 0.62,
                                 iconBgSize.height * 0.25);
     m_bulletsLabel->setAdditionalKerning(-3);
-    iconBg->addChild(m_bulletsLabel,1);
+    m_iconBg->addChild(m_bulletsLabel,1);
     Sprite * bulletIcon = Sprite::create(ImagePath("shop_bullet_icon.png"));
     bulletIcon->setPosition(iconBgSize.width * 0.81  ,
                             iconBgSize.height * 0.25);
-    iconBg->addChild(bulletIcon,1);
+    m_iconBg->addChild(bulletIcon,1);
     
     Sprite * jinbi1 = Sprite::create(ImagePath("jinbi_icon.png"));
     jinbi1->setPosition(buyButtonSize.width * 0.85,
@@ -306,6 +307,30 @@ void ShopPropItemScrollHeadler::updateDaojuView()
             m_upGradeButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
         }
     }
+}
+void ShopPropItemScrollHeadler::setHealderSelect()
+{
+    auto spriteFrameCache = SpriteFrameCache::getInstance();
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao2.plist"));
+    
+    Action * guangAc = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("item_flash", 4));
+    Sprite * texiao = Sprite::create();
+    Sprite * guang = Sprite::create();
+    texiao->addChild(guang);
+    guang->runAction(guangAc);
+    m_iconBg->addChild(texiao);
+    Size iconBgSize = m_iconBg->getContentSize();
+    texiao->setPosition(iconBgSize.width * 0.5, iconBgSize.height * 0.5);
+    texiao->setScale(1.5);
+    texiao->runAction(Sequence::create(DelayTime::create(1),
+                                       FadeOut::create(0.3),
+                                       CallFuncN::create(CC_CALLBACK_1(ShopPropItemScrollHeadler::guangEnd, this)),
+                                       NULL));
+}
+void ShopPropItemScrollHeadler::guangEnd(cocos2d::Node *pSender)
+{
+    pSender->stopAllActions();
+    pSender->removeFromParentAndCleanup(true);
 }
 void ShopPropItemScrollHeadler::updateData()
 {

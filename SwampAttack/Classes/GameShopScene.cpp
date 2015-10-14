@@ -145,8 +145,9 @@ void GameShopScene::initScrollView(ShopGotoData data)
         m_scrollViews[i]->setGetHeadlerTarget(this);
         m_scrollViews[i]->setTag(i);
         m_scrollViews[i]->initView();
-        if (i == data.item) {
+        if (i == data.item && !(data.item == 0 && data.scrollIndex ==0)) {
             m_scrollViews[i]->moveToViewAtIndex(data.scrollIndex);
+            m_scrollViews[i]->setHeadlerSelect(data.scrollIndex);
         }else
         {
             m_scrollViews[i]->setScale(0.0001);

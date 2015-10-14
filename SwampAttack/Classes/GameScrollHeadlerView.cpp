@@ -280,6 +280,13 @@ GameScrollHeadler * GameScrollHeadlerView::getHeadlerWithIndex(int index)
     GameScrollHeadler * headler = m_target->getHeadlerByIndex(index,getTag());
     return headler;
 }
+void GameScrollHeadlerView::setHeadlerSelect(int index)
+{
+    GameScrollHeadler * headler = m_headlerData[index];
+    if (headler) {
+        headler->setHealderSelect();
+    }
+}
 void GameScrollHeadlerView::setGetHeadlerTarget(GameScrollHeadlerTargetInterface * getHeadlerTarget)
 {
     m_target = getHeadlerTarget;

@@ -20,6 +20,7 @@ private:
     GameSprite * m_upGradeButton;
     GameSprite * m_unLockButton;
     GameSprite * m_buyButton;
+    GameSprite * m_iconBg;
     MenuItemImage * m_takeUpButton;
     
     ProgressBar *   m_progressBar;
@@ -46,6 +47,8 @@ public:
     ShopGunItemScrollHeadler(int index);
     ~ShopGunItemScrollHeadler();
     
+    void    setHealderSelect();
+    void    guangEnd(Node * pSender);
     void    updateData();
     
 };

@@ -39,6 +39,7 @@ private:
     void    addHeadlerByIndex(int index);
     GameScrollHeadler * getHeadlerWithIndex(int index);
 public:
+    void    setHeadlerSelect(int index);
     void    setGetHeadlerTarget(GameScrollHeadlerTargetInterface * getHeadlerTarget);
     void    initView(int index = 0);
     void    reSetView();

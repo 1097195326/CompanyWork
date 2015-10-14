@@ -15,6 +15,7 @@
 #include "GameSprite.h"
 #include "GameShowDiscLayer.h"
 #include "AlertTextTool.h"
+#include "BaseUtil.h"
 
 ShopGunItemScrollHeadler::ShopGunItemScrollHeadler(int index)
 {
@@ -47,6 +48,7 @@ void ShopGunItemScrollHeadler::initGunView()
         initLockGunView();
     }
     updateGunView();
+    
 }
 void ShopGunItemScrollHeadler::initUnlockGunView()
 {
@@ -57,21 +59,21 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
     
     Size itemBgSize = itemBg->getContentSize();
     
-    GameSprite * iconBg = new GameSprite(ImagePath("shopItemIconBg.png"));
-    iconBg->autorelease();
-    iconBg->m_touchMeCall = CC_CALLBACK_2(ShopGunItemScrollHeadler::showDiscView, this);
+    m_iconBg = new GameSprite(ImagePath("shopItemIconBg.png"));
+    m_iconBg->autorelease();
+    m_iconBg->m_touchMeCall = CC_CALLBACK_2(ShopGunItemScrollHeadler::showDiscView, this);
     
     //        Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
-    iconBg->setPosition(- itemBgSize.width * 0.35,
+    m_iconBg->setPosition(- itemBgSize.width * 0.35,
                         0);
-    addChild(iconBg);
+    addChild(m_iconBg);
     
-    Size iconBgSize = iconBg->getContentSize();
+    Size iconBgSize = m_iconBg->getContentSize();
     
     Sprite * biaoSign = Sprite::create(ImagePath("shop_icon_sign.png"));
     biaoSign->setPosition(iconBgSize.width * 0.25,
                           iconBgSize.height * 0.71);
-    iconBg->addChild(biaoSign);
+    m_iconBg->addChild(biaoSign);
     
     string gunModelId = gun->getModelId();
     string gunIconStr = StringUtils::format("%s_icon.png",gunModelId.c_str());
@@ -80,7 +82,7 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
     icon->setPosition(iconBgSize.width * 0.5,
                       iconBgSize.height * 0.5);
     icon->setScale(0.85);
-    iconBg->addChild(icon);
+    m_iconBg->addChild(icon,1);
     
     Sprite * iconName = Sprite::create(ImagePath(gunNameStr));
 //    Label * iconName = Label::createWithTTF(gun->getWeaponName(), "fonts/Arial Black.ttf", 25);
@@ -116,11 +118,11 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
         m_bulletsLabel->setPosition(iconBgSize.width * 0.62,
                                     iconBgSize.height * 0.25);
         m_bulletsLabel->setAdditionalKerning(-3);
-        iconBg->addChild(m_bulletsLabel,1);
+        m_iconBg->addChild(m_bulletsLabel,1);
         Sprite * bulletIcon = Sprite::create(ImagePath("shop_bullet_icon.png"));
         bulletIcon->setPosition(iconBgSize.width * 0.81  ,
                                 iconBgSize.height * 0.25);
-        iconBg->addChild(bulletIcon,1);
+        m_iconBg->addChild(bulletIcon,1);
         
         Sprite * jinbi1 = Sprite::create(ImagePath("jinbi_icon.png"));
         jinbi1->setPosition(buyButtonSize.width * 0.85,
@@ -322,6 +324,32 @@ void ShopGunItemScrollHeadler::updateGunView()
     }
     
     
+}
+void ShopGunItemScrollHeadler::setHealderSelect()
+{
+    auto spriteFrameCache = SpriteFrameCache::getInstance();
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao2.plist"));
+    
+    Action * guangAc = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("item_flash", 4));
+    Sprite * texiao = Sprite::create();
+    Sprite * guang = Sprite::create();
+    texiao->addChild(guang);
+    guang->runAction(guangAc);
+    m_iconBg->addChild(texiao);
+    Size iconBgSize = m_iconBg->getContentSize();
+    texiao->setPosition(iconBgSize.width * 0.5, iconBgSize.height * 0.5);
+    texiao->setScale(1.5);
+    texiao->runAction(Sequence::create(DelayTime::create(1),
+                                       FadeOut::create(0.3),
+                                       CallFuncN::create(CC_CALLBACK_1(ShopGunItemScrollHeadler::guangEnd, this)),
+                                       NULL));
+    
+}
+void ShopGunItemScrollHeadler::guangEnd(cocos2d::Node *pSender)
+{
+    pSender->stopAllActions();
+    pSender->removeAllChildrenWithCleanup(true);
+    pSender->removeFromParentAndCleanup(true);
 }
 void ShopGunItemScrollHeadler::updateData()
 {
