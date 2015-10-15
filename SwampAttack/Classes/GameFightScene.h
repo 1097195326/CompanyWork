@@ -32,6 +32,8 @@ public:
     void    showOverLayer();
     void    shopGameActions();
     void    resumeGameActions();
+    void    shopGame();
+    void    resumeGame();
     
     bool    touchBegan(Touch * touch, Event * event);
     void    touchMoved(Touch * touch, Event * event);

@@ -15,6 +15,7 @@ class DropPropSprite : public Sprite {
 private:
     Prop *  m_prop;
     Sprite * m_icon;
+    Sprite  * m_shou;
     
     EventListenerTouchOneByOne * m_listener;
     
@@ -24,7 +25,7 @@ private:
     void    isTimeToEnd(float data);
     void    guangEnd(Node * pSender);
     void    moveEnd(Node * pSender);
-    
+    void    checkXinshou();
 public:
     DropPropSprite(Prop * prop, Vec2 point);
     ~DropPropSprite();

@@ -11,6 +11,8 @@
 #include "ShopPropIcon.h"
 #include "DropPropSprite.h"
 
+#include "GameUser.h"
+
 
 PropManager::PropManager():
 m_willTakeUpProp("")
@@ -197,7 +199,7 @@ bool PropManager::dropProp(string id,Vec2 point)
     log("drop prop");
     bool res = false;
     Prop * prop = m_propData[id];
-    if (prop->isUnlock())
+    if (prop->isUnlock() || !_G_U->isHaveXinshouYindao())
     {
         if (!prop->isTakeUp())
         {

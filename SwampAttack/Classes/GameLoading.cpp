@@ -12,7 +12,7 @@
 #include "PropManager.h"
 #include "DefenseBuildingManager.h"
 #include "GuanQiaManager.h"
-
+#include "GameUser.h"
 #include "json/json.h"
 
 float GameLoading::loadSprites()
@@ -30,6 +30,10 @@ float GameLoading::loadFrames()
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("explosion.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao2.plist"));
+    
+    if (!_G_U->isHaveXinshouYindao()) {
+        spriteFrameCache->addSpriteFramesWithFile(ImagePath("XinshouYindao.plist"));
+    }
     
     std::map<std::string,Gun *>::iterator gunIter;
     std::map<std::string,Gun *> gunData = GunManager::getInstance()->getTakeUpGunData();

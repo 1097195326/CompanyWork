@@ -12,6 +12,8 @@
 #include "MoneyManager.h"
 #include "PropManager.h"
 
+#include "GameUser.h"
+
 
 DropManager::DropManager():
 m_dropNum(0)
@@ -42,6 +44,11 @@ void DropManager::dropObject(string objId,Vec2 point)
     bool res = false;
     DropModel * model = m_dropData[objId];
     DropData dropData = model->getDropData();
+    if (!_G_U->isHaveXinshouYindao() && m_dropNum == 0)
+    {
+        dropData.id = "500001";
+        dropData.type = 2;
+    }
     switch (dropData.type)
     {
         case 1:
@@ -55,6 +62,7 @@ void DropManager::dropObject(string objId,Vec2 point)
         }
             break;
     }
+    
     if (res)
     {
         addDropNum();

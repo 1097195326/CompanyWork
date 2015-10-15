@@ -17,6 +17,7 @@
 class PropSpriteView : public Sprite,public GameObserver{
 protected:
     Prop * m_prop;
+    Sprite  *   m_shou;
     Sprite  *   m_blueBg;
     PropSprite  *   m_propIcon;
     Label   *   m_numLabel;
@@ -29,6 +30,7 @@ public:
     PropSpriteView(Prop * prop);
     ~PropSpriteView();
     
+    void    checkXinshou(float data);
     void updateData();
     Vec2    getViewPosition();
     

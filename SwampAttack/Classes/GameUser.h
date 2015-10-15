@@ -44,6 +44,9 @@ public:
     void    enterGame();
     void    exitGame();
     
+    void    setIsHaveXinshouYindao();
+    bool    isHaveXinshouYindao();
+    
     int     getTime();
     void    useHealthTimes();
     void    addHealthToFull();

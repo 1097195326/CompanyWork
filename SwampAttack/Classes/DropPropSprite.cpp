@@ -11,6 +11,7 @@
 #include "BaseUtil.h"
 
 #include "DropManager.h"
+#include "GameUser.h"
 
 DropPropSprite::DropPropSprite(Prop * prop, Vec2 point)
 {
@@ -45,10 +46,13 @@ DropPropSprite::DropPropSprite(Prop * prop, Vec2 point)
     {
         runAction(Sequence::create(EaseSineIn::create(MoveBy::create(0.3, Vec2(0,170 - p_y))),
                                    JumpBy::create(0.5, Vec2(0, 0), 50, 3),
+                                   CallFunc::create(CC_CALLBACK_0(DropPropSprite::checkXinshou, this)),
                                    NULL));
     }else
     {
-        runAction(JumpBy::create(0.5, Vec2(0, 0), 50, 3));
+        runAction(Sequence::create(JumpBy::create(0.5, Vec2(0, 0), 50, 3),
+                                   CallFunc::create(CC_CALLBACK_0(DropPropSprite::checkXinshou, this)),
+                                   NULL));
     }
     
     scheduleOnce(CC_SCHEDULE_SELECTOR(DropPropSprite::isTimeToEnd), 5);
@@ -62,9 +66,29 @@ DropPropSprite::~DropPropSprite()
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
     }
 }
+
 void DropPropSprite::isTimeToEnd(float data)
 {
     touchEnd(NULL, NULL);
+    if (!_G_U->isHaveXinshouYindao() && m_shou) {
+        m_shou->stopAllActions();
+        m_shou->removeFromParentAndCleanup(true);
+    }
+}
+void DropPropSprite::checkXinshou()
+{
+    if (!_G_U->isHaveXinshouYindao())
+    {
+        _G_V->shopGame();
+        Action * dianJiAc = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("shou", 6),
+                                                                   DelayTime::create(0.6),
+                                                                   NULL));
+        m_shou = Sprite::create();
+        addChild(m_shou,2);
+        m_shou->setScale(0.5);
+        m_shou->setPosition(Vec2(10, -30));
+        m_shou->runAction(dianJiAc);
+    }
 }
 void DropPropSprite::guangEnd(cocos2d::Node *pSender)
 {

@@ -175,6 +175,16 @@ void GameFightScene::resumeGameActions()
 {
     Director::getInstance()->getActionManager()->resumeTargets(m_actions);
 }
+void GameFightScene::shopGame()
+{
+    _G_D->stopGame();
+    shopGameActions();
+}
+void GameFightScene::resumeGame()
+{
+    resumeGameActions();
+    _G_D->continueGame();
+}
 void GameFightScene::showOverLayer()
 {
     RenderTexture * rt = getFightSceneTex();
