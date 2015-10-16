@@ -14,6 +14,7 @@
 #include "GameSprite.h"
 #include "GameShowDiscLayer.h"
 #include "GameShowLevelupLayer.h"
+#include "BaseUtil.h"
 
 ShopPropItemScrollHeadler::ShopPropItemScrollHeadler(int index)
 {
@@ -56,28 +57,30 @@ void ShopPropItemScrollHeadler::initUnlockView()
     
     Size itemBgSize = itemBg->getContentSize();
     
-    GameSprite * iconBg = new GameSprite(ImagePath("shopItemIconBg.png"));
-    iconBg->autorelease();
-    iconBg->m_touchMeCall = CC_CALLBACK_2(ShopPropItemScrollHeadler::showDiscView, this);
+    m_iconBg = new GameSprite(ImagePath("shopItemIconBg.png"));
+    m_iconBg->autorelease();
+    m_iconBg->m_touchMeCall = CC_CALLBACK_2(ShopPropItemScrollHeadler::showDiscView, this);
     
     //        Sprite * iconBg = Sprite::create(ImagePath("shopItemIconBg.png"));
-    iconBg->setPosition(- itemBgSize.width * 0.35,
+    m_iconBg->setPosition(- itemBgSize.width * 0.35,
                         0);
-    addChild(iconBg);
+    addChild(m_iconBg);
+    
+    Size iconBgSize = m_iconBg->getContentSize();
     
     Sprite * biaoSign = Sprite::create(ImagePath("shop_icon_sign.png"));
-    biaoSign->setPosition(- itemBgSize.width * 0.41,
-                          itemBgSize.height * 0.2);
-    addChild(biaoSign);
+    biaoSign->setPosition(iconBgSize.width * 0.25,
+                          iconBgSize.height * 0.71);
+    m_iconBg->addChild(biaoSign);
     
     string propModelId = prop->getModelId();
     string propIconStr = StringUtils::format("%s_icon.png",propModelId.c_str());
     string propNameStr = StringUtils::format("%s_name.png",propModelId.c_str());
     Sprite * icon = Sprite::create(ImagePath(propIconStr));
-    icon->setPosition(- itemBgSize.width * 0.35,
-                      0);
+    icon->setPosition(iconBgSize.width * 0.5,
+                      iconBgSize.height * 0.5);
     icon->setScale(0.85);
-    addChild(icon);
+    m_iconBg->addChild(icon,1);
     
     Sprite * iconName = Sprite::create(ImagePath(propNameStr));
     iconName->setPosition(-itemBgSize.width * 0.25
@@ -92,12 +95,16 @@ void ShopPropItemScrollHeadler::initUnlockView()
     m_upGradeButton->autorelease();
     addChild(m_upGradeButton);
     
+    Size upGradeButtonSize = m_upGradeButton->getContentSize();
+    
     m_buyButton = new GameSprite(ImagePath("shopItemButtonNormal.png"));
     m_buyButton->m_touchMeCall = CC_CALLBACK_2(ShopPropItemScrollHeadler::buy, this);
     m_buyButton->setPosition(-itemBgSize.width * 0.03,
                              -itemBgSize.height * 0.15);
     m_buyButton->autorelease();
     addChild(m_buyButton);
+    
+    Size buyButtonSize = m_buyButton->getContentSize();
     
     m_takeUpButton = MenuItemImage::create(ImagePath("shop_zhuanbei.png"),
                                            ImagePath("shop_zhuanbei.png"),
@@ -115,33 +122,33 @@ void ShopPropItemScrollHeadler::initUnlockView()
     
     m_bulletsLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 25);
     m_bulletsLabel->enableOutline(Color4B(0, 0, 0, 255),2);
-    m_bulletsLabel->setPosition(- itemBgSize.width * 0.32,
-                                -itemBgSize.height * 0.25);
+    m_bulletsLabel->setPosition(iconBgSize.width * 0.62,
+                                iconBgSize.height * 0.25);
     m_bulletsLabel->setAdditionalKerning(-3);
-    addChild(m_bulletsLabel,1);
+    m_iconBg->addChild(m_bulletsLabel,1);
     Sprite * bulletIcon = Sprite::create(ImagePath("shop_bullet_icon.png"));
-    bulletIcon->setPosition(- itemBgSize.width * 0.27,
-                            -itemBgSize.height * 0.25);
-    addChild(bulletIcon,1);
+    bulletIcon->setPosition(iconBgSize.width * 0.81  ,
+                            iconBgSize.height * 0.25);
+    m_iconBg->addChild(bulletIcon,1);
     
     Sprite * jinbi1 = Sprite::create(ImagePath("jinbi_icon.png"));
-    jinbi1->setPosition(itemBgSize.width * 0.08,
-                        -itemBgSize.height * 0.21);
+    jinbi1->setPosition(buyButtonSize.width * 0.85,
+                        buyButtonSize.height * 0.35);
     jinbi1->setScale(0.75);
-    addChild(jinbi1,1);
+    m_buyButton->addChild(jinbi1,1);
     string price = StringUtils::format("%d",prop->getPropPrice());
     m_buyLabel = Label::createWithTTF(price, "fonts/Arial Black.ttf", 30);
     m_buyLabel->enableOutline(Color4B(0, 0, 0, 255),3);
-    m_buyLabel->setPosition(-itemBgSize.width * 0.01,
-                            -itemBgSize.height * 0.21);
+    m_buyLabel->setPosition(buyButtonSize.width * 0.55,
+                            buyButtonSize.height * 0.35);
     m_buyLabel->setAdditionalKerning(-3);
-    addChild(m_buyLabel,1);
+    m_buyButton->addChild(m_buyLabel,1);
     Label * buyLabel = Label::createWithTTF("AMMO", "fonts/Arial Black.ttf", 30);
-    buyLabel->setPosition(-itemBgSize.width * 0.03,
-                          -itemBgSize.height * 0.04);
+    buyLabel->setPosition(buyButtonSize.width * 0.5,
+                          buyButtonSize.height * 0.73);
     buyLabel->enableOutline(Color4B(0, 0, 0, 255),3);
     buyLabel->setAdditionalKerning(-3);
-    addChild(buyLabel,1);
+    m_buyButton->addChild(buyLabel,1);
 //    Sprite * buyLabel = Sprite::create(ImagePath("shopItemLabel2.png"));
 //    buyLabel->setPosition(-itemBgSize.width * 0.03,
 //                          -itemBgSize.height * 0.04);
@@ -149,11 +156,11 @@ void ShopPropItemScrollHeadler::initUnlockView()
     
     //--
     Label * upgradeLabel = Label::createWithTTF("LEVEL UP", "fonts/Arial Black.ttf", 30);
-    upgradeLabel->setPosition(itemBgSize.width * 0.295,
-                              -itemBgSize.height * 0.04);
+    upgradeLabel->setPosition(upGradeButtonSize.width * 0.5,
+                              upGradeButtonSize.height * 0.73);
     upgradeLabel->enableOutline(Color4B(0, 0, 0, 255),3);
     upgradeLabel->setAdditionalKerning(-3);
-    addChild(upgradeLabel);
+    m_upGradeButton->addChild(upgradeLabel);
 //    Sprite * upgradeLabel = Sprite::create(ImagePath("shopItemLabel1.png"));
 //    upgradeLabel->setPosition(itemBgSize.width * 0.29,
 //                              -itemBgSize.height * 0.04);
@@ -175,16 +182,16 @@ void ShopPropItemScrollHeadler::initUnlockView()
     
     m_upgradeLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 30);
     m_upgradeLabel->enableOutline(Color4B(0, 0, 0, 255),3);
-    m_upgradeLabel->setPosition(itemBgSize.width * 0.3,
-                                -itemBgSize.height * 0.21);
+    m_upgradeLabel->setPosition(upGradeButtonSize.width * 0.55,
+                                upGradeButtonSize.height * 0.35);
     m_upgradeLabel->setAdditionalKerning(-3);
-    addChild(m_upgradeLabel,1);
+    m_upGradeButton->addChild(m_upgradeLabel,1);
     
     Sprite * jinbi2 = Sprite::create(ImagePath("jinbi_icon.png"));
-    jinbi2->setPosition(itemBgSize.width * 0.4,
-                        -itemBgSize.height * 0.21);
+    jinbi2->setPosition(upGradeButtonSize.width * 0.85,
+                        upGradeButtonSize.height * 0.35);
     jinbi2->setScale(0.75);
-    addChild(jinbi2);
+    m_upGradeButton->addChild(jinbi2);
 }
 void ShopPropItemScrollHeadler::initLockView()
 {
@@ -219,6 +226,12 @@ void ShopPropItemScrollHeadler::initLockView()
 //    iconName->enableOutline(Color4B(0, 0, 0, 255),3);
 //    iconName->setAdditionalKerning(-3);
 //    addChild(iconName);
+    Label * m_text = Label::createWithTTF(prop->getUnlockStr(), FontPath, 30);
+    m_text->setLineHeight(35);
+    m_text->setDimensions(itemBgSize.width * 0.3, itemBgSize.height * 0.2);
+    m_text->setPosition(-itemBgSize.width * 0.028,
+                        -itemBgSize.height * 0.18);
+    addChild(m_text);
     
     m_unLockButton = new GameSprite(ImagePath("shopItemButonUnclock.png"));
     m_unLockButton->m_touchMeCall =CC_CALLBACK_2(ShopPropItemScrollHeadler::unLock, this);
@@ -227,12 +240,14 @@ void ShopPropItemScrollHeadler::initLockView()
                                 -itemBgSize.height * 0.15);
     addChild(m_unLockButton);
     
+    Size unlockButtonSize = m_unLockButton->getContentSize();
+    
     Label * unlockName = Label::createWithTTF("UNLOCK", "fonts/Arial Black.ttf", 30);
-    unlockName->setPosition(itemBgSize.width * 0.295,
-                            -itemBgSize.height * 0.04);
+    unlockName->setPosition(unlockButtonSize.width * 0.5,
+                            unlockButtonSize.height * 0.68);
     unlockName->enableOutline(Color4B(0, 0, 0, 255),3);
     unlockName->setAdditionalKerning(-3);
-    addChild(unlockName);
+    m_unLockButton->addChild(unlockName);
 //    Sprite * unlockName = Sprite::create(ImagePath("shopItemUnlockName.png"));
 //    unlockName->setPosition(itemBgSize.width * 0.29,
 //                            -itemBgSize.height * 0.15);
@@ -241,16 +256,16 @@ void ShopPropItemScrollHeadler::initLockView()
     Label * unlockLabel = Label::createWithTTF(StringUtils::format("%d",prop->getUnlockGold()),
                                                "fonts/Arial Black.ttf",
                                                30);
-    unlockLabel->setPosition(itemBgSize.width * 0.3,
-                             -itemBgSize.height * 0.21);
+    unlockLabel->setPosition(unlockButtonSize.width * 0.5,
+                             unlockButtonSize.height * 0.35);
     unlockLabel->enableOutline(Color4B(0, 0, 0, 255),3);
     unlockLabel->setAdditionalKerning(-3);
-    addChild(unlockLabel);
+    m_unLockButton->addChild(unlockLabel);
     Sprite * jinbi2 = Sprite::create(ImagePath("jinbi_icon.png"));
-    jinbi2->setPosition(itemBgSize.width * 0.4,
-                        -itemBgSize.height * 0.21);
+    jinbi2->setPosition(unlockButtonSize.width * 0.85,
+                        unlockButtonSize.height * 0.35);
     jinbi2->setScale(0.75);
-    addChild(jinbi2);
+    m_unLockButton->addChild(jinbi2);
 }
 void ShopPropItemScrollHeadler::updateDaojuView()
 {
@@ -292,6 +307,30 @@ void ShopPropItemScrollHeadler::updateDaojuView()
             m_upGradeButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
         }
     }
+}
+void ShopPropItemScrollHeadler::setHealderSelect()
+{
+    auto spriteFrameCache = SpriteFrameCache::getInstance();
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao2.plist"));
+    
+    Action * guangAc = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("item_flash", 4));
+    Sprite * texiao = Sprite::create();
+    Sprite * guang = Sprite::create();
+    texiao->addChild(guang);
+    guang->runAction(guangAc);
+    m_iconBg->addChild(texiao);
+    Size iconBgSize = m_iconBg->getContentSize();
+    texiao->setPosition(iconBgSize.width * 0.5, iconBgSize.height * 0.5);
+    texiao->setScale(1.5);
+    texiao->runAction(Sequence::create(DelayTime::create(1),
+                                       FadeOut::create(0.3),
+                                       CallFuncN::create(CC_CALLBACK_1(ShopPropItemScrollHeadler::guangEnd, this)),
+                                       NULL));
+}
+void ShopPropItemScrollHeadler::guangEnd(cocos2d::Node *pSender)
+{
+    pSender->stopAllActions();
+    pSender->removeFromParentAndCleanup(true);
 }
 void ShopPropItemScrollHeadler::updateData()
 {

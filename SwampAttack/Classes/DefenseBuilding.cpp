@@ -20,8 +20,7 @@
 DefenseBuilding::DefenseBuilding(Json::Value data):
 m_isMaxLevel(false),
 m_isUnlock(false),
-m_state(d_normal),
-m_index(0.0)
+m_state(d_normal)
 {
     m_id = data["DefenceId"].asString() ;
     string defenceName = data["DefenceName"].asString();
@@ -35,6 +34,7 @@ m_index(0.0)
     string defenceDescription = data["DefenceDescription"].asString();
     m_defenceDescription = _C_M->getTranslateById(defenceDescription);
     m_limitLevel = atoi(data["LimitLevel"].asString().c_str());
+    m_unlockStr = _C_M->getTranslateById( data["Unlock"].asString());
     //
     m_strengthenLevel = _G_U->getBuildingLevel(m_id);
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
@@ -198,6 +198,10 @@ string DefenseBuilding::getDefenceDescription()
 {
     return m_defenceDescription;
 }
+string DefenseBuilding::getUnlockStr()
+{
+    return m_unlockStr;
+}
 int DefenseBuilding::getLimitLevel()
 {
     return m_limitLevel;
@@ -218,4 +222,12 @@ int DefenseBuilding::getDamage()
 int DefenseBuilding::getStrengthGold()
 {
     return m_strengthenGold;
+}
+int DefenseBuilding::getIndex()
+{
+    return m_index;
+}
+void DefenseBuilding::setIndex(int index)
+{
+    m_index = index;
 }

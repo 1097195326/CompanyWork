@@ -326,7 +326,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/DropPropSprite.o: \
  jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h \
  jni/../../Classes/GameObject.h jni/../../Classes/GameFightScene.h \
  jni/../../Classes/BaseUtil.h jni/../../Classes/DropManager.h \
- jni/../../Classes/DropModel.h
+ jni/../../Classes/DropModel.h jni/../../Classes/GameUser.h
 
 jni/../../Classes/DropPropSprite.h:
 
@@ -999,3 +999,5 @@ jni/../../Classes/BaseUtil.h:
 jni/../../Classes/DropManager.h:
 
 jni/../../Classes/DropModel.h:
+
+jni/../../Classes/GameUser.h:

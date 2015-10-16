@@ -11,6 +11,8 @@
 #include "ShopPropIcon.h"
 #include "DropPropSprite.h"
 
+#include "GameUser.h"
+
 
 PropManager::PropManager():
 m_willTakeUpProp("")
@@ -19,6 +21,7 @@ m_willTakeUpProp("")
     m_hashHead = propHelper->getHashHead();
     Json::Value data = propHelper->getJsonData();
     
+    int index = 0;
     std::map<int,std::string>::iterator iter;
     for (iter = m_hashHead.begin(); iter != m_hashHead.end(); ++iter) {
         string propId = iter->second;
@@ -28,6 +31,8 @@ m_willTakeUpProp("")
 //            log("prop take up index :%d",prop->getTakeUpIndex());
             m_takeUpPropData[propId] = prop;
         }
+        prop->setIndex(index);
+        ++index;
     }
     
 }
@@ -194,7 +199,7 @@ bool PropManager::dropProp(string id,Vec2 point)
     log("drop prop");
     bool res = false;
     Prop * prop = m_propData[id];
-    if (prop->isUnlock())
+    if (prop->isUnlock() || !_G_U->isHaveXinshouYindao())
     {
         if (!prop->isTakeUp())
         {

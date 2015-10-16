@@ -358,7 +358,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/PropSpriteView.o: \
  jni/../../Classes/PropSprite.h jni/../../Classes/GameMapManager.h \
  jni/../../Classes/GameMap.h jni/../../Classes/GameMap6.h \
  jni/../../Classes/GameMap5s.h jni/../../Classes/GameFightScene.h \
- jni/../../Classes/PropManager.h jni/../../Classes/PropSprite_daoju1.h \
+ jni/../../Classes/PropManager.h jni/../../Classes/GameUser.h \
+ jni/../../Classes/DropManager.h jni/../../Classes/DropModel.h \
+ jni/../../Classes/BaseUtil.h jni/../../Classes/PropSprite_daoju1.h \
  jni/../../Classes/PropSprite_daoju2.h \
  jni/../../Classes/PropSprite_daoju3.h \
  jni/../../Classes/PropSprite_daoju5.h \
@@ -1106,6 +1108,14 @@ jni/../../Classes/GameMap5s.h:
 jni/../../Classes/GameFightScene.h:
 
 jni/../../Classes/PropManager.h:
+
+jni/../../Classes/GameUser.h:
+
+jni/../../Classes/DropManager.h:
+
+jni/../../Classes/DropModel.h:
+
+jni/../../Classes/BaseUtil.h:
 
 jni/../../Classes/PropSprite_daoju1.h:
 

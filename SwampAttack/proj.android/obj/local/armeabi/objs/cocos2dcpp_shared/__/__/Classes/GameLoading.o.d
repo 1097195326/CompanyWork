@@ -359,7 +359,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameLoading.o: \
  jni/../../Classes/Prop.h jni/../../Classes/DefenseBuildingManager.h \
  jni/../../Classes/DefenseBuilding.h jni/../../Classes/GuanQiaManager.h \
  jni/../../Classes/GuanQiaModel.h jni/../../Classes/ConfigManager.h \
- jni/../../Classes/CCCsvHelper.h
+ jni/../../Classes/CCCsvHelper.h jni/../../Classes/GameUser.h
 
 jni/../../Classes/GameLoading.h:
 
@@ -1104,3 +1104,5 @@ jni/../../Classes/GuanQiaModel.h:
 jni/../../Classes/ConfigManager.h:
 
 jni/../../Classes/CCCsvHelper.h:
+
+jni/../../Classes/GameUser.h:

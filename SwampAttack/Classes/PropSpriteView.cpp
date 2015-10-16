@@ -11,6 +11,10 @@
 #include "GameFightScene.h"
 #include "PropManager.h"
 
+#include "GameUser.h"
+#include "DropManager.h"
+#include "BaseUtil.h"
+
 #include "PropSprite_daoju1.h"
 #include "PropSprite_daoju2.h"
 #include "PropSprite_daoju3.h"
@@ -56,6 +60,11 @@ m_moveJuli(0.0f)
     m_listener->onTouchEnded = CC_CALLBACK_2(PropSpriteView::touchEnd, this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener, m_blueBg);
     
+    if (!_G_U->isHaveXinshouYindao()) {
+//        schedule(CC_SCHEDULE_SELECTOR(PropSpriteView::checkXinshou), 0.5, true, 0);
+        schedule(CC_SCHEDULE_SELECTOR(PropSpriteView::checkXinshou), 0.5);
+    }
+    
     _G_V->addChild(this,640);
 }
 PropSpriteView::~PropSpriteView()
@@ -63,6 +72,34 @@ PropSpriteView::~PropSpriteView()
     if(m_listener)
     {
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
+    }
+}
+void PropSpriteView::checkXinshou(float data)
+{
+    if (_G_U->isHaveXinshouYindao())
+    {
+        unschedule(CC_SCHEDULE_SELECTOR(PropSpriteView::checkXinshou));
+    }else
+    {
+        if (DropManager::getInstance()->getDropNum() == 0)
+        {
+            unschedule(CC_SCHEDULE_SELECTOR(PropSpriteView::checkXinshou));
+            Action * dianJiAc = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("shou", 6),
+                                                                       EaseSineIn::create(MoveBy::create(0.3, Vec2(-50, -80))),
+                                                                       DelayTime::create(0.6),
+                                                                       MoveBy::create(0.1, Vec2(50, 80)),
+                                                                       NULL));
+            m_shou = Sprite::create();
+            addChild(m_shou,6);
+            
+            int iconIndex = m_prop->getTakeUpIndex();
+            Vec2 iconPoint = _G_M_M->fightScene_PropIcon_Position;
+            float iconWidth = m_blueBg->getContentSize().width;
+            m_shou->setPosition(iconPoint - Vec2((iconWidth + 0) * (iconIndex - 1), 0) * m_iconScale + Vec2(10, -30));
+            m_shou->setScale(0.5);
+            m_shou->runAction(dianJiAc);
+            
+        }
     }
 }
 Vec2 PropSpriteView::getViewPosition()
@@ -129,9 +166,18 @@ void PropSpriteView::touchEnd(Touch *touch, Event *event)
         m_propIcon = NULL;
     }else
     {
+        if (!_G_U->isHaveXinshouYindao()) {
+            m_shou->stopAllActions();
+            m_shou->removeAllChildrenWithCleanup(true);
+            m_shou->removeFromParentAndCleanup(true);
+            _G_U->setIsHaveXinshouYindao();
+            _G_V->resumeGame();
+        }
+        
         m_prop->useProp();
         m_propIcon->moveEnd();
         m_propIcon = NULL;
+        
     }
     
 }

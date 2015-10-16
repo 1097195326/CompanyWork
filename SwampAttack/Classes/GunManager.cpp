@@ -18,6 +18,9 @@ m_willTakeUpGun("")
     GCCsvHelper * gunHelper = _C_M->getCsvHelperByName("wuqi");
     m_hashHead = gunHelper->getHashHead();
     Json::Value data = gunHelper->getJsonData();
+    
+    int index = 0;
+
     std::map<int,std::string>::iterator iter;
     for (iter = m_hashHead.begin(); iter != m_hashHead.end(); ++iter) {
         string gunId = iter->second;
@@ -28,6 +31,8 @@ m_willTakeUpGun("")
 //            log("gun take up index :%d",gun->getTakeUpIndex());
             m_takeUpGunData[gunId] = gun;
         }
+        gun->setIndex(index);
+        ++index;
     }
     currentGun = m_gunData[defaultGunID];
     

@@ -74,6 +74,7 @@ public:
     void    saveBullet();
     
 private:
+    int     m_index;
     string  m_id;
     string  m_weaponName;           //  武器名称
     string  m_modelId;              //  模型编号
@@ -100,6 +101,7 @@ private:
     string  m_unlockMission;        //  解锁关卡
     int     m_unlockGold;           //  解锁价格
     string  m_weaponDescription;    //  武器描述
+    string  m_unlockStr;
     //---- upgrade -----
     int     m_strengthenLevel;      //  强化等级
     float   m_damage;               //  伤害
@@ -144,7 +146,10 @@ public:
     string  getUnlockMission();
     int     getUnlockGold();
     string  getWeaponDescription();
+    string  getUnlockStr();
     
+    int     getIndex();
+    void    setIndex(int index);
 public:
     Gun(Json::Value data);
     ~Gun();

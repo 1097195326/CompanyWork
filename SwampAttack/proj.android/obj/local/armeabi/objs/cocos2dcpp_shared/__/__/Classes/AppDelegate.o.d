@@ -359,7 +359,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/AppDelegate.o: \
  jni/../../Classes/GameVerticalScrollHeadlerView.h \
  jni/../../Classes/GameOverScene.h jni/../../Classes/GameHomeScene.h \
  jni/../../Classes/GameCgShowScene.h jni/../../Classes/GameUser.h \
- jni/../../Classes/GameSubject.h
+ jni/../../Classes/GameSubject.h jni/../../Classes/MobClickCpp.h
 
 jni/../../Classes/AppDelegate.h:
 
@@ -1096,3 +1096,5 @@ jni/../../Classes/GameCgShowScene.h:
 jni/../../Classes/GameUser.h:
 
 jni/../../Classes/GameSubject.h:
+
+jni/../../Classes/MobClickCpp.h:

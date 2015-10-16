@@ -317,6 +317,24 @@ bool Enemy::isBoss()
     }else if (m_id == "200004")
     {
         isB = true;
+    }else if (m_id == "200005")
+    {
+        isB = true;
+    }else if (m_id == "200006")
+    {
+        isB = true;
+    }else if (m_id == "200007")
+    {
+        isB = true;
+    }else if (m_id == "200008")
+    {
+        isB = true;
+    }else if (m_id == "200009")
+    {
+        isB = true;
+    }else if (m_id == "200010")
+    {
+        isB = true;
     }
     
     return isB;
@@ -383,8 +401,8 @@ void Enemy::attackCall()
                                0,
                                1,
                                t_house,
-                               m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_health * 0.7),
-                               m_targetPoint + Vec2(0,m_health * 0.7),
+                               m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_height * 0.65),
+                               m_targetPoint + Vec2(0,m_height * 0.65),
                                m_bulletModelId
                                );
             BulletManager::getInstance()->fire(bp);
@@ -411,7 +429,7 @@ void Enemy::attackCall()
                                0,
                                1,
                                t_house,
-                               m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_health * 0.7),
+                               m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_height * 0.5),
                                m_targetPoint + Vec2(random(0, _G_M_M->flyEnemy_target_rightLine),
                                                     random(0, _G_M_M->flyEnemy_target_upLine)),
                                m_bulletModelId

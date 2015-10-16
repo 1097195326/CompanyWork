@@ -19,6 +19,7 @@ DefenseBuildingManager::DefenseBuildingManager()
     m_hashHead = buildingHelper->getHashHead();
     Json::Value data = buildingHelper->getJsonData();
     
+    int index = 0;
     std::map<int,std::string>::iterator iter;
     for (iter = m_hashHead.begin(); iter != m_hashHead.end(); ++iter) {
         string propId = iter->second;
@@ -40,7 +41,8 @@ DefenseBuildingManager::DefenseBuildingManager()
                 m_buildingData[propId] = new DefenseBuilding(data[propId]);
                 break;
         }
-        
+        m_buildingData[propId]->setIndex(index);
+        ++index;
     }
 }
 DefenseBuildingManager::~DefenseBuildingManager()

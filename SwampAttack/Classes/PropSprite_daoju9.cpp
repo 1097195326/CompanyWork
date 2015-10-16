@@ -30,6 +30,7 @@ void PropSprite_daoju9::canToHurt()
         return;
     }
     m_state = p_s_hurting;
+    setZOrder(4);
     
     ActionInterval * a2 = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("daoju9_springs", 9), NULL);
     ActionInterval * a1 = Sequence::create(DelayTime::create(0.08 * 2),

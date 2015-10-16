@@ -191,6 +191,7 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		D85EF8531BC502C800184DAC /* libMobClickCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D85EF8511BC5018F00184DAC /* libMobClickCpp.a */; };
 		D8B187641B49414300CB33CF /* UserDelegatLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8B187621B49414300CB33CF /* UserDelegatLayer.cpp */; };
 		D8D673A91B19DFD0004C463F /* GuanQiaManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D673A71B19DFD0004C463F /* GuanQiaManager.cpp */; };
 		D8D673AC1B19F7DD004C463F /* MapGuanqiaButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D673AA1B19F7DD004C463F /* MapGuanqiaButton.cpp */; };
@@ -541,6 +542,9 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		D85EF84D1BC4FFD700184DAC /* MobClickCpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickCpp.h; sourceTree = "<group>"; };
+		D85EF84F1BC5011F00184DAC /* libMobClickCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobClickCpp.a; path = ../Classes/libMobClickCpp.a; sourceTree = "<group>"; };
+		D85EF8511BC5018F00184DAC /* libMobClickCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickCpp.a; sourceTree = "<group>"; };
 		D8B187621B49414300CB33CF /* UserDelegatLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserDelegatLayer.cpp; sourceTree = "<group>"; };
 		D8B187631B49414300CB33CF /* UserDelegatLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDelegatLayer.h; sourceTree = "<group>"; };
 		D8D673A71B19DFD0004C463F /* GuanQiaManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuanQiaManager.cpp; sourceTree = "<group>"; };
@@ -559,6 +563,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85EF8531BC502C800184DAC /* libMobClickCpp.a in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -645,6 +650,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D85EF84F1BC5011F00184DAC /* libMobClickCpp.a */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
 				503AE11117EB99EE00D1A890 /* libcurl.dylib */,
@@ -683,6 +689,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D85EF84B1BC4FFCE00184DAC /* UM */,
 				8DBB98771ACD520C008C804D /* json */,
 				8DC10AD71AC40821004F7DE2 /* Base */,
 				8DC10AD21AC4050F004F7DE2 /* UI */,
@@ -1176,6 +1183,15 @@
 			name = UIModel;
 			sourceTree = "<group>";
 		};
+		D85EF84B1BC4FFCE00184DAC /* UM */ = {
+			isa = PBXGroup;
+			children = (
+				D85EF8511BC5018F00184DAC /* libMobClickCpp.a */,
+				D85EF84D1BC4FFD700184DAC /* MobClickCpp.h */,
+			);
+			name = UM;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1497,9 +1513,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = GameCC.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hongxing zhang (237VJJ4EJS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hongxing zhang (237VJJ4EJS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1518,8 +1535,8 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "";
-				PROVISIONING_PROFILE = "d2408297-1403-407e-ad32-3c158f45deb8";
+				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1532,9 +1549,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = GameCC.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hongxing zhang (ZAG6XVYQV4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hongxing zhang (ZAG6XVYQV4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -1551,8 +1569,8 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "";
-				PROVISIONING_PROFILE = "d2408297-1403-407e-ad32-3c158f45deb8";
+				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";

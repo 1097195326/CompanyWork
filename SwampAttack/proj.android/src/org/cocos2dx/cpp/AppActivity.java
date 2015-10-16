@@ -30,6 +30,7 @@ import org.cocos2dx.lib.Cocos2dxActivity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+<<<<<<< HEAD
 import com.cmcc.security.nativeC;
 
 
@@ -332,4 +333,21 @@ public class AppActivity extends Cocos2dxActivity {
     }
 	
 	
+=======
+import com.umeng.mobclickcpp.MobClickCppHelper;
+
+import android.os.Bundle;
+
+public class AppActivity extends Cocos2dxActivity {
+	 @Override
+	    protected void onCreate(Bundle savedInstanceState){
+	            super.onCreate(savedInstanceState);
+	            MobClickCppHelper.init(this);
+	    }
+
+	    static {
+	        MobClickCppHelper.loadLibrary();
+	    }
+
+>>>>>>> master
 }

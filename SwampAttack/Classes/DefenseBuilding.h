@@ -44,7 +44,7 @@ public:
     bool    isInRange(Vec2 point);
 protected:
     DefenseState m_state;
-    float       m_index;
+    int        m_index;
     Vec2        m_point;
     //--- ---
     string      m_id;
@@ -56,6 +56,7 @@ protected:
     string      m_unlockMission;
     int         m_unlockGold;
     string      m_defenceDescription;
+    string      m_unlockStr;
     int         m_limitLevel;
     //
     int         m_strengthenLevel;
@@ -82,12 +83,18 @@ public:
     string  getUnlockMission();
     int     getUnlockGold();
     string  getDefenceDescription();
+    string  getUnlockStr();
     int     getLimitLevel();
     //
     int     getStrengthLevel();
     int     getHp();
     int     getDamage();
     int     getStrengthGold();
+    int     getIndex();
+    //---
+    
+    void    setIndex(int index);
+    
     
 };
 

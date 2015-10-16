@@ -9,6 +9,8 @@
 #include "GameCgShowScene.h"
 #include "GameUser.h"
 
+#include "MobClickCpp.h"
+
 
 USING_NS_CC;
 
@@ -49,6 +51,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
         glview = GLViewImpl::create("My Game");
         director->setOpenGLView(glview);
     }
+    
+    
+    MOBCLICKCPP_START_WITH_APPKEY("56148cf067e58ed28e0058bb");
+    
     Size sreenSize = glview->getFrameSize();
     Size sourceSize = {1136, 640};
     Size designSize = {1136.0f, 640.0f};
@@ -119,6 +125,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 void AppDelegate::applicationDidEnterBackground() {
     Director::getInstance()->stopAnimation();
     _G_U->exitGame();
+    umeng::MobClickCpp::applicationDidEnterBackground();
     // if you use SimpleAudioEngine, it must be pause
     // SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
 }
@@ -127,6 +134,7 @@ void AppDelegate::applicationDidEnterBackground() {
 void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
     _G_U->enterGame();
+    umeng::MobClickCpp::applicationWillEnterForeground();
     // if you use SimpleAudioEngine, it must resume here
     // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }

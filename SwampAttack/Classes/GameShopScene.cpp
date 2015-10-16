@@ -24,14 +24,23 @@
 #include "ShopBuildingItemScrollHeadler.h"
 #include "ShopAwardItemScrollHeadler.h"
 
-//Scene * GameShopScene::scene()
-//{
-//    Scene * scene = Scene::create();
+Scene * GameShopScene::scene(ShopGotoData data)
+{
+    Scene * scene = Scene::create();
 //    GameShopScene * layer = GameShopScene::create();
-//    scene->addChild(layer);
-//    
-//    return scene;
-//}
+    GameShopScene * layer = new GameShopScene();
+    if (layer && layer->init(data)) {
+        layer->autorelease();
+    }else
+    {
+        delete layer;
+        layer = NULL;
+        return NULL;
+    }
+    scene->addChild(layer);
+    
+    return scene;
+}
 GameShopScene::~GameShopScene()
 {
 //    log("shop scene release");
@@ -39,7 +48,7 @@ GameShopScene::~GameShopScene()
 
     m_scrollViews.clear();
 }
-bool GameShopScene::init()
+bool GameShopScene::init(ShopGotoData data)
 {
     if (!Layer::init())
     {
@@ -47,7 +56,7 @@ bool GameShopScene::init()
     }
     
     initShopView();
-    initScrollView();
+    initScrollView(data);
 
     string gunId = GunManager::getInstance()->getWillTakeUpGun();
     if (gunId.size() > 0)
@@ -58,6 +67,13 @@ bool GameShopScene::init()
     if (propId.size() > 0) {
         PropManager::getInstance()->takeUpWillProp();
     }
+    
+//    ShopSelectMenuView * menuView = (ShopSelectMenuView *) m_sub;
+//    menuView->setSelectIndex(data.item);
+//    if(m_scrollViews[data.item])
+//    {
+//        m_scrollViews[data.item]->moveToViewAtIndex(data.scrollIndex);
+//    }
 //    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
 //    if(SimpleAudioEngine::getInstance()->isBackgroundMusicPlaying())
     
@@ -91,7 +107,7 @@ void GameShopScene::initShopView()
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu,1);
 }
-void GameShopScene::initScrollView()
+void GameShopScene::initScrollView(ShopGotoData data)
 {
     Sprite * bg2 = Sprite::create(ImagePath("shopBg2.png"));
     bg2->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
@@ -129,10 +145,17 @@ void GameShopScene::initScrollView()
         m_scrollViews[i]->setGetHeadlerTarget(this);
         m_scrollViews[i]->setTag(i);
         m_scrollViews[i]->initView();
+        if (i == data.item && !(data.item == 0 && data.scrollIndex ==0)) {
+            m_scrollViews[i]->moveToViewAtIndex(data.scrollIndex);
+            m_scrollViews[i]->setHeadlerSelect(data.scrollIndex);
+        }else
+        {
+            m_scrollViews[i]->setScale(0.0001);
+        }
         m_scrollViews[i]->autorelease();
         m_scrollViews[i]->setPosition(bg2->getBoundingBox().origin.x - 20, bg2->getBoundingBox().origin.y);
         bg2->addChild(m_scrollViews[i],2);
-        m_scrollViews[i]->setScale(0.0001);
+        
     }
     //    m_scrollView = new GameVerticalScrollHeadlerView(800,400,750,210,0);
     //    m_scrollView->setScrollControllerContentWidth(800);
@@ -148,10 +171,13 @@ void GameShopScene::initScrollView()
     menuView->setNormalSprite("shopItemNormal");
     menuView->setSelectSprite("shopItemSelect");
 //    menuView->setIconSprite("shopItemIcon");
+    menuView->setSelectIndex(data.item);
     menuView->checkIndex();
     menuView->setPosition(bg2->getTextureRect().size.width * 0.5 -5,
                           bg2->getTextureRect().size.height * 0.8);
     bg2->addChild(menuView,5);
+    
+    
 }
 void GameShopScene::updateData()
 {

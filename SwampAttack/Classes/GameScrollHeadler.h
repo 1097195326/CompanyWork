@@ -22,6 +22,7 @@ public:
 public:
     void    setIndex(int index);
     int     getIndex();
+    virtual void    setHealderSelect();
 };
 
 #endif /* defined(__SwampAttack__GameScrollHeadler__) */

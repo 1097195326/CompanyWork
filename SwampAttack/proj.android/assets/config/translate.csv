@@ -82,7 +82,7 @@ tid#MissionName14,火力全开,Firepower
 tid#MissionName15,森林之王,King of the forest
 tid#MissionName16,在希望的田野上,In the field of hope
 tid#MissionName17,恐怖来袭,Terrorist attack
-tid#MissionName18,不平静的一天,A quiet day
+tid#MissionName18,不平静的夜,A quiet day
 tid#MissionName19,胜利就在前方,Victory is ahead
 tid#MissionName20,让我们一起摇摆,Let us swing together
 tid#MissionName21,埋骨之地,The place of burial
@@ -95,26 +95,26 @@ tid#MissionName27,一波的怪物,A wave of monsters
 tid#MissionName28,一大波怪物,A big wave of monsters
 tid#MissionName29,又来一大波怪物,And a big wave of monsters
 tid#MissionName30,一条小路,A path
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
+tid#MissionName31,迷失之地,Lost ground
+tid#MissionName32,长着翅膀的怪物,A monster with wings
+tid#MissionName33,南瓜绅士的来了,The gentleman's coming.
+tid#MissionName34,狼又来了,The wolf came again.
+tid#MissionName35,这是地狱吗,Is this hell
+tid#MissionName36,大脚印,Big footprints
+tid#MissionName37,变体的恶魔,Variant of the demon
+tid#MissionName38,要继续前进吗,Do you want to keep going.
+tid#MissionName39,巨盾,Giant shield
+tid#MissionName40,深山中的野人王,The mountains of the savage King
+tid#MissionName41,远程射击,Remote shooting
+tid#MissionName42,骷髅和僵尸们,Skeletons and Zombies
+tid#MissionName43,嗡嗡嗡,Hum
+tid#MissionName44,小心杀人蜂,Be careful of the killer bee
+tid#MissionName45,未知生物,Unknown organism
+tid#MissionName46,憎恶,Abhor
+tid#MissionName47,末日余生,The end of the day
+tid#MissionName48,亡灵大军来了,The army of the dead
+tid#MissionName49,吸血鬼,Vampires
+tid#MissionName50,恶魔领域,Demon realm
 ,,
 ,,
 tid#ItemName1,雷管,Detonator
@@ -184,3 +184,25 @@ tid#Scene1,执著的怨恨让沉睡千年的恶魔再次苏醒，大恶魔率领
 tid#Scene2,教皇针对全世界发布召唤，号召英雄们对抗魔军,
 tid#Scene3,悬赏令传到了恶魔猎人的故乡，他决心再次终结恶魔的野心,
 tid#Scene4,宿命的对抗即将开始。,
+,,
+tid#unlock1,第12关解锁,
+tid#unlock2,第17关解锁,
+tid#unlock3,第38关解锁,
+tid#unlock4,第42关解锁,
+tid#unlock5,第45关解锁,
+tid#unlock6,第50关解锁,
+,,
+tid#unlock7,第1关解锁,
+tid#unlock8,第2关解锁,
+tid#unlock9,第3关解锁,
+tid#unlock10,第4关解锁,
+tid#unlock11,第8关解锁,
+tid#unlock12,第32关解锁,
+tid#unlock13,第40关解锁,
+,,
+tid#unlock14,第5关解锁,
+tid#unlock15,第10关解锁,
+tid#unlock16,第15关解锁,
+tid#unlock17,第20关解锁,
+tid#unlock18,第25关解锁,
+tid#unlock19,第30关解锁,

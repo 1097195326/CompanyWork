@@ -28,6 +28,7 @@ private:
     GameSprite * m_upGradeButton;
     GameSprite * m_unLockButton;
     GameSprite * m_buyButton;
+    GameSprite * m_iconBg;
     MenuItemImage * m_takeUpButton;
     
     GameShopScene * m_shopScene;
@@ -47,6 +48,8 @@ public:
     ShopPropItemScrollHeadler(int index);
     ~ShopPropItemScrollHeadler();
     
+    void    setHealderSelect();
+    void    guangEnd(cocos2d::Node *pSender);
     void    updateData();
 };
 

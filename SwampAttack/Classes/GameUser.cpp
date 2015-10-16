@@ -93,6 +93,14 @@ int GameUser::getTime()
 {
     return m_time;
 }
+void GameUser::setIsHaveXinshouYindao()
+{
+    setBoolForKey("user_xinshou_yindao", true);
+}
+bool GameUser::isHaveXinshouYindao()
+{
+    return getBoolForKey("user_xinshou_yindao");
+}
 void GameUser::setUserHealth(int health)
 {
     setIntForKey("user_health", health);

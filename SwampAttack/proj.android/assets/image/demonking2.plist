@@ -17,6 +17,58 @@
                 <key>sourceSize</key>
                 <string>{450,400}</string>
             </dict>
+            <key>demonking_bullet0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{826,59},{162,60}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{162,60}}</string>
+                <key>sourceSize</key>
+                <string>{164,60}</string>
+            </dict>
+            <key>demonking_bullet0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{826,2},{194,55}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{194,55}}</string>
+                <key>sourceSize</key>
+                <string>{196,55}</string>
+            </dict>
+            <key>demonking_bullet0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{826,121},{197,53}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{1,0},{197,53}}</string>
+                <key>sourceSize</key>
+                <string>{199,53}</string>
+            </dict>
+            <key>demonking_bullet0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{990,59},{200,29}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{200,29}}</string>
+                <key>sourceSize</key>
+                <string>{202,29}</string>
+            </dict>
             <key>demonking_fly0001.png</key>
             <dict>
                 <key>frame</key>
@@ -118,7 +170,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:9944aca0b637eaaa21c0fe8522c06183:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:79bb8900ffac667870d5caa5c7a3ad69:1/1$</string>
             <key>textureFileName</key>
             <string>demonking2.png</string>
         </dict>

@@ -17,6 +17,10 @@
 
 class Gun;
 
+struct ShopGotoData {
+    int item;
+    int scrollIndex;
+};
 
 class GameShopScene : public UserDelegateLayer,public GameScrollHeadlerTargetInterface
 {
@@ -30,13 +34,13 @@ private:
     void    setItemBgSprite();
     void    setGunIcon();
     void    initShopView();
-    void    initScrollView();
+    void    initScrollView(ShopGotoData data);
 public:
-    CREATE_SCENE_FUNC(GameShopScene);
-//    static Scene * scene();
-    CREATE_FUNC(GameShopScene);
+//    CREATE_SCENE_FUNC(GameShopScene);
+    static Scene * scene(ShopGotoData data = {});
+//    CREATE_FUNC(GameShopScene);
     ~GameShopScene();
-    virtual bool    init();
+    virtual bool    init(ShopGotoData data);
     
     void    updateData();
     GameScrollHeadler * getHeadlerByIndex(int index,int viewTag);

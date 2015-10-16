@@ -50,6 +50,19 @@ EnemyInfo::EnemyInfo()
     wolfArmor.height = 130;
     wolfArmor.widthOffSet = 0;
     m_data["wolf_armor"] = wolfArmor;
+    //snowman
+    EnemyInfoData snowman;
+    snowman.attackFrame = 8;
+    snowman.attackFrames = 11;
+    snowman.hurtHeavyFrames = 9;
+    snowman.hurtLightFrames = 5;
+    snowman.hurtOnFrames = 5;
+    snowman.walkFrames = 14;
+    snowman.downFrames = 13;
+    snowman.width = 300;
+    snowman.height = 250;
+    snowman.widthOffSet = 0;
+    m_data["snowman"] = snowman;
     // skull 骷髅
     EnemyInfoData skull;
     skull.attackFrame = 8;
@@ -63,6 +76,32 @@ EnemyInfo::EnemyInfo()
     skull.height = 180;
     skull.widthOffSet = 0;
     m_data["skull"] = skull;
+    // skull 骷髅射手
+    EnemyInfoData skull_a;
+    skull_a.attackFrame = 8;
+    skull_a.attackFrames = 14;
+    skull_a.hurtHeavyFrames = 9;
+    skull_a.hurtLightFrames = 5;
+    skull_a.hurtOnFrames = 5;
+    skull_a.walkFrames = 14;
+    skull_a.downFrames = 13;
+    skull_a.width = 180;
+    skull_a.height = 180;
+    skull_a.widthOffSet = 0;
+    m_data["skull_a"] = skull_a;
+    // skull 骷髅盾兵
+    EnemyInfoData skull_shield;
+    skull_shield.attackFrame = 8;
+    skull_shield.attackFrames = 12;
+    skull_shield.hurtHeavyFrames = 10;
+    skull_shield.hurtLightFrames = 6;
+    skull_shield.hurtOnFrames = 5;
+    skull_shield.walkFrames = 14;
+    skull_shield.downFrames = 14;
+    skull_shield.width = 180;
+    skull_shield.height = 180;
+    skull_shield.widthOffSet = 0;
+    m_data["skull_shield"] = skull_shield;
     // skullArmor
     EnemyInfoData skullArmor;
     skullArmor.attackFrame = 8;
@@ -141,6 +180,32 @@ EnemyInfo::EnemyInfo()
     muroideaArmor.height = 90;
     muroideaArmor.widthOffSet = 0;
     m_data["Muroidea_armor"] = muroideaArmor;
+    //恶僧
+    EnemyInfoData butcher;
+    butcher.attackFrame = 5;
+    butcher.attackFrames = 11;
+    butcher.hurtHeavyFrames = 9;
+    butcher.hurtLightFrames = 5;
+    butcher.hurtOnFrames = 5;
+    butcher.walkFrames = 14;
+    butcher.downFrames = 13;
+    butcher.width = 201;
+    butcher.height = 154;
+    butcher.widthOffSet = 0;
+    m_data["butcher"] = butcher;
+    //吸血鬼
+    EnemyInfoData vampire;
+    vampire.attackFrame = 5;
+    vampire.attackFrames = 11;
+    vampire.hurtHeavyFrames = 10;
+    vampire.hurtLightFrames = 5;
+    vampire.hurtOnFrames = 5;
+    vampire.walkFrames = 14;
+    vampire.downFrames = 13;
+    vampire.width = 250;
+    vampire.height = 200;
+    vampire.widthOffSet = 0;
+    m_data["vampire"] = vampire;
     // bat 蝙蝠
     EnemyInfoData bat;
     bat.attackFrame = 7;
@@ -160,6 +225,35 @@ EnemyInfo::EnemyInfo()
     batArmor.height = 70;
     batArmor.widthOffSet = 0;
     m_data["bat_armor"] = batArmor;
+    // bat 蝙蝠
+    EnemyInfoData bee;
+    bee.attackFrame = 7;
+    bee.attackFrames = 10;
+    bee.walkFrames = 4;
+    bee.downFrames = 13;
+    bee.width = 150;
+    bee.height = 150;
+    bee.widthOffSet = 0;
+    m_data["bee"] = bee;
+    // demon 蝙蝠
+    EnemyInfoData demon;
+    demon.attackFrame = 7;
+    demon.attackFrames = 9;
+    demon.walkFrames = 7;
+    demon.downFrames = 13;
+    demon.width = 170;
+    demon.height = 170;
+    demon.widthOffSet = 0;
+    m_data["demon"] = demon;
+    // bat_armor
+    EnemyInfoData demonArmor;
+    demonArmor.attackFrame = 7;
+    demonArmor.attackFrames = 9;
+    demonArmor.walkFrames = 7;
+    demonArmor.width = 170;
+    demonArmor.height = 85;
+    demonArmor.widthOffSet = 0;
+    m_data["demon_armor"] = demonArmor;
     // crow 乌鸦
     EnemyInfoData crow;
     crow.attackFrame = 6;
@@ -272,6 +366,55 @@ EnemyInfo::EnemyInfo()
     wolfking2.height = 470;
     wolfking2.widthOffSet = 0;
     m_data["wolfking2"] = wolfking2;
+    //butcherking
+    EnemyInfoData butcherking;
+    butcherking.attackFrame = 8;
+    butcherking.attackFrames = 12;
+    butcherking.hurtHeavyFrames = 10;
+    butcherking.hurtLightFrames = 6;
+    butcherking.hurtOnFrames = 5;
+    butcherking.walkFrames = 14;
+    butcherking.downFrames = 14;
+    butcherking.width = 550;
+    butcherking.height = 450;
+    butcherking.widthOffSet = 0;
+    m_data["butcherking"] = butcherking;
+    //snowmanking
+    EnemyInfoData snowmanking;
+    snowmanking.attackFrame = 8;
+    snowmanking.attackFrames = 12;
+    snowmanking.hurtHeavyFrames = 10;
+    snowmanking.hurtLightFrames = 6;
+    snowmanking.hurtOnFrames = 5;
+    snowmanking.walkFrames = 14;
+    snowmanking.downFrames = 14;
+    snowmanking.width = 500;
+    snowmanking.height = 400;
+    snowmanking.widthOffSet = 0;
+    m_data["snowmanking"] = snowmanking;
+    //vampireking
+    EnemyInfoData vampireking;
+    vampireking.attackFrame = 8;
+    vampireking.attackFrames = 12;
+    vampireking.hurtHeavyFrames = 10;
+    vampireking.hurtLightFrames = 6;
+    vampireking.hurtOnFrames = 5;
+    vampireking.walkFrames = 14;
+    vampireking.downFrames = 14;
+    vampireking.width = 400;
+    vampireking.height = 400;
+    vampireking.widthOffSet = 0;
+    m_data["vampireking"] = vampireking;
+    // demonking
+    EnemyInfoData demonking;
+    demonking.attackFrame = 7;
+    demonking.attackFrames = 10;
+    demonking.walkFrames = 7;
+    demonking.downFrames = 13;
+    demonking.width = 450;
+    demonking.height = 400;
+    demonking.widthOffSet = 0;
+    m_data["demonking"] = demonking;
     
 }
 EnemyInfo * EnemyInfo::getInstance()

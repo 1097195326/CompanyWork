@@ -76,15 +76,21 @@ void GameScrollHeadlerView::moveToViewAtIndex(int index, bool direct)
     if ((m_oritation == s_horizontal && m_viewWidth == m_itemWidth) ||
         (m_oritation == s_vertical && m_viewHeight == m_itemHeight))
     {
-        if (index < 0 || index > m_totalCount)
+        if (index < 0)
         {
-            return;
+            index = 0;
+        }else if ( index > m_totalCount)
+        {
+            index = m_totalCount;
         }
     }else
     {
-        if (index < 0 || index + m_viewCount > m_totalCount)
+        if (index < 0)
         {
-            return;
+            index = 0;
+        }else if (index + m_viewCount > m_totalCount)
+        {
+            index = m_totalCount - m_viewCount;
         }
     }
     
@@ -93,10 +99,10 @@ void GameScrollHeadlerView::moveToViewAtIndex(int index, bool direct)
     switch (m_oritation) {
         case s_vertical:
             toY = m_itemHeight * index;
-            if (m_currentIndex > index)
-            {
-                toY *= -1;
-            }
+//            if (m_currentIndex > index)
+//            {
+//                toY *= -1;
+//            }
             break;
         case s_horizontal:
             toX = -m_itemWidth * index;
@@ -107,6 +113,7 @@ void GameScrollHeadlerView::moveToViewAtIndex(int index, bool direct)
             break;
     }
 //    log("---:%f",toX);
+//    log("---:%f",toY);
     if (direct)
     {
         m_scrollController->toOffSet(toX, toY);
@@ -147,7 +154,7 @@ void GameScrollHeadlerView::updateItems(float data)
 {
     M_Vec2f offSet = m_scrollController->getOffSet();
     Vec2 offSetV = {offSet.x,offSet.y};
-//    log("off set:%f:::%d",offSet.x,m_currentIndex);
+//    log("off set:%f:::%d",offSet.y,m_currentIndex);
     int index = m_currentIndex;
     
     switch (m_oritation) {
@@ -272,6 +279,13 @@ GameScrollHeadler * GameScrollHeadlerView::getHeadlerWithIndex(int index)
     assert(m_target);
     GameScrollHeadler * headler = m_target->getHeadlerByIndex(index,getTag());
     return headler;
+}
+void GameScrollHeadlerView::setHeadlerSelect(int index)
+{
+    GameScrollHeadler * headler = m_headlerData[index];
+    if (headler) {
+        headler->setHealderSelect();
+    }
 }
 void GameScrollHeadlerView::setGetHeadlerTarget(GameScrollHeadlerTargetInterface * getHeadlerTarget)
 {

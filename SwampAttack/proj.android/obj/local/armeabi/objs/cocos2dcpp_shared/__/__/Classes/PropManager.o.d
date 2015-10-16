@@ -326,7 +326,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/PropManager.o: \
  jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h \
  jni/../../Classes/GameObject.h jni/../../Classes/ConfigManager.h \
  jni/../../Classes/CCCsvHelper.h jni/../../Classes/ShopPropIcon.h \
- jni/../../Classes/DropPropSprite.h
+ jni/../../Classes/DropPropSprite.h jni/../../Classes/GameUser.h
 
 jni/../../Classes/PropManager.h:
 
@@ -999,3 +999,5 @@ jni/../../Classes/CCCsvHelper.h:
 jni/../../Classes/ShopPropIcon.h:
 
 jni/../../Classes/DropPropSprite.h:
+
+jni/../../Classes/GameUser.h:

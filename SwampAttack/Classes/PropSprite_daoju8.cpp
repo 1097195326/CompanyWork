@@ -23,7 +23,7 @@ void PropSprite_daoju8::throwProp()
     }
     m_state = p_s_throwing;
     
-    
+    setZOrder(4);
     //    propThrowCall(NULL);
     Vec2 startPoint = _G_M_M->m_BulletStartPoint;
     Vec2 tagetPoint = m_prop->getPropPoint();

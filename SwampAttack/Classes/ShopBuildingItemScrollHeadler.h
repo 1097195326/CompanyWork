@@ -28,7 +28,7 @@ private:
     GameSprite * m_upGradeButton;
     GameSprite * m_unLockButton;
     GameSprite * m_buyButton;
-    
+    GameSprite * m_iconBg;
     GameShopScene * m_shopScene;
 private:
     void    initDefenseView();
@@ -43,6 +43,9 @@ public:
     void    setGameShopScene(GameShopScene * shopScene);
     ShopBuildingItemScrollHeadler(int index);
     ~ShopBuildingItemScrollHeadler();
+    
+    void    setHealderSelect();
+    void    guangEnd(cocos2d::Node *pSender);
     void    updateData();
 };
 

@@ -10,7 +10,7 @@
 #include "GameShopScene.h"
 #include "GunManager.h"
 #include "PropManager.h"
-
+#include "DefenseBuildingManager.h"
 
 GameShowDiscLayer::~GameShowDiscLayer()
 {
@@ -133,19 +133,25 @@ void GameShowDiscLayer::actionEndCall()
 }
 void GameShowDiscLayer::gotoShop(cocos2d::Ref *pSender)
 {
+    ShopGotoData data;
+    data.item = m_type - 1;
     if (m_type == 1) {
         Gun * gun = (Gun *)m_obj;
         gun->addBullet(0);
         GunManager::getInstance()->setWillTakeUpGun(gun->getId());
+        data.scrollIndex = gun->getIndex();
     }else if (m_type == 2)
     {
         Prop * prop = (Prop *)m_obj;
         prop->addProp(3);
         PropManager::getInstance()->setWillTakeUpProp(prop->getId());
-    }else
+        data.scrollIndex = prop->getIndex();
+    }else if(m_type == 3)
     {
-        
+        DefenseBuilding * building = (DefenseBuilding *)m_obj;
+        data.scrollIndex = building->getIndex();
     }
+    
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-    Director::getInstance()->replaceScene(GameShopScene::scene());
+    Director::getInstance()->replaceScene(GameShopScene::scene(data));
 }

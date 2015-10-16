@@ -18,7 +18,7 @@
 
 #include "PropSpriteView.h"
 #include "GameShowDiscLayer.h"
-
+#include "MobClickCpp.h"
 
 Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal),
 m_isMaxLevel(false),
@@ -46,6 +46,7 @@ m_decelerationDlay(0.0f)
     m_time = atof(data["Time"].asString().c_str());
     string itemDescription = data["ItemDescription"].asString();
     m_itemDestription = _C_M->getTranslateById(itemDescription);
+    m_unlockStr = _C_M->getTranslateById( data["Unlock"].asString());
     
     m_num = _G_U->getPropNum(m_id);
     m_isUnlock = _G_U->isUnlockProp(m_id);
@@ -234,6 +235,8 @@ bool Prop::useProp()
 {
     if (m_num > 0)
     {
+        umeng::MobClickCpp::use(m_itemName.c_str(), 1, m_itemPrice);
+        
         --m_num;
         _G_U->setPropNum(m_id, m_num);
         notify();
@@ -521,4 +524,16 @@ int Prop::getStrengthenLevel()
 int Prop::getLimitLevel()
 {
     return m_limitLevel;
+}
+int Prop::getIndex()
+{
+    return m_index;
+}
+string Prop::getUnlockStr()
+{
+    return m_unlockStr;
+}
+void Prop::setIndex(int index)
+{
+    m_index = index;
 }

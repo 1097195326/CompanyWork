@@ -26,3 +26,7 @@ int GameScrollHeadler::getIndex()
 {
     return m_index;
 }
+void GameScrollHeadler::setHealderSelect()
+{
+    
+}
