@@ -136,7 +136,7 @@ tid#ItemDescription5,对较大范围内所有怪物造成较大伤害。,To the 
 tid#ItemDescription6,对所有怪物造成致命伤害。,Fatal damage to all the monsters.
 tid#ItemDescription7,对小范围怪物造成眩晕,Vertigo caused by small monster
 tid#ItemDescription8,对小范围怪物进行减速,Slow down the monster
-tid#ItemDescription9,可以弹飞单个非BOSS的单位,Can fly a single non BOSS units
+tid#ItemDescription9,可以路过的非BOSS的单位,Can pass through the non BOSS units
 tid#ItemDescription10,对所有怪物造成致命伤害,Fatal damage to all the monsters
 ,,
 tid#DefenceName1,木板,Board

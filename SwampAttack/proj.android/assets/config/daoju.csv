@@ -1,7 +1,7 @@
 道具编号,道具名称编号,道具名称,模型编号,作用范围,附加状态编号,持续时间,道具价格,强化等级上限,解锁关卡,解锁介绍,解锁价格,道具描述编号,道具描述
 ItemId[string],ItemName[string],,ModelId[string],EffectArea[string],BuffId[vector<string>],Time[string],ItemPrice[string],LimitLevel[string],UnlockMission[string],Unlock[string],UnlockGold[string],ItemDescription[string],
 500001,tid#ItemName1,雷管,daoju1,50,,,200,10,400001_1,tid#unlock7,20000,tid#ItemDescription1,对小范围内目标造成群体伤害。
-500009,tid#ItemName9,强力弹簧,daoju9,50,,,500,10,400001_2,tid#unlock8,30000,tid#ItemDescription9,可以弹飞单个非BOSS的单位
+500009,tid#ItemName9,强力弹簧,daoju9,50,,,500,10,400001_2,tid#unlock8,30000,tid#ItemDescription9,可以路过的非BOSS的单位
 500002,tid#ItemName2,燃烧瓶,daoju2,50,600001,,300,10,400001_3,tid#unlock9,40000,tid#ItemDescription2,使小范围内目标燃烧，持续造成伤害。
 500007,tid#ItemName7,震荡弹,daoju7,400,,,500,5,400001_4,tid#unlock10,20000,tid#ItemDescription7,对较大范围怪物造成眩晕
 500008,tid#ItemName8,润滑油,daoju8,300,,12,600,5,400001_8,tid#unlock11,20000,tid#ItemDescription8,对小范围怪物进行减速
