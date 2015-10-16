@@ -30,7 +30,6 @@ import org.cocos2dx.lib.Cocos2dxActivity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-<<<<<<< HEAD
 import com.cmcc.security.nativeC;
 
 
@@ -50,6 +49,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.umeng.mobclickcpp.MobClickCppHelper;
 
 import cn.uc.gamesdk.sa.UCGameSdk;
 import cn.uc.gamesdk.sa.activity.UCSdkActivity;
@@ -149,6 +150,7 @@ public class AppActivity extends Cocos2dxActivity {
 		Application application = this.getApplication();
 		SDKCore.registerEnvironment(application);
 		Log.i("hongxing", "app activity onCreate");
+		MobClickCppHelper.init(this);
 		
 		ucsdkActivity = this;
 		
@@ -156,6 +158,9 @@ public class AppActivity extends Cocos2dxActivity {
 		initSdk();
 		
 	}
+	static {
+        MobClickCppHelper.loadLibrary();
+    }
 	private void initSdk()
 	{
 		UCGameSdk.defaultSdk().setCallback(SDKConst.PAY_INIT_LISTENER, new SDKCallbackListener() {
@@ -332,22 +337,4 @@ public class AppActivity extends Cocos2dxActivity {
         super.onDestroy();
     }
 	
-	
-=======
-import com.umeng.mobclickcpp.MobClickCppHelper;
-
-import android.os.Bundle;
-
-public class AppActivity extends Cocos2dxActivity {
-	 @Override
-	    protected void onCreate(Bundle savedInstanceState){
-	            super.onCreate(savedInstanceState);
-	            MobClickCppHelper.init(this);
-	    }
-
-	    static {
-	        MobClickCppHelper.loadLibrary();
-	    }
-
->>>>>>> master
 }
