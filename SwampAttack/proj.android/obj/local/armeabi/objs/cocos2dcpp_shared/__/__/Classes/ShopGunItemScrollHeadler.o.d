@@ -365,7 +365,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/ShopGunItemScrollHeadler.
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameSubject.h \
  jni/../../Classes/GameUser.h jni/../../Classes/GameShowLevelupLayer.h \
- jni/../../Classes/GameShowDiscLayer.h jni/../../Classes/AlertTextTool.h
+ jni/../../Classes/GameShowDiscLayer.h jni/../../Classes/AlertTextTool.h \
+ jni/../../Classes/BaseUtil.h
 
 jni/../../Classes/ShopGunItemScrollHeadler.h:
 
@@ -1122,3 +1123,5 @@ jni/../../Classes/GameShowLevelupLayer.h:
 jni/../../Classes/GameShowDiscLayer.h:
 
 jni/../../Classes/AlertTextTool.h:
+
+jni/../../Classes/BaseUtil.h:

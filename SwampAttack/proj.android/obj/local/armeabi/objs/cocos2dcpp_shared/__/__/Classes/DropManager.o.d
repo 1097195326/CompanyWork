@@ -358,7 +358,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/DropManager.o: \
  jni/../../Classes/CCCsvHelper.h jni/../../Classes/MoneyManager.h \
  jni/../../Classes/MoneyObject.h jni/../../Classes/PropManager.h \
  jni/../../Classes/Prop.h jni/../../Classes/GameSubject.h \
- jni/../../Classes/GameObserver.h jni/../../Classes/GameObject.h
+ jni/../../Classes/GameObserver.h jni/../../Classes/GameObject.h \
+ jni/../../Classes/GameUser.h
 
 jni/../../Classes/DropManager.h:
 
@@ -1097,3 +1098,5 @@ jni/../../Classes/GameSubject.h:
 jni/../../Classes/GameObserver.h:
 
 jni/../../Classes/GameObject.h:
+
+jni/../../Classes/GameUser.h:

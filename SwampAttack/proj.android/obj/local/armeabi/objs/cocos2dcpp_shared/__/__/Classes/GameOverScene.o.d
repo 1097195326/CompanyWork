@@ -372,7 +372,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameOverScene.o: \
  jni/../../Classes/DefenseBuilding.h jni/../../Classes/GameDirector.h \
  jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
  jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
- jni/../../Classes/GameUser.h
+ jni/../../Classes/GameUser.h jni/../../Classes/MobClickCpp.h
 
 jni/../../Classes/GameOverScene.h:
 
@@ -1151,3 +1151,5 @@ jni/../../Classes/GameMap6.h:
 jni/../../Classes/GameMap5s.h:
 
 jni/../../Classes/GameUser.h:
+
+jni/../../Classes/MobClickCpp.h:

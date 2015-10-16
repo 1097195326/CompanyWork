@@ -335,7 +335,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Prop.o: \
  jni/../../Classes/GameBuff.h jni/../../Classes/GameBuffManager.h \
  jni/../../Classes/GuanQiaManager.h jni/../../Classes/GuanQiaModel.h \
  jni/../../Classes/PropSpriteView.h jni/../../Classes/PropSprite.h \
- jni/../../Classes/GameShowDiscLayer.h
+ jni/../../Classes/GameShowDiscLayer.h jni/../../Classes/MobClickCpp.h
 
 jni/../../Classes/Prop.h:
 
@@ -1042,3 +1042,5 @@ jni/../../Classes/PropSpriteView.h:
 jni/../../Classes/PropSprite.h:
 
 jni/../../Classes/GameShowDiscLayer.h:
+
+jni/../../Classes/MobClickCpp.h:

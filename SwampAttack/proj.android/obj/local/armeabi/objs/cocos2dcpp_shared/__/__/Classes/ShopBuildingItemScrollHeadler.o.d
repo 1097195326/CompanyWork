@@ -366,7 +366,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/ShopBuildingItemScrollHea
  jni/../../Classes/json/writer.h jni/../../Classes/GameObject.h \
  jni/../../Classes/GameUser.h jni/../../Classes/GameSubject.h \
  jni/../../Classes/GameShowLevelupLayer.h \
- jni/../../Classes/GameShowDiscLayer.h
+ jni/../../Classes/GameShowDiscLayer.h jni/../../Classes/BaseUtil.h
 
 jni/../../Classes/ShopBuildingItemScrollHeadler.h:
 
@@ -1121,3 +1121,5 @@ jni/../../Classes/GameSubject.h:
 jni/../../Classes/GameShowLevelupLayer.h:
 
 jni/../../Classes/GameShowDiscLayer.h:
+
+jni/../../Classes/BaseUtil.h:
