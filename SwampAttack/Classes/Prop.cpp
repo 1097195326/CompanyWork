@@ -235,7 +235,7 @@ bool Prop::useProp()
 {
     if (m_num > 0)
     {
-        umeng::MobClickCpp::use(m_itemName.c_str(), 1, m_itemPrice);
+        umeng::MobClickCpp::use(m_id.c_str(), 1, m_itemPrice);
         
         --m_num;
         _G_U->setPropNum(m_id, m_num);

@@ -158,6 +158,8 @@ public:
     float   getAttackSpeed();
     int     getGoldForDied();
     string  getDrop();
+    
+    Rect    getRect();
 };
 
 #endif /* defined(__SwampAttack__Enemy__) */

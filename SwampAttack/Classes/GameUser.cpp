@@ -15,7 +15,7 @@ GameUser::GameUser():m_time(0)
         setBoolForKey("first", true);
         
         setUserGold(1000);
-        m_userHealth = 5;
+        m_userHealth = 10;
         setUserHealth(m_userHealth);
         unlockGuanqia("400001_1");
         setLastGuanqiaIndex(1);
@@ -43,7 +43,7 @@ GameUser * GameUser::getInstance()
 void GameUser::updateTime(float data)
 {
 //    log("add game time");
-    if (m_userHealth >= 5)
+    if (m_userHealth >= 10)
     {
         return;
     }
@@ -67,9 +67,9 @@ void GameUser::enterGame()
     
     m_userHealth += shiJianCha / 600;
     m_time = shiJianCha % 600;
-    if (m_userHealth > 5)
+    if (m_userHealth > 10)
     {
-        m_userHealth = 5;
+        m_userHealth = 10;
     }
     setUserHealth(m_userHealth);
     

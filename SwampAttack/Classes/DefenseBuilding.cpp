@@ -20,7 +20,8 @@
 DefenseBuilding::DefenseBuilding(Json::Value data):
 m_isMaxLevel(false),
 m_isUnlock(false),
-m_state(d_normal)
+m_state(d_normal),
+m_waitDelay(0.0f)
 {
     m_id = data["DefenceId"].asString() ;
     string defenceName = data["DefenceName"].asString();

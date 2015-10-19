@@ -32,10 +32,10 @@ void DefenseBuilding2::gameLoop(float data)
     }
     if (m_defenceType == 2 || m_defenceType == 3)
     {
-        m_index += data;
-        if (m_index >= 1 && m_state == d_wait)
+        m_waitDelay += data;
+        if (m_waitDelay >= 1 && m_state == d_wait)
         {
-            m_index = 0;
+            m_waitDelay = 0.0f;
             m_state = d_canHurt;
         }else
         {

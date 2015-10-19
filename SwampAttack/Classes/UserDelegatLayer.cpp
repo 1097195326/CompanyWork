@@ -26,13 +26,14 @@ UserDelegateLayer::UserDelegateLayer()
         Sprite * xinBg = Sprite::create(ImagePath("shopXinBg.png"));
         Sprite * xin = Sprite::create(ImagePath("shopXinIcon.png"));
         
-        Vec2 xinP = Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.15 + xinBg->getContentSize().width * 0.8 * i,
+        Vec2 xinP = Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.15 +
+                         xinBg->getContentSize().width * 0.8 * i,
                          m_visibleOrigin.y + m_visibleSize.height * 0.935);
         xinBg->setPosition(xinP);
         xin->setPosition(xinP);
         addChild(xinBg,3);
         addChild(xin,3);
-        xin->setVisible(false);
+        xin->setVisible(true);
         m_healthSprites.push_back(xin);
     }
     
@@ -108,6 +109,8 @@ void UserDelegateLayer::updateData()
         if (i < userHealth)
         {
             m_healthSprites[i]->setVisible(true);
+//            m_healthSprites[i]->setTextureRect(Rect(0, 0, 30, 57));
+//            m_healthSprites[i]->setPositionX(m_healthSprites[i]->getPositionX() - 15);
         }else
         {
             m_healthSprites[i]->setVisible(false);

@@ -54,7 +54,7 @@ void ShopSelectMenuView::setSelectSprite(std::string name)
         addChild(s,2);
         Size size = s->getContentSize();
         Sprite * s_i = Sprite::create(ImagePath(StringUtils::format("shopItemIcon%d.png",i+1)));
-        s_i->setPosition(size.width * 0.145 + size.width * 0.238 * i,size.height * 0.58);
+        s_i->setPosition(size.width * 0.128 + size.width * 0.245 * i,size.height * 0.58);
         s->addChild(s_i);
         
         m_selectSprites[i] = s;
