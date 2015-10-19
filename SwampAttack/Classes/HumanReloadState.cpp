@@ -21,12 +21,12 @@ void HumanReloadState::Enter(Human * human)
 }
 void HumanReloadState::Execute(Human * human)
 {
-    if (human->getWaitingTime() > 0.0f)
-    {
-        human->changeState(HumanWaitState::getInstance());
-    }else if (human->isTouching() && human->isHaveBullet())
+    if (human->isTouching() && human->isHaveBullet())
     {
         human->changeState(HumanShootState::getInstance());
+    }else if (human->getWaitingTime() > 0.0f)
+    {
+        human->changeState(HumanWaitState::getInstance());
     }else if (human->isTouchEnd())
     {
         if (human->isFull())
