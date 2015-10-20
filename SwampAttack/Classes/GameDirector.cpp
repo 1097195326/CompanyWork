@@ -162,6 +162,7 @@ void GameDirector::resetGameData()
     Human::getInstance()->resetData();
     
     EnemyManager::getInstance()->resetData();
+    PropManager::getInstance()->resetData();
     m_goldNum = 0;
 }
 void GameDirector::reliveGame()

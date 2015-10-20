@@ -14,7 +14,7 @@
 class LiquidBullet : public Bullet
 {
 private:
-    
+    std::set<Enemy *> m_enemySet;
 public:
     LiquidBullet(BulletParameter bp);
     ~LiquidBullet();

@@ -41,7 +41,7 @@ void House::setView()
 }
 void House::hurt(float damage)
 {
-    m_health -= damage;
+//    m_health -= damage;
     if (m_health <= 0) {
         log("house is over");
         m_state &= _h_clear;

@@ -433,7 +433,7 @@ void Enemy::attackCall()
                                0,
                                1,
                                t_house,
-                               m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_height * 0.5),
+                               m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_height * 0.3),
                                m_targetPoint + Vec2(random(0, _G_M_M->flyEnemy_target_rightLine),
                                                     random(0, _G_M_M->flyEnemy_target_upLine)),
                                m_bulletModelId

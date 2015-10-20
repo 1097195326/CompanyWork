@@ -363,11 +363,11 @@ void WalkEnemySprite::die()
     texiaoSprite->setVisible(true);
     texiaoSprite->runAction(texiaoAction);
     
-//    if (isHaveArmor) {
-//        isHaveArmor = false;
-//        armorSprite->stopAllActions();
-//        armorSprite->removeFromParentAndCleanup(true);
-//    }
+    if (isHaveArmor && armorSprite) {
+        isHaveArmor = false;
+        armorSprite->stopAllActions();
+        armorSprite->removeFromParentAndCleanup(true);
+    }
     
     string name = m_model->getModelId();
     string yinxiao = StringUtils::format("%s_die.mp3",name.c_str());

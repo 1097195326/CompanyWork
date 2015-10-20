@@ -15,7 +15,8 @@
 
 
 PropManager::PropManager():
-m_willTakeUpProp("")
+m_willTakeUpProp(""),
+m_dropCount(0)
 {
     GCCsvHelper * propHelper = _C_M->getCsvHelperByName("daoju");
     m_hashHead = propHelper->getHashHead();
@@ -105,15 +106,20 @@ Prop * PropManager::getTakeUpPropByIndex(int index)
 int PropManager::getTakeUpPropIndexByName(string name)
 {
     int index = 0;
+    bool isTakeUp = false;
     std::map<string,Prop *>::iterator iter;
     for (iter = m_takeUpPropData.begin(); iter != m_takeUpPropData.end(); ++iter)
     {
         ++index;
         if (iter->first == name) {
+            isTakeUp = true;
             break;
         }
     }
-    return index;
+    if (isTakeUp) {
+        return index;
+    }
+    return index + m_dropCount;
 }
 std::map<string,Prop *> PropManager::getTakeUpProp()
 {
@@ -203,7 +209,8 @@ bool PropManager::dropProp(string id,Vec2 point)
     {
         if (!prop->isTakeUp())
         {
-            prop->setTakeUpIndex((int)m_takeUpPropData.size() + 1);
+//            prop->setTakeUpIndex((int)m_takeUpPropData.size() + 1);
+            ++m_dropCount;
             prop->setFightView();
             prop->loadResource();
         }
@@ -213,4 +220,8 @@ bool PropManager::dropProp(string id,Vec2 point)
 //        spr->setPosition(point);
     }
     return res;
+}
+void PropManager::resetData()
+{
+    m_dropCount = 0;
 }
