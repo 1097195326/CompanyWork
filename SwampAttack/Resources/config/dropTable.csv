@@ -2,6 +2,7 @@
 Id[string],ItemId[vector;itemid[string];percent[float]],MoneyId[vector;moneyid[string];percent[float]],Random[string],Type[string]
 100001,500001:100,,100,2
 100002,500002:100,,100,2
+100003,500003:100,,100,2
 100004,500004:100,,100,2
 100005,500006:100,,100,2
 100006,,100006:100,100,1
