@@ -12,7 +12,8 @@ GameSprite::GameSprite(std::string name):
 m_name(name),
 m_isTouchMe(false),
 m_isEnable(true),
-m_isCanScale(true)
+m_isCanScale(true),
+m_isCanTouch(true)
 {
 //    init();
     initWithFile(name);
@@ -59,8 +60,20 @@ bool GameSprite::isEnable()
 {
     return m_isEnable;
 }
+void GameSprite::setCanTouch(bool can)
+{
+    m_isCanTouch = can;
+}
+bool GameSprite::isCanTouch()
+{
+    return m_isCanTouch;
+}
 bool GameSprite::touchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
 {
+    if (!m_isCanTouch)
+    {
+        return false;
+    }
     Vec2 point = this->convertToNodeSpace(touch->getLocation());
     Rect rect = Rect(0, 0, getContentSize().width, getContentSize().height);
     if (rect.containsPoint(point))

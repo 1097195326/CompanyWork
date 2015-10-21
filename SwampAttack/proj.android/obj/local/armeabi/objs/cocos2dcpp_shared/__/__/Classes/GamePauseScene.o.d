@@ -369,7 +369,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GamePauseScene.o: \
  jni/../../Classes/GameHorizontalScrollHeadlerView.h \
  jni/../../Classes/GameScrollHeadlerView.h \
  jni/../../Classes/GameScrollView.h jni/../../Classes/ScrollController.h \
- jni/../../Classes/UserDelegatLayer.h \
+ jni/../../Classes/UserDelegatLayer.h jni/../../Classes/ProgressBar.h \
  jni/../../Classes/GameLoadingScene.h
 
 jni/../../Classes/GamePauseScene.h:
@@ -1143,5 +1143,7 @@ jni/../../Classes/GameScrollView.h:
 jni/../../Classes/ScrollController.h:
 
 jni/../../Classes/UserDelegatLayer.h:
+
+jni/../../Classes/ProgressBar.h:
 
 jni/../../Classes/GameLoadingScene.h:

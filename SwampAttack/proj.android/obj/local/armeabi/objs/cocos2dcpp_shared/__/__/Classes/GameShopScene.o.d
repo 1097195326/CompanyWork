@@ -354,8 +354,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameShopScene.o: \
  jni/../../Classes/GameVerticalScrollHeadlerView.h \
  jni/../../Classes/GameScrollHeadlerView.h \
  jni/../../Classes/GameScrollView.h jni/../../Classes/ScrollController.h \
- jni/../../Classes/UserDelegatLayer.h jni/../../Classes/GameHomeScene.h \
- jni/../../Classes/ShopSelectMenuView.h \
+ jni/../../Classes/UserDelegatLayer.h jni/../../Classes/ProgressBar.h \
+ jni/../../Classes/GameHomeScene.h jni/../../Classes/ShopSelectMenuView.h \
  jni/../../Classes/SelectMenuView.h \
  jni/../../Classes/SelectMenuController.h jni/../../Classes/GameSubject.h \
  jni/../../Classes/GunManager.h jni/../../Classes/GameObject.h \
@@ -373,7 +373,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameShopScene.o: \
  jni/../../Classes/GameHorizontalScrollHeadlerView.h \
  jni/../../Classes/ShopGunIcon.h \
  jni/../../Classes/ShopGunItemScrollHeadler.h \
- jni/../../Classes/ProgressBar.h jni/../../Classes/GameSprite.h \
+ jni/../../Classes/GameSprite.h \
  jni/../../Classes/ShopPropItemScrollHeadler.h \
  jni/../../Classes/ShopBuildingItemScrollHeadler.h \
  jni/../../Classes/ShopAwardItemScrollHeadler.h
@@ -1094,6 +1094,8 @@ jni/../../Classes/ScrollController.h:
 
 jni/../../Classes/UserDelegatLayer.h:
 
+jni/../../Classes/ProgressBar.h:
+
 jni/../../Classes/GameHomeScene.h:
 
 jni/../../Classes/ShopSelectMenuView.h:
@@ -1153,8 +1155,6 @@ jni/../../Classes/GameHorizontalScrollHeadlerView.h:
 jni/../../Classes/ShopGunIcon.h:
 
 jni/../../Classes/ShopGunItemScrollHeadler.h:
-
-jni/../../Classes/ProgressBar.h:
 
 jni/../../Classes/GameSprite.h:
 

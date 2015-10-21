@@ -12,6 +12,9 @@
 #include "BaseCode.h"
 #include "UserDelegatLayer.h"
 #include "GameObserver.h"
+#include "ProgressBar.h"
+#include "GameSprite.h"
+
 
 class shopHealthShowLayer : public Layer ,public GameObserver {
 private:
@@ -21,8 +24,9 @@ private:
     LayerColor * layerColor;
     Vec2    m_point;
     UserDelegateLayer * m_delegateLayer;
-    std::vector<Sprite *> m_healthSprites;
+    std::vector<ProgressBar *> m_healthSprites;
     Label * m_timeLabel;
+    GameSprite * m_button;
     
 public:
     shopHealthShowLayer(Vec2 position);
@@ -38,6 +42,7 @@ public:
     
     void    useToolToAddHealth(Touch * touch, Event * event);
     void    actionEndCall();
+    void    closeView();
 };
 
 

@@ -355,7 +355,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameHomeScene.o: \
  jni/../../Classes/GameScrollHeadlerView.h \
  jni/../../Classes/GameScrollView.h jni/../../Classes/ScrollController.h \
  jni/../../Classes/UserDelegatLayer.h jni/../../Classes/GameObserver.h \
- jni/../../Classes/GameShopScene.h \
+ jni/../../Classes/ProgressBar.h jni/../../Classes/GameShopScene.h \
  jni/../../Classes/GameVerticalScrollHeadlerView.h \
  jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
  jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
@@ -1079,6 +1079,8 @@ jni/../../Classes/ScrollController.h:
 jni/../../Classes/UserDelegatLayer.h:
 
 jni/../../Classes/GameObserver.h:
+
+jni/../../Classes/ProgressBar.h:
 
 jni/../../Classes/GameShopScene.h:
 

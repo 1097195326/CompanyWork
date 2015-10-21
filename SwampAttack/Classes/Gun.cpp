@@ -426,9 +426,6 @@ bool Gun::addStrengthenLevel()
     userGold -= m_strengthenGold;
     ++m_strengthenLevel;
     
-    _G_U->setUserGold(userGold);
-        
-    
     _G_U->setGunLevel(m_id, m_strengthenLevel);
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
     Json::Value upgradeData = _C_M->getDataByTag("wuqiUpgrade",upId);
@@ -440,6 +437,8 @@ bool Gun::addStrengthenLevel()
     {
         m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
     }
+    
+    _G_U->setUserGold(userGold);
     return true;
 }
 bool Gun::buyBullet()

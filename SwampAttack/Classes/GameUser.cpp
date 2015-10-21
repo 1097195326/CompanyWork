@@ -8,6 +8,7 @@
 
 #include "GameUser.h"
 
+
 GameUser::GameUser():m_time(0)
 {
     m_user = UserDefault::getInstance();
@@ -15,7 +16,7 @@ GameUser::GameUser():m_time(0)
         setBoolForKey("first", true);
         
         setUserGold(1000);
-        m_userHealth = 10;
+        m_userHealth = FullHealth;
         setUserHealth(m_userHealth);
         unlockGuanqia("400001_1");
         setLastGuanqiaIndex(1);
@@ -43,7 +44,7 @@ GameUser * GameUser::getInstance()
 void GameUser::updateTime(float data)
 {
 //    log("add game time");
-    if (m_userHealth >= 10)
+    if (m_userHealth >= FullHealth)
     {
         return;
     }
@@ -67,12 +68,12 @@ void GameUser::enterGame()
     
     m_userHealth += shiJianCha / 600;
     m_time = shiJianCha % 600;
-    if (m_userHealth > 10)
+    if (m_userHealth > FullHealth)
     {
-        m_userHealth = 10;
+        m_userHealth = FullHealth;
     }
     setUserHealth(m_userHealth);
-    
+    notify();
 }
 void GameUser::exitGame()
 {
@@ -117,7 +118,7 @@ void GameUser::useHealthTimes()
 }
 void GameUser::addHealthToFull()
 {
-    m_userHealth = 5;
+    m_userHealth = FullHealth;
     setUserHealth(m_userHealth);
     notify();
 }

@@ -18,6 +18,7 @@ private:
     bool    m_isTouchMe;
     bool    m_isEnable;
     bool    m_isCanScale;
+    bool    m_isCanTouch;
     std::string m_name;
     Vec2    m_moveLength;
 public:
@@ -32,6 +33,9 @@ public:
     TouchMeCall m_touchMeCall;
     void    setCanSwallowTouches(bool can);
     void    setEnabled(bool enable,std::string name = "");
+    
+    void    setCanTouch(bool can);
+    bool    isCanTouch();
     
     bool    isEnable();
     void    setCanScale(bool canScale);

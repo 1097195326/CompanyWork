@@ -92,7 +92,8 @@ void PropSpriteView::checkXinshou(float data)
             m_shou = Sprite::create();
             addChild(m_shou,6);
             
-            int iconIndex = m_prop->getTakeUpIndex();
+            int iconIndex = PropManager::getInstance()->getTakeUpPropIndexByName(m_prop->getId());
+//            int iconIndex = m_prop->getTakeUpIndex();
             Vec2 iconPoint = _G_M_M->fightScene_PropIcon_Position;
             float iconWidth = m_blueBg->getContentSize().width;
             m_shou->setPosition(iconPoint - Vec2((iconWidth + 0) * (iconIndex - 1), 0) * m_iconScale + Vec2(10, -30));

@@ -200,7 +200,6 @@ bool Prop::addStrengthenLevel()
     }
     userGold -= m_strengthenGold;
     ++m_strengthenLevel;
-    _G_U->setUserGold(userGold);
     
     
     _G_U->setPropLevel(m_id, m_strengthenLevel);
@@ -214,6 +213,8 @@ bool Prop::addStrengthenLevel()
     {
         m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
     }
+    _G_U->setUserGold(userGold);
+    
     return true;
 }
 bool Prop::buyProp()
@@ -224,11 +225,11 @@ bool Prop::buyProp()
         return false;
     }
     userGold -= m_itemPrice;
-    _G_U->setUserGold(userGold);
     
     ++m_num;
     _G_U->setPropNum(m_id, m_num);
     notify();
+    _G_U->setUserGold(userGold);
     return true;
 }
 bool Prop::useProp()
