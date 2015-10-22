@@ -117,6 +117,8 @@ void shopHealthShowLayer::updateView()
     {
         for (int i = 0; i < 5; ++i)
         {
+            m_healthSprites[i]->setVisible(true);
+            
             if (i < (userHealth - 1)/ 2)
             {
                 m_healthSprites[i]->updatePercent(100);
@@ -138,6 +140,10 @@ void shopHealthShowLayer::updateView()
         m_button->setCanTouch(false);
     }else
     {
+        for (int i = 0; i < 5; ++i)
+        {
+            m_healthSprites[i]->setVisible(false);
+        }
         m_button->setVisible(true);
         m_button->setCanTouch(true);
     }

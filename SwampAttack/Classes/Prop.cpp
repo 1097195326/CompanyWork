@@ -95,6 +95,23 @@ void Prop::gameLoop(float data)
         }
     }
     
+    if (m_modelId == "daoju8")
+    {
+        m_timeDlay += data;
+        if (m_timeDlay >= m_time)
+        {
+            m_timeDlay = 0.0f;
+            setStateDie();
+        }
+    }else if (m_modelId == "daoju7")
+    {
+        m_timeDlay += data;
+        if (m_timeDlay >= m_vertigo)
+        {
+            m_timeDlay = 0.0f;
+            setStateDie();
+        }
+    }
     
     EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
     if (!enemyGroup) {
@@ -307,6 +324,14 @@ bool Prop::isTakeUp()
 bool Prop::isUnlock()
 {
     return m_isUnlock;
+}
+void Prop::setTakeUp()
+{
+    m_isTakeUp = true;
+}
+void Prop::setTakeDown()
+{
+    m_isTakeUp = false;
 }
 bool Prop::unlockProp()
 {

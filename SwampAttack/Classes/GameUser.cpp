@@ -124,8 +124,8 @@ void GameUser::addHealthToFull()
 }
 void GameUser::setUserGold(int gold)
 {
-//    setIntForKey("user_gold", gold);
-//    notify();
+    setIntForKey("user_gold", gold);
+    notify();
 }
 int GameUser::getUserGold()
 {

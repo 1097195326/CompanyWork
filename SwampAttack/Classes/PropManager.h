@@ -20,6 +20,7 @@ private:
     
     std::map<string,Prop *> m_takeUpPropData;
     std::list<Prop *> m_usingPropDta;
+    std::list<Prop *> m_dropPropData;
     
     std::vector<ShopPropIcon *>   m_propIcons;
     std::string m_willTakeUpProp;

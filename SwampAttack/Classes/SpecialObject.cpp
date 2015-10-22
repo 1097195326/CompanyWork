@@ -41,14 +41,12 @@ SpecialObject::~SpecialObject()
 }
 void SpecialObject::buyEnd()
 {
-    log("special object buy end");
-    return;
     switch (m_type) {
         case 1:
         {
             int userGold = _G_U->getUserGold();
             int money = m_moneyObject->getEffect() * m_num;
-            userGold += money;
+//            userGold += money;
             _G_U->setUserGold(userGold);
         }
             break;

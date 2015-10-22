@@ -143,6 +143,8 @@ public:
     
     //
     void        setIndex(int index);
+    void        setTakeUp();
+    void        setTakeDown();
 };
 
 #endif /* defined(__SwampAttack__Prop__) */

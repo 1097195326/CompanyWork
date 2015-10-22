@@ -213,6 +213,8 @@ bool PropManager::dropProp(string id,Vec2 point)
             ++m_dropCount;
             prop->setFightView();
             prop->loadResource();
+            prop->setTakeUp();
+            m_dropPropData.push_back(prop);
         }
         DropPropSprite * spr = new DropPropSprite(prop,point);
         spr->autorelease();
@@ -224,4 +226,11 @@ bool PropManager::dropProp(string id,Vec2 point)
 void PropManager::resetData()
 {
     m_dropCount = 0;
+    std::list<Prop *>::iterator iter;
+    for (iter = m_dropPropData.begin(); iter != m_dropPropData.end(); ++iter)
+    {
+        Prop * prop = *iter;
+        prop->setTakeDown();
+    }
+    m_dropPropData.clear();
 }
