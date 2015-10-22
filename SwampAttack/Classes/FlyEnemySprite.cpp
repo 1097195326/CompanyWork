@@ -29,7 +29,13 @@ FlyEnemySprite::FlyEnemySprite(Enemy * model):EnemySprite(model)
                                           CallFunc::create(CC_CALLBACK_0(FlyEnemySprite::dieCall, this)),
                                           NULL);
     dieAction->retain();
-    Action * dianjiAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_Electric", 2));
+    
+    ActionInterval * shan = BaseUtil::makeAnimateWithNameAndIndex(name + "_Electric", 2);
+    Action * dianjiAction = Sequence::create(shan,
+                                             shan,
+                                             CallFunc::create(CC_CALLBACK_0(FlyEnemySprite::dianjiCall, this)),
+                                             NULL
+                                             );
     dianjiAction->retain();
     m_map["dianjiAction"] = dianjiAction;
     

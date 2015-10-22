@@ -133,6 +133,7 @@ public:
     void    diedCall();
     void    attackCall();
     void    hurtCall();
+    void    dianjiCall();
 //    void    hurtTanfeiCall();
     bool    isCanDelete();
     //--- interface for

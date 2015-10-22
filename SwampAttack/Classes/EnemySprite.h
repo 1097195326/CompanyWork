@@ -55,6 +55,7 @@ protected:
     void    dieCall();
     void    hurtCall();
     void    texiaoCall();
+    void    dianjiCall();
 public:
     EnemySprite(Enemy * model);
     virtual     ~EnemySprite();

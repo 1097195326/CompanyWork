@@ -41,6 +41,8 @@ SpecialObject::~SpecialObject()
 }
 void SpecialObject::buyEnd()
 {
+    log("special object buy end");
+    return;
     switch (m_type) {
         case 1:
         {

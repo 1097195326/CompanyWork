@@ -109,3 +109,8 @@ void EnemySprite::hurtCall()
     actionStatus = normal;
     m_model->hurtCall();
 }
+void EnemySprite::dianjiCall()
+{
+    actionStatus = normal;
+    m_model->dianjiCall();
+}

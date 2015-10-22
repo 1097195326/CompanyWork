@@ -236,7 +236,7 @@ void Enemy::hurtYun(float dlay)
     {
         m_status &= e_clear;
         m_status |= e_dianji;
-        m_dianjiCount = dlay;
+        m_dianjiCount = dlay;// 道具用途改变 没有用到
     }
 }
 void Enemy::hurtJiansu(float su)
@@ -378,6 +378,11 @@ void Enemy::diedCall()
     m_status |= e_canDel;
 }
 void Enemy::hurtCall()
+{
+    m_status &= e_clear;
+    m_status |= e_walk;
+}
+void Enemy::dianjiCall()
 {
     m_status &= e_clear;
     m_status |= e_walk;

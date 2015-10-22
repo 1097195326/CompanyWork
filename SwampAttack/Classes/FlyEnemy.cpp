@@ -37,13 +37,13 @@ void FlyEnemy::gameLoop(float data)
         move();
     }else if (m_status & e_dianji)
     {
-        m_dianjiDlay += data;
-        if (m_dianjiDlay >= m_dianjiCount)
-        {
-            m_status &= e_clear;
-            m_status |= e_walk;
-            m_dianjiDlay = 0.0f;
-        }
+//        m_dianjiDlay += data;
+//        if (m_dianjiDlay >= m_dianjiCount)
+//        {
+//            m_status &= e_clear;
+//            m_status |= e_walk;
+//            m_dianjiDlay = 0.0f;
+//        }
     }
     if (dlayToAttack >= 3) {
         if (m_targetPoint.x + m_range >= m_point.x)

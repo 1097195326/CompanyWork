@@ -353,7 +353,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/UserDelegatLayer.o: \
  jni/../../Classes/GameUser.h jni/../../Classes/GameSubject.h \
  jni/../../Classes/ShopGoldShowLayer.h \
  jni/../../Classes/ShopExpendShowLayer.h \
- jni/../../Classes/ShopHealthShowLayer.h
+ jni/../../Classes/ShopHealthShowLayer.h jni/../../Classes/GameSprite.h
 
 jni/../../Classes/UserDelegatLayer.h:
 
@@ -1068,3 +1068,5 @@ jni/../../Classes/ShopGoldShowLayer.h:
 jni/../../Classes/ShopExpendShowLayer.h:
 
 jni/../../Classes/ShopHealthShowLayer.h:
+
+jni/../../Classes/GameSprite.h:
