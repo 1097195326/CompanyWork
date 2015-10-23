@@ -92,6 +92,10 @@ void DefenseBuilding::checkUnlock(Layer * layer)
 void DefenseBuilding::addStrengthenLevel()
 {
     m_strengthenLevel += 1;
+    if (m_strengthenLevel > m_limitLevel)
+    {
+        return;
+    }
     _G_U->setBuildingLevel(m_id, m_strengthenLevel);
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
     Json::Value upgradeData = _C_M->getDataByTag("buildingUpgrade",upId);
