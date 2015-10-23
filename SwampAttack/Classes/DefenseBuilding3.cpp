@@ -33,8 +33,7 @@ void DefenseBuilding3::gameLoop(float data)
     {
         return;
     }
-    if (m_defenceType == 2 || m_defenceType == 3)
-    {
+    
         if(m_state == d_wait)
         {
             
@@ -42,12 +41,12 @@ void DefenseBuilding3::gameLoop(float data)
 //            log("mokey wait:%f",data);
             if (m_waitDelay >= 1)
             {
-                log("can to canhurt");
+//                log("can to canhurt");
                 m_waitDelay = 0;
                 m_state = d_canHurt;
             }
         }
-    }
+    
     EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
     if (!enemyGroup) {
         return;

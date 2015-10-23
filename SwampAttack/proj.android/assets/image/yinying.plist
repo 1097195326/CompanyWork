@@ -758,7 +758,7 @@
                 <key>sourceSize</key>
                 <string>{97,103}</string>
             </dict>
-            <key>yy_wolfking2_linght.png</key>
+            <key>yy_wolfking2_light.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{474,280},{97,103}}</string>
@@ -872,7 +872,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:8eaa7cb391a6dec647825dc5069c8986:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:5f4b4454518a0c20c5ef1267ed780ebb:1/1$</string>
             <key>textureFileName</key>
             <string>yinying.png</string>
         </dict>

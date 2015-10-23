@@ -101,6 +101,7 @@ void DefenseBuilding::addStrengthenLevel()
     Json::Value upgradeData = _C_M->getDataByTag("buildingUpgrade",upId);
     m_damage = atof(upgradeData["Damage"].asString().c_str());
     m_hp = atoi(upgradeData["Hp"].asString().c_str());
+    m_deceleration = atof(upgradeData["Deceleration"].asString().c_str());
     if (m_limitLevel == m_strengthenLevel)
     {
         m_isMaxLevel = true;
