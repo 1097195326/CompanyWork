@@ -290,7 +290,7 @@ EnemyInfo::EnemyInfo()
     m_data["blind_armor"] = blindArmor;
     // zombieking 僵尸王
     EnemyInfoData zombieking;
-    zombieking.attackFrame = 7;
+    zombieking.attackFrame = 6;
     zombieking.attackFrames = 11;
     zombieking.hurtHeavyFrames = 9;
     zombieking.hurtLightFrames = 5;
@@ -303,7 +303,7 @@ EnemyInfo::EnemyInfo()
     m_data["zombieking"] = zombieking;
     // scareking 草人王
     EnemyInfoData scareking;
-    scareking.attackFrame = 7;
+    scareking.attackFrame = 6;
     scareking.attackFrames = 11;
     scareking.hurtHeavyFrames = 9;
     scareking.hurtLightFrames = 5;
@@ -316,7 +316,7 @@ EnemyInfo::EnemyInfo()
     m_data["scareking"] = scareking;
     // skullking 骷髅王
     EnemyInfoData skullking;
-    skullking.attackFrame = 7;
+    skullking.attackFrame = 6;
     skullking.attackFrames = 11;
     skullking.hurtHeavyFrames = 9;
     skullking.hurtLightFrames = 5;
@@ -329,7 +329,7 @@ EnemyInfo::EnemyInfo()
     m_data["skullking"] = skullking;
     // skullking 骷髅王2
     EnemyInfoData skullking2;
-    skullking2.attackFrame = 7;
+    skullking2.attackFrame = 6;
     skullking2.attackFrames = 12;
     skullking2.hurtHeavyFrames = 10;
     skullking2.hurtLightFrames = 6;
@@ -342,7 +342,7 @@ EnemyInfo::EnemyInfo()
     m_data["skullking2"] = skullking2;
     // wolfking 狼王
     EnemyInfoData wolfking;
-    wolfking.attackFrame = 7;
+    wolfking.attackFrame = 6;
     wolfking.attackFrames = 11;
     wolfking.hurtHeavyFrames = 9;
     wolfking.hurtLightFrames = 5;
@@ -355,7 +355,7 @@ EnemyInfo::EnemyInfo()
     m_data["wolfking"] = wolfking;
     // wolfking 狼王
     EnemyInfoData wolfking2;
-    wolfking2.attackFrame = 7;
+    wolfking2.attackFrame = 6;
     wolfking2.attackFrames = 12;
     wolfking2.hurtHeavyFrames = 10;
     wolfking2.hurtLightFrames = 6;
@@ -368,7 +368,7 @@ EnemyInfo::EnemyInfo()
     m_data["wolfking2"] = wolfking2;
     //butcherking
     EnemyInfoData butcherking;
-    butcherking.attackFrame = 7;
+    butcherking.attackFrame = 6;
     butcherking.attackFrames = 12;
     butcherking.hurtHeavyFrames = 10;
     butcherking.hurtLightFrames = 6;
@@ -381,7 +381,7 @@ EnemyInfo::EnemyInfo()
     m_data["butcherking"] = butcherking;
     //snowmanking
     EnemyInfoData snowmanking;
-    snowmanking.attackFrame = 7;
+    snowmanking.attackFrame = 6;
     snowmanking.attackFrames = 12;
     snowmanking.hurtHeavyFrames = 10;
     snowmanking.hurtLightFrames = 6;
@@ -394,7 +394,7 @@ EnemyInfo::EnemyInfo()
     m_data["snowmanking"] = snowmanking;
     //vampireking
     EnemyInfoData vampireking;
-    vampireking.attackFrame = 7;
+    vampireking.attackFrame = 6;
     vampireking.attackFrames = 12;
     vampireking.hurtHeavyFrames = 10;
     vampireking.hurtLightFrames = 6;
@@ -407,7 +407,7 @@ EnemyInfo::EnemyInfo()
     m_data["vampireking"] = vampireking;
     // demonking
     EnemyInfoData demonking;
-    demonking.attackFrame = 7;
+    demonking.attackFrame = 6;
     demonking.attackFrames = 10;
     demonking.walkFrames = 7;
     demonking.downFrames = 13;

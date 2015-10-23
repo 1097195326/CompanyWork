@@ -52,6 +52,8 @@ void House::hurt(float damage)
 void House::addHealth(int health)
 {
     m_health = m_totalHelath += health;
+//    log("house health :%f",m_health);
+//    log("house totalHelath :%f",m_totalHelath);
 }
 float House::getHealthPercent()
 {

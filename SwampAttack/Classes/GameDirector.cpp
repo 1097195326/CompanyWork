@@ -40,9 +40,8 @@ GameDirector * GameDirector::getInstance()
 }
 void GameDirector::initGameView()
 {
-    
-    House::getInstance()->setView();
     DefenseBuildingManager::getInstance()->setView();
+    House::getInstance()->setView();
     Human::getInstance()->setView();
     GunManager::getInstance()->setFightView();
     PropManager::getInstance()->setFightView();

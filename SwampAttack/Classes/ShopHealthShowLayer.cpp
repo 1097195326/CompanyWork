@@ -86,15 +86,17 @@ shopHealthShowLayer::shopHealthShowLayer(Vec2 position)
     Size buttonSize = m_button->getContentSize();
     
     Sprite * hpIcon = Sprite::create(ImagePath("hp1_icon.png"));
-    hpIcon->setPosition(buttonSize.width * 0.8,
+    hpIcon->setPosition(buttonSize.width * 0.85,
                         buttonSize.height * 0.5);
     m_button->addChild(hpIcon);
-    Label * buttonTex = Label::createWithTTF(StringUtils::format("added %dx",
+    hpIcon->setScale(0.75);
+    Label * buttonTex = Label::createWithTTF(StringUtils::format("added %d x",
                                                                  _G_U->getExpendPropNum()),
                                              "fonts/Arial Black.ttf",
-                                             40);
+                                             35);
     buttonTex->enableOutline(Color4B(0, 0, 0, 255),4);
-    buttonTex->setPosition(buttonSize.width * 0.45,
+    buttonTex->setAdditionalKerning(-5);
+    buttonTex->setPosition(buttonSize.width * 0.4,
                            buttonSize.height * 0.5);
     m_button->addChild(buttonTex);
     

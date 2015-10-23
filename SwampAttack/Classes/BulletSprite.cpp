@@ -50,18 +50,18 @@ void BulletSprite::setModel(Bullet *bullet)
 }
 void BulletSprite::update(float data)
 {
-    if (m_model->isMoving()) {
+    if (m_model && m_model->isMoving()) {
         setPosition(m_model->getPosition());
-    }else if (m_model->isArrive())
+    }else if (m_model && m_model->isArrive())
     {
         m_model->arriveCall();
-        if (m_model->isHaveExplode())
+        if (m_model && m_model->isHaveExplode())
         {
             BulletInfoData infoData = m_model->getBaozhaTexiaoInfo();
             _G_V->addBulletTexiao(m_model->getPosition(), infoData.name, infoData.frames);
         }
         
-    }else if (m_model->isDie())
+    }else if (m_model && m_model->isDie())
     {
         m_model->setCanDelete();
         unscheduleUpdate();

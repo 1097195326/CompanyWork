@@ -56,14 +56,14 @@ tid#WeaponName11,加农炮,Cannon
 tid#WeaponName10,死神狙击,Death sniper
 tid#WeaponName12,火焰发射器,Flame emitter
 ,,
-tid#WeaponDescription3,基础散弹枪，可对小范围敌人造成伤害,Basic shotgun
+tid#WeaponDescription3,标配散弹枪，群体伤害，最重要的是子弹免费！,Basic shotgun
 tid#WeaponDescription5,基本冲锋枪,Basic assault rifle
-tid#WeaponDescription7,单体高杀伤性武器，适合针对单体高血量怪物,Basic rifle
-tid#WeaponDescription8,近战高伤害武器，攻击频率较慢,"Melee weapon attack frequency high damage, slow"
-tid#WeaponDescription9,基础穿刺武器，可进行针对5个目标的穿刺攻击,"Base piercing weapon, the puncture attack can be carried out against 5 targets."
-tid#WeaponDescription10,高伤害穿刺武器，可以同时穿透一条线的敌人,"High damage piercing weapon, you can penetrate a line of enemy"
-tid#WeaponDescription11,范围爆破武器，可有效杀伤群怪,"Range of explosive weapons, can effectively kill the group strange"
-tid#WeaponDescription12,范围烧伤性武器，可对群体怪物造成持续伤害,"Range of burn weapons, can cause sustained damage to the group of monsters"
+tid#WeaponDescription7,传奇枪神，无论是点射还是扫射，都是打怪的不二之选,Basic rifle
+tid#WeaponDescription8,近战高伤害血腥利器，终极状态一击必杀。,"Melee weapon attack frequency high damage, slow"
+tid#WeaponDescription9,被教皇祝福过的银弓箭，可同时穿透5个怪物的胸膛,"Base piercing weapon, the puncture attack can be carried out against 5 targets."
+tid#WeaponDescription10,超爽超强力银弹，几乎可以打穿地球,"High damage piercing weapon, you can penetrate a line of enemy"
+tid#WeaponDescription11,当你带上火箭银弹，面对成群的怪物就不再是什么问题,"Range of explosive weapons, can effectively kill the group strange"
+tid#WeaponDescription12,圣山上最灼热的火种会随着你喷涌，足以烧灭任何邪恶的野心,"Range of burn weapons, can cause sustained damage to the group of monsters"
 ,,
 tid#MissionName1,远方而来的朋友,Friends from afar
 tid#MissionName2,摇摆的身影,Swing figure
@@ -128,16 +128,16 @@ tid#ItemName7,震荡弹,Oscillating projectile
 tid#ItemName8,润滑油,Lubricating oil
 ,,
 ,,
-tid#ItemDescription1,对小范围内目标造成群体伤害。,Cause group damage to the small range.
-tid#ItemDescription2,使小范围内目标燃烧，持续造成伤害。,"To make a small range of target burning, sustained damage."
-tid#ItemDescription3,在地面产生1枚地雷。,1 mines on the ground.
-tid#ItemDescription4,寒冰刺骨的冷风，对全体怪物造成伤害并减速。,"Icy cold, damaging and slowing of the monster."
-tid#ItemDescription5,对较大范围内所有怪物造成较大伤害。,To the larger range of all the monsters cause more damage.
-tid#ItemDescription6,对所有怪物造成致命伤害。,Fatal damage to all the monsters.
-tid#ItemDescription7,对小范围怪物造成眩晕,Vertigo caused by small monster
-tid#ItemDescription8,对小范围怪物进行减速,Slow down the monster
-tid#ItemDescription9,可以路过的非BOSS的单位,Can pass through the non BOSS units
-tid#ItemDescription10,对所有怪物造成致命伤害,Fatal damage to all the monsters
+tid#ItemDescription1,可以同时对几个怪物造成伤害的集束雷管,Cause group damage to the small range.
+tid#ItemDescription2,使怪物内心的邪恶燃烧，直到烧成灰烬。,"To make a small range of target burning, sustained damage."
+tid#ItemDescription3,抛洒在路面的圣水地雷。,1 mines on the ground.
+tid#ItemDescription4,寒冰刺骨的冷风，对所有怪物造成冻伤并减缓速度。,"Icy cold, damaging and slowing of the monster."
+tid#ItemDescription5,对较大范围内的怪物带来永久伤害,To the larger range of all the monsters cause more damage.
+tid#ItemDescription6,对所有怪物来说，这就是噩梦,Fatal damage to all the monsters.
+tid#ItemDescription7,对经过的怪物持续的电击麻痹和伤害,Vertigo caused by small monster
+tid#ItemDescription8,湿滑的油性路面会降低怪物们赶路的速度,Slow down the monster
+tid#ItemDescription9,踩到这个弹簧的怪物可以去他们没去过的任何地方,Can pass through the non BOSS units
+tid#ItemDescription10,对所有怪物来说，这都会造成致命伤害,Fatal damage to all the monsters
 ,,
 tid#DefenceName1,木板,Board
 tid#DefenceName3,小钢炮,Cannon
@@ -146,12 +146,12 @@ tid#DefenceName5,尖刺,Spike
 tid#DefenceName6,铁板,Iron plate
 tid#DefenceName7,沙袋,Sandbags
 ,,
-tid#DefenceDescription1,为马车增加挡板防御,To increase the defense of the carriage
+tid#DefenceDescription1,为马车增加防御，更耐攻击,To increase the defense of the carriage
 tid#DefenceDescription3,小猴子操作的小炮，能够对陆行怪物造成群体伤害。,"The little monkey operation of small, can cause damage to the land for the monster group."
-tid#DefenceDescription4,可以对马车周围目标减速,Ability to increase a certain defense
-tid#DefenceDescription5,对路过的敌人造成持续伤害,To the close of the monster continued to cause damage
-tid#DefenceDescription6,为马车增加一套铁板防御,为马车增加一套铁板防御
-tid#DefenceDescription7,为马车增加一堆沙袋防御,Add a pile of sandbags defense for carriage
+tid#DefenceDescription4,藤蔓会卷住怪物们的脚，让他们迟缓，与油瓶配合更出色,Ability to increase a certain defense
+tid#DefenceDescription5,踩过去的怪物们都会收到伤害,To the close of the monster continued to cause damage
+tid#DefenceDescription6,强力的铁板防御，比木板更耐打,为马车增加一套铁板防御
+tid#DefenceDescription7,比起来，沙袋是最好的防御手段,Add a pile of sandbags defense for carriage
 ,,
 tid#HpDescription1,角色死亡使角色复活补满体力,The role of death makes the role of life full of physical strength
 tid#HpDescription2,角色死亡使角色复活补满体力,The role of death makes the role of life full of physical strength
@@ -183,7 +183,7 @@ tid#HP3,50瓶体力药剂,50 bottles of Medicine
 tid#Scene1,执著的怨恨让沉睡千年的恶魔再次苏醒，大恶魔率领的暗黑军队已经逼近城镇,
 tid#Scene2,教皇针对全世界发布召唤，号召英雄们对抗魔军,
 tid#Scene3,悬赏令传到了恶魔猎人的故乡，他决心再次终结恶魔的野心,
-tid#Scene4,宿命的对抗即将开始。,
+tid#Scene4,几个世纪的宿命对抗又将开始。,
 ,,
 tid#unlock1,第12关解锁,
 tid#unlock2,第17关解锁,

@@ -19,7 +19,7 @@ Size m_winSize;
 Size m_visibleSize;
 Vec2 m_visibleOrigin;
 
-int _G_AddTime = 600;
+int _G_AddTime = 300;
 //extern  Size    winSize;
 //extern  Size    visibleSize;
 //extern  Vec2    visibleOrigin;
