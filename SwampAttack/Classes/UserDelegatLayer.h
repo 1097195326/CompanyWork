@@ -11,12 +11,13 @@
 
 #include "BaseCode.h"
 #include "GameObserver.h"
+#include "ProgressBar.h"
 
 class UserDelegateLayer : public Layer,public GameObserver
 {
 private:
     
-    std::vector<Sprite *> m_healthSprites;
+    std::vector<ProgressBar *> m_healthSprites;
     Label   * m_goldLabel;
     Label   * m_expendPropLabel;
     

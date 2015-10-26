@@ -153,6 +153,10 @@ bool Enemy::isContainsPoint(cocos2d::Rect rect)
     m_rect = Rect(m_point.x, m_point.y, m_width, m_height);
     return m_rect.intersectsRect(rect);
 }
+Rect Enemy::getRect()
+{
+    return Rect(m_point.x, m_point.y, m_width, m_height);
+}
 void Enemy::hurt(int damage,int index)
 {
     if (isDieing() || isCanDelete())
@@ -232,7 +236,7 @@ void Enemy::hurtYun(float dlay)
     {
         m_status &= e_clear;
         m_status |= e_dianji;
-        m_dianjiCount = dlay;
+        m_dianjiCount = dlay;// 道具用途改变 没有用到
     }
 }
 void Enemy::hurtJiansu(float su)
@@ -378,6 +382,11 @@ void Enemy::hurtCall()
     m_status &= e_clear;
     m_status |= e_walk;
 }
+void Enemy::dianjiCall()
+{
+    m_status &= e_clear;
+    m_status |= e_walk;
+}
 //void Enemy::hurtTanfeiCall()
 //{
 //    
@@ -429,7 +438,7 @@ void Enemy::attackCall()
                                0,
                                1,
                                t_house,
-                               m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_height * 0.5),
+                               m_point - Vec2(m_width * 0.5, 0) + Vec2(0, m_height * 0.3),
                                m_targetPoint + Vec2(random(0, _G_M_M->flyEnemy_target_rightLine),
                                                     random(0, _G_M_M->flyEnemy_target_upLine)),
                                m_bulletModelId

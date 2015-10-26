@@ -20,9 +20,11 @@ private:
     
     std::map<string,Prop *> m_takeUpPropData;
     std::list<Prop *> m_usingPropDta;
+    std::list<Prop *> m_dropPropData;
     
     std::vector<ShopPropIcon *>   m_propIcons;
     std::string m_willTakeUpProp;
+    int     m_dropCount;
 public:
     //---
     Prop *  addUsingProp(string propId);
@@ -48,6 +50,7 @@ public:
     
     void    checkUnlock(Layer * layer);
     bool    dropProp(string id,Vec2 point);
+    void    resetData();
 public:
     static PropManager * getInstance();
     PropManager();

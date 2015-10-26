@@ -12,6 +12,7 @@
 #include "BaseCode.h"
 #include "GameSubject.h"
 
+#define FullHealth 10
 
 #define _G_U GameUser::getInstance()
 using namespace std;

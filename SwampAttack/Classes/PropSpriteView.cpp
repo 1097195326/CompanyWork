@@ -32,8 +32,8 @@ m_moveJuli(0.0f)
     m_propIcon = NULL;
     
     m_iconScale = 0.48;
-//    int iconIndex = PropManager::getInstance()->getTakeUpPropIndexByName(m_prop->getId());
-    int iconIndex = m_prop->getTakeUpIndex();
+    int iconIndex = PropManager::getInstance()->getTakeUpPropIndexByName(m_prop->getId());
+//    int iconIndex = m_prop->getTakeUpIndex();
     m_blueBg = Sprite::create(ImagePath("fight_gun_blueBg.png"));
     Sprite * propIcon = Sprite::create(ImagePath(StringUtils::format("%s_icon.png",m_prop->getModelId().c_str())));
     m_numLabel = Label::createWithTTF(StringUtils::format("%d",m_prop->getNum()),
@@ -92,7 +92,8 @@ void PropSpriteView::checkXinshou(float data)
             m_shou = Sprite::create();
             addChild(m_shou,6);
             
-            int iconIndex = m_prop->getTakeUpIndex();
+            int iconIndex = PropManager::getInstance()->getTakeUpPropIndexByName(m_prop->getId());
+//            int iconIndex = m_prop->getTakeUpIndex();
             Vec2 iconPoint = _G_M_M->fightScene_PropIcon_Position;
             float iconWidth = m_blueBg->getContentSize().width;
             m_shou->setPosition(iconPoint - Vec2((iconWidth + 0) * (iconIndex - 1), 0) * m_iconScale + Vec2(10, -30));

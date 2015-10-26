@@ -355,12 +355,12 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameShowDiscLayer.o: \
  jni/../../Classes/GameVerticalScrollHeadlerView.h \
  jni/../../Classes/GameScrollHeadlerView.h \
  jni/../../Classes/GameScrollView.h jni/../../Classes/ScrollController.h \
- jni/../../Classes/UserDelegatLayer.h jni/../../Classes/GunManager.h \
- jni/../../Classes/GameObject.h jni/../../Classes/Gun.h \
- jni/../../Classes/json/json.h jni/../../Classes/json/autolink.h \
- jni/../../Classes/json/config.h jni/../../Classes/json/value.h \
- jni/../../Classes/json/forwards.h jni/../../Classes/json/reader.h \
- jni/../../Classes/json/features.h \
+ jni/../../Classes/UserDelegatLayer.h jni/../../Classes/ProgressBar.h \
+ jni/../../Classes/GunManager.h jni/../../Classes/GameObject.h \
+ jni/../../Classes/Gun.h jni/../../Classes/json/json.h \
+ jni/../../Classes/json/autolink.h jni/../../Classes/json/config.h \
+ jni/../../Classes/json/value.h jni/../../Classes/json/forwards.h \
+ jni/../../Classes/json/reader.h jni/../../Classes/json/features.h \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameSubject.h \
  jni/../../Classes/PropManager.h jni/../../Classes/Prop.h \
@@ -1084,6 +1084,8 @@ jni/../../Classes/GameScrollView.h:
 jni/../../Classes/ScrollController.h:
 
 jni/../../Classes/UserDelegatLayer.h:
+
+jni/../../Classes/ProgressBar.h:
 
 jni/../../Classes/GunManager.h:
 

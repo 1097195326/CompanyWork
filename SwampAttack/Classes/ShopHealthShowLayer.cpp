@@ -7,7 +7,6 @@
 //
 
 #include "ShopHealthShowLayer.h"
-#include "GameSprite.h"
 #include "GameUser.h"
 
 
@@ -52,19 +51,54 @@ shopHealthShowLayer::shopHealthShowLayer(Vec2 position)
     m_healthSprites.reserve(5);
     for (int i = 0; i < 5; ++i) {
         Sprite * xinBg = Sprite::create(ImagePath("shopXinBg.png"));
-        Sprite * xin = Sprite::create(ImagePath("shopXinIcon.png"));
+//        Sprite * xin = Sprite::create(ImagePath("shopXinIcon.png"));
+        
+        ProgressBar * xin = new ProgressBar("shopXinIcon.png","shopXinBg.png");
+        xin->autorelease();
+        xin->setBarRight();
         
         Vec2 xinP = Vec2(bgSize.width * 0.3 + xinBg->getContentSize().width * 1.2 * i,
                          bgSize.height * 0.3);
-        xinBg->setPosition(xinP);
+//        xinBg->setPosition(xinP);
         xin->setPosition(xinP);
-        xinBg->setScale(1.5);
+//        xinBg->setScale(1.5);
         xin->setScale(1.5);
-        bg->addChild(xinBg);
+//        bg->addChild(xinBg);
         bg->addChild(xin);
-        xin->setVisible(false);
+//        xin->setVisible(false);
         m_healthSprites.push_back(xin);
     }
+    m_timeLabel = Label::createWithTTF("",
+                                       "fonts/Arial Black.ttf",
+                                       30);
+    m_timeLabel->setPosition(bgSize.width * 0.5, bgSize.height * 0.2);
+    m_timeLabel->enableOutline(Color4B(0, 0, 0, 255),3);
+    bg->addChild(m_timeLabel);
+    
+    
+    m_button = new GameSprite(ImagePath("healthShowButton.png"));
+    m_button->autorelease();
+    m_button->setPosition(bgSize.width * 0.5,
+                        bgSize.height * 0.32);
+    m_button->m_touchMeCall = CC_CALLBACK_2(shopHealthShowLayer::useToolToAddHealth, this);
+    bg->addChild(m_button);
+    
+    Size buttonSize = m_button->getContentSize();
+    
+    Sprite * hpIcon = Sprite::create(ImagePath("hp1_icon.png"));
+    hpIcon->setPosition(buttonSize.width * 0.85,
+                        buttonSize.height * 0.5);
+    m_button->addChild(hpIcon);
+    hpIcon->setScale(0.75);
+    Label * buttonTex = Label::createWithTTF(StringUtils::format("added %d x",
+                                                                 _G_U->getExpendPropNum()),
+                                             "fonts/Arial Black.ttf",
+                                             35);
+    buttonTex->enableOutline(Color4B(0, 0, 0, 255),4);
+    buttonTex->setAdditionalKerning(-5);
+    buttonTex->setPosition(buttonSize.width * 0.4,
+                           buttonSize.height * 0.5);
+    m_button->addChild(buttonTex);
     
     updateView();
     
@@ -85,41 +119,37 @@ void shopHealthShowLayer::updateView()
     {
         for (int i = 0; i < 5; ++i)
         {
-            if (i < userHealth)
+            m_healthSprites[i]->setVisible(true);
+            
+            if (i < (userHealth - 1)/ 2)
             {
-                m_healthSprites[i]->setVisible(true);
+                m_healthSprites[i]->updatePercent(100);
+            }else if (i == (userHealth - 1)/ 2)
+            {
+                if ((userHealth) % 2)
+                {
+                    m_healthSprites[i]->updatePercent(50);
+                }else
+                {
+                    m_healthSprites[i]->updatePercent(100);
+                }
             }else
             {
-                m_healthSprites[i]->setVisible(false);
+                m_healthSprites[i]->updatePercent(0);
             }
         }
+        m_button->setVisible(false);
+        m_button->setCanTouch(false);
     }else
     {
-        
-        
-        GameSprite * button = new GameSprite(ImagePath("healthShowButton.png"));
-        button->setPosition(bgSize.width * 0.5,
-                            bgSize.height * 0.3);
-        button->m_touchMeCall = CC_CALLBACK_2(shopHealthShowLayer::useToolToAddHealth, this);
-        bg->addChild(button);
-        Sprite * hpIcon = Sprite::create(ImagePath("hp1_icon.png"));
-        hpIcon->setPosition(bgSize.width * 0.63,
-                            bgSize.height * 0.3);
-        bg->addChild(hpIcon);
-        Label * buttonTex = Label::createWithTTF(StringUtils::format("added %dx",_G_U->getExpendPropNum()),
-                                                 "fonts/Arial Black.ttf",
-                                                 40);
-        buttonTex->enableOutline(Color4B(0, 0, 0, 255),4);
-        buttonTex->setPosition(bgSize.width * 0.45,
-                            bgSize.height * 0.3);
-        bg->addChild(buttonTex);
+        for (int i = 0; i < 5; ++i)
+        {
+            m_healthSprites[i]->setVisible(false);
+        }
+        m_button->setVisible(true);
+        m_button->setCanTouch(true);
     }
-    m_timeLabel = Label::createWithTTF("",
-                                       "fonts/Arial Black.ttf",
-                                       30);
-    m_timeLabel->setPosition(bgSize.width * 0.5, bgSize.height * 0.2);
-    m_timeLabel->enableOutline(Color4B(0, 0, 0, 255),3);
-    bg->addChild(m_timeLabel);
+    
 }
 void shopHealthShowLayer::updateData()
 {
@@ -128,8 +158,10 @@ void shopHealthShowLayer::updateData()
 void shopHealthShowLayer::update(float data)
 {
     int userHealth = GameUser::getInstance()->getUserHealth();
-    if (userHealth == 5)
+    if (userHealth == FullHealth)
     {
+        m_timeLabel->setVisible(false);
+        unschedule(CC_SCHEDULE_SELECTOR(shopHealthShowLayer::update));
         return;
     }else
     {
@@ -153,6 +185,7 @@ void shopHealthShowLayer::useToolToAddHealth(cocos2d::Touch *touch, cocos2d::Eve
     {
         _G_U->addHealthToFull();
         m_delegateLayer->updateUserData();
+        closeView();
     }
 }
 bool shopHealthShowLayer::touchBegan(Touch *touch, Event *event)
@@ -168,6 +201,16 @@ void shopHealthShowLayer::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
         return;
     }
     
+    closeView();
+}
+void shopHealthShowLayer::actionEndCall()
+{
+    layerColor->stopAllActions();
+    bg->stopAllActions();
+    removeFromParentAndCleanup(true);
+}
+void shopHealthShowLayer::closeView()
+{
     layerColor->stopAllActions();
     bg->stopAllActions();
     layerColor->runAction(FadeTo::create(0.3, 0));
@@ -177,10 +220,4 @@ void shopHealthShowLayer::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
                                    CallFunc::create(CC_CALLBACK_0(shopHealthShowLayer::actionEndCall, this)),
                                    NULL
                                    ));
-}
-void shopHealthShowLayer::actionEndCall()
-{
-    layerColor->stopAllActions();
-    bg->stopAllActions();
-    removeFromParentAndCleanup(true);
 }

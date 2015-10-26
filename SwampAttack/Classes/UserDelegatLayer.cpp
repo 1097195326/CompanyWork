@@ -24,15 +24,21 @@ UserDelegateLayer::UserDelegateLayer()
     m_healthSprites.reserve(5);
     for (int i = 0; i < 5; ++i) {
         Sprite * xinBg = Sprite::create(ImagePath("shopXinBg.png"));
-        Sprite * xin = Sprite::create(ImagePath("shopXinIcon.png"));
+//        Sprite * xin = Sprite::create(ImagePath("shopXinIcon.png"));
         
-        Vec2 xinP = Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.15 + xinBg->getContentSize().width * 0.8 * i,
+        ProgressBar * xin = new ProgressBar("shopXinIcon.png","shopXinBg.png");
+        xin->autorelease();
+        xin->setBarRight();
+        
+        Vec2 xinP = Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.15 +
+                         xinBg->getContentSize().width * 0.8 * i,
                          m_visibleOrigin.y + m_visibleSize.height * 0.935);
-        xinBg->setPosition(xinP);
+//        xinBg->setPosition(xinP);
         xin->setPosition(xinP);
-        addChild(xinBg,3);
+//        addChild(xinBg,3);
         addChild(xin,3);
-        xin->setVisible(false);
+//        xin->updatePercent(100);
+//        xin->setVisible(true);
         m_healthSprites.push_back(xin);
     }
     
@@ -103,14 +109,25 @@ void UserDelegateLayer::updateData()
 {
 //    log("user delegate layer update data");
     int userHealth = _G_U->getUserHealth();
+    log("userHealth:%d",userHealth);
+    
     for (int i = 0; i < 5; ++i)
     {
-        if (i < userHealth)
+        if (userHealth > 0 && i < (userHealth - 1)/ 2)
         {
-            m_healthSprites[i]->setVisible(true);
+            m_healthSprites[i]->updatePercent(100);
+        }else if (userHealth > 0 && i == (userHealth - 1)/ 2)
+        {
+            if ((userHealth) % 2)
+            {
+                m_healthSprites[i]->updatePercent(50);
+            }else
+            {
+                m_healthSprites[i]->updatePercent(100);
+            }
         }else
         {
-            m_healthSprites[i]->setVisible(false);
+            m_healthSprites[i]->updatePercent(0);
         }
     }
     

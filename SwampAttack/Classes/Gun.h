@@ -72,6 +72,7 @@ public:
     void    checkUnlock(Layer * layer);
     void    resetData();
     void    saveBullet();
+    bool    isCanBuyBullet();
     
 private:
     int     m_index;

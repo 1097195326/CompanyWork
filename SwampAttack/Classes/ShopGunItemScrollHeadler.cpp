@@ -295,7 +295,12 @@ void ShopGunItemScrollHeadler::updateGunView()
         {
             if (gun->getWeaponType() != 1)
             {
-                m_buyButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
+                if (gun->isCanBuyBullet()) {
+                    m_buyButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
+                }else
+                {
+                    m_buyButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
+                }
             }
         }else
         {

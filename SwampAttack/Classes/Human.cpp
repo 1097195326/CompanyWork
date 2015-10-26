@@ -60,12 +60,12 @@ void Human::changeState(State<Human> *state)
 void Human::fire(Touch * touch,Event * event)
 {
     m_fireToPoint = touch->getLocation();
-    GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
-    if (gameMap->m_BulletStartPoint.x > m_fireToPoint.x)
-    {
-        m_touchStatus = _touchEnd;
-        return;
-    }
+//    GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
+//    if (gameMap->m_BulletStartPoint.x > m_fireToPoint.x)
+//    {
+//        m_touchStatus = _touchEnd;
+//        return;
+//    }
     if (m_touchStatus == _isTouching)
     {
         return;

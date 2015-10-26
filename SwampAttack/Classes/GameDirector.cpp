@@ -40,9 +40,8 @@ GameDirector * GameDirector::getInstance()
 }
 void GameDirector::initGameView()
 {
-    
-    House::getInstance()->setView();
     DefenseBuildingManager::getInstance()->setView();
+    House::getInstance()->setView();
     Human::getInstance()->setView();
     GunManager::getInstance()->setFightView();
     PropManager::getInstance()->setFightView();
@@ -162,6 +161,7 @@ void GameDirector::resetGameData()
     Human::getInstance()->resetData();
     
     EnemyManager::getInstance()->resetData();
+    PropManager::getInstance()->resetData();
     m_goldNum = 0;
 }
 void GameDirector::reliveGame()

@@ -30,6 +30,9 @@ m_enemy(NULL)
     m_toPoint = m_bp.m_targetPoint;
     
     int accuray = (int)(100 - m_bp.m_accuracy * 100);
+    float distance = (m_toPoint - m_StartPoint).length();
+    accuray *= (distance * 0.001);
+    
     m_toPoint.x += random(-accuray, accuray) ;
     m_toPoint.y += random(-accuray, accuray) ;
     
@@ -76,6 +79,8 @@ void Bullet::gameLoop(float data)
         if (!enemyGroup) {
             return;
         }
+        Rect b_rect = getRect();
+//        log("bullet rect x:%f,y:%f,w:%f,h:%f",b_rect.origin.x,b_rect.origin.y,b_rect.size.width,b_rect.size.height);
         std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
         if (!enemyData.empty())
         {
@@ -83,8 +88,12 @@ void Bullet::gameLoop(float data)
             for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
             {
                 Enemy * enemy = *e_iter;
+                Rect e_rect = enemy->getRect();
                 Rect b_rect = getRect();
+                
+//                log("enemy rect x:%f,y:%f,w:%f,h:%f",e_rect.origin.x,e_rect.origin.y,e_rect.size.width,e_rect.size.height);
                 if (isFireEnemy() &&
+                    !enemy->isDieing() &&
                     !enemy->isDied() &&
                     enemy->isContainsPoint(b_rect))
                 {
@@ -103,6 +112,7 @@ void Bullet::gameLoop(float data)
                     }
                 }
                 if (enemy->getActionType() == 2 &&
+                    !enemy->isDieing() &&
                     !enemy->isDied() &&
                     m_Point.distance(enemy->getEnemyCenterPoint()) <= m_effectDistance
                     )
@@ -117,6 +127,7 @@ void Bullet::gameLoop(float data)
 //                    return;
 //                    m_enemy = NULL;
 //                }
+//                log("hurt enemy");
                 m_enemy->hurt(m_damage,m_bp.m_underAttackAction);
                 m_enemy = NULL;
             }
@@ -156,8 +167,8 @@ Vec2 Bullet::getPosition()
 }
 Rect Bullet::getRect()
 {
-    return Rect(m_Point.x - m_bp.m_damageArea * 0.5,
-                m_Point.y - m_bp.m_damageArea * 0.5,
+    return Rect(m_Point.x,//- m_bp.m_damageArea * 0.5,
+                m_Point.y,// - m_bp.m_damageArea * 0.5,
                 m_bp.m_damageArea,
                 m_bp.m_damageArea);
 }

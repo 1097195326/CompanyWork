@@ -13,7 +13,7 @@
 extern "C"
 {
 
-	static SpecialObject * _isBuying_object;
+	static SpecialObject * _isBuying_object = NULL;
 
 	void payForBuyGameObject(SpecialObject * object);
 

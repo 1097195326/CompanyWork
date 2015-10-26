@@ -133,6 +133,7 @@ public:
     void    diedCall();
     void    attackCall();
     void    hurtCall();
+    void    dianjiCall();
 //    void    hurtTanfeiCall();
     bool    isCanDelete();
     //--- interface for
@@ -158,6 +159,8 @@ public:
     float   getAttackSpeed();
     int     getGoldForDied();
     string  getDrop();
+    
+    Rect    getRect();
 };
 
 #endif /* defined(__SwampAttack__Enemy__) */

@@ -200,12 +200,19 @@ void ShopBuildingItemScrollHeadler::updateDefenseView()
         float limitLevel = building->getLimitLevel();
         int upgradeGold = building->getStrengthGold();
         
-        m_upgradeLabel->setString(StringUtils::format("%d",upgradeGold));
+        if (building->isMaxLevel())
+        {
+            m_upgradeLabel->setString("MAX");
+        }else
+        {
+            m_upgradeLabel->setString(StringUtils::format("%d",upgradeGold));
+        }
+        
         m_levelUpLabel->setString(StringUtils::format("LV.%d",(int)level));
         m_progressBar->updatePercent(level/limitLevel * 100);
         
         int userGold = GameUser::getInstance()->getUserGold();
-        if (userGold >= upgradeGold)
+        if (userGold >= upgradeGold && !building->isMaxLevel())
         {
             m_upGradeButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
         }else

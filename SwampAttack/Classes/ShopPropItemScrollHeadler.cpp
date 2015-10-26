@@ -93,7 +93,10 @@ void ShopPropItemScrollHeadler::initUnlockView()
     m_upGradeButton->setPosition(itemBgSize.width * 0.29,
                                  -itemBgSize.height * 0.15);
     m_upGradeButton->autorelease();
-    addChild(m_upGradeButton);
+    
+    if ("daoju9" != propModelId) {
+        addChild(m_upGradeButton);
+    }
     
     Size upGradeButtonSize = m_upGradeButton->getContentSize();
     
@@ -283,10 +286,14 @@ void ShopPropItemScrollHeadler::updateDaojuView()
         
         if (prop->isMaxLevel())
         {
-            m_upgradeLabel->setString("MAX");
+            if ("daoju9" != prop->getModelId()) {
+                m_upgradeLabel->setString("MAX");
+            }
         }else
         {
-            m_upgradeLabel->setString(StringUtils::format("%d",upgradeGold));
+            if ("daoju9" != prop->getModelId()) {
+                m_upgradeLabel->setString(StringUtils::format("%d",upgradeGold));
+            }
         }
         m_levelUpLabel->setString(StringUtils::format("LV.%d",(int)level));
         m_progressBar->updatePercent(level/limitLevel * 100);
@@ -301,10 +308,14 @@ void ShopPropItemScrollHeadler::updateDaojuView()
         }
         if (userGold >= upgradeGold && !prop->isMaxLevel())
         {
-            m_upGradeButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
+            if ("daoju9" != prop->getModelId()) {
+                m_upGradeButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
+            }
         }else
         {
-            m_upGradeButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
+            if ("daoju9" != prop->getModelId()) {
+                m_upGradeButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
+            }
         }
     }
 }

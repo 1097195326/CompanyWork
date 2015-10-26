@@ -350,11 +350,11 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/ShopGoldShowLayer.o: \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  jni/../../Classes/UserDelegatLayer.h jni/../../Classes/GameObserver.h \
- jni/../../Classes/SpecialManager.h jni/../../Classes/SpecialObject.h \
- jni/../../Classes/json/json.h jni/../../Classes/json/autolink.h \
- jni/../../Classes/json/config.h jni/../../Classes/json/value.h \
- jni/../../Classes/json/forwards.h jni/../../Classes/json/reader.h \
- jni/../../Classes/json/features.h \
+ jni/../../Classes/ProgressBar.h jni/../../Classes/SpecialManager.h \
+ jni/../../Classes/SpecialObject.h jni/../../Classes/json/json.h \
+ jni/../../Classes/json/autolink.h jni/../../Classes/json/config.h \
+ jni/../../Classes/json/value.h jni/../../Classes/json/forwards.h \
+ jni/../../Classes/json/reader.h jni/../../Classes/json/features.h \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/MoneyObject.h \
  jni/../../Classes/ExpendObject.h jni/../../Classes/GameSprite.h \
@@ -1064,6 +1064,8 @@ jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 jni/../../Classes/UserDelegatLayer.h:
 
 jni/../../Classes/GameObserver.h:
+
+jni/../../Classes/ProgressBar.h:
 
 jni/../../Classes/SpecialManager.h:
 

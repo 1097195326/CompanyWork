@@ -52,10 +52,15 @@ void LiquidBullet::gameLoop(float data)
                 Enemy * enemy = *e_iter;
                 Rect b_rect = getRect();
                 if (isFireEnemy() &&
+                    !enemy->isDieing() &&
                     !enemy->isDied() &&
                     enemy->isContainsPoint(b_rect))
                 {
-                    enemy->hurt(m_damage,m_bp.m_underAttackAction);
+                    std::set<Enemy *>::iterator iter = m_enemySet.find(enemy);
+                    if (*iter != enemy) {
+                        m_enemySet.insert(enemy);
+                        enemy->hurt(m_damage,m_bp.m_underAttackAction);
+                    }
                 }
             }
         }

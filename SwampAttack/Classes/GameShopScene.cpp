@@ -173,7 +173,7 @@ void GameShopScene::initScrollView(ShopGotoData data)
 //    menuView->setIconSprite("shopItemIcon");
     menuView->setSelectIndex(data.item);
     menuView->checkIndex();
-    menuView->setPosition(bg2->getTextureRect().size.width * 0.5 -5,
+    menuView->setPosition(bg2->getTextureRect().size.width * 0.5,
                           bg2->getTextureRect().size.height * 0.8);
     bg2->addChild(menuView,5);
     

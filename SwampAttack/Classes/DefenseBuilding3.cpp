@@ -15,6 +15,7 @@
 DefenseBuilding3::DefenseBuilding3(Json::Value data):DefenseBuilding(data)
 {
     fireEnemy = NULL;
+    
 }
 void DefenseBuilding3::setView()
 {
@@ -32,18 +33,20 @@ void DefenseBuilding3::gameLoop(float data)
     {
         return;
     }
-    if (m_defenceType == 2 || m_defenceType == 3)
-    {
+    
         if(m_state == d_wait)
         {
-            m_index += data;
-            if (m_index >= 1)
+            
+            m_waitDelay += data;
+//            log("mokey wait:%f",data);
+            if (m_waitDelay >= 1)
             {
-                m_index = 0;
+//                log("can to canhurt");
+                m_waitDelay = 0;
                 m_state = d_canHurt;
             }
         }
-    }
+    
     EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
     if (!enemyGroup) {
         return;

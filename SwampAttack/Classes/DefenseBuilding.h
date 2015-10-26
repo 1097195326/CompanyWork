@@ -46,6 +46,7 @@ protected:
     DefenseState m_state;
     int        m_index;
     Vec2        m_point;
+    float       m_waitDelay;
     //--- ---
     string      m_id;
     string      m_defenceName;

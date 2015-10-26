@@ -231,6 +231,15 @@ void Gun::saveBullet()
 {
     _G_U->setGunBulletNumber(m_id, m_totalBullets);
 }
+bool Gun::isCanBuyBullet()
+{
+    if (!m_isDefaultGun &&
+        m_totalBullets + m_magazieSize > m_ammunltionLimit)
+    {
+        return false;
+    }
+    return true;
+}
 bool Gun::fire(Vec2 position)
 {
     if (m_weaponType == 1)
@@ -306,7 +315,8 @@ void Gun::reloadBullet()
         case 1:
              ++m_bullets;
             if (!m_isDefaultGun) {
-                m_bullets = m_bullets > m_totalBullets ? m_totalBullets : m_bullets;
+                log("my bullet :%d",m_bullets);
+                m_bullets = m_bullets >= m_totalBullets ? m_totalBullets : m_bullets;
             }
             break;
         case 2:
@@ -426,9 +436,6 @@ bool Gun::addStrengthenLevel()
     userGold -= m_strengthenGold;
     ++m_strengthenLevel;
     
-    _G_U->setUserGold(userGold);
-        
-    
     _G_U->setGunLevel(m_id, m_strengthenLevel);
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
     Json::Value upgradeData = _C_M->getDataByTag("wuqiUpgrade",upId);
@@ -440,6 +447,8 @@ bool Gun::addStrengthenLevel()
     {
         m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
     }
+    
+    _G_U->setUserGold(userGold);
     return true;
 }
 bool Gun::buyBullet()

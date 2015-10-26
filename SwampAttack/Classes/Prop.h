@@ -25,6 +25,7 @@ enum PropState
     p_throw,
     p_readyToHurt,
     p_canToHurt,
+    p_turning,
     p_dieing,
     p_die,
     p_canDelete,
@@ -41,7 +42,7 @@ private:
     Vec2        m_point;
     Vec2        m_viewPoint;
     
-    float       m_decelerationDlay;
+    float       m_timeDlay;
 public:
     Prop(Json::Value value);
     ~Prop();
@@ -85,6 +86,7 @@ public:
     void    setStateDie();
     void    setStateCanDelete();
     void    setStateNormal();
+    void    setStateTurning();
     bool    isNormal();
     bool    isMoveing();
     bool    isArrve();
@@ -93,6 +95,7 @@ public:
     bool    isCanToHurt();
     bool    isDie();
     bool    isCanDelete();
+    bool    isTurning();
     
 private:
     int         m_index;
@@ -140,6 +143,8 @@ public:
     
     //
     void        setIndex(int index);
+    void        setTakeUp();
+    void        setTakeDown();
 };
 
 #endif /* defined(__SwampAttack__Prop__) */

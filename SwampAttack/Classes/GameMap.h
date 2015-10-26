@@ -15,7 +15,7 @@ class GameMap {
     
 public:
     
-    int enemy_start_upline = 100;
+    int enemy_start_upline = 60;
     Vec2 enemy_start_buttomPoint = {m_visibleOrigin.x + m_visibleSize.width + 70, m_visibleOrigin.y + 50};
     int enemy_target_upline = 60;
     Vec2 enemy_target_buttomPoint = {m_visibleOrigin.x + 255, m_visibleOrigin.y + 50};
@@ -28,11 +28,11 @@ public:
     Vec2 flyEnemy_target_buttomPoint = {m_visibleOrigin.x + 30, m_visibleOrigin.y + 80};
     
     
-    Vec2 m_BulletStartPoint = {m_visibleOrigin.x + 290, m_visibleOrigin.y + 270};
+    Vec2 m_BulletStartPoint = {m_visibleOrigin.x + 270, m_visibleOrigin.y + 270};
     
     
     Vec2 fightScene_human_Point = {m_visibleOrigin.x + 240, m_visibleOrigin.y + 180};
-    Vec2 fightScene_gangpao_Point = {m_visibleOrigin.x + 110,m_visibleOrigin.y + 385};
+    Vec2 fightScene_gangpao_Point = {m_visibleOrigin.x + 110,m_visibleOrigin.y + 375};
     Vec2 gangpao_BulletStartPoint = {m_visibleOrigin.x + 170, m_visibleOrigin.y + 370};
     
     Vec2 fightScene_zhalan_point1 = {m_visibleOrigin.x + 320,m_visibleOrigin.y + 70};
@@ -47,7 +47,7 @@ public:
     Vec2 fightScene_tengman_point = {m_visibleOrigin.x + 320,m_visibleOrigin.y + 130};
     
     Vec2 fightScene_HouseDeng_Position = {m_visibleOrigin.x + 171 ,m_visibleOrigin.y + 296};
-    Vec2 fightScene_HouseSprite_Position = {m_visibleOrigin.x + 155 ,m_visibleOrigin.y + 275};
+    Vec2 fightScene_HouseSprite_Position = {m_visibleOrigin.x + 155 ,m_visibleOrigin.y + 265};
     Vec2 fightScene_HouseBar_Position = {m_visibleOrigin.x + 300 ,m_visibleOrigin.y + m_visibleSize.height - 50};
     Vec2 fightScene_Gold_Position = {m_visibleOrigin.x + 40 ,m_visibleOrigin.y + m_visibleSize.height - 130};
     Vec2 fightScene_EnemyBar_Position = {m_visibleOrigin.x + m_visibleSize.width - 230 , m_visibleOrigin.y + m_visibleSize.height - 50};

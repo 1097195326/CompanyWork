@@ -20,7 +20,8 @@
 DefenseBuilding::DefenseBuilding(Json::Value data):
 m_isMaxLevel(false),
 m_isUnlock(false),
-m_state(d_normal)
+m_state(d_normal),
+m_waitDelay(0.0f)
 {
     m_id = data["DefenceId"].asString() ;
     string defenceName = data["DefenceName"].asString();
@@ -91,11 +92,16 @@ void DefenseBuilding::checkUnlock(Layer * layer)
 void DefenseBuilding::addStrengthenLevel()
 {
     m_strengthenLevel += 1;
+    if (m_strengthenLevel > m_limitLevel)
+    {
+        return;
+    }
     _G_U->setBuildingLevel(m_id, m_strengthenLevel);
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
     Json::Value upgradeData = _C_M->getDataByTag("buildingUpgrade",upId);
     m_damage = atof(upgradeData["Damage"].asString().c_str());
     m_hp = atoi(upgradeData["Hp"].asString().c_str());
+    m_deceleration = atof(upgradeData["Deceleration"].asString().c_str());
     if (m_limitLevel == m_strengthenLevel)
     {
         m_isMaxLevel = true;

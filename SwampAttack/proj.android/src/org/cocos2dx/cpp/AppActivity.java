@@ -30,9 +30,6 @@ import org.cocos2dx.lib.Cocos2dxActivity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.cmcc.security.nativeC;
-
-
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -80,67 +77,73 @@ public class AppActivity extends Cocos2dxActivity {
 	
 	static public native void payGameObjectEnd(String core);
 	
-	static public void payGameObject(int amount)
+	static public void payGameObject(java.lang.String name, int amount)
 	{
-		Log.i("hongxing", "pay game object");
-		payGameObjectEnd("123");
+		Log.i("hongxing", "pay "+name+" price:"+amount);
+//		payGameObjectEnd("123");// 测试用
 		
 		
-//		Intent payIntent = new Intent();
-////		payIntent.putExtra(SDKProtocolKeys.CP_ORDER_ID, "" + System.currentTimeMillis());
-//		payIntent.putExtra(SDKProtocolKeys.APP_NAME, "Diamond");
-//		payIntent.putExtra(SDKProtocolKeys.PRODUCT_NAME, "product_name1");
-//		payIntent.putExtra(SDKProtocolKeys.AMOUNT, "2"); // 计费点价格
-//		// 如果需要设置服务端通知，可以在此设置订单的通知地址
-//		// payIntent.putExtra(SDKProtocolKeys.NOTIFY_URL,"http://10.1.84.183/receiveNotify.jsp");
-//		payIntent.putExtra(SDKProtocolKeys.DEBUG_MODE, true);
-//		//payIntent.putExtra(SDKProtocolKeys.ATTACH_INFO, "ATTACHINFOtest");
-//		//如果支持运营商sdk短代支付，那么需要先判断用户手机号，然后传入相对应的paycode
-////		payIntent.putExtra(SDKProtocolKeys.PAY_CODE, getPaycode(getApplicationContext())); // demo现在是写死的paycode，实际需要cp传计费点
-//		try {
-//			SDKCore.pay(ucsdkActivity, payIntent, new SDKCallbackListener() {
-//				@Override
-//				public void onSuccessful(int status, Response response) {
-//					if (response.getType() == Response.LISTENER_TYPE_INIT) {
-//						firstTime = false;
-//						Message msg = new Message();
-//						msg.what = FlashMsg.HANDLER_END_LOGO_MSG1;
-//						handler.sendMessageDelayed(msg, 3000);
-//					} else if (response.getType() == Response.LISTENER_TYPE_PAY) {
-//					    /*重要：CP必须设置确认结果，告诉CP是否成功收到，不然SDK会不断回调通知CP*/
-//                        response.setMessage(Response.OPERATE_SUCCESS_MSG); 
-//                        /*重要：CP必须设置确认结果，告诉CP是否成功收到，不然SDK会不断回调通知CP*/
-//						Message msg = new Message();
-//						msg.what = HANDLER_SDK_CALLBACK;
-//						String s = response.getData();
-//						if (s != null) {
-//							msg.obj = response.getData();
-//						}
-//						msg.arg1 = response.getStatus();
-//						handler.sendMessage(msg);
-//					}
-//				}
-//
-//				@Override
-//				public void onErrorResponse(SDKError error) {
-//					String errorMsg = error.getMessage();
-//					if (TextUtils.isEmpty(errorMsg))
-//						errorMsg = "SDK occur error!";
-//					Message msg = new Message();
-//					msg.what = HANDLER_SHOW_ERRORDIALOG;
-//					msg.obj = errorMsg;
-//					handler.sendMessage(msg);
-//					if (firstTime) {
-//						firstTime = false;
-//						msg = new Message();
-//						msg.what = FlashMsg.HANDLER_END_LOGO_MSG1;
-//						handler.sendMessageDelayed(msg, 3000);
-//					}
-//				}
-//			});
-//		} catch (Exception ex) {
-//			ex.printStackTrace();
-//		}
+		Intent payIntent = new Intent();
+//		payIntent.putExtra(SDKProtocolKeys.CP_ORDER_ID, "" + System.currentTimeMillis());
+		payIntent.putExtra(SDKProtocolKeys.APP_NAME, "e_mo_lie_shou__fanxiaoxin");
+		payIntent.putExtra(SDKProtocolKeys.PRODUCT_NAME, name);
+		payIntent.putExtra(SDKProtocolKeys.AMOUNT, amount); // 计费点价格
+		// 如果需要设置服务端通知，可以在此设置订单的通知地址
+		// payIntent.putExtra(SDKProtocolKeys.NOTIFY_URL,"http://10.1.84.183/receiveNotify.jsp");
+		payIntent.putExtra(SDKProtocolKeys.DEBUG_MODE, true);
+		//payIntent.putExtra(SDKProtocolKeys.ATTACH_INFO, "ATTACHINFOtest");
+		//如果支持运营商sdk短代支付，那么需要先判断用户手机号，然后传入相对应的paycode
+//		payIntent.putExtra(SDKProtocolKeys.PAY_CODE, getPaycode(getApplicationContext())); // demo现在是写死的paycode，实际需要cp传计费点
+		try {
+			SDKCore.pay(ucsdkActivity, payIntent, new SDKCallbackListener() {
+				@Override
+				public void onSuccessful(int status, Response response) {
+					if (response.getType() == Response.LISTENER_TYPE_INIT) {
+						firstTime = false;
+						Message msg = new Message();
+						msg.what = FlashMsg.HANDLER_END_LOGO_MSG1;
+						handler.sendMessageDelayed(msg, 3000);
+					} else if (response.getType() == Response.LISTENER_TYPE_PAY) {
+						Log.i("hongxing", "pay success 1");
+					    /*重要：CP必须设置确认结果，告诉CP是否成功收到，不然SDK会不断回调通知CP*/
+                        response.setMessage(Response.OPERATE_SUCCESS_MSG); 
+                        /*重要：CP必须设置确认结果，告诉CP是否成功收到，不然SDK会不断回调通知CP*/
+						Message msg = new Message();
+						msg.what = HANDLER_SDK_CALLBACK;
+						String s = response.getData();
+						if (s != null) {
+							msg.obj = "Pay Success";//response.getData();
+							
+							payGameObjectEnd("123");
+						}else
+						{
+							msg.obj = response.getData();
+						}
+						msg.arg1 = response.getStatus();
+						handler.sendMessage(msg);
+					}
+				}
+
+				@Override
+				public void onErrorResponse(SDKError error) {
+					String errorMsg = error.getMessage();
+					if (TextUtils.isEmpty(errorMsg))
+						errorMsg = "SDK occur error!";
+					Message msg = new Message();
+					msg.what = HANDLER_SHOW_ERRORDIALOG;
+					msg.obj = errorMsg;
+					handler.sendMessage(msg);
+					if (firstTime) {
+						firstTime = false;
+						msg = new Message();
+						msg.what = FlashMsg.HANDLER_END_LOGO_MSG1;
+						handler.sendMessageDelayed(msg, 3000);
+					}
+				}
+			});
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 	}
 	
 	@Override
@@ -171,9 +174,10 @@ public class AppActivity extends Cocos2dxActivity {
 				Log.i("hongxing", "pay init success");
 				if(response.getType() == Response.LISTENER_TYPE_INIT)
 				{
-					Toast.makeText(AppActivity.this, "支付初始化成功啦!", Toast.LENGTH_LONG).show();
+//					Toast.makeText(AppActivity.this, "支付初始化成功啦!", Toast.LENGTH_LONG).show();
 				}else if (response.getType() == Response.LISTENER_TYPE_PAY)
 				{
+					Log.i("hongxing", "pay success 2");
 					response.setMessage(Response.OPERATE_SUCCESS_MSG);
 					try {
 						JSONObject data = new JSONObject(response.getData());

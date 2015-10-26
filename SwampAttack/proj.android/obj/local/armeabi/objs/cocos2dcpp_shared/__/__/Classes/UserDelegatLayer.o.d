@@ -349,10 +349,11 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/UserDelegatLayer.o: \
  jni/../../Classes/GameConfig.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
- jni/../../Classes/GameObserver.h jni/../../Classes/GameUser.h \
- jni/../../Classes/GameSubject.h jni/../../Classes/ShopGoldShowLayer.h \
+ jni/../../Classes/GameObserver.h jni/../../Classes/ProgressBar.h \
+ jni/../../Classes/GameUser.h jni/../../Classes/GameSubject.h \
+ jni/../../Classes/ShopGoldShowLayer.h \
  jni/../../Classes/ShopExpendShowLayer.h \
- jni/../../Classes/ShopHealthShowLayer.h
+ jni/../../Classes/ShopHealthShowLayer.h jni/../../Classes/GameSprite.h
 
 jni/../../Classes/UserDelegatLayer.h:
 
@@ -1056,6 +1057,8 @@ jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 
 jni/../../Classes/GameObserver.h:
 
+jni/../../Classes/ProgressBar.h:
+
 jni/../../Classes/GameUser.h:
 
 jni/../../Classes/GameSubject.h:
@@ -1065,3 +1068,5 @@ jni/../../Classes/ShopGoldShowLayer.h:
 jni/../../Classes/ShopExpendShowLayer.h:
 
 jni/../../Classes/ShopHealthShowLayer.h:
+
+jni/../../Classes/GameSprite.h:

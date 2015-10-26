@@ -17,10 +17,13 @@ extern "C"
 	{
 		_isBuying_object = object;
 		JniMethodInfo info;
-		if (JniHelper::getStaticMethodInfo(info, "org/cocos2dx/cpp/AppActivity","payGameObject","(I)V"))
+		if (JniHelper::getStaticMethodInfo(info, "org/cocos2dx/cpp/AppActivity","payGameObject","(Ljava/lang/String;I)V"))
 		{
 			int price = _isBuying_object->getPrice();
-			info.env->CallStaticVoidMethod(info.classID, info.methodID, price);
+			std::string c_name = _isBuying_object->getName();
+			jstring name = info.env->NewStringUTF(c_name.c_str());
+			info.env->CallStaticVoidMethod(info.classID, info.methodID,name,price);
+			info.env->DeleteLocalRef(name);
 		}
 	}
 
@@ -28,7 +31,11 @@ extern "C"
 	{
 		const char *coreC = env->GetStringUTFChars(coreJ, NULL);
 		log("buy end:%s",coreC);
-		_isBuying_object->buyEnd();
+		if(_isBuying_object)
+		{
+			_isBuying_object->buyEnd();
+			_isBuying_object = NULL;
+		}
 		env->ReleaseStringUTFChars(coreJ, coreC);
 	}
 

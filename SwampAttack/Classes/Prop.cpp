@@ -22,7 +22,7 @@
 
 Prop::Prop(Json::Value data):m_isUnlock(false),m_num(0),m_state(p_normal),
 m_isMaxLevel(false),
-m_decelerationDlay(0.0f)
+m_timeDlay(0.0f)
 {
     m_id = data["ItemId"].asString() ;
     string itemName = data["ItemName"].asString();
@@ -85,6 +85,34 @@ void Prop::gameLoop(float data)
     if (isNormal()) {
         return;
     }
+    if (isTurning()) {
+        static float jishi = 0.0f;
+        jishi += data;
+        if (jishi >= 0.5f)
+        {
+            jishi = 0.0f;
+            setStateCanToHurt();
+        }
+    }
+    
+    if (m_modelId == "daoju8")
+    {
+        m_timeDlay += data;
+        if (m_timeDlay >= m_time)
+        {
+            m_timeDlay = 0.0f;
+            setStateDie();
+        }
+    }else if (m_modelId == "daoju7")
+    {
+        m_timeDlay += data;
+        if (m_timeDlay >= m_vertigo)
+        {
+            m_timeDlay = 0.0f;
+            setStateDie();
+        }
+    }
+    
     EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
     if (!enemyGroup) {
         return;
@@ -141,19 +169,33 @@ void Prop::gameLoop(float data)
                 }
             }
         }
+        
         if (m_modelId == "daoju8")
         {
-            m_decelerationDlay += data;
-            if (m_decelerationDlay >= m_time)
+            m_timeDlay += data;
+            if (m_timeDlay >= m_time)
             {
-                m_decelerationDlay = 0.0f;
+                m_timeDlay = 0.0f;
                 setStateDie();
             }
-        }else
+        }else if (m_modelId == "daoju7")
+        {
+            m_timeDlay += data;
+            if (m_timeDlay >= m_vertigo)
+            {
+                m_timeDlay = 0.0f;
+                setStateDie();
+            }else
+            {
+                setStateTurning();
+            }
+        }
+        else
         {
             setStateDieing();
         }
     }
+    
 }
 Rect Prop::getPropRect()
 {
@@ -200,7 +242,6 @@ bool Prop::addStrengthenLevel()
     }
     userGold -= m_strengthenGold;
     ++m_strengthenLevel;
-    _G_U->setUserGold(userGold);
     
     
     _G_U->setPropLevel(m_id, m_strengthenLevel);
@@ -214,6 +255,8 @@ bool Prop::addStrengthenLevel()
     {
         m_strengthenGold = atoi(upgradeData["StrengthenGold"].asString().c_str());
     }
+    _G_U->setUserGold(userGold);
+    
     return true;
 }
 bool Prop::buyProp()
@@ -224,18 +267,18 @@ bool Prop::buyProp()
         return false;
     }
     userGold -= m_itemPrice;
-    _G_U->setUserGold(userGold);
     
     ++m_num;
     _G_U->setPropNum(m_id, m_num);
     notify();
+    _G_U->setUserGold(userGold);
     return true;
 }
 bool Prop::useProp()
 {
     if (m_num > 0)
     {
-        umeng::MobClickCpp::use(m_itemName.c_str(), 1, m_itemPrice);
+        umeng::MobClickCpp::use(m_id.c_str(), 1, m_itemPrice);
         
         --m_num;
         _G_U->setPropNum(m_id, m_num);
@@ -281,6 +324,14 @@ bool Prop::isTakeUp()
 bool Prop::isUnlock()
 {
     return m_isUnlock;
+}
+void Prop::setTakeUp()
+{
+    m_isTakeUp = true;
+}
+void Prop::setTakeDown()
+{
+    m_isTakeUp = false;
 }
 bool Prop::unlockProp()
 {
@@ -428,6 +479,10 @@ void Prop::setStateNormal()
 {
     m_state = p_normal;
 }
+void Prop::setStateTurning()
+{
+    m_state = p_turning;
+}
 bool Prop::isNormal()
 {
     return m_state == p_normal;
@@ -463,6 +518,10 @@ bool Prop::isCanDelete()
 bool Prop::isMaxLevel()
 {
     return m_isMaxLevel;
+}
+bool Prop::isTurning()
+{
+    return m_state == p_turning;
 }
 //--- get function ----
 string Prop::getId()

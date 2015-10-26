@@ -47,6 +47,7 @@ void PunctureBullet::gameLoop(float data)
                 Enemy * enemy = *e_iter;
                 Rect b_rect = getRect();
                 if (isFireEnemy() &&
+                    !enemy->isDieing() &&
                     !enemy->isDied() &&
                     enemy->isContainsPoint(b_rect)
                     )
