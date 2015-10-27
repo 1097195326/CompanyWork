@@ -357,7 +357,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/ShopExpendShowLayer.o: \
  jni/../../Classes/json/reader.h jni/../../Classes/json/features.h \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/MoneyObject.h \
- jni/../../Classes/ExpendObject.h jni/../../Classes/GameSprite.h \
+ jni/../../Classes/ExpendObject.h jni/../../Classes/HealthObject.h \
+ jni/../../Classes/GameSprite.h \
  jni/../../Classes/../proj.android/jni/hellocpp/UCSdkJniHelper.h \
  jni/../../cocos2d/cocos/3d/../../../Classes/SpecialObject.h
 
@@ -1092,6 +1093,8 @@ jni/../../Classes/json/writer.h:
 jni/../../Classes/MoneyObject.h:
 
 jni/../../Classes/ExpendObject.h:
+
+jni/../../Classes/HealthObject.h:
 
 jni/../../Classes/GameSprite.h:
 

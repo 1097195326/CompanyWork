@@ -7,8 +7,13 @@
 //
 
 #include "ShopHealthShowLayer.h"
+#include "SpecialManager.h"
 #include "GameUser.h"
 
+
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+#include "../proj.android/jni/hellocpp/UCSdkJniHelper.h"
+#endif
 
 shopHealthShowLayer::~shopHealthShowLayer()
 {
@@ -85,18 +90,23 @@ shopHealthShowLayer::shopHealthShowLayer(Vec2 position)
     
     Size buttonSize = m_button->getContentSize();
     
-    Sprite * hpIcon = Sprite::create(ImagePath("hp1_icon.png"));
-    hpIcon->setPosition(buttonSize.width * 0.85,
-                        buttonSize.height * 0.5);
-    m_button->addChild(hpIcon);
-    hpIcon->setScale(0.75);
-    Label * buttonTex = Label::createWithTTF(StringUtils::format("added %d x",
-                                                                 _G_U->getExpendPropNum()),
-                                             "fonts/Arial Black.ttf",
+//    Sprite * hpIcon = Sprite::create(ImagePath("hp1_icon.png"));
+//    hpIcon->setPosition(buttonSize.width * 0.85,
+//                        buttonSize.height * 0.5);
+//    m_button->addChild(hpIcon);
+//    hpIcon->setScale(0.75);
+    
+    HealthObject * object = SpecialManager::getInstance()->getHealthObjectByIndex(0);
+//    Label * buttonTex = Label::createWithTTF(StringUtils::format("added %d x",
+//                                                                 _G_U->getExpendPropNum()),
+//                                             "fonts/Arial Black.ttf",
+//                                             35);
+    Label * buttonTex = Label::createWithTTF(object->getDescription(),
+                                             FontPath,
                                              35);
     buttonTex->enableOutline(Color4B(0, 0, 0, 255),4);
     buttonTex->setAdditionalKerning(-5);
-    buttonTex->setPosition(buttonSize.width * 0.4,
+    buttonTex->setPosition(buttonSize.width * 0.5,// 0.4,
                            buttonSize.height * 0.5);
     m_button->addChild(buttonTex);
     
@@ -181,12 +191,20 @@ void shopHealthShowLayer::useToolToAddHealth(cocos2d::Touch *touch, cocos2d::Eve
 //    Sprite * spr = (Sprite *)event->getCurrentTarget();
     //    log("touch item %d",spr->getTag());
     
-    if (_G_U->useExpendProp())
-    {
-        _G_U->addHealthToFull();
-        m_delegateLayer->updateUserData();
-        closeView();
-    }
+//    if (_G_U->useExpendProp())
+//    {
+//        _G_U->addHealthToFull();
+//        m_delegateLayer->updateUserData();
+//        closeView();
+//    }
+    HealthObject * object = SpecialManager::getInstance()->getHealthObjectByIndex(0);
+    SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectBySubId(object->getId(), object->getType());
+//    specialObject->buyEnd();
+    
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+    payForBuyGameObject(specialObject);
+#endif
+    closeView();
 }
 bool shopHealthShowLayer::touchBegan(Touch *touch, Event *event)
 {

@@ -79,6 +79,7 @@ CPP_SRCS += \
 /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/Gun.cpp \
 /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GunManager.cpp \
 /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GunSprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HealthObject.cpp \
 /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HelloWorldScene.cpp \
 /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/House.cpp \
 /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HouseSprite.cpp \
@@ -204,6 +205,7 @@ OBJS += \
 ./Classes/Gun.o \
 ./Classes/GunManager.o \
 ./Classes/GunSprite.o \
+./Classes/HealthObject.o \
 ./Classes/HelloWorldScene.o \
 ./Classes/House.o \
 ./Classes/HouseSprite.o \
@@ -329,6 +331,7 @@ CPP_DEPS += \
 ./Classes/Gun.d \
 ./Classes/GunManager.d \
 ./Classes/GunSprite.d \
+./Classes/HealthObject.d \
 ./Classes/HelloWorldScene.d \
 ./Classes/House.d \
 ./Classes/HouseSprite.d \
@@ -899,6 +902,13 @@ Classes/GunManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Cl
 	@echo ' '
 
 Classes/GunSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GunSprite.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C++ Compiler'
+	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+Classes/HealthObject.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HealthObject.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

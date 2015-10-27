@@ -79,6 +79,7 @@ O_SRCS += \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Gun.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GunManager.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GunSprite.o \
+../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/HealthObject.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/HelloWorldScene.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/House.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/HouseSprite.o \

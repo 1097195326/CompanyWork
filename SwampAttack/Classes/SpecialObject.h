@@ -13,6 +13,7 @@
 #include "BaseCode.h"
 #include "MoneyObject.h"
 #include "ExpendObject.h"
+#include "HealthObject.h"
 
 
 using namespace std;
@@ -28,11 +29,12 @@ private:
     
     MoneyObject     *   m_moneyObject;
     ExpendObject    *   m_expendObject;
-    
+    HealthObject    *   m_healthObject;
 public:
     void    buyEnd();
     MoneyObject     *   getMoneyObject();
     ExpendObject    *   getExpendObject();
+    HealthObject    *   getHealthObject();
     
     string  getId();
     string  getSubId();

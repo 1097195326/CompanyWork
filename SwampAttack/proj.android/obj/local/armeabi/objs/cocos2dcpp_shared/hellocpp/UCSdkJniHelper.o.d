@@ -330,6 +330,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/hellocpp/UCSdkJniHelper.o: \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  jni/../../cocos2d/cocos/3d/../../../Classes/MoneyObject.h \
  jni/../../cocos2d/cocos/3d/../../../Classes/ExpendObject.h \
+ jni/../../cocos2d/cocos/3d/../../../Classes/HealthObject.h \
  jni/../../cocos2d/cocos/3d/../platform/android/jni/JniHelper.h
 
 jni/hellocpp/UCSdkJniHelper.h:
@@ -993,5 +994,7 @@ jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 jni/../../cocos2d/cocos/3d/../../../Classes/MoneyObject.h:
 
 jni/../../cocos2d/cocos/3d/../../../Classes/ExpendObject.h:
+
+jni/../../cocos2d/cocos/3d/../../../Classes/HealthObject.h:
 
 jni/../../cocos2d/cocos/3d/../platform/android/jni/JniHelper.h:
