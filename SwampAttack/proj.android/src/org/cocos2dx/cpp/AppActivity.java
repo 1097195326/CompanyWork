@@ -87,7 +87,7 @@ public class AppActivity extends Cocos2dxActivity {
 //		payIntent.putExtra(SDKProtocolKeys.CP_ORDER_ID, "" + System.currentTimeMillis());
 		payIntent.putExtra(SDKProtocolKeys.APP_NAME, "e_mo_lie_shou__fanxiaoxin");
 		payIntent.putExtra(SDKProtocolKeys.PRODUCT_NAME, name);
-		payIntent.putExtra(SDKProtocolKeys.AMOUNT, amount); // 计费点价格
+		payIntent.putExtra(SDKProtocolKeys.AMOUNT, ""+amount); // 计费点价格
 		// 如果需要设置服务端通知，可以在此设置订单的通知地址
 		// payIntent.putExtra(SDKProtocolKeys.NOTIFY_URL,"http://10.1.84.183/receiveNotify.jsp");
 		payIntent.putExtra(SDKProtocolKeys.DEBUG_MODE, true);
