@@ -368,8 +368,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameShopScene.o: \
  jni/../../Classes/Prop.h jni/../../Classes/DefenseBuildingManager.h \
  jni/../../Classes/DefenseBuilding.h jni/../../Classes/SpecialManager.h \
  jni/../../Classes/SpecialObject.h jni/../../Classes/MoneyObject.h \
- jni/../../Classes/ExpendObject.h jni/../../Classes/GameUser.h \
- jni/../../Classes/GameMapScene.h \
+ jni/../../Classes/ExpendObject.h jni/../../Classes/HealthObject.hpp \
+ jni/../../Classes/GameUser.h jni/../../Classes/GameMapScene.h \
  jni/../../Classes/GameHorizontalScrollHeadlerView.h \
  jni/../../Classes/ShopGunIcon.h \
  jni/../../Classes/ShopGunItemScrollHeadler.h \
@@ -1145,6 +1145,8 @@ jni/../../Classes/SpecialObject.h:
 jni/../../Classes/MoneyObject.h:
 
 jni/../../Classes/ExpendObject.h:
+
+jni/../../Classes/HealthObject.hpp:
 
 jni/../../Classes/GameUser.h:
 

@@ -324,8 +324,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/SpecialObject.o: \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  jni/../../Classes/MoneyObject.h jni/../../Classes/ExpendObject.h \
- jni/../../Classes/GameUser.h jni/../../Classes/GameSubject.h \
- jni/../../Classes/GameObserver.h
+ jni/../../Classes/HealthObject.hpp jni/../../Classes/GameUser.h \
+ jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h
 
 jni/../../Classes/SpecialObject.h:
 
@@ -986,6 +986,8 @@ jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 jni/../../Classes/MoneyObject.h:
 
 jni/../../Classes/ExpendObject.h:
+
+jni/../../Classes/HealthObject.hpp:
 
 jni/../../Classes/GameUser.h:
 

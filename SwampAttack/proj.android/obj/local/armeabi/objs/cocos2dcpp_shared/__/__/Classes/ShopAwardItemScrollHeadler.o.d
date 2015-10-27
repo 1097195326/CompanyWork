@@ -367,7 +367,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/ShopAwardItemScrollHeadle
  jni/../../Classes/GameUser.h jni/../../Classes/GameSubject.h \
  jni/../../Classes/GameSprite.h jni/../../Classes/SpecialManager.h \
  jni/../../Classes/SpecialObject.h jni/../../Classes/MoneyObject.h \
- jni/../../Classes/ExpendObject.h
+ jni/../../Classes/ExpendObject.h jni/../../Classes/HealthObject.hpp
 
 jni/../../Classes/ShopAwardItemScrollHeadler.h:
 
@@ -1126,3 +1126,5 @@ jni/../../Classes/SpecialObject.h:
 jni/../../Classes/MoneyObject.h:
 
 jni/../../Classes/ExpendObject.h:
+
+jni/../../Classes/HealthObject.hpp:

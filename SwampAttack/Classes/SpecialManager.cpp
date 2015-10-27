@@ -32,6 +32,9 @@ SpecialManager::SpecialManager()
             case 2:
                 addExpendObject(object->getExpendObject());
                 break;
+            case 3:
+                addHealthObject(object->getHealthObject());
+                break;
             default:
                 break;
         }
@@ -39,7 +42,16 @@ SpecialManager::SpecialManager()
 }
 SpecialManager::~SpecialManager()
 {
-    
+    if (m_specialData.size() > 0)
+    {
+        std::map<string,SpecialObject *>::iterator iter;
+        for (iter = m_specialData.begin(); iter != m_specialData.end(); ++iter)
+        {
+            SpecialObject * object = iter->second;
+            delete object;
+        }
+        m_specialData.clear();
+    }
 }
 SpecialManager * SpecialManager::getInstance()
 {
@@ -56,6 +68,12 @@ void SpecialManager::addExpendObject(ExpendObject *object)
     int index = (int)m_expendData.size();
     m_expendData[index] = object;
 }
+void SpecialManager::addHealthObject(HealthObject *object)
+{
+    int index = (int)m_healthData.size();
+    m_healthData[index] = object;
+}
+
 SpecialObject * SpecialManager::getSpecialObjectByIndex(int index)
 {
     string id = m_hashHead[index];
@@ -92,6 +110,10 @@ ExpendObject * SpecialManager::getExpendObjectByIndex(int index)
 {
     return m_expendData[index];
 }
+HealthObject * SpecialManager::getHealthObjectByIndex(int index)
+{
+    return m_healthData[index];
+}
 std::map<int,MoneyObject *> SpecialManager::getMoneyData()
 {
     return m_moneyData;
@@ -100,7 +122,11 @@ std::map<int,ExpendObject *> SpecialManager::getExpendData()
 {
     return m_expendData;
 }
+std::map<int,HealthObject *> SpecialManager::getHealthData()
+{
+    return m_healthData;
+}
 int SpecialManager::getSpecialNum()
 {
-    return (int)m_specialData.size();
+    return (int)m_specialData.size() - (int)m_healthData.size();
 }

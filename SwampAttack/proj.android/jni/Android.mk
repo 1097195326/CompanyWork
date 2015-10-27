@@ -86,6 +86,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/Gun.cpp \
 				   ../../Classes/GunManager.cpp \
 				   ../../Classes/GunSprite.cpp \
+				   ../../Classes/HealthObject.cpp \
 				   ../../Classes/House.cpp \
 				   ../../Classes/HouseSprite.cpp \
 				   ../../Classes/Human.cpp \

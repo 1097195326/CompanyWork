@@ -59,6 +59,7 @@
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
+		8D3F153D1BDF637E00CD7F67 /* HealthObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D3F153B1BDF637E00CD7F67 /* HealthObject.cpp */; };
 		8D51DC551B3A816F0053EA8A /* DropModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC531B3A816F0053EA8A /* DropModel.cpp */; };
 		8D51DC581B3A817C0053EA8A /* DropManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC561B3A817C0053EA8A /* DropManager.cpp */; };
 		8D51DC5B1B3A907C0053EA8A /* MoneyManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC591B3A907C0053EA8A /* MoneyManager.cpp */; };
@@ -281,6 +282,8 @@
 		521A8E6219F0C34300D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		8D3F153B1BDF637E00CD7F67 /* HealthObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HealthObject.cpp; sourceTree = "<group>"; };
+		8D3F153C1BDF637E00CD7F67 /* HealthObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HealthObject.hpp; sourceTree = "<group>"; };
 		8D51DC531B3A816F0053EA8A /* DropModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropModel.cpp; sourceTree = "<group>"; };
 		8D51DC541B3A816F0053EA8A /* DropModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropModel.h; sourceTree = "<group>"; };
 		8D51DC561B3A817C0053EA8A /* DropManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropManager.cpp; sourceTree = "<group>"; };
@@ -1166,6 +1169,8 @@
 				8D51DC5A1B3A907C0053EA8A /* MoneyManager.h */,
 				8DDCC6751B32B00B00F01D46 /* ExpendObject.cpp */,
 				8DDCC6761B32B00B00F01D46 /* ExpendObject.h */,
+				8D3F153B1BDF637E00CD7F67 /* HealthObject.cpp */,
+				8D3F153C1BDF637E00CD7F67 /* HealthObject.hpp */,
 			);
 			name = SpecialModels;
 			sourceTree = "<group>";
@@ -1386,6 +1391,7 @@
 				8DC34AA01ADCF96700C6B657 /* GameMap6.cpp in Sources */,
 				8DD87E701B15A2B500FC073A /* ShopAwardItemScrollHeadler.cpp in Sources */,
 				D8D6781A1B1DB58C008C3BA6 /* PropSprite.cpp in Sources */,
+				8D3F153D1BDF637E00CD7F67 /* HealthObject.cpp in Sources */,
 				8DD215681B16BA720090EEEB /* ShopPropIcon.cpp in Sources */,
 				8DE207341B39128E0052E738 /* ShopGoldShowLayer.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
