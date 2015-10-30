@@ -23,6 +23,7 @@ void DefenseBuilding4::setView()
     }
     DefenseBuildingSprite * sprite = new DefenseBuilding4_Sprite(this);
     sprite->autorelease();
+    m_state = d_canHurt;
 }
 
 void DefenseBuilding4::gameLoop(float data)
@@ -32,15 +33,15 @@ void DefenseBuilding4::gameLoop(float data)
         return;
     }
     
-    m_waitDelay += data;
-    if (m_waitDelay >= 1 && m_state == d_wait)
-    {
-        m_waitDelay = 0.0f;
-        m_state = d_canHurt;
-    }else
-    {
-        m_state = d_wait;
-    }
+//    m_waitDelay += data;
+//    if (m_waitDelay >= 1 && m_state == d_wait)
+//    {
+//        m_waitDelay = 0.0f;
+//        m_state = d_canHurt;
+//    }else
+//    {
+//        m_state = d_wait;
+//    }
     
     EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
     if (!enemyGroup) {
@@ -68,5 +69,6 @@ void DefenseBuilding4::gameLoop(float data)
 }
 void DefenseBuilding4::hurtEnemy(Enemy *enemy)
 {
+//    log("jiansu :%f",m_deceleration);
     enemy->hurtJiansu(m_deceleration);
 }
