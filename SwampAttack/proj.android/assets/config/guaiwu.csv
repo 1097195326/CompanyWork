@@ -26,7 +26,7 @@ Id[string],MonsterName[string],,ModelId[string],CapId[string],ActionType[int],At
 200004,tid#MonsterName24,稻草王,scareking,,1,1,8190,0.6,200,0.8,100,,,819,100011,tid#MonsterDescription24,BOOS
 200005,tid#MonsterName25,黄金骷髅王,skullking2,,1,1,9828,0.6,200,0.8,100,,,983,100011,tid#MonsterDescription24,BOOS
 200006,tid#MonsterName26,暴君狼王,wolfking2,,1,1,19656,0.6,200,0.8,100,,,1966,100011,tid#MonsterDescription24,BOOS
-200007,tid#MonsterName27,大恶魔,demonking,,2,4,29484,0.6,25,0.8,300,100003,400,2948,100011,tid#MonsterDescription25,BOOS
+200007,tid#MonsterName27,大恶魔,demonking,,2,4,29484,0.6,25,0.8,500,100003,400,2948,100011,tid#MonsterDescription25,BOOS
 200008,tid#MonsterName28,雪人王,snowmanking,,1,1,25552,0.6,200,0.8,100,,,2555,100011,tid#MonsterDescription26,BOOS
 200009,tid#MonsterName29,憎恶王,butcherking,,1,1,51105,0.6,200,0.8,100,,,5111,100011,tid#MonsterDescription27,BOOS
 200010,tid#MonsterName30,吸血鬼王,vampireking,,1,1,66435,0.6,200,0.8,100,,,6644,100011,tid#MonsterDescription28,BOOS

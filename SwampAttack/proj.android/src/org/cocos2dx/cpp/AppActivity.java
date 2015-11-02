@@ -250,8 +250,8 @@ public class AppActivity extends Cocos2dxActivity {
 		
 		try {
 			Bundle payInitData = new Bundle();
-			payInitData.putString(SDKProtocolKeys.APP_ID, "300008973569");
-			payInitData.putString(SDKProtocolKeys.APP_KEY, "044B0F69808C6151552A90ACF757A323");
+//			payInitData.putString(SDKProtocolKeys.APP_ID, "300008973569");
+//			payInitData.putString(SDKProtocolKeys.APP_KEY, "044B0F69808C6151552A90ACF757A323");
 			UCGameSdk.defaultSdk().init(this, payInitData);
 		} catch (Exception e) {
 
