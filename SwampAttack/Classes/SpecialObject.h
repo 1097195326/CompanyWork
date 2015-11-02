@@ -31,7 +31,7 @@ private:
     ExpendObject    *   m_expendObject;
     HealthObject    *   m_healthObject;
 public:
-    void    buyEnd();
+    void    buyEnd(const char * payType = NULL);
     MoneyObject     *   getMoneyObject();
     ExpendObject    *   getExpendObject();
     HealthObject    *   getHealthObject();

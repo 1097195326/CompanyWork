@@ -33,7 +33,7 @@ extern "C"
 		log("buy end:%s",coreC);
 		if(_isBuying_object)
 		{
-			_isBuying_object->buyEnd();
+			_isBuying_object->buyEnd(coreC);
 			_isBuying_object = NULL;
 		}
 		env->ReleaseStringUTFChars(coreJ, coreC);

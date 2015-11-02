@@ -85,7 +85,7 @@ public class AppActivity extends Cocos2dxActivity {
 		
 		Intent payIntent = new Intent();
 //		payIntent.putExtra(SDKProtocolKeys.CP_ORDER_ID, "" + System.currentTimeMillis());
-		payIntent.putExtra(SDKProtocolKeys.APP_NAME, "e_mo_lie_shou__fanxiaoxin");
+		payIntent.putExtra(SDKProtocolKeys.APP_NAME, "恶魔猎手");
 		payIntent.putExtra(SDKProtocolKeys.PRODUCT_NAME, name);
 		payIntent.putExtra(SDKProtocolKeys.AMOUNT, ""+amount); // 计费点价格
 		// 如果需要设置服务端通知，可以在此设置订单的通知地址
@@ -114,7 +114,58 @@ public class AppActivity extends Cocos2dxActivity {
 						if (s != null) {
 							msg.obj = "Pay Success";//response.getData();
 							
-							payGameObjectEnd("123");
+							try {
+								JSONObject data = new JSONObject(response.getData());
+								String orderId = data.getString(PayResponse.CP_ORDER_ID); // CP订单号
+								String tradeId = data.getString(PayResponse.TRADE_ID); // 交易号
+								String payMoney = data.getString(PayResponse.PAY_MONEY); // 支付金额
+								String payType = data.getString(PayResponse.PAY_TYPE); // 支付类型
+								                                                       // [207:支付宝快捷支付]
+								String orderStatus = data.getString(PayResponse.ORDER_STATUS); // 订单状态
+								                                                               // [00:成功][01:失败]
+								String orderFinishTime = data.getString(PayResponse.ORDER_FINISH_TIME); // 订单完成时间
+								String productName = data.getString(PayResponse.PRO_NAME);// 道具名称
+								String extendInfo = data.optString(PayResponse.EXT_INFO); // 商品扩展信息
+								String attachInfo = data.optString(PayResponse.ATTACH_INFO); // 附加透传信息
+								
+								Log.i("hongxing", "pay type:"+payType);
+								Log.i("hongxing", "order status:"+orderStatus);
+								
+								if(payType == "207")
+								{
+									payType = "21";
+								}else if (payType == "208")
+								{
+									payType = "22";
+								}else if (payType == "209")
+								{
+									payType = "23";
+								}else if (payType == "305")
+								{
+									payType = "24";
+								}else if (payType == "306")
+								{
+									payType = "25";
+								}else if (payType == "307")
+								{
+									payType = "26";
+								}else if (payType == "800")
+								{
+									payType = "27";
+								}else
+								{
+									payType = "28";
+								}
+								if(orderStatus == "00")
+								{
+									payGameObjectEnd(payType);
+								}else
+								{
+									
+								}
+							} catch (JSONException ex) {
+								ex.printStackTrace();
+							}
 						}else
 						{
 							msg.obj = response.getData();

@@ -9,6 +9,7 @@
 #include "SpecialObject.h"
 
 #include "GameUser.h"
+#include "MobClickCpp.h"
 
 
 SpecialObject::SpecialObject(Json::Value data):
@@ -53,7 +54,7 @@ SpecialObject::~SpecialObject()
         delete m_healthObject;
     }
 }
-void SpecialObject::buyEnd()
+void SpecialObject::buyEnd(const char * payType)
 {
     switch (m_type) {
         case 1:
@@ -80,6 +81,8 @@ void SpecialObject::buyEnd()
         default:
             break;
     }
+    umeng::MobClickCpp::pay(m_price, atoi(payType), m_id.c_str(), m_num, m_price);
+    
 }
 ///--- sub object funtion
 string  SpecialObject::getName()
