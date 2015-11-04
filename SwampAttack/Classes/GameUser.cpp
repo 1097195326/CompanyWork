@@ -27,6 +27,7 @@ GameUser::GameUser():m_time(0)
 //    unlockGuanqia("400003_9");
 //    setUserHealth(10);
 //    setExpendPropNum(300);
+//    setUserHealth(0);
     m_userHealth = getIntForKey("user_health");
     
     enterGame();
