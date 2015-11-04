@@ -85,7 +85,7 @@ public class AppActivity extends Cocos2dxActivity {
 		
 		Intent payIntent = new Intent();
 //		payIntent.putExtra(SDKProtocolKeys.CP_ORDER_ID, "" + System.currentTimeMillis());
-		payIntent.putExtra(SDKProtocolKeys.APP_NAME, "恶魔猎手");
+		payIntent.putExtra(SDKProtocolKeys.APP_NAME, "恶魔猎人");
 		payIntent.putExtra(SDKProtocolKeys.PRODUCT_NAME, name);
 		payIntent.putExtra(SDKProtocolKeys.AMOUNT, ""+amount); // 计费点价格
 		// 如果需要设置服务端通知，可以在此设置订单的通知地址
