@@ -85,9 +85,10 @@ public class AppActivity extends Cocos2dxActivity {
 		
 		Intent payIntent = new Intent();
 //		payIntent.putExtra(SDKProtocolKeys.CP_ORDER_ID, "" + System.currentTimeMillis());
-		payIntent.putExtra(SDKProtocolKeys.APP_NAME, "恶魔猎人");
+		payIntent.putExtra(SDKProtocolKeys.APP_NAME, "屠魔猎人范海辛");
 		payIntent.putExtra(SDKProtocolKeys.PRODUCT_NAME, name);
 		payIntent.putExtra(SDKProtocolKeys.AMOUNT, ""+amount); // 计费点价格
+//		payIntent.putExtra(SDKProtocolKeys.AMOUNT, "1"); // 计费点价格 测试
 		// 如果需要设置服务端通知，可以在此设置订单的通知地址
 		// payIntent.putExtra(SDKProtocolKeys.NOTIFY_URL,"http://10.1.84.183/receiveNotify.jsp");
 		payIntent.putExtra(SDKProtocolKeys.DEBUG_MODE, true);
@@ -131,32 +132,32 @@ public class AppActivity extends Cocos2dxActivity {
 								Log.i("hongxing", "pay type:"+payType);
 								Log.i("hongxing", "order status:"+orderStatus);
 								
-								if(payType == "207")
+								if(payType.equals("207"))
 								{
 									payType = "21";
-								}else if (payType == "208")
+								}else if (payType.equals("208"))
 								{
 									payType = "22";
-								}else if (payType == "209")
+								}else if (payType.equals("209"))
 								{
 									payType = "23";
-								}else if (payType == "305")
+								}else if (payType.equals("305"))
 								{
 									payType = "24";
-								}else if (payType == "306")
+								}else if (payType.equals("306"))
 								{
 									payType = "25";
-								}else if (payType == "307")
+								}else if (payType.equals("307"))
 								{
 									payType = "26";
-								}else if (payType == "800")
+								}else if (payType.equals("800"))
 								{
 									payType = "27";
 								}else
 								{
 									payType = "28";
 								}
-								if(orderStatus == "00")
+								if(orderStatus.equals("00") )
 								{
 									payGameObjectEnd(payType);
 								}else
