@@ -52,7 +52,7 @@ bool GameHomeScene::init()
                            m_visibleOrigin.y + m_visibleSize.height * 0.4 - 90);
     jiangbeiItem->setPosition(m_visibleOrigin.x + 100,
                               m_visibleOrigin.y + 100);
-    Menu * buttonMenu = Menu::create(toMapItem,toShopItem,toSetingItem,jiangbeiItem, NULL);
+    Menu * buttonMenu = Menu::create(toMapItem,toShopItem,jiangbeiItem, NULL);
     buttonMenu->setPosition(Point::ZERO);
     addChild(buttonMenu);
     

@@ -102,8 +102,7 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
     
     Size upGradeButtonSize = m_upGradeButton->getContentSize();
     
-    if (gun->getWeaponType() != 1)
-    {
+    
         m_buyButton = new GameSprite(ImagePath("shopItemButtonNormal.png"));
         m_buyButton->m_touchMeCall = CC_CALLBACK_2(ShopGunItemScrollHeadler::buy, this);
         m_buyButton->setPosition(-itemBgSize.width * 0.03,
@@ -112,17 +111,21 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
         addChild(m_buyButton);
         
         Size buyButtonSize = m_buyButton->getContentSize();
-        
+    
+    if (gun->getWeaponType() != 1)
+    {
         m_bulletsLabel = Label::createWithTTF("", "fonts/Arial Black.ttf", 25);
         m_bulletsLabel->enableOutline(Color4B(0, 0, 0, 255),2);
         m_bulletsLabel->setPosition(iconBgSize.width * 0.62,
                                     iconBgSize.height * 0.25);
         m_bulletsLabel->setAdditionalKerning(-3);
         m_iconBg->addChild(m_bulletsLabel,1);
+        
         Sprite * bulletIcon = Sprite::create(ImagePath("shop_bullet_icon.png"));
         bulletIcon->setPosition(iconBgSize.width * 0.81  ,
                                 iconBgSize.height * 0.25);
         m_iconBg->addChild(bulletIcon,1);
+    }
         
         Sprite * jinbi1 = Sprite::create(ImagePath("jinbi_icon.png"));
         jinbi1->setPosition(buyButtonSize.width * 0.85,
@@ -142,7 +145,7 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
         buyLabel->enableOutline(Color4B(0, 0, 0, 255),3);
         buyLabel->setAdditionalKerning(-3);
         m_buyButton->addChild(buyLabel,1);
-    }
+    
     
     
     m_takeUpButton = MenuItemImage::create(ImagePath("shop_zhuanbei.png"),
@@ -283,7 +286,10 @@ void ShopGunItemScrollHeadler::updateGunView()
         
         m_levelUpLabel->setString(StringUtils::format("LV.%d",(int)level));
         m_progressBar->updatePercent(level/limitLevel * 100);
-        if (gun->getWeaponType() != 1)
+        if (gun->getWeaponType() == 1)
+        {
+            m_buyLabel->setString("MAX");
+        }else
         {
             m_buyLabel->setString(StringUtils::format("%d",bulletPrice));
             m_bulletsLabel->setString(StringUtils::format("%d",bullets));
@@ -293,28 +299,25 @@ void ShopGunItemScrollHeadler::updateGunView()
         
         if (userGold >= bulletPrice)
         {
-            if (gun->getWeaponType() != 1)
+            if (gun->isCanBuyBullet()) {
+                m_buyButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
+            }else
             {
-                if (gun->isCanBuyBullet()) {
-                    m_buyButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
-                }else
-                {
-                    m_buyButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
-                }
+                m_buyButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
             }
         }else
         {
-            if (gun->getWeaponType() != 1)
-            {
-                m_buyButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
-            }
+            m_buyButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
         }
         if (gun->isDefaultGun() && bullets >= 12)
         {
-            if (gun->getWeaponType() != 1)
-            {
-                m_buyButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
-            }
+            
+            m_buyButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
+            
+        }
+        if (gun->getWeaponType() == 1)
+        {
+            m_buyButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
         }
         if (userGold >= upgradeGold && !gun->isMaxLevel())
         {

@@ -93,10 +93,7 @@ void ShopPropItemScrollHeadler::initUnlockView()
     m_upGradeButton->setPosition(itemBgSize.width * 0.29,
                                  -itemBgSize.height * 0.15);
     m_upGradeButton->autorelease();
-    
-    if ("daoju9" != propModelId) {
-        addChild(m_upGradeButton);
-    }
+    addChild(m_upGradeButton);
     
     Size upGradeButtonSize = m_upGradeButton->getContentSize();
     
@@ -286,18 +283,20 @@ void ShopPropItemScrollHeadler::updateDaojuView()
         
         if (prop->isMaxLevel())
         {
-            if ("daoju9" != prop->getModelId()) {
-                m_upgradeLabel->setString("MAX");
-            }
+            m_upgradeLabel->setString("MAX");
         }else
         {
-            if ("daoju9" != prop->getModelId()) {
-                m_upgradeLabel->setString(StringUtils::format("%d",upgradeGold));
-            }
+            m_upgradeLabel->setString(StringUtils::format("%d",upgradeGold));
         }
+        
         m_levelUpLabel->setString(StringUtils::format("LV.%d",(int)level));
         m_progressBar->updatePercent(level/limitLevel * 100);
         m_bulletsLabel->setString(StringUtils::format("%d",propNum));
+        
+        if ("daoju9" == prop->getModelId()) {
+            m_upgradeLabel->setString("MAX");
+            m_progressBar->updatePercent(100);
+        }
         
         if (userGold >= propPrice)
         {
@@ -308,14 +307,13 @@ void ShopPropItemScrollHeadler::updateDaojuView()
         }
         if (userGold >= upgradeGold && !prop->isMaxLevel())
         {
-            if ("daoju9" != prop->getModelId()) {
-                m_upGradeButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
-            }
+            m_upGradeButton->setEnabled(true,ImagePath("shopItemButtonNormal.png"));
         }else
         {
-            if ("daoju9" != prop->getModelId()) {
-                m_upGradeButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
-            }
+            m_upGradeButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
+        }
+        if ("daoju9" == prop->getModelId()) {
+            m_upGradeButton->setEnabled(false,ImagePath("shopItemButtonDisable.png"));
         }
     }
 }
