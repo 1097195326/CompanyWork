@@ -9,7 +9,7 @@
 #include "ShopExpendShowLayer.h"
 #include "SpecialManager.h"
 #include "GameSprite.h"
-
+#include "MobClickCpp.h"
 
 ShopExpendShowLayer::~ShopExpendShowLayer()
 {
@@ -100,6 +100,8 @@ void ShopExpendShowLayer::touchItemEnd(cocos2d::Touch *touch, cocos2d::Event *ev
     //    log("touch item %d",spr->getTag());
     ExpendObject * object = SpecialManager::getInstance()->getExpendObjectByIndex(spr->getTag());
     SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectBySubId(object->getId(), object->getType());
+    umeng::MobClickCpp::event(specialObject->getId().c_str());
+    
     specialObject->buyEnd();
     m_delegateLayer->updateUserData();
 }

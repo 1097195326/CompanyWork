@@ -1556,7 +1556,7 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
-				PROVISIONING_PROFILE = "ba2ec79b-3702-437d-859f-eea02f63bd61";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1590,7 +1590,7 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
-				PROVISIONING_PROFILE = "ba2ec79b-3702-437d-859f-eea02f63bd61";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";

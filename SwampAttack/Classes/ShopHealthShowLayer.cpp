@@ -9,7 +9,7 @@
 #include "ShopHealthShowLayer.h"
 #include "GameUser.h"
 #include "SpecialManager.h"
-
+#include "MobClickCpp.h"
 
 shopHealthShowLayer::~shopHealthShowLayer()
 {
@@ -195,6 +195,9 @@ void shopHealthShowLayer::useToolToAddHealth(cocos2d::Touch *touch, cocos2d::Eve
 //    }
     HealthObject * object = SpecialManager::getInstance()->getHealthObjectByIndex(0);
     SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectBySubId(object->getId(), object->getType());
+    
+    umeng::MobClickCpp::event(specialObject->getId().c_str());
+    
     specialObject->buyEnd();
     closeView();
 }

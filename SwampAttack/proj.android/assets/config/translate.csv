@@ -159,17 +159,17 @@ tid#HpDescription3,角色死亡使角色复活补满体力,The role of death mak
 ,,
 ,,
 tid#MoneyDescription1,获得1万金钱,Get 10000 gold coins
-tid#MoneyDescription2,获得5万金钱,Get 50000 gold coins
-tid#MoneyDescription3,获得20万金钱,Get 200000 gold coins
-tid#MoneyDescription4,获得50万金钱,Get 500000 gold coins
-tid#MoneyDescription5,获得150万金钱,Get 1500000 gold coins
+tid#MoneyDescription2,获得11万金钱,Get 110000 gold coins
+tid#MoneyDescription3,获得36万金钱,Get 360000 gold coins
+tid#MoneyDescription4,获得65万金钱,Get 650000 gold coins
+tid#MoneyDescription5,获得140万金钱,Get 1400000 gold coins
 ,,
 ,,
 tid#money1,1万金币,10000 gold coins
-tid#money2,5万金币,50000 gold coins
-tid#money3,20万金币,200000 gold coins
-tid#money4,50万金币,500000 gold coins
-tid#money5,150万金币,1500000 gold coins
+tid#money2,11万金币,110000 gold coins
+tid#money3,36万金币,360000 gold coins
+tid#money4,65万金币,650000 gold coins
+tid#money5,140万金币,1400000 gold coins
 tid#money6,获得50金钱,Get 50 money
 tid#money7,获得100金钱,Get 100 money
 tid#money8,获得500金钱,Get 500 money
@@ -206,3 +206,5 @@ tid#unlock16,第15关解锁,
 tid#unlock17,第20关解锁,
 tid#unlock18,第25关解锁,
 tid#unlock19,第30关解锁,
+,,
+tid#Energy1,花费1元补满,

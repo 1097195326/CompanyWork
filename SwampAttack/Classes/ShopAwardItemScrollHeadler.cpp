@@ -14,7 +14,7 @@
 #include "GameUser.h"
 #include "GameSprite.h"
 #include "SpecialManager.h"
-
+#include "MobClickCpp.h"
 
 ShopAwardItemScrollHeadler::ShopAwardItemScrollHeadler(int index)
 {
@@ -92,6 +92,7 @@ void ShopAwardItemScrollHeadler::buy(cocos2d::Touch *touch, cocos2d::Event *even
     log("buy ...");
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buyGold.mp3").c_str());
     SpecialObject * specialobject = SpecialManager::getInstance()->getSpecialObjectByIndex(m_index);
+    umeng::MobClickCpp::event(specialobject->getId().c_str());
     
     specialobject->buyEnd();
 //    m_shopScene->updateUserData();
