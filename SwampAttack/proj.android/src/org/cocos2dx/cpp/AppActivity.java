@@ -159,6 +159,7 @@ public class AppActivity extends Cocos2dxActivity {
 								}
 								if(orderStatus.equals("00") )
 								{
+									Log.i("hongxing", "pay type:"+payType);
 									payGameObjectEnd(payType);
 								}else
 								{
