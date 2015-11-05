@@ -9,6 +9,7 @@
 #include "ShopHealthShowLayer.h"
 #include "SpecialManager.h"
 #include "GameUser.h"
+#include "MobClickCpp.h"
 
 
 #if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
@@ -199,6 +200,8 @@ void shopHealthShowLayer::useToolToAddHealth(cocos2d::Touch *touch, cocos2d::Eve
 //    }
     HealthObject * object = SpecialManager::getInstance()->getHealthObjectByIndex(0);
     SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectBySubId(object->getId(), object->getType());
+    umeng::MobClickCpp::event(specialObject->getId().c_str());
+    
 //    specialObject->buyEnd();
     
 #if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)

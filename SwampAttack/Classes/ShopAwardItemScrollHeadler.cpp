@@ -14,10 +14,12 @@
 #include "GameUser.h"
 #include "GameSprite.h"
 #include "SpecialManager.h"
+#include "MobClickCpp.h"
 
 #if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include "../proj.android/jni/hellocpp/UCSdkJniHelper.h"
 #endif
+
 
 ShopAwardItemScrollHeadler::ShopAwardItemScrollHeadler(int index)
 {
@@ -94,7 +96,10 @@ void ShopAwardItemScrollHeadler::buy(cocos2d::Touch *touch, cocos2d::Event *even
 {
     log("buy ...");
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buyGold.mp3").c_str());
+
     SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectByIndex(m_index);
+    umeng::MobClickCpp::event(specialObject->getId().c_str());
+
     
 //    specialObject->buyEnd();
 #if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)

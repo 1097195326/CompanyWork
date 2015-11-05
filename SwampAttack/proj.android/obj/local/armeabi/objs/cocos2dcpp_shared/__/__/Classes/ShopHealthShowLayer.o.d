@@ -360,6 +360,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/ShopHealthShowLayer.o: \
  jni/../../Classes/json/writer.h jni/../../Classes/MoneyObject.h \
  jni/../../Classes/ExpendObject.h jni/../../Classes/HealthObject.h \
  jni/../../Classes/GameUser.h jni/../../Classes/GameSubject.h \
+ jni/../../Classes/MobClickCpp.h \
  jni/../../Classes/../proj.android/jni/hellocpp/UCSdkJniHelper.h \
  jni/../../cocos2d/cocos/3d/../../../Classes/SpecialObject.h
 
@@ -1102,6 +1103,8 @@ jni/../../Classes/HealthObject.h:
 jni/../../Classes/GameUser.h:
 
 jni/../../Classes/GameSubject.h:
+
+jni/../../Classes/MobClickCpp.h:
 
 jni/../../Classes/../proj.android/jni/hellocpp/UCSdkJniHelper.h:
 

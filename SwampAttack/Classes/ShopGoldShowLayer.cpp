@@ -9,6 +9,7 @@
 #include "ShopGoldShowLayer.h"
 #include "SpecialManager.h"
 #include "GameSprite.h"
+#include "MobClickCpp.h"
 
 #if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include "../proj.android/jni/hellocpp/UCSdkJniHelper.h"
@@ -104,6 +105,7 @@ void ShopGoldShowLayer::touchItemEnd(cocos2d::Touch *touch, cocos2d::Event *even
 //    log("touch item %d",spr->getTag());
     MoneyObject * object = SpecialManager::getInstance()->getMoneyObjectByIndex(spr->getTag());
     SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectBySubId(object->getId(), object->getType());
+    umeng::MobClickCpp::event(specialObject->getId().c_str());
     
 //    specialObject->buyEnd();
 //    m_delegateLayer->updateUserData();

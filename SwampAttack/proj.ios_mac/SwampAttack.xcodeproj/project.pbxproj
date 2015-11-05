@@ -65,6 +65,8 @@
 		8D51DC5B1B3A907C0053EA8A /* MoneyManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC591B3A907C0053EA8A /* MoneyManager.cpp */; };
 		8D51DC5E1B3A99360053EA8A /* DropPropSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC5C1B3A99360053EA8A /* DropPropSprite.cpp */; };
 		8D51DC611B3A99630053EA8A /* DropMoneySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC5F1B3A99630053EA8A /* DropMoneySprite.cpp */; };
+		8D5DAFB81BE9F91C003050CA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5DAFB71BE9F91C003050CA /* StoreKit.framework */; };
+		8D5DAFBA1BE9F927003050CA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5DAFB91BE9F927003050CA /* GameKit.framework */; };
 		8DBB98891ACD520C008C804D /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB987F1ACD520C008C804D /* json_internalarray.inl */; };
 		8DBB988A1ACD520C008C804D /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB98801ACD520C008C804D /* json_internalmap.inl */; };
 		8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB98811ACD520C008C804D /* json_reader.cpp */; };
@@ -294,6 +296,8 @@
 		8D51DC5D1B3A99360053EA8A /* DropPropSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropPropSprite.h; sourceTree = "<group>"; };
 		8D51DC5F1B3A99630053EA8A /* DropMoneySprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropMoneySprite.cpp; sourceTree = "<group>"; };
 		8D51DC601B3A99630053EA8A /* DropMoneySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropMoneySprite.h; sourceTree = "<group>"; };
+		8D5DAFB71BE9F91C003050CA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8D5DAFB91BE9F927003050CA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		8DBB98781ACD520C008C804D /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		8DBB98791ACD520C008C804D /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		8DBB987A1ACD520C008C804D /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
@@ -575,8 +579,10 @@
 				BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */,
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */,
+				8D5DAFBA1BE9F927003050CA /* GameKit.framework in Frameworks */,
 				D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */,
 				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
+				8D5DAFB81BE9F91C003050CA /* StoreKit.framework in Frameworks */,
 				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +659,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D5DAFB91BE9F927003050CA /* GameKit.framework */,
+				8D5DAFB71BE9F91C003050CA /* StoreKit.framework */,
 				D85EF84F1BC5011F00184DAC /* libMobClickCpp.a */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
@@ -1247,6 +1255,12 @@
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = ZAG6XVYQV4;
 						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.Keychain = {
 								enabled = 1;
 							};
@@ -1519,8 +1533,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = GameCC.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hongxing zhang (237VJJ4EJS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hongxing zhang (237VJJ4EJS)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1540,7 +1554,7 @@
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -1555,8 +1569,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = GameCC.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hongxing zhang (ZAG6XVYQV4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hongxing zhang (ZAG6XVYQV4)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1574,7 +1588,7 @@
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -1664,7 +1678,7 @@
 					"$(SRCROOT)/../cocos2d/external",
 					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1694,7 +1708,7 @@
 					"$(SRCROOT)/../cocos2d/external",
 					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
