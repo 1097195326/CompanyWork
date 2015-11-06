@@ -61,7 +61,7 @@
             android:exported="false"
             android:screenOrientation="behind" >
         </activity>
-        <!-- now 微信SDK支付相关添加开始 -->
+        <!-- now 微信SDK支付相關添加开始 -->
 		<activity
             android:name="com.ipaynow.plugin.activity.PayMethodActivity"
             android:theme="@android:style/Theme.Dialog"
@@ -69,14 +69,33 @@
             android:exported="false"
             android:screenOrientation="unspecified">
         </activity>
-        <activity android:name="com.ipaynow.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
+        <activity
+            android:name="com.ipaynow.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
             android:theme="@android:style/Theme.NoDisplay"
             android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <!-- now 微信SDK支付相关添加结束 -->
-        
+        <!-- now 微信SDK支付相關添加结束 -->
     </application>
 
+    <!-- 支付SDK内部权限添加开始 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.webkit.permission.PLUGIN" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 支付SDK内部权限添加结束 -->
+    
     <uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

@@ -390,7 +390,8 @@ public class AppActivity extends Cocos2dxActivity {
 		Log.i("hongxing", "app activity onDestroy");
 	    // 退出释放资源
         SDKCore.exitSDK(this);
-        UCGameSdk.defaultSdk().exit(null);
+//        UCGameSdk.defaultSdk().exit(null);
+        UCGameSdk.defaultSdk().exit(this, null);
         super.onDestroy();
     }
 	
