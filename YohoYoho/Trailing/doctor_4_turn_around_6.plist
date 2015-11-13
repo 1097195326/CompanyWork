@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		
+		<key>doctor_4_turn_around_6_1.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_4_turn_around_6_2.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{108, 43}, {250, 338}}</string>
+			<key>spriteOffset</key>
+			<string>{-3, -4}</string>
+			<key>spriteSize</key>
+			<string>{250, 338}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 416}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 0}, {250, 338}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_4_turn_around_6_10.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_4_turn_around_6_9.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{142, 80}, {258, 304}}</string>
+			<key>spriteOffset</key>
+			<string>{35, -24}</string>
+			<key>spriteSize</key>
+			<string>{258, 304}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 416}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{250, 312}, {258, 304}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_4_turn_around_6_11.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_4_turn_around_6_12.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{143, 91}, {262, 292}}</string>
+			<key>spriteOffset</key>
+			<string>{38, -29}</string>
+			<key>spriteSize</key>
+			<string>{262, 292}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 416}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{760, 314}, {262, 292}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_4_turn_around_6_13.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_4_turn_around_6_23.png</string>
+			
+				<string>doctor_4_turn_around_6_21.png</string>
+			
+				<string>doctor_4_turn_around_6_25.png</string>
+			
+				<string>doctor_4_turn_around_6_24.png</string>
+			
+				<string>doctor_4_turn_around_6_16.png</string>
+			
+				<string>doctor_4_turn_around_6_20.png</string>
+			
+				<string>doctor_4_turn_around_6_17.png</string>
+			
+				<string>doctor_4_turn_around_6_26.png</string>
+			
+				<string>doctor_4_turn_around_6_19.png</string>
+			
+				<string>doctor_4_turn_around_6_15.png</string>
+			
+				<string>doctor_4_turn_around_6_18.png</string>
+			
+				<string>doctor_4_turn_around_6_22.png</string>
+			
+				<string>doctor_4_turn_around_6_14.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{144, 93}, {264, 290}}</string>
+			<key>spriteOffset</key>
+			<string>{40, -30}</string>
+			<key>spriteSize</key>
+			<string>{264, 290}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 416}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{504, 0}, {264, 290}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_4_turn_around_6_27.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_4_turn_around_6_28.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{146, 86}, {272, 298}}</string>
+			<key>spriteOffset</key>
+			<string>{46, -27}</string>
+			<key>spriteSize</key>
+			<string>{272, 298}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 416}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 676}, {272, 298}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_4_turn_around_6_29.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_4_turn_around_6_30.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{128, 75}, {224, 304}}</string>
+			<key>spriteOffset</key>
+			<string>{4, -19}</string>
+			<key>spriteSize</key>
+			<string>{224, 304}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 416}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{273, 616}, {224, 304}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_4_turn_around_6_3.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_4_turn_around_6_4.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{116, 67}, {250, 314}}</string>
+			<key>spriteOffset</key>
+			<string>{5, -16}</string>
+			<key>spriteSize</key>
+			<string>{250, 314}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 416}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{510, 292}, {250, 314}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_4_turn_around_6_31.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_4_turn_around_6_32.png</string>
+			
+				<string>doctor_4_turn_around_6_6.png</string>
+			
+				<string>doctor_4_turn_around_6_5.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{123, 69}, {252, 312}}</string>
+			<key>spriteOffset</key>
+			<string>{13, -17}</string>
+			<key>spriteSize</key>
+			<string>{252, 312}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 416}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{250, 0}, {252, 312}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_4_turn_around_6_33.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_4_turn_around_6_34.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{113, 67}, {250, 314}}</string>
+			<key>spriteOffset</key>
+			<string>{2, -16}</string>
+			<key>spriteSize</key>
+			<string>{250, 314}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 416}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{769, 0}, {250, 314}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_4_turn_around_6_35.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_4_turn_around_6_37.png</string>
+			
+				<string>doctor_4_turn_around_6_38.png</string>
+			
+				<string>doctor_4_turn_around_6_39.png</string>
+			
+				<string>doctor_4_turn_around_6_41.png</string>
+			
+				<string>doctor_4_turn_around_6_40.png</string>
+			
+				<string>doctor_4_turn_around_6_36.png</string>
+			
+				<string>doctor_4_turn_around_6_42.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{108, 43}, {250, 338}}</string>
+			<key>spriteOffset</key>
+			<string>{-3, -4}</string>
+			<key>spriteSize</key>
+			<string>{250, 338}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 416}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 338}, {250, 338}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_4_turn_around_6_7.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_4_turn_around_6_8.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{128, 75}, {224, 304}}</string>
+			<key>spriteOffset</key>
+			<string>{4, -19}</string>
+			<key>spriteSize</key>
+			<string>{224, 304}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 416}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{510, 606}, {224, 304}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>version</key>
+		<string>1.5.3</string>
+		<key>format</key>
+		<integer>3</integer>
+		<key>size</key>
+		<string>{1024, 1024}</string>
+		<key>name</key>
+		<string>doctor_4_turn_around_6.zwd</string>
+		<key>premultipliedAlpha</key>
+		<false/>
+		<key>target</key>
+		<dict>
+			<key>name</key>
+			<string>default</string>
+			<key>textureFileName</key>
+			<string>doctor_4_turn_around_6.pvr</string>
+			<key>textureFileExtension</key>
+			<string>.pvr.ccz</string>
+			<key>coordinatesFileName</key>
+			<string>doctor_4_turn_around_6</string>
+			<key>coordinatesFileExtension</key>
+			<string>.plist</string>
+			<key>premultipliedAlpha</key>
+			<false/>
+		</dict>
+	</dict>
+</dict>
+</plist>

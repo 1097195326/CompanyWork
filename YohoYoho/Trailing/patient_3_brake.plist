@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		
+		<key>patient_3_brake_1.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>patient_3_brake_2.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{13, 20}, {116, 128}}</string>
+			<key>spriteOffset</key>
+			<string>{-4, -9}</string>
+			<key>spriteSize</key>
+			<string>{116, 128}</string>
+			<key>spriteSourceSize</key>
+			<string>{150, 150}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{148, 0}, {116, 128}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>patient_3_brake_10.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>patient_3_brake_9.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{11, 47}, {124, 98}}</string>
+			<key>spriteOffset</key>
+			<string>{-2, -21}</string>
+			<key>spriteSize</key>
+			<string>{124, 98}</string>
+			<key>spriteSourceSize</key>
+			<string>{150, 150}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{122, 280}, {124, 98}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>patient_3_brake_11.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>patient_3_brake_12.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{11, 34}, {120, 114}}</string>
+			<key>spriteOffset</key>
+			<string>{-4, -16}</string>
+			<key>spriteSize</key>
+			<string>{120, 114}</string>
+			<key>spriteSourceSize</key>
+			<string>{150, 150}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 258}, {120, 114}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>patient_3_brake_13.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>patient_3_brake_14.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{30, 26}, {98, 122}}</string>
+			<key>spriteOffset</key>
+			<string>{4, -12}</string>
+			<key>spriteSize</key>
+			<string>{98, 122}</string>
+			<key>spriteSourceSize</key>
+			<string>{150, 150}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{266, 0}, {98, 122}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>patient_3_brake_15.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>patient_3_brake_16.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{36, 19}, {84, 128}}</string>
+			<key>spriteOffset</key>
+			<string>{3, -8}</string>
+			<key>spriteSize</key>
+			<string>{84, 128}</string>
+			<key>spriteSourceSize</key>
+			<string>{150, 150}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{196, 130}, {84, 128}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>patient_3_brake_17.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>patient_3_brake_18.png</string>
+			
+				<string>patient_3_brake_19.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{39, 7}, {72, 138}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -1}</string>
+			<key>spriteSize</key>
+			<string>{72, 138}</string>
+			<key>spriteSourceSize</key>
+			<string>{150, 150}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 0}, {72, 138}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>patient_3_brake_20.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>patient_3_brake_21.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{39, 7}, {72, 138}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -1}</string>
+			<key>spriteSize</key>
+			<string>{72, 138}</string>
+			<key>spriteSourceSize</key>
+			<string>{150, 150}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{122, 140}, {72, 138}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>patient_3_brake_22.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>patient_3_brake_23.png</string>
+			
+				<string>patient_3_brake_24.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{39, 7}, {72, 138}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -1}</string>
+			<key>spriteSize</key>
+			<string>{72, 138}</string>
+			<key>spriteSourceSize</key>
+			<string>{150, 150}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{74, 0}, {72, 138}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>patient_3_brake_3.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>patient_3_brake_4.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{13, 29}, {120, 116}}</string>
+			<key>spriteOffset</key>
+			<string>{-2, -12}</string>
+			<key>spriteSize</key>
+			<string>{120, 116}</string>
+			<key>spriteSourceSize</key>
+			<string>{150, 150}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 140}, {120, 116}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>patient_3_brake_5.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>patient_3_brake_6.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{15, 48}, {124, 96}}</string>
+			<key>spriteOffset</key>
+			<string>{2, -21}</string>
+			<key>spriteSize</key>
+			<string>{124, 96}</string>
+			<key>spriteSourceSize</key>
+			<string>{150, 150}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{248, 260}, {124, 96}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>patient_3_brake_7.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>patient_3_brake_8.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{16, 55}, {120, 90}}</string>
+			<key>spriteOffset</key>
+			<string>{1, -25}</string>
+			<key>spriteSize</key>
+			<string>{120, 90}</string>
+			<key>spriteSourceSize</key>
+			<string>{150, 150}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 374}, {120, 90}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>version</key>
+		<string>1.5.3</string>
+		<key>format</key>
+		<integer>3</integer>
+		<key>size</key>
+		<string>{512, 512}</string>
+		<key>name</key>
+		<string>patient_3_brake.zwd</string>
+		<key>premultipliedAlpha</key>
+		<false/>
+		<key>target</key>
+		<dict>
+			<key>name</key>
+			<string>default</string>
+			<key>textureFileName</key>
+			<string>patient_3_brake.pvr</string>
+			<key>textureFileExtension</key>
+			<string>.pvr.ccz</string>
+			<key>coordinatesFileName</key>
+			<string>patient_3_brake</string>
+			<key>coordinatesFileExtension</key>
+			<string>.plist</string>
+			<key>premultipliedAlpha</key>
+			<false/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		
+		<key>doctor_1_turn_around_1_1.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{117, 49}, {202, 466}}</string>
+			<key>spriteOffset</key>
+			<string>{-2, -10}</string>
+			<key>spriteSize</key>
+			<string>{202, 466}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 0}, {202, 466}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_10.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_11.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{118, 92}, {208, 424}}</string>
+			<key>spriteOffset</key>
+			<string>{2, -32}</string>
+			<key>spriteSize</key>
+			<string>{208, 424}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{407, 1342}, {208, 424}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_12.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_13.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{127, 96}, {204, 420}}</string>
+			<key>spriteOffset</key>
+			<string>{9, -34}</string>
+			<key>spriteSize</key>
+			<string>{204, 420}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{420, 905}, {204, 420}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_14.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_15.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{152, 107}, {192, 408}}</string>
+			<key>spriteOffset</key>
+			<string>{28, -39}</string>
+			<key>spriteSize</key>
+			<string>{192, 408}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{617, 1327}, {192, 408}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_16.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_17.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{161, 118}, {192, 398}}</string>
+			<key>spriteOffset</key>
+			<string>{37, -45}</string>
+			<key>spriteSize</key>
+			<string>{192, 398}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{627, 410}, {192, 398}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_18.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_19.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{162, 120}, {194, 396}}</string>
+			<key>spriteOffset</key>
+			<string>{39, -46}</string>
+			<key>spriteSize</key>
+			<string>{194, 396}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{811, 1262}, {194, 396}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_2.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_3.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{121, 55}, {194, 460}}</string>
+			<key>spriteOffset</key>
+			<string>{-2, -13}</string>
+			<key>spriteSize</key>
+			<string>{194, 460}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 1398}, {194, 460}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_20.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_21.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{158, 121}, {202, 394}}</string>
+			<key>spriteOffset</key>
+			<string>{39, -46}</string>
+			<key>spriteSize</key>
+			<string>{202, 394}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{818, 809}, {202, 394}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_22.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_24.png</string>
+			
+				<string>doctor_1_turn_around_1_25.png</string>
+			
+				<string>doctor_1_turn_around_1_23.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{169, 125}, {196, 390}}</string>
+			<key>spriteOffset</key>
+			<string>{47, -48}</string>
+			<key>spriteSize</key>
+			<string>{196, 390}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1020, 784}, {196, 390}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_26.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_27.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{169, 125}, {196, 390}}</string>
+			<key>spriteOffset</key>
+			<string>{47, -48}</string>
+			<key>spriteSize</key>
+			<string>{196, 390}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{819, 410}, {196, 390}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_28.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_29.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{169, 125}, {196, 390}}</string>
+			<key>spriteOffset</key>
+			<string>{47, -48}</string>
+			<key>spriteSize</key>
+			<string>{196, 390}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1006, 1204}, {196, 390}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_30.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_31.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{169, 125}, {196, 390}}</string>
+			<key>spriteOffset</key>
+			<string>{47, -48}</string>
+			<key>spriteSize</key>
+			<string>{196, 390}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1018, 0}, {196, 390}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_32.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_33.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{169, 125}, {196, 390}}</string>
+			<key>spriteOffset</key>
+			<string>{47, -48}</string>
+			<key>spriteSize</key>
+			<string>{196, 390}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1016, 392}, {196, 390}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_34.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_39.png</string>
+			
+				<string>doctor_1_turn_around_1_37.png</string>
+			
+				<string>doctor_1_turn_around_1_36.png</string>
+			
+				<string>doctor_1_turn_around_1_40.png</string>
+			
+				<string>doctor_1_turn_around_1_44.png</string>
+			
+				<string>doctor_1_turn_around_1_35.png</string>
+			
+				<string>doctor_1_turn_around_1_38.png</string>
+			
+				<string>doctor_1_turn_around_1_43.png</string>
+			
+				<string>doctor_1_turn_around_1_42.png</string>
+			
+				<string>doctor_1_turn_around_1_41.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{169, 125}, {196, 390}}</string>
+			<key>spriteOffset</key>
+			<string>{47, -48}</string>
+			<key>spriteSize</key>
+			<string>{196, 390}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{821, 0}, {196, 390}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_4.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_5.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{112, 61}, {210, 454}}</string>
+			<key>spriteOffset</key>
+			<string>{-3, -16}</string>
+			<key>spriteSize</key>
+			<string>{210, 454}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{195, 1398}, {210, 454}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_45.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_46.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{159, 114}, {192, 402}}</string>
+			<key>spriteOffset</key>
+			<string>{35, -43}</string>
+			<key>spriteSize</key>
+			<string>{192, 402}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{625, 859}, {192, 402}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_47.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_48.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{151, 107}, {194, 408}}</string>
+			<key>spriteOffset</key>
+			<string>{28, -39}</string>
+			<key>spriteSize</key>
+			<string>{194, 408}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{626, 0}, {194, 408}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_49.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_50.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{131, 96}, {202, 420}}</string>
+			<key>spriteOffset</key>
+			<string>{12, -34}</string>
+			<key>spriteSize</key>
+			<string>{202, 420}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{423, 437}, {202, 420}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_51.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_52.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{114, 80}, {214, 436}}</string>
+			<key>spriteOffset</key>
+			<string>{1, -26}</string>
+			<key>spriteSize</key>
+			<string>{214, 436}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{205, 905}, {214, 436}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_53.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_54.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{115, 61}, {206, 454}}</string>
+			<key>spriteOffset</key>
+			<string>{-2, -16}</string>
+			<key>spriteSize</key>
+			<string>{206, 454}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{203, 0}, {206, 454}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_55.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_56.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{114, 55}, {204, 460}}</string>
+			<key>spriteOffset</key>
+			<string>{-4, -13}</string>
+			<key>spriteSize</key>
+			<string>{204, 460}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 936}, {204, 460}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_57.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{117, 49}, {202, 466}}</string>
+			<key>spriteOffset</key>
+			<string>{-2, -10}</string>
+			<key>spriteSize</key>
+			<string>{202, 466}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 468}, {202, 466}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_6.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_7.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{108, 68}, {218, 448}}</string>
+			<key>spriteOffset</key>
+			<string>{-3, -20}</string>
+			<key>spriteSize</key>
+			<string>{218, 448}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{203, 456}, {218, 448}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>doctor_1_turn_around_1_8.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>doctor_1_turn_around_1_9.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{112, 80}, {216, 436}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -26}</string>
+			<key>spriteSize</key>
+			<string>{216, 436}</string>
+			<key>spriteSourceSize</key>
+			<string>{440, 544}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{409, 0}, {216, 436}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>version</key>
+		<string>1.5.3</string>
+		<key>format</key>
+		<integer>3</integer>
+		<key>size</key>
+		<string>{2048, 2048}</string>
+		<key>name</key>
+		<string>doctor_1_turn_around_1.zwd</string>
+		<key>premultipliedAlpha</key>
+		<false/>
+		<key>target</key>
+		<dict>
+			<key>name</key>
+			<string>default</string>
+			<key>textureFileName</key>
+			<string>doctor_1_turn_around_1.pvr</string>
+			<key>textureFileExtension</key>
+			<string>.pvr.ccz</string>
+			<key>coordinatesFileName</key>
+			<string>doctor_1_turn_around_1</string>
+			<key>coordinatesFileExtension</key>
+			<string>.plist</string>
+			<key>premultipliedAlpha</key>
+			<false/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		
+		<key>goods_1_crash_1.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>goods_1_crash_5.png</string>
+			
+				<string>goods_1_crash_4.png</string>
+			
+				<string>goods_1_crash_2.png</string>
+			
+				<string>goods_1_crash_3.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{296, 285}, {66, 74}}</string>
+			<key>spriteOffset</key>
+			<string>{-1, 8}</string>
+			<key>spriteSize</key>
+			<string>{66, 74}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 934}, {66, 74}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_10.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{213, 222}, {218, 164}}</string>
+			<key>spriteOffset</key>
+			<string>{-8, 26}</string>
+			<key>spriteSize</key>
+			<string>{218, 164}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{662, 497}, {218, 164}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_11.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{212, 203}, {226, 202}}</string>
+			<key>spriteOffset</key>
+			<string>{-5, 26}</string>
+			<key>spriteSize</key>
+			<string>{226, 202}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{915, 236}, {226, 202}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_12.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{204, 203}, {238, 202}}</string>
+			<key>spriteOffset</key>
+			<string>{-7, 26}</string>
+			<key>spriteSize</key>
+			<string>{238, 202}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{974, 662}, {238, 202}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_13.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{204, 189}, {240, 234}}</string>
+			<key>spriteOffset</key>
+			<string>{-6, 24}</string>
+			<key>spriteSize</key>
+			<string>{240, 234}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{891, 0}, {240, 234}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_14.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{199, 189}, {252, 234}}</string>
+			<key>spriteOffset</key>
+			<string>{-5, 24}</string>
+			<key>spriteSize</key>
+			<string>{252, 234}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{662, 261}, {252, 234}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_15.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{199, 175}, {252, 270}}</string>
+			<key>spriteOffset</key>
+			<string>{-5, 20}</string>
+			<key>spriteSize</key>
+			<string>{252, 270}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{262, 662}, {252, 270}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_16.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{195, 175}, {262, 270}}</string>
+			<key>spriteOffset</key>
+			<string>{-4, 20}</string>
+			<key>spriteSize</key>
+			<string>{262, 270}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 662}, {262, 270}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_17.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{195, 203}, {262, 260}}</string>
+			<key>spriteOffset</key>
+			<string>{-4, -3}</string>
+			<key>spriteSize</key>
+			<string>{262, 260}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{515, 662}, {262, 260}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_18.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{225, 203}, {228, 260}}</string>
+			<key>spriteOffset</key>
+			<string>{9, -3}</string>
+			<key>spriteSize</key>
+			<string>{228, 260}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{662, 0}, {228, 260}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_19.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>goods_1_crash_20.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{250, 228}, {162, 170}}</string>
+			<key>spriteOffset</key>
+			<string>{1, 17}</string>
+			<key>spriteSize</key>
+			<string>{162, 170}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1132, 0}, {162, 170}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_21.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>goods_1_crash_22.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{264, 252}, {176, 188}}</string>
+			<key>spriteOffset</key>
+			<string>{22, -16}</string>
+			<key>spriteSize</key>
+			<string>{176, 188}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1331, 834}, {176, 188}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_23.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>goods_1_crash_24.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{287, 290}, {190, 198}}</string>
+			<key>spriteOffset</key>
+			<string>{52, -59}</string>
+			<key>spriteSize</key>
+			<string>{190, 198}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1098, 439}, {190, 198}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_25.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>goods_1_crash_26.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{299, 351}, {196, 212}}</string>
+			<key>spriteOffset</key>
+			<string>{67, -127}</string>
+			<key>spriteSize</key>
+			<string>{196, 212}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{777, 662}, {196, 212}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_27.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>goods_1_crash_28.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{321, 429}, {190, 194}}</string>
+			<key>spriteOffset</key>
+			<string>{86, -196}</string>
+			<key>spriteSize</key>
+			<string>{190, 194}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1214, 638}, {190, 194}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_29.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+				<string>goods_1_crash_31.png</string>
+			
+				<string>goods_1_crash_30.png</string>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {660, 660}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{660, 660}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 0}, {660, 660}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_6.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{237, 258}, {172, 116}}</string>
+			<key>spriteOffset</key>
+			<string>{-7, 14}</string>
+			<key>spriteSize</key>
+			<string>{172, 116}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1159, 865}, {172, 116}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_7.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{228, 231}, {190, 144}}</string>
+			<key>spriteOffset</key>
+			<string>{-7, 27}</string>
+			<key>spriteSize</key>
+			<string>{190, 144}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{969, 875}, {190, 144}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_8.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{226, 231}, {192, 144}}</string>
+			<key>spriteOffset</key>
+			<string>{-8, 27}</string>
+			<key>spriteSize</key>
+			<string>{192, 144}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{777, 875}, {192, 144}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>goods_1_crash_9.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{213, 222}, {216, 164}}</string>
+			<key>spriteOffset</key>
+			<string>{-9, 26}</string>
+			<key>spriteSize</key>
+			<string>{216, 164}</string>
+			<key>spriteSourceSize</key>
+			<string>{660, 660}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{882, 497}, {216, 164}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>version</key>
+		<string>1.5.3</string>
+		<key>format</key>
+		<integer>3</integer>
+		<key>size</key>
+		<string>{2048, 1024}</string>
+		<key>name</key>
+		<string>goods_1_crash.zwd</string>
+		<key>premultipliedAlpha</key>
+		<false/>
+		<key>target</key>
+		<dict>
+			<key>name</key>
+			<string>default</string>
+			<key>textureFileName</key>
+			<string>goods_1_crash.pvr</string>
+			<key>textureFileExtension</key>
+			<string>.pvr.ccz</string>
+			<key>coordinatesFileName</key>
+			<string>goods_1_crash</string>
+			<key>coordinatesFileExtension</key>
+			<string>.plist</string>
+			<key>premultipliedAlpha</key>
+			<false/>
+		</dict>
+	</dict>
+</dict>
+</plist>
