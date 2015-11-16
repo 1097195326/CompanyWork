@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "DelegateLogic.h"
+#import "libs/WxSdk/WXApi.h"
+
 
 @class RootViewController;
 

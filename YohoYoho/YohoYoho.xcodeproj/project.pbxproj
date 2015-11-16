@@ -415,6 +415,7 @@
 		35FADEEE15B990CF007434FE /* share_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35FADEED15B990CF007434FE /* share_1.jpg */; };
 		35FCC3BD14F400130080A6C4 /* btn_play_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FCC3BC14F400130080A6C4 /* btn_play_normal.png */; };
 		35FCC3C114F40E6E0080A6C4 /* SelectModeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FCC3C014F40E6E0080A6C4 /* SelectModeScene.m */; };
+		8D8022361BF9E13600E7B13A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8022331BF9E13600E7B13A /* libWeChatSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -989,6 +990,9 @@
 		35FCC3BC14F400130080A6C4 /* btn_play_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_play_normal.png; sourceTree = "<group>"; };
 		35FCC3BF14F40E6E0080A6C4 /* SelectModeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectModeScene.h; sourceTree = "<group>"; };
 		35FCC3C014F40E6E0080A6C4 /* SelectModeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectModeScene.m; sourceTree = "<group>"; };
+		8D8022331BF9E13600E7B13A /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		8D8022341BF9E13600E7B13A /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		8D8022351BF9E13600E7B13A /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1000,6 +1004,7 @@
 				3560A68E14E958AB004A60AC /* QuartzCore.framework in Frameworks */,
 				3560A69014E958AB004A60AC /* OpenGLES.framework in Frameworks */,
 				3560A69214E958AB004A60AC /* OpenAL.framework in Frameworks */,
+				8D8022361BF9E13600E7B13A /* libWeChatSDK.a in Frameworks */,
 				3560A69414E958AB004A60AC /* AudioToolbox.framework in Frameworks */,
 				3560A69614E958AB004A60AC /* AVFoundation.framework in Frameworks */,
 				3560A69814E958AB004A60AC /* UIKit.framework in Frameworks */,
@@ -1275,6 +1280,7 @@
 		3560A6B214E958AB004A60AC /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				8D8022321BF9E13600E7B13A /* WxSdk */,
 				35FADE9015B96327007434FE /* SinaWeiBoSDK */,
 				3560A7A814E958AE004A60AC /* LICENSE_cocos2d.txt */,
 				3560A7B714E958AE004A60AC /* LICENSE_CocosDenshion.txt */,
@@ -2068,6 +2074,17 @@
 			name = share;
 			sourceTree = "<group>";
 		};
+		8D8022321BF9E13600E7B13A /* WxSdk */ = {
+			isa = PBXGroup;
+			children = (
+				8D8022331BF9E13600E7B13A /* libWeChatSDK.a */,
+				8D8022341BF9E13600E7B13A /* WXApi.h */,
+				8D8022351BF9E13600E7B13A /* WXApiObject.h */,
+			);
+			name = WxSdk;
+			path = libs/WxSdk;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2597,6 +2614,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Trailing/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Trailing/libs/WxSdk",
+				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = YohoYoho;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -2615,6 +2636,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Trailing/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Trailing/libs/WxSdk",
+				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = YohoYoho;
 				TARGETED_DEVICE_FAMILY = 2;
