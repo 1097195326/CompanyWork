@@ -72,7 +72,8 @@
     
     // 跳转到选择模式场景
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    [delegate.delegateLogic goToSelectModeScene];
+//    [delegate.delegateLogic goToSelectModeScene];
+    [delegate.delegateLogic goToPatientModeSelectCharacterScene];
     
 	return YES;
 }

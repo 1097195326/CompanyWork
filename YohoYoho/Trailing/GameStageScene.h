@@ -77,15 +77,17 @@
     CCSprite            *pointer_;                   // 钟表指针
     CCSprite            *patientIcon_;               // 距离条上的病人图标
     Patient             *patient_;                   // 吊瓶内的病人
+    CCLabelTTF          *timeLabel_;
 }
 
 @property (nonatomic, retain) CCSprite            *pointer;
 @property (nonatomic, retain) CCSprite            *patientIcon;
 @property (nonatomic, retain) Patient             *patient;
+@property (nonatomic, retain) CCLabelTTF          *timeLabel;
 
 // 更新钟表指针角度
 - (void) updatePointerRotationWithTimeRatio:(float)timeRatio;
-
+- (void) updateTimeLabelWithTime:(int)time;
 // 更新距离条中病人图标位置
 - (void) updatePatientIconPositionWithDistanceRatio:(float)distanceRatio;
 

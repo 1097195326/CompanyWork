@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "43086CFC1F712177945BE1B516A569A481E76560",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "2f6dd3ac-734c-db11-98db-00123f83b708++761" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2f6dd3ac-734c-db11-98db-00123f83b708++761" : 0,
+    "43086CFC1F712177945BE1B516A569A481E76560" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FA2315CD-6030-4CCA-B9D6-99A19E010A70",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2f6dd3ac-734c-db11-98db-00123f83b708++761" : "CompanyWork\/YohoYoho\/Trailing\/libs\/SinaWeiBoSDK\/",
+    "43086CFC1F712177945BE1B516A569A481E76560" : "CompanyWork\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "YohoYoho",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "YohoYoho\/YohoYoho.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/svn.intra.sina.com.cn\/wap",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2f6dd3ac-734c-db11-98db-00123f83b708++761"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:1097195326\/CompanyWork.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "43086CFC1F712177945BE1B516A569A481E76560"
+    }
+  ]
+}

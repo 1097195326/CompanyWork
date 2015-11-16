@@ -241,17 +241,19 @@
 // 显示weibo分享
 - (void) showShare {
     
-    // 显示weibo登陆
-    if (self.weiboEngine == nil) {
-        self.weiboEngine = [[[WBEngine alloc] initWithAppKey:WEIBO_APP_KEY
-                                                   appSecret:WEIBO_APP_SECRET] autorelease];
-//        [self.weiboEngine setRootViewController:self];
-        [self.weiboEngine setDelegate:self];
-        [self.weiboEngine setRedirectURI:@"http://"];
-        [self.weiboEngine setIsUserExclusive:NO];
-    }
-
-    [self.weiboEngine logIn];
+    
+    
+//    // 显示weibo登陆
+//    if (self.weiboEngine == nil) {
+//        self.weiboEngine = [[[WBEngine alloc] initWithAppKey:WEIBO_APP_KEY
+//                                                   appSecret:WEIBO_APP_SECRET] autorelease];
+////        [self.weiboEngine setRootViewController:self];
+//        [self.weiboEngine setDelegate:self];
+//        [self.weiboEngine setRedirectURI:@"http://"];
+//        [self.weiboEngine setIsUserExclusive:NO];
+//    }
+//
+//    [self.weiboEngine logIn];
 }
 
 

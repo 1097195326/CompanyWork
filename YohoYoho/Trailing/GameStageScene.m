@@ -1080,7 +1080,7 @@ enum E_GAME_OVER_ID{
 @synthesize pointer = pointer_;
 @synthesize patientIcon = patientIcon_;
 @synthesize patient = patient_;
-
+@synthesize timeLabel = timeLabel_;
 
 // 加载层内容，初始化变量
 - (void) loadContentsOfLayer {
@@ -1103,6 +1103,12 @@ enum E_GAME_OVER_ID{
     self.pointer = [CCSprite spriteWithFile:@"pointer.png"];
     self.pointer.position = clock.position;
     [self addChild:self.pointer];
+    
+    self.timeLabel = [CCLabelTTF labelWithString:@""
+                                        fontName:@"impact"
+                                        fontSize:20];
+    self.timeLabel.position = ccp(70, 600);
+    [self addChild:self.timeLabel];
     
     
     // 添加距离条 --------------------------------------------------
@@ -1337,6 +1343,11 @@ enum E_GAME_OVER_ID{
     [(GameStageScene *)[self parent] showConfig];
 }
 
+// 更新时间
+- (void) updateTimeLabelWithTime:(int)time
+{
+    [self.timeLabel setString:[NSString stringWithFormat:@"%i",time]];
+}
 
 // 更新钟表指针角度
 - (void) updatePointerRotationWithTimeRatio:(float)timeRatio {
@@ -1364,6 +1375,7 @@ enum E_GAME_OVER_ID{
     self.pointer = nil;
     self.patientIcon = nil;
     self.patient = nil;
+    self.timeLabel = nil;
     [super dealloc];
 }
 
@@ -2206,6 +2218,8 @@ enum E_GAME_OVER_ID{
     if (self.time > self.timeLimit) {
         self.time = self.timeLimit;
     }
+    
+    [self.menuLayer updateTimeLabelWithTime:(self.timeLimit - self.time)];
     
     float timeRatio = (float)self.time / self.timeLimit;        // 时间比例
 

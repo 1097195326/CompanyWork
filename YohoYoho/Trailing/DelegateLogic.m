@@ -39,6 +39,10 @@
         [self checkBgm];
         [self checkSe];
         
+        
+        gameMode_   = GAME_MODE_PATIENT;
+        difficult_  = DIFFICULT_HARD;
+        stage_      = 4;
         // TEST
 //        CCLOG(@"%@", self.appProfile.profile);
         

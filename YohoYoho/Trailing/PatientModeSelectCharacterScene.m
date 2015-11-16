@@ -198,7 +198,8 @@ CCSprite *bg;
 // 当返回按钮按下
 - (void) onReturnBtnSelected:(id)sender {
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    [delegate.delegateLogic goToSelectModeScene];
+//    [delegate.delegateLogic goToSelectModeScene];
+    [delegate.delegateLogic goToTitleScene];
 }
 
 
@@ -348,7 +349,8 @@ CCSprite *bg;
     
     // 跳转到选择难度
     id actCallBlock = [CCCallBlock actionWithBlock:^{
-        [delegate.delegateLogic goToSelectDifficultScene];
+//        [delegate.delegateLogic goToSelectDifficultScene];
+        [delegate.delegateLogic goToGameStageScene];
     }];
     
     // 执行跳转动画
