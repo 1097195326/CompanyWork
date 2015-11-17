@@ -241,7 +241,8 @@
 // 显示weibo分享
 - (void) showShare {
     
-    
+    AppDelegate * delegate = [[UIApplication sharedApplication] delegate];
+    [delegate sendTextContent];
     
 //    // 显示weibo登陆
 //    if (self.weiboEngine == nil) {

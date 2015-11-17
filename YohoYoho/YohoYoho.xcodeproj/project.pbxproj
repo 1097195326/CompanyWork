@@ -415,6 +415,12 @@
 		35FADEEE15B990CF007434FE /* share_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35FADEED15B990CF007434FE /* share_1.jpg */; };
 		35FCC3BD14F400130080A6C4 /* btn_play_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FCC3BC14F400130080A6C4 /* btn_play_normal.png */; };
 		35FCC3C114F40E6E0080A6C4 /* SelectModeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FCC3C014F40E6E0080A6C4 /* SelectModeScene.m */; };
+		8D4BFBDA1BFB15F300675348 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4BFBD91BFB15F300675348 /* StoreKit.framework */; };
+		8D4BFBDC1BFB15F600675348 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4BFBDB1BFB15F600675348 /* GameKit.framework */; };
+		8D4BFBDE1BFB16F200675348 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4BFBDD1BFB16F200675348 /* SystemConfiguration.framework */; };
+		8D4BFBE01BFB173700675348 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4BFBDF1BFB173700675348 /* libsqlite3.0.tbd */; };
+		8D4BFBE21BFB174500675348 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4BFBE11BFB174500675348 /* libz.1.2.5.tbd */; };
+		8D4BFBE41BFB176100675348 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4BFBE31BFB176100675348 /* libc++.tbd */; };
 		8D8022361BF9E13600E7B13A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8022331BF9E13600E7B13A /* libWeChatSDK.a */; };
 /* End PBXBuildFile section */
 
@@ -990,6 +996,12 @@
 		35FCC3BC14F400130080A6C4 /* btn_play_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_play_normal.png; sourceTree = "<group>"; };
 		35FCC3BF14F40E6E0080A6C4 /* SelectModeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectModeScene.h; sourceTree = "<group>"; };
 		35FCC3C014F40E6E0080A6C4 /* SelectModeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectModeScene.m; sourceTree = "<group>"; };
+		8D4BFBD91BFB15F300675348 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8D4BFBDB1BFB15F600675348 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		8D4BFBDD1BFB16F200675348 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8D4BFBDF1BFB173700675348 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		8D4BFBE11BFB174500675348 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		8D4BFBE31BFB176100675348 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		8D8022331BF9E13600E7B13A /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		8D8022341BF9E13600E7B13A /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		8D8022351BF9E13600E7B13A /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
@@ -1000,16 +1012,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4BFBE41BFB176100675348 /* libc++.tbd in Frameworks */,
+				8D4BFBE21BFB174500675348 /* libz.1.2.5.tbd in Frameworks */,
+				8D4BFBE01BFB173700675348 /* libsqlite3.0.tbd in Frameworks */,
+				8D4BFBDE1BFB16F200675348 /* SystemConfiguration.framework in Frameworks */,
+				8D8022361BF9E13600E7B13A /* libWeChatSDK.a in Frameworks */,
 				35FADEE915B96689007434FE /* Security.framework in Frameworks */,
 				3560A68E14E958AB004A60AC /* QuartzCore.framework in Frameworks */,
+				8D4BFBDC1BFB15F600675348 /* GameKit.framework in Frameworks */,
 				3560A69014E958AB004A60AC /* OpenGLES.framework in Frameworks */,
 				3560A69214E958AB004A60AC /* OpenAL.framework in Frameworks */,
-				8D8022361BF9E13600E7B13A /* libWeChatSDK.a in Frameworks */,
 				3560A69414E958AB004A60AC /* AudioToolbox.framework in Frameworks */,
 				3560A69614E958AB004A60AC /* AVFoundation.framework in Frameworks */,
 				3560A69814E958AB004A60AC /* UIKit.framework in Frameworks */,
 				3560A69A14E958AB004A60AC /* Foundation.framework in Frameworks */,
 				3560A69C14E958AB004A60AC /* CoreGraphics.framework in Frameworks */,
+				8D4BFBDA1BFB15F300675348 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1224,6 +1242,12 @@
 		3560A68C14E958AB004A60AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D4BFBE31BFB176100675348 /* libc++.tbd */,
+				8D4BFBE11BFB174500675348 /* libz.1.2.5.tbd */,
+				8D4BFBDF1BFB173700675348 /* libsqlite3.0.tbd */,
+				8D4BFBDD1BFB16F200675348 /* SystemConfiguration.framework */,
+				8D4BFBDB1BFB15F600675348 /* GameKit.framework */,
+				8D4BFBD91BFB15F300675348 /* StoreKit.framework */,
 				35FADEE815B96688007434FE /* Security.framework */,
 				3560A68D14E958AB004A60AC /* QuartzCore.framework */,
 				3560A68F14E958AB004A60AC /* OpenGLES.framework */,
@@ -2113,6 +2137,19 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = Leon.Young;
+				TargetAttributes = {
+					3560A68814E958AA004A60AC = {
+						DevelopmentTeam = G2JVT8RTND;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 3560A68314E958AA004A60AC /* Build configuration list for PBXProject "YohoYoho" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2570,7 +2607,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2582,6 +2621,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Trailing/libs/WxSdk",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2590,13 +2633,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wu Lin (G2JVT8RTND)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wu Lin (G2JVT8RTND)";
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Trailing/libs/WxSdk",
+				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -2606,6 +2655,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2619,8 +2670,10 @@
 					"$(PROJECT_DIR)/Trailing/libs/WxSdk",
 				);
 				OTHER_LDFLAGS = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sihai.yohoyoho;
 				PRODUCT_NAME = YohoYoho;
-				TARGETED_DEVICE_FAMILY = 2;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2629,6 +2682,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wu Lin (G2JVT8RTND)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wu Lin (G2JVT8RTND)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Trailing/Prefix.pch;
@@ -2641,8 +2696,10 @@
 					"$(PROJECT_DIR)/Trailing/libs/WxSdk",
 				);
 				OTHER_LDFLAGS = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sihai.yohoyoho;
 				PRODUCT_NAME = YohoYoho;
-				TARGETED_DEVICE_FAMILY = 2;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
