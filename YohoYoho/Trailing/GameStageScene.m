@@ -1018,22 +1018,22 @@ enum E_GAME_OVER_ID{
     float distance = ((GameStageScene *)[self parent]).distance;
     
     // 在警戒距离内
-    if (distance < DISTANCE_WARNING) {
-        
-        // 滑动距离达到一定长度以上
-        if (swipeDistance > 100) {
-/*            
-            // 获取移动时间
-            NSTimeInterval moveEndTime = [[NSDate date] timeIntervalSince1970];
-            NSTimeInterval moveTime = moveEndTime - self.moveStartTime;
-            
-            // 计算速度，时间 / 距离
-            double speed = moveTime / swipeDistance;
-*/
-            // 检查医生动作，是否立即回头
-            [(GameStageScene *)[self parent] checkDoctorMoveWithSwipeSpeed:speed];
-        }
-    }
+//    if (distance < DISTANCE_WARNING) {
+//        
+//        // 滑动距离达到一定长度以上
+//        if (swipeDistance > 100) {
+///*            
+//            // 获取移动时间
+//            NSTimeInterval moveEndTime = [[NSDate date] timeIntervalSince1970];
+//            NSTimeInterval moveTime = moveEndTime - self.moveStartTime;
+//            
+//            // 计算速度，时间 / 距离
+//            double speed = moveTime / swipeDistance;
+//*/
+//            // 检查医生动作，是否立即回头
+//            [(GameStageScene *)[self parent] checkDoctorMoveWithSwipeSpeed:speed];
+//        }
+//    }
     
     
     // 滑行一段距离 -----------------------------------------------------------------------------
@@ -1107,7 +1107,6 @@ enum E_GAME_OVER_ID{
     self.timeLabel = [CCLabelTTF labelWithString:@""
                                         fontName:@"impact"
                                         fontSize:40];
-//    self.timeLabel 
     self.timeLabel.position = clock.position;
     [self addChild:self.timeLabel];
     
