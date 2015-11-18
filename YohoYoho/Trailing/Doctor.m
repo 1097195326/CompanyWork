@@ -133,7 +133,7 @@ int preIndexForTurnAround = 0;
     [self.doctorSpriteBatchNode addChild:spriteForDoctor];
     
     // 动作
-    id actDelay = [CCDelayTime actionWithDuration:2.0f];
+    id actDelay = [CCDelayTime actionWithDuration:0.5f];
     id actCallBlockN = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         self.isMoving = moving;
     }];
@@ -176,7 +176,7 @@ int preIndexForTurnAround = 0;
     // 创建动画对象
     float walkTime = [[animationInfo objectForKey:@"time"] floatValue];
     if (fast == YES) {
-        walkTime = walkTime / 2.0f;
+        walkTime = walkTime / 1.5f;
     }
     float delayTime = walkTime / frameCount;
     CCAnimation *anim = [CCAnimation animationWithFrames:animFrames delay:delayTime];
@@ -592,7 +592,7 @@ int preIndexForTurnAround = 0;
     id actCallBlockN1 = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         [self stayWithMoving:YES];
     }];
-    id actDelay = [CCDelayTime actionWithDuration:2.0f];
+    id actDelay = [CCDelayTime actionWithDuration:0.5f];
     id actCallBlockN2 = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         [self feint];
     }];
@@ -611,7 +611,7 @@ int preIndexForTurnAround = 0;
     id actCallBlockN1 = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         [self stayWithMoving:YES];
     }];
-    id actDelay = [CCDelayTime actionWithDuration:2.0f];
+    id actDelay = [CCDelayTime actionWithDuration:0.5f];
     id actCallBlockN2 = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         [self turnAroundWithCallback:object];
     }];

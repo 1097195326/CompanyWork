@@ -1106,8 +1106,9 @@ enum E_GAME_OVER_ID{
     
     self.timeLabel = [CCLabelTTF labelWithString:@""
                                         fontName:@"impact"
-                                        fontSize:20];
-    self.timeLabel.position = ccp(70, 600);
+                                        fontSize:40];
+//    self.timeLabel 
+    self.timeLabel.position = clock.position;
     [self addChild:self.timeLabel];
     
     
@@ -1183,57 +1184,57 @@ enum E_GAME_OVER_ID{
 
     // 添加道具栏 --------------------------------------------------
     // 添加道具栏背景
-    CCSprite *goodsBarBg = [CCSprite spriteWithFile:@"goods_bar_bg.png"];
-    goodsBarBg.position = ccp(winSize.width / 2, 100);
-    [self addChild:goodsBarBg];
+//    CCSprite *goodsBarBg = [CCSprite spriteWithFile:@"goods_bar_bg.png"];
+//    goodsBarBg.position = ccp(winSize.width / 2, 100);
+//    [self addChild:goodsBarBg];
     
     // 添加道具
-    NSDictionary *goods = [delegate.delegateLogic.appProfile goods];        // 用户道具信息
-    CCMenu *menuForGoods = [CCMenu menuWithItems: nil];                     // 道具菜单
-    NSArray *goodsKeys = [goods allKeys];
-    for (int i = 0; i < 4; i++) {
-        if (i + 1 <= [goodsKeys count]) {
-            NSString *key = [goodsKeys objectAtIndex:i];
-            int goodsId = [key intValue];
-            NSString *goodsAmountStr = [[goods objectForKey:key] stringValue];          // 道具数量
-            
-            // 道具菜单项
-            NSString *goodsFileName = [NSString stringWithFormat:@"goods_%i_small_normal.png", goodsId];
-            CCMenuItem *menuItemForGoods = [CCMenuItemImage itemFromNormalImage:goodsFileName
-                                                                  selectedImage:goodsFileName
-                                                                         target:self
-                                                                       selector:@selector(onGoodsSelected:)];
-            
-            // 将道具ID写入tag
-            menuItemForGoods.tag = goodsId;
-            
-            // 添加道具数量显示
-            CCLabelTTF *labelForGoodsAmount = [CCLabelTTF labelWithString:goodsAmountStr
-                                                                 fontName:@"impact"
-                                                                 fontSize:32];
-            labelForGoodsAmount.color = ccc3(71, 21, 18);
-            labelForGoodsAmount.position = ccp(55, 25);
-            labelForGoodsAmount.tag = 1;
-            [menuItemForGoods addChild:labelForGoodsAmount];
-            
-            // 将菜单项加入菜单
-            [menuForGoods addChild:menuItemForGoods];
-            
-        } else {
-            
-            // 添加空槽菜单项
-            CCMenuItem *menuItemForGoods = [CCMenuItemImage itemFromNormalImage:@"goods_none_small_normal.png"
-                                                                  selectedImage:@"goods_none_small_normal.png"];
-            
-            // 将菜单项加入菜单
-            [menuForGoods addChild:menuItemForGoods];
-        }
-    }
-    
-    [menuForGoods alignItemsHorizontally];
-//    menuForGoods.anchorPoint = ccp(0.0f, 0.5f);
-    menuForGoods.position = ccp(goodsBarBg.contentSize.width / 2, 50);
-    [goodsBarBg addChild:menuForGoods];
+//    NSDictionary *goods = [delegate.delegateLogic.appProfile goods];        // 用户道具信息
+//    CCMenu *menuForGoods = [CCMenu menuWithItems: nil];                     // 道具菜单
+//    NSArray *goodsKeys = [goods allKeys];
+//    for (int i = 0; i < 4; i++) {
+//        if (i + 1 <= [goodsKeys count]) {
+//            NSString *key = [goodsKeys objectAtIndex:i];
+//            int goodsId = [key intValue];
+//            NSString *goodsAmountStr = [[goods objectForKey:key] stringValue];          // 道具数量
+//            
+//            // 道具菜单项
+//            NSString *goodsFileName = [NSString stringWithFormat:@"goods_%i_small_normal.png", goodsId];
+//            CCMenuItem *menuItemForGoods = [CCMenuItemImage itemFromNormalImage:goodsFileName
+//                                                                  selectedImage:goodsFileName
+//                                                                         target:self
+//                                                                       selector:@selector(onGoodsSelected:)];
+//            
+//            // 将道具ID写入tag
+//            menuItemForGoods.tag = goodsId;
+//            
+//            // 添加道具数量显示
+//            CCLabelTTF *labelForGoodsAmount = [CCLabelTTF labelWithString:goodsAmountStr
+//                                                                 fontName:@"impact"
+//                                                                 fontSize:32];
+//            labelForGoodsAmount.color = ccc3(71, 21, 18);
+//            labelForGoodsAmount.position = ccp(55, 25);
+//            labelForGoodsAmount.tag = 1;
+//            [menuItemForGoods addChild:labelForGoodsAmount];
+//            
+//            // 将菜单项加入菜单
+//            [menuForGoods addChild:menuItemForGoods];
+//            
+//        } else {
+//            
+//            // 添加空槽菜单项
+//            CCMenuItem *menuItemForGoods = [CCMenuItemImage itemFromNormalImage:@"goods_none_small_normal.png"
+//                                                                  selectedImage:@"goods_none_small_normal.png"];
+//            
+//            // 将菜单项加入菜单
+//            [menuForGoods addChild:menuItemForGoods];
+//        }
+//    }
+//    
+//    [menuForGoods alignItemsHorizontally];
+////    menuForGoods.anchorPoint = ccp(0.0f, 0.5f);
+//    menuForGoods.position = ccp(goodsBarBg.contentSize.width / 2, 50);
+//    [goodsBarBg addChild:menuForGoods];
     
     
     // ------------------------------------ready go提示 ----------------------------------
@@ -1766,7 +1767,8 @@ enum E_GAME_OVER_ID{
 // 按下返回地图按钮
 - (void) onMapSelected:(id)sender {	
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    [delegate.delegateLogic goToMapScene];
+//    [delegate.delegateLogic goToMapScene];
+    [delegate.delegateLogic goToPatientModeSelectCharacterScene];
     [[CCDirector sharedDirector] resume];
 }
 
@@ -2313,7 +2315,8 @@ enum E_GAME_OVER_ID{
 // 检查高速移动（快速滑动），引起医生立即回头
 - (void) checkDoctorMoveWithSwipeSpeed:(double)speed {
     
-    if (speed < 0.001) {
+    if (speed < 0.001)
+    {
         [self.bgLayer.doctor justTurnAroundWithCallback:self];
     }
 }

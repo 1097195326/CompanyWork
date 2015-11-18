@@ -65,7 +65,7 @@
 			<key>2</key>
 			<integer>200</integer>
 			<key>3</key>
-			<integer>150</integer>
+			<integer>20</integer>
 		</dict>
 		<key>coinRewardAmount</key>
 		<dict>
@@ -157,7 +157,7 @@
 			<key>2</key>
 			<integer>200</integer>
 			<key>3</key>
-			<integer>150</integer>
+			<integer>20</integer>
 		</dict>
 		<key>coinRewardAmount</key>
 		<dict>
@@ -249,7 +249,7 @@
 			<key>2</key>
 			<integer>200</integer>
 			<key>3</key>
-			<integer>150</integer>
+			<integer>20</integer>
 		</dict>
 		<key>coinRewardAmount</key>
 		<dict>
