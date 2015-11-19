@@ -87,7 +87,7 @@
 #define DOCTOR_RUN_PROBABILITY 2                                                        // 医生跑步概率，1/n
 
 // 游戏场景病人和医生的距离
-#define DISTANCE_INIT 450                                                               // 初始距离
+#define DISTANCE_INIT 750                                                               // 初始距离
 #define DISTANCE_MAX_TO_GAME_OVER 900                                                   // 导致游戏结束的最大距离
 #define DISTANCE_MAX 1750                                                               // 可显示的最大距离
 #define DISTANCE_WARNING 300                                                            // 警戒距离

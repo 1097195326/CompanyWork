@@ -20,7 +20,7 @@
 	<key>4</key>
 	<dict>
 		<key>swipeDistancePerMoveDistance</key>
-		<integer>15</integer>
+		<integer>20</integer>
 	</dict>
 </dict>
 </plist>

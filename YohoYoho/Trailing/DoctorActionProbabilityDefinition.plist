@@ -395,7 +395,7 @@
 			<key>lower</key>
 			<integer>1</integer>
 			<key>upper</key>
-			<integer>46</integer>
+			<integer>56</integer>
 		</dict>
 		<dict>
 			<key>actionId</key>
@@ -409,15 +409,15 @@
 			<key>actionId</key>
 			<integer>3</integer>
 			<key>lower</key>
-			<integer>46</integer>
+			<integer>0</integer>
 			<key>upper</key>
-			<integer>50</integer>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>actionId</key>
 			<integer>4</integer>
 			<key>lower</key>
-			<integer>51</integer>
+			<integer>57</integer>
 			<key>upper</key>
 			<integer>100</integer>
 		</dict>

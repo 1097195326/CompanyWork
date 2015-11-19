@@ -133,7 +133,7 @@ int preIndexForTurnAround = 0;
     [self.doctorSpriteBatchNode addChild:spriteForDoctor];
     
     // 动作
-    id actDelay = [CCDelayTime actionWithDuration:0.5f];
+    id actDelay = [CCDelayTime actionWithDuration:1.0f];
     id actCallBlockN = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         self.isMoving = moving;
     }];
@@ -592,7 +592,7 @@ int preIndexForTurnAround = 0;
     id actCallBlockN1 = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         [self stayWithMoving:YES];
     }];
-    id actDelay = [CCDelayTime actionWithDuration:0.5f];
+    id actDelay = [CCDelayTime actionWithDuration:1.0f];
     id actCallBlockN2 = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         [self feint];
     }];
@@ -611,7 +611,7 @@ int preIndexForTurnAround = 0;
     id actCallBlockN1 = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         [self stayWithMoving:YES];
     }];
-    id actDelay = [CCDelayTime actionWithDuration:0.5f];
+    id actDelay = [CCDelayTime actionWithDuration:0.8f];
     id actCallBlockN2 = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         [self turnAroundWithCallback:object];
     }];
