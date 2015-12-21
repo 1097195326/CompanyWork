@@ -13,6 +13,7 @@
 #include "BulletManager.h"
 #include "DropManager.h"
 #include "GameDirector.h"
+#include "EnemySkill.hpp"
 
 
 Enemy::Enemy(Json::Value data):
@@ -21,7 +22,8 @@ m_isShowHurt(false),
 m_isWeak(false),
 m_isStop(false),
 m_attackWaitTime(0.0f),
-m_dianjiDlay(0.0f)
+m_dianjiDlay(0.0f),
+m_skill(NULL)
 {
     m_actionType = atoi(m_data["ActionType"].asString().c_str());
     
@@ -60,6 +62,14 @@ m_dianjiDlay(0.0f)
     m_monsterName = m_data["MonsterName"].asString();
     m_modelId = m_data["ModelId"].asString();
     m_capId = m_data["CapId"].asString();
+    
+    std::string skillID = m_data["SkillID"].asString();
+    if (skillID.length() > 0)
+    {
+        m_skill = new EnemySkill(skillID);
+        m_skill->setEnemy(this);
+    }
+    
     m_width = EnemyInfo::getInstance()->getInfoByName(m_modelId).width;
     m_height = EnemyInfo::getInstance()->getInfoByName(m_modelId).height;
     
@@ -98,6 +108,10 @@ m_dianjiDlay(0.0f)
 Enemy::~Enemy()
 {
 //    log("enemy delete");
+    if (m_skill)
+    {
+        delete m_skill;
+    }
 }
 void Enemy::gameLoop(float data){}
 void Enemy::move(){}
@@ -253,6 +267,58 @@ void Enemy::hurtTanfei()
     m_status |= e_tanfei;
 }
 //--- view 接口
+void Enemy::setStateClear()
+{
+    m_status &= e_clear;
+}
+bool    Enemy::isKuangbao()
+{
+    return m_status & e_kuangbao;
+}
+bool    Enemy::isZhaohuan()
+{
+    return m_status & e_zhaohuan;
+}
+bool    Enemy::isFenlie()
+{
+    return m_status & e_fenlie;
+}
+bool    Enemy::isFarAttack()
+{
+    return m_status & e_farattack;
+}
+bool    Enemy::isFangyu()
+{
+    return m_status & e_fangyu;
+}
+bool    Enemy::isShanbi()
+{
+    return m_status & e_shanbi;
+}
+void    Enemy::setStateKuangbao()
+{
+    m_status |= e_kuangbao;
+}
+void    Enemy::setStateZhaohuan()
+{
+    m_status |= e_zhaohuan;
+}
+void    Enemy::setStateFenlie()
+{
+    m_status |= e_fenlie;
+}
+void    Enemy::setStateFarattack()
+{
+    m_status |= e_farattack;
+}
+void    Enemy::setStateFangyu()
+{
+    m_status |= e_fangyu;
+}
+void    Enemy::setStateShanbi()
+{
+    m_status |= e_shanbi;
+}
 bool Enemy::isTanfei()
 {
     return m_status & e_tanfei;

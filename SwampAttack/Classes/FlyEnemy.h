@@ -13,10 +13,10 @@
 
 enum PointState
 {
-    p_back      = 0b00000001,
-    p_front     = 0b00000010,
-    p_bottom    = 0b00000100,
-    p_up        = 0b00001000,
+    p_back      = 1 << 0,
+    p_front     = 1 << 1,
+    p_bottom    = 1 << 2,
+    p_up        = 1 << 3,
 };
 
 class FlyEnemy : public Enemy {

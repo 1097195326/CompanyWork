@@ -70,6 +70,7 @@
 		8D51DC611B3A99630053EA8A /* DropMoneySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC5F1B3A99630053EA8A /* DropMoneySprite.cpp */; };
 		8D5DAFB81BE9F91C003050CA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5DAFB71BE9F91C003050CA /* StoreKit.framework */; };
 		8D5DAFBA1BE9F927003050CA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5DAFB91BE9F927003050CA /* GameKit.framework */; };
+		8D7FD8551C27E9920003E821 /* EnemySkill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D7FD8531C27E9920003E821 /* EnemySkill.cpp */; };
 		8DBB98891ACD520C008C804D /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB987F1ACD520C008C804D /* json_internalarray.inl */; };
 		8DBB988A1ACD520C008C804D /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB98801ACD520C008C804D /* json_internalmap.inl */; };
 		8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB98811ACD520C008C804D /* json_reader.cpp */; };
@@ -304,6 +305,8 @@
 		8D51DC601B3A99630053EA8A /* DropMoneySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropMoneySprite.h; sourceTree = "<group>"; };
 		8D5DAFB71BE9F91C003050CA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8D5DAFB91BE9F927003050CA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		8D7FD8531C27E9920003E821 /* EnemySkill.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill.cpp; sourceTree = "<group>"; };
+		8D7FD8541C27E9920003E821 /* EnemySkill.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill.hpp; sourceTree = "<group>"; };
 		8DBB98781ACD520C008C804D /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		8DBB98791ACD520C008C804D /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		8DBB987A1ACD520C008C804D /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
@@ -987,6 +990,8 @@
 			children = (
 				8DC3E19B1AE89C5C00BE6CA4 /* EnemyInfo.cpp */,
 				8DC3E19C1AE89C5C00BE6CA4 /* EnemyInfo.h */,
+				8D7FD8531C27E9920003E821 /* EnemySkill.cpp */,
+				8D7FD8541C27E9920003E821 /* EnemySkill.hpp */,
 				8DC10AC01AC3D75F004F7DE2 /* Enemy.cpp */,
 				8DC10AC11AC3D75F004F7DE2 /* Enemy.h */,
 				8DC3E19E1AE8C40A00BE6CA4 /* WalkEnemy.cpp */,
@@ -1486,6 +1491,7 @@
 				8DC3E1A61AE8CF7B00BE6CA4 /* FlyEnemySprite.cpp in Sources */,
 				8DC10ABC1AC3D6FD004F7DE2 /* BulletSprite.cpp in Sources */,
 				8DD8C12C1AFCB15F00872AA2 /* GameShopScene.cpp in Sources */,
+				8D7FD8551C27E9920003E821 /* EnemySkill.cpp in Sources */,
 				8D51DC551B3A816F0053EA8A /* DropModel.cpp in Sources */,
 				8DD2F25D1B213D9800A52B33 /* GameHomeScene.cpp in Sources */,
 				8DC10AC21AC3D75F004F7DE2 /* Enemy.cpp in Sources */,
