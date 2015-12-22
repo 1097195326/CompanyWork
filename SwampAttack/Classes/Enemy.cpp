@@ -13,7 +13,7 @@
 #include "BulletManager.h"
 #include "DropManager.h"
 #include "GameDirector.h"
-#include "EnemySkill.hpp"
+//#include "EnemySkill.hpp"
 
 
 Enemy::Enemy(Json::Value data):
@@ -22,8 +22,8 @@ m_isShowHurt(false),
 m_isWeak(false),
 m_isStop(false),
 m_attackWaitTime(0.0f),
-m_dianjiDlay(0.0f),
-m_skill(NULL)
+m_dianjiDlay(0.0f)
+//m_skill(NULL)
 {
     m_actionType = atoi(m_data["ActionType"].asString().c_str());
     
@@ -66,8 +66,8 @@ m_skill(NULL)
     std::string skillID = m_data["SkillID"].asString();
     if (skillID.length() > 0)
     {
-        m_skill = new EnemySkill(skillID);
-        m_skill->setEnemy(this);
+//        m_skill = new EnemySkill(skillID);
+//        m_skill->setEnemy(this);
     }
     
     m_width = EnemyInfo::getInstance()->getInfoByName(m_modelId).width;
@@ -108,10 +108,10 @@ m_skill(NULL)
 Enemy::~Enemy()
 {
 //    log("enemy delete");
-    if (m_skill)
-    {
-        delete m_skill;
-    }
+//    if (m_skill)
+//    {
+//        delete m_skill;
+//    }
 }
 void Enemy::gameLoop(float data){}
 void Enemy::move(){}
@@ -258,6 +258,12 @@ void Enemy::hurtJiansu(float su)
     Vec2 effectSpeedV = m_speedV;
     effectSpeedV.normalize();
     effectSpeedV *= -su;
+    
+    m_effectSpeedV += effectSpeedV;
+}
+void Enemy::effectSpeedByPer(float percent)
+{
+    Vec2 effectSpeedV = m_speedV * percent;
     
     m_effectSpeedV += effectSpeedV;
 }
@@ -571,6 +577,10 @@ float Enemy::getHealthPercent()
         m_health = 0;
     }
     return m_health / m_totalHealth * 100.0f;
+}
+int Enemy::getTotalHealth()
+{
+    return m_totalHealth;
 }
 Vec2 Enemy::getSpeedV()
 {

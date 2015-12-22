@@ -14,7 +14,7 @@
 #include "json/json.h"
 
 #include "GameBuff.h"
-#include "EnemySkill.hpp"
+//#include "EnemySkill.hpp"
 
 
 using namespace std;
@@ -63,7 +63,7 @@ protected:
     
     float   m_attackWaitTime;
     
-    EnemySkill * m_skill;
+//    EnemySkill * m_skill;
     
     std::list<GameBuff *>   m_buffData;
     
@@ -78,6 +78,7 @@ public:
     virtual void    effectAction(Vec2 point);
     void    hurtYun(float dlay);
     void    hurtJiansu(float su);
+    void    effectSpeedByPer(float percent);
     void    hurtTanfei();
     void    addBuff(GameBuff * buff);
     void    moveBuff(GameBuff * buff);
@@ -178,6 +179,7 @@ public:
     int     getLevel();
     int     getHealthValue();
     float   getHealthPercent();
+    int     getTotalHealth();
     Vec2    getSpeedV();
     float   getSpeedF();
     float   getDamage();

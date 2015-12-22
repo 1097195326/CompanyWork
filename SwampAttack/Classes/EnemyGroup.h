@@ -22,6 +22,7 @@ class EnemyGroup : public GameObject {
 private:
     EnemyGroupStatus status;
     std::list<Enemy*> enemyData;
+    std::list<Enemy*> addEnemyData;
     std::list<Enemy*> show_enemyData;
     
     int enemy_index;
@@ -38,6 +39,7 @@ public:
     std::list<Enemy*> getShowEnemyData();
     
     void    clearData();
+    void    pushEnemy(Enemy * enemy);
     void    gameLoop(float data);
     void    stopGame();
     void    continueGame();

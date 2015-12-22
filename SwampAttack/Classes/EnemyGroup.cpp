@@ -53,6 +53,7 @@ void EnemyGroup::setData(Json::Value data)
         }
     }
 }
+
 std::list<Enemy*> EnemyGroup::getEnemyData()
 {
     return enemyData;
@@ -60,6 +61,11 @@ std::list<Enemy*> EnemyGroup::getEnemyData()
 std::list<Enemy *> EnemyGroup::getShowEnemyData()
 {
     return show_enemyData;
+}
+void EnemyGroup::pushEnemy(Enemy *enemy)
+{
+    addEnemyData.push_back(enemy);
+    show_enemyData.push_back(enemy);
 }
 void EnemyGroup::clearData()
 {
@@ -71,6 +77,14 @@ void EnemyGroup::clearData()
         enemyData.erase(iter++);
         
     }
+    for (iter = addEnemyData.begin() ; iter != addEnemyData.end();)
+    {
+        Enemy * enemy = *iter;
+        delete enemy;
+        addEnemyData.erase(iter++);
+        
+    }
+    addEnemyData.clear();
     enemyData.clear();
     show_enemyData.clear();
 }

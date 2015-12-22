@@ -70,6 +70,12 @@
 		8D51DC611B3A99630053EA8A /* DropMoneySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC5F1B3A99630053EA8A /* DropMoneySprite.cpp */; };
 		8D5DAFB81BE9F91C003050CA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5DAFB71BE9F91C003050CA /* StoreKit.framework */; };
 		8D5DAFBA1BE9F927003050CA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5DAFB91BE9F927003050CA /* GameKit.framework */; };
+		8D6D883E1C292C59009A2D26 /* EnemySkill_kuangbao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D883C1C292C59009A2D26 /* EnemySkill_kuangbao.cpp */; };
+		8D6D88411C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D883F1C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp */; };
+		8D6D88441C292C7F009A2D26 /* EnemySkill_fenlie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D88421C292C7F009A2D26 /* EnemySkill_fenlie.cpp */; };
+		8D6D884D1C292CC6009A2D26 /* EnemySkill_shanbi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D884B1C292CC6009A2D26 /* EnemySkill_shanbi.cpp */; };
+		8D6D88501C292CD4009A2D26 /* EnemySkill_yuancheng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D884E1C292CD4009A2D26 /* EnemySkill_yuancheng.cpp */; };
+		8D6D88531C292EC0009A2D26 /* EnemySkill_fangyu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D88511C292EC0009A2D26 /* EnemySkill_fangyu.cpp */; };
 		8D7FD8551C27E9920003E821 /* EnemySkill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D7FD8531C27E9920003E821 /* EnemySkill.cpp */; };
 		8DBB98891ACD520C008C804D /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB987F1ACD520C008C804D /* json_internalarray.inl */; };
 		8DBB988A1ACD520C008C804D /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB98801ACD520C008C804D /* json_internalmap.inl */; };
@@ -305,6 +311,18 @@
 		8D51DC601B3A99630053EA8A /* DropMoneySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropMoneySprite.h; sourceTree = "<group>"; };
 		8D5DAFB71BE9F91C003050CA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8D5DAFB91BE9F927003050CA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		8D6D883C1C292C59009A2D26 /* EnemySkill_kuangbao.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_kuangbao.cpp; sourceTree = "<group>"; };
+		8D6D883D1C292C59009A2D26 /* EnemySkill_kuangbao.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_kuangbao.hpp; sourceTree = "<group>"; };
+		8D6D883F1C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_zhaohuan.cpp; sourceTree = "<group>"; };
+		8D6D88401C292C6B009A2D26 /* EnemySkill_zhaohuan.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_zhaohuan.hpp; sourceTree = "<group>"; };
+		8D6D88421C292C7F009A2D26 /* EnemySkill_fenlie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_fenlie.cpp; sourceTree = "<group>"; };
+		8D6D88431C292C7F009A2D26 /* EnemySkill_fenlie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_fenlie.hpp; sourceTree = "<group>"; };
+		8D6D884B1C292CC6009A2D26 /* EnemySkill_shanbi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_shanbi.cpp; sourceTree = "<group>"; };
+		8D6D884C1C292CC6009A2D26 /* EnemySkill_shanbi.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_shanbi.hpp; sourceTree = "<group>"; };
+		8D6D884E1C292CD4009A2D26 /* EnemySkill_yuancheng.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_yuancheng.cpp; sourceTree = "<group>"; };
+		8D6D884F1C292CD4009A2D26 /* EnemySkill_yuancheng.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_yuancheng.hpp; sourceTree = "<group>"; };
+		8D6D88511C292EC0009A2D26 /* EnemySkill_fangyu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_fangyu.cpp; sourceTree = "<group>"; };
+		8D6D88521C292EC0009A2D26 /* EnemySkill_fangyu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_fangyu.hpp; sourceTree = "<group>"; };
 		8D7FD8531C27E9920003E821 /* EnemySkill.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill.cpp; sourceTree = "<group>"; };
 		8D7FD8541C27E9920003E821 /* EnemySkill.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill.hpp; sourceTree = "<group>"; };
 		8DBB98781ACD520C008C804D /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
@@ -785,6 +803,27 @@
 			name = DropModels;
 			sourceTree = "<group>";
 		};
+		8D6D883B1C292C24009A2D26 /* EnemySkill */ = {
+			isa = PBXGroup;
+			children = (
+				8D7FD8531C27E9920003E821 /* EnemySkill.cpp */,
+				8D7FD8541C27E9920003E821 /* EnemySkill.hpp */,
+				8D6D883C1C292C59009A2D26 /* EnemySkill_kuangbao.cpp */,
+				8D6D883D1C292C59009A2D26 /* EnemySkill_kuangbao.hpp */,
+				8D6D883F1C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp */,
+				8D6D88401C292C6B009A2D26 /* EnemySkill_zhaohuan.hpp */,
+				8D6D88421C292C7F009A2D26 /* EnemySkill_fenlie.cpp */,
+				8D6D88431C292C7F009A2D26 /* EnemySkill_fenlie.hpp */,
+				8D6D884E1C292CD4009A2D26 /* EnemySkill_yuancheng.cpp */,
+				8D6D884F1C292CD4009A2D26 /* EnemySkill_yuancheng.hpp */,
+				8D6D88511C292EC0009A2D26 /* EnemySkill_fangyu.cpp */,
+				8D6D88521C292EC0009A2D26 /* EnemySkill_fangyu.hpp */,
+				8D6D884B1C292CC6009A2D26 /* EnemySkill_shanbi.cpp */,
+				8D6D884C1C292CC6009A2D26 /* EnemySkill_shanbi.hpp */,
+			);
+			name = EnemySkill;
+			sourceTree = "<group>";
+		};
 		8DBB98771ACD520C008C804D /* json */ = {
 			isa = PBXGroup;
 			children = (
@@ -867,6 +906,7 @@
 				8DD7F1F91AD3769500D86BC5 /* GunModels */,
 				8DDCC66E1B32AF7900F01D46 /* SpecialModels */,
 				8DD7F1FC1AD376C600D86BC5 /* BulletModels */,
+				8D6D883B1C292C24009A2D26 /* EnemySkill */,
 				8DD7F1F81AD3768000D86BC5 /* EnemyModels */,
 				8D51DC521B3A813A0053EA8A /* DropModels */,
 			);
@@ -990,8 +1030,6 @@
 			children = (
 				8DC3E19B1AE89C5C00BE6CA4 /* EnemyInfo.cpp */,
 				8DC3E19C1AE89C5C00BE6CA4 /* EnemyInfo.h */,
-				8D7FD8531C27E9920003E821 /* EnemySkill.cpp */,
-				8D7FD8541C27E9920003E821 /* EnemySkill.hpp */,
 				8DC10AC01AC3D75F004F7DE2 /* Enemy.cpp */,
 				8DC10AC11AC3D75F004F7DE2 /* Enemy.h */,
 				8DC3E19E1AE8C40A00BE6CA4 /* WalkEnemy.cpp */,
@@ -1414,7 +1452,9 @@
 				8DD5D0B71B144A1E00AA2A07 /* CrumpEnemySprite.cpp in Sources */,
 				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
 				8DDC27C81B1EEE4500A4FD8D /* PropSprite_daoju3.cpp in Sources */,
+				8D6D88411C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp in Sources */,
 				8DE20A8E1B74852F00B3E59F /* DefenseBuilding4.cpp in Sources */,
+				8D6D88531C292EC0009A2D26 /* EnemySkill_fangyu.cpp in Sources */,
 				8DD87E6A1B15A28000FC073A /* ShopPropItemScrollHeadler.cpp in Sources */,
 				8DDACED21B5F86F1003E83C8 /* CurveBullet.cpp in Sources */,
 				8DDCC6741B32AFFB00F01D46 /* MoneyObject.cpp in Sources */,
@@ -1426,6 +1466,7 @@
 				8DD215681B16BA720090EEEB /* ShopPropIcon.cpp in Sources */,
 				8DE207341B39128E0052E738 /* ShopGoldShowLayer.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				8D6D88441C292C7F009A2D26 /* EnemySkill_fenlie.cpp in Sources */,
 				8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */,
 				8DD5F2F51B27DE4800DC5DB9 /* GameShowDiscLayer.cpp in Sources */,
 				8DE3C3941AFB15A800C61D89 /* GameVerticalScrollHeadlerView.cpp in Sources */,
@@ -1451,6 +1492,7 @@
 				8DC430A31AC8FF2A00AB1665 /* GameMap.cpp in Sources */,
 				8DD5F2FB1B283FE500DC5DB9 /* GameSprite.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				8D6D884D1C292CC6009A2D26 /* EnemySkill_shanbi.cpp in Sources */,
 				8DC10AB61AC3D6C7004F7DE2 /* Human.cpp in Sources */,
 				D8D673AF1B1C098D004C463F /* GameOverScene.cpp in Sources */,
 				8DD9C18B1B6A04C5005FD4E0 /* LiquidBullet.cpp in Sources */,
@@ -1494,6 +1536,7 @@
 				8D7FD8551C27E9920003E821 /* EnemySkill.cpp in Sources */,
 				8D51DC551B3A816F0053EA8A /* DropModel.cpp in Sources */,
 				8DD2F25D1B213D9800A52B33 /* GameHomeScene.cpp in Sources */,
+				8D6D883E1C292C59009A2D26 /* EnemySkill_kuangbao.cpp in Sources */,
 				8DC10AC21AC3D75F004F7DE2 /* Enemy.cpp in Sources */,
 				8DBB988E1ACD520C008C804D /* json_writer.cpp in Sources */,
 				8DF2EA0D1BA0359700315F14 /* AlertTextTool.cpp in Sources */,
@@ -1503,6 +1546,7 @@
 				8DC10AC81AC3D7B1004F7DE2 /* EnemySprite.cpp in Sources */,
 				8DD3FA561B2036A40028DB92 /* PropSpriteView.cpp in Sources */,
 				8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */,
+				8D6D88501C292CD4009A2D26 /* EnemySkill_yuancheng.cpp in Sources */,
 				8DD499761B04500B0037CBAA /* GameBuffManager.cpp in Sources */,
 				8DD08C921B2FC8E800BECE66 /* GameLoadingScene.cpp in Sources */,
 				8DC3E1A91AE8D08B00BE6CA4 /* FlyEnemy.cpp in Sources */,

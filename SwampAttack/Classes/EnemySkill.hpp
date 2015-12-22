@@ -9,17 +9,15 @@
 #ifndef EnemySkill_hpp
 #define EnemySkill_hpp
 
-//#include "Enemy.h"
 #include "ConfigManager.h"
+#include "Enemy.h"
 
 using std::string;
 
-class Enemy;
-
 
 class EnemySkill {
-private:
-    Enemy * m_enmey;
+protected:
+    Enemy * m_enemy;
     
     string  m_id;
     string  m_idName;           //
