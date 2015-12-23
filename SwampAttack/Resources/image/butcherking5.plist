@@ -7,143 +7,117 @@
             <key>butcherking_hurt_light0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{346,252}}</string>
+                <string>{{2,2},{342,274}}</string>
                 <key>offset</key>
-                <string>{-27,-30}</string>
+                <string>{-15,-40}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{75,129},{346,252}}</string>
+                <string>{{89,128},{342,274}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
             <key>butcherking_hurt_light0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{350,2},{342,252}}</string>
+                <string>{{2,546},{338,274}}</string>
                 <key>offset</key>
-                <string>{-15,-30}</string>
+                <string>{-3,-40}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{89,129},{342,252}}</string>
+                <string>{{103,128},{338,274}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
             <key>butcherking_hurt_light0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{318,256},{338,252}}</string>
+                <string>{{686,274},{320,270}}</string>
                 <key>offset</key>
-                <string>{-3,-30}</string>
+                <string>{5,-42}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{103,129},{338,252}}</string>
+                <string>{{120,132},{320,270}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
             <key>butcherking_hurt_light0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{694,254},{320,250}}</string>
+                <string>{{306,530},{298,270}}</string>
                 <key>offset</key>
-                <string>{5,-31}</string>
+                <string>{14,-42}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{120,131},{320,250}}</string>
+                <string>{{140,132},{298,270}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
             <key>butcherking_hurt_light0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{544,744},{298,250}}</string>
+                <string>{{686,2},{326,270}}</string>
                 <key>offset</key>
-                <string>{15,-31}</string>
+                <string>{-8,-42}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{141,131},{298,250}}</string>
-                <key>sourceSize</key>
-                <string>{550,450}</string>
-            </dict>
-            <key>butcherking_hurt_light0006.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{694,2},{326,250}}</string>
-                <key>offset</key>
-                <string>{-8,-31}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{104,131},{326,250}}</string>
+                <string>{{104,132},{326,270}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
             <key>butcherking_hurt_on0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,506},{338,252}}</string>
+                <string>{{346,2},{338,274}}</string>
                 <key>offset</key>
-                <string>{-3,-30}</string>
+                <string>{-3,-40}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{103,129},{338,252}}</string>
+                <string>{{103,128},{338,274}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
             <key>butcherking_hurt_on0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{256,744},{286,252}}</string>
+                <string>{{606,546},{286,272}}</string>
                 <key>offset</key>
-                <string>{12,-30}</string>
+                <string>{12,-41}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{144,129},{286,252}}</string>
+                <string>{{144,130},{286,272}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
             <key>butcherking_hurt_on0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{256,510},{292,230}}</string>
+                <string>{{306,278},{300,250}}</string>
                 <key>offset</key>
-                <string>{-45,-41}</string>
+                <string>{-42,-52}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{84,151},{292,230}}</string>
+                <string>{{83,152},{300,250}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
             <key>butcherking_hurt_on0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{658,506},{302,236}}</string>
+                <string>{{2,278},{302,256}}</string>
                 <key>offset</key>
-                <string>{-37,-38}</string>
+                <string>{-37,-49}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{87,145},{302,236}}</string>
-                <key>sourceSize</key>
-                <string>{550,450}</string>
-            </dict>
-            <key>butcherking_hurt_on0005.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,256},{314,242}}</string>
-                <key>offset</key>
-                <string>{-26,-35}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{92,139},{314,242}}</string>
+                <string>{{87,146},{302,256}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
@@ -157,7 +131,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:9ab019d1017db3ef09e6c183ed0dcb22:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:bc60f688fbfa82a25d503f4d4f5dc4bd:1/1$</string>
             <key>textureFileName</key>
             <string>butcherking5.png</string>
         </dict>

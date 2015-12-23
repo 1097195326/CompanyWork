@@ -7,154 +7,154 @@
             <key>skullking2_attack0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{296,810},{204,246}}</string>
+                <string>{{746,696},{254,272}}</string>
                 <key>offset</key>
-                <string>{-24,-9}</string>
+                <string>{-18,-24}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{64,61},{204,246}}</string>
+                <string>{{45,78},{254,272}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_attack0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{688,240},{220,246}}</string>
+                <string>{{2,642},{174,318}}</string>
                 <key>offset</key>
-                <string>{-35,-9}</string>
+                <string>{22,-1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{45,61},{220,246}}</string>
+                <string>{{125,32},{174,318}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_attack0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,852},{146,292}}</string>
+                <string>{{708,470},{224,276}}</string>
                 <key>offset</key>
-                <string>{19,14}</string>
+                <string>{48,-22}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{136,15},{146,292}}</string>
+                <string>{{126,74},{224,276}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_attack0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{216,558},{214,250}}</string>
+                <string>{{2,322},{216,318}}</string>
                 <key>offset</key>
-                <string>{53,-7}</string>
+                <string>{44,-1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{136,57},{214,250}}</string>
+                <string>{{126,32},{216,318}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_attack0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,558},{212,292}}</string>
+                <string>{{2,2},{264,318}}</string>
                 <key>offset</key>
-                <string>{46,15}</string>
+                <string>{-23,-1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{130,14},{212,292}}</string>
+                <string>{{35,32},{264,318}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_attack0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,266},{236,290}}</string>
+                <string>{{178,642},{298,290}}</string>
                 <key>offset</key>
-                <string>{-36,15}</string>
+                <string>{-40,-15}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{36,15},{236,290}}</string>
+                <string>{{1,60},{298,290}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_attack0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{268,262}}</string>
+                <string>{{220,322},{298,244}}</string>
                 <key>offset</key>
-                <string>{-55,1}</string>
+                <string>{-40,-42}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{1,43},{268,262}}</string>
+                <string>{{1,110},{298,244}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_attack0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{272,2},{272,244}}</string>
+                <string>{{268,2},{294,242}}</string>
                 <key>offset</key>
-                <string>{-52,-39}</string>
+                <string>{-38,-39}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,92},{272,244}}</string>
+                <string>{{5,108},{294,242}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_attack0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{546,2},{266,236}}</string>
+                <string>{{512,2},{286,240}}</string>
                 <key>offset</key>
-                <string>{-52,-34}</string>
+                <string>{-34,-40}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{5,91},{266,236}}</string>
+                <string>{{13,110},{286,240}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_attack0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{240,266},{256,226}}</string>
+                <string>{{466,298},{288,240}}</string>
                 <key>offset</key>
-                <string>{-50,-30}</string>
+                <string>{-35,-40}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{12,92},{256,226}}</string>
+                <string>{{11,110},{288,240}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_attack0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{468,248},{254,218}}</string>
+                <string>{{754,2},{264,256}}</string>
                 <key>offset</key>
-                <string>{-52,-25}</string>
+                <string>{-23,-32}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{11,91},{254,218}}</string>
+                <string>{{35,94},{264,256}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_attack0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{746,738},{226,230}}</string>
+                <string>{{470,588},{226,230}}</string>
                 <key>offset</key>
                 <string>{-42,-16}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{35,76},{226,230}}</string>
                 <key>sourceSize</key>
@@ -163,67 +163,28 @@
             <key>skullking2_hurt_on0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{814,2},{206,236}}</string>
+                <string>{{754,260},{208,262}}</string>
                 <key>offset</key>
-                <string>{4,-12}</string>
+                <string>{5,-29}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{91,69},{206,236}}</string>
+                <string>{{91,88},{208,262}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
             <key>skullking2_hurt_on0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{432,524},{174,244}}</string>
+                <string>{{470,816},{190,274}}</string>
                 <key>offset</key>
-                <string>{5,-5}</string>
+                <string>{14,-23}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{108,58},{174,244}}</string>
+                <string>{{109,76},{190,274}}</string>
                 <key>sourceSize</key>
-                <string>{380,350}</string>
-            </dict>
-            <key>skullking2_hurt_on0003.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{828,488},{172,230}}</string>
-                <key>offset</key>
-                <string>{-17,-14}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{87,74},{172,230}}</string>
-                <key>sourceSize</key>
-                <string>{380,350}</string>
-            </dict>
-            <key>skullking2_hurt_on0004.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{608,504},{218,232}}</string>
-                <key>offset</key>
-                <string>{-29,-14}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{52,73},{218,232}}</string>
-                <key>sourceSize</key>
-                <string>{380,350}</string>
-            </dict>
-            <key>skullking2_hurt_on0005.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{544,770},{200,232}}</string>
-                <key>offset</key>
-                <string>{-20,-14}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{70,73},{200,232}}</string>
-                <key>sourceSize</key>
-                <string>{380,350}</string>
+                <string>{380,380}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -235,7 +196,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:9069e4b43e60b4aa351c1690bac4091f:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:03f163053619177247784784d324f057:1/1$</string>
             <key>textureFileName</key>
             <string>skullking2_1.png</string>
         </dict>
