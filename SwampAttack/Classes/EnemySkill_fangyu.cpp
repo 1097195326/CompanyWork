@@ -7,6 +7,7 @@
 //
 
 #include "EnemySkill_fangyu.hpp"
+#include "Enemy.h"
 
 EnemySkill_fangyu::EnemySkill_fangyu(string id):
 EnemySkill(id)

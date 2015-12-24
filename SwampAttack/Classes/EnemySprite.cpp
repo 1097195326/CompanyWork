@@ -89,6 +89,10 @@ void EnemySprite::hurt()
 {}
 void EnemySprite::dianji()
 {}
+void EnemySprite::zhaohuan()
+{}
+void EnemySprite::fenlie()
+{}
 void EnemySprite::texiaoCall()
 {
     texiaoSprite->setVisible(false);
@@ -113,4 +117,14 @@ void EnemySprite::dianjiCall()
 {
     actionStatus = normal;
     m_model->dianjiCall();
+}
+void EnemySprite::zhaohuanCall()
+{
+    actionStatus = normal;
+    m_model->zhaohuanCall();
+}
+void EnemySprite::fenlieCall()
+{
+    actionStatus = normal;
+    m_model->fenlieCall();
 }

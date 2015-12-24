@@ -1,5 +1,5 @@
 技能编号,技能名称编号,技能名称,触发类型,血量,间隔时间,概率,加速设置,防御,远程,闪避,分裂,召唤,
-ID[string],IDName[string],,Type[string],Hp[string],Time[string],Probability[string],Accelerate[string],Defense[string],Long[string],Dodge[string],Splitting[vector;monsterid[string],Call[vector;monsterid[string],
+ID[string],IDName[string],,Type[string],Hp[string],Time[string],Probability[string],Accelerate[string],Defense[string],Long[string],Dodge[string],Splitting[vector;monsterid[string];number[int]],Call[vector;monsterid[string];number[int]],
 100001,tid#Skill1,技能狂暴,1,0.5,,,1.5,,,,,,
 100002,tid#Skill2,技能召唤稻草人,2,,5,,,,,,,100008:6,
 100003,tid#Skill3,技能召唤吸血鬼,2,,5,,,,,,,100006:6,

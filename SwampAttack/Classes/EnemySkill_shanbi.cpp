@@ -7,6 +7,7 @@
 //
 
 #include "EnemySkill_shanbi.hpp"
+#include "Enemy.h"
 
 EnemySkill_shanbi::EnemySkill_shanbi(string id):
 EnemySkill(id)

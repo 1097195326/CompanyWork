@@ -10,7 +10,9 @@
 #define EnemySkill_hpp
 
 #include "ConfigManager.h"
-#include "Enemy.h"
+//#include "Enemy.h"
+
+class Enemy;
 
 using std::string;
 

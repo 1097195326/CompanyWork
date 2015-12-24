@@ -39,7 +39,7 @@ public:
     std::list<Enemy*> getShowEnemyData();
     
     void    clearData();
-    void    pushEnemy(Enemy * enemy);
+    void    pushEnemy(Json::Value data,Vec2 position);
     void    gameLoop(float data);
     void    stopGame();
     void    continueGame();

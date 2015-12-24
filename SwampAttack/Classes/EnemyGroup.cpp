@@ -62,10 +62,37 @@ std::list<Enemy *> EnemyGroup::getShowEnemyData()
 {
     return show_enemyData;
 }
-void EnemyGroup::pushEnemy(Enemy *enemy)
+void EnemyGroup::pushEnemy(Json::Value data,Vec2 position)
 {
-    addEnemyData.push_back(enemy);
-    show_enemyData.push_back(enemy);
+    log("push enemy :%s",data.toStyledString().c_str());
+    
+    for (int i = 0; i < data.size(); ++i) {
+        Json::Value d = data[i];
+        string monsterid = d["monsterid"].asString();
+        int     number = atoi(d["number"].asString().c_str());
+        
+        for (int j = 0; j < number; ++j) {
+            Json::Value enemyConfig = ConfigManager::getInstance()->getDataByTag("guaiwu",monsterid);
+            int actionType = atoi(enemyConfig["ActionType"].asString().c_str());
+            Enemy * enemy = NULL; //new Enemy(enemyConfig);
+            switch (actionType) {
+                case 1:
+                    enemy = new WalkEnemy(enemyConfig);
+                    break;
+                case 2:
+                    enemy = new FlyEnemy(enemyConfig);
+                    break;
+                default:
+                    enemy = new WalkEnemy(enemyConfig);
+                    break;
+            }
+            enemy->setPosition(position + Vec2(random(-30,30), random(-30, 30)));
+            enemy->setView();
+            addEnemyData.push_back(enemy);
+            show_enemyData.push_back(enemy);
+        }
+    }
+    
 }
 void EnemyGroup::clearData()
 {

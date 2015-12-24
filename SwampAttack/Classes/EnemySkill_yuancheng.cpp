@@ -7,6 +7,7 @@
 //
 
 #include "EnemySkill_yuancheng.hpp"
+#include "Enemy.h"
 
 EnemySkill_yuancheng::EnemySkill_yuancheng(string id):
 EnemySkill(id)

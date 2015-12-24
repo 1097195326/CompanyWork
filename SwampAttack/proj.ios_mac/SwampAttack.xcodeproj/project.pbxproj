@@ -1305,7 +1305,7 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = ZAG6XVYQV4;
+						DevelopmentTeam = G2JVT8RTND;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 1;
@@ -1595,8 +1595,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = GameCC.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hongxing zhang (237VJJ4EJS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hongxing zhang (237VJJ4EJS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1618,6 +1618,7 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sihai.emolieren;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1631,8 +1632,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = GameCC.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hongxing zhang (ZAG6XVYQV4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hongxing zhang (ZAG6XVYQV4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1652,7 +1653,8 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
-				PROVISIONING_PROFILE = "ba2ec79b-3702-437d-859f-eea02f63bd61";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sihai.emolieren;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";

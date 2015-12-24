@@ -15,7 +15,7 @@ Id[string],MonsterName[string],,ModelId[string],CapId[string],SkillID[string],Ac
 100013,tid#MonsterName13,南瓜头,Pumpkin,,,1,2,216,0.96,30,0.5,650,100002,500,22,100010,tid#MonsterDescription13,陆地远程兵种
 100014,tid#MonsterName14,带帽子的南瓜头,Pumpkin,Pumpkin_armor,,1,2,324,0.96,30,0.5,650,100002,500,32,100010,tid#MonsterDescription14,南瓜头升级版
 100015,tid#MonsterName15,稻草人,scarecrow,,,1,1,270,0.72,70,1,30,,,27,100010,tid#MonsterDescription15,行动缓慢，血量较厚，高额伤害
-100016,tid#MonsterName16,带帽子的稻草人,scarecrow,scarecrow_armor,100002,1,1,540,0.72,70,1,30,,,54,100010,tid#MonsterDescription16,稻草人升级版
+100016,tid#MonsterName16,带帽子的稻草人,scarecrow,scarecrow_armor,,1,1,540,0.72,70,1,30,,,54,100010,tid#MonsterDescription16,稻草人升级版
 100017,tid#MonsterName17,小恶魔,demon,,,2,4,168,1.44,25,1,500,100003,400,17,100010,tid#MonsterDescription17,飞行兵种，近战攻击
 100018,tid#MonsterName18,恶魔,demon,demon_armor,,2,4,252,1.44,25,1,500,100003,400,25,100010,tid#MonsterDescription18,小恶魔升级版
 100019,tid#MonsterName19,狼人,wolf,,,1,1,607,0.84,200,1,30,,,61,100010,tid#MonsterDescription19,移动非常慢，血非常厚
@@ -23,7 +23,7 @@ Id[string],MonsterName[string],,ModelId[string],CapId[string],SkillID[string],Ac
 200001,tid#MonsterName21,骷髅王,skullking,,100004,1,1,2100,0.6,200,0.8,100,,,210,100011,tid#MonsterDescription21,BOOS
 200002,tid#MonsterName22,僵尸王,zombieking,,,1,1,3780,0.6,200,0.8,100,,,378,100011,tid#MonsterDescription22,BOOS
 200003,tid#MonsterName23,狼王,wolfking,,,1,1,7560,0.6,200,0.8,100,,,756,100011,tid#MonsterDescription23,BOOS
-200004,tid#MonsterName24,稻草王,scareking,,100002,1,1,8190,0.6,200,0.8,100,,,819,100011,tid#MonsterDescription24,BOOS
+200004,tid#MonsterName24,稻草王,scareking,,,1,1,8190,0.6,200,0.8,100,,,819,100011,tid#MonsterDescription24,BOOS
 200005,tid#MonsterName25,黄金骷髅王,skullking2,,100004,1,1,9828,0.6,200,0.8,100,,,983,100011,tid#MonsterDescription24,BOOS
 200006,tid#MonsterName26,暴君狼王,wolfking2,,100001,1,1,19656,0.6,200,0.8,100,,,1966,100011,tid#MonsterDescription24,BOOS
 200007,tid#MonsterName27,大恶魔,demonking,,100006,2,4,29484,0.6,25,0.8,500,100003,400,2948,100011,tid#MonsterDescription25,BOOS

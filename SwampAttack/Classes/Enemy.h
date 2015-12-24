@@ -14,8 +14,7 @@
 #include "json/json.h"
 
 #include "GameBuff.h"
-//#include "EnemySkill.hpp"
-
+#include "EnemySkill.hpp"
 
 using namespace std;
 
@@ -63,7 +62,7 @@ protected:
     
     float   m_attackWaitTime;
     
-//    EnemySkill * m_skill;
+    EnemySkill * m_skill;
     
     std::list<GameBuff *>   m_buffData;
     
@@ -86,6 +85,8 @@ public:
     std::list<GameBuff *>  getBuffData();
     void    removeAllBuffS();
     float   getAttackWaitTime();
+    
+    void    setPosition(Vec2 point);
 protected:
     virtual void    move();
     virtual bool    computeIfWander();
@@ -127,8 +128,11 @@ public:
     // -- skill
     bool    isKuangbao();
     bool    isZhaohuan();
+    void    zhaohuanCall();
     bool    isFenlie();
+    void    fenlieCall();
     bool    isFarAttack();
+    void    farAttackCall();
     bool    isFangyu();
     bool    isShanbi();
     void    setStateKuangbao();

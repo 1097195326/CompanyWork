@@ -13,7 +13,13 @@
 #include "BulletManager.h"
 #include "DropManager.h"
 #include "GameDirector.h"
-//#include "EnemySkill.hpp"
+#include "EnemySkill.hpp"
+#include "EnemySkill_kuangbao.hpp"
+#include "EnemySkill_zhaohuan.hpp"
+#include "EnemySkill_fenlie.hpp"
+#include "EnemySkill_yuancheng.hpp"
+#include "EnemySkill_fangyu.hpp"
+#include "EnemySkill_shanbi.hpp"
 
 
 Enemy::Enemy(Json::Value data):
@@ -22,8 +28,8 @@ m_isShowHurt(false),
 m_isWeak(false),
 m_isStop(false),
 m_attackWaitTime(0.0f),
-m_dianjiDlay(0.0f)
-//m_skill(NULL)
+m_dianjiDlay(0.0f),
+m_skill(NULL)
 {
     m_actionType = atoi(m_data["ActionType"].asString().c_str());
     
@@ -66,8 +72,36 @@ m_dianjiDlay(0.0f)
     std::string skillID = m_data["SkillID"].asString();
     if (skillID.length() > 0)
     {
-//        m_skill = new EnemySkill(skillID);
-//        m_skill->setEnemy(this);
+        GCCsvHelper * propHelper = _C_M->getCsvHelperByName("enemySkill");
+        Json::Value enemySkillData = propHelper->getJsonData();
+        Json::Value data = enemySkillData[skillID];
+        
+        log("have skill");
+        int type = atoi(data["Type"].asString().c_str());
+        switch (type) {
+            case 1:
+                m_skill = new EnemySkill_kuangbao(skillID);
+                break;
+            case 2:
+                m_skill = new EnemySkill_zhaohuan(skillID);
+                break;
+            case 3:
+                m_skill = new EnemySkill_fenlie(skillID);
+                break;
+            case 4:
+                m_skill = new EnemySkill_yuancheng(skillID);
+                break;
+            case 5:
+                m_skill = new EnemySkill_fangyu(skillID);
+                break;
+            case 6:
+                m_skill = new EnemySkill_shanbi(skillID);
+                break;
+            default:
+                break;
+        }
+        
+        m_skill->setEnemy(this);
     }
     
     m_width = EnemyInfo::getInstance()->getInfoByName(m_modelId).width;
@@ -108,10 +142,10 @@ m_dianjiDlay(0.0f)
 Enemy::~Enemy()
 {
 //    log("enemy delete");
-//    if (m_skill)
-//    {
-//        delete m_skill;
-//    }
+    if (m_skill)
+    {
+        delete m_skill;
+    }
 }
 void Enemy::gameLoop(float data){}
 void Enemy::move(){}
@@ -161,6 +195,33 @@ void Enemy::removeAllBuffS()
 float Enemy::getAttackWaitTime()
 {
     return m_attackWaitTime;
+}
+void Enemy::setPosition(cocos2d::Vec2 point)
+{
+    if (m_actionType == 1) {
+        GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
+        
+        m_point = point;
+        if (m_point.y > gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upline)
+        {
+            m_targetPoint.y = gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upline;
+        }else if (m_point.y < gameMap->enemy_target_buttomPoint.y)
+        {
+            m_targetPoint.y = gameMap->enemy_target_buttomPoint.y;
+        }else
+        {
+            m_targetPoint.y = m_point.y;
+        }
+        m_targetPoint.x = gameMap->enemy_target_buttomPoint.x;
+        
+        m_speedV = m_targetPoint - m_point;
+        m_speedV.normalize();
+        m_speedV = m_speedV * m_speedF;
+        
+    }else if (m_actionType == 2)
+    {
+        m_point = point;
+    }
 }
 bool Enemy::isContainsPoint(cocos2d::Rect rect)
 {
@@ -277,52 +338,73 @@ void Enemy::setStateClear()
 {
     m_status &= e_clear;
 }
-bool    Enemy::isKuangbao()
+bool Enemy::isKuangbao()
 {
     return m_status & e_kuangbao;
 }
-bool    Enemy::isZhaohuan()
+bool Enemy::isZhaohuan()
 {
     return m_status & e_zhaohuan;
 }
-bool    Enemy::isFenlie()
+void Enemy::zhaohuanCall()
+{
+    m_status &= e_clear;
+    m_status |= e_walk;
+}
+bool Enemy::isFenlie()
 {
     return m_status & e_fenlie;
 }
-bool    Enemy::isFarAttack()
+void Enemy::fenlieCall()
+{
+    m_status &= e_clear;
+    m_status |= e_canDel;
+}
+bool Enemy::isFarAttack()
 {
     return m_status & e_farattack;
 }
-bool    Enemy::isFangyu()
+void Enemy::farAttackCall()
+{
+    m_status &= e_clear;
+    m_status |= e_walk;
+}
+bool Enemy::isFangyu()
 {
     return m_status & e_fangyu;
 }
-bool    Enemy::isShanbi()
+bool Enemy::isShanbi()
 {
     return m_status & e_shanbi;
 }
-void    Enemy::setStateKuangbao()
+void Enemy::setStateKuangbao()
 {
+    setStateClear();
     m_status |= e_kuangbao;
 }
-void    Enemy::setStateZhaohuan()
+void Enemy::setStateZhaohuan()
 {
+    setStateClear();
     m_status |= e_zhaohuan;
 }
-void    Enemy::setStateFenlie()
+void Enemy::setStateFenlie()
 {
+    setStateClear();
     m_status |= e_fenlie;
 }
-void    Enemy::setStateFarattack()
+void Enemy::setStateFarattack()
 {
+    setStateClear();
     m_status |= e_farattack;
 }
-void    Enemy::setStateFangyu()
+void Enemy::setStateFangyu()
 {
+    setStateClear();
     m_status |= e_fangyu;
 }
-void    Enemy::setStateShanbi()
+void Enemy::setStateShanbi()
 {
+    setStateClear();
     m_status |= e_shanbi;
 }
 bool Enemy::isTanfei()

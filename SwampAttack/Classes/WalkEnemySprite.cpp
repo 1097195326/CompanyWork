@@ -154,6 +154,7 @@ void WalkEnemySprite::update(float data)
 void WalkEnemySprite::setArmorView()
 {
     string armorName = m_model->getCapId();
+//    log("armorName:%s",armorName.c_str());
     if ((armorName.size() > 0)) {
         isHaveArmor = true;
         EnemyInfoData info = EnemyInfo::getInstance()->getInfoByName(armorName);

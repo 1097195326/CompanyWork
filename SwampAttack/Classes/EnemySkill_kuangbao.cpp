@@ -7,6 +7,7 @@
 //
 
 #include "EnemySkill_kuangbao.hpp"
+#include "Enemy.h"
 
 EnemySkill_kuangbao::EnemySkill_kuangbao(string id):
 EnemySkill(id)
@@ -15,7 +16,9 @@ EnemySkill(id)
 }
 void EnemySkill_kuangbao::run(float timeStep)
 {
-    if(m_enemy->getHealthPercent() <= m_hp)
+//    log("run---:%f::%f",m_enemy->getHealthPercent(),m_hp);
+    
+    if(m_enemy->getHealthPercent() <= m_hp * 100)
     {
         m_enemy->effectSpeedByPer(m_accelerate);
     }

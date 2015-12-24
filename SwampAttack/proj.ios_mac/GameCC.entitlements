@@ -4,7 +4,7 @@
 <dict>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.game.swampattack</string>
+		<string>$(AppIdentifierPrefix)com.sihai.emolieren</string>
 	</array>
 </dict>
 </plist>
