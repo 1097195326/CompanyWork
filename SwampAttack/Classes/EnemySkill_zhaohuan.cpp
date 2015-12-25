@@ -25,6 +25,6 @@ void EnemySkill_zhaohuan::run(float timeStep)
 //        log("zhao huan");
         m_timeStep = 0.0f;
         m_enemy->setStateZhaohuan();
-//        EnemyManager::getInstance()->getCurrectGroup()->pushEnemy(m_call,m_enemy->getPosition());
+        EnemyManager::getInstance()->getCurrectGroup()->pushEnemy(m_call,m_enemy->getPosition());
     }
 }

@@ -253,6 +253,10 @@ BulletInfoData Bullet::getDandaoInfo()
     {
         data.name = "arrow";
         data.frames = 1;
+    }else if ("BulletModelId10" == modelId)
+    {
+        data.name = "boss_slash";
+        data.frames = 3;
     }else
     {
         data.name = "";

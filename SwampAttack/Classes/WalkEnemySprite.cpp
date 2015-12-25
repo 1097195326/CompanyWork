@@ -68,6 +68,56 @@ WalkEnemySprite::WalkEnemySprite(Enemy * model):EnemySprite(model)
                                              );
     dianjiAction->retain();
     m_map["dianjiAction"] = dianjiAction;
+    log("skill type :%d",m_model->getSkillType());
+    switch (m_model->getSkillType())
+    {
+        case 2:
+        {
+            Action * summonAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_summon", info.zhaohuanFrames),
+                                                  CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::zhaohuanCall, this)),
+                                                  NULL);
+            summonAction->retain();
+            m_map["summonAction"] = summonAction;
+        }
+            break;
+        case 3:
+        {
+            Action * fenlieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_death", info.fenlieFrames),
+                                                  FadeOut::create(0.5),
+                                                  CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::fenlieCall, this)),
+                                                  NULL);
+            fenlieAction->retain();
+            m_map["fenlieAction"] = fenlieAction;
+        }
+            break;
+        case 4:
+        {
+            Action * farAttackAction = Sequence::create(
+                                                     Spawn::create(
+                                                                   Sequence::create(DelayTime::create(attackSpeed * info.attackFrame),
+                                                                                    CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::yuanchengCall, this)), NULL),
+                                                                   BaseUtil::makeAnimateWithNameIndexDelay(name + "_attack", info.attackFrames,attackSpeed),
+                                                                   NULL),
+                                                     NULL );
+            farAttackAction->retain();
+            m_map["farAttackAction"] = farAttackAction;
+        }
+            break;
+        default:
+            break;
+    }
+    log("model id:%s",name.c_str());
+    if (name == "skull" ||
+        name == "snowman" ||
+        name == "demon")
+    {
+        Action * rebirthAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_rebirth", info.rebirthFrmes),
+                                              CallFunc::create(CC_CALLBACK_0(WalkEnemySprite::rebirthCall, this)),
+                                              NULL);
+        rebirthAction->retain();
+        m_map["rebirthAction"] = rebirthAction;
+    }
+    
     
     setArmorView();
     
@@ -82,6 +132,10 @@ void WalkEnemySprite::update(float data)
     if (m_model->isDieing())
     {
         die();
+    }else if (m_model->isShanbi())
+    {
+        shanbi();
+        setPosition(m_model->getPosition());
     }else if (m_model->isWalk())
     {
         setPosition(m_model->getPosition());
@@ -114,7 +168,23 @@ void WalkEnemySprite::update(float data)
     }else if (m_model->isHurt())
     {
         hurt();
+    }else if (m_model->isZhaohuan())
+    {
+        zhaohuan();
+    }else if(m_model->isFenlie())
+    {
+        fenlie();
+    }else if (m_model->isRebirth())
+    {
+        rebirth();
+    }else if (m_model->isFangyu())
+    {
+        fangyu();
+    }else if(m_model->isFarAttack())
+    {
+        yuancheng();
     }
+    //----
     if (m_model->isHaveBuff())
     {
         showBuff();
@@ -261,6 +331,63 @@ void WalkEnemySprite::tanfei()
     runAction(Sequence::create(Spawn::create(a1,a2, NULL),
                                            CallFuncN::create(CC_CALLBACK_0(WalkEnemySprite::dieCall, this)),NULL));
 }
+void WalkEnemySprite::zhaohuan()
+{
+    if (actionStatus == isZhaohuan) {
+        return;
+    }
+    actionStatus = isZhaohuan;
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["summonAction"]);
+//    if (isHaveArmor) {
+//        armorSprite->stopAllActions();
+//        armorSprite->runAction(m_map["armorWalkAction"]);
+//    }
+}
+void WalkEnemySprite::fenlie()
+{
+    if (actionStatus == isfenlie) {
+        return;
+    }
+    log("fen lie action");
+    actionStatus = isfenlie;
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["fenlieAction"]);
+    
+    texiaoSprite->stopAllActions();
+    texiaoSprite->setVisible(true);
+    texiaoSprite->runAction(texiaoAction);
+    
+    if (isHaveArmor && armorSprite) {
+        isHaveArmor = false;
+        armorSprite->stopAllActions();
+        armorSprite->removeFromParentAndCleanup(true);
+    }
+//    fenlieCall();
+    
+//    string name = m_model->getModelId();
+//    string yinxiao = StringUtils::format("%s_die.mp3",name.c_str());
+//    SimpleAudioEngine::getInstance()->playEffect(MusicPath(yinxiao).c_str());
+}
+void WalkEnemySprite::rebirth()
+{
+    if (actionStatus == isRebirth) {
+        return;
+    }
+    actionStatus = isRebirth;
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["rebirthAction"]);
+//    rebirthCall();
+}
+void WalkEnemySprite::yuancheng()
+{
+    if (actionStatus == isYuancheng) {
+        return;
+    }
+    actionStatus = isYuancheng;
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["farAttackAction"]);
+}
 void WalkEnemySprite::hurt()
 {
     if (actionStatus == isHurting) {
@@ -305,12 +432,28 @@ void WalkEnemySprite::move()
         return;
     }
     actionStatus = isMoving;
+    guaiwuSprite->setOpacity(255);
     guaiwuSprite->stopAllActions();
     guaiwuSprite->runAction(m_map["walkAction"]);
     if (isHaveArmor) {
         armorSprite->stopAllActions();
         armorSprite->runAction(m_map["armorWalkAction"]);
     }
+}
+void WalkEnemySprite::shanbi()
+{
+    if (actionStatus == isShanbi) {
+        return;
+    }
+    actionStatus = isShanbi;
+    guaiwuSprite->setOpacity(100);
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["walkAction"]);
+    if (isHaveArmor) {
+        armorSprite->stopAllActions();
+        armorSprite->runAction(m_map["armorWalkAction"]);
+    }
+    
 }
 void WalkEnemySprite::wanderFont()
 {
@@ -362,6 +505,7 @@ void WalkEnemySprite::die()
     if (actionStatus == isDieing) {
         return;
     }
+    log("die action");
     actionStatus = isDieing;
     guaiwuSprite->stopAllActions();
     guaiwuSprite->runAction(m_map["dieAction"]);

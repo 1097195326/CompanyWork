@@ -16,5 +16,12 @@ EnemySkill(id)
 }
 void EnemySkill_fangyu::run(float timeStep)
 {
-    
+    if (m_enemy->isFangyu())
+    {
+        m_step += timeStep;
+        if (m_step >= m_defense) {
+            m_step = 0.0f;
+            m_enemy->setStateWalk();
+        }
+    }
 }

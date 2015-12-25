@@ -8,6 +8,8 @@
 
 #include "EnemySkill.hpp"
 #include "Enemy.h"
+#include "GameLoading.h"
+
 
 EnemySkill::EnemySkill(string id)
 {
@@ -29,12 +31,28 @@ EnemySkill::EnemySkill(string id)
     m_splitting = data["Splitting"];
     m_call = data["Call"];
     
+    GameLoading::loadFramesByData(m_splitting);
+    GameLoading::loadFramesByData(m_call);
 }
 void EnemySkill::setEnemy(Enemy *enemy)
 {
     m_enemy = enemy;
 }
 void EnemySkill::run(float timeStep)
+{
+    
+}
+bool EnemySkill::canActive()
+{
+    if (m_enemy->isAttack() ||
+        m_enemy->isDieing() ||
+        m_enemy->isDied() ||
+        m_enemy->isDianji()) {
+        return false;
+    }
+    return random(1, 100) <= m_probablillity * 100;
+}
+void EnemySkill::doDone()
 {
     
 }

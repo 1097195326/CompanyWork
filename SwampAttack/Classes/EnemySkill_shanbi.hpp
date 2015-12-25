@@ -12,7 +12,8 @@
 #include "EnemySkill.hpp"
 
 class EnemySkill_shanbi : public EnemySkill {
-    
+private:
+    float   m_step;
 public:
     EnemySkill_shanbi(string id);
     void    run(float timeStep);

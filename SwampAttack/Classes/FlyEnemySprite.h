@@ -20,6 +20,8 @@ protected:
     void    die();
     void    dianji();
 //    void    hurt();
+    void    rebirth();
+    void    fenlie();
     void    setArmorView();
 public:
     void        update(float data);

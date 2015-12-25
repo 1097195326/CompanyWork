@@ -88,6 +88,7 @@ void EnemyGroup::pushEnemy(Json::Value data,Vec2 position)
             }
             enemy->setPosition(position + Vec2(random(-30,30), random(-30, 30)));
             enemy->setView();
+//            enemy->setStateRebirth();
             addEnemyData.push_back(enemy);
             show_enemyData.push_back(enemy);
         }

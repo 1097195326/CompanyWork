@@ -93,6 +93,29 @@ void EnemySprite::zhaohuan()
 {}
 void EnemySprite::fenlie()
 {}
+void EnemySprite::rebirth()
+{}
+void EnemySprite::fangyu()
+{
+    if (actionStatus == isFangyu) {
+        return;
+    }
+    actionStatus = isFangyu;
+    guaiwuSprite->stopAllActions();
+    
+    auto spriteFrameCache = SpriteFrameCache::getInstance();
+    
+    string name = m_model->getModelId();
+    SpriteFrame * frame = spriteFrameCache->getSpriteFrameByName(
+                                                                 StringUtils::format("%s_defense.png",name.c_str()));
+    guaiwuSprite->setSpriteFrame(frame);
+}
+void EnemySprite::shanbi()
+{}
+void EnemySprite::yuancheng()
+{
+    
+}
 void EnemySprite::texiaoCall()
 {
     texiaoSprite->setVisible(false);
@@ -127,4 +150,14 @@ void EnemySprite::fenlieCall()
 {
     actionStatus = normal;
     m_model->fenlieCall();
+}
+void EnemySprite::rebirthCall()
+{
+    actionStatus = normal;
+    m_model->rebirthCall();
+}
+void EnemySprite::yuanchengCall()
+{
+    actionStatus = normal;
+    m_model->farAttackCall();
 }

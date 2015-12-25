@@ -12,7 +12,8 @@
 #include "EnemySkill.hpp"
 
 class EnemySkill_fangyu : public EnemySkill {
-    
+private:
+    float   m_step;
 public:
     EnemySkill_fangyu(string id);
     void    run(float timeStep);

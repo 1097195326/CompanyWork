@@ -1,6 +1,6 @@
 关卡编号,关卡名称编号,场景,场景关卡,关卡名称,关卡类型,关卡怪物,金币奖励,战斗场景编号,解锁关卡,掉落,阴影
 MissionId[string],MissionName[string],Scene[string],Checkpoint[string],,MissionType[int],MissionMonster[vector;monsterid[string];number[int]],Gold[int],SceneId[string],UnlockMission[string],Drop[string],shade[string]
-400001_1,tid#MissionName1,1,1,远方而来的朋友,1,200001:1|100001:8,300,300001,400001_2,100010,yy_skull
+400001_1,tid#MissionName1,1,1,远方而来的朋友,1,100001:4|100001:8,300,300001,400001_2,100010,yy_skull
 400001_2,tid#MissionName2,1,2,摇摆的身影,1,100001:6|100001:7;100003:2,315,300001,400001_3,100010,yy_zombie
 400001_3,tid#MissionName3,1,3,一大片尸兄,1,100001:5;100003:5|100001:7;100003:2|100001:8;100003:4,330.75,300001,400001_4,100010,
 400001_4,tid#MissionName4,1,4,没完没了？,1,100001:6;100003:6|100001:5;100003:5|100001:5;100003:4,347.2875,300001,400001_5,100010,

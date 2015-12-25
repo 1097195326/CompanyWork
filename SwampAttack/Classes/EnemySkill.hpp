@@ -39,6 +39,8 @@ public:
     EnemySkill(string id);
     void    setEnemy(Enemy * enemy);
     virtual void run(float timeStep);
+    virtual bool canActive();
+    virtual void doDone();
 };
 
 #endif /* EnemySkill_hpp */

@@ -17,6 +17,8 @@ WalkEnemy::WalkEnemy(Json::Value data):Enemy(data)
 }
 void WalkEnemy::gameLoop(float data)
 {
+    
+    
     if ((m_status & e_dieing || m_status & e_die))
     {
         return;
@@ -24,6 +26,9 @@ void WalkEnemy::gameLoop(float data)
     if (m_skill)
     {
         m_skill->run(data);
+    }
+    if (isFenlie()) {
+        return;
     }
     if (m_status == e_waiting)
     {
@@ -43,6 +48,17 @@ void WalkEnemy::gameLoop(float data)
 //            m_status |= e_walk;
 //            m_dianjiDlay = 0.0f;
 //        }
+    }else if(m_status & e_shanbi)
+    {
+        move();
+        if (m_targetPoint.x + m_range > m_point.x)
+        {
+            if(!computeIfWander())
+            {
+                m_status &= e_clear;
+                m_status |= e_attack;
+            }
+        }
     }else if (m_status & e_walk)
     {
         move();

@@ -59,6 +59,7 @@ EnemyInfo::EnemyInfo()
     snowman.hurtOnFrames = 5;
     snowman.walkFrames = 14;
     snowman.downFrames = 13;
+    snowman.rebirthFrmes = 10;
     snowman.width = 300;
     snowman.height = 250;
     snowman.widthOffSet = 0;
@@ -72,6 +73,7 @@ EnemyInfo::EnemyInfo()
     skull.hurtOnFrames = 5;
     skull.walkFrames = 14;
     skull.downFrames = 13;
+    skull.rebirthFrmes = 10;
     skull.width = 180;
     skull.height = 180;
     skull.widthOffSet = 0;
@@ -241,6 +243,7 @@ EnemyInfo::EnemyInfo()
     demon.attackFrames = 9;
     demon.walkFrames = 7;
     demon.downFrames = 13;
+    demon.rebirthFrmes = 10;
     demon.width = 170;
     demon.height = 170;
     demon.widthOffSet = 0;
@@ -310,6 +313,7 @@ EnemyInfo::EnemyInfo()
     scareking.hurtOnFrames = 5;
     scareking.walkFrames = 14;
     scareking.downFrames = 13;
+    scareking.zhaohuanFrames = 9;
     scareking.width = 420;
     scareking.height = 350;
     scareking.widthOffSet = 0;
@@ -323,6 +327,7 @@ EnemyInfo::EnemyInfo()
     skullking.hurtOnFrames = 5;
     skullking.walkFrames = 14;
     skullking.downFrames = 13;
+    skullking.zhaohuanFrames = 10;
     skullking.width = 380;
     skullking.height = 350;
     skullking.widthOffSet = 0;
@@ -331,11 +336,12 @@ EnemyInfo::EnemyInfo()
     EnemyInfoData skullking2;
     skullking2.attackFrame = 6;
     skullking2.attackFrames = 12;
-    skullking2.hurtHeavyFrames = 10;
+    skullking2.hurtHeavyFrames = 9;
     skullking2.hurtLightFrames = 6;
     skullking2.hurtOnFrames = 5;
     skullking2.walkFrames = 14;
-    skullking2.downFrames = 14;
+    skullking2.downFrames = 13;
+    skullking2.zhaohuanFrames = 10;
     skullking2.width = 380;
     skullking2.height = 350;
     skullking2.widthOffSet = 0;
@@ -370,11 +376,11 @@ EnemyInfo::EnemyInfo()
     EnemyInfoData butcherking;
     butcherking.attackFrame = 6;
     butcherking.attackFrames = 12;
-    butcherking.hurtHeavyFrames = 10;
-    butcherking.hurtLightFrames = 6;
+    butcherking.hurtHeavyFrames = 9;
+    butcherking.hurtLightFrames = 5;
     butcherking.hurtOnFrames = 5;
     butcherking.walkFrames = 14;
-    butcherking.downFrames = 14;
+    butcherking.downFrames = 13;
     butcherking.width = 550;
     butcherking.height = 450;
     butcherking.widthOffSet = 0;
@@ -382,12 +388,13 @@ EnemyInfo::EnemyInfo()
     //snowmanking
     EnemyInfoData snowmanking;
     snowmanking.attackFrame = 6;
-    snowmanking.attackFrames = 12;
-    snowmanking.hurtHeavyFrames = 10;
-    snowmanking.hurtLightFrames = 6;
+    snowmanking.attackFrames = 11;
+    snowmanking.hurtHeavyFrames = 9;
+    snowmanking.hurtLightFrames = 5;
     snowmanking.hurtOnFrames = 5;
     snowmanking.walkFrames = 14;
-    snowmanking.downFrames = 14;
+    snowmanking.downFrames = 13;
+    snowmanking.fenlieFrames = 7;
     snowmanking.width = 500;
     snowmanking.height = 400;
     snowmanking.widthOffSet = 0;
@@ -395,12 +402,13 @@ EnemyInfo::EnemyInfo()
     //vampireking
     EnemyInfoData vampireking;
     vampireking.attackFrame = 6;
-    vampireking.attackFrames = 12;
-    vampireking.hurtHeavyFrames = 10;
-    vampireking.hurtLightFrames = 6;
+    vampireking.attackFrames = 11;
+    vampireking.hurtHeavyFrames = 9;
+    vampireking.hurtLightFrames = 5;
     vampireking.hurtOnFrames = 5;
     vampireking.walkFrames = 14;
-    vampireking.downFrames = 14;
+    vampireking.downFrames = 13;
+    vampireking.zhaohuanFrames = 9;
     vampireking.width = 400;
     vampireking.height = 400;
     vampireking.widthOffSet = 0;
@@ -408,7 +416,7 @@ EnemyInfo::EnemyInfo()
     // demonking
     EnemyInfoData demonking;
     demonking.attackFrame = 6;
-    demonking.attackFrames = 10;
+    demonking.attackFrames = 9;
     demonking.walkFrames = 7;
     demonking.downFrames = 13;
     demonking.width = 450;

@@ -18,10 +18,9 @@ isFenlie(false)
 }
 void EnemySkill_fenlie::run(float timeStep)
 {
-    if(m_enemy->getHealthPercent() <= m_hp && !isFenlie)
+    if(m_enemy->isFenlie() && !isFenlie)
     {
         isFenlie = true;
-        
         EnemyManager::getInstance()->getCurrectGroup()->pushEnemy(m_splitting,m_enemy->getPosition());
     }
 }

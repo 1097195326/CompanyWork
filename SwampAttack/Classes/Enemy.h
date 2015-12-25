@@ -40,6 +40,7 @@ enum EnemyStatus
     e_farattack=1 << 16,
     e_fangyu  = 1 << 17,
     e_shanbi  = 1 << 18,
+    e_rebirth = 1 << 19,
     
 };
 
@@ -115,6 +116,8 @@ protected:
 
     Vec2    m_point;
     Vec2    m_targetPoint;
+    
+    int     m_skillType;
 //    Vec2    m_maxSpeed;
 //    Vec2    m_force;
 //    float   m_mass;
@@ -129,6 +132,8 @@ public:
     bool    isKuangbao();
     bool    isZhaohuan();
     void    zhaohuanCall();
+    bool    isRebirth();
+    void    rebirthCall();
     bool    isFenlie();
     void    fenlieCall();
     bool    isFarAttack();
@@ -141,6 +146,9 @@ public:
     void    setStateFarattack();
     void    setStateFangyu();
     void    setStateShanbi();
+    void    clearStateShanbi();
+    void    setStateRebirth();
+    void    setStateWalk();
     
     void    setStateClear();
     
@@ -190,6 +198,8 @@ public:
     float   getAttackSpeed();
     int     getGoldForDied();
     string  getDrop();
+    
+    int     getSkillType();
     
     Rect    getRect();
 };

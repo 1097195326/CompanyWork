@@ -29,6 +29,10 @@ enum ActionStatus
     isDieing,
     isZhaohuan,
     isfenlie,
+    isRebirth,
+    isShanbi,
+    isFangyu,
+    isYuancheng,
     
 };
 class EnemySprite :public Sprite {
@@ -55,6 +59,11 @@ protected:
     virtual void    dianji();
     virtual void    zhaohuan();
     virtual void    fenlie();
+    virtual void    rebirth();
+    virtual void    fangyu();
+    virtual void    shanbi();
+    virtual void    yuancheng();
+    
     void    attackCall();
     void    dieCall();
     void    hurtCall();
@@ -62,6 +71,8 @@ protected:
     void    dianjiCall();
     void    zhaohuanCall();
     void    fenlieCall();
+    void    rebirthCall();
+    void    yuanchengCall();
 public:
     EnemySprite(Enemy * model);
     virtual     ~EnemySprite();

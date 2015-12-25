@@ -18,12 +18,18 @@ protected:
     void    wanderFont();
     void    wanderBack();
     void    move();
+    void    shanbi();
     void    attack(float data);
     void    die();
     void    hurt();
     void    dianji();
     void    tanfei();
+    void    zhaohuan();
+    void    rebirth();
+    void    fenlie();
+    void    yuancheng();
     void    setArmorView();
+    
 public:
     void        update(float data);
     WalkEnemySprite(Enemy * model);

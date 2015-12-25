@@ -37,6 +37,33 @@ FlyEnemySprite::FlyEnemySprite(Enemy * model):EnemySprite(model)
                                              NULL
                                              );
     dianjiAction->retain();
+    
+    switch (m_model->getSkillType())
+    {
+        case 3:
+        {
+            Action * fenlieAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("flydown", info.downFrames),
+                                                  CallFunc::create(CC_CALLBACK_0(FlyEnemySprite::fenlieCall, this)),
+                                                  NULL);
+            fenlieAction->retain();
+            m_map["fenlieAction"] = fenlieAction;
+        }
+            break;
+        default:
+            break;
+    }
+    
+    if (name == "skull" ||
+        name == "snowman" ||
+        name == "demon")
+    {
+        Action * rebirthAction = Sequence::create(BaseUtil::makeAnimateWithNameAndIndex(name + "_rebirth", info.rebirthFrmes),
+                                                  CallFunc::create(CC_CALLBACK_0(FlyEnemySprite::rebirthCall, this)),
+                                                  NULL);
+        rebirthAction->retain();
+        m_map["rebirthAction"] = rebirthAction;
+    }
+    
     m_map["dianjiAction"] = dianjiAction;
     
     m_map["walkAction"] = walkAction;
@@ -73,6 +100,12 @@ void FlyEnemySprite::update(float data)
         removeAllChildrenWithCleanup(true);
         removeFromParentAndCleanup(true);
         return;
+    }else if(m_model->isFenlie())
+    {
+        fenlie();
+    }else if (m_model->isRebirth())
+    {
+        rebirth();
     }
     if (m_model->isShowHurt()) {
         healthBar->setVisible(true);
@@ -181,6 +214,28 @@ void FlyEnemySprite::dianji()
     if (isHaveArmor) {
         armorSprite->setOpacity(0);
     }
+}
+void FlyEnemySprite::rebirth()
+{
+    if (actionStatus == isRebirth) {
+        return;
+    }
+    actionStatus = isRebirth;
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["rebirthAction"]);
+//    if (isHaveArmor) {
+//        armorSprite->stopAllActions();
+//        armorSprite->runAction(m_map["armorWalkAction"]);
+//    }
+}
+void FlyEnemySprite::fenlie()
+{
+    if (actionStatus == isfenlie) {
+        return;
+    }
+    actionStatus = isfenlie;
+    guaiwuSprite->stopAllActions();
+    guaiwuSprite->runAction(m_map["fenlieAction"]);
 }
 void FlyEnemySprite::die()
 {

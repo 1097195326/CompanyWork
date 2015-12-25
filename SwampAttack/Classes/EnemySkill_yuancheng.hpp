@@ -17,7 +17,7 @@ private:
 public:
     EnemySkill_yuancheng(string id);
     void    run(float timeStep);
-    
+    void doDone();
 };
 
 #endif /* EnemySkill_yuancheng_hpp */

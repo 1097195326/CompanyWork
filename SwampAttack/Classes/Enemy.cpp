@@ -29,7 +29,8 @@ m_isWeak(false),
 m_isStop(false),
 m_attackWaitTime(0.0f),
 m_dianjiDlay(0.0f),
-m_skill(NULL)
+m_skill(NULL),
+m_skillType(0)
 {
     m_actionType = atoi(m_data["ActionType"].asString().c_str());
     
@@ -77,8 +78,8 @@ m_skill(NULL)
         Json::Value data = enemySkillData[skillID];
         
         log("have skill");
-        int type = atoi(data["Type"].asString().c_str());
-        switch (type) {
+        m_skillType = atoi(data["Type"].asString().c_str());
+        switch (m_skillType) {
             case 1:
                 m_skill = new EnemySkill_kuangbao(skillID);
                 break;
@@ -242,6 +243,26 @@ void Enemy::hurt(int damage,int index)
     {
         return;
     }
+    if (isShanbi() || isFangyu())
+    {
+        return;
+    }
+    
+    if (m_skill->canActive())
+    {
+        switch (m_skillType) {
+            case 5:
+                setStateFangyu();
+                break;
+            case 6:
+                setStateShanbi();
+                break;
+            default:
+                break;
+        }
+        return;
+    }
+    
     m_health = m_health - damage;
     
     if (!m_isWeak && m_health < m_totalHealth * 0.5) {
@@ -252,7 +273,12 @@ void Enemy::hurt(int damage,int index)
     {
         removeAllBuffS();
         m_status &= e_clear;
-        m_status |= e_dieing;
+        if (m_skillType == 3) {
+            m_status |= e_fenlie;
+        }else
+        {
+            m_status |= e_dieing;
+        }
         m_isShowHurt = false;
         DropManager::getInstance()->dropObject(m_drop, m_point);
         _G_D->addGold(m_gold);
@@ -289,12 +315,37 @@ void Enemy::hurt(int damage)
     {
         return;
     }
+    if (isShanbi() || isFangyu())
+    {
+        return;
+    }
+    if (m_skill->canActive())
+    {
+        switch (m_skillType) {
+            case 5:
+                setStateFangyu();
+                break;
+            case 6:
+                setStateShanbi();
+                break;
+            default:
+                break;
+        }
+        return;
+    }
+    
     m_health = m_health - damage;
     if (m_health <= 0)
     {
         removeAllBuffS();
         m_status &= e_clear;
-        m_status |= e_dieing;
+        if (m_skillType == 3) {
+            m_status |= e_fenlie;
+        }else
+        {
+            m_status |= e_dieing;
+        }
+        
         m_isShowHurt = false;
         DropManager::getInstance()->dropObject(m_drop, m_point);
         _G_D->addGold(m_gold);
@@ -351,6 +402,15 @@ void Enemy::zhaohuanCall()
     m_status &= e_clear;
     m_status |= e_walk;
 }
+bool Enemy::isRebirth()
+{
+    return m_status & e_rebirth;
+}
+void Enemy::rebirthCall()
+{
+    m_status &= e_clear;
+    m_status |= e_walk;
+}
 bool Enemy::isFenlie()
 {
     return m_status & e_fenlie;
@@ -358,7 +418,7 @@ bool Enemy::isFenlie()
 void Enemy::fenlieCall()
 {
     m_status &= e_clear;
-    m_status |= e_canDel;
+    m_status |= e_die;
 }
 bool Enemy::isFarAttack()
 {
@@ -368,6 +428,8 @@ void Enemy::farAttackCall()
 {
     m_status &= e_clear;
     m_status |= e_walk;
+    
+    m_skill->doDone();
 }
 bool Enemy::isFangyu()
 {
@@ -406,6 +468,16 @@ void Enemy::setStateShanbi()
 {
     setStateClear();
     m_status |= e_shanbi;
+}
+void Enemy::setStateRebirth()
+{
+    setStateClear();
+    m_status |= e_rebirth;
+}
+void Enemy::setStateWalk()
+{
+    setStateClear();
+    m_status |= e_walk;
 }
 bool Enemy::isTanfei()
 {
@@ -688,4 +760,7 @@ string Enemy::getDrop()
 {
     return m_drop;
 }
-
+int Enemy::getSkillType()
+{
+    return m_skillType;
+}

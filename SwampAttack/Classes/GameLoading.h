@@ -11,12 +11,15 @@
 
 #include "BaseCode.h"
 
+#include "json/json.h"
+
 class GameLoading {
 private:
     
 public:
     static float loadSprites();
     static float loadFrames();
+    static float loadFramesByData(Json::Value data);
 };
 
 #endif /* defined(__SwampAttack__GameLoading__) */
