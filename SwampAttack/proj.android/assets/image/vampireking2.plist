@@ -7,314 +7,288 @@
             <key>vampireking_down0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,172},{146,236}}</string>
+                <string>{{2,2},{142,250}}</string>
                 <key>offset</key>
                 <string>{27,-12}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{154,94},{146,236}}</string>
+                <string>{{156,47},{142,250}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,320},{142,230}}</string>
+                <string>{{2,254},{142,248}}</string>
                 <key>offset</key>
-                <string>{37,-11}</string>
+                <string>{36,-13}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{166,96},{142,230}}</string>
+                <string>{{165,49},{142,248}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{700,338},{140,224}}</string>
+                <string>{{166,752},{138,246}}</string>
                 <key>offset</key>
-                <string>{47,-12}</string>
+                <string>{46,-14}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{177,100},{140,224}}</string>
+                <string>{{177,51},{138,246}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{228,474},{138,220}}</string>
+                <string>{{460,240},{160,234}}</string>
                 <key>offset</key>
-                <string>{56,-13}</string>
+                <string>{55,-20}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{187,103},{138,220}}</string>
+                <string>{{175,63},{160,234}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{718,480},{158,200}}</string>
+                <string>{{772,424},{198,222}}</string>
                 <key>offset</key>
-                <string>{66,-14}</string>
+                <string>{62,-26}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{187,114},{158,200}}</string>
+                <string>{{163,75},{198,222}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{718,640},{198,188}}</string>
+                <string>{{646,2},{226,208}}</string>
                 <key>offset</key>
-                <string>{73,-20}</string>
+                <string>{65,-33}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{174,126},{198,188}}</string>
+                <string>{{152,89},{226,208}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{472,298},{226,172}}</string>
+                <string>{{712,624},{216,170}}</string>
                 <key>offset</key>
-                <string>{75,-25}</string>
+                <string>{61,-52}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{162,139},{226,172}}</string>
+                <string>{{153,127},{216,170}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{220,792},{216,146}}</string>
+                <string>{{856,214},{208,142}}</string>
                 <key>offset</key>
-                <string>{71,-50}</string>
+                <string>{54,-68}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{163,177},{216,146}}</string>
+                <string>{{150,157},{208,142}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{574,790},{208,142}}</string>
+                <string>{{856,2},{210,142}}</string>
                 <key>offset</key>
-                <string>{64,-78}</string>
+                <string>{50,-66}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{160,207},{208,142}}</string>
+                <string>{{145,155},{210,142}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{448,650},{210,138}}</string>
+                <string>{{622,238},{228,148}}</string>
                 <key>offset</key>
-                <string>{60,-74}</string>
+                <string>{45,-73}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{155,205},{210,138}}</string>
+                <string>{{131,159},{228,148}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{494,148},{230,148}}</string>
+                <string>{{348,490},{234,178}}</string>
                 <key>offset</key>
-                <string>{55,-83}</string>
+                <string>{45,-71}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{140,209},{230,148}}</string>
+                <string>{{128,142},{234,178}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{732,2},{234,178}}</string>
+                <string>{{172,492},{240,174}}</string>
                 <key>offset</key>
-                <string>{56,-82}</string>
+                <string>{45,-69}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{139,193},{234,178}}</string>
+                <string>{{125,142},{240,174}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_down0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{252,2},{240,174}}</string>
+                <string>{{2,504},{246,168}}</string>
                 <key>offset</key>
-                <string>{55,-79}</string>
+                <string>{44,-67}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{135,192},{240,174}}</string>
+                <string>{{121,143},{246,168}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
-            </dict>
-            <key>vampireking_down0014.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,2},{248,168}}</string>
-                <key>offset</key>
-                <string>{54,-77}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{130,193},{248,168}}</string>
-                <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_hurt_heavy0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{494,2},{144,236}}</string>
+                <string>{{146,248},{152,242}}</string>
                 <key>offset</key>
-                <string>{-19,5}</string>
+                <string>{55,-16}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{109,77},{144,236}}</string>
+                <string>{{179,55},{152,242}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_hurt_heavy0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{234,326},{146,226}}</string>
+                <string>{{500,726},{210,232}}</string>
                 <key>offset</key>
-                <string>{22,0}</string>
+                <string>{84,-21}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{149,87},{146,226}}</string>
+                <string>{{179,65},{210,232}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_hurt_heavy0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{368,792},{204,214}}</string>
+                <string>{{302,2},{184,236}}</string>
                 <key>offset</key>
-                <string>{51,-6}</string>
+                <string>{71,-19}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{149,99},{204,214}}</string>
+                <string>{{179,61},{184,236}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_hurt_heavy0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{462,472},{176,220}}</string>
+                <string>{{300,248},{158,240}}</string>
                 <key>offset</key>
-                <string>{39,-4}</string>
+                <string>{57,-17}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{151,94},{176,220}}</string>
+                <string>{{178,57},{158,240}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_hurt_heavy0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,464},{156,224}}</string>
+                <string>{{146,2},{154,244}}</string>
                 <key>offset</key>
-                <string>{22,-2}</string>
+                <string>{33,-15}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{144,90},{156,224}}</string>
+                <string>{{156,53},{154,244}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_hurt_heavy0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{726,182},{154,228}}</string>
+                <string>{{488,2},{156,234}}</string>
                 <key>offset</key>
-                <string>{-3,0}</string>
+                <string>{15,-20}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{120,86},{154,228}}</string>
+                <string>{{137,63},{156,234}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_hurt_heavy0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,622},{140,218}}</string>
+                <string>{{528,476},{166,232}}</string>
                 <key>offset</key>
-                <string>{-29,-5}</string>
+                <string>{10,-21}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{101,96},{140,218}}</string>
+                <string>{{127,65},{166,232}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_hurt_heavy0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,764},{152,216}}</string>
+                <string>{{306,734},{192,234}}</string>
                 <key>offset</key>
-                <string>{-35,-6}</string>
+                <string>{-3,-20}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{89,98},{152,216}}</string>
+                <string>{{101,63},{192,234}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
             <key>vampireking_hurt_heavy0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{228,614},{176,218}}</string>
+                <string>{{2,752},{162,246}}</string>
                 <key>offset</key>
-                <string>{-47,-5}</string>
+                <string>{12,-14}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{65,96},{176,218}}</string>
+                <string>{{131,51},{162,246}}</string>
                 <key>sourceSize</key>
-                <string>{400,400}</string>
-            </dict>
-            <key>vampireking_hurt_heavy0010.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{240,178},{146,230}}</string>
-                <key>offset</key>
-                <string>{-32,1}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{95,84},{146,230}}</string>
-                <key>sourceSize</key>
-                <string>{400,400}</string>
+                <string>{400,320}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -326,7 +300,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c38ae5d109d4271060f677c393f2bb1a:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:f77388193393b659f4a2776eb0610139:1/1$</string>
             <key>textureFileName</key>
             <string>vampireking2.png</string>
         </dict>

@@ -356,8 +356,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameFightScene.o: \
  jni/../../Classes/json/features.h \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameBuff.h \
- jni/../../Classes/ProgressBar.h jni/../../Classes/EnemyInfo.h \
- jni/../../Classes/BaseUtil.h \
+ jni/../../Classes/EnemySkill.hpp jni/../../Classes/ConfigManager.h \
+ jni/../../Classes/CCCsvHelper.h jni/../../Classes/ProgressBar.h \
+ jni/../../Classes/EnemyInfo.h jni/../../Classes/BaseUtil.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/CocoStudio.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/CCActionFrame.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/CocosStudioExport.h \
@@ -425,12 +426,11 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameFightScene.o: \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CCActionTimeline.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CCTimeLine.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CSLoader.h \
- jni/../../Classes/CCCsvHelper.h jni/../../Classes/GameLoading.h \
- jni/../../Classes/GameDirector.h jni/../../Classes/GameSubject.h \
- jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
- jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
- jni/../../Classes/GuanQiaManager.h jni/../../Classes/GuanQiaModel.h \
- jni/../../Classes/ConfigManager.h jni/../../Classes/GamePauseScene.h \
+ jni/../../Classes/GameLoading.h jni/../../Classes/GameDirector.h \
+ jni/../../Classes/GameSubject.h jni/../../Classes/GameMapManager.h \
+ jni/../../Classes/GameMap.h jni/../../Classes/GameMap6.h \
+ jni/../../Classes/GameMap5s.h jni/../../Classes/GuanQiaManager.h \
+ jni/../../Classes/GuanQiaModel.h jni/../../Classes/GamePauseScene.h \
  jni/../../Classes/GameMapScene.h \
  jni/../../Classes/GameScrollHeadlerTargetInterface.h \
  jni/../../Classes/GameScrollHeadler.h \
@@ -1168,6 +1168,12 @@ jni/../../Classes/json/writer.h:
 
 jni/../../Classes/GameBuff.h:
 
+jni/../../Classes/EnemySkill.hpp:
+
+jni/../../Classes/ConfigManager.h:
+
+jni/../../Classes/CCCsvHelper.h:
+
 jni/../../Classes/ProgressBar.h:
 
 jni/../../Classes/EnemyInfo.h:
@@ -1308,8 +1314,6 @@ jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/C
 
 jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CSLoader.h:
 
-jni/../../Classes/CCCsvHelper.h:
-
 jni/../../Classes/GameLoading.h:
 
 jni/../../Classes/GameDirector.h:
@@ -1327,8 +1331,6 @@ jni/../../Classes/GameMap5s.h:
 jni/../../Classes/GuanQiaManager.h:
 
 jni/../../Classes/GuanQiaModel.h:
-
-jni/../../Classes/ConfigManager.h:
 
 jni/../../Classes/GamePauseScene.h:
 

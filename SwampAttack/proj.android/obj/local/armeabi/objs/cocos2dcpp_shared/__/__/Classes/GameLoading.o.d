@@ -348,15 +348,16 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameLoading.o: \
  jni/../../Classes/GameConfig.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
- jni/../../Classes/GunManager.h jni/../../Classes/GameObject.h \
- jni/../../Classes/Gun.h jni/../../Classes/json/json.h \
- jni/../../Classes/json/autolink.h jni/../../Classes/json/config.h \
- jni/../../Classes/json/value.h jni/../../Classes/json/forwards.h \
- jni/../../Classes/json/reader.h jni/../../Classes/json/features.h \
+ jni/../../Classes/json/json.h jni/../../Classes/json/autolink.h \
+ jni/../../Classes/json/config.h jni/../../Classes/json/value.h \
+ jni/../../Classes/json/forwards.h jni/../../Classes/json/reader.h \
+ jni/../../Classes/json/features.h \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
- jni/../../Classes/json/writer.h jni/../../Classes/GameSubject.h \
- jni/../../Classes/GameObserver.h jni/../../Classes/PropManager.h \
- jni/../../Classes/Prop.h jni/../../Classes/DefenseBuildingManager.h \
+ jni/../../Classes/json/writer.h jni/../../Classes/GunManager.h \
+ jni/../../Classes/GameObject.h jni/../../Classes/Gun.h \
+ jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h \
+ jni/../../Classes/PropManager.h jni/../../Classes/Prop.h \
+ jni/../../Classes/DefenseBuildingManager.h \
  jni/../../Classes/DefenseBuilding.h jni/../../Classes/GuanQiaManager.h \
  jni/../../Classes/GuanQiaModel.h jni/../../Classes/ConfigManager.h \
  jni/../../Classes/CCCsvHelper.h jni/../../Classes/GameUser.h
@@ -1061,12 +1062,6 @@ jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
 
 jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 
-jni/../../Classes/GunManager.h:
-
-jni/../../Classes/GameObject.h:
-
-jni/../../Classes/Gun.h:
-
 jni/../../Classes/json/json.h:
 
 jni/../../Classes/json/autolink.h:
@@ -1084,6 +1079,12 @@ jni/../../Classes/json/features.h:
 /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
 
 jni/../../Classes/json/writer.h:
+
+jni/../../Classes/GunManager.h:
+
+jni/../../Classes/GameObject.h:
+
+jni/../../Classes/Gun.h:
 
 jni/../../Classes/GameSubject.h:
 

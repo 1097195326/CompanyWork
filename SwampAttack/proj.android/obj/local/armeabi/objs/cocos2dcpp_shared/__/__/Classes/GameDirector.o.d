@@ -359,12 +359,13 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameDirector.o: \
  jni/../../Classes/json/features.h \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameBuff.h \
- jni/../../Classes/Human.h jni/../../Classes/GunManager.h \
- jni/../../Classes/Gun.h jni/../../Classes/State.h \
- jni/../../Classes/PropManager.h jni/../../Classes/Prop.h \
- jni/../../Classes/BulletManager.h jni/../../Classes/Bullet.h \
- jni/../../Classes/BulletModel.h jni/../../Classes/House.h \
- jni/../../Classes/DefenseBuildingManager.h \
+ jni/../../Classes/EnemySkill.hpp jni/../../Classes/ConfigManager.h \
+ jni/../../Classes/CCCsvHelper.h jni/../../Classes/Human.h \
+ jni/../../Classes/GunManager.h jni/../../Classes/Gun.h \
+ jni/../../Classes/State.h jni/../../Classes/PropManager.h \
+ jni/../../Classes/Prop.h jni/../../Classes/BulletManager.h \
+ jni/../../Classes/Bullet.h jni/../../Classes/BulletModel.h \
+ jni/../../Classes/House.h jni/../../Classes/DefenseBuildingManager.h \
  jni/../../Classes/DefenseBuilding.h jni/../../Classes/GameOverScene.h \
  jni/../../Classes/GameBuffManager.h jni/../../Classes/DropManager.h \
  jni/../../Classes/DropModel.h jni/../../Classes/GameFightScene.h
@@ -1108,6 +1109,12 @@ jni/../../Classes/json/features.h:
 jni/../../Classes/json/writer.h:
 
 jni/../../Classes/GameBuff.h:
+
+jni/../../Classes/EnemySkill.hpp:
+
+jni/../../Classes/ConfigManager.h:
+
+jni/../../Classes/CCCsvHelper.h:
 
 jni/../../Classes/Human.h:
 

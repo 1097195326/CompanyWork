@@ -355,9 +355,10 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemySprite.o: \
  jni/../../Classes/json/features.h \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameBuff.h \
- jni/../../Classes/ProgressBar.h jni/../../Classes/EnemyInfo.h \
- jni/../../Classes/BaseUtil.h jni/../../Classes/GameFightScene.h \
- jni/../../Classes/GameObserver.h
+ jni/../../Classes/EnemySkill.hpp jni/../../Classes/ConfigManager.h \
+ jni/../../Classes/CCCsvHelper.h jni/../../Classes/ProgressBar.h \
+ jni/../../Classes/EnemyInfo.h jni/../../Classes/BaseUtil.h \
+ jni/../../Classes/GameFightScene.h jni/../../Classes/GameObserver.h
 
 jni/../../Classes/EnemySprite.h:
 
@@ -1082,6 +1083,12 @@ jni/../../Classes/json/features.h:
 jni/../../Classes/json/writer.h:
 
 jni/../../Classes/GameBuff.h:
+
+jni/../../Classes/EnemySkill.hpp:
+
+jni/../../Classes/ConfigManager.h:
+
+jni/../../Classes/CCCsvHelper.h:
 
 jni/../../Classes/ProgressBar.h:
 

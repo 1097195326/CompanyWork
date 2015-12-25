@@ -330,7 +330,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/DefenseBuilding2.o: \
  jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
  jni/../../Classes/EnemyManager.h jni/../../Classes/EnemyGroup.h \
  jni/../../Classes/Enemy.h jni/../../Classes/GameBuff.h \
- jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h
+ jni/../../Classes/EnemySkill.hpp jni/../../Classes/ConfigManager.h \
+ jni/../../Classes/CCCsvHelper.h jni/../../Classes/GameSubject.h \
+ jni/../../Classes/GameObserver.h
 
 jni/../../Classes/DefenseBuilding2.h:
 
@@ -1013,6 +1015,12 @@ jni/../../Classes/EnemyGroup.h:
 jni/../../Classes/Enemy.h:
 
 jni/../../Classes/GameBuff.h:
+
+jni/../../Classes/EnemySkill.hpp:
+
+jni/../../Classes/ConfigManager.h:
+
+jni/../../Classes/CCCsvHelper.h:
 
 jni/../../Classes/GameSubject.h:
 

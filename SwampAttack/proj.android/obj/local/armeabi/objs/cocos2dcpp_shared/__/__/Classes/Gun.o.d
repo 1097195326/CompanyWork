@@ -334,7 +334,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Gun.o: \
  jni/../../Classes/GuanQiaManager.h jni/../../Classes/GuanQiaModel.h \
  jni/../../Classes/EnemyManager.h jni/../../Classes/EnemyGroup.h \
  jni/../../Classes/Enemy.h jni/../../Classes/GameBuff.h \
- jni/../../Classes/GameShowDiscLayer.h
+ jni/../../Classes/EnemySkill.hpp jni/../../Classes/GameShowDiscLayer.h
 
 jni/../../Classes/Gun.h:
 
@@ -1035,5 +1035,7 @@ jni/../../Classes/EnemyGroup.h:
 jni/../../Classes/Enemy.h:
 
 jni/../../Classes/GameBuff.h:
+
+jni/../../Classes/EnemySkill.hpp:
 
 jni/../../Classes/GameShowDiscLayer.h:

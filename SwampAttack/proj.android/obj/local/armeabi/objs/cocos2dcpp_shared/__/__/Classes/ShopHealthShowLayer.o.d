@@ -359,7 +359,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/ShopHealthShowLayer.o: \
  jni/../../Classes/json/features.h \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/MoneyObject.h \
- jni/../../Classes/ExpendObject.h jni/../../Classes/HealthObject.hpp
+ jni/../../Classes/ExpendObject.h jni/../../Classes/HealthObject.hpp \
+ jni/../../Classes/MobClickCpp.h
 
 jni/../../Classes/ShopHealthShowLayer.h:
 
@@ -1100,3 +1101,5 @@ jni/../../Classes/MoneyObject.h:
 jni/../../Classes/ExpendObject.h:
 
 jni/../../Classes/HealthObject.hpp:
+
+jni/../../Classes/MobClickCpp.h:

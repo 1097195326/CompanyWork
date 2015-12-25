@@ -354,13 +354,21 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Enemy.o: \
  jni/../../Classes/json/reader.h jni/../../Classes/json/features.h \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameBuff.h \
- jni/../../Classes/GameMapManager.h jni/../../Classes/GameMap.h \
- jni/../../Classes/GameMap6.h jni/../../Classes/GameMap5s.h \
- jni/../../Classes/EnemyInfo.h jni/../../Classes/House.h \
- jni/../../Classes/BulletManager.h jni/../../Classes/Bullet.h \
- jni/../../Classes/BulletModel.h jni/../../Classes/DropManager.h \
- jni/../../Classes/DropModel.h jni/../../Classes/GameDirector.h \
- jni/../../Classes/GameSubject.h jni/../../Classes/GameObserver.h
+ jni/../../Classes/EnemySkill.hpp jni/../../Classes/ConfigManager.h \
+ jni/../../Classes/CCCsvHelper.h jni/../../Classes/GameMapManager.h \
+ jni/../../Classes/GameMap.h jni/../../Classes/GameMap6.h \
+ jni/../../Classes/GameMap5s.h jni/../../Classes/EnemyInfo.h \
+ jni/../../Classes/House.h jni/../../Classes/BulletManager.h \
+ jni/../../Classes/Bullet.h jni/../../Classes/BulletModel.h \
+ jni/../../Classes/DropManager.h jni/../../Classes/DropModel.h \
+ jni/../../Classes/GameDirector.h jni/../../Classes/GameSubject.h \
+ jni/../../Classes/GameObserver.h \
+ jni/../../Classes/EnemySkill_kuangbao.hpp \
+ jni/../../Classes/EnemySkill_zhaohuan.hpp \
+ jni/../../Classes/EnemySkill_fenlie.hpp \
+ jni/../../Classes/EnemySkill_yuancheng.hpp \
+ jni/../../Classes/EnemySkill_fangyu.hpp \
+ jni/../../Classes/EnemySkill_shanbi.hpp
 
 jni/../../Classes/Enemy.h:
 
@@ -1084,6 +1092,12 @@ jni/../../Classes/json/writer.h:
 
 jni/../../Classes/GameBuff.h:
 
+jni/../../Classes/EnemySkill.hpp:
+
+jni/../../Classes/ConfigManager.h:
+
+jni/../../Classes/CCCsvHelper.h:
+
 jni/../../Classes/GameMapManager.h:
 
 jni/../../Classes/GameMap.h:
@@ -1111,3 +1125,15 @@ jni/../../Classes/GameDirector.h:
 jni/../../Classes/GameSubject.h:
 
 jni/../../Classes/GameObserver.h:
+
+jni/../../Classes/EnemySkill_kuangbao.hpp:
+
+jni/../../Classes/EnemySkill_zhaohuan.hpp:
+
+jni/../../Classes/EnemySkill_fenlie.hpp:
+
+jni/../../Classes/EnemySkill_yuancheng.hpp:
+
+jni/../../Classes/EnemySkill_fangyu.hpp:
+
+jni/../../Classes/EnemySkill_shanbi.hpp:

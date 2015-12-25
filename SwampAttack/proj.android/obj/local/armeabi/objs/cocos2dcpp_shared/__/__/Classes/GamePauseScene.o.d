@@ -362,8 +362,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GamePauseScene.o: \
  jni/../../Classes/json/writer.h jni/../../Classes/CCCsvHelper.h \
  jni/../../Classes/EnemyManager.h jni/../../Classes/EnemyGroup.h \
  jni/../../Classes/Enemy.h jni/../../Classes/GameBuff.h \
- jni/../../Classes/GunManager.h jni/../../Classes/Gun.h \
- jni/../../Classes/GameMapScene.h \
+ jni/../../Classes/EnemySkill.hpp jni/../../Classes/GunManager.h \
+ jni/../../Classes/Gun.h jni/../../Classes/GameMapScene.h \
  jni/../../Classes/GameScrollHeadlerTargetInterface.h \
  jni/../../Classes/GameScrollHeadler.h \
  jni/../../Classes/GameHorizontalScrollHeadlerView.h \
@@ -1123,6 +1123,8 @@ jni/../../Classes/EnemyGroup.h:
 jni/../../Classes/Enemy.h:
 
 jni/../../Classes/GameBuff.h:
+
+jni/../../Classes/EnemySkill.hpp:
 
 jni/../../Classes/GunManager.h:
 

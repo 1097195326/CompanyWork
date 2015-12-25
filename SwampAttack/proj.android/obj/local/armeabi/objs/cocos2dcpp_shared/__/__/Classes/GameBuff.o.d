@@ -323,7 +323,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameBuff.o: \
  jni/../../Classes/GameConfig.h \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
- jni/../../Classes/GameObject.h jni/../../Classes/Enemy.h
+ jni/../../Classes/GameObject.h jni/../../Classes/Enemy.h \
+ jni/../../Classes/EnemySkill.hpp jni/../../Classes/ConfigManager.h \
+ jni/../../Classes/CCCsvHelper.h
 
 jni/../../Classes/GameBuff.h:
 
@@ -984,3 +986,9 @@ jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 jni/../../Classes/GameObject.h:
 
 jni/../../Classes/Enemy.h:
+
+jni/../../Classes/EnemySkill.hpp:
+
+jni/../../Classes/ConfigManager.h:
+
+jni/../../Classes/CCCsvHelper.h:

@@ -45,6 +45,13 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/EnemyInfo.cpp \
 				   ../../Classes/EnemyManager.cpp \
 				   ../../Classes/EnemyProgressBar.cpp \
+				   ../../Classes/EnemySkill_fangyu.cpp \
+				   ../../Classes/EnemySkill_fenlie.cpp \
+				   ../../Classes/EnemySkill_kuangbao.cpp \
+				   ../../Classes/EnemySkill_shanbi.cpp \
+				   ../../Classes/EnemySkill_yuancheng.cpp \
+				   ../../Classes/EnemySkill_zhaohuan.cpp \
+				   ../../Classes/EnemySkill.cpp \
 				   ../../Classes/EnemySprite.cpp \
 				   ../../Classes/ExpendObject.cpp \
 				   ../../Classes/FireBulletSprite.cpp \
