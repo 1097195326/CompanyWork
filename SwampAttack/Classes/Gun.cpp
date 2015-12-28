@@ -181,7 +181,7 @@ m_reloadWiatingTime(0.0f)
             _G_U->setGunBulletNumber(m_id, m_totalBullets);
         }
         m_bullets = m_magazieSize = m_totalBullets;
-        m_bulletPrice = 2000;
+        m_bulletPrice = 200;
     }else
     {
         m_bullets = m_totalBullets >= m_magazieSize ? m_magazieSize : m_totalBullets % m_magazieSize;

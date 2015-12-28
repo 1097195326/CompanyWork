@@ -248,7 +248,7 @@ void Enemy::hurt(int damage,int index)
         return;
     }
     
-    if (m_skill->canActive())
+    if (m_skill && m_skill->canActive())
     {
         switch (m_skillType) {
             case 5:
@@ -319,7 +319,7 @@ void Enemy::hurt(int damage)
     {
         return;
     }
-    if (m_skill->canActive())
+    if (m_skill && m_skill->canActive())
     {
         switch (m_skillType) {
             case 5:
