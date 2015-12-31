@@ -383,6 +383,8 @@ void Enemy::hurtTanfei()
 {
     m_status &= e_clear;
     m_status |= e_tanfei;
+    
+    _G_D->addGold(m_gold);
 }
 //--- view 接口
 void Enemy::setStateClear()
