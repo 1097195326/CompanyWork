@@ -44,10 +44,10 @@ MapScrollHeadler::MapScrollHeadler(int sceneIndex)
             }
             
             Vec2 yPoint = guanQia->getYinyingPoint();
-//            Sprite * yinying = Sprite::createWithSpriteFrameName(imageName);
-//            yinying->setPosition(offVec + yPoint);
-//            
-//            addChild(yinying,1);
+            Sprite * yinying = Sprite::createWithSpriteFrameName(imageName);
+            yinying->setPosition(offVec + yPoint);
+            
+            addChild(yinying,1);
 //            if (guanQia->isUnlock())
 //            {
 //                Sprite * diying = Sprite::create(ImagePath("map_yinying.png"));

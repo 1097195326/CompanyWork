@@ -1,0 +1,5 @@
+广告编号,间隔时间,金钱收益,
+AdvertisementId[sting],Time[string],Money[string],
+100001,1,688,
+100002,2,888,
+100003,3,1888,

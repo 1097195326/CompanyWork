@@ -67,7 +67,7 @@ bool GameMapScene::init()
     int toIndex = GuanQiaManager::getInstance()->getCurrentSceneIndex();
     --toIndex;
     log("map to index :%d",toIndex);
-    int num = 5;
+    int num = 6;
     m_scrollView = new GameHorizontalScrollHeadlerView(1136,640,1136,640,num);
     m_scrollView->setScrollControllerContentWidth(1136 * num);
     m_scrollView->setScrollControllerContentHeight(640);
