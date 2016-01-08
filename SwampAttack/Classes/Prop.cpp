@@ -117,7 +117,7 @@ void Prop::gameLoop(float data)
     if (!enemyGroup) {
         return;
     }
-    std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
+    std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
     if (enemyData.empty())
     {
         return;

@@ -36,6 +36,7 @@ void EnemyGroup::setData(Json::Value data)
         
         for (int j = 0; j < number; ++j) {
             Json::Value enemyConfig = ConfigManager::getInstance()->getDataByTag("guaiwu",monsterid);
+//            log("enemy config:%s",enemyConfig.toStyledString().c_str());
             int actionType = atoi(enemyConfig["ActionType"].asString().c_str());
             Enemy * enemy = NULL; //new Enemy(enemyConfig);
             switch (actionType) {
@@ -56,6 +57,16 @@ void EnemyGroup::setData(Json::Value data)
 
 std::list<Enemy*> EnemyGroup::getEnemyData()
 {
+//    std::list<Enemy*> data;
+//    std::list<Enemy*>::iterator iter;
+//    for (iter = enemyData.begin(); iter != enemyData.end(); ++iter)
+//    {
+//        data.push_back(*iter);
+//    }
+//    for (iter = enemyData.begin(); iter != enemyData.end(); ++iter)
+//    {
+//        data.push_back(*iter);
+//    }
     return enemyData;
 }
 std::list<Enemy *> EnemyGroup::getShowEnemyData()

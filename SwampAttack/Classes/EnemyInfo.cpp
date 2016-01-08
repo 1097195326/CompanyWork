@@ -126,6 +126,7 @@ EnemyInfo::EnemyInfo()
     scarecrow.hurtOnFrames = 5;
     scarecrow.walkFrames = 14;
     scarecrow.downFrames = 13;
+    scarecrow.zhaohuanFrames = 9;
     scarecrow.width = 230;
     scarecrow.height = 190;
     scarecrow.widthOffSet = 0;
@@ -139,6 +140,7 @@ EnemyInfo::EnemyInfo()
     scarecrowArmor.hurtOnFrames = 5;
     scarecrowArmor.walkFrames = 14;
     scarecrowArmor.downFrames = 13;
+    scarecrowArmor.zhaohuanFrames = 9;
     scarecrowArmor.width = 230;
     scarecrowArmor.height = 95;
     scarecrowArmor.widthOffSet = 0;
