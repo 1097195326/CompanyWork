@@ -21,6 +21,9 @@ public GameScrollHeadlerTargetInterface
 private:
     MenuItem * m_leftItem ;
     MenuItem * m_rightItem;
+    Label   *   m_timeLabel;
+    Label   *   m_goldLabel;
+    
     GameHorizontalScrollHeadlerView * m_scrollView;
     
     
@@ -32,11 +35,14 @@ public:
     
     GameScrollHeadler * getHeadlerByIndex(int index,int viewTag);
     
+    void    update(float data);
     
     void    homeButtonFuc(Ref * psender);
     void    shopButtonFuc(Ref * psender);
+    void    guanggaoButtonFuc(Ref * psender);
     void    leftButtonFuc(Ref * psender);
     void    rightButtonFuc(Ref * psender);
+    
     
     void    moveToEndCall();
     

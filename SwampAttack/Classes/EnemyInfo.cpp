@@ -339,7 +339,7 @@ EnemyInfo::EnemyInfo()
     skullking2.attackFrame = 6;
     skullking2.attackFrames = 12;
     skullking2.hurtHeavyFrames = 9;
-    skullking2.hurtLightFrames = 6;
+    skullking2.hurtLightFrames = 5;
     skullking2.hurtOnFrames = 5;
     skullking2.walkFrames = 14;
     skullking2.downFrames = 13;
@@ -366,10 +366,10 @@ EnemyInfo::EnemyInfo()
     wolfking2.attackFrame = 6;
     wolfking2.attackFrames = 12;
     wolfking2.hurtHeavyFrames = 10;
-    wolfking2.hurtLightFrames = 6;
+    wolfking2.hurtLightFrames = 5;
     wolfking2.hurtOnFrames = 5;
     wolfking2.walkFrames = 14;
-    wolfking2.downFrames = 14;
+    wolfking2.downFrames = 13;
     wolfking2.width = 470;
     wolfking2.height = 470;
     wolfking2.widthOffSet = 0;

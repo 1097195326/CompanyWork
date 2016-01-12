@@ -7,9 +7,13 @@
 //
 
 #include "GameUser.h"
+#include "GuanggaoManager.hpp"
 
 
-GameUser::GameUser():m_time(0)
+GameUser::GameUser():
+m_time(0),
+m_guanggaoTime(0),
+m_guanggaoAddTime(0)
 {
     m_user = UserDefault::getInstance();
     if (!m_user->getBoolForKey("first")) {
@@ -24,8 +28,10 @@ GameUser::GameUser():m_time(0)
         setLastSceneIndex(1);
     }
     setUserGold(900000);
-    unlockGuanqia("400003_10");
+    unlockGuanqia("400006_1");
 //    setUserHealth(0);
+    m_guanggaoAddTime = _Gg_M_->getGuangggaoModelByIndex(getGuanggaoIndex())->getTime();
+    
     m_userHealth = getIntForKey("user_health");
     
     enterGame();
@@ -46,6 +52,15 @@ GameUser * GameUser::getInstance()
 void GameUser::updateTime(float data)
 {
 //    log("add game time");
+    if (!_Gg_M_->getGuangggaoModelByIndex(getGuanggaoIndex())->isReady())
+    {
+        ++m_guanggaoTime;
+        if (m_guanggaoTime >= m_guanggaoAddTime)
+        {
+            m_guanggaoTime = 0;
+            _Gg_M_->getGuangggaoModelByIndex(getGuanggaoIndex())->setReady(true);
+        }
+    }
     if (m_userHealth >= FullHealth)
     {
         return;
@@ -68,8 +83,16 @@ void GameUser::enterGame()
     
     int shiJianCha = now.tv_sec - getTimeSec();
     
+    if (shiJianCha / m_guanggaoAddTime >=1)
+    {
+        _Gg_M_->getGuangggaoModelByIndex(getGuanggaoIndex())->setReady(true);
+    }else
+    {
+        m_guanggaoTime += shiJianCha % m_guanggaoAddTime;
+    }
+    
     m_userHealth += shiJianCha / _G_AddTime;
-    m_time = shiJianCha % _G_AddTime;
+    m_time += shiJianCha % _G_AddTime;
     if (m_userHealth > FullHealth)
     {
         m_userHealth = FullHealth;
@@ -152,6 +175,23 @@ bool GameUser::useExpendProp()
         return true;
     }
     return false;
+}
+//--- guang gao
+int GameUser::getGuanggaoTime()
+{
+    return m_guanggaoTime;
+}
+void GameUser::setGuanggaoAddTime(int time)
+{
+    m_guanggaoAddTime = time;
+}
+void GameUser::setGuanggaoIndex(int index)
+{
+    setIntForKey("UserGuanggaoIndex", index);
+}
+int GameUser::getGuanggaoIndex()
+{
+    return getIntForKey("UserGuanggaoIndex");
 }
 //--- guan qia ---
 void GameUser::unlockGuanqia(string guanqiaId)
