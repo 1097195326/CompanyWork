@@ -78,6 +78,7 @@
 		8D6D88531C292EC0009A2D26 /* EnemySkill_fangyu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D88511C292EC0009A2D26 /* EnemySkill_fangyu.cpp */; };
 		8D766EF31C44B9D000DE6B91 /* GuanggaoModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D766EF11C44B9D000DE6B91 /* GuanggaoModel.cpp */; };
 		8D766EF61C44B9E200DE6B91 /* GuanggaoManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D766EF41C44B9E200DE6B91 /* GuanggaoManager.cpp */; };
+		8D766EF91C451E6400DE6B91 /* AdShowLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D766EF71C451E6400DE6B91 /* AdShowLayer.cpp */; };
 		8D7FD8551C27E9920003E821 /* EnemySkill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D7FD8531C27E9920003E821 /* EnemySkill.cpp */; };
 		8DBB98891ACD520C008C804D /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB987F1ACD520C008C804D /* json_internalarray.inl */; };
 		8DBB988A1ACD520C008C804D /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB98801ACD520C008C804D /* json_internalmap.inl */; };
@@ -329,6 +330,8 @@
 		8D766EF21C44B9D000DE6B91 /* GuanggaoModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuanggaoModel.hpp; sourceTree = "<group>"; };
 		8D766EF41C44B9E200DE6B91 /* GuanggaoManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuanggaoManager.cpp; sourceTree = "<group>"; };
 		8D766EF51C44B9E200DE6B91 /* GuanggaoManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuanggaoManager.hpp; sourceTree = "<group>"; };
+		8D766EF71C451E6400DE6B91 /* AdShowLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdShowLayer.cpp; sourceTree = "<group>"; };
+		8D766EF81C451E6400DE6B91 /* AdShowLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AdShowLayer.hpp; sourceTree = "<group>"; };
 		8D7FD8531C27E9920003E821 /* EnemySkill.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill.cpp; sourceTree = "<group>"; };
 		8D7FD8541C27E9920003E821 /* EnemySkill.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill.hpp; sourceTree = "<group>"; };
 		8DBB98781ACD520C008C804D /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
@@ -891,6 +894,8 @@
 				8DD9D7EB1B40F8BF005F015B /* ShopHealthShowLayer.h */,
 				8DE207321B39128E0052E738 /* ShopGoldShowLayer.cpp */,
 				8DE207331B39128E0052E738 /* ShopGoldShowLayer.h */,
+				8D766EF71C451E6400DE6B91 /* AdShowLayer.cpp */,
+				8D766EF81C451E6400DE6B91 /* AdShowLayer.hpp */,
 				8DE207351B39508C0052E738 /* ShopExpendShowLayer.cpp */,
 				8DE207361B39508C0052E738 /* ShopExpendShowLayer.h */,
 				8DD5F2F61B2806B100DC5DB9 /* GameShowLevelupLayer.cpp */,
@@ -1569,6 +1574,7 @@
 				8D6D88501C292CD4009A2D26 /* EnemySkill_yuancheng.cpp in Sources */,
 				8DD499761B04500B0037CBAA /* GameBuffManager.cpp in Sources */,
 				8DD08C921B2FC8E800BECE66 /* GameLoadingScene.cpp in Sources */,
+				8D766EF91C451E6400DE6B91 /* AdShowLayer.cpp in Sources */,
 				8DC3E1A91AE8D08B00BE6CA4 /* FlyEnemy.cpp in Sources */,
 				8DE3F7B41AF75AB5001E048F /* ScrollController.cpp in Sources */,
 				8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */,

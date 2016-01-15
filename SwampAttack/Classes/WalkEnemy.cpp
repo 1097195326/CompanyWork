@@ -70,8 +70,10 @@ void WalkEnemy::gameLoop(float data)
                 m_status |= e_attack;
             }
         }
+//        log("walk enemy x:%f",m_point.x);
     }else if (m_status & e_attack)
     {
+//        log("walk enemy attack:%f",m_point.x);
 //        computeIfWander();
     }else if (m_status & e_wanderF || m_status & e_wanderB)
     {

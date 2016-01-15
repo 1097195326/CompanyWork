@@ -28,7 +28,7 @@ m_guanggaoAddTime(0)
         setLastSceneIndex(1);
     }
 //    setUserGold(900000);
-//    unlockGuanqia("400006_1");
+//    unlockGuanqia("400002_6");
 //    setUserHealth(0);
     m_guanggaoAddTime = _Gg_M_->getGuangggaoModelByIndex(getGuanggaoIndex())->getTime();
     

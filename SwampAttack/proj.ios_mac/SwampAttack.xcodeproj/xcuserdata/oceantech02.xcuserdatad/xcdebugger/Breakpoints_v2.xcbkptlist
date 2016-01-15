@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameMapScene.cpp"
-            timestampString = "474279740.689629"
+            timestampString = "474536030.45122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "GameMapScene::update(float data)"
             landmarkType = "5">
          </BreakpointContent>
@@ -160,6 +160,22 @@
             startingLineNumber = "93"
             endingLineNumber = "93"
             landmarkName = "GameUser::enterGame()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Bullet.cpp"
+            timestampString = "474539818.068876"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "Bullet::gameLoop(float data)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

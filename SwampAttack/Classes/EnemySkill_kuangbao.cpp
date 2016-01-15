@@ -18,7 +18,7 @@ void EnemySkill_kuangbao::run(float timeStep)
 {
 //    log("run---:%f::%f",m_enemy->getHealthPercent(),m_hp);
     
-    if(m_enemy->getHealthPercent() <= m_hp * 100)
+    if(m_enemy->isWalk() && m_enemy->getHealthPercent() <= m_hp * 100)
     {
         m_enemy->effectSpeedByPer(m_accelerate);
     }

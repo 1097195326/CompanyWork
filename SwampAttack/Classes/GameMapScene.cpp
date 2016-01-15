@@ -17,6 +17,8 @@
 #include "GameUser.h"
 
 #include "GuanggaoManager.hpp"
+#include "AdShowLayer.hpp"
+
 
 bool GameMapScene::init()
 {
@@ -185,7 +187,7 @@ void GameMapScene::shopButtonFuc(cocos2d::Ref *psender)
 }
 void GameMapScene::guanggaoButtonFuc(cocos2d::Ref *psender)
 {
-    log("guang gao func");
+//    log("guang gao func");
     int index = _G_U->getGuanggaoIndex();
     GuanggaoModel * guanggaoModel = _Gg_M_->getGuangggaoModelByIndex(index);
     if (guanggaoModel->isReady())
@@ -203,6 +205,9 @@ void GameMapScene::guanggaoButtonFuc(cocos2d::Ref *psender)
         
         m_goldLabel->setString(StringUtils::format("%d",guanggaoModel->getMoney()));
         
+        AdShowLayer * layer = new AdShowLayer();
+        layer->autorelease();
+        addChild(layer,4);
     }
     
 }

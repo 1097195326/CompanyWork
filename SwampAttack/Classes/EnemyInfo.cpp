@@ -24,6 +24,19 @@ EnemyInfo::EnemyInfo()
     zombie.height = 170;
     zombie.widthOffSet = 0;
     m_data["zombie"] = zombie;
+    
+    EnemyInfoData zombieArmor;
+    zombieArmor.attackFrame = 8;
+    zombieArmor.attackFrames = 11;
+    zombieArmor.hurtHeavyFrames = 9;
+    zombieArmor.hurtLightFrames = 5;
+    zombieArmor.hurtOnFrames = 5;
+    zombieArmor.walkFrames = 14;
+    zombieArmor.downFrames = 0;
+    zombieArmor.width = 170;
+    zombieArmor.height = 85;
+    zombieArmor.widthOffSet = 0;
+    m_data["zombie_armor"] = zombieArmor;
     // wolf 狼人
     EnemyInfoData wolf;
     wolf.attackFrame = 8;
