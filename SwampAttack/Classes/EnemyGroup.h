@@ -40,6 +40,7 @@ public:
     
     void    clearData();
     void    pushEnemy(Json::Value data,Vec2 position);
+    void    reliveGame();
     void    gameLoop(float data);
     void    stopGame();
     void    continueGame();

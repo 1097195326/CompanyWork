@@ -35,10 +35,12 @@ private:
     string  m_dropId;
     
     bool    m_isUnlock;
+    bool    m_isWin;
     Vec2    m_buttonPoint;
     Vec2    m_yinyingPoint;
 public:
-    
+    bool    isWin();
+    void    setGuanqiaWin();
     bool    isUnlock();
     void    unlockGuanqia();
     Vec2    getGuanqiaPoint();

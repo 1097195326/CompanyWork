@@ -194,6 +194,14 @@ int GameUser::getGuanggaoIndex()
     return getIntForKey("UserGuanggaoIndex");
 }
 //--- guan qia ---
+void GameUser::setGuanqiaWin(string guanqiaId)
+{
+    setBoolForKey(guanqiaId + "guanqiaWin", true);
+}
+bool GameUser::isWinGuanqia(string guanqiaId)
+{
+    return getBoolForKey(guanqiaId + "guanqiaWin");
+}
 void GameUser::unlockGuanqia(string guanqiaId)
 {
     setBoolForKey(guanqiaId + "guanqia", true);

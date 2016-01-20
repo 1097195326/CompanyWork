@@ -83,6 +83,7 @@ bool GameOverScene::init()
         
         bg = Sprite::create(ImagePath("overScene_winbg.png"));
         
+        curGuanqia->setGuanqiaWin();
         GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
         
         GunManager::getInstance()->checkUnlock(this);

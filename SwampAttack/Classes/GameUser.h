@@ -59,6 +59,8 @@ public:
     void    setGuanggaoIndex(int index);
     int     getGuanggaoIndex();
     //--- guan qia ---
+    void    setGuanqiaWin(string guanqiaId);
+    bool    isWinGuanqia(string guanqiaId);
     void    unlockGuanqia(string guanqiaId);
     bool    isUnlockGuanqia(string guanqiaId);
     void    setLastSceneIndex(int index);

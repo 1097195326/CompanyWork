@@ -167,6 +167,7 @@ void GameDirector::resetGameData()
 void GameDirector::reliveGame()
 {
     House::getInstance()->reliveGame();
+    EnemyManager::getInstance()->getCurrectGroup()->reliveGame();
 }
 void GameDirector::startGame()
 {

@@ -10,7 +10,7 @@
 #include "ConfigManager.h"
 #include "FlyEnemy.h"
 #include "WalkEnemy.h"
-
+#include "GameMapManager.h"
 
 EnemyGroup::EnemyGroup(Json::Value data):status(_isHave)
 {
@@ -105,6 +105,22 @@ void EnemyGroup::pushEnemy(Json::Value data,Vec2 position)
         }
     }
     
+}
+void EnemyGroup::reliveGame()
+{
+    GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
+    
+    std::list<Enemy*>::iterator iter;
+    for (iter = show_enemyData.begin() ; iter != show_enemyData.end(); ++iter)
+    {
+        Enemy * enemy = *iter;
+        if (!enemy->isCanDelete())
+        {
+            Vec2 point = gameMap->enemy_start_buttomPoint + Vec2(0, random(0, gameMap->enemy_start_upline));
+            enemy->setPosition(point + Vec2(random(-30,30), random(-30, 30)));
+            enemy->setStateWalk();
+        }
+    }
 }
 void EnemyGroup::clearData()
 {
