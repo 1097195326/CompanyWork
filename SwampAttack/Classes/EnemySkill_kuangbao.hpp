@@ -13,7 +13,8 @@
 
 
 class EnemySkill_kuangbao : public EnemySkill {
-    
+private:
+    bool    isBegain;
 public:
     EnemySkill_kuangbao(string id);
     void    run(float timeStep);

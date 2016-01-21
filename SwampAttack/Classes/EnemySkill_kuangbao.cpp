@@ -10,7 +10,8 @@
 #include "Enemy.h"
 
 EnemySkill_kuangbao::EnemySkill_kuangbao(string id):
-EnemySkill(id)
+EnemySkill(id),
+isBegain(false)
 {
     
 }
@@ -21,6 +22,11 @@ void EnemySkill_kuangbao::run(float timeStep)
     if(m_enemy->isWalk() && m_enemy->getHealthPercent() <= m_hp * 100)
     {
         m_enemy->effectSpeedByPer(m_accelerate);
+//        if (!isBegain)
+//        {
+//            isBegain = true;
+//            
+//        }
     }
     
 }

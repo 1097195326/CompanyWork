@@ -32,6 +32,10 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
         diyingSprite->setPosition(w * 0.15, h * 0.05);
         diyingSprite->setScale(0.8);
         addChild(diyingSprite);
+    }else if (m_model->isBoss())
+    {
+        SimpleAudioEngine::getInstance()->playEffect(MusicPath("boss_jingbao.mp3").c_str());
+        
     }
     
     healthBar = new ProgressBar("xuenei.png","xuewai.png");

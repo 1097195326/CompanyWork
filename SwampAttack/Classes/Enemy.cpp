@@ -538,34 +538,10 @@ bool Enemy::isBoss()
 {
     bool isB = false;
     
-    if (m_id == "200001") {
-        isB = true;
-    }else if (m_id == "200002")
+    int index = (int)m_id.find_first_of('2');
+    if (index == 0)
     {
-        isB = true;
-    }else if (m_id == "200003")
-    {
-        isB = true;
-    }else if (m_id == "200004")
-    {
-        isB = true;
-    }else if (m_id == "200005")
-    {
-        isB = true;
-    }else if (m_id == "200006")
-    {
-        isB = true;
-    }else if (m_id == "200007")
-    {
-        isB = true;
-    }else if (m_id == "200008")
-    {
-        isB = true;
-    }else if (m_id == "200009")
-    {
-        isB = true;
-    }else if (m_id == "200010")
-    {
+//        printf("is booss :%d \n",index);
         isB = true;
     }
     
