@@ -114,6 +114,12 @@ void EnemyManager::gameLoop(float data)
             {
 //                log("EnemyManager Game Over");
                 resetData();
+                GuanqiaModel * guanqiaModel = GuanQiaManager::getInstance()->getCurrentGuanqia();
+                std::string dropId = guanqiaModel->getDropId();
+                if (dropId.size() > 0)
+                {
+                    
+                }
             }
         }
     }
