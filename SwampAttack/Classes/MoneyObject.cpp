@@ -24,6 +24,7 @@ MoneyObject::MoneyObject(std::string id)
     m_effect    = atoi(d["Effec"].asString().c_str());
     string descri = d["MoneyDescription"].asString();
     m_description = _C_M->getTranslateById(descri);
+    m_numeber     = atoi(d["Numeber"].asString().c_str());
     m_type      = atoi(d["type"].asString().c_str());
     
     
@@ -54,6 +55,10 @@ int MoneyObject::getEffect()
 string MoneyObject::getDescription()
 {
     return m_description;
+}
+int MoneyObject::getNumeber()
+{
+    return m_numeber;
 }
 int MoneyObject::getType()
 {

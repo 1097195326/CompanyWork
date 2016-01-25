@@ -24,7 +24,7 @@ public:
     static DropManager * getInstance();
     
     void    dropObject(string objId,Vec2 point);
-    void    addDropNum();
+    void    addDropNum(int num);
     void    minusDropNum();
     int     getDropNum();
     

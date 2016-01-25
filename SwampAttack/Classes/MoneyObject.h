@@ -21,6 +21,7 @@ private:
     string  m_modelId;
     int     m_effect;
     string  m_description;
+    int     m_numeber;
     int     m_type;
 public:
     string  getId();
@@ -28,6 +29,7 @@ public:
     string  getModelId();
     int     getEffect();
     string  getDescription();
+    int     getNumeber();
     int     getType();
 public:
     MoneyObject(std::string id);
