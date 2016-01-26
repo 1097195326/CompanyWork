@@ -22,8 +22,8 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
     
     attackWaitTime = m_model->getAttackWaitTime();
 //    Sprite * s = Sprite::create("CloseSelected.png");
-//    s->setPosition(Vec2(0, h * 0.5));
-//    addChild(s);
+//    s->setPosition(Vec2(w * 0.5, h * 0.5));
+//    addChild(s,22);
     
     if (m_model->getActionType() != 2 && !m_model->isBoss())
     {
