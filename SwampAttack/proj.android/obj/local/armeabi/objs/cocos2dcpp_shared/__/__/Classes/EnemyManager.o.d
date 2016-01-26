@@ -344,7 +344,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemyManager.o: \
  jni/../../Classes/CCCsvHelper.h jni/../../Classes/GameSubject.h \
  jni/../../Classes/GameObserver.h jni/../../Classes/EnemyProgressBar.h \
  jni/../../Classes/ProgressBar.h jni/../../Classes/GuanQiaManager.h \
- jni/../../Classes/GuanQiaModel.h
+ jni/../../Classes/GuanQiaModel.h jni/../../Classes/DropManager.h \
+ jni/../../Classes/DropModel.h
 
 jni/../../Classes/EnemyManager.h:
 
@@ -1057,3 +1058,7 @@ jni/../../Classes/ProgressBar.h:
 jni/../../Classes/GuanQiaManager.h:
 
 jni/../../Classes/GuanQiaModel.h:
+
+jni/../../Classes/DropManager.h:
+
+jni/../../Classes/DropModel.h:

@@ -37,14 +37,22 @@ MoneyObject * MoneyManager::getMoneyObjectById(string id)
 {
     return m_moneyData[id];
 }
-int MoneyManager::dropMoney(string id,Vec2 point)
+int MoneyManager::dropMoney(string id,Vec2 point,bool isGuanqia)
 {
     log("drop money");
     MoneyObject * obj = m_moneyData[id];
     int num = obj->getNumeber();
     for (int i = 1; i <= num; ++i)
     {
-        DropMoneySprite * spr = new DropMoneySprite(obj,point);
+        Vec2 pit;
+        if (isGuanqia)
+        {
+            pit = point + Vec2(random(-150, 150), random(0, 60));
+        }else
+        {
+            pit = point;
+        }
+        DropMoneySprite * spr = new DropMoneySprite(obj,pit);
         spr->autorelease();
     }
     

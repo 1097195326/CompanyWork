@@ -11,6 +11,7 @@ LOCAL_MODULE := cocos2dcpp_shared
 LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
+				   ../../Classes/AdShowLayer.cpp \
 				   ../../Classes/AlertTextTool.cpp \
 				   ../../Classes/AppDelegate.cpp \
 				   ../../Classes/BaseUtil.cpp \
@@ -88,6 +89,8 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/GameUser.cpp \
 				   ../../Classes/GameVerticalScrollHeadlerView.cpp \
 				   ../../Classes/GameVerticalScrollView.cpp \
+				   ../../Classes/GuanggaoManager.cpp \
+				   ../../Classes/GuanggaoModel.cpp \
 				   ../../Classes/GuanQiaManager.cpp \
 				   ../../Classes/GuanQiaModel.cpp \
 				   ../../Classes/Gun.cpp \

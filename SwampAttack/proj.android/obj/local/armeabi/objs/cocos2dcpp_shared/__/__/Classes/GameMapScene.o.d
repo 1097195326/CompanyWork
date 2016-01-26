@@ -366,7 +366,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameMapScene.o: \
  /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/CCCsvHelper.h \
  jni/../../Classes/GameSubject.h jni/../../Classes/GameSprite.h \
- jni/../../Classes/BaseUtil.h
+ jni/../../Classes/BaseUtil.h jni/../../Classes/GameUser.h \
+ jni/../../Classes/GuanggaoManager.hpp \
+ jni/../../Classes/GuanggaoModel.hpp jni/../../Classes/AdShowLayer.hpp
 
 jni/../../Classes/GameMapScene.h:
 
@@ -1127,3 +1129,11 @@ jni/../../Classes/GameSubject.h:
 jni/../../Classes/GameSprite.h:
 
 jni/../../Classes/BaseUtil.h:
+
+jni/../../Classes/GameUser.h:
+
+jni/../../Classes/GuanggaoManager.hpp:
+
+jni/../../Classes/GuanggaoModel.hpp:
+
+jni/../../Classes/AdShowLayer.hpp:

@@ -201,7 +201,7 @@ void Gun::checkUnlock(Layer * layer)
         return;
     }
     GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getGuanqiaById(m_unlockMission);
-    if (guanqia && guanqia->isUnlock() && !m_isUnlock)
+    if (guanqia && guanqia->isUnlock() && guanqia->isWin() && !m_isUnlock)
     {
         m_isUnlock = true;
         _G_U->unlockGun(m_id);

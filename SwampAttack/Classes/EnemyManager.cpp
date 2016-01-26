@@ -120,7 +120,8 @@ void EnemyManager::gameLoop(float data)
                 {
                     DropManager::getInstance()->dropObject(dropId,
                                                            Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                                                                m_visibleOrigin.y + m_visibleSize.height * 1.1));
+                                                                m_visibleOrigin.y + m_visibleSize.height * 1.1),
+                                                           true);
                 }
             }
         }

@@ -23,7 +23,7 @@ private:
 public:
     static MoneyManager * getInstance();
     MoneyObject * getMoneyObjectById(string id);
-    int    dropMoney(string id,Vec2 point);
+    int    dropMoney(string id,Vec2 point,bool isGuanqia = false);
 };
 
 #endif /* defined(__SwampAttack__MoneyManager__) */

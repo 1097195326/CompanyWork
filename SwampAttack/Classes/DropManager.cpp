@@ -38,7 +38,7 @@ DropManager * DropManager::getInstance()
     static DropManager manger;
     return &manger;
 }
-void DropManager::dropObject(string objId,Vec2 point)
+void DropManager::dropObject(string objId,Vec2 point,bool isGuanqia)
 {
 //    log("drop obj %s",objId.c_str());
     int res = 0;
@@ -53,7 +53,7 @@ void DropManager::dropObject(string objId,Vec2 point)
     {
         case 1:
         {
-            res = MoneyManager::getInstance()->dropMoney(dropData.id,point);
+            res = MoneyManager::getInstance()->dropMoney(dropData.id,point,isGuanqia);
         }
             break;
         case 2:

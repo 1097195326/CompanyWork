@@ -59,6 +59,13 @@
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
+		8D1DFB171C57610E003B3D44 /* UserGuideManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB151C57610E003B3D44 /* UserGuideManager.cpp */; };
+		8D1DFB1A1C576134003B3D44 /* GuideBaseModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB181C576134003B3D44 /* GuideBaseModel.cpp */; };
+		8D1DFB1D1C57616B003B3D44 /* GuideClickModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB1B1C57616B003B3D44 /* GuideClickModel.cpp */; };
+		8D1DFB231C5761AA003B3D44 /* GuideTextModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB211C5761AA003B3D44 /* GuideTextModel.cpp */; };
+		8D1DFB261C5763A1003B3D44 /* GuideCompositeModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB241C5763A1003B3D44 /* GuideCompositeModel.cpp */; };
+		8D1DFB291C576429003B3D44 /* GuideCompositeSequenceModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB271C576429003B3D44 /* GuideCompositeSequenceModel.cpp */; };
+		8D1DFB2C1C576549003B3D44 /* GuideCompositeApposeModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB2A1C576549003B3D44 /* GuideCompositeApposeModel.cpp */; };
 		8D3F153D1BDF637E00CD7F67 /* HealthObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D3F153B1BDF637E00CD7F67 /* HealthObject.cpp */; };
 		8D458D281BEB689200B5EFC5 /* Default-768h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D458D271BEB689200B5EFC5 /* Default-768h@3x.png */; };
 		8D45D5631BEC7E79008A21E3 /* Icon-87.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D45D5621BEC7E79008A21E3 /* Icon-87.png */; };
@@ -297,6 +304,20 @@
 		521A8E6219F0C34300D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		8D1DFB151C57610E003B3D44 /* UserGuideManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserGuideManager.cpp; sourceTree = "<group>"; };
+		8D1DFB161C57610E003B3D44 /* UserGuideManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UserGuideManager.hpp; sourceTree = "<group>"; };
+		8D1DFB181C576134003B3D44 /* GuideBaseModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideBaseModel.cpp; sourceTree = "<group>"; };
+		8D1DFB191C576134003B3D44 /* GuideBaseModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideBaseModel.hpp; sourceTree = "<group>"; };
+		8D1DFB1B1C57616B003B3D44 /* GuideClickModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideClickModel.cpp; sourceTree = "<group>"; };
+		8D1DFB1C1C57616B003B3D44 /* GuideClickModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideClickModel.hpp; sourceTree = "<group>"; };
+		8D1DFB211C5761AA003B3D44 /* GuideTextModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideTextModel.cpp; sourceTree = "<group>"; };
+		8D1DFB221C5761AA003B3D44 /* GuideTextModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideTextModel.hpp; sourceTree = "<group>"; };
+		8D1DFB241C5763A1003B3D44 /* GuideCompositeModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideCompositeModel.cpp; sourceTree = "<group>"; };
+		8D1DFB251C5763A1003B3D44 /* GuideCompositeModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideCompositeModel.hpp; sourceTree = "<group>"; };
+		8D1DFB271C576429003B3D44 /* GuideCompositeSequenceModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideCompositeSequenceModel.cpp; sourceTree = "<group>"; };
+		8D1DFB281C576429003B3D44 /* GuideCompositeSequenceModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideCompositeSequenceModel.hpp; sourceTree = "<group>"; };
+		8D1DFB2A1C576549003B3D44 /* GuideCompositeApposeModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideCompositeApposeModel.cpp; sourceTree = "<group>"; };
+		8D1DFB2B1C576549003B3D44 /* GuideCompositeApposeModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideCompositeApposeModel.hpp; sourceTree = "<group>"; };
 		8D3F153B1BDF637E00CD7F67 /* HealthObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HealthObject.cpp; sourceTree = "<group>"; };
 		8D3F153C1BDF637E00CD7F67 /* HealthObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HealthObject.hpp; sourceTree = "<group>"; };
 		8D458D271BEB689200B5EFC5 /* Default-768h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-768h@3x.png"; sourceTree = "<group>"; };
@@ -801,6 +822,27 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
+		8D1DFB141C576019003B3D44 /* UserGuide */ = {
+			isa = PBXGroup;
+			children = (
+				8D1DFB151C57610E003B3D44 /* UserGuideManager.cpp */,
+				8D1DFB161C57610E003B3D44 /* UserGuideManager.hpp */,
+				8D1DFB181C576134003B3D44 /* GuideBaseModel.cpp */,
+				8D1DFB191C576134003B3D44 /* GuideBaseModel.hpp */,
+				8D1DFB1B1C57616B003B3D44 /* GuideClickModel.cpp */,
+				8D1DFB1C1C57616B003B3D44 /* GuideClickModel.hpp */,
+				8D1DFB211C5761AA003B3D44 /* GuideTextModel.cpp */,
+				8D1DFB221C5761AA003B3D44 /* GuideTextModel.hpp */,
+				8D1DFB241C5763A1003B3D44 /* GuideCompositeModel.cpp */,
+				8D1DFB251C5763A1003B3D44 /* GuideCompositeModel.hpp */,
+				8D1DFB271C576429003B3D44 /* GuideCompositeSequenceModel.cpp */,
+				8D1DFB281C576429003B3D44 /* GuideCompositeSequenceModel.hpp */,
+				8D1DFB2A1C576549003B3D44 /* GuideCompositeApposeModel.cpp */,
+				8D1DFB2B1C576549003B3D44 /* GuideCompositeApposeModel.hpp */,
+			);
+			name = UserGuide;
+			sourceTree = "<group>";
+		};
 		8D51DC521B3A813A0053EA8A /* DropModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -932,6 +974,7 @@
 				8D6D883B1C292C24009A2D26 /* EnemySkill */,
 				8DD7F1F81AD3768000D86BC5 /* EnemyModels */,
 				8D51DC521B3A813A0053EA8A /* DropModels */,
+				8D1DFB141C576019003B3D44 /* UserGuide */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -1448,6 +1491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DE20A911B7486A700B3E59F /* DefenseBuilding6_Sprite.cpp in Sources */,
+				8D1DFB1A1C576134003B3D44 /* GuideBaseModel.cpp in Sources */,
 				D8D673A91B19DFD0004C463F /* GuanQiaManager.cpp in Sources */,
 				8DE2268F1B5F466600944493 /* BulletModel.cpp in Sources */,
 				8DC3E19D1AE89C5C00BE6CA4 /* EnemyInfo.cpp in Sources */,
@@ -1486,6 +1530,7 @@
 				8DD87E701B15A2B500FC073A /* ShopAwardItemScrollHeadler.cpp in Sources */,
 				D8D6781A1B1DB58C008C3BA6 /* PropSprite.cpp in Sources */,
 				8D3F153D1BDF637E00CD7F67 /* HealthObject.cpp in Sources */,
+				8D1DFB171C57610E003B3D44 /* UserGuideManager.cpp in Sources */,
 				8D766EF61C44B9E200DE6B91 /* GuanggaoManager.cpp in Sources */,
 				8DD215681B16BA720090EEEB /* ShopPropIcon.cpp in Sources */,
 				8DE207341B39128E0052E738 /* ShopGoldShowLayer.cpp in Sources */,
@@ -1505,9 +1550,11 @@
 				8DD601131B1810DC005E811B /* MapScrollHeadler.cpp in Sources */,
 				8DC430AC1AC92BEF00AB1665 /* GunManager.cpp in Sources */,
 				8DC5EF9F1AD4CE0F00FC4D21 /* GuanQiaModel.cpp in Sources */,
+				8D1DFB231C5761AA003B3D44 /* GuideTextModel.cpp in Sources */,
 				8DE637DB1B68B6AA00AD0784 /* FireBulletSprite.cpp in Sources */,
 				8DDC27BF1B1EEDE600A4FD8D /* PropSprite_daoju1.cpp in Sources */,
 				8DE8A2BA1B78814900E9D158 /* GameCgShowScene.cpp in Sources */,
+				8D1DFB2C1C576549003B3D44 /* GuideCompositeApposeModel.cpp in Sources */,
 				8DD29D3D1B0B3C1400ECB826 /* DefenseBuilding3_Sprite.cpp in Sources */,
 				8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */,
 				8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */,
@@ -1548,6 +1595,7 @@
 				8DDCC6711B32AFB900F01D46 /* SpecialManager.cpp in Sources */,
 				8DD88E771B2598150072688E /* DefenseBuilding2.cpp in Sources */,
 				8DC6A5D41ADFD788002A6159 /* HumanReloadState.cpp in Sources */,
+				8D1DFB1D1C57616B003B3D44 /* GuideClickModel.cpp in Sources */,
 				8D51DC581B3A817C0053EA8A /* DropManager.cpp in Sources */,
 				8DDCC67A1B32B82500F01D46 /* SpecialObject.cpp in Sources */,
 				8DE3F7B11AF75109001E048F /* SelectMenuController.cpp in Sources */,
@@ -1574,7 +1622,9 @@
 				8D6D88501C292CD4009A2D26 /* EnemySkill_yuancheng.cpp in Sources */,
 				8DD499761B04500B0037CBAA /* GameBuffManager.cpp in Sources */,
 				8DD08C921B2FC8E800BECE66 /* GameLoadingScene.cpp in Sources */,
+				8D1DFB261C5763A1003B3D44 /* GuideCompositeModel.cpp in Sources */,
 				8D766EF91C451E6400DE6B91 /* AdShowLayer.cpp in Sources */,
+				8D1DFB291C576429003B3D44 /* GuideCompositeSequenceModel.cpp in Sources */,
 				8DC3E1A91AE8D08B00BE6CA4 /* FlyEnemy.cpp in Sources */,
 				8DE3F7B41AF75AB5001E048F /* ScrollController.cpp in Sources */,
 				8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */,
