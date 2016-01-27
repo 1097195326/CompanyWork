@@ -43,6 +43,8 @@ public:
     void    setGuanqiaWin();
     bool    isUnlock();
     void    unlockGuanqia();
+    void    setStarNum(int num);
+    int     getStarNum();
     Vec2    getGuanqiaPoint();
     Vec2    getYinyingPoint();
 public:

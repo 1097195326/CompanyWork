@@ -44,9 +44,11 @@ DropMoneySprite::DropMoneySprite(MoneyObject * money, Vec2 point)
 //    runAction(JumpBy::create(0.5, Vec2(0, 0), 50, 3));
     
     float p_y = getPositionY();
+    
     if (p_y > 150)
     {
-        runAction(Sequence::create(EaseSineIn::create(MoveBy::create(0.3, Vec2(0,170 - p_y))),
+        float moveTime = (p_y - 150) / 1000;
+        runAction(Sequence::create(EaseSineIn::create(MoveBy::create(moveTime, Vec2(0,170 - p_y))),
                                    JumpBy::create(0.5, Vec2(random(20, 100), 0), 50, 3),
                                    NULL));
     }else

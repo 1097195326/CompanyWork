@@ -69,6 +69,14 @@ void GuanqiaModel::setGuanqiaWin()
     m_isWin = true;
     _G_U->setGuanqiaWin(m_id);
 }
+void GuanqiaModel::setStarNum(int num)
+{
+    _G_U->setGuanqiaStarNum(m_id, num);
+}
+int GuanqiaModel::getStarNum()
+{
+    return _G_U->getGuanqiaStarNum(m_id);
+}
 void GuanqiaModel::unlockGuanqia()
 {
     m_isUnlock = true;

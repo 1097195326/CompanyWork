@@ -47,7 +47,7 @@ int MoneyManager::dropMoney(string id,Vec2 point,bool isGuanqia)
         Vec2 pit;
         if (isGuanqia)
         {
-            pit = point + Vec2(random(-150, 150), random(0, 60));
+            pit = point + Vec2(random(-150, 150), random(0, 350));
         }else
         {
             pit = point;

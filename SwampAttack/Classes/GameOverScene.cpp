@@ -19,6 +19,7 @@
 
 #include "GameDirector.h"
 #include "GameUser.h"
+#include "House.h"
 
 #include "MobClickCpp.h"
 
@@ -84,6 +85,7 @@ bool GameOverScene::init()
         bg = Sprite::create(ImagePath("overScene_winbg.png"));
         
         curGuanqia->setGuanqiaWin();
+        curGuanqia->setStarNum(House::getInstance()->getStarNum());
         GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
         
         GunManager::getInstance()->checkUnlock(this);

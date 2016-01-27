@@ -40,6 +40,7 @@ public:
     void    setView();
     void    resetData();
     void    reliveGame();
+    int     getStarNum();
 public:
     float   getHealthPercent();
     bool    isOver();
