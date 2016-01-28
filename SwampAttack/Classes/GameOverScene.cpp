@@ -73,19 +73,29 @@ bool GameOverScene::init()
     addChild(layerColor);
 //    layerColor->runAction(FadeTo::create(0.3, 200));
     
+    Sprite * bg = Sprite::create(ImagePath("overScene_bg.png"));
+    bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                    m_visibleOrigin.y + m_visibleSize.height * 0.5);
+    addChild(bg);
+    
     int canGetGold = _G_D->getGoldNum();;
     
-    Sprite * bg =  NULL;
+    Sprite * title = NULL;
+    
     GuanqiaModel * curGuanqia = GuanQiaManager::getInstance()->getCurrentGuanqia();
+    int starNum = House::getInstance()->getStarNum();
     
     if (m_overStatus == o_win)
     {
         umeng::MobClickCpp::finishLevel(curGuanqia->getId().c_str());
         
-        bg = Sprite::create(ImagePath("overScene_winbg.png"));
+        title = Sprite::create(ImagePath("overScene_winTitle.png"));
         
         curGuanqia->setGuanqiaWin();
-        curGuanqia->setStarNum(House::getInstance()->getStarNum());
+        if (starNum > curGuanqia->getStarNum())
+        {
+            curGuanqia->setStarNum(starNum);
+        }
         GuanqiaModel * nextGuanqia = GuanQiaManager::getInstance()->getGuanqiaById(curGuanqia->getUnlockMission());
         
         GunManager::getInstance()->checkUnlock(this);
@@ -112,11 +122,29 @@ bool GameOverScene::init()
     {
         umeng::MobClickCpp::failLevel(curGuanqia->getId().c_str());
         
-        bg = Sprite::create(ImagePath("overScene_losebg.png"));
+        title = Sprite::create(ImagePath("overScene_failTitle.png"));
     }
-    bg->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-                    m_visibleOrigin.y + m_visibleSize.height * 0.5);
-    addChild(bg);
+    title->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                       m_visibleOrigin.y + m_visibleSize.height * 0.7);
+    addChild(title);
+    
+    for (int i = 1; i <= 3; ++i)
+    {
+        string starName;
+        if (i <= starNum)
+        {
+            starName = "overScene_lightStar.png";
+        }else
+        {
+            starName = "overScene_grayStar.png";
+        }
+        Sprite * star = Sprite::create(ImagePath(starName));
+        Vec2 starPoint = Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                              m_visibleOrigin.y + m_visibleSize.height * 0.53);
+        star->setPosition(starPoint + Vec2(-80 + 80 * (i-1), 30 - i%2 * 10));
+        addChild(star);
+    }
+    
     
     int widthOffset = 120;
     MenuItemImage * gotoMapButton = MenuItemImage::create(ImagePath("overScene_tomap.png"),

@@ -256,7 +256,7 @@ BulletInfoData Bullet::getDandaoInfo()
     }else if ("BulletModelId10" == modelId)
     {
         data.name = "boss_slash";
-        data.frames = 3;
+        data.frames = 5;
     }else
     {
         data.name = "";

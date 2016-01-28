@@ -7,3 +7,19 @@
 //
 
 #include "UserGuideManager.hpp"
+
+
+UserGuideManager::UserGuideManager()
+{
+    
+}
+UserGuideManager::~UserGuideManager()
+{
+    
+}
+UserGuideManager * UserGuideManager::getInstance()
+{
+    static UserGuideManager userGuideManager;
+    return &userGuideManager;
+}
+

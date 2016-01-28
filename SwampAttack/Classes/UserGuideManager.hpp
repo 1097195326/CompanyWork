@@ -9,10 +9,8 @@
 #ifndef UserGuideManager_hpp
 #define UserGuideManager_hpp
 
-struct ModelType
-{
-    
-};
+#include "GuideBaseModel.hpp"
+
 
 class UserGuideManager {
 private:
@@ -22,6 +20,9 @@ public:
     
     UserGuideManager();
     ~UserGuideManager();
+    
+public:
+    
 };
 
 #endif /* UserGuideManager_hpp */
