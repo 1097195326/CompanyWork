@@ -122,6 +122,7 @@ bool GameMapScene::init()
     
     moveToEndCall();
     
+    update(0);
     schedule(CC_SCHEDULE_SELECTOR(GameMapScene::update), 1);
     
     return true;

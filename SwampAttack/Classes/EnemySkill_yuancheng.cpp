@@ -38,8 +38,8 @@ void EnemySkill_yuancheng::doDone()
                        0,
                        1,
                        t_house,
-                       m_enemy->getPosition() - Vec2(m_enemy->getWidth() * 0.5, 0) + Vec2(0, m_enemy->getHeight() * 0.65),
-                       m_enemy->getTargetPosition() + Vec2(0,m_enemy->getHeight() * 0.55),
+                       m_enemy->getPosition() - Vec2(m_enemy->getWidth() * 0.5, 0) + Vec2(0, m_enemy->getHeight() * 0.4),
+                       m_enemy->getTargetPosition() + Vec2(0,m_enemy->getHeight() * 0.4),
                        "100010"
                        );
     BulletManager::getInstance()->fire(bp);

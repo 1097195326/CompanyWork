@@ -121,7 +121,7 @@ void MapGuanqiaButton::pressGuanqiaButtonFunc(Touch * touch, Event * event)
     {
         umeng::MobClickCpp::startLevel(m_guanqiaId.c_str());
         
-        string musicName = StringUtils::format("sceneMusic%d.mp3",m_sceneIndex);
+        string musicName = StringUtils::format("sceneMusic%d.mp3",(m_sceneIndex - 1) % 3 + 1);
         SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath(musicName)).c_str(),true);
         SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.5);
         
