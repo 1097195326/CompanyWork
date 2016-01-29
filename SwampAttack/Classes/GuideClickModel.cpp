@@ -8,7 +8,7 @@
 
 #include "GuideClickModel.hpp"
 
-GuideClickModel::GuideClickModel()
+GuideClickModel::GuideClickModel(GuideClickInfo info)
 {
     
 }
@@ -20,11 +20,20 @@ void GuideClickModel::active()
 {
     
 }
-void GuideClickModel::progress()
+void GuideClickModel::progress(float dlay)
 {
     
 }
 void GuideClickModel::finish()
 {
     
+}
+
+void GuideClickModel::setClickRext(cocos2d::Rect _rect)
+{
+    m_info.m_rect = _rect;
+}
+bool GuideClickModel::clickPoint(cocos2d::Vec2 point)
+{
+    return m_info.m_rect.containsPoint(point);
 }

@@ -17,6 +17,8 @@ enum GuideModelStatus
     g_finish      = 1 << 2,
     
 };
+using namespace std;
+
 class GuideBaseModel {
 private:
     int     m_status;

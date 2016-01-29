@@ -24,6 +24,7 @@ private:
     int     m_time;
     int     m_guanggaoTime;
     int     m_guanggaoAddTime;
+    bool    m_isGuiding;
 private:
     GameUser();
     ~GameUser();
@@ -53,6 +54,11 @@ public:
     int     getTime();
     void    useHealthTimes();
     void    addHealthToFull();
+    //-- user guide
+    bool    isHaveGuide();
+    void    setIsHaveGuide();
+    bool    isGuiding();
+    void    setIsGuiding(bool isOrN);
     //--- guang gao ----
     int     getGuanggaoTime();
     void    setGuanggaoAddTime(int time);

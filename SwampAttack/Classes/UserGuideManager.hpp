@@ -9,10 +9,11 @@
 #ifndef UserGuideManager_hpp
 #define UserGuideManager_hpp
 
+#include "GameObject.h"
 #include "GuideBaseModel.hpp"
 
 
-class UserGuideManager {
+class UserGuideManager : public GameObject {
 private:
     
 public:
@@ -20,6 +21,8 @@ public:
     
     UserGuideManager();
     ~UserGuideManager();
+    
+    void gameLoop(float dlay);
     
 public:
     

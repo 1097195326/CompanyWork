@@ -77,6 +77,7 @@
 		8D51DC611B3A99630053EA8A /* DropMoneySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC5F1B3A99630053EA8A /* DropMoneySprite.cpp */; };
 		8D5DAFB81BE9F91C003050CA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5DAFB71BE9F91C003050CA /* StoreKit.framework */; };
 		8D5DAFBA1BE9F927003050CA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5DAFB91BE9F927003050CA /* GameKit.framework */; };
+		8D6060BB1C5B38E100E4E616 /* UserGuideLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6060B91C5B38E100E4E616 /* UserGuideLayer.cpp */; };
 		8D6D883E1C292C59009A2D26 /* EnemySkill_kuangbao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D883C1C292C59009A2D26 /* EnemySkill_kuangbao.cpp */; };
 		8D6D88411C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D883F1C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp */; };
 		8D6D88441C292C7F009A2D26 /* EnemySkill_fenlie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D88421C292C7F009A2D26 /* EnemySkill_fenlie.cpp */; };
@@ -335,6 +336,8 @@
 		8D51DC601B3A99630053EA8A /* DropMoneySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropMoneySprite.h; sourceTree = "<group>"; };
 		8D5DAFB71BE9F91C003050CA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8D5DAFB91BE9F927003050CA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		8D6060B91C5B38E100E4E616 /* UserGuideLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserGuideLayer.cpp; sourceTree = "<group>"; };
+		8D6060BA1C5B38E100E4E616 /* UserGuideLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UserGuideLayer.hpp; sourceTree = "<group>"; };
 		8D6D883C1C292C59009A2D26 /* EnemySkill_kuangbao.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_kuangbao.cpp; sourceTree = "<group>"; };
 		8D6D883D1C292C59009A2D26 /* EnemySkill_kuangbao.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_kuangbao.hpp; sourceTree = "<group>"; };
 		8D6D883F1C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_zhaohuan.cpp; sourceTree = "<group>"; };
@@ -912,6 +915,8 @@
 		8DC10ACF1AC40463004F7DE2 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8D6060B91C5B38E100E4E616 /* UserGuideLayer.cpp */,
+				8D6060BA1C5B38E100E4E616 /* UserGuideLayer.hpp */,
 				D8B187621B49414300CB33CF /* UserDelegatLayer.cpp */,
 				D8B187631B49414300CB33CF /* UserDelegatLayer.h */,
 				8DC10AAE1AC3D629004F7DE2 /* GameFightScene.cpp */,
@@ -1603,6 +1608,7 @@
 				8DC34AA31ADCFA1400C6B657 /* GameMapManager.cpp in Sources */,
 				8DD499791B04868C0037CBAA /* DefenseBuilding.cpp in Sources */,
 				8DC3E1A61AE8CF7B00BE6CA4 /* FlyEnemySprite.cpp in Sources */,
+				8D6060BB1C5B38E100E4E616 /* UserGuideLayer.cpp in Sources */,
 				8DC10ABC1AC3D6FD004F7DE2 /* BulletSprite.cpp in Sources */,
 				8DD8C12C1AFCB15F00872AA2 /* GameShopScene.cpp in Sources */,
 				8D7FD8551C27E9920003E821 /* EnemySkill.cpp in Sources */,

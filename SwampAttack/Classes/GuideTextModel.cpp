@@ -9,8 +9,10 @@
 #include "GuideTextModel.hpp"
 
 
-GuideTextModel::GuideTextModel()
+GuideTextModel::GuideTextModel(GuideTextInfo info)
 {
+    m_info = info;
+    
     
 }
 GuideTextModel::~GuideTextModel()
@@ -21,11 +23,16 @@ void GuideTextModel::active()
 {
     
 }
-void GuideTextModel::progress()
+void GuideTextModel::progress(float dlay)
 {
     
 }
 void GuideTextModel::finish()
 {
     
+}
+
+void GuideTextModel::setText(string _text)
+{
+    m_info.m_text = _text;
 }

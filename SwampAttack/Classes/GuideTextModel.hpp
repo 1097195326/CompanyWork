@@ -11,16 +11,31 @@
 
 #include "GuideBaseModel.hpp"
 
+
+
+struct GuideTextInfo
+{
+    string  m_id;
+    string  m_text;
+    bool    isAuto;
+    
+};
+
 class GuideTextModel : public GuideBaseModel {
 private:
+    GuideTextInfo m_info;
+    
     
 public:
-    GuideTextModel();
+    GuideTextModel(GuideTextInfo info);
     ~GuideTextModel();
     
     void    active();
-    void    progress();
+    void    progress(float dlay);
     void    finish();
+    
+    void    setText(string _text);
+    
 };
 
 #endif /* GuideTextModel_hpp */

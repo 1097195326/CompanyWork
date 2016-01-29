@@ -22,4 +22,7 @@ UserGuideManager * UserGuideManager::getInstance()
     static UserGuideManager userGuideManager;
     return &userGuideManager;
 }
-
+void UserGuideManager::gameLoop(float dlay)
+{
+    
+}

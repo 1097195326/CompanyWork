@@ -16,6 +16,10 @@ class GameOverScene : public Layer {
 private:
     GameOverStatus  m_overStatus;
     EventListenerTouchOneByOne * m_listener;
+    
+    std::vector<std::string> guideText;
+    Label   * guideTextLabel;
+    int     guideIndex;
 public:
     static Scene * scene(GameOverStatus status, RenderTexture * rt);
     GameOverScene(GameOverStatus status,RenderTexture * rt);
@@ -28,6 +32,8 @@ public:
     void    restartGame(Ref * pSender);
     void    gotoMap(Ref * pSender);
     void    gotoShop(Ref * pSender);
+    
+    void    userGuide(float data);
 };
 
 #endif /* defined(__SwampAttack__GameOverScene__) */

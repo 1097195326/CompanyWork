@@ -13,7 +13,8 @@
 GameUser::GameUser():
 m_time(0),
 m_guanggaoTime(0),
-m_guanggaoAddTime(0)
+m_guanggaoAddTime(0),
+m_isGuiding(false)
 {
     m_user = UserDefault::getInstance();
     if (!m_user->getBoolForKey("first")) {
@@ -175,6 +176,23 @@ bool GameUser::useExpendProp()
         return true;
     }
     return false;
+}
+//--- user guide
+bool GameUser::isHaveGuide()
+{
+    return getBoolForKey("user_guide");
+}
+void GameUser::setIsHaveGuide()
+{
+    setIntForKey("user_guide", true);
+}
+bool GameUser::isGuiding()
+{
+    return m_isGuiding;
+}
+void GameUser::setIsGuiding(bool isOrN)
+{
+    m_isGuiding = isOrN;
 }
 //--- guang gao
 int GameUser::getGuanggaoTime()

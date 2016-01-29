@@ -31,11 +31,14 @@ private:
     Label   *   m_bulletsLabel;
     Label   *   m_upgradeLabel;
     Label   *   m_levelUpLabel;
+    
+    Sprite  *   m_guideShou;
 private:
     void    initGunView();
     void    initUnlockGunView();
     void    initLockGunView();
     void    updateGunView();
+    
     
     void    upGrade(Touch * touch, Event * event);
     void    unLock(Touch * touch, Event * event);
