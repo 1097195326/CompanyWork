@@ -22,6 +22,9 @@ private:
     UserDefault * m_user;
     int     m_userHealth;
     int     m_time;
+    int     m_guanggaoTime;
+    int     m_guanggaoAddTime;
+    bool    m_isGuiding;
 private:
     GameUser();
     ~GameUser();
@@ -51,7 +54,21 @@ public:
     int     getTime();
     void    useHealthTimes();
     void    addHealthToFull();
+    //-- user guide
+    bool    isHaveGuide();
+    void    setIsHaveGuide();
+    bool    isGuiding();
+    void    setIsGuiding(bool isOrN);
+    //--- guang gao ----
+    int     getGuanggaoTime();
+    void    setGuanggaoAddTime(int time);
+    void    setGuanggaoIndex(int index);
+    int     getGuanggaoIndex();
     //--- guan qia ---
+    void    setGuanqiaStarNum(string g_id, int num);
+    int     getGuanqiaStarNum(string g_id);
+    void    setGuanqiaWin(string guanqiaId);
+    bool    isWinGuanqia(string guanqiaId);
     void    unlockGuanqia(string guanqiaId);
     bool    isUnlockGuanqia(string guanqiaId);
     void    setLastSceneIndex(int index);

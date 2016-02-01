@@ -13,6 +13,13 @@
 #include "BulletManager.h"
 #include "DropManager.h"
 #include "GameDirector.h"
+#include "EnemySkill.hpp"
+#include "EnemySkill_kuangbao.hpp"
+#include "EnemySkill_zhaohuan.hpp"
+#include "EnemySkill_fenlie.hpp"
+#include "EnemySkill_yuancheng.hpp"
+#include "EnemySkill_fangyu.hpp"
+#include "EnemySkill_shanbi.hpp"
 
 
 Enemy::Enemy(Json::Value data):
@@ -21,7 +28,9 @@ m_isShowHurt(false),
 m_isWeak(false),
 m_isStop(false),
 m_attackWaitTime(0.0f),
-m_dianjiDlay(0.0f)
+m_dianjiDlay(0.0f),
+m_skill(NULL),
+m_skillType(0)
 {
     m_actionType = atoi(m_data["ActionType"].asString().c_str());
     
@@ -60,6 +69,42 @@ m_dianjiDlay(0.0f)
     m_monsterName = m_data["MonsterName"].asString();
     m_modelId = m_data["ModelId"].asString();
     m_capId = m_data["CapId"].asString();
+    
+    std::string skillID = m_data["SkillID"].asString();
+    if (skillID.length() > 0)
+    {
+        GCCsvHelper * propHelper = _C_M->getCsvHelperByName("enemySkill");
+        Json::Value enemySkillData = propHelper->getJsonData();
+        Json::Value data = enemySkillData[skillID];
+        
+        log("have skill");
+        m_skillType = atoi(data["Type"].asString().c_str());
+        switch (m_skillType) {
+            case 1:
+                m_skill = new EnemySkill_kuangbao(skillID);
+                break;
+            case 2:
+                m_skill = new EnemySkill_zhaohuan(skillID);
+                break;
+            case 3:
+                m_skill = new EnemySkill_fenlie(skillID);
+                break;
+            case 4:
+                m_skill = new EnemySkill_yuancheng(skillID);
+                break;
+            case 5:
+                m_skill = new EnemySkill_fangyu(skillID);
+                break;
+            case 6:
+                m_skill = new EnemySkill_shanbi(skillID);
+                break;
+            default:
+                break;
+        }
+        
+        m_skill->setEnemy(this);
+    }
+    
     m_width = EnemyInfo::getInstance()->getInfoByName(m_modelId).width;
     m_height = EnemyInfo::getInstance()->getInfoByName(m_modelId).height;
     
@@ -98,6 +143,10 @@ m_dianjiDlay(0.0f)
 Enemy::~Enemy()
 {
 //    log("enemy delete");
+    if (m_skill)
+    {
+        delete m_skill;
+    }
 }
 void Enemy::gameLoop(float data){}
 void Enemy::move(){}
@@ -148,14 +197,41 @@ float Enemy::getAttackWaitTime()
 {
     return m_attackWaitTime;
 }
+void Enemy::setPosition(cocos2d::Vec2 point)
+{
+    if (m_actionType == 1) {
+        GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
+        
+        m_point = point;
+        if (m_point.y > gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upline)
+        {
+            m_targetPoint.y = gameMap->enemy_target_buttomPoint.y + gameMap->enemy_target_upline;
+        }else if (m_point.y < gameMap->enemy_target_buttomPoint.y)
+        {
+            m_targetPoint.y = gameMap->enemy_target_buttomPoint.y;
+        }else
+        {
+            m_targetPoint.y = m_point.y;
+        }
+        m_targetPoint.x = gameMap->enemy_target_buttomPoint.x;
+        
+        m_speedV = m_targetPoint - m_point;
+        m_speedV.normalize();
+        m_speedV = m_speedV * m_speedF;
+        
+    }else if (m_actionType == 2)
+    {
+        m_point = point;
+    }
+}
 bool Enemy::isContainsPoint(cocos2d::Rect rect)
 {
-    m_rect = Rect(m_point.x, m_point.y, m_width, m_height);
+    m_rect = Rect(m_point.x - m_width * 0.5, m_point.y, m_width, m_height);
     return m_rect.intersectsRect(rect);
 }
 Rect Enemy::getRect()
 {
-    return Rect(m_point.x, m_point.y, m_width, m_height);
+    return Rect(m_point.x- m_width * 0.5, m_point.y, m_width, m_height);
 }
 void Enemy::hurt(int damage,int index)
 {
@@ -167,6 +243,26 @@ void Enemy::hurt(int damage,int index)
     {
         return;
     }
+    if (isShanbi() || isFangyu())
+    {
+        return;
+    }
+    
+    if (m_skill && m_skill->canActive())
+    {
+        switch (m_skillType) {
+            case 5:
+                setStateFangyu();
+                break;
+            case 6:
+                setStateShanbi();
+                break;
+            default:
+                break;
+        }
+        return;
+    }
+    
     m_health = m_health - damage;
     
     if (!m_isWeak && m_health < m_totalHealth * 0.5) {
@@ -177,7 +273,12 @@ void Enemy::hurt(int damage,int index)
     {
         removeAllBuffS();
         m_status &= e_clear;
-        m_status |= e_dieing;
+        if (m_skillType == 3) {
+            m_status |= e_fenlie;
+        }else
+        {
+            m_status |= e_dieing;
+        }
         m_isShowHurt = false;
         DropManager::getInstance()->dropObject(m_drop, m_point);
         _G_D->addGold(m_gold);
@@ -214,12 +315,37 @@ void Enemy::hurt(int damage)
     {
         return;
     }
+    if (isShanbi() || isFangyu())
+    {
+        return;
+    }
+    if (m_skill && m_skill->canActive())
+    {
+        switch (m_skillType) {
+            case 5:
+                setStateFangyu();
+                break;
+            case 6:
+                setStateShanbi();
+                break;
+            default:
+                break;
+        }
+        return;
+    }
+    
     m_health = m_health - damage;
     if (m_health <= 0)
     {
         removeAllBuffS();
         m_status &= e_clear;
-        m_status |= e_dieing;
+        if (m_skillType == 3) {
+            m_status |= e_fenlie;
+        }else
+        {
+            m_status |= e_dieing;
+        }
+        
         m_isShowHurt = false;
         DropManager::getInstance()->dropObject(m_drop, m_point);
         _G_D->addGold(m_gold);
@@ -247,12 +373,114 @@ void Enemy::hurtJiansu(float su)
     
     m_effectSpeedV += effectSpeedV;
 }
+void Enemy::effectSpeedByPer(float percent)
+{
+    Vec2 effectSpeedV = m_speedV * percent;
+    
+    m_effectSpeedV += effectSpeedV;
+}
 void Enemy::hurtTanfei()
 {
     m_status &= e_clear;
     m_status |= e_tanfei;
+    
+    _G_D->addGold(m_gold);
 }
 //--- view 接口
+void Enemy::setStateClear()
+{
+    m_status &= e_clear;
+}
+bool Enemy::isKuangbao()
+{
+    return m_status & e_kuangbao;
+}
+bool Enemy::isZhaohuan()
+{
+    return m_status & e_zhaohuan;
+}
+void Enemy::zhaohuanCall()
+{
+    m_status &= e_clear;
+    m_status |= e_walk;
+}
+bool Enemy::isRebirth()
+{
+    return m_status & e_rebirth;
+}
+void Enemy::rebirthCall()
+{
+    m_status &= e_clear;
+    m_status |= e_walk;
+}
+bool Enemy::isFenlie()
+{
+    return m_status & e_fenlie;
+}
+void Enemy::fenlieCall()
+{
+    m_status &= e_clear;
+    m_status |= e_die;
+}
+bool Enemy::isFarAttack()
+{
+    return m_status & e_farattack;
+}
+void Enemy::farAttackCall()
+{
+    m_status &= e_clear;
+    m_status |= e_walk;
+    
+    m_skill->doDone();
+}
+bool Enemy::isFangyu()
+{
+    return m_status & e_fangyu;
+}
+bool Enemy::isShanbi()
+{
+    return m_status & e_shanbi;
+}
+void Enemy::setStateKuangbao()
+{
+    setStateClear();
+    m_status |= e_kuangbao;
+}
+void Enemy::setStateZhaohuan()
+{
+    setStateClear();
+    m_status |= e_zhaohuan;
+}
+void Enemy::setStateFenlie()
+{
+    setStateClear();
+    m_status |= e_fenlie;
+}
+void Enemy::setStateFarattack()
+{
+    setStateClear();
+    m_status |= e_farattack;
+}
+void Enemy::setStateFangyu()
+{
+    setStateClear();
+    m_status |= e_fangyu;
+}
+void Enemy::setStateShanbi()
+{
+    setStateClear();
+    m_status |= e_shanbi;
+}
+void Enemy::setStateRebirth()
+{
+    setStateClear();
+    m_status |= e_rebirth;
+}
+void Enemy::setStateWalk()
+{
+    setStateClear();
+    m_status |= e_walk;
+}
 bool Enemy::isTanfei()
 {
     return m_status & e_tanfei;
@@ -310,34 +538,10 @@ bool Enemy::isBoss()
 {
     bool isB = false;
     
-    if (m_id == "200001") {
-        isB = true;
-    }else if (m_id == "200002")
+    int index = (int)m_id.find_first_of('2');
+    if (index == 0)
     {
-        isB = true;
-    }else if (m_id == "200003")
-    {
-        isB = true;
-    }else if (m_id == "200004")
-    {
-        isB = true;
-    }else if (m_id == "200005")
-    {
-        isB = true;
-    }else if (m_id == "200006")
-    {
-        isB = true;
-    }else if (m_id == "200007")
-    {
-        isB = true;
-    }else if (m_id == "200008")
-    {
-        isB = true;
-    }else if (m_id == "200009")
-    {
-        isB = true;
-    }else if (m_id == "200010")
-    {
+//        printf("is booss :%d \n",index);
         isB = true;
     }
     
@@ -506,6 +710,10 @@ float Enemy::getHealthPercent()
     }
     return m_health / m_totalHealth * 100.0f;
 }
+int Enemy::getTotalHealth()
+{
+    return m_totalHealth;
+}
 Vec2 Enemy::getSpeedV()
 {
     return m_speedV;
@@ -530,4 +738,7 @@ string Enemy::getDrop()
 {
     return m_drop;
 }
-
+int Enemy::getSkillType()
+{
+    return m_skillType;
+}

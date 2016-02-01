@@ -40,6 +40,7 @@ m_index(index)
     
 //    log("s_i:%d",s_Indx);
 //    log("g_i:%d",g_Indx);
+    Vec2 guanqiaPoint = guanQia->getGuanqiaPoint();
     
     if (s_Indx == m_sceneIndex && g_Indx == m_index)
     {
@@ -47,7 +48,7 @@ m_index(index)
         spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao2.plist"));
         Action * buttonAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("button_flash",6));
         Sprite * boSpr = Sprite::create();
-        boSpr->setPosition(guanQia->getGuanqiaPoint());
+        boSpr->setPosition(guanqiaPoint);
         addChild(boSpr);
         boSpr->runAction(buttonAction);
     }
@@ -55,19 +56,40 @@ m_index(index)
     m_menuItem = new GameSprite(ImagePath("map_button.png"));
     m_menuItem->m_touchMeCall =CC_CALLBACK_2(MapGuanqiaButton::pressGuanqiaButtonFunc, this);
     m_menuItem->autorelease();
-    m_menuItem->setPosition(guanQia->getGuanqiaPoint());
+    m_menuItem->setPosition(guanqiaPoint);
     addChild(m_menuItem);
 //    Menu * buttonMenu = Menu::create(m_menuItem, NULL);
 //    buttonMenu->setPosition(Point::ZERO);
 //    addChild(buttonMenu);
     
     Sprite * label = Sprite::create(ImagePath(StringUtils::format("map_label%d.png",m_index)));
-    label->setPosition(guanQia->getGuanqiaPoint() + Vec2(0, 6));
+    label->setPosition(guanqiaPoint + Vec2(0, 6));
     addChild(label);
     
     m_lockSprite = Sprite::create(ImagePath("map_buttonLock.png"));
-    m_lockSprite->setPosition(guanQia->getGuanqiaPoint() + Vec2(0, 6));
+    m_lockSprite->setPosition(guanqiaPoint + Vec2(0, 6));
     addChild(m_lockSprite);
+    
+    
+    if (guanQia->isWin())
+    {
+        int starNum = guanQia->getStarNum();
+        for (int i = 1; i <= 3; ++i)
+        {
+            string starName;
+            if (i <= starNum)
+            {
+                starName = "star_light.png";
+            }else
+            {
+                starName = "star_gray.png";
+            }
+            Sprite * star = Sprite::create(ImagePath(starName));
+            star->setPosition(guanqiaPoint + Vec2(-30 + 30 * (i-1), 40 - i%2 * 10));
+            addChild(star);
+        }
+    }
+    
     
     if (guanQia->isUnlock())
     {
@@ -99,7 +121,7 @@ void MapGuanqiaButton::pressGuanqiaButtonFunc(Touch * touch, Event * event)
     {
         umeng::MobClickCpp::startLevel(m_guanqiaId.c_str());
         
-        string musicName = StringUtils::format("sceneMusic%d.mp3",m_sceneIndex);
+        string musicName = StringUtils::format("sceneMusic%d.mp3",(m_sceneIndex - 1) % 3 + 1);
         SimpleAudioEngine::getInstance()->playBackgroundMusic((MusicPath(musicName)).c_str(),true);
         SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.5);
         

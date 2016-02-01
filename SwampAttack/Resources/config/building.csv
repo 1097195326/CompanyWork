@@ -1,8 +1,8 @@
 防御编号,防御名称编号,防御名称,模型编号,模型编号,防御类型,强化等级,强化等级上限,生命,伤害,作用范围,解锁关卡,解锁介绍,解锁价格,防御描述编号,防御描述
 DefenceId[string],DefenceName[string],,ModelId[string],BulletModelId[string],DefenceType[string],StrengthenLevel[int],LimitLevel[string],Hp[int],Damage[int],DamageArea[float],UnlockMission[string],Unlock[string],UnlockGold[string],DefenceDescription[string],
-700001,tid#DefenceName1,木板,building1,,1,0,10,10,,,400002_2,tid#unlock1,20000,tid#DefenceDescription1,为马车增加挡板防御
-700003,tid#DefenceName3,小钢炮,building3,100004,3,0,10,,20,650,400002_7,tid#unlock2,60000,tid#DefenceDescription3,小猴子操作的小炮，能够对陆行怪物造成群体伤害。
-700004,tid#DefenceName4,藤蔓,building4,,4,0,5,,,300,400003_8,tid#unlock3,40000,tid#DefenceDescription4,可以对马车周围目标减速
-700005,tid#DefenceName5,尖刺,building2,,2,0,10,,,,400004_2,tid#unlock4,60000,tid#DefenceDescription5,对路过的敌人造成持续伤害
-700006,tid#DefenceName6,铁板,building6,,1,0,10,,,,400004_5,tid#unlock5,30000,tid#DefenceDescription6,为马车增加一套铁板防御
-700007,tid#DefenceName7,沙袋,building7,,1,0,10,,,,400005_5,tid#unlock6,50000,tid#DefenceDescription7,为马车增加一堆沙袋防御
+700001,tid#DefenceName1,木板,building1,,1,0,10,10,,,400001_8,tid#unlock1,3000,tid#DefenceDescription1,为马车增加挡板防御
+700003,tid#DefenceName3,小钢炮,building3,100004,3,0,10,,20,650,400002_10,tid#unlock2,5000,tid#DefenceDescription3,小猴子操作的小炮，能够对陆行怪物造成群体伤害。
+700004,tid#DefenceName4,藤蔓,building4,,4,0,5,,,300,400003_2,tid#unlock3,8000,tid#DefenceDescription4,可以对马车周围目标减速
+700005,tid#DefenceName5,尖刺,building2,,2,0,10,,,,400004_5,tid#unlock4,10000,tid#DefenceDescription5,对路过的敌人造成持续伤害
+700006,tid#DefenceName6,铁板,building6,,1,0,10,,,,400005_3,tid#unlock5,15000,tid#DefenceDescription6,为马车增加一套铁板防御
+700007,tid#DefenceName7,沙袋,building7,,1,0,10,,,,400006_5,tid#unlock6,20000,tid#DefenceDescription7,为马车增加一堆沙袋防御

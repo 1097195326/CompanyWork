@@ -7,182 +7,182 @@
             <key>zombieking_hurt_on0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{850,2},{170,278}}</string>
+                <string>{{722,2},{162,262}}</string>
                 <key>offset</key>
-                <string>{17,-18}</string>
+                <string>{17,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{97,44},{170,278}}</string>
+                <string>{{101,45},{162,262}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{238,238},{206,300}}</string>
+                <string>{{158,2},{172,282}}</string>
                 <key>offset</key>
-                <string>{14,-8}</string>
+                <string>{-22,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{76,23},{206,300}}</string>
+                <string>{{57,25},{172,282}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{238,2},{234,300}}</string>
+                <string>{{148,296},{176,284}}</string>
                 <key>offset</key>
-                <string>{15,-10}</string>
+                <string>{-1,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{63,25},{234,300}}</string>
+                <string>{{76,23},{176,284}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,616},{234,302}}</string>
+                <string>{{144,586},{178,284}}</string>
                 <key>offset</key>
-                <string>{15,-9}</string>
+                <string>{17,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{63,23},{234,302}}</string>
+                <string>{{93,23},{178,284}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,310},{234,304}}</string>
+                <string>{{290,872},{148,284}}</string>
                 <key>offset</key>
-                <string>{15,-8}</string>
+                <string>{7,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{63,21},{234,304}}</string>
+                <string>{{98,23},{148,284}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{234,306}}</string>
+                <string>{{2,876},{140,286}}</string>
                 <key>offset</key>
-                <string>{15,-7}</string>
+                <string>{6,1}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{63,19},{234,306}}</string>
+                <string>{{101,21},{140,286}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{540,2},{208,308}}</string>
+                <string>{{2,586},{140,288}}</string>
                 <key>offset</key>
-                <string>{14,-6}</string>
+                <string>{9,2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{75,17},{208,308}}</string>
+                <string>{{104,19},{140,288}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{830,282},{182,310}}</string>
+                <string>{{2,296},{144,288}}</string>
                 <key>offset</key>
-                <string>{14,-5}</string>
+                <string>{16,2}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{88,15},{182,310}}</string>
+                <string>{{109,19},{144,288}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{448,724},{184,300}}</string>
+                <string>{{2,2},{154,292}}</string>
                 <key>offset</key>
-                <string>{8,-10}</string>
+                <string>{21,4}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{81,25},{184,300}}</string>
+                <string>{{109,15},{154,292}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{540,212},{218,288}}</string>
+                <string>{{324,582},{180,282}}</string>
                 <key>offset</key>
-                <string>{-11,-16}</string>
+                <string>{5,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{45,37},{218,288}}</string>
+                <string>{{80,25},{180,282}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{540,432},{212,290}}</string>
+                <string>{{504,2},{216,270}}</string>
                 <key>offset</key>
-                <string>{-13,-14}</string>
+                <string>{-11,-7}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{46,34},{212,290}}</string>
+                <string>{{46,37},{216,270}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{238,724},{208,294}}</string>
+                <string>{{498,280},{188,274}}</string>
                 <key>offset</key>
-                <string>{-13,-12}</string>
+                <string>{-25,-5}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{48,30},{208,294}}</string>
+                <string>{{46,33},{188,274}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{238,446},{204,296}}</string>
+                <string>{{332,2},{170,276}}</string>
                 <key>offset</key>
-                <string>{-13,-11}</string>
+                <string>{-32,-4}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{50,28},{204,296}}</string>
+                <string>{{48,31},{170,276}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
             <key>zombieking_walk0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{754,594},{206,298}}</string>
+                <string>{{326,286},{170,280}}</string>
                 <key>offset</key>
-                <string>{-8,-9}</string>
+                <string>{-30,-2}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{54,25},{206,298}}</string>
+                <string>{{50,27},{170,280}}</string>
                 <key>sourceSize</key>
                 <string>{330,330}</string>
             </dict>
@@ -196,7 +196,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:7e4dc9e21e7d70b0aeb7268006ee370f:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:fe256030950db62d87827aba7a00b404:1/1$</string>
             <key>textureFileName</key>
             <string>zombieking1.png</string>
         </dict>

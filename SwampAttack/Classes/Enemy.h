@@ -14,26 +14,33 @@
 #include "json/json.h"
 
 #include "GameBuff.h"
-
+#include "EnemySkill.hpp"
 
 using namespace std;
 
 enum EnemyStatus
 {
-    e_clear   = 0b00000000000,
-    e_waiting = 0b00000000001,
-    e_dieing  = 0b00000000010,
-    e_die     = 0b00000000100,
-    e_walk    = 0b00000001000,
-    e_wanderF = 0b00000010000,
-    e_wanderB = 0b00000100000,
-    e_hurt1   = 0b00001000000,
-    e_hurt2   = 0b00010000000,
-    e_hurt3   = 0b00100000000,
-    e_attack  = 0b01000000000,
-    e_canDel  = 0b10000000000,
-    e_dianji  = 0b100000000000,
-    e_tanfei  = 0b1000000000000,
+    e_clear   = 0 << 0,
+    e_waiting = 1 << 0,
+    e_dieing  = 1 << 1,
+    e_die     = 1 << 2,
+    e_walk    = 1 << 3,
+    e_wanderF = 1 << 4,
+    e_wanderB = 1 << 5,
+    e_hurt1   = 1 << 6,
+    e_hurt2   = 1 << 7,
+    e_hurt3   = 1 << 8,
+    e_attack  = 1 << 9,
+    e_canDel  = 1 << 10,
+    e_dianji  = 1 << 11,
+    e_tanfei  = 1 << 12,
+    e_kuangbao= 1 << 13,
+    e_zhaohuan= 1 << 14,
+    e_fenlie  = 1 << 15,
+    e_farattack=1 << 16,
+    e_fangyu  = 1 << 17,
+    e_shanbi  = 1 << 18,
+    e_rebirth = 1 << 19,
     
 };
 
@@ -56,6 +63,8 @@ protected:
     
     float   m_attackWaitTime;
     
+    EnemySkill * m_skill;
+    
     std::list<GameBuff *>   m_buffData;
     
 public:
@@ -69,6 +78,7 @@ public:
     virtual void    effectAction(Vec2 point);
     void    hurtYun(float dlay);
     void    hurtJiansu(float su);
+    void    effectSpeedByPer(float percent);
     void    hurtTanfei();
     void    addBuff(GameBuff * buff);
     void    moveBuff(GameBuff * buff);
@@ -76,6 +86,8 @@ public:
     std::list<GameBuff *>  getBuffData();
     void    removeAllBuffS();
     float   getAttackWaitTime();
+    
+    void    setPosition(Vec2 point);
 protected:
     virtual void    move();
     virtual bool    computeIfWander();
@@ -104,6 +116,8 @@ protected:
 
     Vec2    m_point;
     Vec2    m_targetPoint;
+    
+    int     m_skillType;
 //    Vec2    m_maxSpeed;
 //    Vec2    m_force;
 //    float   m_mass;
@@ -114,6 +128,30 @@ public:
     void    gameLoop(float data);
 public:
     //--- view 接口
+    // -- skill
+    bool    isKuangbao();
+    bool    isZhaohuan();
+    void    zhaohuanCall();
+    bool    isRebirth();
+    void    rebirthCall();
+    bool    isFenlie();
+    void    fenlieCall();
+    bool    isFarAttack();
+    void    farAttackCall();
+    bool    isFangyu();
+    bool    isShanbi();
+    void    setStateKuangbao();
+    void    setStateZhaohuan();
+    void    setStateFenlie();
+    void    setStateFarattack();
+    void    setStateFangyu();
+    void    setStateShanbi();
+    void    clearStateShanbi();
+    void    setStateRebirth();
+    void    setStateWalk();
+    
+    void    setStateClear();
+    
     bool    isTanfei();
     bool    isDianji();
     bool    isWeak();
@@ -153,12 +191,15 @@ public:
     int     getLevel();
     int     getHealthValue();
     float   getHealthPercent();
+    int     getTotalHealth();
     Vec2    getSpeedV();
     float   getSpeedF();
     float   getDamage();
     float   getAttackSpeed();
     int     getGoldForDied();
     string  getDrop();
+    
+    int     getSkillType();
     
     Rect    getRect();
 };

@@ -23,8 +23,8 @@ private:
 public:
     static DropManager * getInstance();
     
-    void    dropObject(string objId,Vec2 point);
-    void    addDropNum();
+    void    dropObject(string objId,Vec2 point,bool isGuanqia = false);
+    void    addDropNum(int num);
     void    minusDropNum();
     int     getDropNum();
     

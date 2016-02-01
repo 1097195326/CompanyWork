@@ -22,6 +22,10 @@ void FlyEnemy::gameLoop(float data)
     {
         return;
     }
+    if (m_skill)
+    {
+        m_skill->run(data);
+    }
     if (m_status == e_waiting)
     {
         dlay += data;

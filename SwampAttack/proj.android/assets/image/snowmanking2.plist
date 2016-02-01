@@ -7,197 +7,184 @@
             <key>snowmanking_down0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,724},{266,246}}</string>
+                <string>{{542,2},{262,268}}</string>
                 <key>offset</key>
-                <string>{1,-1}</string>
+                <string>{31,-14}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{118,78},{266,246}}</string>
+                <string>{{125,80},{262,268}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{274,486},{262,242}}</string>
+                <string>{{274,2},{264,266}}</string>
                 <key>offset</key>
-                <string>{6,-2}</string>
+                <string>{37,-15}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{125,81},{262,242}}</string>
+                <string>{{130,82},{264,266}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{290,240},{264,244}}</string>
+                <string>{{2,2},{270,266}}</string>
                 <key>offset</key>
-                <string>{12,-3}</string>
+                <string>{46,-15}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{130,81},{264,244}}</string>
+                <string>{{136,82},{270,266}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,478},{270,244}}</string>
+                <string>{{274,268},{250,266}}</string>
                 <key>offset</key>
-                <string>{21,-5}</string>
+                <string>{47,-15}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{136,83},{270,244}}</string>
+                <string>{{147,82},{250,266}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{538,486},{250,222}}</string>
+                <string>{{2,270},{240,268}}</string>
                 <key>offset</key>
-                <string>{22,7}</string>
+                <string>{55,-14}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{147,82},{250,222}}</string>
+                <string>{{160,80},{240,268}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{556,240},{240,204}}</string>
+                <string>{{240,520},{236,270}}</string>
                 <key>offset</key>
-                <string>{30,18}</string>
+                <string>{57,-13}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{160,80},{240,204}}</string>
+                <string>{{164,78},{236,270}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{762,588},{236,208}}</string>
+                <string>{{780,580},{240,252}}</string>
                 <key>offset</key>
-                <string>{32,18}</string>
+                <string>{53,-22}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{164,78},{236,208}}</string>
+                <string>{{158,96},{240,252}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{514,738},{240,218}}</string>
+                <string>{{512,562},{266,238}}</string>
                 <key>offset</key>
-                <string>{28,-4}</string>
+                <string>{49,-29}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{158,95},{240,218}}</string>
+                <string>{{141,110},{266,238}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{572,2},{266,234}}</string>
+                <string>{{2,512},{272,236}}</string>
                 <key>offset</key>
-                <string>{24,-26}</string>
+                <string>{50,-30}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{141,109},{266,234}}</string>
+                <string>{{139,112},{272,236}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{298,2},{272,236}}</string>
+                <string>{{780,292},{286,236}}</string>
                 <key>offset</key>
-                <string>{25,-30}</string>
+                <string>{48,-32}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{139,112},{272,236}}</string>
+                <string>{{130,114},{286,236}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,240},{286,236}}</string>
+                <string>{{542,266},{294,236}}</string>
                 <key>offset</key>
-                <string>{23,-32}</string>
+                <string>{48,-33}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{130,114},{286,236}}</string>
+                <string>{{126,115},{294,236}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{294,236}}</string>
+                <string>{{812,2},{288,186}}</string>
                 <key>offset</key>
-                <string>{23,-33}</string>
+                <string>{44,-62}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{126,115},{294,236}}</string>
+                <string>{{125,169},{288,186}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_down0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{762,298},{288,184}}</string>
+                <string>{{508,834},{294,168}}</string>
                 <key>offset</key>
-                <string>{19,-63}</string>
+                <string>{35,-76}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{125,171},{288,184}}</string>
+                <string>{{113,192},{294,168}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
-            </dict>
-            <key>snowmanking_down0014.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{840,2},{294,166}}</string>
-                <key>offset</key>
-                <string>{10,-77}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{113,194},{294,166}}</string>
-                <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
             <key>snowmanking_hurt_on0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{270,730},{236,242}}</string>
+                <string>{{240,758},{236,266}}</string>
                 <key>offset</key>
-                <string>{-69,3}</string>
+                <string>{25,-15}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{63,76},{236,242}}</string>
+                <string>{{132,82},{236,266}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{450,400}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -209,7 +196,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:7464afe67a08d3606a2bbec268269c4f:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:74561e36445afc3b3c644fd4b680f6b2:1/1$</string>
             <key>textureFileName</key>
             <string>snowmanking2.png</string>
         </dict>

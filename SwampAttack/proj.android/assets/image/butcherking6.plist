@@ -7,59 +7,46 @@
             <key>butcherking_attack0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{406,264}}</string>
+                <string>{{2,2},{406,260}}</string>
                 <key>offset</key>
-                <string>{-31,-55}</string>
+                <string>{-41,-47}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{41,148},{406,264}}</string>
+                <string>{{31,142},{406,260}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
             <key>butcherking_attack0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{410,2},{406,250}}</string>
+                <string>{{2,264},{404,258}}</string>
                 <key>offset</key>
-                <string>{-32,-57}</string>
+                <string>{-43,-48}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{40,157},{406,250}}</string>
+                <string>{{30,144},{404,258}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
             <key>butcherking_attack0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,268},{404,244}}</string>
+                <string>{{2,524},{366,266}}</string>
                 <key>offset</key>
-                <string>{-34,-57}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{39,160},{404,244}}</string>
-                <key>sourceSize</key>
-                <string>{550,450}</string>
-            </dict>
-            <key>butcherking_attack0012.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{248,410},{366,242}}</string>
-                <key>offset</key>
-                <string>{-33,-48}</string>
+                <string>{-42,-44}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{59,152},{366,242}}</string>
+                <string>{{50,136},{366,266}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
-            <key>butcherking_down0011.png</key>
+            <key>butcherking_down0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{248,654},{280,264}}</string>
+                <string>{{754,334},{280,264}}</string>
                 <key>offset</key>
                 <string>{15,-55}</string>
                 <key>rotated</key>
@@ -69,23 +56,23 @@
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
-            <key>butcherking_down0012.png</key>
+            <key>butcherking_down0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,674},{328,230}}</string>
+                <string>{{2,792},{328,230}}</string>
                 <key>offset</key>
-                <string>{-3,-85}</string>
+                <string>{-3,-86}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{108,195},{328,230}}</string>
+                <string>{{108,196},{328,230}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
-            <key>butcherking_down0013.png</key>
+            <key>butcherking_down0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{514,762},{318,232}}</string>
+                <string>{{370,560},{318,232}}</string>
                 <key>offset</key>
                 <string>{4,-73}</string>
                 <key>rotated</key>
@@ -95,29 +82,55 @@
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
-            <key>butcherking_down0014.png</key>
+            <key>butcherking_down0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{662,2},{310,236}}</string>
+                <string>{{690,616},{310,236}}</string>
                 <key>offset</key>
                 <string>{11,-63}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{131,170},{310,236}}</string>
+                <key>sourceSize</key>
+                <string>{550,450}</string>
+            </dict>
+            <key>butcherking_hurt_heavy0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{762,2},{330,246}}</string>
+                <key>offset</key>
+                <string>{-57,-54}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{53,156},{330,246}}</string>
+                <key>sourceSize</key>
+                <string>{550,450}</string>
+            </dict>
+            <key>butcherking_walk0013.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{408,280},{344,278}}</string>
+                <key>offset</key>
+                <string>{-22,-38}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{81,124},{344,278}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
             <key>butcherking_walk0014.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{616,410},{350,252}}</string>
+                <string>{{410,2},{350,276}}</string>
                 <key>offset</key>
-                <string>{-22,-28}</string>
+                <string>{-22,-39}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{78,127},{350,252}}</string>
+                <string>{{78,126},{350,276}}</string>
                 <key>sourceSize</key>
                 <string>{550,450}</string>
             </dict>
@@ -131,7 +144,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f4bc9b7a30709b9af20ac48d443cf985:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:3b726adcaba4d561525706b168217d62:1/1$</string>
             <key>textureFileName</key>
             <string>butcherking6.png</string>
         </dict>

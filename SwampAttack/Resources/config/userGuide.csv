@@ -1,0 +1,6 @@
+编号,引导编号,对话内容
+Id[sting],GuideID[string],GuideName[string]
+100001,tid#Guide1,引导对话1
+100002,tid#Guide2,引导对话2
+100003,tid#Guide3,引导对话3
+100004,tid#Guide4,引导对话4

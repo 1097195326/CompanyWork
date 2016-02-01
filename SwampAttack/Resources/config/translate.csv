@@ -68,53 +68,65 @@ tid#WeaponDescription12,圣山上最灼热的火种会随着你喷涌，足以�
 tid#MissionName1,远方而来的朋友,Friends from afar
 tid#MissionName2,摇摆的身影,Swing figure
 tid#MissionName3,一大片尸兄,A large body of dead brother
-tid#MissionName4,没完没了？,Endless?
-tid#MissionName5,陵墓中的怒吼,The roar of the mausoleum
+tid#MissionName4,那是什么？,Endless?
+tid#MissionName5,快速消灭他们,The roar of the mausoleum
 tid#MissionName6,夜空突袭,Night raid
-tid#MissionName7,那是什么？,What is that?
-tid#MissionName8,小心脚下,Mind Your Step
-tid#MissionName9,快速消灭他们,Quickly destroy them
-tid#MissionName10,沼泽地的恐怖,The horror of the swamp
-tid#MissionName11,锅盖的力量,Power of equipment
-tid#MissionName12,被包围了,Surrounded by
-tid#MissionName13,啪！啪！啪！,Pa! Pa! Pa!
-tid#MissionName14,火力全开,Firepower
-tid#MissionName15,森林之王,King of the forest
-tid#MissionName16,在希望的田野上,In the field of hope
-tid#MissionName17,恐怖来袭,Terrorist attack
-tid#MissionName18,不平静的夜,A quiet day
-tid#MissionName19,胜利就在前方,Victory is ahead
-tid#MissionName20,让我们一起摇摆,Let us swing together
-tid#MissionName21,埋骨之地,The place of burial
-tid#MissionName22,身后的追击者,Behind the chase
-tid#MissionName23,深林中的猎手,A hunter in a deep forest
-tid#MissionName24,黑影,Shadow
-tid#MissionName25,骨架,Skeleton
-tid#MissionName26,阻挠者,Obstruction
-tid#MissionName27,一波的怪物,A wave of monsters
-tid#MissionName28,一大波怪物,A big wave of monsters
-tid#MissionName29,又来一大波怪物,And a big wave of monsters
-tid#MissionName30,一条小路,A path
-tid#MissionName31,迷失之地,Lost ground
-tid#MissionName32,长着翅膀的怪物,A monster with wings
-tid#MissionName33,南瓜绅士的来了,The gentleman's coming.
-tid#MissionName34,狼又来了,The wolf came again.
-tid#MissionName35,这是地狱吗,Is this hell
-tid#MissionName36,大脚印,Big footprints
-tid#MissionName37,变体的恶魔,Variant of the demon
-tid#MissionName38,要继续前进吗,Do you want to keep going.
-tid#MissionName39,巨盾,Giant shield
-tid#MissionName40,深山中的野人王,The mountains of the savage King
-tid#MissionName41,远程射击,Remote shooting
-tid#MissionName42,骷髅和僵尸们,Skeletons and Zombies
-tid#MissionName43,嗡嗡嗡,Hum
-tid#MissionName44,小心杀人蜂,Be careful of the killer bee
-tid#MissionName45,未知生物,Unknown organism
-tid#MissionName46,憎恶,Abhor
-tid#MissionName47,末日余生,The end of the day
-tid#MissionName48,亡灵大军来了,The army of the dead
-tid#MissionName49,吸血鬼,Vampires
-tid#MissionName50,恶魔领域,Demon realm
+tid#MissionName7,啪！啪！啪！,What is that?
+tid#MissionName8,巡逻队,Mind Your Step
+tid#MissionName9,田野上的人影,Quickly destroy them
+tid#MissionName10,后面有追兵,The horror of the swamp
+tid#MissionName11,强化兵来了,Power of equipment
+tid#MissionName12,小心快跑,Surrounded by
+tid#MissionName13,炸弹要炸了,Pa! Pa! Pa!
+tid#MissionName14,被包围了,Firepower
+tid#MissionName15,陵墓中的怒吼,King of the forest
+tid#MissionName16,这个僵尸好硬,In the field of hope
+tid#MissionName17,跑的快,Terrorist attack
+tid#MissionName18,沼泽地的恐怖,A quiet day
+tid#MissionName19,这是蝙蝠吗,Victory is ahead
+tid#MissionName20,僵尸王,Let us swing together
+tid#MissionName21,强力火力,The place of burial
+tid#MissionName22,火力全开,Behind the chase
+tid#MissionName23,躲避掩体,A hunter in a deep forest
+tid#MissionName24,冲出去,Shadow
+tid#MissionName25,稻草王,Skeleton
+tid#MissionName26,不是蝙蝠是恶魔,Obstruction
+tid#MissionName27,追来的恶魔,A wave of monsters
+tid#MissionName28,召唤师,A big wave of monsters
+tid#MissionName29,突然好多蝙蝠,And a big wave of monsters
+tid#MissionName30,红狼首领,A path
+tid#MissionName31,南瓜头杀手,Lost ground
+tid#MissionName32,看不见打的准,A monster with wings
+tid#MissionName33,狼人来袭,The gentleman's coming.
+tid#MissionName34,嗷！嗷！嗷！,The wolf came again.
+tid#MissionName35,黄金骷髅王,Is this hell
+tid#MissionName36,深山雪人,Big footprints
+tid#MissionName37,大脚怪又来了,Variant of the demon
+tid#MissionName38,南瓜头变绅士了,Do you want to keep going.
+tid#MissionName39,放黑枪的南瓜,Giant shield
+tid#MissionName40,红狼王来了,The mountains of the savage King
+tid#MissionName41,密林穿梭,Remote shooting
+tid#MissionName42,高级恶魔的突袭,Skeletons and Zombies
+tid#MissionName43,铁甲狼人,Hum
+tid#MissionName44,好硬的甲,Be careful of the killer bee
+tid#MissionName45,大恶魔领域,Unknown organism
+tid#MissionName46,深林中的猎手,Abhor
+tid#MissionName47,弓箭远程射击,The end of the day
+tid#MissionName48,巨盾,The army of the dead
+tid#MissionName49,这是地狱吗,Vampires
+tid#MissionName50,深山雪人王,Demon realm
+tid#MissionName51,不平静的一天,
+tid#MissionName52,吸血鬼,
+tid#MissionName53,要继续前进吗,
+tid#MissionName54,嗡嗡嗡,
+tid#MissionName55,残忍的憎恶王,
+tid#MissionName56,胜利就在前方,
+tid#MissionName57,挡路的肉山,
+tid#MissionName58,亡灵大军来了,
+tid#MissionName59,恶魔领域,
+tid#MissionName60,末日余生,
+,,
+,,
 ,,
 ,,
 tid#ItemName1,雷管,Detonator
@@ -185,26 +197,29 @@ tid#Scene2,教皇针对全世界发布召唤，号召英雄们对抗魔军,
 tid#Scene3,悬赏令传到了恶魔猎人的故乡，他决心再次终结恶魔的野心,
 tid#Scene4,几个世纪的宿命对抗又将开始。,
 ,,
-tid#unlock1,第12关解锁,
-tid#unlock2,第17关解锁,
-tid#unlock3,第38关解锁,
-tid#unlock4,第42关解锁,
-tid#unlock5,第45关解锁,
-tid#unlock6,第50关解锁,
+tid#unlock1,第8关解锁,
+tid#unlock2,第20关解锁,
+tid#unlock3,第22关解锁,
+tid#unlock4,第35关解锁,
+tid#unlock5,第43关解锁,
+tid#unlock6,第55关解锁,
 ,,
 tid#unlock7,第1关解锁,
-tid#unlock8,第2关解锁,
-tid#unlock9,第3关解锁,
-tid#unlock10,第4关解锁,
-tid#unlock11,第8关解锁,
-tid#unlock12,第32关解锁,
-tid#unlock13,第40关解锁,
+tid#unlock8,第3关解锁,
+tid#unlock9,第10关解锁,
+tid#unlock10,第12关解锁,
+tid#unlock11,第17关解锁,
+tid#unlock12,第25关解锁,
+tid#unlock13,第45关解锁,
 ,,
-tid#unlock14,第5关解锁,
-tid#unlock15,第10关解锁,
+tid#unlock15,第5关解锁,
 tid#unlock16,第15关解锁,
-tid#unlock17,第20关解锁,
-tid#unlock18,第25关解锁,
-tid#unlock19,第30关解锁,
+tid#unlock17,第30关解锁,
+tid#unlock18,第40关解锁,
+tid#unlock19,第50关解锁,
 ,,
-tid#Energy1,花费1元补满,
+tid#Energy1,补满体力,
+,,
+tid#Guide1,兄弟，进入市场来升级武器装备吧,
+tid#Guide2,可以通过升级枪械来获取更强大火力,
+tid#Guide3,枪械弹药也要多多购买携带,

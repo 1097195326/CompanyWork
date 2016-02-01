@@ -11,7 +11,11 @@ LOCAL_MODULE := cocos2dcpp_shared
 LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
+<<<<<<< HEAD
 				   hellocpp/UCSdkJniHelper.cpp \
+=======
+				   ../../Classes/AdShowLayer.cpp \
+>>>>>>> master
 				   ../../Classes/AlertTextTool.cpp \
 				   ../../Classes/AppDelegate.cpp \
 				   ../../Classes/BaseUtil.cpp \
@@ -46,6 +50,13 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/EnemyInfo.cpp \
 				   ../../Classes/EnemyManager.cpp \
 				   ../../Classes/EnemyProgressBar.cpp \
+				   ../../Classes/EnemySkill_fangyu.cpp \
+				   ../../Classes/EnemySkill_fenlie.cpp \
+				   ../../Classes/EnemySkill_kuangbao.cpp \
+				   ../../Classes/EnemySkill_shanbi.cpp \
+				   ../../Classes/EnemySkill_yuancheng.cpp \
+				   ../../Classes/EnemySkill_zhaohuan.cpp \
+				   ../../Classes/EnemySkill.cpp \
 				   ../../Classes/EnemySprite.cpp \
 				   ../../Classes/ExpendObject.cpp \
 				   ../../Classes/FireBulletSprite.cpp \
@@ -82,6 +93,8 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/GameUser.cpp \
 				   ../../Classes/GameVerticalScrollHeadlerView.cpp \
 				   ../../Classes/GameVerticalScrollView.cpp \
+				   ../../Classes/GuanggaoManager.cpp \
+				   ../../Classes/GuanggaoModel.cpp \
 				   ../../Classes/GuanQiaManager.cpp \
 				   ../../Classes/GuanQiaModel.cpp \
 				   ../../Classes/Gun.cpp \

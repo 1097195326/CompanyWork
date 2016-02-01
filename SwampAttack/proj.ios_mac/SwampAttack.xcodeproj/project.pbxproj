@@ -37,7 +37,7 @@
 		5087E76917EB910900C73F5D /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		5087E76A17EB910900C73F5D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		5087E76B17EB910900C73F5D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
-		5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77217EB970100C73F5D /* Default-568h@2x.png */; };
+		5087E77D17EB970100C73F5D /* Default-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77217EB970100C73F5D /* Default-568@2x.png */; };
 		5087E77E17EB970100C73F5D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77317EB970100C73F5D /* Default.png */; };
 		5087E77F17EB970100C73F5D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77417EB970100C73F5D /* Default@2x.png */; };
 		5087E78017EB970100C73F5D /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77517EB970100C73F5D /* Icon-114.png */; };
@@ -59,7 +59,17 @@
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
+		8D1DFB171C57610E003B3D44 /* UserGuideManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB151C57610E003B3D44 /* UserGuideManager.cpp */; };
+		8D1DFB1A1C576134003B3D44 /* GuideBaseModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB181C576134003B3D44 /* GuideBaseModel.cpp */; };
+		8D1DFB1D1C57616B003B3D44 /* GuideClickModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB1B1C57616B003B3D44 /* GuideClickModel.cpp */; };
+		8D1DFB231C5761AA003B3D44 /* GuideTextModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB211C5761AA003B3D44 /* GuideTextModel.cpp */; };
+		8D1DFB261C5763A1003B3D44 /* GuideCompositeModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB241C5763A1003B3D44 /* GuideCompositeModel.cpp */; };
+		8D1DFB291C576429003B3D44 /* GuideCompositeSequenceModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB271C576429003B3D44 /* GuideCompositeSequenceModel.cpp */; };
+		8D1DFB2C1C576549003B3D44 /* GuideCompositeApposeModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DFB2A1C576549003B3D44 /* GuideCompositeApposeModel.cpp */; };
 		8D3F153D1BDF637E00CD7F67 /* HealthObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D3F153B1BDF637E00CD7F67 /* HealthObject.cpp */; };
+		8D458D281BEB689200B5EFC5 /* Default-768h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D458D271BEB689200B5EFC5 /* Default-768h@3x.png */; };
+		8D45D5631BEC7E79008A21E3 /* Icon-87.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D45D5621BEC7E79008A21E3 /* Icon-87.png */; };
+		8D45D5651BEC7E83008A21E3 /* Icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D45D5641BEC7E83008A21E3 /* Icon-180.png */; };
 		8D51DC551B3A816F0053EA8A /* DropModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC531B3A816F0053EA8A /* DropModel.cpp */; };
 		8D51DC581B3A817C0053EA8A /* DropManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC561B3A817C0053EA8A /* DropManager.cpp */; };
 		8D51DC5B1B3A907C0053EA8A /* MoneyManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC591B3A907C0053EA8A /* MoneyManager.cpp */; };
@@ -67,6 +77,17 @@
 		8D51DC611B3A99630053EA8A /* DropMoneySprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D51DC5F1B3A99630053EA8A /* DropMoneySprite.cpp */; };
 		8D5DAFB81BE9F91C003050CA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5DAFB71BE9F91C003050CA /* StoreKit.framework */; };
 		8D5DAFBA1BE9F927003050CA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5DAFB91BE9F927003050CA /* GameKit.framework */; };
+		8D6060BB1C5B38E100E4E616 /* UserGuideLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6060B91C5B38E100E4E616 /* UserGuideLayer.cpp */; };
+		8D6D883E1C292C59009A2D26 /* EnemySkill_kuangbao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D883C1C292C59009A2D26 /* EnemySkill_kuangbao.cpp */; };
+		8D6D88411C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D883F1C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp */; };
+		8D6D88441C292C7F009A2D26 /* EnemySkill_fenlie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D88421C292C7F009A2D26 /* EnemySkill_fenlie.cpp */; };
+		8D6D884D1C292CC6009A2D26 /* EnemySkill_shanbi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D884B1C292CC6009A2D26 /* EnemySkill_shanbi.cpp */; };
+		8D6D88501C292CD4009A2D26 /* EnemySkill_yuancheng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D884E1C292CD4009A2D26 /* EnemySkill_yuancheng.cpp */; };
+		8D6D88531C292EC0009A2D26 /* EnemySkill_fangyu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D88511C292EC0009A2D26 /* EnemySkill_fangyu.cpp */; };
+		8D766EF31C44B9D000DE6B91 /* GuanggaoModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D766EF11C44B9D000DE6B91 /* GuanggaoModel.cpp */; };
+		8D766EF61C44B9E200DE6B91 /* GuanggaoManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D766EF41C44B9E200DE6B91 /* GuanggaoManager.cpp */; };
+		8D766EF91C451E6400DE6B91 /* AdShowLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D766EF71C451E6400DE6B91 /* AdShowLayer.cpp */; };
+		8D7FD8551C27E9920003E821 /* EnemySkill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D7FD8531C27E9920003E821 /* EnemySkill.cpp */; };
 		8DBB98891ACD520C008C804D /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB987F1ACD520C008C804D /* json_internalarray.inl */; };
 		8DBB988A1ACD520C008C804D /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 8DBB98801ACD520C008C804D /* json_internalmap.inl */; };
 		8DBB988B1ACD520C008C804D /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB98811ACD520C008C804D /* json_reader.cpp */; };
@@ -262,7 +283,7 @@
 		503AE11117EB99EE00D1A890 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
 		503AE11A17EB9C5A00D1A890 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		5087E76F17EB910900C73F5D /* SwampAttack Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwampAttack Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5087E77217EB970100C73F5D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5087E77217EB970100C73F5D /* Default-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568@2x.png"; sourceTree = "<group>"; };
 		5087E77317EB970100C73F5D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5087E77417EB970100C73F5D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5087E77517EB970100C73F5D /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
@@ -284,8 +305,29 @@
 		521A8E6219F0C34300D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		8D1DFB151C57610E003B3D44 /* UserGuideManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserGuideManager.cpp; sourceTree = "<group>"; };
+		8D1DFB161C57610E003B3D44 /* UserGuideManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UserGuideManager.hpp; sourceTree = "<group>"; };
+		8D1DFB181C576134003B3D44 /* GuideBaseModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideBaseModel.cpp; sourceTree = "<group>"; };
+		8D1DFB191C576134003B3D44 /* GuideBaseModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideBaseModel.hpp; sourceTree = "<group>"; };
+		8D1DFB1B1C57616B003B3D44 /* GuideClickModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideClickModel.cpp; sourceTree = "<group>"; };
+		8D1DFB1C1C57616B003B3D44 /* GuideClickModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideClickModel.hpp; sourceTree = "<group>"; };
+		8D1DFB211C5761AA003B3D44 /* GuideTextModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideTextModel.cpp; sourceTree = "<group>"; };
+		8D1DFB221C5761AA003B3D44 /* GuideTextModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideTextModel.hpp; sourceTree = "<group>"; };
+		8D1DFB241C5763A1003B3D44 /* GuideCompositeModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideCompositeModel.cpp; sourceTree = "<group>"; };
+		8D1DFB251C5763A1003B3D44 /* GuideCompositeModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideCompositeModel.hpp; sourceTree = "<group>"; };
+		8D1DFB271C576429003B3D44 /* GuideCompositeSequenceModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideCompositeSequenceModel.cpp; sourceTree = "<group>"; };
+		8D1DFB281C576429003B3D44 /* GuideCompositeSequenceModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideCompositeSequenceModel.hpp; sourceTree = "<group>"; };
+		8D1DFB2A1C576549003B3D44 /* GuideCompositeApposeModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideCompositeApposeModel.cpp; sourceTree = "<group>"; };
+		8D1DFB2B1C576549003B3D44 /* GuideCompositeApposeModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideCompositeApposeModel.hpp; sourceTree = "<group>"; };
 		8D3F153B1BDF637E00CD7F67 /* HealthObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HealthObject.cpp; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		8D3F153C1BDF637E00CD7F67 /* HealthObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthObject.h; sourceTree = "<group>"; };
+=======
+		8D3F153C1BDF637E00CD7F67 /* HealthObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HealthObject.hpp; sourceTree = "<group>"; };
+		8D458D271BEB689200B5EFC5 /* Default-768h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-768h@3x.png"; sourceTree = "<group>"; };
+		8D45D5621BEC7E79008A21E3 /* Icon-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-87.png"; sourceTree = "<group>"; };
+		8D45D5641BEC7E83008A21E3 /* Icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-180.png"; sourceTree = "<group>"; };
+>>>>>>> master
 		8D51DC531B3A816F0053EA8A /* DropModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropModel.cpp; sourceTree = "<group>"; };
 		8D51DC541B3A816F0053EA8A /* DropModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropModel.h; sourceTree = "<group>"; };
 		8D51DC561B3A817C0053EA8A /* DropManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropManager.cpp; sourceTree = "<group>"; };
@@ -298,6 +340,28 @@
 		8D51DC601B3A99630053EA8A /* DropMoneySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropMoneySprite.h; sourceTree = "<group>"; };
 		8D5DAFB71BE9F91C003050CA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8D5DAFB91BE9F927003050CA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		8D6060B91C5B38E100E4E616 /* UserGuideLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserGuideLayer.cpp; sourceTree = "<group>"; };
+		8D6060BA1C5B38E100E4E616 /* UserGuideLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UserGuideLayer.hpp; sourceTree = "<group>"; };
+		8D6D883C1C292C59009A2D26 /* EnemySkill_kuangbao.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_kuangbao.cpp; sourceTree = "<group>"; };
+		8D6D883D1C292C59009A2D26 /* EnemySkill_kuangbao.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_kuangbao.hpp; sourceTree = "<group>"; };
+		8D6D883F1C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_zhaohuan.cpp; sourceTree = "<group>"; };
+		8D6D88401C292C6B009A2D26 /* EnemySkill_zhaohuan.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_zhaohuan.hpp; sourceTree = "<group>"; };
+		8D6D88421C292C7F009A2D26 /* EnemySkill_fenlie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_fenlie.cpp; sourceTree = "<group>"; };
+		8D6D88431C292C7F009A2D26 /* EnemySkill_fenlie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_fenlie.hpp; sourceTree = "<group>"; };
+		8D6D884B1C292CC6009A2D26 /* EnemySkill_shanbi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_shanbi.cpp; sourceTree = "<group>"; };
+		8D6D884C1C292CC6009A2D26 /* EnemySkill_shanbi.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_shanbi.hpp; sourceTree = "<group>"; };
+		8D6D884E1C292CD4009A2D26 /* EnemySkill_yuancheng.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_yuancheng.cpp; sourceTree = "<group>"; };
+		8D6D884F1C292CD4009A2D26 /* EnemySkill_yuancheng.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_yuancheng.hpp; sourceTree = "<group>"; };
+		8D6D88511C292EC0009A2D26 /* EnemySkill_fangyu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_fangyu.cpp; sourceTree = "<group>"; };
+		8D6D88521C292EC0009A2D26 /* EnemySkill_fangyu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_fangyu.hpp; sourceTree = "<group>"; };
+		8D766EF11C44B9D000DE6B91 /* GuanggaoModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuanggaoModel.cpp; sourceTree = "<group>"; };
+		8D766EF21C44B9D000DE6B91 /* GuanggaoModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuanggaoModel.hpp; sourceTree = "<group>"; };
+		8D766EF41C44B9E200DE6B91 /* GuanggaoManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuanggaoManager.cpp; sourceTree = "<group>"; };
+		8D766EF51C44B9E200DE6B91 /* GuanggaoManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuanggaoManager.hpp; sourceTree = "<group>"; };
+		8D766EF71C451E6400DE6B91 /* AdShowLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdShowLayer.cpp; sourceTree = "<group>"; };
+		8D766EF81C451E6400DE6B91 /* AdShowLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AdShowLayer.hpp; sourceTree = "<group>"; };
+		8D7FD8531C27E9920003E821 /* EnemySkill.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill.cpp; sourceTree = "<group>"; };
+		8D7FD8541C27E9920003E821 /* EnemySkill.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill.hpp; sourceTree = "<group>"; };
 		8DBB98781ACD520C008C804D /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		8DBB98791ACD520C008C804D /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		8DBB987A1ACD520C008C804D /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
@@ -740,13 +804,16 @@
 			children = (
 				521A8E6219F0C34300D177D7 /* Default-667h@2x.png */,
 				521A8E6319F0C34300D177D7 /* Default-736h@3x.png */,
-				5087E77217EB970100C73F5D /* Default-568h@2x.png */,
+				5087E77217EB970100C73F5D /* Default-568@2x.png */,
+				8D458D271BEB689200B5EFC5 /* Default-768h@3x.png */,
 				5087E77317EB970100C73F5D /* Default.png */,
 				5087E77417EB970100C73F5D /* Default@2x.png */,
 				50EF62A017ECD613001EB2F8 /* Icon-29.png */,
 				50EF62A117ECD613001EB2F8 /* Icon-50.png */,
 				50EF629217ECD46A001EB2F8 /* Icon-40.png */,
 				50EF629317ECD46A001EB2F8 /* Icon-58.png */,
+				8D45D5621BEC7E79008A21E3 /* Icon-87.png */,
+				8D45D5641BEC7E83008A21E3 /* Icon-180.png */,
 				50EF629417ECD46A001EB2F8 /* Icon-80.png */,
 				50EF629517ECD46A001EB2F8 /* Icon-100.png */,
 				5087E77517EB970100C73F5D /* Icon-114.png */,
@@ -762,6 +829,27 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
+		8D1DFB141C576019003B3D44 /* UserGuide */ = {
+			isa = PBXGroup;
+			children = (
+				8D1DFB151C57610E003B3D44 /* UserGuideManager.cpp */,
+				8D1DFB161C57610E003B3D44 /* UserGuideManager.hpp */,
+				8D1DFB181C576134003B3D44 /* GuideBaseModel.cpp */,
+				8D1DFB191C576134003B3D44 /* GuideBaseModel.hpp */,
+				8D1DFB1B1C57616B003B3D44 /* GuideClickModel.cpp */,
+				8D1DFB1C1C57616B003B3D44 /* GuideClickModel.hpp */,
+				8D1DFB211C5761AA003B3D44 /* GuideTextModel.cpp */,
+				8D1DFB221C5761AA003B3D44 /* GuideTextModel.hpp */,
+				8D1DFB241C5763A1003B3D44 /* GuideCompositeModel.cpp */,
+				8D1DFB251C5763A1003B3D44 /* GuideCompositeModel.hpp */,
+				8D1DFB271C576429003B3D44 /* GuideCompositeSequenceModel.cpp */,
+				8D1DFB281C576429003B3D44 /* GuideCompositeSequenceModel.hpp */,
+				8D1DFB2A1C576549003B3D44 /* GuideCompositeApposeModel.cpp */,
+				8D1DFB2B1C576549003B3D44 /* GuideCompositeApposeModel.hpp */,
+			);
+			name = UserGuide;
+			sourceTree = "<group>";
+		};
 		8D51DC521B3A813A0053EA8A /* DropModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -771,6 +859,38 @@
 				8D51DC571B3A817C0053EA8A /* DropManager.h */,
 			);
 			name = DropModels;
+			sourceTree = "<group>";
+		};
+		8D6D883B1C292C24009A2D26 /* EnemySkill */ = {
+			isa = PBXGroup;
+			children = (
+				8D7FD8531C27E9920003E821 /* EnemySkill.cpp */,
+				8D7FD8541C27E9920003E821 /* EnemySkill.hpp */,
+				8D6D883C1C292C59009A2D26 /* EnemySkill_kuangbao.cpp */,
+				8D6D883D1C292C59009A2D26 /* EnemySkill_kuangbao.hpp */,
+				8D6D883F1C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp */,
+				8D6D88401C292C6B009A2D26 /* EnemySkill_zhaohuan.hpp */,
+				8D6D88421C292C7F009A2D26 /* EnemySkill_fenlie.cpp */,
+				8D6D88431C292C7F009A2D26 /* EnemySkill_fenlie.hpp */,
+				8D6D884E1C292CD4009A2D26 /* EnemySkill_yuancheng.cpp */,
+				8D6D884F1C292CD4009A2D26 /* EnemySkill_yuancheng.hpp */,
+				8D6D88511C292EC0009A2D26 /* EnemySkill_fangyu.cpp */,
+				8D6D88521C292EC0009A2D26 /* EnemySkill_fangyu.hpp */,
+				8D6D884B1C292CC6009A2D26 /* EnemySkill_shanbi.cpp */,
+				8D6D884C1C292CC6009A2D26 /* EnemySkill_shanbi.hpp */,
+			);
+			name = EnemySkill;
+			sourceTree = "<group>";
+		};
+		8D766EF01C44B99200DE6B91 /* GuanggaoModels */ = {
+			isa = PBXGroup;
+			children = (
+				8D766EF11C44B9D000DE6B91 /* GuanggaoModel.cpp */,
+				8D766EF21C44B9D000DE6B91 /* GuanggaoModel.hpp */,
+				8D766EF41C44B9E200DE6B91 /* GuanggaoManager.cpp */,
+				8D766EF51C44B9E200DE6B91 /* GuanggaoManager.hpp */,
+			);
+			name = GuanggaoModels;
 			sourceTree = "<group>";
 		};
 		8DBB98771ACD520C008C804D /* json */ = {
@@ -799,6 +919,8 @@
 		8DC10ACF1AC40463004F7DE2 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8D6060B91C5B38E100E4E616 /* UserGuideLayer.cpp */,
+				8D6060BA1C5B38E100E4E616 /* UserGuideLayer.hpp */,
 				D8B187621B49414300CB33CF /* UserDelegatLayer.cpp */,
 				D8B187631B49414300CB33CF /* UserDelegatLayer.h */,
 				8DC10AAE1AC3D629004F7DE2 /* GameFightScene.cpp */,
@@ -823,6 +945,8 @@
 				8DD9D7EB1B40F8BF005F015B /* ShopHealthShowLayer.h */,
 				8DE207321B39128E0052E738 /* ShopGoldShowLayer.cpp */,
 				8DE207331B39128E0052E738 /* ShopGoldShowLayer.h */,
+				8D766EF71C451E6400DE6B91 /* AdShowLayer.cpp */,
+				8D766EF81C451E6400DE6B91 /* AdShowLayer.hpp */,
 				8DE207351B39508C0052E738 /* ShopExpendShowLayer.cpp */,
 				8DE207361B39508C0052E738 /* ShopExpendShowLayer.h */,
 				8DD5F2F61B2806B100DC5DB9 /* GameShowLevelupLayer.cpp */,
@@ -836,6 +960,7 @@
 		8DC10AD01AC4047B004F7DE2 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				8D766EF01C44B99200DE6B91 /* GuanggaoModels */,
 				8DD8C1251AFC640100872AA2 /* UserData */,
 				8DD8C11E1AFC5CB800872AA2 /* ObserverModels */,
 				8DD594871B00AFB300A2FD0A /* GameScrollHeadlerTargetInterface.h */,
@@ -855,8 +980,10 @@
 				8DD7F1F91AD3769500D86BC5 /* GunModels */,
 				8DDCC66E1B32AF7900F01D46 /* SpecialModels */,
 				8DD7F1FC1AD376C600D86BC5 /* BulletModels */,
+				8D6D883B1C292C24009A2D26 /* EnemySkill */,
 				8DD7F1F81AD3768000D86BC5 /* EnemyModels */,
 				8D51DC521B3A813A0053EA8A /* DropModels */,
+				8D1DFB141C576019003B3D44 /* UserGuide */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -1253,7 +1380,7 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = ZAG6XVYQV4;
+						DevelopmentTeam = G2JVT8RTND;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 1;
@@ -1319,15 +1446,17 @@
 				8DC2534C1ACB9DF800D10652 /* config in Resources */,
 				8DC10AAD1AC3D54B004F7DE2 /* image in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				8D45D5631BEC7E79008A21E3 /* Icon-87.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
-				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
+				5087E77D17EB970100C73F5D /* Default-568@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
+				8D45D5651BEC7E83008A21E3 /* Icon-180.png in Resources */,
 				D8D673B21B1C4DBB004C463F /* music in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				8DBB988F1ACD520C008C804D /* sconscript in Resources */,
@@ -1335,6 +1464,7 @@
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				8DBB988D1ACD520C008C804D /* json_valueiterator.inl in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				8D458D281BEB689200B5EFC5 /* Default-768h@3x.png in Resources */,
 				8DBB98891ACD520C008C804D /* json_internalarray.inl in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
@@ -1370,6 +1500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DE20A911B7486A700B3E59F /* DefenseBuilding6_Sprite.cpp in Sources */,
+				8D1DFB1A1C576134003B3D44 /* GuideBaseModel.cpp in Sources */,
 				D8D673A91B19DFD0004C463F /* GuanQiaManager.cpp in Sources */,
 				8DE2268F1B5F466600944493 /* BulletModel.cpp in Sources */,
 				8DC3E19D1AE89C5C00BE6CA4 /* EnemyInfo.cpp in Sources */,
@@ -1397,7 +1528,9 @@
 				8DD5D0B71B144A1E00AA2A07 /* CrumpEnemySprite.cpp in Sources */,
 				8DC2ACD41AC53034004F3C1B /* BaseUtil.cpp in Sources */,
 				8DDC27C81B1EEE4500A4FD8D /* PropSprite_daoju3.cpp in Sources */,
+				8D6D88411C292C6B009A2D26 /* EnemySkill_zhaohuan.cpp in Sources */,
 				8DE20A8E1B74852F00B3E59F /* DefenseBuilding4.cpp in Sources */,
+				8D6D88531C292EC0009A2D26 /* EnemySkill_fangyu.cpp in Sources */,
 				8DD87E6A1B15A28000FC073A /* ShopPropItemScrollHeadler.cpp in Sources */,
 				8DDACED21B5F86F1003E83C8 /* CurveBullet.cpp in Sources */,
 				8DDCC6741B32AFFB00F01D46 /* MoneyObject.cpp in Sources */,
@@ -1406,9 +1539,12 @@
 				8DD87E701B15A2B500FC073A /* ShopAwardItemScrollHeadler.cpp in Sources */,
 				D8D6781A1B1DB58C008C3BA6 /* PropSprite.cpp in Sources */,
 				8D3F153D1BDF637E00CD7F67 /* HealthObject.cpp in Sources */,
+				8D1DFB171C57610E003B3D44 /* UserGuideManager.cpp in Sources */,
+				8D766EF61C44B9E200DE6B91 /* GuanggaoManager.cpp in Sources */,
 				8DD215681B16BA720090EEEB /* ShopPropIcon.cpp in Sources */,
 				8DE207341B39128E0052E738 /* ShopGoldShowLayer.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				8D6D88441C292C7F009A2D26 /* EnemySkill_fenlie.cpp in Sources */,
 				8DE3B4581AF0B36800938655 /* HouseSprite.cpp in Sources */,
 				8DD5F2F51B27DE4800DC5DB9 /* GameShowDiscLayer.cpp in Sources */,
 				8DE3C3941AFB15A800C61D89 /* GameVerticalScrollHeadlerView.cpp in Sources */,
@@ -1423,9 +1559,11 @@
 				8DD601131B1810DC005E811B /* MapScrollHeadler.cpp in Sources */,
 				8DC430AC1AC92BEF00AB1665 /* GunManager.cpp in Sources */,
 				8DC5EF9F1AD4CE0F00FC4D21 /* GuanQiaModel.cpp in Sources */,
+				8D1DFB231C5761AA003B3D44 /* GuideTextModel.cpp in Sources */,
 				8DE637DB1B68B6AA00AD0784 /* FireBulletSprite.cpp in Sources */,
 				8DDC27BF1B1EEDE600A4FD8D /* PropSprite_daoju1.cpp in Sources */,
 				8DE8A2BA1B78814900E9D158 /* GameCgShowScene.cpp in Sources */,
+				8D1DFB2C1C576549003B3D44 /* GuideCompositeApposeModel.cpp in Sources */,
 				8DD29D3D1B0B3C1400ECB826 /* DefenseBuilding3_Sprite.cpp in Sources */,
 				8DC10ACE1AC40233004F7DE2 /* BulletManager.cpp in Sources */,
 				8DD0DE371ACE347000BA61D4 /* ConfigManager.cpp in Sources */,
@@ -1434,6 +1572,7 @@
 				8DC430A31AC8FF2A00AB1665 /* GameMap.cpp in Sources */,
 				8DD5F2FB1B283FE500DC5DB9 /* GameSprite.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				8D6D884D1C292CC6009A2D26 /* EnemySkill_shanbi.cpp in Sources */,
 				8DC10AB61AC3D6C7004F7DE2 /* Human.cpp in Sources */,
 				D8D673AF1B1C098D004C463F /* GameOverScene.cpp in Sources */,
 				8DD9C18B1B6A04C5005FD4E0 /* LiquidBullet.cpp in Sources */,
@@ -1465,6 +1604,7 @@
 				8DDCC6711B32AFB900F01D46 /* SpecialManager.cpp in Sources */,
 				8DD88E771B2598150072688E /* DefenseBuilding2.cpp in Sources */,
 				8DC6A5D41ADFD788002A6159 /* HumanReloadState.cpp in Sources */,
+				8D1DFB1D1C57616B003B3D44 /* GuideClickModel.cpp in Sources */,
 				8D51DC581B3A817C0053EA8A /* DropManager.cpp in Sources */,
 				8DDCC67A1B32B82500F01D46 /* SpecialObject.cpp in Sources */,
 				8DE3F7B11AF75109001E048F /* SelectMenuController.cpp in Sources */,
@@ -1472,10 +1612,13 @@
 				8DC34AA31ADCFA1400C6B657 /* GameMapManager.cpp in Sources */,
 				8DD499791B04868C0037CBAA /* DefenseBuilding.cpp in Sources */,
 				8DC3E1A61AE8CF7B00BE6CA4 /* FlyEnemySprite.cpp in Sources */,
+				8D6060BB1C5B38E100E4E616 /* UserGuideLayer.cpp in Sources */,
 				8DC10ABC1AC3D6FD004F7DE2 /* BulletSprite.cpp in Sources */,
 				8DD8C12C1AFCB15F00872AA2 /* GameShopScene.cpp in Sources */,
+				8D7FD8551C27E9920003E821 /* EnemySkill.cpp in Sources */,
 				8D51DC551B3A816F0053EA8A /* DropModel.cpp in Sources */,
 				8DD2F25D1B213D9800A52B33 /* GameHomeScene.cpp in Sources */,
+				8D6D883E1C292C59009A2D26 /* EnemySkill_kuangbao.cpp in Sources */,
 				8DC10AC21AC3D75F004F7DE2 /* Enemy.cpp in Sources */,
 				8DBB988E1ACD520C008C804D /* json_writer.cpp in Sources */,
 				8DF2EA0D1BA0359700315F14 /* AlertTextTool.cpp in Sources */,
@@ -1483,10 +1626,15 @@
 				8DDCC6771B32B00B00F01D46 /* ExpendObject.cpp in Sources */,
 				8DD3FA591B205B430028DB92 /* BuffSprite.cpp in Sources */,
 				8DC10AC81AC3D7B1004F7DE2 /* EnemySprite.cpp in Sources */,
+				8D766EF31C44B9D000DE6B91 /* GuanggaoModel.cpp in Sources */,
 				8DD3FA561B2036A40028DB92 /* PropSpriteView.cpp in Sources */,
 				8DC430AF1AC930D800AB1665 /* Prop.cpp in Sources */,
+				8D6D88501C292CD4009A2D26 /* EnemySkill_yuancheng.cpp in Sources */,
 				8DD499761B04500B0037CBAA /* GameBuffManager.cpp in Sources */,
 				8DD08C921B2FC8E800BECE66 /* GameLoadingScene.cpp in Sources */,
+				8D1DFB261C5763A1003B3D44 /* GuideCompositeModel.cpp in Sources */,
+				8D766EF91C451E6400DE6B91 /* AdShowLayer.cpp in Sources */,
+				8D1DFB291C576429003B3D44 /* GuideCompositeSequenceModel.cpp in Sources */,
 				8DC3E1A91AE8D08B00BE6CA4 /* FlyEnemy.cpp in Sources */,
 				8DE3F7B41AF75AB5001E048F /* ScrollController.cpp in Sources */,
 				8DBB988C1ACD520C008C804D /* json_value.cpp in Sources */,
@@ -1533,8 +1681,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = GameCC.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hongxing zhang (237VJJ4EJS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hongxing zhang (237VJJ4EJS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1554,8 +1702,9 @@
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sihai.emolieren;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1569,8 +1718,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = GameCC.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hongxing zhang (ZAG6XVYQV4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hongxing zhang (ZAG6XVYQV4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wu Lin (VPQUKNKZRW)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1588,8 +1737,9 @@
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sihai.emolieren;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;

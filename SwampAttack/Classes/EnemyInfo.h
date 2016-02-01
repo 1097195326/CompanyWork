@@ -21,6 +21,10 @@ struct EnemyInfoData {
     int     hurtOnFrames;
     int     walkFrames;
     int     downFrames;
+    int     zhaohuanFrames;
+    int     rebirthFrmes;
+    int     fenlieFrames;
+    int     yuanchengFrames;
     int     width;
     int     height;
     int     widthOffSet;

@@ -38,10 +38,10 @@ DropManager * DropManager::getInstance()
     static DropManager manger;
     return &manger;
 }
-void DropManager::dropObject(string objId,Vec2 point)
+void DropManager::dropObject(string objId,Vec2 point,bool isGuanqia)
 {
 //    log("drop obj %s",objId.c_str());
-    bool res = false;
+    int res = 0;
     DropModel * model = m_dropData[objId];
     DropData dropData = model->getDropData();
     if (!_G_U->isHaveXinshouYindao() && m_dropNum == 0)
@@ -53,7 +53,7 @@ void DropManager::dropObject(string objId,Vec2 point)
     {
         case 1:
         {
-            res = MoneyManager::getInstance()->dropMoney(dropData.id,point);
+            res = MoneyManager::getInstance()->dropMoney(dropData.id,point,isGuanqia);
         }
             break;
         case 2:
@@ -65,12 +65,12 @@ void DropManager::dropObject(string objId,Vec2 point)
     
     if (res)
     {
-        addDropNum();
+        addDropNum(res);
     }
 }
-void DropManager::addDropNum()
+void DropManager::addDropNum(int num)
 {
-    ++m_dropNum;
+    m_dropNum += num;
 }
 void DropManager::minusDropNum()
 {

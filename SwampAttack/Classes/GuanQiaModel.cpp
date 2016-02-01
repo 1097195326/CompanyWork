@@ -11,7 +11,8 @@
 
 
 GuanqiaModel::GuanqiaModel(Json::Value data):m_data(data),
-m_isUnlock(false)
+m_isUnlock(false),
+m_isWin(false)
 {
     m_id = m_data["MissionId"].asString();
     string missionName = m_data["MissionName"].asString();
@@ -34,6 +35,7 @@ m_isUnlock(false)
     
     
     m_isUnlock = _G_U->isUnlockGuanqia(m_id);
+    m_isWin = _G_U->isWinGuanqia(m_id);
     
     Json::Value b_point = _C_M->getDataByName("guanqiaPoint", m_id, "iphone5s");
     Json::Value y_point = _C_M->getDataByName("guanqiaPoint", m_id, "iphone5s_yy");
@@ -57,6 +59,23 @@ m_isUnlock(false)
 GuanqiaModel::~GuanqiaModel()
 {
     
+}
+bool GuanqiaModel::isWin()
+{
+    return m_isWin;
+}
+void GuanqiaModel::setGuanqiaWin()
+{
+    m_isWin = true;
+    _G_U->setGuanqiaWin(m_id);
+}
+void GuanqiaModel::setStarNum(int num)
+{
+    _G_U->setGuanqiaStarNum(m_id, num);
+}
+int GuanqiaModel::getStarNum()
+{
+    return _G_U->getGuanqiaStarNum(m_id);
 }
 void GuanqiaModel::unlockGuanqia()
 {

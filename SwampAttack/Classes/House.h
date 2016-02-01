@@ -15,8 +15,8 @@
 
 enum HouseState
 {
-    _h_clear    = 0b00000000,
-    _h_over     = 0b00000001,
+    _h_clear    = 0,
+    _h_over     = 1,
 //    _h_
     
 };
@@ -40,6 +40,7 @@ public:
     void    setView();
     void    resetData();
     void    reliveGame();
+    int     getStarNum();
 public:
     float   getHealthPercent();
     bool    isOver();

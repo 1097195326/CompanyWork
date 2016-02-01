@@ -9,7 +9,7 @@
 #include "EnemyManager.h"
 #include "EnemyProgressBar.h"
 #include "GuanQiaManager.h"
-
+#include "DropManager.h"
 
 EnemyManager::EnemyManager() : currentIndex(0)
 {
@@ -114,6 +114,15 @@ void EnemyManager::gameLoop(float data)
             {
 //                log("EnemyManager Game Over");
                 resetData();
+                GuanqiaModel * guanqiaModel = GuanQiaManager::getInstance()->getCurrentGuanqia();
+                std::string dropId = guanqiaModel->getDropId();
+                if (dropId.size() > 0)
+                {
+                    DropManager::getInstance()->dropObject(dropId,
+                                                           Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                                                                m_visibleOrigin.y + m_visibleSize.height * 1.1),
+                                                           true);
+                }
             }
         }
     }

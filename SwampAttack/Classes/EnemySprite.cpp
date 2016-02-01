@@ -22,8 +22,8 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
     
     attackWaitTime = m_model->getAttackWaitTime();
 //    Sprite * s = Sprite::create("CloseSelected.png");
-//    s->setPosition(Vec2(0, h * 0.5));
-//    addChild(s);
+//    s->setPosition(Vec2(w * 0.5, h * 0.5));
+//    addChild(s,22);
     
     if (m_model->getActionType() != 2 && !m_model->isBoss())
     {
@@ -32,6 +32,10 @@ EnemySprite::EnemySprite(Enemy * model):m_model(model),isHaveArmor(false)
         diyingSprite->setPosition(w * 0.15, h * 0.05);
         diyingSprite->setScale(0.8);
         addChild(diyingSprite);
+    }else if (m_model->isBoss())
+    {
+        SimpleAudioEngine::getInstance()->playEffect(MusicPath("boss_jingbao.mp3").c_str());
+        
     }
     
     healthBar = new ProgressBar("xuenei.png","xuewai.png");
@@ -89,6 +93,33 @@ void EnemySprite::hurt()
 {}
 void EnemySprite::dianji()
 {}
+void EnemySprite::zhaohuan()
+{}
+void EnemySprite::fenlie()
+{}
+void EnemySprite::rebirth()
+{}
+void EnemySprite::fangyu()
+{
+    if (actionStatus == isFangyu) {
+        return;
+    }
+    actionStatus = isFangyu;
+    guaiwuSprite->stopAllActions();
+    
+    auto spriteFrameCache = SpriteFrameCache::getInstance();
+    
+    string name = m_model->getModelId();
+    SpriteFrame * frame = spriteFrameCache->getSpriteFrameByName(
+                                                                 StringUtils::format("%s_defense.png",name.c_str()));
+    guaiwuSprite->setSpriteFrame(frame);
+}
+void EnemySprite::shanbi()
+{}
+void EnemySprite::yuancheng()
+{
+    
+}
 void EnemySprite::texiaoCall()
 {
     texiaoSprite->setVisible(false);
@@ -113,4 +144,24 @@ void EnemySprite::dianjiCall()
 {
     actionStatus = normal;
     m_model->dianjiCall();
+}
+void EnemySprite::zhaohuanCall()
+{
+    actionStatus = normal;
+    m_model->zhaohuanCall();
+}
+void EnemySprite::fenlieCall()
+{
+    actionStatus = normal;
+    m_model->fenlieCall();
+}
+void EnemySprite::rebirthCall()
+{
+    actionStatus = normal;
+    m_model->rebirthCall();
+}
+void EnemySprite::yuanchengCall()
+{
+    actionStatus = normal;
+    m_model->farAttackCall();
 }

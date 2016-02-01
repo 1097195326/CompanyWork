@@ -1,42 +1,42 @@
 obj/local/armeabi/objs/audioengine_static/AudioEngine-inl.o: \
  jni/../../cocos2d/cocos/audio/android/AudioEngine-inl.cpp \
  jni/../../cocos2d/cocos/audio/android/AudioEngine-inl.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Platform.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Android.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidConfiguration.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidMetadata.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Platform.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Android.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidConfiguration.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidMetadata.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
  jni/../../cocos2d/cocos/audio/android/../../base/CCRef.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/CCPlatformMacros.h \
  jni/../../cocos2d/cocos/audio/android/../../base/ccConfig.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/CCPlatformConfig.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/CCPlatformDefine.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/android/CCPlatformDefine-android.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
  jni/../../cocos2d/cocos/audio/android/../../base/ccUtils.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
  jni/../../cocos2d/cocos/audio/android/../../2d/CCNode.h \
  jni/../../cocos2d/cocos/audio/android/../../base/ccMacros.h \
  jni/../../cocos2d/cocos/audio/android/../../base/CCConsole.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
  jni/../../cocos2d/cocos/audio/android/../../platform/CCStdC.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/android/CCStdC-android.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert \
  jni/../../cocos2d/cocos/audio/android/../../base/ccRandom.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random \
  jni/../../cocos2d/cocos/audio/android/../../base/CCVector.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
  jni/../../cocos2d/cocos/audio/android/../../base/CCProtocols.h \
  jni/../../cocos2d/cocos/audio/android/../../base/ccTypes.h \
  jni/../../cocos2d/cocos/audio/android/../../math/CCGeometry.h \
@@ -58,10 +58,10 @@ obj/local/armeabi/objs/audioengine_static/AudioEngine-inl.o: \
  jni/../../cocos2d/cocos/audio/android/../../math/Quaternion.inl \
  jni/../../cocos2d/cocos/audio/android/../../platform/CCGL.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/android/CCGL-android.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
  jni/../../cocos2d/cocos/audio/android/../../renderer/CCTexture2D.h \
  jni/../../cocos2d/cocos/audio/android/../../base/CCScriptSupport.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/CCCommon.h \
@@ -69,22 +69,22 @@ obj/local/armeabi/objs/audioengine_static/AudioEngine-inl.o: \
  jni/../../cocos2d/cocos/audio/android/../../base/CCEventTouch.h \
  jni/../../cocos2d/cocos/audio/android/../../base/CCEvent.h \
  jni/../../cocos2d/cocos/audio/android/../../base/CCEventKeyboard.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list \
  jni/../../cocos2d/cocos/audio/android/../../math/CCAffineTransform.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager_jni.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager_jni.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/android/jni/JniHelper.h \
  jni/../../cocos2d/cocos/audio/android/../../audio/include/AudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../../audio/include/Export.h \
  jni/../../cocos2d/cocos/audio/android/../../base/CCDirector.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack \
  jni/../../cocos2d/cocos/audio/android/../../2d/CCScene.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/CCGLView.h \
  jni/../../cocos2d/cocos/audio/android/../../base/CCScheduler.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set \
  jni/../../cocos2d/cocos/audio/android/../../base/uthash.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/android/CCFileUtils-android.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/CCFileUtils.h \
  jni/../../cocos2d/cocos/audio/android/../../base/CCValue.h \
@@ -92,21 +92,21 @@ obj/local/armeabi/objs/audioengine_static/AudioEngine-inl.o: \
 
 jni/../../cocos2d/cocos/audio/android/AudioEngine-inl.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Platform.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Platform.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Android.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Android.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidConfiguration.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidConfiguration.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidMetadata.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidMetadata.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
 
 jni/../../cocos2d/cocos/audio/android/../../base/CCRef.h:
 
@@ -120,11 +120,11 @@ jni/../../cocos2d/cocos/audio/android/../../platform/CCPlatformDefine.h:
 
 jni/../../cocos2d/cocos/audio/android/../../platform/android/CCPlatformDefine-android.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
 
 jni/../../cocos2d/cocos/audio/android/../../base/ccUtils.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
 
 jni/../../cocos2d/cocos/audio/android/../../2d/CCNode.h:
 
@@ -132,37 +132,37 @@ jni/../../cocos2d/cocos/audio/android/../../base/ccMacros.h:
 
 jni/../../cocos2d/cocos/audio/android/../../base/CCConsole.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex:
 
 jni/../../cocos2d/cocos/audio/android/../../platform/CCStdC.h:
 
 jni/../../cocos2d/cocos/audio/android/../../platform/android/CCStdC-android.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert:
 
 jni/../../cocos2d/cocos/audio/android/../../base/ccRandom.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random:
 
 jni/../../cocos2d/cocos/audio/android/../../base/CCVector.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
 
 jni/../../cocos2d/cocos/audio/android/../../base/CCProtocols.h:
 
@@ -206,13 +206,13 @@ jni/../../cocos2d/cocos/audio/android/../../platform/CCGL.h:
 
 jni/../../cocos2d/cocos/audio/android/../../platform/android/CCGL-android.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
 
 jni/../../cocos2d/cocos/audio/android/../../renderer/CCTexture2D.h:
 
@@ -228,15 +228,15 @@ jni/../../cocos2d/cocos/audio/android/../../base/CCEvent.h:
 
 jni/../../cocos2d/cocos/audio/android/../../base/CCEventKeyboard.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list:
 
 jni/../../cocos2d/cocos/audio/android/../../math/CCAffineTransform.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager_jni.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager_jni.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h:
 
 jni/../../cocos2d/cocos/audio/android/../../platform/android/jni/JniHelper.h:
 
@@ -246,7 +246,7 @@ jni/../../cocos2d/cocos/audio/android/../../audio/include/Export.h:
 
 jni/../../cocos2d/cocos/audio/android/../../base/CCDirector.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack:
 
 jni/../../cocos2d/cocos/audio/android/../../2d/CCScene.h:
 
@@ -254,11 +254,11 @@ jni/../../cocos2d/cocos/audio/android/../../platform/CCGLView.h:
 
 jni/../../cocos2d/cocos/audio/android/../../base/CCScheduler.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set:
 
 jni/../../cocos2d/cocos/audio/android/../../base/uthash.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h:
 
 jni/../../cocos2d/cocos/audio/android/../../platform/android/CCFileUtils-android.h:
 

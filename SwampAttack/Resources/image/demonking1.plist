@@ -20,46 +20,33 @@
             <key>demonking_attack0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{564,558},{338,218}}</string>
+                <string>{{222,740},{254,218}}</string>
                 <key>offset</key>
-                <string>{2,-49}</string>
+                <string>{-2,-42}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{58,140},{338,218}}</string>
+                <string>{{96,133},{254,218}}</string>
                 <key>sourceSize</key>
                 <string>{450,400}</string>
             </dict>
             <key>demonking_attack0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{784,736},{252,218}}</string>
+                <string>{{2,520},{208,216}}</string>
                 <key>offset</key>
-                <string>{-1,-42}</string>
+                <string>{-8,-37}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{98,133},{252,218}}</string>
+                <string>{{113,129},{208,216}}</string>
                 <key>sourceSize</key>
                 <string>{450,400}</string>
             </dict>
             <key>demonking_attack0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,520},{208,216}}</string>
-                <key>offset</key>
-                <string>{-8,-37}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{113,129},{208,216}}</string>
-                <key>sourceSize</key>
-                <string>{450,400}</string>
-            </dict>
-            <key>demonking_attack0004.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{414,278},{394,278}}</string>
+                <string>{{414,280},{394,278}}</string>
                 <key>offset</key>
                 <string>{-1,-7}</string>
                 <key>rotated</key>
@@ -69,33 +56,33 @@
                 <key>sourceSize</key>
                 <string>{450,400}</string>
             </dict>
-            <key>demonking_attack0005.png</key>
+            <key>demonking_attack0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,736},{340,286}}</string>
+                <string>{{442,560},{340,286}}</string>
                 <key>offset</key>
-                <string>{6,-5}</string>
+                <string>{7,-5}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{61,62},{340,286}}</string>
+                <string>{{62,62},{340,286}}</string>
+                <key>sourceSize</key>
+                <string>{450,400}</string>
+            </dict>
+            <key>demonking_attack0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{414,2},{410,276}}</string>
+                <key>offset</key>
+                <string>{1,-5}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{21,67},{410,276}}</string>
                 <key>sourceSize</key>
                 <string>{450,400}</string>
             </dict>
             <key>demonking_attack0006.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{414,2},{410,274}}</string>
-                <key>offset</key>
-                <string>{1,-6}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{21,69},{410,274}}</string>
-                <key>sourceSize</key>
-                <string>{450,400}</string>
-            </dict>
-            <key>demonking_attack0007.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,302},{320,216}}</string>
@@ -108,10 +95,10 @@
                 <key>sourceSize</key>
                 <string>{450,400}</string>
             </dict>
-            <key>demonking_attack0008.png</key>
+            <key>demonking_attack0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{344,736},{266,218}}</string>
+                <string>{{2,740},{266,218}}</string>
                 <key>offset</key>
                 <string>{-8,-42}</string>
                 <key>rotated</key>
@@ -121,10 +108,10 @@
                 <key>sourceSize</key>
                 <string>{450,400}</string>
             </dict>
-            <key>demonking_attack0009.png</key>
+            <key>demonking_attack0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{810,532},{210,202}}</string>
+                <string>{{810,536},{210,202}}</string>
                 <key>offset</key>
                 <string>{-24,-42}</string>
                 <key>rotated</key>
@@ -134,16 +121,29 @@
                 <key>sourceSize</key>
                 <string>{450,400}</string>
             </dict>
-            <key>demonking_attack0010.png</key>
+            <key>demonking_attack0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{810,278},{252,210}}</string>
+                <string>{{810,280},{254,210}}</string>
                 <key>offset</key>
-                <string>{-1,-38}</string>
+                <string>{-2,-38}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{98,133},{252,210}}</string>
+                <string>{{96,133},{254,210}}</string>
+                <key>sourceSize</key>
+                <string>{450,400}</string>
+            </dict>
+            <key>demonking_defense.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{784,740},{206,218}}</string>
+                <key>offset</key>
+                <string>{-29,-49}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{93,140},{206,218}}</string>
                 <key>sourceSize</key>
                 <string>{450,400}</string>
             </dict>
@@ -157,7 +157,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:97505f3231eb3c6ad25ae4f87ef9429c:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:72e0a34767c705e09d11830847e51dd5:1/1$</string>
             <key>textureFileName</key>
             <string>demonking1.png</string>
         </dict>

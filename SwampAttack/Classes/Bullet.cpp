@@ -167,8 +167,8 @@ Vec2 Bullet::getPosition()
 }
 Rect Bullet::getRect()
 {
-    return Rect(m_Point.x,//- m_bp.m_damageArea * 0.5,
-                m_Point.y,// - m_bp.m_damageArea * 0.5,
+    return Rect(m_Point.x- m_bp.m_damageArea * 0.5,
+                m_Point.y - m_bp.m_damageArea * 0.5,
                 m_bp.m_damageArea,
                 m_bp.m_damageArea);
 }
@@ -253,6 +253,10 @@ BulletInfoData Bullet::getDandaoInfo()
     {
         data.name = "arrow";
         data.frames = 1;
+    }else if ("BulletModelId10" == modelId)
+    {
+        data.name = "boss_slash";
+        data.frames = 5;
     }else
     {
         data.name = "";

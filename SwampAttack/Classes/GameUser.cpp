@@ -7,9 +7,14 @@
 //
 
 #include "GameUser.h"
+#include "GuanggaoManager.hpp"
 
 
-GameUser::GameUser():m_time(0)
+GameUser::GameUser():
+m_time(0),
+m_guanggaoTime(0),
+m_guanggaoAddTime(0),
+m_isGuiding(false)
 {
     m_user = UserDefault::getInstance();
     if (!m_user->getBoolForKey("first")) {
@@ -24,10 +29,16 @@ GameUser::GameUser():m_time(0)
         setLastSceneIndex(1);
     }
 //    setUserGold(900000);
+<<<<<<< HEAD
 //    unlockGuanqia("400003_9");
 //    setUserHealth(10);
 //    setExpendPropNum(300);
+=======
+//    unlockGuanqia("400001_10");
+>>>>>>> master
 //    setUserHealth(0);
+    m_guanggaoAddTime = _Gg_M_->getGuangggaoModelByIndex(getGuanggaoIndex())->getTime();
+    
     m_userHealth = getIntForKey("user_health");
     
     enterGame();
@@ -48,6 +59,15 @@ GameUser * GameUser::getInstance()
 void GameUser::updateTime(float data)
 {
 //    log("add game time");
+    if (!_Gg_M_->getGuangggaoModelByIndex(getGuanggaoIndex())->isReady())
+    {
+        ++m_guanggaoTime;
+        if (m_guanggaoTime >= m_guanggaoAddTime)
+        {
+            m_guanggaoTime = 0;
+            _Gg_M_->getGuangggaoModelByIndex(getGuanggaoIndex())->setReady(true);
+        }
+    }
     if (m_userHealth >= FullHealth)
     {
         return;
@@ -70,8 +90,16 @@ void GameUser::enterGame()
     
     int shiJianCha = now.tv_sec - getTimeSec();
     
+    if (shiJianCha / m_guanggaoAddTime >=1)
+    {
+        _Gg_M_->getGuangggaoModelByIndex(getGuanggaoIndex())->setReady(true);
+    }else
+    {
+        m_guanggaoTime += shiJianCha % m_guanggaoAddTime;
+    }
+    
     m_userHealth += shiJianCha / _G_AddTime;
-    m_time = shiJianCha % _G_AddTime;
+    m_time += shiJianCha % _G_AddTime;
     if (m_userHealth > FullHealth)
     {
         m_userHealth = FullHealth;
@@ -155,7 +183,57 @@ bool GameUser::useExpendProp()
     }
     return false;
 }
+//--- user guide
+bool GameUser::isHaveGuide()
+{
+    return getBoolForKey("user_guide");
+}
+void GameUser::setIsHaveGuide()
+{
+    setIntForKey("user_guide", true);
+}
+bool GameUser::isGuiding()
+{
+    return m_isGuiding;
+}
+void GameUser::setIsGuiding(bool isOrN)
+{
+    m_isGuiding = isOrN;
+}
+//--- guang gao
+int GameUser::getGuanggaoTime()
+{
+    return m_guanggaoTime;
+}
+void GameUser::setGuanggaoAddTime(int time)
+{
+    m_guanggaoAddTime = time;
+}
+void GameUser::setGuanggaoIndex(int index)
+{
+    setIntForKey("UserGuanggaoIndex", index);
+}
+int GameUser::getGuanggaoIndex()
+{
+    return getIntForKey("UserGuanggaoIndex");
+}
 //--- guan qia ---
+void GameUser::setGuanqiaStarNum(string g_id,int num)
+{
+    setIntForKey(g_id + "guanqiaStar", num);
+}
+int GameUser::getGuanqiaStarNum(string g_id)
+{
+    return getIntForKey(g_id + "guanqiaStar");
+}
+void GameUser::setGuanqiaWin(string guanqiaId)
+{
+    setBoolForKey(guanqiaId + "guanqiaWin", true);
+}
+bool GameUser::isWinGuanqia(string guanqiaId)
+{
+    return getBoolForKey(guanqiaId + "guanqiaWin");
+}
 void GameUser::unlockGuanqia(string guanqiaId)
 {
     setBoolForKey(guanqiaId + "guanqia", true);

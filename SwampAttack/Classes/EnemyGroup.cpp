@@ -10,7 +10,7 @@
 #include "ConfigManager.h"
 #include "FlyEnemy.h"
 #include "WalkEnemy.h"
-
+#include "GameMapManager.h"
 
 EnemyGroup::EnemyGroup(Json::Value data):status(_isHave)
 {
@@ -36,6 +36,7 @@ void EnemyGroup::setData(Json::Value data)
         
         for (int j = 0; j < number; ++j) {
             Json::Value enemyConfig = ConfigManager::getInstance()->getDataByTag("guaiwu",monsterid);
+//            log("enemy config:%s",enemyConfig.toStyledString().c_str());
             int actionType = atoi(enemyConfig["ActionType"].asString().c_str());
             Enemy * enemy = NULL; //new Enemy(enemyConfig);
             switch (actionType) {
@@ -53,13 +54,73 @@ void EnemyGroup::setData(Json::Value data)
         }
     }
 }
+
 std::list<Enemy*> EnemyGroup::getEnemyData()
 {
+//    std::list<Enemy*> data;
+//    std::list<Enemy*>::iterator iter;
+//    for (iter = enemyData.begin(); iter != enemyData.end(); ++iter)
+//    {
+//        data.push_back(*iter);
+//    }
+//    for (iter = enemyData.begin(); iter != enemyData.end(); ++iter)
+//    {
+//        data.push_back(*iter);
+//    }
     return enemyData;
 }
 std::list<Enemy *> EnemyGroup::getShowEnemyData()
 {
     return show_enemyData;
+}
+void EnemyGroup::pushEnemy(Json::Value data,Vec2 position)
+{
+    log("push enemy :%s",data.toStyledString().c_str());
+    
+    for (int i = 0; i < data.size(); ++i) {
+        Json::Value d = data[i];
+        string monsterid = d["monsterid"].asString();
+        int     number = atoi(d["number"].asString().c_str());
+        
+        for (int j = 0; j < number; ++j) {
+            Json::Value enemyConfig = ConfigManager::getInstance()->getDataByTag("guaiwu",monsterid);
+            int actionType = atoi(enemyConfig["ActionType"].asString().c_str());
+            Enemy * enemy = NULL; //new Enemy(enemyConfig);
+            switch (actionType) {
+                case 1:
+                    enemy = new WalkEnemy(enemyConfig);
+                    break;
+                case 2:
+                    enemy = new FlyEnemy(enemyConfig);
+                    break;
+                default:
+                    enemy = new WalkEnemy(enemyConfig);
+                    break;
+            }
+            enemy->setPosition(position + Vec2(random(-30,30), random(-30, 30)));
+            enemy->setView();
+//            enemy->setStateRebirth();
+            addEnemyData.push_back(enemy);
+            show_enemyData.push_back(enemy);
+        }
+    }
+    
+}
+void EnemyGroup::reliveGame()
+{
+    GameMap * gameMap = GameMapManager::getInstance()->getGameMap();
+    
+    std::list<Enemy*>::iterator iter;
+    for (iter = show_enemyData.begin() ; iter != show_enemyData.end(); ++iter)
+    {
+        Enemy * enemy = *iter;
+        if (!enemy->isCanDelete())
+        {
+            Vec2 point = gameMap->enemy_start_buttomPoint + Vec2(0, random(0, gameMap->enemy_start_upline));
+            enemy->setPosition(point + Vec2(random(-30,30), random(-30, 30)));
+            enemy->setStateWalk();
+        }
+    }
 }
 void EnemyGroup::clearData()
 {
@@ -71,6 +132,14 @@ void EnemyGroup::clearData()
         enemyData.erase(iter++);
         
     }
+    for (iter = addEnemyData.begin() ; iter != addEnemyData.end();)
+    {
+        Enemy * enemy = *iter;
+        delete enemy;
+        addEnemyData.erase(iter++);
+        
+    }
+    addEnemyData.clear();
     enemyData.clear();
     show_enemyData.clear();
 }

@@ -117,7 +117,7 @@ void Prop::gameLoop(float data)
     if (!enemyGroup) {
         return;
     }
-    std::list<Enemy*> enemyData =enemyGroup->getEnemyData();
+    std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
     if (enemyData.empty())
     {
         return;
@@ -354,7 +354,7 @@ void Prop::checkUnlock(Layer * layer)
         return;
     }
     GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getGuanqiaById(m_unlockMission);
-    if (guanqia && guanqia->isUnlock() && !m_isUnlock)
+    if (guanqia && guanqia->isUnlock() && guanqia->isWin() && !m_isUnlock)
     {
         m_isUnlock = true;
         _G_U->unlockProp(m_id);

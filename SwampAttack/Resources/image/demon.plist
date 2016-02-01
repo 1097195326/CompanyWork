@@ -7,7 +7,7 @@
             <key>bat_bullet0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,324},{162,60}}</string>
+                <string>{{166,433},{162,60}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>demon_Electric0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{342,218},{168,118}}</string>
+                <string>{{172,313},{168,118}}</string>
                 <key>offset</key>
                 <string>{0,-11}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>demon_Electric0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{172,179},{168,118}}</string>
+                <string>{{2,212},{168,118}}</string>
                 <key>offset</key>
                 <string>{0,-11}</string>
                 <key>rotated</key>
@@ -98,7 +98,7 @@
             <key>demon_attack0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{246,530},{86,90}}</string>
+                <string>{{112,809},{86,90}}</string>
                 <key>offset</key>
                 <string>{-4,-18}</string>
                 <key>rotated</key>
@@ -111,7 +111,7 @@
             <key>demon_attack0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{172,299},{162,114}}</string>
+                <string>{{2,332},{162,114}}</string>
                 <key>offset</key>
                 <string>{-1,-6}</string>
                 <key>rotated</key>
@@ -124,7 +124,7 @@
             <key>demon_attack0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,386},{138,116}}</string>
+                <string>{{2,588},{138,116}}</string>
                 <key>offset</key>
                 <string>{2,-6}</string>
                 <key>rotated</key>
@@ -137,7 +137,7 @@
             <key>demon_attack0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,210},{168,112}}</string>
+                <string>{{342,338},{168,112}}</string>
                 <key>offset</key>
                 <string>{0,-6}</string>
                 <key>rotated</key>
@@ -150,7 +150,7 @@
             <key>demon_attack0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,504},{132,90}}</string>
+                <string>{{282,658},{132,90}}</string>
                 <key>offset</key>
                 <string>{0,-23}</string>
                 <key>rotated</key>
@@ -163,11 +163,11 @@
             <key>demon_attack0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,511},{108,90}}</string>
+                <string>{{2,898},{108,90}}</string>
                 <key>offset</key>
                 <string>{-4,-20}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{27,60},{108,90}}</string>
                 <key>sourceSize</key>
@@ -176,7 +176,7 @@
             <key>demon_attack0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{106,603},{86,86}}</string>
+                <string>{{184,897},{86,86}}</string>
                 <key>offset</key>
                 <string>{-11,-18}</string>
                 <key>rotated</key>
@@ -189,11 +189,11 @@
             <key>demon_attack0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,596},{102,88}}</string>
+                <string>{{94,898},{102,88}}</string>
                 <key>offset</key>
                 <string>{-1,-18}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{33,59},{102,88}}</string>
                 <key>sourceSize</key>
@@ -202,7 +202,7 @@
             <key>demon_fly0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{142,415},{138,94}}</string>
+                <string>{{2,706},{138,94}}</string>
                 <key>offset</key>
                 <string>{0,-21}</string>
                 <key>rotated</key>
@@ -215,7 +215,7 @@
             <key>demon_fly0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,90},{168,118}}</string>
+                <string>{{342,218},{168,118}}</string>
                 <key>offset</key>
                 <string>{0,-11}</string>
                 <key>rotated</key>
@@ -228,7 +228,7 @@
             <key>demon_fly0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{368,96},{140,120}}</string>
+                <string>{{148,495},{140,120}}</string>
                 <key>offset</key>
                 <string>{-1,-11}</string>
                 <key>rotated</key>
@@ -241,7 +241,7 @@
             <key>demon_fly0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{198,57},{168,120}}</string>
+                <string>{{2,90},{168,120}}</string>
                 <key>offset</key>
                 <string>{0,-9}</string>
                 <key>rotated</key>
@@ -254,7 +254,7 @@
             <key>demon_fly0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{336,338},{138,94}}</string>
+                <string>{{142,617},{138,94}}</string>
                 <key>offset</key>
                 <string>{0,-21}</string>
                 <key>rotated</key>
@@ -267,7 +267,7 @@
             <key>demon_fly0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{402,434},{108,94}}</string>
+                <string>{{2,802},{108,94}}</string>
                 <key>offset</key>
                 <string>{-15,-19}</string>
                 <key>rotated</key>
@@ -280,11 +280,141 @@
             <key>demon_fly0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{282,434},{118,94}}</string>
+                <string>{{142,713},{118,94}}</string>
                 <key>offset</key>
                 <string>{-9,-20}</string>
                 <key>rotated</key>
                 <false/>
+                <key>sourceColorRect</key>
+                <string>{{17,58},{118,94}}</string>
+                <key>sourceSize</key>
+                <string>{170,170}</string>
+            </dict>
+            <key>demon_rebirth0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{368,57},{26,26}}</string>
+                <key>offset</key>
+                <string>{13,-58}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{85,130},{26,26}}</string>
+                <key>sourceSize</key>
+                <string>{170,170}</string>
+            </dict>
+            <key>demon_rebirth0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{430,632},{62,62}}</string>
+                <key>offset</key>
+                <string>{13,-43}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{67,97},{62,62}}</string>
+                <key>sourceSize</key>
+                <string>{170,170}</string>
+            </dict>
+            <key>demon_rebirth0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{430,562},{74,68}}</string>
+                <key>offset</key>
+                <string>{15,-38}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{63,89},{74,68}}</string>
+                <key>sourceSize</key>
+                <string>{170,170}</string>
+            </dict>
+            <key>demon_rebirth0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{290,562},{138,94}}</string>
+                <key>offset</key>
+                <string>{0,-21}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{16,59},{138,94}}</string>
+                <key>sourceSize</key>
+                <string>{170,170}</string>
+            </dict>
+            <key>demon_rebirth0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{172,193},{168,118}}</string>
+                <key>offset</key>
+                <string>{0,-11}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{1,37},{168,118}}</string>
+                <key>sourceSize</key>
+                <string>{170,170}</string>
+            </dict>
+            <key>demon_rebirth0006.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{368,96},{140,120}}</string>
+                <key>offset</key>
+                <string>{-1,-11}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{14,36},{140,120}}</string>
+                <key>sourceSize</key>
+                <string>{170,170}</string>
+            </dict>
+            <key>demon_rebirth0007.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{198,57},{168,134}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{1,20},{168,134}}</string>
+                <key>sourceSize</key>
+                <string>{170,170}</string>
+            </dict>
+            <key>demon_rebirth0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,448},{138,144}}</string>
+                <key>offset</key>
+                <string>{0,4}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{16,9},{138,144}}</string>
+                <key>sourceSize</key>
+                <string>{170,170}</string>
+            </dict>
+            <key>demon_rebirth0009.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{330,452},{108,144}}</string>
+                <key>offset</key>
+                <string>{-15,6}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{16,7},{108,144}}</string>
+                <key>sourceSize</key>
+                <string>{170,170}</string>
+            </dict>
+            <key>demon_rebirth0010.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{416,696},{118,94}}</string>
+                <key>offset</key>
+                <string>{-9,-20}</string>
+                <key>rotated</key>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{17,58},{118,94}}</string>
                 <key>sourceSize</key>
@@ -300,7 +430,7 @@
             <key>size</key>
             <string>{512,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:df6b0a69802aaf661e570992efece8dd:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:05ad8a07a72e80993e15cf1d0e9a6293:1/1$</string>
             <key>textureFileName</key>
             <string>demon.png</string>
         </dict>

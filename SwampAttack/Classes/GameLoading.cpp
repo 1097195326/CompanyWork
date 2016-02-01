@@ -13,7 +13,6 @@
 #include "DefenseBuildingManager.h"
 #include "GuanQiaManager.h"
 #include "GameUser.h"
-#include "json/json.h"
 
 float GameLoading::loadSprites()
 {
@@ -30,6 +29,8 @@ float GameLoading::loadFrames()
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("explosion.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao.plist"));
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("texiao2.plist"));
+    
+    spriteFrameCache->addSpriteFramesWithFile(ImagePath("boss_slash.plist"));
     
     if (!_G_U->isHaveXinshouYindao()) {
         spriteFrameCache->addSpriteFramesWithFile(ImagePath("XinshouYindao.plist"));
@@ -203,6 +204,7 @@ float GameLoading::loadFrames()
                 case 100021:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowman1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowman2.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowman3.plist"));
                     break;
                 case 100022:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull_shield.plist"));
@@ -225,6 +227,7 @@ float GameLoading::loadFrames()
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking3.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking4.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking5.plist"));
                     break;
                 case 200002:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking1.plist"));
@@ -233,6 +236,14 @@ float GameLoading::loadFrames()
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking4.plist"));
                     break;
                 case 200003:
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking1.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking2.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking3.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking4.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking5.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking6.plist"));
+                    break;
+                case 200004:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking2.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking3.plist"));
@@ -242,18 +253,12 @@ float GameLoading::loadFrames()
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking7.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking8.plist"));
                     break;
-                case 200004:
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking1.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking2.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking3.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking4.plist"));
-                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking5.plist"));
-                    break;
                 case 200005:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2_1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2_2.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2_3.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2_4.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2_5.plist"));
                     break;
                 case 200006:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking2_1.plist"));
@@ -274,6 +279,7 @@ float GameLoading::loadFrames()
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowmanking3.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowmanking4.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowmanking5.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowmanking6.plist"));
                     break;
                 case 200009:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking1.plist"));
@@ -282,11 +288,13 @@ float GameLoading::loadFrames()
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking4.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking5.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking6.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking7.plist"));
                     break;
                 case 200010:
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("vampireking1.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("vampireking2.plist"));
                     spriteFrameCache->addSpriteFramesWithFile(ImagePath("vampireking3.plist"));
+                    spriteFrameCache->addSpriteFramesWithFile(ImagePath("vampireking4.plist"));
                     break;
                 default:
                     break;
@@ -301,4 +309,188 @@ float GameLoading::loadFrames()
 //    
 //    spriteFrameCache->addSpriteFramesWithFile(ImagePath("demon.plist"));
     
+}
+
+float GameLoading::loadFramesByData(Json::Value loadData)
+{
+    if (loadData.size() <= 0) {
+        return 0.0;
+    }
+    auto spriteFrameCache = SpriteFrameCache::getInstance();
+    
+    for (int i = 0; i < loadData.size(); ++i) {
+        Json::Value d = loadData[i];
+        int monsterId = atoi(d["monsterid"].asString().c_str());
+        switch (monsterId) {
+            case 100001:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull1.plist"));
+                break;
+            case 100002:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullArmor.plist"));
+                break;
+            case 100003:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie1.plist"));
+                break;
+            case 100004:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombie1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieArmor.plist"));
+                break;
+            case 100005:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("bat.plist"));
+                break;
+            case 100006:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("bat.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("batArmor.plist"));
+                break;
+            case 100007:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("crow.plist"));
+                break;
+            case 100008:
+                
+                break;
+            case 100009:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind.plist"));
+                break;
+            case 100010:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("blind.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("blindArmor.plist"));
+                break;
+            case 100011:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea1.plist"));
+                break;
+            case 100012:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("Muroidea1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("muroideaArmor.plist"));
+                break;
+            case 100013:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin1.plist"));
+                break;
+            case 100014:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("Pumpkin1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("pumpkinArmor.plist"));
+                break;
+            case 100015:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow1.plist"));
+                break;
+            case 100016:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrow1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("scarecrowArmor.plist"));
+                break;
+            case 100017:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("demon.plist"));
+                break;
+            case 100018:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("demon.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("demonArmor.plist"));
+                break;
+            case 100019:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf2.plist"));
+                break;
+            case 100020:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolf2.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfArmor1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfArmor2.plist"));
+                break;
+            case 100021:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowman1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowman2.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowman3.plist"));
+                break;
+            case 100022:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skull_shield.plist"));
+                break;
+            case 100023:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("vampire1.plist"));
+                break;
+            case 100024:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("bee.plist"));
+                break;
+            case 100025:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullA.plist"));
+                break;
+            case 100026:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcher1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcher2.plist"));
+                break;
+            case 200001:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking3.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking4.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking5.plist"));
+                break;
+            case 200002:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking2.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking3.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("zombieking4.plist"));
+                break;
+            case 200003:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking2.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking3.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking4.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking5.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking6.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking7.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking8.plist"));
+                break;
+            case 200004:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking2.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking3.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking4.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking5.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("scareking6.plist"));
+                break;
+            case 200005:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2_1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2_2.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2_3.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2_4.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("skullking2_5.plist"));
+                break;
+            case 200006:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking2_1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking2_2.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking2_3.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking2_4.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking2_5.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking2_6.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("wolfking2_7.plist"));
+                break;
+            case 200007:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("demonking1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("demonking2.plist"));
+                break;
+            case 200008:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowmanking1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowmanking2.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowmanking3.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowmanking4.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowmanking5.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("snowmanking6.plist"));
+                break;
+            case 200009:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking2.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking3.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking4.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking5.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking6.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("butcherking7.plist"));
+                break;
+            case 200010:
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("vampireking1.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("vampireking2.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("vampireking3.plist"));
+                spriteFrameCache->addSpriteFramesWithFile(ImagePath("vampireking4.plist"));
+                break;
+            default:
+                break;
+        }
+    }
 }

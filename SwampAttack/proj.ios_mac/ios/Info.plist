@@ -14,15 +14,17 @@
 	<array>
 		<string>Icon-29</string>
 		<string>Icon-80</string>
+		<string>Icon-87</string>
 		<string>Icon-58</string>
 		<string>Icon-120</string>
 		<string>Icon.png</string>
 		<string>Icon-114.png</string>
 		<string>Icon-72.png</string>
 		<string>Icon-144.png</string>
+		<string>Icon-180.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.game.swampattack</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -34,7 +36,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.5</string>
+	<string>1.6</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIAppFonts</key>
@@ -45,6 +47,26 @@
 			<key>UILaunchImageMinimumOSVersion</key>
 			<string>8.0</string>
 			<key>UILaunchImageName</key>
+			<string>Default-568</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Portrait</string>
+			<key>UILaunchImageSize</key>
+			<string>{320, 568}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>8.0</string>
+			<key>UILaunchImageName</key>
+			<string>Default-568</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Landscape</string>
+			<key>UILaunchImageSize</key>
+			<string>{320, 568}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>8.0</string>
+			<key>UILaunchImageName</key>
 			<string>Default</string>
 			<key>UILaunchImageOrientation</key>
 			<string>Portrait</string>
@@ -60,26 +82,6 @@
 			<string>Landscape</string>
 			<key>UILaunchImageSize</key>
 			<string>{320, 480}</string>
-		</dict>
-		<dict>
-			<key>UILaunchImageMinimumOSVersion</key>
-			<string>8.0</string>
-			<key>UILaunchImageName</key>
-			<string>Default-568h</string>
-			<key>UILaunchImageOrientation</key>
-			<string>Portrait</string>
-			<key>UILaunchImageSize</key>
-			<string>{320, 568}</string>
-		</dict>
-		<dict>
-			<key>UILaunchImageMinimumOSVersion</key>
-			<string>8.0</string>
-			<key>UILaunchImageName</key>
-			<string>Default-568h</string>
-			<key>UILaunchImageOrientation</key>
-			<string>Landscape</string>
-			<key>UILaunchImageSize</key>
-			<string>{320, 568}</string>
 		</dict>
 		<dict>
 			<key>UILaunchImageMinimumOSVersion</key>
@@ -120,6 +122,26 @@
 			<string>Landscape</string>
 			<key>UILaunchImageSize</key>
 			<string>{414, 736}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>8.0</string>
+			<key>UILaunchImageName</key>
+			<string>Default-768h</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Portrait</string>
+			<key>UILaunchImageSize</key>
+			<string>{621, 1024}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>8.0</string>
+			<key>UILaunchImageName</key>
+			<string>Default-768h</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Landscape</string>
+			<key>UILaunchImageSize</key>
+			<string>{621, 1024}</string>
 		</dict>
 	</array>
 	<key>UIPrerenderedIcon</key>

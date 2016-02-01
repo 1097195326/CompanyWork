@@ -59,7 +59,19 @@ float House::getHealthPercent()
 {
     return m_health / m_totalHelath * 100;
 }
-
+int House::getStarNum()
+{
+    float per = getHealthPercent();
+    if (per < 50) {
+        return 1;
+    }else if(per < 70)
+    {
+        return 2;
+    }else
+    {
+        return 3;
+    }
+}
 bool House::isOver()
 {
     return m_state & _h_over;

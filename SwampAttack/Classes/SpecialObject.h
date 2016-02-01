@@ -25,6 +25,7 @@ private:
     string      m_subId;
     int         m_num;
     int         m_price;
+    int         m_translate;
     int         m_type;
     
     MoneyObject     *   m_moneyObject;

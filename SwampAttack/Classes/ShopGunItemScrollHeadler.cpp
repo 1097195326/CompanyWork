@@ -103,14 +103,14 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
     Size upGradeButtonSize = m_upGradeButton->getContentSize();
     
     
-        m_buyButton = new GameSprite(ImagePath("shopItemButtonNormal.png"));
-        m_buyButton->m_touchMeCall = CC_CALLBACK_2(ShopGunItemScrollHeadler::buy, this);
-        m_buyButton->setPosition(-itemBgSize.width * 0.03,
-                                 -itemBgSize.height * 0.15);
-        m_buyButton->autorelease();
-        addChild(m_buyButton);
-        
-        Size buyButtonSize = m_buyButton->getContentSize();
+    m_buyButton = new GameSprite(ImagePath("shopItemButtonNormal.png"));
+    m_buyButton->m_touchMeCall = CC_CALLBACK_2(ShopGunItemScrollHeadler::buy, this);
+    m_buyButton->setPosition(-itemBgSize.width * 0.03,
+                             -itemBgSize.height * 0.15);
+    m_buyButton->autorelease();
+    addChild(m_buyButton);
+    
+    Size buyButtonSize = m_buyButton->getContentSize();
     
     if (gun->getWeaponType() != 1)
     {
@@ -195,6 +195,18 @@ void ShopGunItemScrollHeadler::initUnlockGunView()
                         upGradeButtonSize.height * 0.35);
     jinbi2->setScale(0.75);
     m_upGradeButton->addChild(jinbi2);
+    
+    if (_G_U->isGuiding() && gun->isDefaultGun())
+    {
+        Action * dianJiAc = RepeatForever::create(Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("shou", 6),
+                                                                   DelayTime::create(0.6),
+                                                                   NULL));
+        m_guideShou = Sprite::create();
+        addChild(m_guideShou,99);
+        m_guideShou->setScale(0.5);
+        m_guideShou->setPosition(m_upGradeButton->getPosition() + Vec2(30, -30));
+        m_guideShou->runAction(dianJiAc);
+    }
 }
 void ShopGunItemScrollHeadler::initLockGunView()
 {
@@ -377,13 +389,18 @@ void ShopGunItemScrollHeadler::updateData()
 }
 void ShopGunItemScrollHeadler::upGrade(Touch * touch, Event * event)
 {
+    Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
+    if (_G_U->isGuiding() && gun->isDefaultGun())
+    {
+        m_guideShou->setPosition(m_buyButton->getPosition() + Vec2(30, -30));
+    }
     GameSprite * spr = (GameSprite *)event->getCurrentTarget();
     if (!spr->isEnable())
     {
         return;
     }
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-    Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
+    
     bool sec = gun->addStrengthenLevel();
     if (sec)
     {
@@ -420,13 +437,21 @@ void ShopGunItemScrollHeadler::unLock(Touch * touch, Event * event)
 }
 void ShopGunItemScrollHeadler::buy(Touch * touch, Event * event)
 {
+    Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
+    if (_G_U->isGuiding() && gun->isDefaultGun())
+    {
+        m_guideShou->stopAllActions();
+        m_guideShou->removeFromParentAndCleanup(true);
+        _G_U->setIsGuiding(false);
+        _G_U->setIsHaveGuide();
+    }
     GameSprite * spr = (GameSprite *)event->getCurrentTarget();
     if (!spr->isEnable())
     {
         return;
     }
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buttonPress.mp3").c_str());
-    Gun * gun = GunManager::getInstance()->getGunByIndex(m_index);
+    
     bool sec = gun->buyBullet();
     if (sec)
     {
