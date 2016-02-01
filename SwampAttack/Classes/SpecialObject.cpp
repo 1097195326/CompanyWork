@@ -21,6 +21,7 @@ m_healthObject(NULL)
     m_subId =   data["SubID"].asString();
     m_num   =   atoi(data["Number"].asString().c_str());
     m_price =   atoi(data["Price"].asString().c_str());
+    m_translate =   atoi(data["translate"].asString().c_str());
     m_type  =   atoi(data["Type"].asString().c_str());
     
     switch (m_type) {
@@ -201,7 +202,14 @@ int SpecialObject::getNum()
 }
 int SpecialObject::getPrice()
 {
-    return m_price;
+    int price;
+    if (m_type == 1) {
+        price = m_price;
+    }else
+    {
+        price = m_translate;
+    }
+    return price;
 }
 int SpecialObject::getType()
 {

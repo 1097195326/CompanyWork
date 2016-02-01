@@ -74,8 +74,19 @@ void ShopAwardItemScrollHeadler::initAwardView()
                          itemBgSize.height * 0.4);
     itemBg->addChild(moneyBg);
     string price = StringUtils::format("$%d",specialobject->getPrice());
+    if (specialobject->getType() == 1) {
+        price = StringUtils::format("$%d",specialobject->getPrice());
+    }else
+    {
+        price = StringUtils::format("%d",specialobject->getPrice());
+        Sprite * jinbi2 = Sprite::create(ImagePath("jinbi_icon.png"));
+        jinbi2->setPosition(itemBgSize.width * 1.05,
+                            itemBgSize.height * 0.4);
+        jinbi2->setScale(0.75);
+        itemBg->addChild(jinbi2);
+    }
     Label * moneyLabel = Label::createWithTTF(price, "fonts/Arial Black.ttf", 25);
-    moneyLabel->setPosition(itemBgSize.width * 1,
+    moneyLabel->setPosition(itemBgSize.width * 0.95,
                             itemBgSize.height * 0.4);
     moneyLabel->enableOutline(Color4B(0, 0, 0, 255),3);
     moneyLabel->setAdditionalKerning(-3);
