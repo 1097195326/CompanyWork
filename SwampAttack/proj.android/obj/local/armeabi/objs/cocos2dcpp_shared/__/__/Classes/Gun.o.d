@@ -3,13 +3,13 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Gun.o: \
  jni/../../Classes/json/json.h jni/../../Classes/json/autolink.h \
  jni/../../Classes/json/config.h jni/../../Classes/json/value.h \
  jni/../../Classes/json/forwards.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
  jni/../../Classes/json/reader.h jni/../../Classes/json/features.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/deque \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/deque \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/BaseCode.h \
  jni/../../cocos2d/cocos/3d/../cocos2d.h \
  jni/../../cocos2d/cocos/3d/../base/ccConfig.h \
@@ -19,28 +19,28 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Gun.o: \
  jni/../../cocos2d/cocos/3d/../base/ccConfig.h \
  jni/../../cocos2d/cocos/3d/../platform/CCPlatformDefine.h \
  jni/../../cocos2d/cocos/3d/../platform/android/CCPlatformDefine-android.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
  jni/../../cocos2d/cocos/3d/../base/CCRefPtr.h \
  jni/../../cocos2d/cocos/3d/../base/CCRef.h \
  jni/../../cocos2d/cocos/3d/../base/ccMacros.h \
  jni/../../cocos2d/cocos/3d/../base/CCConsole.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
  jni/../../cocos2d/cocos/3d/../platform/CCStdC.h \
  jni/../../cocos2d/cocos/3d/../platform/android/CCStdC-android.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert \
  jni/../../cocos2d/cocos/3d/../base/ccRandom.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random \
  jni/../../cocos2d/cocos/3d/../base/CCVector.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
  jni/../../cocos2d/cocos/3d/../base/CCMap.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
  jni/../../cocos2d/cocos/3d/../base/CCAutoreleasePool.h \
  jni/../../cocos2d/cocos/3d/../base/CCNS.h \
  jni/../../cocos2d/cocos/3d/../math/CCGeometry.h \
@@ -66,10 +66,10 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Gun.o: \
  jni/../../cocos2d/cocos/3d/../base/ccTypes.h \
  jni/../../cocos2d/cocos/3d/../platform/CCGL.h \
  jni/../../cocos2d/cocos/3d/../platform/android/CCGL-android.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
  jni/../../cocos2d/cocos/3d/../base/CCConfiguration.h \
  jni/../../cocos2d/cocos/3d/../base/CCValue.h \
  jni/../../cocos2d/cocos/3d/../base/CCDirector.h \
@@ -85,20 +85,20 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Gun.o: \
  jni/../../cocos2d/cocos/3d/../base/CCEventTouch.h \
  jni/../../cocos2d/cocos/3d/../base/CCEvent.h \
  jni/../../cocos2d/cocos/3d/../base/CCEventKeyboard.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list \
  jni/../../cocos2d/cocos/3d/../math/CCAffineTransform.h \
  jni/../../cocos2d/cocos/3d/../platform/CCGLView.h \
  jni/../../cocos2d/cocos/3d/../base/CCScheduler.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set \
  jni/../../cocos2d/cocos/3d/../base/uthash.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h \
  jni/../../cocos2d/cocos/3d/../base/base64.h \
  jni/../../cocos2d/cocos/3d/../base/ZipUtils.h \
  jni/../../cocos2d/cocos/3d/../platform/android/CCFileUtils-android.h \
  jni/../../cocos2d/cocos/3d/../platform/CCFileUtils.h \
  jni/../../cocos2d/cocos/3d/../base/CCData.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h \
- /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h \
+ /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h \
  jni/../../cocos2d/cocos/3d/../base/CCProfiling.h \
  jni/../../cocos2d/cocos/3d/../base/CCMap.h \
  jni/../../cocos2d/cocos/3d/../base/CCConsole.h \
@@ -223,8 +223,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Gun.o: \
  jni/../../cocos2d/cocos/3d/../renderer/ccShaders.h \
  jni/../../cocos2d/cocos/3d/../renderer/CCTexture2D.h \
  jni/../../cocos2d/cocos/3d/../renderer/CCTextureCache.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/condition_variable \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/queue \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/condition_variable \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/queue \
  jni/../../cocos2d/cocos/3d/../renderer/CCVertexIndexBuffer.h \
  jni/../../cocos2d/cocos/3d/../renderer/CCVertexIndexData.h \
  jni/../../cocos2d/cocos/3d/../renderer/CCPrimitive.h \
@@ -310,7 +310,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Gun.o: \
  jni/../../cocos2d/cocos/3d/../deprecated/CCArray.h \
  jni/../../cocos2d/cocos/3d/../base/CCDataVisitor.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCString.h \
- /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream \
+ /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream \
  jni/../../cocos2d/cocos/3d/../deprecated/CCArray.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCSet.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCInteger.h \
@@ -348,21 +348,21 @@ jni/../../Classes/json/value.h:
 
 jni/../../Classes/json/forwards.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map:
 
 jni/../../Classes/json/reader.h:
 
 jni/../../Classes/json/features.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/deque:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/deque:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
 
 jni/../../Classes/json/writer.h:
 
@@ -384,7 +384,7 @@ jni/../../cocos2d/cocos/3d/../platform/CCPlatformDefine.h:
 
 jni/../../cocos2d/cocos/3d/../platform/android/CCPlatformDefine-android.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCRefPtr.h:
 
@@ -394,39 +394,39 @@ jni/../../cocos2d/cocos/3d/../base/ccMacros.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCConsole.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex:
 
 jni/../../cocos2d/cocos/3d/../platform/CCStdC.h:
 
 jni/../../cocos2d/cocos/3d/../platform/android/CCStdC-android.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert:
 
 jni/../../cocos2d/cocos/3d/../base/ccRandom.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random:
 
 jni/../../cocos2d/cocos/3d/../base/CCVector.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
 
 jni/../../cocos2d/cocos/3d/../base/CCMap.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
 
 jni/../../cocos2d/cocos/3d/../base/CCAutoreleasePool.h:
 
@@ -478,13 +478,13 @@ jni/../../cocos2d/cocos/3d/../platform/CCGL.h:
 
 jni/../../cocos2d/cocos/3d/../platform/android/CCGL-android.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCConfiguration.h:
 
@@ -516,7 +516,7 @@ jni/../../cocos2d/cocos/3d/../base/CCEvent.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCEventKeyboard.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list:
 
 jni/../../cocos2d/cocos/3d/../math/CCAffineTransform.h:
 
@@ -524,11 +524,11 @@ jni/../../cocos2d/cocos/3d/../platform/CCGLView.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCScheduler.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set:
 
 jni/../../cocos2d/cocos/3d/../base/uthash.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h:
 
 jni/../../cocos2d/cocos/3d/../base/base64.h:
 
@@ -540,9 +540,9 @@ jni/../../cocos2d/cocos/3d/../platform/CCFileUtils.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCData.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h:
 
-/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h:
+/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCProfiling.h:
 
@@ -792,9 +792,9 @@ jni/../../cocos2d/cocos/3d/../renderer/CCTexture2D.h:
 
 jni/../../cocos2d/cocos/3d/../renderer/CCTextureCache.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/condition_variable:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/condition_variable:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/queue:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/queue:
 
 jni/../../cocos2d/cocos/3d/../renderer/CCVertexIndexBuffer.h:
 
@@ -966,7 +966,7 @@ jni/../../cocos2d/cocos/3d/../base/CCDataVisitor.h:
 
 jni/../../cocos2d/cocos/3d/../deprecated/CCString.h:
 
-/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream:
+/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream:
 
 jni/../../cocos2d/cocos/3d/../deprecated/CCArray.h:
 
