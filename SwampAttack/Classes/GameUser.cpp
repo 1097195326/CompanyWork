@@ -182,11 +182,11 @@ bool GameUser::useExpendProp()
 //--- user guide
 bool GameUser::isHaveGuide()
 {
-    return getBoolForKey("user_guide");
+    return getBoolForKey("user_shop_guide");
 }
 void GameUser::setIsHaveGuide()
 {
-    setIntForKey("user_guide", true);
+    setBoolForKey("user_shop_guide", true);
 }
 bool GameUser::isGuiding()
 {

@@ -70,7 +70,7 @@ bool GameOverScene::init()
     
     SpriteFrameCache::getInstance()->removeSpriteFrames();
     Director::getInstance()->getTextureCache()->removeAllTextures();
-    
+
     LayerColor * layerColor = LayerColor::create(Color4B(0, 0, 0, 200));
     addChild(layerColor);
 //    layerColor->runAction(FadeTo::create(0.3, 200));
@@ -126,7 +126,7 @@ bool GameOverScene::init()
         
         title = Sprite::create(ImagePath("overScene_failTitle.png"));
         
-        if (!_G_U->isHaveGuide())
+        if (!(_G_U->isHaveGuide()))
         {
             _G_U->setIsGuiding(true);
         }
@@ -183,10 +183,7 @@ bool GameOverScene::init()
     _G_U->setUserGold(userGold);
     
     Menu * buttonMenu = NULL;
-//    Sprite * title = Sprite::create(ImagePath("overScene_win.png"));
-//    title->setPosition(m_visibleOrigin.x + m_visibleSize.width * 0.5,
-//                       m_visibleOrigin.y + m_visibleSize.height * 0.58);
-//    addChild(title);
+    
     MenuItemImage * gotoShopButton = MenuItemImage::create(ImagePath("overScene_toShop.png"),
                                                        ImagePath("overScene_toShop.png"),
                                                        CC_CALLBACK_1( GameOverScene::gotoShop, this));

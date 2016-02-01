@@ -62,7 +62,10 @@ float House::getHealthPercent()
 int House::getStarNum()
 {
     float per = getHealthPercent();
-    if (per < 50) {
+    
+    if (per <= 0.001f) {
+        return 0;
+    }else if (per < 50) {
         return 1;
     }else if(per < 70)
     {

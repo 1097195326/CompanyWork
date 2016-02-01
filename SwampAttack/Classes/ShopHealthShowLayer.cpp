@@ -202,11 +202,11 @@ void shopHealthShowLayer::useToolToAddHealth(cocos2d::Touch *touch, cocos2d::Eve
     SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectBySubId(object->getId(), object->getType());
     umeng::MobClickCpp::event(specialObject->getId().c_str());
     
-//    specialObject->buyEnd();
+    specialObject->buyEnd();
     
-#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-    payForBuyGameObject(specialObject);
-#endif
+//#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+//    payForBuyGameObject(specialObject);
+//#endif
     closeView();
 }
 bool shopHealthShowLayer::touchBegan(Touch *touch, Event *event)
