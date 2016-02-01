@@ -11,11 +11,8 @@ LOCAL_MODULE := cocos2dcpp_shared
 LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
-<<<<<<< HEAD
 				   hellocpp/UCSdkJniHelper.cpp \
-=======
 				   ../../Classes/AdShowLayer.cpp \
->>>>>>> master
 				   ../../Classes/AlertTextTool.cpp \
 				   ../../Classes/AppDelegate.cpp \
 				   ../../Classes/BaseUtil.cpp \

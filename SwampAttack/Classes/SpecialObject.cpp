@@ -64,6 +64,8 @@ void SpecialObject::buyEnd(const char * payType)
             int money = m_moneyObject->getEffect() * m_num;
             userGold += money;
             _G_U->setUserGold(userGold);
+            
+            umeng::MobClickCpp::pay(m_price, atoi(payType), m_id.c_str(), m_num, m_price);
         }
             break;
         case 2:
@@ -96,7 +98,7 @@ void SpecialObject::buyEnd(const char * payType)
         default:
             break;
     }
-    umeng::MobClickCpp::pay(m_price, atoi(payType), m_id.c_str(), m_num, m_price);
+    
     
 }
 ///--- sub object funtion

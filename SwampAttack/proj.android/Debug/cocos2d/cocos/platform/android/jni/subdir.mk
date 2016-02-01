@@ -4,14 +4,14 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/DPIJni.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/IMEJni.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxAccelerometer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxBitmap.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxHelper.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxRenderer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/JniHelper.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/TouchesJni.cpp 
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/DPIJni.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/IMEJni.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxAccelerometer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxBitmap.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxHelper.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxRenderer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/JniHelper.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/TouchesJni.cpp 
 
 OBJS += \
 ./cocos2d/cocos/platform/android/jni/DPIJni.o \
@@ -35,56 +35,56 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/cocos/platform/android/jni/DPIJni.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/DPIJni.cpp
+cocos2d/cocos/platform/android/jni/DPIJni.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/DPIJni.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/android/jni/IMEJni.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/IMEJni.cpp
+cocos2d/cocos/platform/android/jni/IMEJni.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/IMEJni.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxAccelerometer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxAccelerometer.cpp
+cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxAccelerometer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxAccelerometer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxBitmap.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxBitmap.cpp
+cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxBitmap.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxBitmap.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxHelper.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxHelper.cpp
+cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxHelper.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxHelper.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxRenderer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxRenderer.cpp
+cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxRenderer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxRenderer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/android/jni/JniHelper.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/JniHelper.cpp
+cocos2d/cocos/platform/android/jni/JniHelper.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/JniHelper.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/android/jni/TouchesJni.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/TouchesJni.cpp
+cocos2d/cocos/platform/android/jni/TouchesJni.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/android/jni/TouchesJni.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

@@ -4,10 +4,10 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/App.xaml.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/DirectXPage.xaml.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/ShaderCompiler.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/pch.cpp 
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/App.xaml.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/DirectXPage.xaml.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/ShaderCompiler.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/pch.cpp 
 
 OBJS += \
 ./cocos2d/build/wp8/Cocos2dShaderCompiler/App.xaml.o \
@@ -23,28 +23,28 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/build/wp8/Cocos2dShaderCompiler/App.xaml.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/App.xaml.cpp
+cocos2d/build/wp8/Cocos2dShaderCompiler/App.xaml.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/App.xaml.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/build/wp8/Cocos2dShaderCompiler/DirectXPage.xaml.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/DirectXPage.xaml.cpp
+cocos2d/build/wp8/Cocos2dShaderCompiler/DirectXPage.xaml.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/DirectXPage.xaml.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/build/wp8/Cocos2dShaderCompiler/ShaderCompiler.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/ShaderCompiler.cpp
+cocos2d/build/wp8/Cocos2dShaderCompiler/ShaderCompiler.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/ShaderCompiler.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/build/wp8/Cocos2dShaderCompiler/pch.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/pch.cpp
+cocos2d/build/wp8/Cocos2dShaderCompiler/pch.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/build/wp8/Cocos2dShaderCompiler/pch.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

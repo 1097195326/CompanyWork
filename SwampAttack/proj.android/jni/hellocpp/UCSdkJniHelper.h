@@ -17,6 +17,7 @@ extern "C"
 
 	void payForBuyGameObject(SpecialObject * object);
 
+	void showAd();
 
 
 }

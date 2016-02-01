@@ -4,148 +4,148 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/AdShowLayer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/AlertTextTool.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/AppDelegate.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/BaseUtil.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/BuffSprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/Bullet.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/BulletManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/BulletModel.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/BulletSprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/CCCsvHelper.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ConfigManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/CrumpEnemySprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/CurveBullet.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding1.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding1_Sprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding2.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding2_Sprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding3.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding3_Sprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding4.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding4_Sprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding6_Sprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding7_Sprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuildingManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuildingSprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DropManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DropModel.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DropMoneySprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DropPropSprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/Enemy.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemyGroup.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemyInfo.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemyManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemyProgressBar.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_fangyu.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_fenlie.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_kuangbao.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_shanbi.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_yuancheng.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_zhaohuan.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ExpendObject.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/FireBulletSprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/FlyEnemy.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/FlyEnemySprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameBuff.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameBuffManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameCgShowScene.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameDirector.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameFightScene.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameHomeScene.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameHorizontalScrollHeadlerView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameHorizontalScrollView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameLoading.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameLoadingScene.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameMap.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameMap5s.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameMap6.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameMapManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameMapScene.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameObject.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameObserver.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameOverScene.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GamePauseScene.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameReliveLayer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameScrollHeadler.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameScrollHeadlerView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameScrollView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameShopScene.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameShowDiscLayer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameShowLevelupLayer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameSprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameSubject.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameUser.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameVerticalScrollHeadlerView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameVerticalScrollView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuanQiaManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuanQiaModel.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuanggaoManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuanggaoModel.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideBaseModel.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideClickModel.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeApposeModel.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeModel.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeSequenceModel.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideTextModel.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/Gun.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GunManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GunSprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HealthObject.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HelloWorldScene.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/House.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HouseSprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/Human.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanChangeState.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanReloadState.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanShootState.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanSprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanThrowPropState.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanWaitState.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/LiquidBullet.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/MapGuanqiaButton.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/MapScrollHeadler.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/MoneyManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/MoneyObject.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ProgressBar.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/Prop.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSpriteView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju1.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju2.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju3.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju5.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju6.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju7.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju8.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju9.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PunctureBullet.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ScrollController.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/SelectMenuController.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/SelectMenuView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopAwardItemScrollHeadler.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopBuildingItemScrollHeadler.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopExpendShowLayer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopGoldShowLayer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopGunIcon.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopGunItemScrollHeadler.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopHealthShowLayer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopPropIcon.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopPropItemScrollHeadler.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopSelectMenuView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/SpecialManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/SpecialObject.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/State.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/UserDelegatLayer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/UserGuideLayer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/UserGuideManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/WalkEnemy.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/WalkEnemySprite.cpp 
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/AdShowLayer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/AlertTextTool.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/AppDelegate.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/BaseUtil.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/BuffSprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/Bullet.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/BulletManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/BulletModel.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/BulletSprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/CCCsvHelper.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ConfigManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/CrumpEnemySprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/CurveBullet.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding1.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding1_Sprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding2.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding2_Sprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding3.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding3_Sprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding4.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding4_Sprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding6_Sprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding7_Sprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuildingManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuildingSprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DropManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DropModel.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DropMoneySprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DropPropSprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/Enemy.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemyGroup.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemyInfo.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemyManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemyProgressBar.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_fangyu.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_fenlie.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_kuangbao.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_shanbi.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_yuancheng.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_zhaohuan.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ExpendObject.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/FireBulletSprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/FlyEnemy.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/FlyEnemySprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameBuff.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameBuffManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameCgShowScene.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameDirector.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameFightScene.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameHomeScene.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameHorizontalScrollHeadlerView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameHorizontalScrollView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameLoading.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameLoadingScene.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameMap.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameMap5s.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameMap6.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameMapManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameMapScene.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameObject.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameObserver.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameOverScene.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GamePauseScene.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameReliveLayer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameScrollHeadler.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameScrollHeadlerView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameScrollView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameShopScene.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameShowDiscLayer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameShowLevelupLayer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameSprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameSubject.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameUser.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameVerticalScrollHeadlerView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameVerticalScrollView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuanQiaManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuanQiaModel.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuanggaoManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuanggaoModel.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideBaseModel.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideClickModel.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeApposeModel.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeModel.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeSequenceModel.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideTextModel.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/Gun.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GunManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GunSprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HealthObject.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HelloWorldScene.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/House.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HouseSprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/Human.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanChangeState.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanReloadState.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanShootState.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanSprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanThrowPropState.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanWaitState.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/LiquidBullet.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/MapGuanqiaButton.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/MapScrollHeadler.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/MoneyManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/MoneyObject.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ProgressBar.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/Prop.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSpriteView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju1.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju2.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju3.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju5.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju6.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju7.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju8.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju9.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PunctureBullet.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ScrollController.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/SelectMenuController.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/SelectMenuView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopAwardItemScrollHeadler.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopBuildingItemScrollHeadler.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopExpendShowLayer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopGoldShowLayer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopGunIcon.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopGunItemScrollHeadler.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopHealthShowLayer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopPropIcon.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopPropItemScrollHeadler.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopSelectMenuView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/SpecialManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/SpecialObject.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/State.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/UserDelegatLayer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/UserGuideLayer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/UserGuideManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/WalkEnemy.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/WalkEnemySprite.cpp 
 
 OBJS += \
 ./Classes/AdShowLayer.o \
@@ -437,994 +437,994 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-Classes/AdShowLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/AdShowLayer.cpp
+Classes/AdShowLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/AdShowLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/AlertTextTool.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/AlertTextTool.cpp
+Classes/AlertTextTool.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/AlertTextTool.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/AppDelegate.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/AppDelegate.cpp
+Classes/AppDelegate.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/AppDelegate.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/BaseUtil.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/BaseUtil.cpp
+Classes/BaseUtil.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/BaseUtil.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/BuffSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/BuffSprite.cpp
+Classes/BuffSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/BuffSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/Bullet.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/Bullet.cpp
+Classes/Bullet.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/Bullet.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/BulletManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/BulletManager.cpp
+Classes/BulletManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/BulletManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/BulletModel.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/BulletModel.cpp
+Classes/BulletModel.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/BulletModel.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/BulletSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/BulletSprite.cpp
+Classes/BulletSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/BulletSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/CCCsvHelper.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/CCCsvHelper.cpp
+Classes/CCCsvHelper.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/CCCsvHelper.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ConfigManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ConfigManager.cpp
+Classes/ConfigManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ConfigManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/CrumpEnemySprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/CrumpEnemySprite.cpp
+Classes/CrumpEnemySprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/CrumpEnemySprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/CurveBullet.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/CurveBullet.cpp
+Classes/CurveBullet.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/CurveBullet.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuilding.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding.cpp
+Classes/DefenseBuilding.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuilding1.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding1.cpp
+Classes/DefenseBuilding1.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding1.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuilding1_Sprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding1_Sprite.cpp
+Classes/DefenseBuilding1_Sprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding1_Sprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuilding2.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding2.cpp
+Classes/DefenseBuilding2.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding2.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuilding2_Sprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding2_Sprite.cpp
+Classes/DefenseBuilding2_Sprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding2_Sprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuilding3.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding3.cpp
+Classes/DefenseBuilding3.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding3.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuilding3_Sprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding3_Sprite.cpp
+Classes/DefenseBuilding3_Sprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding3_Sprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuilding4.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding4.cpp
+Classes/DefenseBuilding4.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding4.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuilding4_Sprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding4_Sprite.cpp
+Classes/DefenseBuilding4_Sprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding4_Sprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuilding6_Sprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding6_Sprite.cpp
+Classes/DefenseBuilding6_Sprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding6_Sprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuilding7_Sprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding7_Sprite.cpp
+Classes/DefenseBuilding7_Sprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuilding7_Sprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuildingManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuildingManager.cpp
+Classes/DefenseBuildingManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuildingManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DefenseBuildingSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuildingSprite.cpp
+Classes/DefenseBuildingSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DefenseBuildingSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DropManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DropManager.cpp
+Classes/DropManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DropManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DropModel.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DropModel.cpp
+Classes/DropModel.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DropModel.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DropMoneySprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DropMoneySprite.cpp
+Classes/DropMoneySprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DropMoneySprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/DropPropSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/DropPropSprite.cpp
+Classes/DropPropSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/DropPropSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/Enemy.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/Enemy.cpp
+Classes/Enemy.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/Enemy.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemyGroup.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemyGroup.cpp
+Classes/EnemyGroup.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemyGroup.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemyInfo.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemyInfo.cpp
+Classes/EnemyInfo.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemyInfo.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemyManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemyManager.cpp
+Classes/EnemyManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemyManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemyProgressBar.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemyProgressBar.cpp
+Classes/EnemyProgressBar.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemyProgressBar.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemySkill.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill.cpp
+Classes/EnemySkill.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemySkill_fangyu.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_fangyu.cpp
+Classes/EnemySkill_fangyu.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_fangyu.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemySkill_fenlie.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_fenlie.cpp
+Classes/EnemySkill_fenlie.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_fenlie.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemySkill_kuangbao.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_kuangbao.cpp
+Classes/EnemySkill_kuangbao.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_kuangbao.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemySkill_shanbi.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_shanbi.cpp
+Classes/EnemySkill_shanbi.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_shanbi.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemySkill_yuancheng.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_yuancheng.cpp
+Classes/EnemySkill_yuancheng.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_yuancheng.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemySkill_zhaohuan.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_zhaohuan.cpp
+Classes/EnemySkill_zhaohuan.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySkill_zhaohuan.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/EnemySprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/EnemySprite.cpp
+Classes/EnemySprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/EnemySprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ExpendObject.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ExpendObject.cpp
+Classes/ExpendObject.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ExpendObject.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/FireBulletSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/FireBulletSprite.cpp
+Classes/FireBulletSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/FireBulletSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/FlyEnemy.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/FlyEnemy.cpp
+Classes/FlyEnemy.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/FlyEnemy.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/FlyEnemySprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/FlyEnemySprite.cpp
+Classes/FlyEnemySprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/FlyEnemySprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameBuff.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameBuff.cpp
+Classes/GameBuff.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameBuff.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameBuffManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameBuffManager.cpp
+Classes/GameBuffManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameBuffManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameCgShowScene.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameCgShowScene.cpp
+Classes/GameCgShowScene.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameCgShowScene.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameDirector.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameDirector.cpp
+Classes/GameDirector.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameDirector.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameFightScene.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameFightScene.cpp
+Classes/GameFightScene.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameFightScene.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameHomeScene.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameHomeScene.cpp
+Classes/GameHomeScene.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameHomeScene.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameHorizontalScrollHeadlerView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameHorizontalScrollHeadlerView.cpp
+Classes/GameHorizontalScrollHeadlerView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameHorizontalScrollHeadlerView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameHorizontalScrollView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameHorizontalScrollView.cpp
+Classes/GameHorizontalScrollView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameHorizontalScrollView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameLoading.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameLoading.cpp
+Classes/GameLoading.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameLoading.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameLoadingScene.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameLoadingScene.cpp
+Classes/GameLoadingScene.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameLoadingScene.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameMap.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameMap.cpp
+Classes/GameMap.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameMap.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameMap5s.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameMap5s.cpp
+Classes/GameMap5s.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameMap5s.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameMap6.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameMap6.cpp
+Classes/GameMap6.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameMap6.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameMapManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameMapManager.cpp
+Classes/GameMapManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameMapManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameMapScene.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameMapScene.cpp
+Classes/GameMapScene.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameMapScene.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameObject.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameObject.cpp
+Classes/GameObject.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameObject.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameObserver.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameObserver.cpp
+Classes/GameObserver.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameObserver.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameOverScene.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameOverScene.cpp
+Classes/GameOverScene.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameOverScene.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GamePauseScene.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GamePauseScene.cpp
+Classes/GamePauseScene.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GamePauseScene.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameReliveLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameReliveLayer.cpp
+Classes/GameReliveLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameReliveLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameScrollHeadler.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameScrollHeadler.cpp
+Classes/GameScrollHeadler.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameScrollHeadler.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameScrollHeadlerView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameScrollHeadlerView.cpp
+Classes/GameScrollHeadlerView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameScrollHeadlerView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameScrollView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameScrollView.cpp
+Classes/GameScrollView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameScrollView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameShopScene.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameShopScene.cpp
+Classes/GameShopScene.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameShopScene.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameShowDiscLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameShowDiscLayer.cpp
+Classes/GameShowDiscLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameShowDiscLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameShowLevelupLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameShowLevelupLayer.cpp
+Classes/GameShowLevelupLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameShowLevelupLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameSprite.cpp
+Classes/GameSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameSubject.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameSubject.cpp
+Classes/GameSubject.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameSubject.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameUser.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameUser.cpp
+Classes/GameUser.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameUser.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameVerticalScrollHeadlerView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameVerticalScrollHeadlerView.cpp
+Classes/GameVerticalScrollHeadlerView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameVerticalScrollHeadlerView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GameVerticalScrollView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GameVerticalScrollView.cpp
+Classes/GameVerticalScrollView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GameVerticalScrollView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GuanQiaManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuanQiaManager.cpp
+Classes/GuanQiaManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuanQiaManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GuanQiaModel.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuanQiaModel.cpp
+Classes/GuanQiaModel.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuanQiaModel.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GuanggaoManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuanggaoManager.cpp
+Classes/GuanggaoManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuanggaoManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GuanggaoModel.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuanggaoModel.cpp
+Classes/GuanggaoModel.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuanggaoModel.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GuideBaseModel.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideBaseModel.cpp
+Classes/GuideBaseModel.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideBaseModel.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GuideClickModel.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideClickModel.cpp
+Classes/GuideClickModel.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideClickModel.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GuideCompositeApposeModel.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeApposeModel.cpp
+Classes/GuideCompositeApposeModel.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeApposeModel.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GuideCompositeModel.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeModel.cpp
+Classes/GuideCompositeModel.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeModel.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GuideCompositeSequenceModel.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeSequenceModel.cpp
+Classes/GuideCompositeSequenceModel.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideCompositeSequenceModel.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GuideTextModel.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GuideTextModel.cpp
+Classes/GuideTextModel.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GuideTextModel.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/Gun.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/Gun.cpp
+Classes/Gun.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/Gun.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GunManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GunManager.cpp
+Classes/GunManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GunManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/GunSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/GunSprite.cpp
+Classes/GunSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/GunSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/HealthObject.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HealthObject.cpp
+Classes/HealthObject.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HealthObject.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/HelloWorldScene.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HelloWorldScene.cpp
+Classes/HelloWorldScene.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HelloWorldScene.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/House.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/House.cpp
+Classes/House.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/House.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/HouseSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HouseSprite.cpp
+Classes/HouseSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HouseSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/Human.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/Human.cpp
+Classes/Human.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/Human.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/HumanChangeState.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanChangeState.cpp
+Classes/HumanChangeState.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanChangeState.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/HumanReloadState.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanReloadState.cpp
+Classes/HumanReloadState.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanReloadState.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/HumanShootState.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanShootState.cpp
+Classes/HumanShootState.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanShootState.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/HumanSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanSprite.cpp
+Classes/HumanSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/HumanThrowPropState.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanThrowPropState.cpp
+Classes/HumanThrowPropState.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanThrowPropState.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/HumanWaitState.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/HumanWaitState.cpp
+Classes/HumanWaitState.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/HumanWaitState.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/LiquidBullet.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/LiquidBullet.cpp
+Classes/LiquidBullet.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/LiquidBullet.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/MapGuanqiaButton.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/MapGuanqiaButton.cpp
+Classes/MapGuanqiaButton.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/MapGuanqiaButton.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/MapScrollHeadler.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/MapScrollHeadler.cpp
+Classes/MapScrollHeadler.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/MapScrollHeadler.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/MoneyManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/MoneyManager.cpp
+Classes/MoneyManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/MoneyManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/MoneyObject.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/MoneyObject.cpp
+Classes/MoneyObject.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/MoneyObject.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ProgressBar.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ProgressBar.cpp
+Classes/ProgressBar.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ProgressBar.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/Prop.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/Prop.cpp
+Classes/Prop.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/Prop.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PropManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropManager.cpp
+Classes/PropManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PropSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite.cpp
+Classes/PropSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PropSpriteView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSpriteView.cpp
+Classes/PropSpriteView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSpriteView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PropSprite_daoju1.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju1.cpp
+Classes/PropSprite_daoju1.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju1.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PropSprite_daoju2.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju2.cpp
+Classes/PropSprite_daoju2.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju2.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PropSprite_daoju3.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju3.cpp
+Classes/PropSprite_daoju3.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju3.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PropSprite_daoju5.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju5.cpp
+Classes/PropSprite_daoju5.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju5.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PropSprite_daoju6.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju6.cpp
+Classes/PropSprite_daoju6.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju6.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PropSprite_daoju7.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju7.cpp
+Classes/PropSprite_daoju7.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju7.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PropSprite_daoju8.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju8.cpp
+Classes/PropSprite_daoju8.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju8.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PropSprite_daoju9.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju9.cpp
+Classes/PropSprite_daoju9.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PropSprite_daoju9.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/PunctureBullet.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/PunctureBullet.cpp
+Classes/PunctureBullet.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/PunctureBullet.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ScrollController.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ScrollController.cpp
+Classes/ScrollController.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ScrollController.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/SelectMenuController.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/SelectMenuController.cpp
+Classes/SelectMenuController.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/SelectMenuController.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/SelectMenuView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/SelectMenuView.cpp
+Classes/SelectMenuView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/SelectMenuView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ShopAwardItemScrollHeadler.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopAwardItemScrollHeadler.cpp
+Classes/ShopAwardItemScrollHeadler.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopAwardItemScrollHeadler.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ShopBuildingItemScrollHeadler.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopBuildingItemScrollHeadler.cpp
+Classes/ShopBuildingItemScrollHeadler.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopBuildingItemScrollHeadler.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ShopExpendShowLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopExpendShowLayer.cpp
+Classes/ShopExpendShowLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopExpendShowLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ShopGoldShowLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopGoldShowLayer.cpp
+Classes/ShopGoldShowLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopGoldShowLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ShopGunIcon.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopGunIcon.cpp
+Classes/ShopGunIcon.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopGunIcon.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ShopGunItemScrollHeadler.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopGunItemScrollHeadler.cpp
+Classes/ShopGunItemScrollHeadler.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopGunItemScrollHeadler.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ShopHealthShowLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopHealthShowLayer.cpp
+Classes/ShopHealthShowLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopHealthShowLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ShopPropIcon.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopPropIcon.cpp
+Classes/ShopPropIcon.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopPropIcon.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ShopPropItemScrollHeadler.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopPropItemScrollHeadler.cpp
+Classes/ShopPropItemScrollHeadler.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopPropItemScrollHeadler.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/ShopSelectMenuView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/ShopSelectMenuView.cpp
+Classes/ShopSelectMenuView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/ShopSelectMenuView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/SpecialManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/SpecialManager.cpp
+Classes/SpecialManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/SpecialManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/SpecialObject.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/SpecialObject.cpp
+Classes/SpecialObject.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/SpecialObject.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/State.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/State.cpp
+Classes/State.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/State.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/UserDelegatLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/UserDelegatLayer.cpp
+Classes/UserDelegatLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/UserDelegatLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/UserGuideLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/UserGuideLayer.cpp
+Classes/UserGuideLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/UserGuideLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/UserGuideManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/UserGuideManager.cpp
+Classes/UserGuideManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/UserGuideManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/WalkEnemy.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/WalkEnemy.cpp
+Classes/WalkEnemy.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/WalkEnemy.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Classes/WalkEnemySprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes/WalkEnemySprite.cpp
+Classes/WalkEnemySprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes/WalkEnemySprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

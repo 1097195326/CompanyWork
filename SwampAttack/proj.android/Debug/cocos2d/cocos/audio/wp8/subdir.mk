@@ -4,9 +4,9 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/Audio.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/MediaStreamer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/SimpleAudioEngine.cpp 
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/Audio.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/MediaStreamer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/SimpleAudioEngine.cpp 
 
 OBJS += \
 ./cocos2d/cocos/audio/wp8/Audio.o \
@@ -20,21 +20,21 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/cocos/audio/wp8/Audio.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/Audio.cpp
+cocos2d/cocos/audio/wp8/Audio.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/Audio.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/audio/wp8/MediaStreamer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/MediaStreamer.cpp
+cocos2d/cocos/audio/wp8/MediaStreamer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/MediaStreamer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/audio/wp8/SimpleAudioEngine.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/SimpleAudioEngine.cpp
+cocos2d/cocos/audio/wp8/SimpleAudioEngine.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/audio/wp8/SimpleAudioEngine.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

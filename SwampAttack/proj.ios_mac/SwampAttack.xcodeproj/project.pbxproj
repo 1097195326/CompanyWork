@@ -1699,7 +1699,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes;
+				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sihai.emolieren;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -1734,7 +1734,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/Classes;
+				LIBRARY_SEARCH_PATHS = /Users/oceantech02/work/Program/CompanyWork/SwampAttack/Classes;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sihai.emolieren;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

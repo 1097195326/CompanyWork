@@ -19,6 +19,9 @@
 #include "GuanggaoManager.hpp"
 #include "AdShowLayer.hpp"
 
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+#include "../proj.android/jni/hellocpp/UCSdkJniHelper.h"
+#endif
 
 bool GameMapScene::init()
 {
@@ -206,9 +209,13 @@ void GameMapScene::guanggaoButtonFuc(cocos2d::Ref *psender)
         
         m_goldLabel->setString(StringUtils::format("%d",guanggaoModel->getMoney()));
         
-        AdShowLayer * layer = new AdShowLayer();
-        layer->autorelease();
-        addChild(layer,4);
+//        AdShowLayer * layer = new AdShowLayer();
+//        layer->autorelease();
+//        addChild(layer,4);
+        
+        #if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+                showAd();
+        #endif
     }
     
 }

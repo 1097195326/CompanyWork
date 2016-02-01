@@ -39,4 +39,13 @@ extern "C"
 		env->ReleaseStringUTFChars(coreJ, coreC);
 	}
 
+	void showAd()
+	{
+		JniMethodInfo info;
+		if (JniHelper::getStaticMethodInfo(info, "org/cocos2dx/cpp/AppActivity","showAD","()V"))
+		{
+			info.env->CallStaticVoidMethod(info.classID, info.methodID);
+		}
+	}
+
 }

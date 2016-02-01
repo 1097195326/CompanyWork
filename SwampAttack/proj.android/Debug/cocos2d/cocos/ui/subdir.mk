@@ -4,34 +4,34 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/CocosGUI.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIButton.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UICheckBox.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIDeprecated.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIHBox.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIHelper.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIImageView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayout.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutComponent.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutParameter.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIListView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILoadingBar.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIPageView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIRelativeBox.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIRichText.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIScale9Sprite.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIScrollView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UISlider.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIText.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextAtlas.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextBMFont.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextField.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIVBox.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIVideoPlayer-android.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWebView.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWebViewImpl-android.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWidget.cpp 
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/CocosGUI.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIButton.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UICheckBox.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIDeprecated.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIHBox.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIHelper.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIImageView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayout.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutComponent.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutParameter.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIListView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILoadingBar.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIPageView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIRelativeBox.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIRichText.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIScale9Sprite.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIScrollView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UISlider.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIText.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextAtlas.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextBMFont.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextField.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIVBox.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIVideoPlayer-android.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWebView.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWebViewImpl-android.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWidget.cpp 
 
 OBJS += \
 ./cocos2d/cocos/ui/CocosGUI.o \
@@ -95,196 +95,196 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/cocos/ui/CocosGUI.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/CocosGUI.cpp
+cocos2d/cocos/ui/CocosGUI.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/CocosGUI.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIButton.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIButton.cpp
+cocos2d/cocos/ui/UIButton.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIButton.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UICheckBox.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UICheckBox.cpp
+cocos2d/cocos/ui/UICheckBox.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UICheckBox.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIDeprecated.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIDeprecated.cpp
+cocos2d/cocos/ui/UIDeprecated.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIDeprecated.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIHBox.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIHBox.cpp
+cocos2d/cocos/ui/UIHBox.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIHBox.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIHelper.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIHelper.cpp
+cocos2d/cocos/ui/UIHelper.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIHelper.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIImageView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIImageView.cpp
+cocos2d/cocos/ui/UIImageView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIImageView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UILayout.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayout.cpp
+cocos2d/cocos/ui/UILayout.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayout.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UILayoutComponent.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutComponent.cpp
+cocos2d/cocos/ui/UILayoutComponent.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutComponent.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UILayoutManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutManager.cpp
+cocos2d/cocos/ui/UILayoutManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UILayoutParameter.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutParameter.cpp
+cocos2d/cocos/ui/UILayoutParameter.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILayoutParameter.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIListView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIListView.cpp
+cocos2d/cocos/ui/UIListView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIListView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UILoadingBar.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILoadingBar.cpp
+cocos2d/cocos/ui/UILoadingBar.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UILoadingBar.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIPageView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIPageView.cpp
+cocos2d/cocos/ui/UIPageView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIPageView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIRelativeBox.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIRelativeBox.cpp
+cocos2d/cocos/ui/UIRelativeBox.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIRelativeBox.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIRichText.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIRichText.cpp
+cocos2d/cocos/ui/UIRichText.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIRichText.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIScale9Sprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIScale9Sprite.cpp
+cocos2d/cocos/ui/UIScale9Sprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIScale9Sprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIScrollView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIScrollView.cpp
+cocos2d/cocos/ui/UIScrollView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIScrollView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UISlider.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UISlider.cpp
+cocos2d/cocos/ui/UISlider.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UISlider.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIText.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIText.cpp
+cocos2d/cocos/ui/UIText.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIText.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UITextAtlas.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextAtlas.cpp
+cocos2d/cocos/ui/UITextAtlas.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextAtlas.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UITextBMFont.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextBMFont.cpp
+cocos2d/cocos/ui/UITextBMFont.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextBMFont.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UITextField.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextField.cpp
+cocos2d/cocos/ui/UITextField.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UITextField.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIVBox.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIVBox.cpp
+cocos2d/cocos/ui/UIVBox.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIVBox.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIVideoPlayer-android.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIVideoPlayer-android.cpp
+cocos2d/cocos/ui/UIVideoPlayer-android.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIVideoPlayer-android.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIWebView.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWebView.cpp
+cocos2d/cocos/ui/UIWebView.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWebView.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIWebViewImpl-android.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWebViewImpl-android.cpp
+cocos2d/cocos/ui/UIWebViewImpl-android.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWebViewImpl-android.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIWidget.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWidget.cpp
+cocos2d/cocos/ui/UIWidget.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIWidget.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

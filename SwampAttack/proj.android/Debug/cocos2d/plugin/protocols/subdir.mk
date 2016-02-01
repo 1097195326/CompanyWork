@@ -4,8 +4,8 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/PluginManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/PluginParam.cpp 
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/PluginManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/PluginParam.cpp 
 
 OBJS += \
 ./cocos2d/plugin/protocols/PluginManager.o \
@@ -17,14 +17,14 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/plugin/protocols/PluginManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/PluginManager.cpp
+cocos2d/plugin/protocols/PluginManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/PluginManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/PluginParam.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/PluginParam.cpp
+cocos2d/plugin/protocols/PluginParam.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/PluginParam.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

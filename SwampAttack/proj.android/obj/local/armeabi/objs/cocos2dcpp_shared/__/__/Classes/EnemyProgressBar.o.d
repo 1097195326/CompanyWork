@@ -10,63 +10,63 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemyProgressBar.o: \
  jni/../../cocos2d/cocos/3d/../base/ccConfig.h \
  jni/../../cocos2d/cocos/3d/../platform/CCPlatformDefine.h \
  jni/../../cocos2d/cocos/3d/../platform/android/CCPlatformDefine-android.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
  jni/../../cocos2d/cocos/3d/../base/CCRefPtr.h \
  jni/../../cocos2d/cocos/3d/../base/CCRef.h \
  jni/../../cocos2d/cocos/3d/../base/ccMacros.h \
  jni/../../cocos2d/cocos/3d/../base/CCConsole.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/api-level.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/time.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/types.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdint.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/_types.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/_types.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/_wchar_limits.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/posix_types.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/stddef.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/compiler.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/posix_types.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/types.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/types.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/kernel.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/time.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/signal.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/limits.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/limits.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/limits.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/internal_types.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/limits.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/syslimits.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/page.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/string.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/malloc.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/signal.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm-generic/signal.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/sigcontext.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/siginfo.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm-generic/siginfo.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/api-level.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/time.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/types.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdint.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/_types.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/_types.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/_wchar_limits.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/posix_types.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/stddef.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/compiler.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/posix_types.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/types.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/types.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/kernel.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/time.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/signal.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/limits.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/limits.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/limits.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/internal_types.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/limits.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/syslimits.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/page.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/string.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/malloc.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/signal.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm-generic/signal.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/sigcontext.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/siginfo.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm-generic/siginfo.h \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
  jni/../../cocos2d/cocos/3d/../platform/CCStdC.h \
  jni/../../cocos2d/cocos/3d/../platform/android/CCStdC-android.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert \
  jni/../../cocos2d/cocos/3d/../base/ccRandom.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random \
  jni/../../cocos2d/cocos/3d/../base/CCVector.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
  jni/../../cocos2d/cocos/3d/../base/CCMap.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
  jni/../../cocos2d/cocos/3d/../base/CCAutoreleasePool.h \
  jni/../../cocos2d/cocos/3d/../base/CCNS.h \
  jni/../../cocos2d/cocos/3d/../math/CCGeometry.h \
@@ -92,14 +92,14 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemyProgressBar.o: \
  jni/../../cocos2d/cocos/3d/../base/ccTypes.h \
  jni/../../cocos2d/cocos/3d/../platform/CCGL.h \
  jni/../../cocos2d/cocos/3d/../platform/android/CCGL-android.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
  jni/../../cocos2d/cocos/3d/../base/CCConfiguration.h \
  jni/../../cocos2d/cocos/3d/../base/CCValue.h \
  jni/../../cocos2d/cocos/3d/../base/CCDirector.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack \
  jni/../../cocos2d/cocos/3d/../base/CCVector.h \
  jni/../../cocos2d/cocos/3d/../2d/CCScene.h \
  jni/../../cocos2d/cocos/3d/../2d/CCNode.h \
@@ -112,20 +112,20 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemyProgressBar.o: \
  jni/../../cocos2d/cocos/3d/../base/CCEventTouch.h \
  jni/../../cocos2d/cocos/3d/../base/CCEvent.h \
  jni/../../cocos2d/cocos/3d/../base/CCEventKeyboard.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list \
  jni/../../cocos2d/cocos/3d/../math/CCAffineTransform.h \
  jni/../../cocos2d/cocos/3d/../platform/CCGLView.h \
  jni/../../cocos2d/cocos/3d/../base/CCScheduler.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set \
  jni/../../cocos2d/cocos/3d/../base/uthash.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h \
  jni/../../cocos2d/cocos/3d/../base/base64.h \
  jni/../../cocos2d/cocos/3d/../base/ZipUtils.h \
  jni/../../cocos2d/cocos/3d/../platform/android/CCFileUtils-android.h \
  jni/../../cocos2d/cocos/3d/../platform/CCFileUtils.h \
  jni/../../cocos2d/cocos/3d/../base/CCData.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h \
  jni/../../cocos2d/cocos/3d/../base/CCProfiling.h \
  jni/../../cocos2d/cocos/3d/../base/CCMap.h \
  jni/../../cocos2d/cocos/3d/../base/CCConsole.h \
@@ -250,8 +250,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemyProgressBar.o: \
  jni/../../cocos2d/cocos/3d/../renderer/ccShaders.h \
  jni/../../cocos2d/cocos/3d/../renderer/CCTexture2D.h \
  jni/../../cocos2d/cocos/3d/../renderer/CCTextureCache.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/condition_variable \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/queue \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/condition_variable \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/queue \
  jni/../../cocos2d/cocos/3d/../renderer/CCVertexIndexBuffer.h \
  jni/../../cocos2d/cocos/3d/../renderer/CCVertexIndexData.h \
  jni/../../cocos2d/cocos/3d/../renderer/CCPrimitive.h \
@@ -337,7 +337,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemyProgressBar.o: \
  jni/../../cocos2d/cocos/3d/../deprecated/CCArray.h \
  jni/../../cocos2d/cocos/3d/../base/CCDataVisitor.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCString.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream \
  jni/../../cocos2d/cocos/3d/../deprecated/CCArray.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCSet.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCInteger.h \
@@ -356,7 +356,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemyProgressBar.o: \
  jni/../../Classes/json/autolink.h jni/../../Classes/json/config.h \
  jni/../../Classes/json/value.h jni/../../Classes/json/forwards.h \
  jni/../../Classes/json/reader.h jni/../../Classes/json/features.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
  jni/../../Classes/json/writer.h jni/../../Classes/GameBuff.h \
  jni/../../Classes/EnemySkill.hpp jni/../../Classes/ConfigManager.h \
  jni/../../Classes/CCCsvHelper.h jni/../../Classes/GameSubject.h \
@@ -387,7 +387,7 @@ jni/../../cocos2d/cocos/3d/../platform/CCPlatformDefine.h:
 
 jni/../../cocos2d/cocos/3d/../platform/android/CCPlatformDefine-android.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCRefPtr.h:
 
@@ -397,109 +397,109 @@ jni/../../cocos2d/cocos/3d/../base/ccMacros.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCConsole.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/api-level.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/api-level.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/time.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/time.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/types.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/types.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdint.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdint.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/_types.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/_types.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/_types.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/_types.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/_wchar_limits.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/_wchar_limits.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/posix_types.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/posix_types.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/stddef.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/stddef.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/compiler.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/compiler.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/posix_types.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/posix_types.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/types.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/types.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/types.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/types.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/kernel.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/kernel.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/time.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/time.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/signal.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/signal.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/limits.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/limits.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/limits.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/limits.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/limits.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/limits.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/internal_types.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/internal_types.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/limits.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/machine/limits.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/syslimits.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/syslimits.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/page.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/page.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/string.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/string.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/malloc.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/malloc.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/signal.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/signal.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm-generic/signal.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm-generic/signal.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/sigcontext.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/sigcontext.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/siginfo.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm/siginfo.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm-generic/siginfo.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/asm-generic/siginfo.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex:
 
 jni/../../cocos2d/cocos/3d/../platform/CCStdC.h:
 
 jni/../../cocos2d/cocos/3d/../platform/android/CCStdC-android.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert:
 
 jni/../../cocos2d/cocos/3d/../base/ccRandom.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random:
 
 jni/../../cocos2d/cocos/3d/../base/CCVector.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
 
 jni/../../cocos2d/cocos/3d/../base/CCMap.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
 
 jni/../../cocos2d/cocos/3d/../base/CCAutoreleasePool.h:
 
@@ -551,13 +551,13 @@ jni/../../cocos2d/cocos/3d/../platform/CCGL.h:
 
 jni/../../cocos2d/cocos/3d/../platform/android/CCGL-android.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCConfiguration.h:
 
@@ -565,7 +565,7 @@ jni/../../cocos2d/cocos/3d/../base/CCValue.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCDirector.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack:
 
 jni/../../cocos2d/cocos/3d/../base/CCVector.h:
 
@@ -591,7 +591,7 @@ jni/../../cocos2d/cocos/3d/../base/CCEvent.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCEventKeyboard.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list:
 
 jni/../../cocos2d/cocos/3d/../math/CCAffineTransform.h:
 
@@ -599,11 +599,11 @@ jni/../../cocos2d/cocos/3d/../platform/CCGLView.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCScheduler.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set:
 
 jni/../../cocos2d/cocos/3d/../base/uthash.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h:
 
 jni/../../cocos2d/cocos/3d/../base/base64.h:
 
@@ -615,9 +615,9 @@ jni/../../cocos2d/cocos/3d/../platform/CCFileUtils.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCData.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h:
 
 jni/../../cocos2d/cocos/3d/../base/CCProfiling.h:
 
@@ -867,9 +867,9 @@ jni/../../cocos2d/cocos/3d/../renderer/CCTexture2D.h:
 
 jni/../../cocos2d/cocos/3d/../renderer/CCTextureCache.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/condition_variable:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/condition_variable:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/queue:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/queue:
 
 jni/../../cocos2d/cocos/3d/../renderer/CCVertexIndexBuffer.h:
 
@@ -1041,7 +1041,7 @@ jni/../../cocos2d/cocos/3d/../base/CCDataVisitor.h:
 
 jni/../../cocos2d/cocos/3d/../deprecated/CCString.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream:
 
 jni/../../cocos2d/cocos/3d/../deprecated/CCArray.h:
 
@@ -1091,7 +1091,7 @@ jni/../../Classes/json/reader.h:
 
 jni/../../Classes/json/features.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
 
 jni/../../Classes/json/writer.h:
 

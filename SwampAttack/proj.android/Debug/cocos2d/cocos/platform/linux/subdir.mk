@@ -4,11 +4,11 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCApplication-linux.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCCommon-linux.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCDevice-linux.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCFileUtils-linux.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCStdC-linux.cpp 
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCApplication-linux.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCCommon-linux.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCDevice-linux.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCFileUtils-linux.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCStdC-linux.cpp 
 
 OBJS += \
 ./cocos2d/cocos/platform/linux/CCApplication-linux.o \
@@ -26,35 +26,35 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/cocos/platform/linux/CCApplication-linux.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCApplication-linux.cpp
+cocos2d/cocos/platform/linux/CCApplication-linux.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCApplication-linux.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/linux/CCCommon-linux.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCCommon-linux.cpp
+cocos2d/cocos/platform/linux/CCCommon-linux.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCCommon-linux.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/linux/CCDevice-linux.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCDevice-linux.cpp
+cocos2d/cocos/platform/linux/CCDevice-linux.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCDevice-linux.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/linux/CCFileUtils-linux.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCFileUtils-linux.cpp
+cocos2d/cocos/platform/linux/CCFileUtils-linux.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCFileUtils-linux.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/linux/CCStdC-linux.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCStdC-linux.cpp
+cocos2d/cocos/platform/linux/CCStdC-linux.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/linux/CCStdC-linux.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

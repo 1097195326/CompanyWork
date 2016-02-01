@@ -43,10 +43,13 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.qq.e.ads.interstitial.AbstractInterstitialADListener;
+import com.qq.e.ads.interstitial.InterstitialAD;
 import com.umeng.mobclickcpp.MobClickCppHelper;
 
 import cn.uc.gamesdk.sa.UCGameSdk;
@@ -74,6 +77,7 @@ public class AppActivity extends Cocos2dxActivity {
 	
 	static private boolean firstTime = true;
 	static private Activity ucsdkActivity;
+	static InterstitialAD iad;
 	
 	static public native void payGameObjectEnd(String core);
 	
@@ -214,6 +218,32 @@ public class AppActivity extends Cocos2dxActivity {
 		initSdk();
 		
 	}
+	
+	static public InterstitialAD getIAD() {
+	    if (iad == null) {
+	      iad = new InterstitialAD(ucsdkActivity, "1104775235", "5080705876187358");
+	    }
+	    return iad;
+	  }
+
+	  static public void showAD() {
+		  
+		 Log.i("hongxing", "show Ad");
+		  
+	    getIAD().setADListener(new AbstractInterstitialADListener() {
+	      @Override
+	      public void onNoAD(int arg0) {
+	        Log.i("AD_DEMO", "LoadInterstitialAd Fail:" + arg0);
+	      }
+
+	      @Override
+	      public void onADReceive() {
+	          Log.i("AD_DEMO", "onADReceive");
+	        iad.show();
+	      }
+	    });
+	    iad.loadAD();
+	  }
 	static {
         MobClickCppHelper.loadLibrary();
     }
@@ -321,16 +351,16 @@ public class AppActivity extends Cocos2dxActivity {
 					if (TextUtils.isEmpty(message)) 
 						message = "unknown";
 										
-					AlertDialog.Builder builder = new Builder(AppActivity.this);
-					builder.setTitle("Tips");
-					builder.setMessage(message);
-					
-					builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(DialogInterface arg, int arg1) {
-						}
-					});
-					builder.create().show();
+//					AlertDialog.Builder builder = new Builder(AppActivity.this);
+//					builder.setTitle("Tips");
+//					builder.setMessage(message);
+//					
+//					builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+//						@Override
+//						public void onClick(DialogInterface arg, int arg1) {
+//						}
+//					});
+//					builder.create().show();
 					break;
 					}
 
@@ -394,5 +424,30 @@ public class AppActivity extends Cocos2dxActivity {
         UCGameSdk.defaultSdk().exit(this, null);
         super.onDestroy();
     }
+//	@Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//         //BACK键退出游戏，退出前请调用UCGameSdk.defaultSdk().exit接口
+//        if (keyCode == KeyEvent.KEYCODE_BACK) {
+//            exit();
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
+//    
+//    /**
+//     * 游戏退出接口
+//     */
+//    private void exit() {
+//        UCGameSdk.defaultSdk().exit(this, new UCCallbackListener<String>() {
+//
+//            @Override
+//            public void callback(int statuscode, String data) {
+//                if (UCGameSDKStatusCode.SDK_EXIT == statuscode) {
+//                    finish();
+//                } else {
+//                }
+//            }
+//        });
+//    }
 	
 }

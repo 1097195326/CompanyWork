@@ -4,12 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/AssetsManager.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/AssetsManagerEx.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/CCEventAssetsManagerEx.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/CCEventListenerAssetsManagerEx.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/Downloader.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/Manifest.cpp 
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/AssetsManager.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/AssetsManagerEx.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/CCEventAssetsManagerEx.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/CCEventListenerAssetsManagerEx.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/Downloader.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/Manifest.cpp 
 
 OBJS += \
 ./cocos2d/extensions/assets-manager/AssetsManager.o \
@@ -29,42 +29,42 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/extensions/assets-manager/AssetsManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/AssetsManager.cpp
+cocos2d/extensions/assets-manager/AssetsManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/AssetsManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/assets-manager/AssetsManagerEx.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/AssetsManagerEx.cpp
+cocos2d/extensions/assets-manager/AssetsManagerEx.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/AssetsManagerEx.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/assets-manager/CCEventAssetsManagerEx.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/CCEventAssetsManagerEx.cpp
+cocos2d/extensions/assets-manager/CCEventAssetsManagerEx.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/CCEventAssetsManagerEx.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/assets-manager/CCEventListenerAssetsManagerEx.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/CCEventListenerAssetsManagerEx.cpp
+cocos2d/extensions/assets-manager/CCEventListenerAssetsManagerEx.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/CCEventListenerAssetsManagerEx.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/assets-manager/Downloader.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/Downloader.cpp
+cocos2d/extensions/assets-manager/Downloader.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/Downloader.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/assets-manager/Manifest.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/Manifest.cpp
+cocos2d/extensions/assets-manager/Manifest.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/assets-manager/Manifest.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

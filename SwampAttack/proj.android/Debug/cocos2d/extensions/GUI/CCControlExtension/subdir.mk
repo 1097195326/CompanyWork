@@ -4,17 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControl.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlButton.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCInvocation.cpp 
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControl.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlButton.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCInvocation.cpp 
 
 OBJS += \
 ./cocos2d/extensions/GUI/CCControlExtension/CCControl.o \
@@ -44,77 +44,77 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/extensions/GUI/CCControlExtension/CCControl.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControl.cpp
+cocos2d/extensions/GUI/CCControlExtension/CCControl.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControl.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/GUI/CCControlExtension/CCControlButton.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlButton.cpp
+cocos2d/extensions/GUI/CCControlExtension/CCControlButton.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlButton.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.cpp
+cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.cpp
+cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.cpp
+cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.cpp
+cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.cpp
+cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.cpp
+cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.cpp
+cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.cpp
+cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/GUI/CCControlExtension/CCInvocation.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCInvocation.cpp
+cocos2d/extensions/GUI/CCControlExtension/CCInvocation.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/GUI/CCControlExtension/CCInvocation.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

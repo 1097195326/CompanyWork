@@ -4,12 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBox.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-android.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-stub.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-win32.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-winrt.cpp \
-/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-wp8.cpp 
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBox.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-android.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-stub.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-win32.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-winrt.cpp \
+/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-wp8.cpp 
 
 OBJS += \
 ./cocos2d/cocos/ui/UIEditBox/UIEditBox.o \
@@ -29,42 +29,42 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/cocos/ui/UIEditBox/UIEditBox.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBox.cpp
+cocos2d/cocos/ui/UIEditBox/UIEditBox.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBox.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-android.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-android.cpp
+cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-android.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-android.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-stub.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-stub.cpp
+cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-stub.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-stub.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-win32.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-win32.cpp
+cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-win32.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-win32.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-winrt.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-winrt.cpp
+cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-winrt.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-winrt.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-wp8.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-wp8.cpp
+cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-wp8.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/ui/UIEditBox/UIEditBoxImpl-wp8.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
