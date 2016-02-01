@@ -320,14 +320,10 @@
 		8D1DFB2A1C576549003B3D44 /* GuideCompositeApposeModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideCompositeApposeModel.cpp; sourceTree = "<group>"; };
 		8D1DFB2B1C576549003B3D44 /* GuideCompositeApposeModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideCompositeApposeModel.hpp; sourceTree = "<group>"; };
 		8D3F153B1BDF637E00CD7F67 /* HealthObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HealthObject.cpp; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		8D3F153C1BDF637E00CD7F67 /* HealthObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthObject.h; sourceTree = "<group>"; };
-=======
-		8D3F153C1BDF637E00CD7F67 /* HealthObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HealthObject.hpp; sourceTree = "<group>"; };
 		8D458D271BEB689200B5EFC5 /* Default-768h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-768h@3x.png"; sourceTree = "<group>"; };
 		8D45D5621BEC7E79008A21E3 /* Icon-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-87.png"; sourceTree = "<group>"; };
 		8D45D5641BEC7E83008A21E3 /* Icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-180.png"; sourceTree = "<group>"; };
->>>>>>> master
 		8D51DC531B3A816F0053EA8A /* DropModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropModel.cpp; sourceTree = "<group>"; };
 		8D51DC541B3A816F0053EA8A /* DropModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropModel.h; sourceTree = "<group>"; };
 		8D51DC561B3A817C0053EA8A /* DropManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropManager.cpp; sourceTree = "<group>"; };

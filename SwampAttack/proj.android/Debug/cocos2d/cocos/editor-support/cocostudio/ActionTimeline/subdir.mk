@@ -4,12 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimeline.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimelineCache.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCFrame.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCNodeReader.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCTimeLine.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CSLoader.cpp 
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimeline.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimelineCache.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCFrame.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCNodeReader.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCTimeLine.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CSLoader.cpp 
 
 OBJS += \
 ./cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimeline.o \
@@ -29,42 +29,42 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimeline.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimeline.cpp
+cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimeline.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimeline.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimelineCache.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimelineCache.cpp
+cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimelineCache.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimelineCache.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCFrame.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCFrame.cpp
+cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCFrame.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCFrame.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCNodeReader.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCNodeReader.cpp
+cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCNodeReader.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCNodeReader.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCTimeLine.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCTimeLine.cpp
+cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCTimeLine.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCTimeLine.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CSLoader.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CSLoader.cpp
+cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CSLoader.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CSLoader.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

@@ -4,12 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Body.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2ContactManager.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Fixture.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Island.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2World.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2WorldCallbacks.cpp 
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Body.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2ContactManager.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Fixture.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Island.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2World.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2WorldCallbacks.cpp 
 
 OBJS += \
 ./cocos2d/external/Box2D/Dynamics/b2Body.o \
@@ -29,42 +29,42 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/external/Box2D/Dynamics/b2Body.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Body.cpp
+cocos2d/external/Box2D/Dynamics/b2Body.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Body.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/external/Box2D/Dynamics/b2ContactManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2ContactManager.cpp
+cocos2d/external/Box2D/Dynamics/b2ContactManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2ContactManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/external/Box2D/Dynamics/b2Fixture.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Fixture.cpp
+cocos2d/external/Box2D/Dynamics/b2Fixture.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Fixture.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/external/Box2D/Dynamics/b2Island.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Island.cpp
+cocos2d/external/Box2D/Dynamics/b2Island.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2Island.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/external/Box2D/Dynamics/b2World.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2World.cpp
+cocos2d/external/Box2D/Dynamics/b2World.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2World.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/external/Box2D/Dynamics/b2WorldCallbacks.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2WorldCallbacks.cpp
+cocos2d/external/Box2D/Dynamics/b2WorldCallbacks.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/Box2D/Dynamics/b2WorldCallbacks.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

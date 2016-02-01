@@ -68,15 +68,29 @@ void SpecialObject::buyEnd(const char * payType)
             break;
         case 2:
         {
-            int expendPropNum = _G_U->getExpendPropNum();
-            int num = m_expendObject->getEffect() * m_num;
-            expendPropNum += num;
-            _G_U->setExpendPropNum(expendPropNum);
+            int userGold = _G_U->getUserGold();
+            if (userGold >= getPrice()) {
+                int expendPropNum = _G_U->getExpendPropNum();
+                int num = m_expendObject->getEffect() * m_num;
+                expendPropNum += num;
+                _G_U->setExpendPropNum(expendPropNum);
+                
+                userGold -= getPrice();
+                _G_U->setUserGold(userGold);
+            }
+            
         }
             break;
         case 3:
         {
-            _G_U->addHealthToFull();
+            int userGold = _G_U->getUserGold();
+            if (userGold >= getPrice()) {
+                _G_U->addHealthToFull();
+                
+                userGold -= getPrice();
+                _G_U->setUserGold(userGold);
+            }
+            
         }
             break;
         default:

@@ -4,11 +4,11 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsBody.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsContact.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsJoint.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsShape.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsWorld.cpp 
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsBody.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsContact.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsJoint.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsShape.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsWorld.cpp 
 
 OBJS += \
 ./cocos2d/cocos/physics/CCPhysicsBody.o \
@@ -26,35 +26,35 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/cocos/physics/CCPhysicsBody.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsBody.cpp
+cocos2d/cocos/physics/CCPhysicsBody.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsBody.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/physics/CCPhysicsContact.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsContact.cpp
+cocos2d/cocos/physics/CCPhysicsContact.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsContact.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/physics/CCPhysicsJoint.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsJoint.cpp
+cocos2d/cocos/physics/CCPhysicsJoint.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsJoint.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/physics/CCPhysicsShape.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsShape.cpp
+cocos2d/cocos/physics/CCPhysicsShape.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsShape.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/physics/CCPhysicsWorld.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsWorld.cpp
+cocos2d/cocos/physics/CCPhysicsWorld.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/physics/CCPhysicsWorld.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

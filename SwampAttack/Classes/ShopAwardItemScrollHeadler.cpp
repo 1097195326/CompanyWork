@@ -110,12 +110,19 @@ void ShopAwardItemScrollHeadler::buy(cocos2d::Touch *touch, cocos2d::Event *even
 
     SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectByIndex(m_index);
     umeng::MobClickCpp::event(specialObject->getId().c_str());
-
+    
     
 //    specialObject->buyEnd();
+
+if (specialObject->getType() == 1)
+{
+    
 #if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     payForBuyGameObject(specialObject);
 #endif
-    
+}else
+{
+    specialObject->buyEnd();
+}
     
 }

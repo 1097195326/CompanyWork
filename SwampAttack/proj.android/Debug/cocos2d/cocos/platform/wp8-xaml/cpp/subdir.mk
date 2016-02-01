@@ -4,11 +4,11 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Cocos2dRenderer.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DContentProvider.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DInterop.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/DirectXBase.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/EditBoxEvent.cpp 
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Cocos2dRenderer.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DContentProvider.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DInterop.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/DirectXBase.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/EditBoxEvent.cpp 
 
 OBJS += \
 ./cocos2d/cocos/platform/wp8-xaml/cpp/Cocos2dRenderer.o \
@@ -26,35 +26,35 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/cocos/platform/wp8-xaml/cpp/Cocos2dRenderer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Cocos2dRenderer.cpp
+cocos2d/cocos/platform/wp8-xaml/cpp/Cocos2dRenderer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Cocos2dRenderer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DContentProvider.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DContentProvider.cpp
+cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DContentProvider.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DContentProvider.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DInterop.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DInterop.cpp
+cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DInterop.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/Direct3DInterop.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/wp8-xaml/cpp/DirectXBase.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/DirectXBase.cpp
+cocos2d/cocos/platform/wp8-xaml/cpp/DirectXBase.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/DirectXBase.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/platform/wp8-xaml/cpp/EditBoxEvent.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/EditBoxEvent.cpp
+cocos2d/cocos/platform/wp8-xaml/cpp/EditBoxEvent.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/platform/wp8-xaml/cpp/EditBoxEvent.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

@@ -4,75 +4,75 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAction.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionCamera.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionCatmullRom.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionEase.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionGrid.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionGrid3D.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionInstant.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionInterval.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionManager.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionPageTurn3D.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionProgressTimer.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionTiledGrid.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionTween.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAnimation.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAnimationCache.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAtlasNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCCamera.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCClippingNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCClippingRectangleNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCComponent.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCComponentContainer.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCDrawNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCDrawingPrimitives.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFastTMXLayer.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFastTMXTiledMap.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFont.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontAtlas.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontAtlasCache.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontCharMap.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontFNT.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontFreeType.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGLBufferedNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGrabber.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGrid.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabel.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelAtlas.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelBMFont.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelTTF.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelTextFormatter.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLayer.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLight.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMenu.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMenuItem.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMotionStreak.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCNodeGrid.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParallaxNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleBatchNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleExamples.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleSystem.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleSystemQuad.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCProgressTimer.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCProtectedNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCRenderTexture.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCScene.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSprite.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteBatchNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteFrame.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteFrameCache.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXLayer.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXObjectGroup.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXTiledMap.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXXMLParser.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTextFieldTTF.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTileMapAtlas.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransition.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransitionPageTurn.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransitionProgress.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTweenFunction.cpp 
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAction.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionCamera.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionCatmullRom.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionEase.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionGrid.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionGrid3D.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionInstant.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionInterval.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionManager.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionPageTurn3D.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionProgressTimer.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionTiledGrid.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionTween.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAnimation.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAnimationCache.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAtlasNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCCamera.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCClippingNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCClippingRectangleNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCComponent.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCComponentContainer.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCDrawNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCDrawingPrimitives.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFastTMXLayer.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFastTMXTiledMap.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFont.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontAtlas.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontAtlasCache.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontCharMap.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontFNT.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontFreeType.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGLBufferedNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGrabber.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGrid.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabel.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelAtlas.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelBMFont.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelTTF.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelTextFormatter.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLayer.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLight.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMenu.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMenuItem.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMotionStreak.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCNodeGrid.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParallaxNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleBatchNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleExamples.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleSystem.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleSystemQuad.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCProgressTimer.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCProtectedNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCRenderTexture.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCScene.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSprite.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteBatchNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteFrame.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteFrameCache.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXLayer.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXObjectGroup.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXTiledMap.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXXMLParser.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTextFieldTTF.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTileMapAtlas.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransition.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransitionPageTurn.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransitionProgress.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTweenFunction.cpp 
 
 OBJS += \
 ./cocos2d/cocos/2d/CCAction.o \
@@ -218,483 +218,483 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/cocos/2d/CCAction.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAction.cpp
+cocos2d/cocos/2d/CCAction.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAction.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionCamera.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionCamera.cpp
+cocos2d/cocos/2d/CCActionCamera.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionCamera.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionCatmullRom.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionCatmullRom.cpp
+cocos2d/cocos/2d/CCActionCatmullRom.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionCatmullRom.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionEase.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionEase.cpp
+cocos2d/cocos/2d/CCActionEase.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionEase.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionGrid.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionGrid.cpp
+cocos2d/cocos/2d/CCActionGrid.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionGrid.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionGrid3D.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionGrid3D.cpp
+cocos2d/cocos/2d/CCActionGrid3D.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionGrid3D.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionInstant.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionInstant.cpp
+cocos2d/cocos/2d/CCActionInstant.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionInstant.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionInterval.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionInterval.cpp
+cocos2d/cocos/2d/CCActionInterval.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionInterval.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionManager.cpp
+cocos2d/cocos/2d/CCActionManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionPageTurn3D.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionPageTurn3D.cpp
+cocos2d/cocos/2d/CCActionPageTurn3D.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionPageTurn3D.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionProgressTimer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionProgressTimer.cpp
+cocos2d/cocos/2d/CCActionProgressTimer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionProgressTimer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionTiledGrid.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionTiledGrid.cpp
+cocos2d/cocos/2d/CCActionTiledGrid.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionTiledGrid.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCActionTween.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionTween.cpp
+cocos2d/cocos/2d/CCActionTween.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCActionTween.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCAnimation.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAnimation.cpp
+cocos2d/cocos/2d/CCAnimation.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAnimation.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCAnimationCache.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAnimationCache.cpp
+cocos2d/cocos/2d/CCAnimationCache.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAnimationCache.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCAtlasNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAtlasNode.cpp
+cocos2d/cocos/2d/CCAtlasNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCAtlasNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCCamera.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCCamera.cpp
+cocos2d/cocos/2d/CCCamera.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCCamera.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCClippingNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCClippingNode.cpp
+cocos2d/cocos/2d/CCClippingNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCClippingNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCClippingRectangleNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCClippingRectangleNode.cpp
+cocos2d/cocos/2d/CCClippingRectangleNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCClippingRectangleNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCComponent.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCComponent.cpp
+cocos2d/cocos/2d/CCComponent.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCComponent.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCComponentContainer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCComponentContainer.cpp
+cocos2d/cocos/2d/CCComponentContainer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCComponentContainer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCDrawNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCDrawNode.cpp
+cocos2d/cocos/2d/CCDrawNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCDrawNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCDrawingPrimitives.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCDrawingPrimitives.cpp
+cocos2d/cocos/2d/CCDrawingPrimitives.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCDrawingPrimitives.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCFastTMXLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFastTMXLayer.cpp
+cocos2d/cocos/2d/CCFastTMXLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFastTMXLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCFastTMXTiledMap.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFastTMXTiledMap.cpp
+cocos2d/cocos/2d/CCFastTMXTiledMap.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFastTMXTiledMap.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCFont.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFont.cpp
+cocos2d/cocos/2d/CCFont.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFont.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCFontAtlas.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontAtlas.cpp
+cocos2d/cocos/2d/CCFontAtlas.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontAtlas.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCFontAtlasCache.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontAtlasCache.cpp
+cocos2d/cocos/2d/CCFontAtlasCache.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontAtlasCache.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCFontCharMap.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontCharMap.cpp
+cocos2d/cocos/2d/CCFontCharMap.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontCharMap.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCFontFNT.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontFNT.cpp
+cocos2d/cocos/2d/CCFontFNT.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontFNT.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCFontFreeType.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontFreeType.cpp
+cocos2d/cocos/2d/CCFontFreeType.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCFontFreeType.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCGLBufferedNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGLBufferedNode.cpp
+cocos2d/cocos/2d/CCGLBufferedNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGLBufferedNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCGrabber.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGrabber.cpp
+cocos2d/cocos/2d/CCGrabber.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGrabber.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCGrid.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGrid.cpp
+cocos2d/cocos/2d/CCGrid.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCGrid.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCLabel.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabel.cpp
+cocos2d/cocos/2d/CCLabel.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabel.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCLabelAtlas.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelAtlas.cpp
+cocos2d/cocos/2d/CCLabelAtlas.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelAtlas.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCLabelBMFont.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelBMFont.cpp
+cocos2d/cocos/2d/CCLabelBMFont.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelBMFont.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCLabelTTF.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelTTF.cpp
+cocos2d/cocos/2d/CCLabelTTF.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelTTF.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCLabelTextFormatter.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelTextFormatter.cpp
+cocos2d/cocos/2d/CCLabelTextFormatter.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLabelTextFormatter.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLayer.cpp
+cocos2d/cocos/2d/CCLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCLight.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLight.cpp
+cocos2d/cocos/2d/CCLight.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCLight.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCMenu.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMenu.cpp
+cocos2d/cocos/2d/CCMenu.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMenu.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCMenuItem.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMenuItem.cpp
+cocos2d/cocos/2d/CCMenuItem.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMenuItem.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCMotionStreak.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMotionStreak.cpp
+cocos2d/cocos/2d/CCMotionStreak.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCMotionStreak.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCNode.cpp
+cocos2d/cocos/2d/CCNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCNodeGrid.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCNodeGrid.cpp
+cocos2d/cocos/2d/CCNodeGrid.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCNodeGrid.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCParallaxNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParallaxNode.cpp
+cocos2d/cocos/2d/CCParallaxNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParallaxNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCParticleBatchNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleBatchNode.cpp
+cocos2d/cocos/2d/CCParticleBatchNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleBatchNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCParticleExamples.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleExamples.cpp
+cocos2d/cocos/2d/CCParticleExamples.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleExamples.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCParticleSystem.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleSystem.cpp
+cocos2d/cocos/2d/CCParticleSystem.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleSystem.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCParticleSystemQuad.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleSystemQuad.cpp
+cocos2d/cocos/2d/CCParticleSystemQuad.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCParticleSystemQuad.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCProgressTimer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCProgressTimer.cpp
+cocos2d/cocos/2d/CCProgressTimer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCProgressTimer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCProtectedNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCProtectedNode.cpp
+cocos2d/cocos/2d/CCProtectedNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCProtectedNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCRenderTexture.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCRenderTexture.cpp
+cocos2d/cocos/2d/CCRenderTexture.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCRenderTexture.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCScene.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCScene.cpp
+cocos2d/cocos/2d/CCScene.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCScene.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSprite.cpp
+cocos2d/cocos/2d/CCSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCSpriteBatchNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteBatchNode.cpp
+cocos2d/cocos/2d/CCSpriteBatchNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteBatchNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCSpriteFrame.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteFrame.cpp
+cocos2d/cocos/2d/CCSpriteFrame.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteFrame.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCSpriteFrameCache.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteFrameCache.cpp
+cocos2d/cocos/2d/CCSpriteFrameCache.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCSpriteFrameCache.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCTMXLayer.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXLayer.cpp
+cocos2d/cocos/2d/CCTMXLayer.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXLayer.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCTMXObjectGroup.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXObjectGroup.cpp
+cocos2d/cocos/2d/CCTMXObjectGroup.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXObjectGroup.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCTMXTiledMap.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXTiledMap.cpp
+cocos2d/cocos/2d/CCTMXTiledMap.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXTiledMap.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCTMXXMLParser.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXXMLParser.cpp
+cocos2d/cocos/2d/CCTMXXMLParser.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTMXXMLParser.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCTextFieldTTF.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTextFieldTTF.cpp
+cocos2d/cocos/2d/CCTextFieldTTF.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTextFieldTTF.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCTileMapAtlas.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTileMapAtlas.cpp
+cocos2d/cocos/2d/CCTileMapAtlas.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTileMapAtlas.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCTransition.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransition.cpp
+cocos2d/cocos/2d/CCTransition.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransition.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCTransitionPageTurn.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransitionPageTurn.cpp
+cocos2d/cocos/2d/CCTransitionPageTurn.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransitionPageTurn.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCTransitionProgress.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransitionProgress.cpp
+cocos2d/cocos/2d/CCTransitionProgress.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTransitionProgress.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/2d/CCTweenFunction.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTweenFunction.cpp
+cocos2d/cocos/2d/CCTweenFunction.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/2d/CCTweenFunction.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

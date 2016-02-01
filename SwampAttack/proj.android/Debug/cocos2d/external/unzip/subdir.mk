@@ -4,9 +4,9 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/ioapi.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/ioapi_mem.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/unzip.cpp 
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/ioapi.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/ioapi_mem.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/unzip.cpp 
 
 OBJS += \
 ./cocos2d/external/unzip/ioapi.o \
@@ -20,21 +20,21 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/external/unzip/ioapi.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/ioapi.cpp
+cocos2d/external/unzip/ioapi.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/ioapi.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/external/unzip/ioapi_mem.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/ioapi_mem.cpp
+cocos2d/external/unzip/ioapi_mem.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/ioapi_mem.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/external/unzip/unzip.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/unzip.cpp
+cocos2d/external/unzip/unzip.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/external/unzip/unzip.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

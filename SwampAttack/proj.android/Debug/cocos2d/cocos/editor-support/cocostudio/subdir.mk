@@ -4,43 +4,43 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionFrame.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionFrameEasing.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionManagerEx.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionObject.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmature.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureAnimation.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureDataManager.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureDefine.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCBatchNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCBone.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCColliderDetector.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComAttribute.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComAudio.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComController.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComRender.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDataReaderHelper.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDatas.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDecorativeDisplay.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDisplayFactory.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDisplayManager.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCInputDelegate.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCProcessBase.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSGUIReader.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSSceneReader.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSkin.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSpriteFrameCacheHelper.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCTransformHelp.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCTween.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCUtilMath.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CocoLoader.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/DictionaryHelper.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/FlatBuffersSerialize.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerBase.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerMng.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerObj.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/WidgetCallBackHandlerProtocol.cpp 
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionFrame.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionFrameEasing.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionManagerEx.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionObject.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmature.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureAnimation.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureDataManager.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureDefine.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCBatchNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCBone.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCColliderDetector.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComAttribute.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComAudio.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComController.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComRender.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDataReaderHelper.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDatas.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDecorativeDisplay.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDisplayFactory.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDisplayManager.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCInputDelegate.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCProcessBase.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSGUIReader.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSSceneReader.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSkin.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSpriteFrameCacheHelper.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCTransformHelp.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCTween.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCUtilMath.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CocoLoader.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/DictionaryHelper.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/FlatBuffersSerialize.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerBase.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerMng.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerObj.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/WidgetCallBackHandlerProtocol.cpp 
 
 OBJS += \
 ./cocos2d/cocos/editor-support/cocostudio/CCActionFrame.o \
@@ -122,259 +122,259 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/cocos/editor-support/cocostudio/CCActionFrame.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionFrame.cpp
+cocos2d/cocos/editor-support/cocostudio/CCActionFrame.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionFrame.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCActionFrameEasing.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionFrameEasing.cpp
+cocos2d/cocos/editor-support/cocostudio/CCActionFrameEasing.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionFrameEasing.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCActionManagerEx.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionManagerEx.cpp
+cocos2d/cocos/editor-support/cocostudio/CCActionManagerEx.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionManagerEx.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCActionNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionNode.cpp
+cocos2d/cocos/editor-support/cocostudio/CCActionNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCActionObject.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionObject.cpp
+cocos2d/cocos/editor-support/cocostudio/CCActionObject.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCActionObject.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCArmature.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmature.cpp
+cocos2d/cocos/editor-support/cocostudio/CCArmature.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmature.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCArmatureAnimation.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureAnimation.cpp
+cocos2d/cocos/editor-support/cocostudio/CCArmatureAnimation.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureAnimation.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCArmatureDataManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureDataManager.cpp
+cocos2d/cocos/editor-support/cocostudio/CCArmatureDataManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureDataManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCArmatureDefine.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureDefine.cpp
+cocos2d/cocos/editor-support/cocostudio/CCArmatureDefine.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCArmatureDefine.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCBatchNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCBatchNode.cpp
+cocos2d/cocos/editor-support/cocostudio/CCBatchNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCBatchNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCBone.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCBone.cpp
+cocos2d/cocos/editor-support/cocostudio/CCBone.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCBone.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCColliderDetector.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCColliderDetector.cpp
+cocos2d/cocos/editor-support/cocostudio/CCColliderDetector.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCColliderDetector.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCComAttribute.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComAttribute.cpp
+cocos2d/cocos/editor-support/cocostudio/CCComAttribute.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComAttribute.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCComAudio.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComAudio.cpp
+cocos2d/cocos/editor-support/cocostudio/CCComAudio.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComAudio.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCComController.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComController.cpp
+cocos2d/cocos/editor-support/cocostudio/CCComController.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComController.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCComRender.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComRender.cpp
+cocos2d/cocos/editor-support/cocostudio/CCComRender.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCComRender.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCDataReaderHelper.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDataReaderHelper.cpp
+cocos2d/cocos/editor-support/cocostudio/CCDataReaderHelper.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDataReaderHelper.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCDatas.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDatas.cpp
+cocos2d/cocos/editor-support/cocostudio/CCDatas.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDatas.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCDecorativeDisplay.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDecorativeDisplay.cpp
+cocos2d/cocos/editor-support/cocostudio/CCDecorativeDisplay.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDecorativeDisplay.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCDisplayFactory.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDisplayFactory.cpp
+cocos2d/cocos/editor-support/cocostudio/CCDisplayFactory.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDisplayFactory.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCDisplayManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDisplayManager.cpp
+cocos2d/cocos/editor-support/cocostudio/CCDisplayManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCDisplayManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCInputDelegate.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCInputDelegate.cpp
+cocos2d/cocos/editor-support/cocostudio/CCInputDelegate.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCInputDelegate.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCProcessBase.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCProcessBase.cpp
+cocos2d/cocos/editor-support/cocostudio/CCProcessBase.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCProcessBase.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCSGUIReader.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSGUIReader.cpp
+cocos2d/cocos/editor-support/cocostudio/CCSGUIReader.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSGUIReader.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCSSceneReader.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSSceneReader.cpp
+cocos2d/cocos/editor-support/cocostudio/CCSSceneReader.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSSceneReader.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCSkin.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSkin.cpp
+cocos2d/cocos/editor-support/cocostudio/CCSkin.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSkin.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCSpriteFrameCacheHelper.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSpriteFrameCacheHelper.cpp
+cocos2d/cocos/editor-support/cocostudio/CCSpriteFrameCacheHelper.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCSpriteFrameCacheHelper.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCTransformHelp.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCTransformHelp.cpp
+cocos2d/cocos/editor-support/cocostudio/CCTransformHelp.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCTransformHelp.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCTween.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCTween.cpp
+cocos2d/cocos/editor-support/cocostudio/CCTween.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCTween.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CCUtilMath.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCUtilMath.cpp
+cocos2d/cocos/editor-support/cocostudio/CCUtilMath.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CCUtilMath.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/CocoLoader.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CocoLoader.cpp
+cocos2d/cocos/editor-support/cocostudio/CocoLoader.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/CocoLoader.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/DictionaryHelper.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/DictionaryHelper.cpp
+cocos2d/cocos/editor-support/cocostudio/DictionaryHelper.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/DictionaryHelper.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/FlatBuffersSerialize.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/FlatBuffersSerialize.cpp
+cocos2d/cocos/editor-support/cocostudio/FlatBuffersSerialize.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/FlatBuffersSerialize.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/TriggerBase.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerBase.cpp
+cocos2d/cocos/editor-support/cocostudio/TriggerBase.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerBase.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/TriggerMng.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerMng.cpp
+cocos2d/cocos/editor-support/cocostudio/TriggerMng.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerMng.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/TriggerObj.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerObj.cpp
+cocos2d/cocos/editor-support/cocostudio/TriggerObj.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/TriggerObj.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/cocos/editor-support/cocostudio/WidgetCallBackHandlerProtocol.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/WidgetCallBackHandlerProtocol.cpp
+cocos2d/cocos/editor-support/cocostudio/WidgetCallBackHandlerProtocol.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/cocos/editor-support/cocostudio/WidgetCallBackHandlerProtocol.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

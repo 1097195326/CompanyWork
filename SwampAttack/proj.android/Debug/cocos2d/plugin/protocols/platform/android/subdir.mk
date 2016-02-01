@@ -4,18 +4,18 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/AgentManager.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/FacebookAgent.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginFactory.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginJniHelper.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginProtocol.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginUtils.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolAds.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolAnalytics.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolIAP.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolShare.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolSocial.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolUser.cpp 
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/AgentManager.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/FacebookAgent.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginFactory.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginJniHelper.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginProtocol.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginUtils.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolAds.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolAnalytics.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolIAP.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolShare.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolSocial.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolUser.cpp 
 
 OBJS += \
 ./cocos2d/plugin/protocols/platform/android/AgentManager.o \
@@ -47,84 +47,84 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/plugin/protocols/platform/android/AgentManager.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/AgentManager.cpp
+cocos2d/plugin/protocols/platform/android/AgentManager.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/AgentManager.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/platform/android/FacebookAgent.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/FacebookAgent.cpp
+cocos2d/plugin/protocols/platform/android/FacebookAgent.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/FacebookAgent.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/platform/android/PluginFactory.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginFactory.cpp
+cocos2d/plugin/protocols/platform/android/PluginFactory.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginFactory.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/platform/android/PluginJniHelper.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginJniHelper.cpp
+cocos2d/plugin/protocols/platform/android/PluginJniHelper.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginJniHelper.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/platform/android/PluginProtocol.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginProtocol.cpp
+cocos2d/plugin/protocols/platform/android/PluginProtocol.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginProtocol.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/platform/android/PluginUtils.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginUtils.cpp
+cocos2d/plugin/protocols/platform/android/PluginUtils.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/PluginUtils.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/platform/android/ProtocolAds.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolAds.cpp
+cocos2d/plugin/protocols/platform/android/ProtocolAds.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolAds.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/platform/android/ProtocolAnalytics.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolAnalytics.cpp
+cocos2d/plugin/protocols/platform/android/ProtocolAnalytics.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolAnalytics.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/platform/android/ProtocolIAP.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolIAP.cpp
+cocos2d/plugin/protocols/platform/android/ProtocolIAP.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolIAP.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/platform/android/ProtocolShare.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolShare.cpp
+cocos2d/plugin/protocols/platform/android/ProtocolShare.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolShare.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/platform/android/ProtocolSocial.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolSocial.cpp
+cocos2d/plugin/protocols/platform/android/ProtocolSocial.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolSocial.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/plugin/protocols/platform/android/ProtocolUser.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolUser.cpp
+cocos2d/plugin/protocols/platform/android/ProtocolUser.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/plugin/protocols/platform/android/ProtocolUser.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

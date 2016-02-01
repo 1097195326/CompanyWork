@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 O_SRCS += \
+../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/AdShowLayer.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/AlertTextTool.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/AppDelegate.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/BaseUtil.o \
@@ -38,6 +39,13 @@ O_SRCS += \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemyInfo.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemyManager.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemyProgressBar.o \
+../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemySkill.o \
+../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemySkill_fangyu.o \
+../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemySkill_fenlie.o \
+../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemySkill_kuangbao.o \
+../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemySkill_shanbi.o \
+../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemySkill_yuancheng.o \
+../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemySkill_zhaohuan.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/EnemySprite.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/ExpendObject.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/FireBulletSprite.o \
@@ -76,6 +84,8 @@ O_SRCS += \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameVerticalScrollView.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GuanQiaManager.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GuanQiaModel.o \
+../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GuanggaoManager.o \
+../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GuanggaoModel.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Gun.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GunManager.o \
 ../obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GunSprite.o \

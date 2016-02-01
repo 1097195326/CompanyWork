@@ -4,8 +4,8 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/physics-nodes/CCPhysicsDebugNode.cpp \
-/Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/physics-nodes/CCPhysicsSprite.cpp 
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/physics-nodes/CCPhysicsDebugNode.cpp \
+/Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/physics-nodes/CCPhysicsSprite.cpp 
 
 OBJS += \
 ./cocos2d/extensions/physics-nodes/CCPhysicsDebugNode.o \
@@ -17,14 +17,14 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cocos2d/extensions/physics-nodes/CCPhysicsDebugNode.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/physics-nodes/CCPhysicsDebugNode.cpp
+cocos2d/extensions/physics-nodes/CCPhysicsDebugNode.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/physics-nodes/CCPhysicsDebugNode.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-cocos2d/extensions/physics-nodes/CCPhysicsSprite.o: /Users/oceantech02/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/physics-nodes/CCPhysicsSprite.cpp
+cocos2d/extensions/physics-nodes/CCPhysicsSprite.o: /Users/zhanghongxing/work/Program/CompanyWork/SwampAttack/cocos2d/extensions/physics-nodes/CCPhysicsSprite.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
