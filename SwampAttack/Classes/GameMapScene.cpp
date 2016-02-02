@@ -19,6 +19,9 @@
 #include "GuanggaoManager.hpp"
 #include "AdShowLayer.hpp"
 
+#include "MobClickCpp.h"
+
+
 #if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include "../proj.android/jni/hellocpp/UCSdkJniHelper.h"
 #endif
@@ -196,6 +199,8 @@ void GameMapScene::guanggaoButtonFuc(cocos2d::Ref *psender)
     GuanggaoModel * guanggaoModel = _Gg_M_->getGuangggaoModelByIndex(index);
     if (guanggaoModel->isReady())
     {
+        umeng::MobClickCpp::event("100010");
+        
         guanggaoModel->addMoney();
         guanggaoModel->setReady(false);
         

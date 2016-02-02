@@ -369,6 +369,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameMapScene.o: \
  jni/../../Classes/BaseUtil.h jni/../../Classes/GameUser.h \
  jni/../../Classes/GuanggaoManager.hpp \
  jni/../../Classes/GuanggaoModel.hpp jni/../../Classes/AdShowLayer.hpp \
+ jni/../../Classes/MobClickCpp.h \
  jni/../../Classes/../proj.android/jni/hellocpp/UCSdkJniHelper.h \
  jni/../../cocos2d/cocos/3d/../../../Classes/SpecialObject.h \
  jni/../../cocos2d/cocos/3d/../../../Classes/json/json.h \
@@ -1144,6 +1145,8 @@ jni/../../Classes/GuanggaoManager.hpp:
 jni/../../Classes/GuanggaoModel.hpp:
 
 jni/../../Classes/AdShowLayer.hpp:
+
+jni/../../Classes/MobClickCpp.h:
 
 jni/../../Classes/../proj.android/jni/hellocpp/UCSdkJniHelper.h:
 
