@@ -2,9 +2,9 @@
 Id[string],WeaponName[string],,ModelId[string],Bullet[string],UnderAttackAction[int],WeaponType[string],StrengthenLevel[int],LimitLevel[string],Damage[int],DamageArea[float],Influence[string],ShrapnelNumber[int],Bulletshow[string],CritRate[float],CritDamageRate[float],Accuracy[float],FireRate[float],Range[float],BulletSpeed[float],ReloadType[string],ReloadSpeed[float],SwitchSpeed[float],AmmunitionLimit[int],MagazineSize[int],BulletPrice[string],UnlockMission[string],Unlock[string],UnlockGold[string],WeaponDescription[string],
 200003,tid#WeaponName3,线膛燧发枪,qiang3,100001,1,2,0,10,30,0,1,5,1,0.03,2,0.5,2,1136,500,1,0.7,1,12,12,0,,,0,tid#WeaponDescription3,基础散弹枪，可对小范围敌人造成伤害
 200007,tid#WeaponName7,AK47,qiang7,100001,2,3,0,10,20,0,1,1,1,0.05,2,0.85,10,1136,500,2,0.7,1,300,30,300,400001_5,tid#unlock15,5000,tid#WeaponDescription7,单体高杀伤性武器，适合针对单体高血量怪物
-200009,tid#WeaponName9,十字弩,qiang9,100005,2,4,0,10,50,0,5,1,1,0.05,2,0.9,1.5,1136,500,2,0.7,1,100,5,300,400002_5,tid#unlock16,10000,tid#WeaponDescription9,基础穿刺武器，可进行针对5个目标的穿刺攻击
+200009,tid#WeaponName9,十字弩,qiang9,100005,2,4,0,10,50,0,5,1,1,0.05,2,0.9,1.5,1136,500,2,0.7,1,100,5,350,400002_5,tid#unlock16,10000,tid#WeaponDescription9,基础穿刺武器，可进行针对5个目标的穿刺攻击
 200011,tid#WeaponName11,加农炮,qiang11,100007,2,5,0,10,200,50,30,1,1,0.05,2,0.8,1.5,1136,500,1,0.7,1,40,4,400,400003_10,tid#unlock17,15000,tid#WeaponDescription11,范围爆破武器，可有效杀伤群怪
-200010,tid#WeaponName10,死神,qiang10,100006,3,4,0,10,100,0,30,1,1,0.05,2,0.9,0.5,1136,500,2,0.7,1,30,2,600,400004_10,tid#unlock18,20000,tid#WeaponDescription10,高伤害穿刺武器，可以同时穿透一条线的敌人
+200010,tid#WeaponName10,死神,qiang10,100006,3,4,0,10,100,0,30,1,1,0.05,2,0.9,0.5,1136,500,2,0.7,1,30,2,650,400004_10,tid#unlock18,20000,tid#WeaponDescription10,高伤害穿刺武器，可以同时穿透一条线的敌人
 200012,tid#WeaponName12,火焰发射器,qiang12,100008,2,6,0,10,300,0,30,1,2,0.05,2,0.8,8,650,50,2,0.7,1,200,50,800,400005_10,tid#unlock19,30000,tid#WeaponDescription12,范围烧伤性武器，可对群体怪物造成持续伤害
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

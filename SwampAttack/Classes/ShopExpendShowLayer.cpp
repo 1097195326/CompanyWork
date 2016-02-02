@@ -75,11 +75,17 @@ ShopExpendShowLayer::ShopExpendShowLayer(Vec2 position)
         itemBg->addChild(greenSpr);
         
         SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectBySubId(object->getId(), object->getType());
-        Label  * price = Label::createWithTTF(StringUtils::format("$%d",specialObject->getPrice()),
+        Label  * price = Label::createWithTTF(StringUtils::format("%d",specialObject->getPrice()),
                                               "fonts/Arial Black.ttf",
                                               30);
-        price->setPosition(itemSize.width * 0.9, itemSize.height * 0.5);
+        price->setPosition(itemSize.width * 0.85, itemSize.height * 0.5);
         itemBg->addChild(price);
+        
+        Sprite * jinbi2 = Sprite::create(ImagePath("jinbi_icon.png"));
+        jinbi2->setPosition(itemSize.width * 1.0,
+                            itemSize.height * 0.5);
+        jinbi2->setScale(0.75);
+        itemBg->addChild(jinbi2);
         
         Label  * discLabel = Label::createWithTTF(object->getName(), FontPath, 30);
         discLabel->setPosition(itemSize.width * 0.5, itemSize.height * 0.5);
@@ -106,11 +112,11 @@ void ShopExpendShowLayer::touchItemEnd(cocos2d::Touch *touch, cocos2d::Event *ev
     SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectBySubId(object->getId(), object->getType());
     umeng::MobClickCpp::event(specialObject->getId().c_str());
     
-//    specialObject->buyEnd();
+    specialObject->buyEnd();
 //    m_delegateLayer->updateUserData();
-#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-    payForBuyGameObject(specialObject);
-#endif
+//#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+//    payForBuyGameObject(specialObject);
+//#endif
 }
 bool ShopExpendShowLayer::touchBegan(Touch *touch, Event *event)
 {
