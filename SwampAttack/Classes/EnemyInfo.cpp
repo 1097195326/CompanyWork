@@ -378,7 +378,7 @@ EnemyInfo::EnemyInfo()
     EnemyInfoData wolfking2;
     wolfking2.attackFrame = 6;
     wolfking2.attackFrames = 12;
-    wolfking2.hurtHeavyFrames = 10;
+    wolfking2.hurtHeavyFrames = 9;
     wolfking2.hurtLightFrames = 5;
     wolfking2.hurtOnFrames = 5;
     wolfking2.walkFrames = 14;

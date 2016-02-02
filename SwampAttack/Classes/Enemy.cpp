@@ -226,7 +226,7 @@ void Enemy::setPosition(cocos2d::Vec2 point)
 }
 bool Enemy::isContainsPoint(cocos2d::Rect rect)
 {
-    m_rect = Rect(m_point.x - m_width * 0.5, m_point.y, m_width, m_height);
+    m_rect = Rect(m_point.x - m_width * 0.3, m_point.y, m_width, m_height);
     return m_rect.intersectsRect(rect);
 }
 Rect Enemy::getRect()
