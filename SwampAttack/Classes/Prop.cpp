@@ -129,7 +129,8 @@ void Prop::gameLoop(float data)
         for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
         {
             Enemy * enemy = *e_iter;
-            if (enemy->isContainsPoint(getPropRect()))
+            if (enemy->isContainsPoint(getPropRect()) &&
+                enemy->getPosition().x < m_visibleOrigin.x + m_visibleSize.width)
             {
                 if (m_modelId == "daoju7")
                 {
@@ -140,11 +141,7 @@ void Prop::gameLoop(float data)
                     enemy->hurtJiansu(m_deceleration);
                 }else if (m_modelId == "daoju9")
                 {
-                    string eId = enemy->getId();
-                    if (eId == "200001" ||
-                        eId == "200002" ||
-                        eId == "200003" ||
-                        eId == "200004")
+                    if (enemy->isBoss())
                     {
                         
                     }else
