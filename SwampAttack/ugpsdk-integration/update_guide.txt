@@ -1,0 +1,104 @@
+/*****************************************************************************/
+/****************************支付sdk更新指南**************************************/
+/*****************************************************************************/
+
+#######################支付sdk v3.7.2##################################
+-----------------------------------------------------------------
+完全接入：
+1.替换integration工程
+2.参考《CP接入Manifest配置参考.txt》进行配置：
+      修改了联通单机sdk支付相关声明
+3.拷贝脚本"env_check.py"到自己工程根目录,并在该工程目录运行脚本，检查配置是否正确
+   （如果integration工程不在同级目录，请使用-l参数指定integration的libs目录）
+#######################支付sdk v3.5.0##################################
+
+#######################支付sdk v3.7.1##################################
+-----------------------------------------------------------------
+完全接入：
+1.替换integration工程
+2.参考《CP接入Manifest配置参考.txt》进行配置
+3.拷贝脚本"env_check.py"到自己工程根目录, 并在该工程目录运行，检查配置是否正确
+#######################支付sdk v3.5.0##################################
+
+#######################支付sdk v3.6.3##################################
+-----------------------------------------------------------------
+完全接入：
+1.替换integration工程
+2.修改移动MM支付混淆：
+ 改：-keep class com.secneo.sdkp.**
+   -keep class com.secneo.sdkp.** {*;}
+为：
+   -keep class com.secneo.**
+   -keep class com.secneo.** {*;}
+3. 拷贝脚本"env_check.py"到自己工程根目录, 并在该工程目录运行，检查配置是否正确
+4. 整理AndroidManifest的权限声明，请参考接入文档修改
+
+不接运营商支付：请接非运营商支付版本包
+#######################支付sdk v3.5.0##################################
+-----------------------------------------------------------------
+完全接入：直接替换integration工程即可
+不接运营商支付：请接非运营商支付版本包
+
+#######################支付sdk v3.4.0##################################
+-----------------------------------------------------------------
+注意：
+如果您是从支付sdk3.3.0升级到sdk3.4.0版本，那么可以按照如下文档进行更新，
+否则请参考我们提供的接入文档《UC游戏_单机SDK_开发参考说明书_Android API_v1.3.0.doc》
+------------------------------------------------------------------
+1. ugpsdk-integration工程：
+   1.1 libs目录新增了ipaynow_plugin_phone_onlywechat_v1.3.0.jar
+   1.2 libs下armeabi和x86目录新增了libplugin_phone.so
+   1.3 删除了电信运营商短代/res目录下一些资源文件
+可以选择直接更换最新的ugpsdk-integration工程，建议用二进制对比工具进行对比(比如BeyondCompare)
+注意：保险起见，可以删除旧的ugpsdk-integration，再导入最新的ugpsdk-integration，
+如果是拷贝文件，请使用clean工程使之重新编译
+   
+2. AndroidManifest权限的修改：
+   2.1 增加了权限<uses-permission android:name="android.webkit.permission.PLUGIN" />
+   2.2 增加了Activity声明：
+       <!-- now 微信SDK支付相关添加开始 -->
+		<activity
+            android:name="com.ipaynow.plugin.activity.PayMethodActivity"
+            android:theme="@android:style/Theme.Dialog"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="unspecified">
+        </activity>
+        <activity
+            android:name="com.ipaynow.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+        <!-- now 微信SDK支付相关添加结束 -->
+        
+   2.3 屏蔽电信运营商短代支付提供的其他支付方式：
+        <meta-data android:name="EGAME_ALIPAY" android:value="false"/>
+        <meta-data android:name="EGAME_UNIPAY" android:value="false"/>
+         
+3. 增加now微信支付混淆要求：
+
+   #微信支付混淆添加开始
+	-keep public class com.ipaynow.plugin.utils.MerchantTools{ <fields>; <methods>; }
+	-keep public class com.ipaynow.plugin.utils.PreSignMessageUtil{ <fields>; <methods>; }
+	-keep public class com.ipaynow.plugin.api.IpaynowPlugin{ <fields>; <methods>; }
+   #微信支付混淆添加结束
+   ；
+##################################################################
+
+-----------------------ugpsdk-demo工程运行说明-----------------------
+我们已经按照如下步骤集成好了：
+1.将ugpsdk-integration工程的assets目录所有文件原封不动拷贝到ugpsdk-demo工程的assets
+2.ugpsdk-demo引用ugpsdk-integration工程
+
+电信运营商sdk短代支付特别说明：（demo应用名不是我们有意取这个的::>_<:: ）
+        由于电信提供的计费文件是与包名和应用名称绑定的，所以，要运行ugpsdk-demo电信运营商支付：
+        需要修改包名为："com.egame.unipaytest"
+           示例：package="com.egame.unipaytest"
+    
+        因为修改了包名：所以联通运营商支付与包名绑定：
+   <!-- 请务必将action name 按照应用包名+".unicom.wostore.unipay.securityserviceframework"进行组装-->
+
+       需要修改应用名称为："谁删谁小狗-Test-zt"
+           示例：若： android:label="@string/app_name"
+                       则：<string name="app_name">谁删谁小狗-Test-zt</string>
+--------------------------------------------------------------

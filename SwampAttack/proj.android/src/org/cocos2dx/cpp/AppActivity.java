@@ -27,6 +27,7 @@ THE SOFTWARE.
 package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
+import org.cocos2dx.lib.Cocos2dxHelper;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -77,10 +78,55 @@ public class AppActivity extends Cocos2dxActivity {
 	
 	static private boolean firstTime = true;
 	static private Activity ucsdkActivity;
-	static InterstitialAD iad;
+//	static InterstitialAD iad;
 	
 	static public native void payGameObjectEnd(String core);
 	
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		Application application = this.getApplication();
+		SDKCore.registerEnvironment(application);
+		Log.i("hongxing", "app activity onCreate");
+		MobClickCppHelper.init(this);
+		
+		ucsdkActivity = this;
+		
+		initHandler();
+		initSdk();
+		
+	}
+	@Override
+	protected void onPause(){
+		super.onPause();
+		Log.i("hongxing", "app activity onPause");
+	}
+	@Override
+	protected void onResume() {
+		super.onResume();
+		Log.i("hongxing", "app activity onResume");
+	}
+	 @Override
+     public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getKeyCode() == KeyEvent.KEYCODE_BACK
+                        && event.getAction() == KeyEvent.ACTION_DOWN
+                        && event.getRepeatCount() == 0) {                       
+                //具体的操作代码
+         exit();
+        }
+        return super.dispatchKeyEvent(event);
+     }
+	@Override
+    protected void onDestroy()
+	{
+		Log.i("hongxing", "app activity onDestroy");
+	    // 退出释放资源
+        SDKCore.exitSDK(this);
+        UCGameSdk.defaultSdk().exit(this, null);
+        super.onDestroy();
+    }
 	static public void payGameObject(java.lang.String name, int amount)
 	{
 		Log.i("hongxing", "pay "+name+" price:"+amount);
@@ -203,42 +249,24 @@ public class AppActivity extends Cocos2dxActivity {
 		}
 	}
 	
-	@Override
-	public void onCreate(Bundle savedInstanceState)
-	{
-		super.onCreate(savedInstanceState);
-		Application application = this.getApplication();
-		SDKCore.registerEnvironment(application);
-		Log.i("hongxing", "app activity onCreate");
-		MobClickCppHelper.init(this);
-		
-		ucsdkActivity = this;
-		
-		initHandler();
-		initSdk();
-		
-	}
-	
-	static public InterstitialAD getIAD() {
-	    if (iad == null) {
-	      iad = new InterstitialAD(ucsdkActivity, "1104775235", "5080705876187358");
-	    }
-	    return iad;
-	  }
+//	static public InterstitialAD getIAD() {
+//	    if (iad == null) {
+//	      iad = new InterstitialAD(ucsdkActivity, "1104775235", "5080705876187358");
+//	    }
+//	    return iad;
+//	  }
 
 	  static public void showAD() {
 		  
 		 Log.i("hongxing", "show Ad");
-		  
-	    getIAD().setADListener(new AbstractInterstitialADListener() {
+		 final InterstitialAD iad = new InterstitialAD(ucsdkActivity, "1104775235", "5080705876187358");
+		 iad.setADListener(new AbstractInterstitialADListener() {
 	      @Override
 	      public void onNoAD(int arg0) {
-	        Log.i("AD_DEMO", "LoadInterstitialAd Fail:" + arg0);
+	        Log.i("hongxing", "ad LoadInterstitialAd Fail:" + arg0);
 	      }
-
 	      @Override
 	      public void onADReceive() {
-	          Log.i("AD_DEMO", "onADReceive");
 	        iad.show();
 	      }
 	    });
@@ -398,56 +426,21 @@ public class AppActivity extends Cocos2dxActivity {
 		finish();
 	}
 	
-	@Override
-	protected void onPause()
-	{
-		super.onPause();
-		
-		Log.i("hongxing", "app activity onPause");
-	}
+	
+    /**
+     * 游戏退出接口
+     */
+    private void exit() {
+        UCGameSdk.defaultSdk().exit(this, new UCCallbackListener<String>() {
 
-	@Override
-	protected void onResume() 
-	{
-		super.onResume();
-		
-		Log.i("hongxing", "app activity onResume");
-	}
-
-	@Override
-    protected void onDestroy()
-	{
-		Log.i("hongxing", "app activity onDestroy");
-	    // 退出释放资源
-        SDKCore.exitSDK(this);
-//        UCGameSdk.defaultSdk().exit(null);
-        UCGameSdk.defaultSdk().exit(this, null);
-        super.onDestroy();
+            @Override
+            public void callback(int statuscode, String data) {
+                if (UCGameSDKStatusCode.SDK_EXIT == statuscode) {
+                    finish();
+                } else {
+                }
+            }
+        });
     }
-//	@Override
-//    public boolean onKeyDown(int keyCode, KeyEvent event) {
-//         //BACK键退出游戏，退出前请调用UCGameSdk.defaultSdk().exit接口
-//        if (keyCode == KeyEvent.KEYCODE_BACK) {
-//            exit();
-//            return true;
-//        }
-//        return super.onKeyDown(keyCode, event);
-//    }
-//    
-//    /**
-//     * 游戏退出接口
-//     */
-//    private void exit() {
-//        UCGameSdk.defaultSdk().exit(this, new UCCallbackListener<String>() {
-//
-//            @Override
-//            public void callback(int statuscode, String data) {
-//                if (UCGameSDKStatusCode.SDK_EXIT == statuscode) {
-//                    finish();
-//                } else {
-//                }
-//            }
-//        });
-//    }
 	
 }
