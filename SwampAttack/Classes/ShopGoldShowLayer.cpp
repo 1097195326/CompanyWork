@@ -103,7 +103,7 @@ void ShopGoldShowLayer::touchItemEnd(cocos2d::Touch *touch, cocos2d::Event *even
     umeng::MobClickCpp::event(specialObject->getId().c_str());
     
     specialObject->buyEnd();
-    m_delegateLayer->updateUserData();
+//    m_delegateLayer->updateUserData();
 }
 bool ShopGoldShowLayer::touchBegan(Touch *touch, Event *event)
 {

@@ -9,7 +9,7 @@
 #include "GameReliveLayer.h"
 #include "GameDirector.h"
 #include "GameUser.h"
-
+#include "ShopExpendShowLayer.h"
 
 GameReliveLayer::~GameReliveLayer()
 {
@@ -91,7 +91,7 @@ m_time(4)
     hpIcon->setScale(0.5);
     bg->addChild(hpIcon);
     
-    schedule(CC_SCHEDULE_SELECTOR(GameReliveLayer::updateTime), 1, 3, 0);
+    schedule(CC_SCHEDULE_SELECTOR(GameReliveLayer::updateTime), 1);
 }
 void GameReliveLayer::updateTime(float data)
 {
@@ -99,23 +99,43 @@ void GameReliveLayer::updateTime(float data)
     m_timeLabel->setString(StringUtils::format("%d",m_time));
     if (m_time == 0)
     {
+        unschedule(CC_SCHEDULE_SELECTOR(GameReliveLayer::updateTime));
         removeFromParentAndCleanup(true);
         m_fightLayer->showOverLayer();
     }
+}
+void GameReliveLayer::reliveGame()
+{
+    unschedule(CC_SCHEDULE_SELECTOR(GameReliveLayer::updateTime));
+    _G_D->reliveGame();
+    _G_D->continueGame();
+    m_fightLayer->resumeGameActions();
+    removeFromParentAndCleanup(true);
+}
+void GameReliveLayer::continueTimeToEnd()
+{
+    schedule(CC_SCHEDULE_SELECTOR(GameReliveLayer::updateTime), 1);
 }
 void GameReliveLayer::setFightLayer(GameFightScene *layer)
 {
     m_fightLayer = layer;
 }
-void GameReliveLayer::continueGame(cocos2d::Ref *pSender)
+void GameReliveLayer::continueGame(Ref *pSender)
 {
+    unschedule(CC_SCHEDULE_SELECTOR(GameReliveLayer::updateTime));
     if (_G_U->useExpendProp())
     {
-        unschedule(CC_SCHEDULE_SELECTOR(GameReliveLayer::updateTime));
         _G_D->reliveGame();
         _G_D->continueGame();
         m_fightLayer->resumeGameActions();
         removeFromParentAndCleanup(true);
+    }else
+    {
+        ShopExpendShowLayer * layer = new ShopExpendShowLayer(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                                                               m_visibleOrigin.y + m_visibleSize.height * 0.5));
+        layer->autorelease();
+        layer->setReliveLayer(this);
+        addChild(layer,999);
     }
 }
 bool GameReliveLayer::touchBegan(Touch *touch, Event *event)

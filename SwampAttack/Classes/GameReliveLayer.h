@@ -23,6 +23,9 @@ public:
     ~GameReliveLayer();
     void    setFightLayer(GameFightScene * layer);
     
+    void    reliveGame();
+    void    continueTimeToEnd();
+    
     void    continueGame(Ref * pSender);
     void    updateTime(float data);
     

@@ -10,6 +10,9 @@
 #include "SpecialManager.h"
 #include "GameSprite.h"
 #include "MobClickCpp.h"
+#include "GameUser.h"
+#include "ShopGoldShowLayer.h"
+
 
 ShopExpendShowLayer::~ShopExpendShowLayer()
 {
@@ -17,8 +20,12 @@ ShopExpendShowLayer::~ShopExpendShowLayer()
     {
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
     }
+    
 }
-ShopExpendShowLayer::ShopExpendShowLayer(Vec2 position)
+ShopExpendShowLayer::ShopExpendShowLayer(Vec2 position):
+m_gameReliveLayer(NULL),
+m_delegateLayer(NULL),
+m_isBuy(false)
 {
     init();
     m_point = position;
@@ -93,6 +100,10 @@ void ShopExpendShowLayer::setDelegateLayer(UserDelegateLayer * layer)
 {
     m_delegateLayer = layer;
 }
+void ShopExpendShowLayer::setReliveLayer(GameReliveLayer *layer)
+{
+    m_gameReliveLayer = layer;
+}
 void ShopExpendShowLayer::touchItemEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 {
     SimpleAudioEngine::getInstance()->playEffect(MusicPath("buyGold.mp3").c_str());
@@ -100,10 +111,25 @@ void ShopExpendShowLayer::touchItemEnd(cocos2d::Touch *touch, cocos2d::Event *ev
     //    log("touch item %d",spr->getTag());
     ExpendObject * object = SpecialManager::getInstance()->getExpendObjectByIndex(spr->getTag());
     SpecialObject * specialObject = SpecialManager::getInstance()->getSpecialObjectBySubId(object->getId(), object->getType());
-    umeng::MobClickCpp::event(specialObject->getId().c_str());
     
-    specialObject->buyEnd();
-    m_delegateLayer->updateUserData();
+    if (_G_U->getUserGold() >= specialObject->getPrice())
+    {
+        umeng::MobClickCpp::event(specialObject->getId().c_str());
+        specialObject->buyEnd();
+        
+        if(m_gameReliveLayer && _G_U->useExpendProp())
+        {
+            m_isBuy = true;
+            m_gameReliveLayer->reliveGame();
+        }
+    }else
+    {
+        ShopGoldShowLayer * layer = new ShopGoldShowLayer(Vec2(m_visibleOrigin.x + m_visibleSize.width * 0.5,
+                                                               m_visibleOrigin.y + m_visibleSize.height * 0.5));
+        layer->autorelease();
+        addChild(layer,999);
+    }
+//    m_delegateLayer->updateUserData();
 }
 bool ShopExpendShowLayer::touchBegan(Touch *touch, Event *event)
 {
@@ -129,6 +155,10 @@ void ShopExpendShowLayer::touchEnd(cocos2d::Touch *touch, cocos2d::Event *event)
 }
 void ShopExpendShowLayer::actionEndCall()
 {
+    if (m_gameReliveLayer && !m_isBuy)
+    {
+        m_gameReliveLayer->continueTimeToEnd();
+    }
     layerColor->stopAllActions();
     bg->stopAllActions();
     removeFromParentAndCleanup(true);

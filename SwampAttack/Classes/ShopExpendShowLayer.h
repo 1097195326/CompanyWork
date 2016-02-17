@@ -11,7 +11,7 @@
 
 #include "BaseCode.h"
 #include "UserDelegatLayer.h"
-
+#include "GameReliveLayer.h"
 
 class ShopExpendShowLayer : public Layer {
 private:
@@ -21,11 +21,13 @@ private:
     LayerColor * layerColor;
     Vec2    m_point;
     UserDelegateLayer * m_delegateLayer;
-    
+    GameReliveLayer *   m_gameReliveLayer;
+    bool    m_isBuy;
 public:
     ShopExpendShowLayer(Vec2 position);
     ~ShopExpendShowLayer();
     void    setDelegateLayer(UserDelegateLayer * layer);
+    void    setReliveLayer(GameReliveLayer * layer);
     
     
     bool    touchBegan(Touch * touch, Event * event);
