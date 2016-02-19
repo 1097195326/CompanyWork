@@ -68,9 +68,9 @@ tid#WeaponDescription12,圣山上最灼热的火种会随着你喷涌，足以�
 tid#MissionName1,远方而来的朋友,Friends from afar
 tid#MissionName2,摇摆的身影,Swing figure
 tid#MissionName3,一大片尸兄,A large body of dead brother
-tid#MissionName4,那是什么？,Endless?
+tid#MissionName4,难以抵挡的冲刺,Endless?
 tid#MissionName5,快速消灭他们,The roar of the mausoleum
-tid#MissionName6,夜空突袭,Night raid
+tid#MissionName6,空袭！空袭！,Night raid
 tid#MissionName7,啪！啪！啪！,What is that?
 tid#MissionName8,巡逻队,Mind Your Step
 tid#MissionName9,田野上的人影,Quickly destroy them
@@ -89,7 +89,7 @@ tid#MissionName21,强力火力,The place of burial
 tid#MissionName22,火力全开,Behind the chase
 tid#MissionName23,躲避掩体,A hunter in a deep forest
 tid#MissionName24,冲出去,Shadow
-tid#MissionName25,稻草王,Skeleton
+tid#MissionName25,稻草人BOSS,Skeleton
 tid#MissionName26,不是蝙蝠是恶魔,Obstruction
 tid#MissionName27,追来的恶魔,A wave of monsters
 tid#MissionName28,召唤师,A big wave of monsters
@@ -112,7 +112,7 @@ tid#MissionName44,好硬的甲,Be careful of the killer bee
 tid#MissionName45,大恶魔领域,Unknown organism
 tid#MissionName46,深林中的猎手,Abhor
 tid#MissionName47,弓箭远程射击,The end of the day
-tid#MissionName48,巨盾,The army of the dead
+tid#MissionName48,结实的盾牌,The army of the dead
 tid#MissionName49,这是地狱吗,Vampires
 tid#MissionName50,深山雪人王,Demon realm
 tid#MissionName51,不平静的一天,
@@ -218,7 +218,7 @@ tid#unlock17,第30关解锁,
 tid#unlock18,第40关解锁,
 tid#unlock19,第50关解锁,
 ,,
-tid#Energy1,补满体力,
+tid#Energy1,3000金币补满体力,
 ,,
 tid#Guide1,兄弟，进入市场来升级武器装备吧,
 tid#Guide2,可以通过升级枪械来获取更强大火力,
