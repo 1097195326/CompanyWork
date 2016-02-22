@@ -12,6 +12,8 @@
 #include "json/json.h"
 #include "GameObject.h"
 #include "BaseCode.h"
+#include "GameSubject.h"
+
 class Enemy;
 
 enum DefenseState
@@ -23,7 +25,7 @@ enum DefenseState
 };
 using namespace std;
 
-class DefenseBuilding : public GameObject{
+class DefenseBuilding : public GameObject, public GameSubject{
 public:
     DefenseBuilding(Json::Value data);
     ~DefenseBuilding();
@@ -38,15 +40,22 @@ public:
     bool    isStateWait();
     
     void    setStateWait();
+    void    setStateCanhurt();
+    void    setStateHurting();
     
     void    checkUnlock(Layer * layer);
     
     bool    isInRange(Vec2 point);
+    
+    void    addBuildingJishudian();
+    int     getBuildingJishu();
 protected:
     DefenseState m_state;
-    int        m_index;
+    int         m_index;
+    int         m_showIndex;
     Vec2        m_point;
     float       m_waitDelay;
+    int         m_jishu;
     //--- ---
     string      m_id;
     string      m_defenceName;
@@ -59,10 +68,14 @@ protected:
     string      m_defenceDescription;
     string      m_unlockStr;
     int         m_limitLevel;
+    int         m_activate;
     //
     int         m_strengthenLevel;
     int         m_hp;
     int         m_damage;
+    int         m_number;
+    int         m_beatback;
+    int         m_deadnumber;
     float       m_deceleration;
     int         m_strengthenGold;
     
@@ -86,15 +99,21 @@ public:
     string  getDefenceDescription();
     string  getUnlockStr();
     int     getLimitLevel();
+    bool    isActivate();
     //
     int     getStrengthLevel();
     int     getHp();
     int     getDamage();
+    int     getNumber();
+    int     getBeatBack();
+    int     getDeadNumber();
     int     getStrengthGold();
     int     getIndex();
+    int     getShowIndex();
     //---
     
     void    setIndex(int index);
+    void    setShowIndex(int index);
     
     
 };

@@ -15,6 +15,8 @@
 
 #include "GuanQiaManager.h"
 #include "GameShowDiscLayer.h"
+#include "DefenseBuildingManager.h"
+
 
 
 DefenseBuilding::DefenseBuilding(Json::Value data):
@@ -35,14 +37,19 @@ m_waitDelay(0.0f)
     string defenceDescription = data["DefenceDescription"].asString();
     m_defenceDescription = _C_M->getTranslateById(defenceDescription);
     m_limitLevel = atoi(data["LimitLevel"].asString().c_str());
+    m_activate = atoi(data["activate"].asString().c_str());
     m_unlockStr = _C_M->getTranslateById( data["Unlock"].asString());
     //
     m_strengthenLevel = _G_U->getBuildingLevel(m_id);
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
     Json::Value upgradeData = _C_M->getDataByTag("buildingUpgrade",upId);
     m_damage = atof(upgradeData["Damage"].asString().c_str());
+    m_number = atoi(upgradeData["Number"].asString().c_str());
+    m_beatback = atoi(upgradeData["Beatback"].asString().c_str());
+    m_deadnumber = atoi(upgradeData["Deadnumber"].asString().c_str());
     m_hp = atoi(upgradeData["Hp"].asString().c_str());
     m_deceleration = atof(upgradeData["Deceleration"].asString().c_str());
+    
     if (m_limitLevel == m_strengthenLevel)
     {
         m_isMaxLevel = true;
@@ -52,7 +59,7 @@ m_waitDelay(0.0f)
     }
     
     m_isUnlock = _G_U->isUnlockBuilding(m_id);
-    
+    m_jishu = _G_U->getBuildingJishu(m_id);
 }
 DefenseBuilding::~DefenseBuilding()
 {
@@ -75,8 +82,10 @@ void DefenseBuilding::checkUnlock(Layer * layer)
     GuanqiaModel * guanqia = GuanQiaManager::getInstance()->getGuanqiaById(m_unlockMission);
     if (guanqia && guanqia->isUnlock() && guanqia->isWin() && !m_isUnlock)
     {
-        m_isUnlock = true;
-        _G_U->unlockBuilding(m_id);
+//        m_isUnlock = true;
+//        _G_U->unlockBuilding(m_id);
+//        DefenseBuildingManager::getInstance()->addShowBuilding(this);
+        unlockBuilding();
         
         GameShowDiscLayer * showLayer = new GameShowDiscLayer(m_modelId,
                                                               m_defenceDescription,
@@ -100,6 +109,9 @@ void DefenseBuilding::addStrengthenLevel()
     string upId = StringUtils::format("%s_%d",m_id.c_str(),m_strengthenLevel);
     Json::Value upgradeData = _C_M->getDataByTag("buildingUpgrade",upId);
     m_damage = atof(upgradeData["Damage"].asString().c_str());
+    m_number = atoi(upgradeData["Number"].asString().c_str());
+    m_beatback = atoi(upgradeData["Beatback"].asString().c_str());
+    m_deadnumber = atoi(upgradeData["Deadnumber"].asString().c_str());
     m_hp = atoi(upgradeData["Hp"].asString().c_str());
     m_deceleration = atof(upgradeData["Deceleration"].asString().c_str());
     if (m_limitLevel == m_strengthenLevel)
@@ -125,6 +137,14 @@ bool DefenseBuilding::isStateWait()
 void DefenseBuilding::setStateWait()
 {
     m_state = d_wait;
+}
+void DefenseBuilding::setStateCanhurt()
+{
+    m_state = d_canHurt;
+}
+void DefenseBuilding::setStateHurting()
+{
+    m_state = d_hurting;
 }
 void DefenseBuilding::hurtEnemy(Enemy * enemy)
 {
@@ -158,6 +178,24 @@ bool DefenseBuilding::isInRange(cocos2d::Vec2 point)
     
     return false;
 }
+void DefenseBuilding::addBuildingJishudian()
+{
+    if (m_jishu < m_deadnumber)
+    {
+        ++m_jishu;
+        _G_U->setBuildingJishu(m_id, m_jishu);
+        
+        if (m_jishu == m_deadnumber)
+        {
+            setStateCanhurt();
+        }
+        notify();
+    }
+}
+int DefenseBuilding::getBuildingJishu()
+{
+    return m_jishu;
+}
 bool DefenseBuilding::isUnlock()
 {
     return m_isUnlock;
@@ -166,6 +204,7 @@ void DefenseBuilding::unlockBuilding()
 {
     m_isUnlock = true;
     _G_U->unlockBuilding(m_id);
+    DefenseBuildingManager::getInstance()->addShowBuilding(this);
 }
 bool DefenseBuilding::isMaxLevel()
 {
@@ -212,6 +251,10 @@ int DefenseBuilding::getLimitLevel()
 {
     return m_limitLevel;
 }
+bool DefenseBuilding::isActivate()
+{
+    return m_activate;
+}
 //
 int DefenseBuilding::getStrengthLevel()
 {
@@ -225,6 +268,18 @@ int DefenseBuilding::getDamage()
 {
     return m_damage;
 }
+int DefenseBuilding::getNumber()
+{
+    return m_number;
+}
+int DefenseBuilding::getBeatBack()
+{
+    return m_beatback;
+}
+int DefenseBuilding::getDeadNumber()
+{
+    return m_deadnumber;
+}
 int DefenseBuilding::getStrengthGold()
 {
     return m_strengthenGold;
@@ -233,7 +288,15 @@ int DefenseBuilding::getIndex()
 {
     return m_index;
 }
+int DefenseBuilding::getShowIndex()
+{
+    return m_showIndex;
+}
 void DefenseBuilding::setIndex(int index)
 {
     m_index = index;
+}
+void DefenseBuilding::setShowIndex(int index)
+{
+    m_showIndex = index;
 }

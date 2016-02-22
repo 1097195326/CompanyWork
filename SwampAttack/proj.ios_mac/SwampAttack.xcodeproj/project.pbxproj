@@ -84,6 +84,7 @@
 		8D6D884D1C292CC6009A2D26 /* EnemySkill_shanbi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D884B1C292CC6009A2D26 /* EnemySkill_shanbi.cpp */; };
 		8D6D88501C292CD4009A2D26 /* EnemySkill_yuancheng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D884E1C292CD4009A2D26 /* EnemySkill_yuancheng.cpp */; };
 		8D6D88531C292EC0009A2D26 /* EnemySkill_fangyu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D88511C292EC0009A2D26 /* EnemySkill_fangyu.cpp */; };
+		8D6E59471C7AF701003368A2 /* BuildingSpriteView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D6E59451C7AF701003368A2 /* BuildingSpriteView.cpp */; };
 		8D766EF31C44B9D000DE6B91 /* GuanggaoModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D766EF11C44B9D000DE6B91 /* GuanggaoModel.cpp */; };
 		8D766EF61C44B9E200DE6B91 /* GuanggaoManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D766EF41C44B9E200DE6B91 /* GuanggaoManager.cpp */; };
 		8D766EF91C451E6400DE6B91 /* AdShowLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D766EF71C451E6400DE6B91 /* AdShowLayer.cpp */; };
@@ -350,6 +351,8 @@
 		8D6D884F1C292CD4009A2D26 /* EnemySkill_yuancheng.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_yuancheng.hpp; sourceTree = "<group>"; };
 		8D6D88511C292EC0009A2D26 /* EnemySkill_fangyu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemySkill_fangyu.cpp; sourceTree = "<group>"; };
 		8D6D88521C292EC0009A2D26 /* EnemySkill_fangyu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnemySkill_fangyu.hpp; sourceTree = "<group>"; };
+		8D6E59451C7AF701003368A2 /* BuildingSpriteView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BuildingSpriteView.cpp; sourceTree = "<group>"; };
+		8D6E59461C7AF701003368A2 /* BuildingSpriteView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BuildingSpriteView.hpp; sourceTree = "<group>"; };
 		8D766EF11C44B9D000DE6B91 /* GuanggaoModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuanggaoModel.cpp; sourceTree = "<group>"; };
 		8D766EF21C44B9D000DE6B91 /* GuanggaoModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuanggaoModel.hpp; sourceTree = "<group>"; };
 		8D766EF41C44B9E200DE6B91 /* GuanggaoManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuanggaoManager.cpp; sourceTree = "<group>"; };
@@ -1221,6 +1224,8 @@
 				8DE637DA1B68B6AA00AD0784 /* FireBulletSprite.h */,
 				8DE3B4561AF0B36800938655 /* HouseSprite.cpp */,
 				8DE3B4571AF0B36800938655 /* HouseSprite.h */,
+				8D6E59451C7AF701003368A2 /* BuildingSpriteView.cpp */,
+				8D6E59461C7AF701003368A2 /* BuildingSpriteView.hpp */,
 				8DD53AF71B0C2774000DB8DC /* DefenseBuildingSprite.cpp */,
 				8DD53AF81B0C2774000DB8DC /* DefenseBuildingSprite.h */,
 				8DD29D351B0B3B9A00ECB826 /* DefenseBuilding1_Sprite.cpp */,
@@ -1603,6 +1608,7 @@
 				8D1DFB1D1C57616B003B3D44 /* GuideClickModel.cpp in Sources */,
 				8D51DC581B3A817C0053EA8A /* DropManager.cpp in Sources */,
 				8DDCC67A1B32B82500F01D46 /* SpecialObject.cpp in Sources */,
+				8D6E59471C7AF701003368A2 /* BuildingSpriteView.cpp in Sources */,
 				8DE3F7B11AF75109001E048F /* SelectMenuController.cpp in Sources */,
 				8DD4997C1B04869A0037CBAA /* DefenseBuildingManager.cpp in Sources */,
 				8DC34AA31ADCFA1400C6B657 /* GameMapManager.cpp in Sources */,

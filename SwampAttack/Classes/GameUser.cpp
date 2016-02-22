@@ -310,6 +310,14 @@ int GameUser::getBuildingLevel(string buildingId)
 {
     return getIntForKey(buildingId + "buildingLevel");
 }
+void GameUser::setBuildingJishu(string buildingId, int jishu)
+{
+    setIntForKey(buildingId + "buildingJishu", jishu);
+}
+int GameUser::getBuildingJishu(string buildingId)
+{
+    return getIntForKey(buildingId + "buildingJishu");
+}
 //--- prop ----
 void GameUser::unlockProp(string propId)
 {

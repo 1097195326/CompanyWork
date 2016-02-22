@@ -16,9 +16,15 @@ using namespace std;
 class DefenseBuildingManager : public GameObject{
 private:
     std::map<string,DefenseBuilding *> m_buildingData;
+    std::vector<DefenseBuilding *> m_showBuildingData;
+    
     std::map<int,std::string> m_hashHead;
     
 public:
+    DefenseBuilding *   getShowBuildingByIndex(int index);
+    int     getShowBuildingNum();
+    void    addShowBuilding(DefenseBuilding *);
+    void    addBuildingJishudian();
     DefenseBuilding *   getBuildingByIndex(int index);
     int     getBuildingNum();
     void    setView();

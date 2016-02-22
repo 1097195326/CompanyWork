@@ -100,6 +100,8 @@ public:
     bool    isUnlockBuilding(string buildingId);
     void    setBuildingLevel(string buildingId,int level);
     int     getBuildingLevel(string buildingId);
+    void    setBuildingJishu(string buildingId,int jishu);
+    int     getBuildingJishu(string buildingId);
     //--- prop -----
     void    unlockProp(string propId);
     bool    isUnlockProp(string propId);

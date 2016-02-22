@@ -21,6 +21,9 @@
 #include "EnemySkill_fangyu.hpp"
 #include "EnemySkill_shanbi.hpp"
 
+#include "DefenseBuildingManager.h"
+
+
 
 Enemy::Enemy(Json::Value data):
 m_data(data),
@@ -271,6 +274,7 @@ void Enemy::hurt(int damage,int index)
     
     if (m_health <= 0)
     {
+        DefenseBuildingManager::getInstance()->addBuildingJishudian();
         removeAllBuffS();
         m_status &= e_clear;
         if (m_skillType == 3) {
@@ -337,6 +341,7 @@ void Enemy::hurt(int damage)
     m_health = m_health - damage;
     if (m_health <= 0)
     {
+        DefenseBuildingManager::getInstance()->addBuildingJishudian();
         removeAllBuffS();
         m_status &= e_clear;
         if (m_skillType == 3) {

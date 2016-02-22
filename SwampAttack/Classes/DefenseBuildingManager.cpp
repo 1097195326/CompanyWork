@@ -41,6 +41,12 @@ DefenseBuildingManager::DefenseBuildingManager()
                 m_buildingData[propId] = new DefenseBuilding(data[propId]);
                 break;
         }
+        if (m_buildingData[propId]->isUnlock() &&
+            m_buildingData[propId]->isActivate())
+        {
+            m_buildingData[propId]->setShowIndex((int)m_showBuildingData.size());
+            m_showBuildingData.push_back(m_buildingData[propId]);
+        }
         m_buildingData[propId]->setIndex(index);
         ++index;
     }
@@ -81,6 +87,27 @@ void DefenseBuildingManager::checkUnlock(Layer * layer)
 std::map<string,DefenseBuilding *> DefenseBuildingManager::getBuildingData()
 {
     return m_buildingData;
+}
+DefenseBuilding * DefenseBuildingManager::getShowBuildingByIndex(int index)
+{
+    return m_showBuildingData[index];
+}
+int DefenseBuildingManager::getShowBuildingNum()
+{
+    return (int)m_showBuildingData.size();
+}
+void DefenseBuildingManager::addShowBuilding(DefenseBuilding * building)
+{
+    building->setShowIndex((int)m_showBuildingData.size());
+    m_showBuildingData.push_back(building);
+}
+void DefenseBuildingManager::addBuildingJishudian()
+{
+    auto iter = m_showBuildingData.begin();
+    for (; iter != m_showBuildingData.end(); ++iter)
+    {
+        (*iter)->addBuildingJishudian();
+    }
 }
 DefenseBuilding * DefenseBuildingManager::getBuildingByIndex(int index)
 {

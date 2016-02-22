@@ -25,6 +25,7 @@ void DefenseBuilding3::setView()
     DefenseBuildingSprite * sprite = new DefenseBuilding3_Sprite(this);
     sprite->autorelease();
     m_state = d_wait;
+    
 }
 
 void DefenseBuilding3::gameLoop(float data)
