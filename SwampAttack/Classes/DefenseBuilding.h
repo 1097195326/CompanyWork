@@ -39,9 +39,9 @@ public:
     bool    isStateHurting();
     bool    isStateWait();
     
-    void    setStateWait();
-    void    setStateCanhurt();
-    void    setStateHurting();
+    virtual void    setStateWait();
+    virtual void    setStateCanhurt();
+    virtual void    setStateHurting();
     
     void    checkUnlock(Layer * layer);
     

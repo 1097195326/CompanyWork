@@ -19,12 +19,12 @@ DefenseBuildingSprite(building)
     addChild(m_buildingS);
     m_buildingS->setPosition(_G_M_M->fightScene_gangpao_Point);
     
-    attackAction = Sequence::create(
+    attackAction = RepeatForever::create(
                                   Spawn::create(
                                                 Sequence::create(DelayTime::create(0.08 * 3),
                                                                  CallFunc::create(CC_CALLBACK_0(DefenseBuilding3_Sprite::attackCall, this)), NULL),
                                                 Sequence::create(BaseUtil::makeAnimateWithNameAndIndex("monkey_shoot", 7),CallFunc::create(CC_CALLBACK_0(DefenseBuilding3_Sprite::palyEndCall, this)),NULL),
-                                                NULL),NULL);
+                                                NULL));
     attackAction->retain();
     
     waitAction = RepeatForever::create(BaseUtil::makeAnimateWithNameAndIndex("monkey_wait" ,7));
@@ -71,5 +71,5 @@ void DefenseBuilding3_Sprite::attackCall()
 }
 void DefenseBuilding3_Sprite::palyEndCall()
 {
-    m_building->setStateWait();
+//    m_building->setStateWait();
 }

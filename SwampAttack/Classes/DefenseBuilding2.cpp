@@ -9,10 +9,13 @@
 #include "DefenseBuilding2.h"
 #include "House.h"
 #include "DefenseBuilding2_Sprite.h"
+#include "BuildingSpriteView.hpp"
 #include "EnemyManager.h"
 
 
-DefenseBuilding2::DefenseBuilding2(Json::Value data):DefenseBuilding(data)
+DefenseBuilding2::DefenseBuilding2(Json::Value data):
+DefenseBuilding(data),
+canfire(false)
 {
     
 }
@@ -23,6 +26,9 @@ void DefenseBuilding2::setView()
     }
     DefenseBuildingSprite * sprite = new DefenseBuilding2_Sprite(this);
     sprite->autorelease();
+    BuildingSpriteView * view = new BuildingSpriteView(this);
+    view->autorelease();
+    numberIndex = m_number;
 }
 
 void DefenseBuilding2::gameLoop(float data)
@@ -32,18 +38,32 @@ void DefenseBuilding2::gameLoop(float data)
         return;
     }
     
-    m_waitDelay += data;
-    if (m_waitDelay >= 1 && m_state == d_wait)
-    {
-        m_waitDelay = 0.0f;
-        m_state = d_canHurt;
-    }else
-    {
-        m_state = d_wait;
-    }
+//    m_waitDelay += data;
+//    if (m_waitDelay >= 1 && m_state == d_wait)
+//    {
+//        m_waitDelay = 0.0f;
+//        m_state = d_canHurt;
+//    }else
+//    {
+//        m_state = d_wait;
+//    }
     
+}
+void DefenseBuilding2::setStateCanhurt()
+{
+    DefenseBuilding::setStateCanhurt();
+    numberIndex = m_number;
+}
+void DefenseBuilding2::hurtCall()
+{
+    --numberIndex;
+    if (numberIndex <=0)
+    {
+        setStateWait();
+    }
     EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
-    if (!enemyGroup) {
+    if (!enemyGroup)
+    {
         return;
     }
     std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
@@ -56,8 +76,7 @@ void DefenseBuilding2::gameLoop(float data)
         {
             Enemy * enemy = *e_iter;
             
-            if (isCanHurt() &&
-                !(enemy->isDieing() || enemy->isDied() || enemy->isCanDelete()) &&
+            if (!(enemy->isDieing() || enemy->isDied() || enemy->isCanDelete()) &&
                 isInRange(enemy->getPosition()) &&
                 enemy->getActionType() == 1)
             {

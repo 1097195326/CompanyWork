@@ -88,6 +88,10 @@ std::map<string,DefenseBuilding *> DefenseBuildingManager::getBuildingData()
 {
     return m_buildingData;
 }
+std::vector<DefenseBuilding *> DefenseBuildingManager::getShowBuildingData()
+{
+    return m_showBuildingData;
+}
 DefenseBuilding * DefenseBuildingManager::getShowBuildingByIndex(int index)
 {
     return m_showBuildingData[index];

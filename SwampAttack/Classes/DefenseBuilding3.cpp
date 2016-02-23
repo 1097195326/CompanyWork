@@ -8,13 +8,17 @@
 
 #include "DefenseBuilding3.h"
 #include "DefenseBuilding3_Sprite.h"
+#include "BuildingSpriteView.hpp"
 #include "BulletManager.h"
 #include "EnemyManager.h"
 
 
-DefenseBuilding3::DefenseBuilding3(Json::Value data):DefenseBuilding(data)
+DefenseBuilding3::DefenseBuilding3(Json::Value data):
+DefenseBuilding(data),
+canfire(false)
 {
     fireEnemy = NULL;
+    numberIndex = m_number;
     
 }
 void DefenseBuilding3::setView()
@@ -24,6 +28,8 @@ void DefenseBuilding3::setView()
     }
     DefenseBuildingSprite * sprite = new DefenseBuilding3_Sprite(this);
     sprite->autorelease();
+    BuildingSpriteView * view = new BuildingSpriteView(this);
+    view->autorelease();
     m_state = d_wait;
     
 }
@@ -35,54 +41,73 @@ void DefenseBuilding3::gameLoop(float data)
         return;
     }
     
-        if(m_state == d_wait)
-        {
-            
-            m_waitDelay += data;
-//            log("mokey wait:%f",data);
-            if (m_waitDelay >= 1)
-            {
-//                log("can to canhurt");
-                m_waitDelay = 0;
-                m_state = d_canHurt;
-            }
-        }
-    
-    EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
-    if (!enemyGroup) {
-        return;
-    }
-    std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
-    
-    if (!enemyData.empty())
+//    if(m_state == d_hurting)
+//    {
+//        m_waitDelay += data;
+//        if (m_waitDelay >= 0.8)
+//        {
+//            m_waitDelay = 0;
+//            hurtingDelay = false;
+//        }
+//    }
+    if (canfire)
     {
-        std::list<Enemy*>::iterator e_iter;
         
-        for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
+        EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
+        if (!enemyGroup) {
+            return;
+        }
+        std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
+        
+        if (!enemyData.empty())
         {
-            Enemy * enemy = *e_iter;
+            std::list<Enemy*>::iterator e_iter;
             
-            if (isCanHurt() &&
-                !(enemy->isDieing() || enemy->isDied() || enemy->isCanDelete()) &&
-                isInRange(enemy->getPosition()) &&
-                enemy->getActionType() == 1)
+            for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
             {
-                hurtEnemy(enemy);
-                break;
+                Enemy * enemy = *e_iter;
+                
+                if (!(enemy->isDieing() || enemy->isDied() || enemy->isCanDelete()) &&
+                    isInRange(enemy->getPosition()) &&
+                    enemy->getActionType() == 1)
+                {
+                    hurtEnemy(enemy);
+                    break;
+                }
             }
         }
     }
+    
+}
+void DefenseBuilding3::setStateCanhurt()
+{
+    DefenseBuilding::setStateCanhurt();
+    numberIndex = m_number;
+}
+void DefenseBuilding3::setStateHurting()
+{
+    canfire = true;
 }
 void DefenseBuilding3::hurtEnemy(Enemy *enemy)
 {
     m_state = d_hurting;
-    
+    canfire = false;
     fireEnemy = enemy;
 }
 void DefenseBuilding3::hurtCall()
 {
+    
     if (!fireEnemy ) { // || fireEnemy->isDied() || fireEnemy->isCanDelete()
         return;
+    }
+    --numberIndex;
+    if (numberIndex <=0)
+    {
+        canfire = false;
+        setStateWait();
+    }else
+    {
+        canfire = true;
     }
 //    log("fire enemy x:%f",fireEnemy->getPosition().x);
     GameMap * map = GameMapManager::getInstance()->getGameMap();

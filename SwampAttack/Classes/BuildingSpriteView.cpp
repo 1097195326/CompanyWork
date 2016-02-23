@@ -34,7 +34,8 @@ BuildingSpriteView::BuildingSpriteView(DefenseBuilding * building):m_building(bu
     buildingIcon->setScale(0.45);
     Vec2 iconPoint = _G_M_M->fightScene_gunIcon_Position;
     float iconWidth = m_greenBg->getContentSize().width;
-    Vec2 iconPointOff = iconPoint + Vec2((iconWidth + 10) * (gunNum + iconIndex - 1), 0) * m_iconScale;
+    gunNum = gunNum > 1 ? gunNum : 0;
+    Vec2 iconPointOff = iconPoint + Vec2((iconWidth + 10) * (gunNum + iconIndex), 0) * m_iconScale;
     m_greenBg->setPosition(iconPointOff);
     m_blueBg->setPosition(iconPointOff);
     buildingIcon->setPosition(iconPointOff);
@@ -66,9 +67,11 @@ bool BuildingSpriteView::touchBegan(Touch *touch, Event *event)
 }
 void BuildingSpriteView::touchEnd(Touch *touch, Event *event)
 {
-    if (m_building->isCanHurt())
+//    if (m_building->isCanHurt())
     {
+        m_building->setStateCanhurt();
         m_building->setStateHurting();
+        
     }
     
 }

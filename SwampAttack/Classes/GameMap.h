@@ -35,8 +35,7 @@ public:
     Vec2 fightScene_gangpao_Point = {m_visibleOrigin.x + 110,m_visibleOrigin.y + 375};
     Vec2 gangpao_BulletStartPoint = {m_visibleOrigin.x + 170, m_visibleOrigin.y + 370};
     
-    Vec2 fightScene_zhalan_point1 = {m_visibleOrigin.x + 320,m_visibleOrigin.y + 70};
-    Vec2 fightScene_zhalan_point2 = {m_visibleOrigin.x + 340,m_visibleOrigin.y + 150};
+    Vec2 fightScene_zhalan_point = {m_visibleOrigin.x + 330,m_visibleOrigin.y + 110};
     float fightScene_zhalan_line = m_visibleOrigin.x + 330;
     
     Vec2 fightScene_tieban_point1 = {m_visibleOrigin.x + 170,m_visibleOrigin.y + 145};

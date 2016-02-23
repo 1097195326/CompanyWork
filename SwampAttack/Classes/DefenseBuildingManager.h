@@ -30,6 +30,7 @@ public:
     void    setView();
     void    checkUnlock(Layer * layer);
     std::map<string,DefenseBuilding *> getBuildingData();
+    std::vector<DefenseBuilding *>  getShowBuildingData();
 public:
     DefenseBuildingManager();
     ~DefenseBuildingManager();

@@ -106,15 +106,21 @@ float GameLoading::loadFrames()
     }
     spriteFrameCache->addSpriteFramesWithFile(ImagePath("burn.plist"));
     
-    std::map<std::string,DefenseBuilding *>::iterator buildingIter;
-    std::map<std::string,DefenseBuilding *> buildingData = DefenseBuildingManager::getInstance()->getBuildingData();
+    std::vector<DefenseBuilding *>::iterator buildingIter;
+    std::vector<DefenseBuilding *> buildingData = DefenseBuildingManager::getInstance()->getShowBuildingData();
     for (buildingIter = buildingData.begin(); buildingIter != buildingData.end(); ++buildingIter)
     {
-        DefenseBuilding * building = buildingIter->second;
+        DefenseBuilding * building = *buildingIter;
         std::string modelId = building->getModelId();
         if ("building3" == modelId)
         {
             spriteFrameCache->addSpriteFramesWithFile(ImagePath("monkey.plist"));
+        }else if ("building2" == modelId)
+        {
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("building2.plist"));
+        }else if ("building4" == modelId)
+        {
+            spriteFrameCache->addSpriteFramesWithFile(ImagePath("building4.plist"));
         }
     }
     

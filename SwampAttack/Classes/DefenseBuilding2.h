@@ -14,10 +14,16 @@
 
 class DefenseBuilding2 : public DefenseBuilding {
 private:
+    bool    canfire;
+    int     numberIndex;
     
 public:
     DefenseBuilding2(Json::Value data);
     void    setView();
+    
+    void    setStateCanhurt();
+    
+    void    hurtCall();
     void    hurtEnemy(Enemy * enemy);
     void    gameLoop(float data);
 };
