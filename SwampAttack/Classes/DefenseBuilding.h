@@ -45,7 +45,7 @@ public:
     
     void    checkUnlock(Layer * layer);
     
-    bool    isInRange(Vec2 point);
+    virtual bool    isInRange(Vec2 point);
     
     void    addBuildingJishudian();
     int     getBuildingJishu();

@@ -9,10 +9,14 @@
 #include "DefenseBuilding4.h"
 #include "House.h"
 #include "DefenseBuilding4_Sprite.h"
+#include "BuildingSpriteView.hpp"
 #include "EnemyManager.h"
+#include "GameMapManager.h"
 
 
-DefenseBuilding4::DefenseBuilding4(Json::Value data):DefenseBuilding(data)
+DefenseBuilding4::DefenseBuilding4(Json::Value data):
+DefenseBuilding(data),
+canfire(false)
 {
     
 }
@@ -23,6 +27,10 @@ void DefenseBuilding4::setView()
     }
     DefenseBuildingSprite * sprite = new DefenseBuilding4_Sprite(this);
     sprite->autorelease();
+    BuildingSpriteView * view = new BuildingSpriteView(this);
+    view->autorelease();
+    
+    numberIndex = 0;
 }
 
 void DefenseBuilding4::gameLoop(float data)
@@ -32,41 +40,71 @@ void DefenseBuilding4::gameLoop(float data)
         return;
     }
     
-    m_waitDelay += data;
-    if (m_waitDelay >= 1 && m_state == d_wait)
-    {
-        m_waitDelay = 0.0f;
-        m_state = d_canHurt;
-    }else
-    {
-        m_state = d_wait;
-    }
+//    m_waitDelay += data;
+//    if (m_waitDelay >= 1 && m_state == d_wait)
+//    {
+//        m_waitDelay = 0.0f;
+//        m_state = d_canHurt;
+//    }else
+//    {
+//        m_state = d_wait;
+//    }
     
-    EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
-    if (!enemyGroup) {
-        return;
-    }
-    std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
-    
-    if (!enemyData.empty())
+    if (canfire)
     {
-        std::list<Enemy*>::iterator e_iter;
+        EnemyGroup * enemyGroup = EnemyManager::getInstance()->getCurrectGroup();
+        if (!enemyGroup) {
+            return;
+        }
+        std::list<Enemy*> enemyData =enemyGroup->getShowEnemyData();
         
-        for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
+        if (!enemyData.empty())
         {
-            Enemy * enemy = *e_iter;
+            std::list<Enemy*>::iterator e_iter;
             
-            if (isCanHurt() &&
-                !(enemy->isDieing() || enemy->isDied() || enemy->isCanDelete()) &&
-                isInRange(enemy->getPosition()) &&
-                enemy->getActionType() == 1)
+            for (e_iter = enemyData.begin() ; e_iter != enemyData.end(); ++e_iter)
             {
-                hurtEnemy(enemy);
+                Enemy * enemy = *e_iter;
+                
+                if (!(enemy->isDieing() || enemy->isDied() || enemy->isCanDelete()) &&
+                    isInRange(enemy->getPosition()) &&
+                    enemy->getActionType() == 1)
+                {
+                    hurtEnemy(enemy);
+                }
             }
         }
     }
+    
+}
+void DefenseBuilding4::setStateCanhurt()
+{
+    DefenseBuilding::setStateCanhurt();
+    numberIndex = 0;
+}
+void DefenseBuilding4::setStateHurting()
+{
+    m_state = d_hurting;
+    canfire = true;
+}
+void DefenseBuilding4::hurtCall()
+{
+    ++numberIndex;
+    if (numberIndex >= m_number)
+    {
+        canfire = false;
+        setStateWait();
+    }else
+    {
+        canfire = true;
+    }
+}
+bool DefenseBuilding4::isInRange(Vec2 point)
+{
+    return _G_M_M->fightScene_tengman_point.x + 180 * numberIndex > point.x;
 }
 void DefenseBuilding4::hurtEnemy(Enemy *enemy)
 {
-    enemy->hurtJiansu(m_deceleration);
+    float e_f = enemy->getSpeedF();
+    enemy->hurtJiansu(3.0f + e_f);
 }
