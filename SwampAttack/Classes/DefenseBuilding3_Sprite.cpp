@@ -40,7 +40,7 @@ DefenseBuilding3_Sprite::~DefenseBuilding3_Sprite()
 }
 void DefenseBuilding3_Sprite::update(float data)
 {
-    if (m_building->isStateWait()) {
+    if (m_building->isStateWait() || m_building->isCanHurt()) {
         waitPlay();
     }else if (m_building->isStateHurting())
     {

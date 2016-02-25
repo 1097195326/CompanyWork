@@ -48,6 +48,7 @@ public:
     virtual bool    isInRange(Vec2 point);
     
     void    addBuildingJishudian();
+    void    useBuildingJishu();
     int     getBuildingJishu();
 protected:
     DefenseState m_state;

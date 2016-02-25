@@ -60,6 +60,11 @@ m_waitDelay(0.0f)
     
     m_isUnlock = _G_U->isUnlockBuilding(m_id);
     m_jishu = _G_U->getBuildingJishu(m_id);
+    
+    if (m_jishu >= m_deadnumber)
+    {
+        setStateCanhurt();
+    }
 }
 DefenseBuilding::~DefenseBuilding()
 {
@@ -191,6 +196,12 @@ void DefenseBuilding::addBuildingJishudian()
         }
         notify();
     }
+}
+void DefenseBuilding::useBuildingJishu()
+{
+    m_jishu = 0;
+    _G_U->setBuildingJishu(m_id, m_jishu);
+    notify();
 }
 int DefenseBuilding::getBuildingJishu()
 {

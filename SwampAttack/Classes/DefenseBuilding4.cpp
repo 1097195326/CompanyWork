@@ -84,7 +84,7 @@ void DefenseBuilding4::setStateCanhurt()
 }
 void DefenseBuilding4::setStateHurting()
 {
-    m_state = d_hurting;
+    DefenseBuilding::setStateHurting();
     canfire = true;
 }
 void DefenseBuilding4::hurtCall()

@@ -20,6 +20,13 @@ canfire(false)
     fireEnemy = NULL;
     numberIndex = m_number;
     
+    if (m_jishu >= m_deadnumber)
+    {
+        setStateCanhurt();
+    }else
+    {
+        setStateWait();
+    }
 }
 void DefenseBuilding3::setView()
 {
@@ -30,7 +37,6 @@ void DefenseBuilding3::setView()
     sprite->autorelease();
     BuildingSpriteView * view = new BuildingSpriteView(this);
     view->autorelease();
-    m_state = d_wait;
     
 }
 
@@ -90,7 +96,7 @@ void DefenseBuilding3::setStateHurting()
 }
 void DefenseBuilding3::hurtEnemy(Enemy *enemy)
 {
-    m_state = d_hurting;
+    DefenseBuilding::setStateHurting();
     canfire = false;
     fireEnemy = enemy;
 }

@@ -17,6 +17,7 @@ BuildingSpriteView::BuildingSpriteView(DefenseBuilding * building):m_building(bu
 {
     init();
     
+    setSubject(m_building);
 
     m_iconScale = 0.5;
     int gunNum = GunManager::getInstance()->getTakeUpGunNum();
@@ -40,17 +41,27 @@ BuildingSpriteView::BuildingSpriteView(DefenseBuilding * building):m_building(bu
     m_blueBg->setPosition(iconPointOff);
     buildingIcon->setPosition(iconPointOff);
     
+    m_numProBar = new ProgressBar("fight_gun_greenBg.png");
+    m_numProBar->autorelease();
+    m_numProBar->setScale(m_iconScale);
+    addChild(m_numProBar,6);
+    m_numProBar->setBarChangeRate(Vec2(0, 1));
+    m_numProBar->setBarUp();
+    m_numProBar->setPosition(iconPointOff);
+//    m_numProBar->updatePercent(60);
+    
     m_listener = EventListenerTouchOneByOne::create();
     m_listener->setSwallowTouches(true);
     m_listener->onTouchBegan = CC_CALLBACK_2(BuildingSpriteView::touchBegan, this);
     m_listener->onTouchEnded = CC_CALLBACK_2(BuildingSpriteView::touchEnd, this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener, m_greenBg);
     
-//    updateData();
+    updateData();
     _G_V->addChild(this,640);
 }
 BuildingSpriteView::~BuildingSpriteView()
 {
+    detachSubject();
     if(m_listener)
     {
         Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
@@ -67,16 +78,17 @@ bool BuildingSpriteView::touchBegan(Touch *touch, Event *event)
 }
 void BuildingSpriteView::touchEnd(Touch *touch, Event *event)
 {
-//    if (m_building->isCanHurt())
+    if (m_building->isCanHurt())
     {
-        m_building->setStateCanhurt();
+        m_building->useBuildingJishu();
         m_building->setStateHurting();
-        
     }
     
 }
 void BuildingSpriteView::updateData()
 {
-    
-    
+    int deadNum = m_building->getDeadNumber();
+    int jishu = m_building->getBuildingJishu();
+    float per = 100.0f - ((float)jishu/(float)deadNum) * 100;
+    m_numProBar->updatePercent(per);
 }
