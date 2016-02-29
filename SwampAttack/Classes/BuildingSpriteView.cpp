@@ -41,7 +41,7 @@ BuildingSpriteView::BuildingSpriteView(DefenseBuilding * building):m_building(bu
     m_blueBg->setPosition(iconPointOff);
     buildingIcon->setPosition(iconPointOff);
     
-    m_numProBar = new ProgressBar("fight_gun_greenBg.png");
+    m_numProBar = new ProgressBar("fight_building_mask.png");
     m_numProBar->autorelease();
     m_numProBar->setScale(m_iconScale);
     addChild(m_numProBar,6);
