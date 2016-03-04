@@ -96,8 +96,8 @@ tid#MissionName28,召唤师,A big wave of monsters
 tid#MissionName29,突然好多蝙蝠,And a big wave of monsters
 tid#MissionName30,红狼首领,A path
 tid#MissionName31,南瓜头杀手,Lost ground
-tid#MissionName32,看不见打的准,A monster with wings
-tid#MissionName33,狼人来袭,The gentleman's coming.
+tid#MissionName32,尝尝火箭筒的威力,A monster with wings
+tid#MissionName33,月光下的杀手,The gentleman's coming.
 tid#MissionName34,嗷！嗷！嗷！,The wolf came again.
 tid#MissionName35,黄金骷髅王,Is this hell
 tid#MissionName36,深山雪人,Big footprints
@@ -141,9 +141,9 @@ tid#ItemName8,润滑油,Lubricating oil
 ,,
 ,,
 tid#ItemDescription1,可以同时对几个怪物造成伤害的集束雷管,Cause group damage to the small range.
-tid#ItemDescription2,使怪物内心的邪恶燃烧，直到烧成灰烬。,"To make a small range of target burning, sustained damage."
-tid#ItemDescription3,抛洒在路面的圣水地雷。,1 mines on the ground.
-tid#ItemDescription4,寒冰刺骨的冷风，对所有怪物造成冻伤并减缓速度。,"Icy cold, damaging and slowing of the monster."
+tid#ItemDescription2,使怪物内心的邪恶燃烧，直到烧成灰烬,"To make a small range of target burning, sustained damage."
+tid#ItemDescription3,抛洒在路面的圣水地雷,1 mines on the ground.
+tid#ItemDescription4,寒冰刺骨的冷风，对所有怪物造成冻伤并减缓速度,"Icy cold, damaging and slowing of the monster."
 tid#ItemDescription5,对较大范围内的怪物带来永久伤害,To the larger range of all the monsters cause more damage.
 tid#ItemDescription6,对所有怪物来说，这就是噩梦,Fatal damage to all the monsters.
 tid#ItemDescription7,对经过的怪物持续的电击麻痹和伤害,Vertigo caused by small monster
@@ -159,9 +159,9 @@ tid#DefenceName6,铁板,Iron plate
 tid#DefenceName7,沙袋,Sandbags
 ,,
 tid#DefenceDescription1,为马车增加防御，更耐攻击,To increase the defense of the carriage
-tid#DefenceDescription3,小猴子操作的小炮，能够对陆行怪物造成群体伤害。,"The little monkey operation of small, can cause damage to the land for the monster group."
-tid#DefenceDescription4,藤蔓会卷住怪物们的脚，让他们迟缓，与油瓶配合更出色,Ability to increase a certain defense
-tid#DefenceDescription5,踩过去的怪物们都会收到伤害,To the close of the monster continued to cause damage
+tid#DefenceDescription3,召唤小猴子发动连续攻击，酷毙了。,"The little monkey operation of small, can cause damage to the land for the monster group."
+tid#DefenceDescription4,藤蔓会卷住怪物们的脚，将他们推后远离你,Ability to increase a certain defense
+tid#DefenceDescription5,踩过去的怪物们都会受到持续伤害,To the close of the monster continued to cause damage
 tid#DefenceDescription6,强力的铁板防御，比木板更耐打,为马车增加一套铁板防御
 tid#DefenceDescription7,比起来，沙袋是最好的防御手段,Add a pile of sandbags defense for carriage
 ,,

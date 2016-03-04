@@ -68,9 +68,9 @@ tid#WeaponDescription12,圣山上最灼热的火种会随着你喷涌，足以�
 tid#MissionName1,远方而来的朋友,Friends from afar
 tid#MissionName2,摇摆的身影,Swing figure
 tid#MissionName3,一大片尸兄,A large body of dead brother
-tid#MissionName4,那是什么？,Endless?
+tid#MissionName4,难以抵挡的冲刺,Endless?
 tid#MissionName5,快速消灭他们,The roar of the mausoleum
-tid#MissionName6,夜空突袭,Night raid
+tid#MissionName6,空袭！空袭！,Night raid
 tid#MissionName7,啪！啪！啪！,What is that?
 tid#MissionName8,巡逻队,Mind Your Step
 tid#MissionName9,田野上的人影,Quickly destroy them
@@ -89,15 +89,15 @@ tid#MissionName21,强力火力,The place of burial
 tid#MissionName22,火力全开,Behind the chase
 tid#MissionName23,躲避掩体,A hunter in a deep forest
 tid#MissionName24,冲出去,Shadow
-tid#MissionName25,稻草王,Skeleton
+tid#MissionName25,稻草人BOSS,Skeleton
 tid#MissionName26,不是蝙蝠是恶魔,Obstruction
 tid#MissionName27,追来的恶魔,A wave of monsters
 tid#MissionName28,召唤师,A big wave of monsters
 tid#MissionName29,突然好多蝙蝠,And a big wave of monsters
 tid#MissionName30,红狼首领,A path
 tid#MissionName31,南瓜头杀手,Lost ground
-tid#MissionName32,看不见打的准,A monster with wings
-tid#MissionName33,狼人来袭,The gentleman's coming.
+tid#MissionName32,尝尝火箭筒的威力,A monster with wings
+tid#MissionName33,月光下的杀手,The gentleman's coming.
 tid#MissionName34,嗷！嗷！嗷！,The wolf came again.
 tid#MissionName35,黄金骷髅王,Is this hell
 tid#MissionName36,深山雪人,Big footprints
@@ -112,7 +112,7 @@ tid#MissionName44,好硬的甲,Be careful of the killer bee
 tid#MissionName45,大恶魔领域,Unknown organism
 tid#MissionName46,深林中的猎手,Abhor
 tid#MissionName47,弓箭远程射击,The end of the day
-tid#MissionName48,巨盾,The army of the dead
+tid#MissionName48,结实的盾牌,The army of the dead
 tid#MissionName49,这是地狱吗,Vampires
 tid#MissionName50,深山雪人王,Demon realm
 tid#MissionName51,不平静的一天,
@@ -141,9 +141,9 @@ tid#ItemName8,润滑油,Lubricating oil
 ,,
 ,,
 tid#ItemDescription1,可以同时对几个怪物造成伤害的集束雷管,Cause group damage to the small range.
-tid#ItemDescription2,使怪物内心的邪恶燃烧，直到烧成灰烬。,"To make a small range of target burning, sustained damage."
-tid#ItemDescription3,抛洒在路面的圣水地雷。,1 mines on the ground.
-tid#ItemDescription4,寒冰刺骨的冷风，对所有怪物造成冻伤并减缓速度。,"Icy cold, damaging and slowing of the monster."
+tid#ItemDescription2,使怪物内心的邪恶燃烧，直到烧成灰烬,"To make a small range of target burning, sustained damage."
+tid#ItemDescription3,抛洒在路面的圣水地雷,1 mines on the ground.
+tid#ItemDescription4,寒冰刺骨的冷风，对所有怪物造成冻伤并减缓速度,"Icy cold, damaging and slowing of the monster."
 tid#ItemDescription5,对较大范围内的怪物带来永久伤害,To the larger range of all the monsters cause more damage.
 tid#ItemDescription6,对所有怪物来说，这就是噩梦,Fatal damage to all the monsters.
 tid#ItemDescription7,对经过的怪物持续的电击麻痹和伤害,Vertigo caused by small monster
@@ -159,9 +159,9 @@ tid#DefenceName6,铁板,Iron plate
 tid#DefenceName7,沙袋,Sandbags
 ,,
 tid#DefenceDescription1,为马车增加防御，更耐攻击,To increase the defense of the carriage
-tid#DefenceDescription3,小猴子操作的小炮，能够对陆行怪物造成群体伤害。,"The little monkey operation of small, can cause damage to the land for the monster group."
-tid#DefenceDescription4,藤蔓会卷住怪物们的脚，让他们迟缓，与油瓶配合更出色,Ability to increase a certain defense
-tid#DefenceDescription5,踩过去的怪物们都会收到伤害,To the close of the monster continued to cause damage
+tid#DefenceDescription3,召唤小猴子发动连续攻击，酷毙了。,"The little monkey operation of small, can cause damage to the land for the monster group."
+tid#DefenceDescription4,藤蔓会卷住怪物们的脚，将他们推后远离你,Ability to increase a certain defense
+tid#DefenceDescription5,踩过去的怪物们都会受到持续伤害,To the close of the monster continued to cause damage
 tid#DefenceDescription6,强力的铁板防御，比木板更耐打,为马车增加一套铁板防御
 tid#DefenceDescription7,比起来，沙袋是最好的防御手段,Add a pile of sandbags defense for carriage
 ,,
@@ -218,7 +218,7 @@ tid#unlock17,第30关解锁,
 tid#unlock18,第40关解锁,
 tid#unlock19,第50关解锁,
 ,,
-tid#Energy1,补满体力,
+tid#Energy1,3000金币补满体力,
 ,,
 tid#Guide1,兄弟，进入市场来升级武器装备吧,
 tid#Guide2,可以通过升级枪械来获取更强大火力,

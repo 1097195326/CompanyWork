@@ -16,6 +16,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../Classes/AppDelegate.cpp \
 				   ../../Classes/BaseUtil.cpp \
 				   ../../Classes/BuffSprite.cpp \
+				   ../../Classes/BuildingSpriteView.cpp \
 				   ../../Classes/Bullet.cpp \
 				   ../../Classes/BulletManager.cpp \
 				   ../../Classes/BulletModel.cpp \

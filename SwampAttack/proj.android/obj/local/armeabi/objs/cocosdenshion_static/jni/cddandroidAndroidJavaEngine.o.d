@@ -4,17 +4,17 @@ obj/local/armeabi/objs/cocosdenshion_static/jni/cddandroidAndroidJavaEngine.o: \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/android/jni/JniHelper.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/api-level.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/jni.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/android/api-level.h \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
  jni/../../cocos2d/cocos/audio/android/../../platform/CCPlatformMacros.h \
  jni/../../cocos2d/cocos/audio/android/../../base/ccConfig.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/CCPlatformConfig.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/CCPlatformDefine.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/android/CCPlatformDefine-android.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/android/log.h \
  jni/../../cocos2d/cocos/audio/android/ccdandroidUtils.h
 
 jni/../../cocos2d/cocos/audio/android/jni/cddandroidAndroidJavaEngine.h:
@@ -25,15 +25,15 @@ jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 
 jni/../../cocos2d/cocos/audio/android/../../platform/android/jni/JniHelper.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/jni.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/sys/cdefs.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/api-level.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/android/api-level.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string:
 
 jni/../../cocos2d/cocos/audio/android/../../platform/CCPlatformMacros.h:
 
@@ -45,6 +45,6 @@ jni/../../cocos2d/cocos/audio/android/../../platform/CCPlatformDefine.h:
 
 jni/../../cocos2d/cocos/audio/android/../../platform/android/CCPlatformDefine-android.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/android/log.h:
 
 jni/../../cocos2d/cocos/audio/android/ccdandroidUtils.h:

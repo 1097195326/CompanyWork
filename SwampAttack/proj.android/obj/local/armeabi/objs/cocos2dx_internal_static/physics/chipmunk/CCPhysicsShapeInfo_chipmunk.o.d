@@ -3,18 +3,18 @@ obj/local/armeabi/objs/cocos2dx_internal_static/physics/chipmunk/CCPhysicsShapeI
  jni/../../cocos2d/cocos/./physics/chipmunk/CCPhysicsShapeInfo_chipmunk.h \
  jni/../../cocos2d/cocos/./base/ccConfig.h \
  jni/../../cocos2d/cocos/./platform/CCPlatformConfig.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
  jni/../../cocos2d/cocos/./platform/CCPlatformMacros.h \
  jni/../../cocos2d/cocos/./platform/CCPlatformDefine.h \
  jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine-android.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/android/log.h \
  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/chipmunk.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h \
- /Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/stdlib.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/alloca.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/strings.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/memory.h \
+ /Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/math.h \
  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/chipmunk_types.h \
  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpVect.h \
  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpBB.h \
@@ -35,7 +35,7 @@ obj/local/armeabi/objs/cocos2dx_internal_static/physics/chipmunk/CCPhysicsShapeI
  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpGearJoint.h \
  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h \
  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpSpace.h \
- /Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm
+ /Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm
 
 jni/../../cocos2d/cocos/./physics/chipmunk/CCPhysicsShapeInfo_chipmunk.h:
 
@@ -43,9 +43,9 @@ jni/../../cocos2d/cocos/./base/ccConfig.h:
 
 jni/../../cocos2d/cocos/./platform/CCPlatformConfig.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
 
 jni/../../cocos2d/cocos/./platform/CCPlatformMacros.h:
 
@@ -53,19 +53,19 @@ jni/../../cocos2d/cocos/./platform/CCPlatformDefine.h:
 
 jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine-android.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/android/log.h:
 
 jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/chipmunk.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/stdlib.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/alloca.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/strings.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/memory.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h:
+/Users/oceantech02/work/android-ndk-r10b/platforms/android-18/arch-arm/usr/include/math.h:
 
 jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/chipmunk_types.h:
 
@@ -107,4 +107,4 @@ jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpSi
 
 jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpSpace.h:
 
-/Users/zhanghongxing/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
+/Users/oceantech02/work/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
